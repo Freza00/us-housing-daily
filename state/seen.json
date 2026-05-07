@@ -1,5 +1,280 @@
 [
   {
+    "url": "https://www.realtor.com/news/trends/high-gas-prices-commuter-tax-homebuyers/",
+    "tokens": [
+      "prices",
+      "climb",
+      "commute",
+      "shrinking",
+      "home",
+      "searches"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObnM2UGlsamRhYUJVc3BHMnl0b0xiZ3ZtQUN4U1ZIYXpfWDR1cXZmeDh1YlQ5ZzlhRmlSZmpvNkdJX2xpcW1rYXhSbW9zSFprNkd0cnlFSGd3dlU5LTFPMms4VzFEbTRIRWZGc1lfY2xHQVlRWnlOQldEVy1CVk9nYjQ3enF4VVZ1VEVpTTM0b1BtQllSaERtbjI4SHBZZ1Z0V0poSTlOSUVzaXUySEE?oc=5",
+    "tokens": [
+      "housing",
+      "markets",
+      "most",
+      "least",
+      "mortgage",
+      "distress",
+      "right",
+      "fast",
+      "company"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/05/06/zillow-ceo-jeremy-wacksman-affordability-is-still-a-challenge-in-the-housing-market.html",
+    "tokens": [
+      "zillow",
+      "jeremy",
+      "wacksman",
+      "affordability",
+      "challenge",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/nar-says-policies-already-align-with-new-hud-stance-on-sharing-school-crime-data/",
+    "tokens": [
+      "policies",
+      "already",
+      "align",
+      "stance",
+      "sharing",
+      "school",
+      "crime",
+      "data"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/colorado-zoning-preemption-limits/",
+    "tokens": [
+      "state",
+      "zoning",
+      "preemption",
+      "tested",
+      "colorado",
+      "bills",
+      "fail"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/veterans-united-lawsuit-bait-switch/",
+    "tokens": [
+      "amended",
+      "class",
+      "action",
+      "lawsuit",
+      "accuses",
+      "veterans",
+      "united",
+      "bait",
+      "switch",
+      "tactics"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/reverse-mastermind-summit-leadership-sales/",
+    "tokens": [
+      "women",
+      "take",
+      "leadership",
+      "reins",
+      "reverse",
+      "mastermind",
+      "summit"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/jason-waugh-hsf-affiliates-ceo/",
+    "tokens": [
+      "homeservices",
+      "names",
+      "jason",
+      "waugh",
+      "next",
+      "affiliates"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcW1ZQmNuM05lVWlDdnhnS3k0T1JDbGg4MGlBWGhHY2k3Uk90eGlyT1hoTFprbzQ3cEJ3WkhIMkZocG9ldDJFVC1mMjh6N0k5X3JwTkZySjZNRE5rQ1Y4bDNvYi1ndGg4VEotWDNjbWUtNWdKeENiTndaU0VOSFZCR09GM29BOG1fcFNvb0Q2OTZtMmFZdlRWWGV4VGROeVducUo4?oc=5",
+    "tokens": [
+      "gary",
+      "keller",
+      "private",
+      "listings",
+      "make",
+      "market",
+      "last",
+      "resort",
+      "inman"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMzRvdlFuMGZxdjd3Y3BJMjgxam1ELURwU1ZnRy1tUlo4cV9iNFZpcnRaQ2JsOUZ5MTVtem0zZWtLU2FkYVpma1d1Uk4xZ2lCRmdNX05tVkNKVHhrSkRCRURiT05GNDY4VkhLUDZZTkJvUTJQamI4RDQtLVFHenBDVWYyOW80TFlNTEE?oc=5",
+    "tokens": [
+      "florida",
+      "posts",
+      "first",
+      "positive",
+      "single",
+      "family",
+      "home",
+      "price",
+      "change",
+      "months",
+      "lance",
+      "lambert",
+      "notes",
+      "traders",
+      "union"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://southfloridaagentmagazine.com/2026/04/30/existing-home-sales-rise/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=existing-home-sales-rise",
+    "tokens": [
+      "housing",
+      "scorecard",
+      "existing",
+      "home",
+      "sales",
+      "rise",
+      "across",
+      "south",
+      "florida"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://phoenixagentmagazine.com/2026/05/01/remax-home-sales-march/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=remax-home-sales-march",
+    "tokens": [
+      "remax",
+      "phoenix",
+      "home",
+      "sales",
+      "jump",
+      "march"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://atlantaagentmagazine.com/2026/04/30/trilogy-rev3-at-hill-road/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=trilogy-rev3-at-hill-road",
+    "tokens": [
+      "trilogy",
+      "investment",
+      "closes",
+      "powder",
+      "springs",
+      "project",
+      "hill",
+      "road"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://pretium.com/pretium-founder-and-ceo-don-mullen-on-bloombergs-the-close/",
+    "tokens": [
+      "pretium",
+      "founder",
+      "mullen",
+      "bloomberg",
+      "close"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/06/global-net-lease-acquires-industrial-reit-for-535m/",
+    "tokens": [
+      "global",
+      "lease",
+      "acquires",
+      "industrial",
+      "reit",
+      "$535m"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.bisnow.com/austin/news/ai/spacex-plans-to-spend-an-initial-55b-for-terafab-chip-facility-in-texas-134459",
+    "tokens": [
+      "spacex",
+      "files",
+      "$55b",
+      "terafab",
+      "chip",
+      "facility",
+      "southeast",
+      "texas"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://therealdeal.com/national/denver/2026/05/06/giant-group-worlds-biggest-bike-maker-moves-hq-to-boulder/",
+    "tokens": [
+      "world",
+      "largest",
+      "bicycle",
+      "manufacturer",
+      "rides",
+      "boulder"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.bisnow.com/houston/news/construction-development/satya-breaks-ground-st-regis-residences-houston-134462",
+    "tokens": [
+      "regis",
+      "residences",
+      "developer",
+      "affordability",
+      "problem"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://rebusinessonline.com/choate-construction-to-relocate-atlanta-office-to-57000-sf-space-at-terraces-in-central-perimeter/",
+    "tokens": [
+      "choate",
+      "construction",
+      "relocate",
+      "atlanta",
+      "office",
+      "000",
+      "space",
+      "terraces",
+      "central",
+      "perimeter"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/opportunity-zones/prepare-for-relaunch-peakline-rolls-out-fund-targeting-13b-for-opportunity-zones-134424",
+    "tokens": [
+      "prepare",
+      "relaunch",
+      "peakline",
+      "targets",
+      "$1.3b",
+      "fundraise",
+      "opportunity",
+      "zones"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
     "url": "https://www.housingwire.com/articles/zillow-q1-2026-revenue-profit/",
     "tokens": [
       "zillow",
