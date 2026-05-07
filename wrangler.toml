@@ -1,0 +1,31 @@
+name = "us-real-estate-news-agent"
+main = "src/worker.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+# 静态前端
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# KV — 存放抓取后的文章（id → JSON）
+[[kv_namespaces]]
+binding = "NEWS_KV"
+id = "REPLACE_WITH_KV_ID_AFTER_npm_run_kv_create"
+preview_id = "REPLACE_WITH_KV_PREVIEW_ID"
+
+# 定时任务：每天 UTC 01:00 = 北京时间 09:00 跑一次
+# 触发后筛选过去 24 小时（now - 24h）发布的新闻
+[triggers]
+crons = ["0 1 * * *"]
+
+# 配置文件作为静态资源也行；这里通过环境变量传递信源版本号
+[vars]
+SOURCES_VERSION = "1"
+DAILY_LIMIT = "20"
+SUMMARY_LANG = "zh-CN"
+
+# 可选：上传到 Cloudflare Pages 时绑定自定义域
+# [[routes]]
+# pattern = "news.your-domain.com"
+# custom_domain = true

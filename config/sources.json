@@ -1,0 +1,252 @@
+{
+  "_doc": "美国住宅地产新闻聚合 - 信源配置。每个 source 包含: id (唯一), name, url (RSS), tier (A/B/D/E), tags (canonical IDs from src/tags.ts), weight (1-10), region. tags 取值见 src/tags.ts 的 TAGS 定义 (4 维度: asset / geo / topic / actor)。",
+  "sources": [
+    {
+      "id": "housingwire",
+      "name": "HousingWire",
+      "url": "https://www.housingwire.com/feed/",
+      "tier": "A",
+      "tags": ["housing", "rates", "policy"],
+      "weight": 9,
+      "region": "national"
+    },
+    {
+      "id": "inman",
+      "name": "Inman News",
+      "url": "https://www.inman.com/feed/",
+      "tier": "A",
+      "tags": ["housing", "brokerage"],
+      "weight": 8,
+      "region": "national"
+    },
+    {
+      "id": "trd-national",
+      "name": "The Real Deal (National)",
+      "url": "https://therealdeal.com/national/feed/",
+      "tier": "A",
+      "tags": ["mixed-asset", "deals"],
+      "weight": 8,
+      "region": "national"
+    },
+    {
+      "id": "bisnow",
+      "name": "Bisnow",
+      "url": "https://www.bisnow.com/rss",
+      "tier": "A",
+      "tags": ["mixed-asset", "deals"],
+      "weight": 8,
+      "region": "national"
+    },
+    {
+      "id": "multi-housing-news",
+      "name": "Multi-Housing News",
+      "url": "https://www.multihousingnews.com/feed/",
+      "tier": "A",
+      "tags": ["multifamily"],
+      "weight": 9,
+      "region": "national"
+    },
+    {
+      "id": "national-mortgage-news",
+      "name": "National Mortgage News",
+      "url": "https://www.nationalmortgagenews.com/rss",
+      "tier": "A",
+      "tags": ["rates", "macro"],
+      "weight": 7,
+      "region": "national"
+    },
+    {
+      "id": "cnbc-realestate",
+      "name": "CNBC Realty Check",
+      "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000115",
+      "tier": "A",
+      "tags": ["macro"],
+      "weight": 6,
+      "region": "national"
+    },
+    {
+      "id": "d-magazine",
+      "name": "D Magazine",
+      "url": "https://www.dmagazine.com/feed/",
+      "tier": "D",
+      "tags": ["dfw"],
+      "weight": 5,
+      "region": "texas",
+      "filter_required": true
+    },
+    {
+      "id": "houston-agent",
+      "name": "Houston Agent Magazine",
+      "url": "https://houstonagentmagazine.com/feed/",
+      "tier": "D",
+      "tags": ["houston", "brokerage"],
+      "weight": 6,
+      "region": "texas"
+    },
+    {
+      "id": "calculated-risk",
+      "name": "Calculated Risk (Bill McBride)",
+      "url": "https://feeds.feedburner.com/CalculatedRisk",
+      "tier": "B",
+      "tags": ["macro", "data", "trend"],
+      "weight": 10,
+      "region": "national"
+    },
+    {
+      "id": "lance-lambert",
+      "name": "Lance Lambert / ResiClub",
+      "url": "https://lancelambert.substack.com/feed",
+      "tier": "B",
+      "tags": ["housing", "data", "trend"],
+      "weight": 10,
+      "region": "national"
+    },
+    {
+      "id": "logan-mohtashami",
+      "name": "Logan Mohtashami (HousingWire)",
+      "url": "https://www.housingwire.com/author/logan-mohtashami/feed/",
+      "tier": "B",
+      "tags": ["rates", "trend"],
+      "weight": 9,
+      "region": "national"
+    },
+    {
+      "id": "yardi-matrix",
+      "name": "Yardi Matrix Blog",
+      "url": "https://www.yardimatrix.com/Blog/feed",
+      "tier": "B",
+      "tags": ["multifamily", "data", "trend"],
+      "weight": 9,
+      "region": "national"
+    },
+    {
+      "id": "realtor-research",
+      "name": "Realtor.com Research",
+      "url": "https://www.realtor.com/research/feed/",
+      "tier": "B",
+      "tags": ["housing", "data"],
+      "weight": 8,
+      "region": "national"
+    },
+    {
+      "id": "realtor-news",
+      "name": "Realtor.com News",
+      "url": "https://www.realtor.com/news/feed/",
+      "tier": "A",
+      "tags": ["housing"],
+      "weight": 6,
+      "region": "national"
+    },
+    {
+      "id": "redfin-news",
+      "name": "Redfin News",
+      "url": "https://www.redfin.com/news/feed/",
+      "tier": "A",
+      "tags": ["housing", "data"],
+      "weight": 8,
+      "region": "national"
+    },
+    {
+      "id": "trerc",
+      "name": "Texas Real Estate Research Center (TRERC)",
+      "url": "https://trerc.tamu.edu/feed/",
+      "tier": "D",
+      "tags": ["texas", "data", "trend"],
+      "weight": 9,
+      "region": "texas"
+    },
+    {
+      "id": "fed-press",
+      "name": "Federal Reserve Press",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "tier": "C",
+      "tags": ["rates", "policy", "macro", "regulator"],
+      "weight": 7,
+      "region": "national"
+    },
+    {
+      "id": "brookings-housing",
+      "name": "Brookings Institution",
+      "url": "https://www.brookings.edu/feed/",
+      "tier": "C",
+      "tags": ["policy", "trend"],
+      "weight": 5,
+      "region": "national",
+      "filter_required": true
+    },
+    {
+      "id": "pere-news",
+      "name": "PERE News",
+      "url": "https://www.perenews.com/feed/",
+      "tier": "B",
+      "tags": ["institutional", "deals", "trend"],
+      "weight": 10,
+      "region": "national"
+    },
+    {
+      "id": "multifamily-dive",
+      "name": "Multifamily Dive",
+      "url": "https://www.multifamilydive.com/feeds/news/",
+      "tier": "A",
+      "tags": ["multifamily"],
+      "weight": 9,
+      "region": "national"
+    },
+    {
+      "id": "connect-cre",
+      "name": "Connect CRE",
+      "url": "https://www.connectcre.com/feed/",
+      "tier": "A",
+      "tags": ["mixed-asset", "deals"],
+      "weight": 7,
+      "region": "national"
+    },
+    {
+      "id": "rebusiness-online",
+      "name": "REBusiness Online",
+      "url": "https://rebusinessonline.com/feed/",
+      "tier": "A",
+      "tags": ["mixed-asset", "deals"],
+      "weight": 6,
+      "region": "national"
+    },
+    {
+      "id": "nrhc",
+      "name": "National Rental Home Council (NRHC)",
+      "url": "https://www.rentalhomecouncil.org/feed/",
+      "tier": "E",
+      "tags": ["btr-sfr", "institutional"],
+      "weight": 9,
+      "region": "national"
+    },
+    {
+      "id": "pretium-partners",
+      "name": "Pretium Partners",
+      "url": "https://pretium.com/feed/",
+      "tier": "B",
+      "tags": ["btr-sfr", "institutional"],
+      "weight": 8,
+      "region": "national"
+    },
+    {
+      "id": "sec-invh-8k",
+      "name": "SEC EDGAR — Invitation Homes 8-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
+      "tier": "B",
+      "tags": ["btr-sfr", "institutional", "data"],
+      "weight": 10,
+      "region": "national",
+      "ua_style": "sec"
+    },
+    {
+      "id": "sec-amh-8k",
+      "name": "SEC EDGAR — American Homes 4 Rent 8-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
+      "tier": "B",
+      "tags": ["btr-sfr", "institutional", "data"],
+      "weight": 10,
+      "region": "national",
+      "ua_style": "sec"
+    }
+  ]
+}

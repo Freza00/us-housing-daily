@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>US Housing Daily — 美国住宅地产每日 20 条</title>
+  <meta name="description" content="美国住宅地产每日精选 20 条 — 机构 / 宏观 / 区域三轴覆盖。HousingWire / Inman / Calculated Risk / ResiClub / TRERC 等一手信源。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E%F0%9F%8F%A0%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🏠</span>
+      <h1>US Housing Daily</h1>
+      <span class="tagline">美国住宅地产每日 20 条</span>
+    </div>
+    <div class="meta">
+      <span id="updated">加载中…</span>
+      <button id="refreshBtn" title="重新加载">↻</button>
+    </div>
+  </header>
+
+  <nav class="datestrip" id="datestrip" aria-label="最近 14 天">
+    <!-- 由 JS 渲染：14 个日期 cell + "更早" 按钮 -->
+  </nav>
+
+  <nav class="filterbar" id="filterbar">
+    <button class="chip active" data-tag="__all">全部</button>
+    <!-- 标签按钮由 JS 渲染 -->
+  </nav>
+
+  <main id="newsList" class="news-list">
+    <div class="loader">加载中…</div>
+  </main>
+
+  <footer class="bottombar">
+    <span>每天 UTC 11:00 / 23:00 自动更新</span>
+    <span class="dot">·</span>
+    <span>信源：<span id="sourcesCount">—</span> 个</span>
+  </footer>
+
+  <dialog id="calendarDialog">
+    <div class="cal-head">
+      <button id="calPrev" aria-label="上个月">‹</button>
+      <h3 id="calTitle">—</h3>
+      <button id="calNext" aria-label="下个月">›</button>
+    </div>
+    <div class="cal-weekdays"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+    <div class="cal-grid" id="calGrid"></div>
+    <div class="cal-foot">
+      <span class="cal-legend"><span class="cal-dot"></span>有报告</span>
+      <button id="calClose">关闭</button>
+    </div>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>

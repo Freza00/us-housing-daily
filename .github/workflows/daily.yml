@@ -1,0 +1,51 @@
+name: Daily News Build
+
+# 每天北京时间 09:00 = UTC 01:00 自动跑一次
+# 也支持手动触发（push to main, 或 workflow_dispatch UI）
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'config/sources.json'
+      - 'scripts/build.mjs'
+      - '.github/workflows/daily.yml'
+
+permissions:
+  contents: write   # 需要 commit data/ + state/
+
+concurrency:
+  group: daily-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run pipeline (fetch + score + enrich + LLM summarize)
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: node scripts/build.mjs
+
+      - name: Commit data files
+        run: |
+          git config user.name "us-housing-daily-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/ state/
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            DATE=$(date -u +"%Y-%m-%d")
+            git commit -m "chore: daily build for ${DATE}"
+            git push
+          fi

@@ -1,0 +1,14 @@
+node_modules/
+.wrangler/
+.dev.vars
+.env
+.env.*
+dist/
+*.log
+.DS_Store
+
+# 旧本地 dry-run state（已被 state/seen.json 替代）
+.seen.json
+
+# 旧 sample 输出（已被 data/latest.json 替代）
+sample-output.json
