@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node --env-file=.env scripts/build.mjs",
     "build:dry": "LLM_SKIP=1 node scripts/build.mjs",
     "dry-run": "node scripts/dry-run.mjs",
     "preview": "cd public && (ln -sf ../data data 2>/dev/null; python3 -m http.server 8080)"
