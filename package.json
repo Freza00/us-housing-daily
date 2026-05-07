@@ -1,0 +1,16 @@
+{
+  "name": "us-housing-daily",
+  "version": "0.2.0",
+  "description": "美国住宅地产新闻聚合 — 每天北京 9 点 GitHub Actions 跑 pipeline，Vercel 静态站托管",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:dry": "LLM_SKIP=1 node scripts/build.mjs",
+    "dry-run": "node scripts/dry-run.mjs",
+    "preview": "cd public && (ln -sf ../data data 2>/dev/null; python3 -m http.server 8080)"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

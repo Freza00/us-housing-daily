@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>US Housing Daily — 静态预览 (2026-05-06)</title>
+<style>
+:root{--bg:#0e1014;--bg-elev:#161a21;--bg-hover:#1d222b;--border:#232831;--text:#e6e8eb;--text-dim:#8b939f;--text-muted:#5d6470;--accent:#e87b35;--accent-2:#4d8eff;--tag-bg:#1b2230;--tag-text:#9eb3d6;--max:920px;}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere;word-break:break-word}
+a{color:inherit;text-decoration:none}
+.topbar{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:28px 20px 20px;border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.logo{font-size:26px}.brand h1{font-size:19px;font-weight:600;margin:0;letter-spacing:-.01em}
+.tagline{color:var(--text-dim);font-size:13px}
+.meta{color:var(--text-dim);font-size:12px}
+
+.datestrip{max-width:var(--max);margin:0 auto;padding:14px 20px 6px;display:flex;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.datestrip::-webkit-scrollbar{height:4px}.datestrip::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.ds-day{min-width:38px;padding:4px 0 6px;border-radius:6px;background:transparent;border:1px solid transparent;color:var(--text-muted);font-family:inherit;cursor:not-allowed;display:flex;flex-direction:column;align-items:center;font-variant-numeric:tabular-nums;flex-shrink:0;transition:background .12s,color .12s,border-color .12s}
+.ds-day .ds-wd{font-size:10px;line-height:1.2;opacity:.7}
+.ds-day .ds-num{font-size:14px;font-weight:500;line-height:1.2}
+.ds-day.ds-has{color:var(--text-dim);cursor:pointer}
+.ds-day.ds-has:hover{background:var(--bg-hover);color:var(--text)}
+.ds-day.ds-today{color:var(--text);border-color:var(--accent)}
+.ds-day.ds-active{background:var(--accent);color:#fff!important;border-color:var(--accent)}
+.ds-day.ds-active .ds-wd{opacity:1}
+.ds-more{min-width:38px;padding:4px 0 6px;background:transparent;border:1px dashed var(--border);border-radius:6px;color:var(--text-dim);font-family:inherit;cursor:pointer;font-size:11px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+
+.news-list{max-width:var(--max);margin:0 auto;padding:16px 20px 60px}
+.news-section{margin-top:28px}.news-section:first-child{margin-top:8px}
+.section-head{display:flex;align-items:baseline;gap:10px;padding:14px 0 10px;border-bottom:1px solid var(--accent);margin-bottom:4px;flex-wrap:wrap}
+.section-emoji{font-size:18px}
+.section-label{font-size:14px;font-weight:600;margin:0;color:var(--text);letter-spacing:.01em}
+.section-count{background:var(--accent);color:#fff;font-size:11px;padding:1px 8px;border-radius:10px;font-variant-numeric:tabular-nums}
+.section-desc{flex:1;min-width:200px;font-size:11px;color:var(--text-muted);text-align:right}
+.card{display:block;padding:18px 0;border-bottom:1px solid var(--border)}
+.card-link{display:block}.card-link:hover .card-title-zh,.card-link:hover .card-title{color:var(--accent)}
+.card-num{display:inline-block;font-size:11px;color:var(--text-muted);font-variant-numeric:tabular-nums;width:24px;vertical-align:middle}
+.card-title-zh{font-size:16px;font-weight:600;color:var(--text);margin:0 0 4px;line-height:1.5;letter-spacing:.005em;overflow-wrap:anywhere;text-wrap:pretty;transition:color .12s;padding-left:24px;text-indent:-24px}
+.card-title{font-size:13.5px;font-weight:400;letter-spacing:-.003em;color:var(--text-dim);margin:0 0 6px;padding-left:24px;line-height:1.45;overflow-wrap:anywhere;text-wrap:pretty;hyphens:auto}
+.card-summary{color:var(--text-dim);font-size:14px;line-height:1.65;margin:0 0 8px;padding-left:24px;overflow-wrap:anywhere;text-wrap:pretty;hyphens:auto}
+.card-meta{padding-left:24px;display:flex;flex-wrap:wrap;gap:6px 8px;font-size:11px;color:var(--text-muted);align-items:center;overflow-wrap:anywhere}
+.card-meta>*{line-height:1.6}
+.card-source{color:var(--accent-2);font-weight:500}
+.card-tag{background:var(--tag-bg);color:var(--tag-text);padding:1px 7px;border-radius:3px;font-size:10px}
+.card-tag.heat{background:rgba(232,123,53,.15);color:var(--accent)}
+.card-tag.tag-geo:not(.heat){color:var(--accent-2)}
+.card-tag.tag-actor:not(.heat){font-style:italic}
+.card-tag.cre-cat{background:var(--accent);color:#fff;font-weight:600;letter-spacing:.3px}
+.card-stars{color:#f5b942;font-size:11px;letter-spacing:1px;font-variant-numeric:tabular-nums}
+.impact-pill{padding:1px 7px;border-radius:3px;font-size:10px;font-weight:500;letter-spacing:.5px}
+.impact-pill.imp-lp{background:rgba(125,200,134,.18);color:#7dc886}
+.impact-pill.imp-sp{background:rgba(190,220,130,.18);color:#bedc82}
+.impact-pill.imp-n{background:rgba(139,147,159,.15);color:var(--text-dim)}
+.impact-pill.imp-sn{background:rgba(232,152,95,.18);color:#e8985f}
+.impact-pill.imp-ln{background:rgba(220,100,100,.18);color:#dc6464}
+.ext-pill{padding:1px 7px;border-radius:3px;background:var(--tag-bg);color:var(--text-muted);font-size:10px;border:1px dashed var(--border)}
+.bottombar{text-align:center;padding:24px 12px 36px;color:var(--text-muted);font-size:12px;border-top:1px solid var(--border);line-height:1.7}
+@media(max-width:600px){.topbar{padding:20px 16px 14px;flex-direction:column;align-items:flex-start;gap:10px}.news-list{padding:12px 16px 60px}.section-desc{display:none}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">🏠</span>
+    <h1>US Housing Daily</h1>
+    <span class="tagline">美国住宅地产每日 20 条</span>
+  </div>
+  <div class="meta">2026-05-07 · 24h 窗内 121 候选 → 实体级去重 109 → top 20</div>
+</header>
+
+<nav class="datestrip">
+  <button class="ds-day" disabled><span class="ds-wd">五</span><span class="ds-num">24</span></button>
+  <button class="ds-day" disabled><span class="ds-wd">六</span><span class="ds-num">25</span></button>
+  <button class="ds-day" disabled><span class="ds-wd">日</span><span class="ds-num">26</span></button>
+  <button class="ds-day" disabled><span class="ds-wd">一</span><span class="ds-num">27</span></button>
+  <button class="ds-day" disabled><span class="ds-wd">二</span><span class="ds-num">28</span></button>
+  <button class="ds-day" disabled><span class="ds-wd">三</span><span class="ds-num">29</span></button>
+  <button class="ds-day" disabled><span class="ds-wd">四</span><span class="ds-num">30</span></button>
+  <button class="ds-day ds-has"><span class="ds-wd">五</span><span class="ds-num">1</span></button>
+  <button class="ds-day ds-has"><span class="ds-wd">六</span><span class="ds-num">2</span></button>
+  <button class="ds-day ds-has"><span class="ds-wd">日</span><span class="ds-num">3</span></button>
+  <button class="ds-day ds-has"><span class="ds-wd">一</span><span class="ds-num">4</span></button>
+  <button class="ds-day ds-has"><span class="ds-wd">二</span><span class="ds-num">5</span></button>
+  <button class="ds-day ds-has"><span class="ds-wd">三</span><span class="ds-num">6</span></button>
+  <button class="ds-day ds-has ds-today ds-active"><span class="ds-wd">四</span><span class="ds-num">7</span></button>
+  <button class="ds-more">更早</button>
+</nav>
+
+<main class="news-list">
+
+<!-- 🏠 全国住宅市场 -->
+<section class="news-section">
+  <header class="section-head">
+    <span class="section-emoji">🏠</span><h3 class="section-label">全国住宅市场</h3>
+    <span class="section-desc">全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk</span>
+  </header>
+
+  <article class="card">
+    <a class="card-link" href="https://www.cnbc.com/video/2026/05/06/zillow-ceo-jeremy-wacksman-affordability-is-still-a-challenge-in-the-housing-market.html" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">1</span>Zillow CEO Jeremy Wacksman：affordability 仍是 housing market 核心挑战</div>
+      <h2 class="card-title">Zillow CEO Jeremy Wacksman: Affordability is still a challenge in the housing market</h2>
+    </a>
+    <p class="card-summary">Zillow CEO 上 CNBC Closing Bell — Q1 业绩 + housing market 现状；mortgage rate 边际松动但购买力仍受压。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★★☆</span>
+      <span class="impact-pill imp-sn">短期利空</span>
+      
+      <span class="card-source">CNBC Realty Check</span><span>4h ago</span>
+      <span class="card-tag tag-asset">住宅市场</span>
+      <span class="card-tag tag-topic">业绩</span>
+      <span class="card-tag tag-topic">宏观</span>
+      <span class="card-tag tag-topic">趋势</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.housingwire.com/articles/reverse-mastermind-summit-leadership-sales/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">2</span>Reverse Mastermind Summit (Knoxville, TN)：女性接管反向按揭行业领导</div>
+      <h2 class="card-title">Women take the leadership reins at Reverse Mastermind Summit</h2>
+    </a>
+    <p class="card-summary">三位女性高管在 reverse mortgage 行业峰会分享 sales 经验 — 行业领导结构变化。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★☆☆☆</span>
+      <span class="impact-pill imp-n">中性</span>
+      
+      <span class="card-source">HousingWire</span><span>1h ago</span>
+      <span class="card-tag tag-asset">住宅市场</span>
+      <span class="card-tag tag-topic heat">政策</span>
+      <span class="card-tag tag-topic heat">利率</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.housingwire.com/articles/jason-waugh-hsf-affiliates-ceo/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">3</span>HomeServices 任命 Jason Waugh 为 HSF Affiliates 下任 CEO</div>
+      <h2 class="card-title">HomeServices names Jason Waugh as next HSF Affiliates CEO</h2>
+    </a>
+    <p class="card-summary">HSF Affiliates 现任 CEO Vince Leisey 将于 2027 卸任 — 全美第二大住宅经纪平台领导层换届。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★☆☆</span>
+      <span class="impact-pill imp-n">中性</span>
+      
+      <span class="card-source">HousingWire</span><span>3h ago</span>
+      <span class="card-tag tag-asset">住宅市场</span>
+      <span class="card-tag tag-topic heat">政策</span>
+      <span class="card-tag tag-topic heat">利率</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.bisnow.com/national/news/commercial-real-estate/commercial-property-prices-fall-april-still-up-yoy-134456" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">4</span>Commercial Property Prices 4 月环比下跌、YoY 仍 +3.1%</div>
+      <h2 class="card-title">Commercial Property Prices Fall In April, Still Up 3.1% YOY</h2>
+    </a>
+    <p class="card-summary">CPPI all-property index 4 月小幅回落 — 年比仍 +3.1%；CRE 反弹力度不均、月度震荡明显。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★☆☆</span>
+      <span class="impact-pill imp-sn">短期利空</span>
+      
+      <span class="card-source">Bisnow</span><span>9h ago</span>
+      <span class="card-tag tag-asset">跨资产</span>
+      <span class="card-tag tag-topic">交易</span>
+      <span class="card-tag tag-topic">趋势</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.realtor.com/news/trends/high-gas-prices-commuter-tax-homebuyers/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">5</span>Gas prices 上行 → &quot;commute tax&quot; 收缩购房搜索半径</div>
+      <h2 class="card-title">As Gas Prices Climb, the ‘Commute Tax’ Is Shrinking Home Searches</h2>
+    </a>
+    <p class="card-summary">1.15 亿驾车人受油价冲击 — 远郊 / 通勤型社区需求边际走弱，Sun Belt 远郊新房承压。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★☆☆</span>
+      <span class="impact-pill imp-sn">短期利空</span>
+      
+      <span class="card-source">Realtor.com News</span><span>3h ago</span>
+      <span class="card-tag tag-asset">住宅市场</span>
+      <span class="card-tag tag-topic">趋势</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://therealdeal.com/national/boston/2026/05/06/boston-area-school-sells-campus-for-luxury-development/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">6</span>Boston 大学出售半个校园用于 luxury 住宅开发</div>
+      <h2 class="card-title">Boston-area university sells half of its campus for luxury development</h2>
+    </a>
+    <p class="card-summary">Boston 区域高校剥离闲置校园资产 — 高端住宅 adaptive reuse；高校资产货币化趋势。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★☆☆</span>
+      <span class="impact-pill imp-n">中性</span>
+      
+      <span class="card-source">The Real Deal (National)</span><span>5h ago</span>
+      <span class="card-tag tag-asset">跨资产</span>
+      <span class="card-tag tag-topic">交易</span>
+    </div>
+  </article>
+</section>
+
+<!-- 🌵 Sunbelt 住宅 -->
+<section class="news-section">
+  <header class="section-head">
+    <span class="section-emoji">🌵</span><h3 class="section-label">Sunbelt 住宅</h3>
+    <span class="section-desc">Sun Belt 各州住宅与租赁市场 — 至少一条德州三城</span>
+  </header>
+
+  <article class="card">
+    <a class="card-link" href="https://www.multifamilydive.com/news/maa-q1-earnings-sun-belt/819470/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">7</span>MAA Q1 业绩：Sun Belt rent growth 拐点显现</div>
+      <h2 class="card-title">MAA sees strong Sun Belt demand, rent growth ahead</h2>
+    </a>
+    <p class="card-summary">Mid-America Apartment Communities (Memphis 总部) — Q1 早期 rent pricing 复苏信号；预计 peak leasing 旺季动能更强。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★★★</span>
+      <span class="impact-pill imp-lp">长期利好</span>
+      
+      <span class="card-source">Multifamily Dive</span><span>8h ago</span>
+      <span class="card-tag tag-asset">多户</span>
+      <span class="card-tag tag-geo heat">Sun Belt</span>
+      <span class="card-tag tag-geo heat">德州</span>
+      <span class="card-tag tag-topic">交易</span>
+      <span class="card-tag tag-topic">趋势</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.realtor.com/news/trends/texas-homeowners-sue-spacex-sonic-booms-property-damage/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">8</span>150+ TX 业主集体诉讼 SpaceX — sonic booms 损坏房产</div>
+      <h2 class="card-title">Texas Homeowners Accuse SpaceX of Damaging Property With Sonic Booms From Rockets</h2>
+    </a>
+    <p class="card-summary">Boca Chica 周边业主提两宗诉讼 — Sun Belt 制造业巨投带来邻里赔付风险敞口。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★☆☆☆</span>
+      <span class="impact-pill imp-n">中性</span>
+      
+      <span class="card-source">Realtor.com News</span><span>4h ago</span>
+      <span class="card-tag tag-asset">住宅市场</span>
+      <span class="card-tag tag-geo heat">德州</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.dmagazine.com/sponsored/2026/05/face-of-residential-real-estate-2/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">9</span>D Magazine sponsored — Bray Real Estate Group 创始人 Chase Bray</div>
+      <h2 class="card-title">Face of Residential Real Estate</h2>
+    </a>
+    <p class="card-summary">DFW 经纪人物特写（sponsored content）— 公司在 North Dallas 扩张新办公室。</p>
+    <div class="card-meta">
+      <span class="card-stars">★☆☆☆☆</span>
+      <span class="impact-pill imp-n">中性</span>
+      
+      <span class="card-source">D Magazine</span><span>13h ago</span>
+      <span class="card-tag tag-asset">住宅市场</span>
+      <span class="card-tag tag-geo heat">DFW</span>
+      <span class="card-tag tag-geo heat">德州</span>
+      <span class="card-tag tag-actor">经纪</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.redfin.com/news/hottest-neighborhood-2026/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">10</span>Land O&#x27; Lakes, FL — Redfin 2026 全美最热社区 (Top-10)</div>
+      <h2 class="card-title">Land O’ Lakes, Florida is Redfin’s Hottest Neighborhood of 2026–See Which Other Places Made The Top-10 List</h2>
+    </a>
+    <p class="card-summary">Tampa 北郊 Land O&#x27; Lakes 居 Redfin 2026 全美最热社区榜首 — Sun Belt 远郊 single-family 需求持续涌入。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★☆☆</span>
+      <span class="impact-pill imp-lp">长期利好</span>
+      
+      <span class="card-source">Redfin News</span><span>13h ago</span>
+      <span class="card-tag tag-asset">住宅市场</span>
+      <span class="card-tag tag-geo">NYC</span>
+      <span class="card-tag tag-topic">数据</span>
+    </div>
+  </article>
+</section>
+
+<!-- 🏘 全国 BTR / SFR -->
+<section class="news-section">
+  <header class="section-head">
+    <span class="section-emoji">🏘</span><h3 class="section-label">全国 BTR / SFR</h3>
+    <span class="section-desc">Build-to-Rent / Single-Family Rental — 至少一条德州三城</span>
+  </header>
+
+  <article class="card">
+    <a class="card-link" href="https://www.housingwire.com/articles/atlanta-build-to-rent-surge/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">11</span>Atlanta BTR / SFR 大爆发 — 机构投资者持有 SFR 市场 30%</div>
+      <h2 class="card-title">Build-to-rent explodes in Atlanta — and agents are taking notice</h2>
+    </a>
+    <p class="card-summary">大型机构持有 Atlanta SFR 市场约 30% — 是全国均值的 10 倍；Sun Belt 龙头从原型期进入主流期。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★★★</span>
+      <span class="impact-pill imp-lp">长期利好</span>
+      
+      <span class="card-source">HousingWire</span><span>7h ago</span>
+      <span class="card-tag tag-asset heat">BTR/SFR</span>
+      <span class="card-tag tag-asset">住宅市场</span>
+      <span class="card-tag tag-topic heat">政策</span>
+      <span class="card-tag tag-topic heat">利率</span>
+      <span class="card-tag tag-topic">趋势</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.sec.gov/Archives/edgar/data/1562401/000156240126000028/0001562401-26-000028-index.htm" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">12</span>AMH (American Homes 4 Rent) 8-K — Q1 业绩当日 SEC 披露</div>
+      <h2 class="card-title">AMH (American Homes 4 Rent) 8-K - Current report</h2>
+    </a>
+    <p class="card-summary">Item 2.02 Results of Operations + 9.01 Financial Statements — 头部 SFR REIT 季报当日 SEC filing；详细数据待 transcript。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★★☆</span>
+      <span class="impact-pill imp-n">中性</span>
+      
+      <span class="card-source">SEC EDGAR — American Homes 4 Rent 8-K</span><span>5h ago</span>
+      <span class="card-tag tag-asset heat">BTR/SFR</span>
+      <span class="card-tag tag-topic">数据</span>
+      <span class="card-tag tag-actor heat">机构</span>
+    </div>
+  </article>
+</section>
+
+<!-- 🏢 全国 CRE -->
+<section class="news-section">
+  <header class="section-head">
+    <span class="section-emoji">🏢</span><h3 class="section-label">全国 CRE</h3>
+    <span class="section-desc">办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE — 至少一条德州三城</span>
+  </header>
+
+  <article class="card">
+    <a class="card-link" href="https://www.yardimatrix.com/blog/pipeline-prompts-revised-multifamily-completions-forecast/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">13</span>Yardi Matrix 上调 2026 multifamily completions 预测 +2%</div>
+      <h2 class="card-title">Pipeline Prompts Revised Yardi Matrix Multifamily Completions Forecast</h2>
+    </a>
+    <p class="card-summary">在建 pipeline 超预期 — 季度 supply forecast 较 Q1 上修 2%；2026 multifamily 新增供给曲线上行。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★★☆</span>
+      <span class="impact-pill imp-sn">短期利空</span>
+      
+      <span class="card-source">Yardi Matrix Blog</span><span>13h ago</span>
+      <span class="card-tag cre-cat">多户</span>
+      <span class="card-tag tag-asset">多户</span>
+      <span class="card-tag tag-topic">数据</span>
+      <span class="card-tag tag-topic">业绩</span>
+      <span class="card-tag tag-topic">趋势</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://therealdeal.com/national/denver/2026/05/06/giant-group-worlds-biggest-bike-maker-moves-hq-to-boulder/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">14</span>Giant Group US HQ 落户 Boulder — 签 44K SF 10 年租约</div>
+      <h2 class="card-title">World’s largest bicycle manufacturer rides into Boulder</h2>
+    </a>
+    <p class="card-summary">全球最大自行车厂 Giant Group US 子公司迁 Boulder — 3825 Walnut Street 44K SF；丹佛 office 需求小幅利好。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★☆☆☆</span>
+      <span class="impact-pill imp-sp">短期利好</span>
+      
+      <span class="card-source">The Real Deal (National)</span><span>1h ago</span>
+      <span class="card-tag cre-cat">生命科学</span>
+      <span class="card-tag tag-asset">办公</span>
+      <span class="card-tag tag-topic">交易</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://therealdeal.com/national/2026/05/06/colliers-branded-tic-deals-spark-state-federal-probes/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">15</span>Colliers 品牌 TIC 交易遭州 / 联邦调查</div>
+      <h2 class="card-title">Colliers-branded TIC deals spark state, federal probes</h2>
+    </a>
+    <p class="card-summary">Utah sponsor Millcreek Commercial 旗下 TIC (tenant-in-common) 交易被指对退休投资者销售高风险产品 — CRE 中介品牌合规风险敞口扩大。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★★☆</span>
+      <span class="impact-pill imp-ln">长期利空</span>
+      
+      <span class="card-source">The Real Deal (National)</span><span>6h ago</span>
+      <span class="card-tag cre-cat">办公</span>
+      <span class="card-tag tag-asset">办公</span>
+      <span class="card-tag tag-topic">交易</span>
+      <span class="card-tag tag-topic">宏观</span>
+      <span class="card-tag tag-topic heat">政策</span>
+      <span class="card-tag tag-actor">经纪</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.bisnow.com/atlanta/news/neighborhood/while-a-media-mogul-ted-turner-also-made-his-downtown-atlanta-cre-mark-134464" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">16</span>Ted Turner 离世，享年 87 — Atlanta CRE 时代标志人物</div>
+      <h2 class="card-title">Ted Turner, Who Left A Mark On Downtown Atlanta CRE, Dies At 87</h2>
+    </a>
+    <p class="card-summary">CNN 创始人 Ted Turner 在 downtown Atlanta CRE 留下深刻烙印 — 行业悼念，无即时市场影响。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★☆☆☆</span>
+      <span class="impact-pill imp-n">中性</span>
+      
+      <span class="card-source">Bisnow</span><span>5h ago</span>
+      <span class="card-tag tag-asset">跨资产</span>
+      <span class="card-tag tag-topic">交易</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://rebusinessonline.com/town-lane-gillon-property-acquire-460000-sf-retail-office-property-in-allen-texas/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">17</span>Town Lane + Gillon Property 收购 Allen, TX 的 460K SF retail / office 综合体</div>
+      <h2 class="card-title">Town Lane, Gillon Property Acquire 460,000 SF Retail, Office Property in Allen, Texas</h2>
+    </a>
+    <p class="card-summary">NYC + DFW 投资合伙人收购 Watters Creek Village (2008 年建、46 英亩) — DFW 东北郊综合体大宗交易。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★☆☆</span>
+      <span class="impact-pill imp-sp">短期利好</span>
+      
+      <span class="card-source">REBusiness Online</span><span>10h ago</span>
+      <span class="card-tag cre-cat">办公</span>
+      <span class="card-tag tag-asset">办公</span>
+      <span class="card-tag tag-geo heat">DFW</span>
+      <span class="card-tag tag-geo heat">德州</span>
+      <span class="card-tag tag-topic">交易</span>
+    </div>
+  </article>
+</section>
+
+<!-- 💰 全国机构资本 -->
+<section class="news-section">
+  <header class="section-head">
+    <span class="section-emoji">💰</span><h3 class="section-label">全国机构资本</h3>
+    <span class="section-desc">PE / REIT 募资、并购、IPO、机构持仓 — 至少一条德州三城</span>
+  </header>
+
+  <article class="card">
+    <a class="card-link" href="https://therealdeal.com/national/2026/05/06/starwood-capital-faces-default-on-265m-hotel-portfolio/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">18</span>Starwood Capital 旗下 $265M hotel 资产组合贷款违约</div>
+      <h2 class="card-title">Starwood faces default on $265M hotel portfolio loan</h2>
+    </a>
+    <p class="card-summary">$265M 酒店组合 mortgage 进入违约程序 — 酒店 CRE 流动性紧张，再添一例机构级压力。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★★☆</span>
+      <span class="impact-pill imp-ln">长期利空</span>
+      
+      <span class="card-source">The Real Deal (National)</span><span>6h ago</span>
+      <span class="card-tag tag-asset">酒店</span>
+      <span class="card-tag tag-topic">交易</span>
+      <span class="card-tag tag-actor heat">机构</span>
+      <span class="card-tag tag-actor">业主</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.perenews.com/2910-north-arthur-ashe-boulevard-richmond-former-greyhound-bus-station-set-for-multifamily-transformation/" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">19</span>Richmond 前 Greyhound 巴士站改造为 multifamily + retail 综合体</div>
+      <h2 class="card-title">2910 North Arthur Ashe Boulevard: Richmond former Greyhound bus station set for multifamily transformation</h2>
+    </a>
+    <p class="card-summary">2910 North Arthur Ashe Blvd 站点 adaptive reuse — 多户公寓 + 零售配套；机构资本下沉二线城市改造资产。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★☆☆☆</span>
+      <span class="impact-pill imp-sp">短期利好</span>
+      
+      <span class="card-source">PERE News</span><span>44m ago</span>
+      <span class="card-tag tag-asset">多户</span>
+      <span class="card-tag tag-topic">交易</span>
+      <span class="card-tag tag-topic">趋势</span>
+      <span class="card-tag tag-actor heat">机构</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <a class="card-link" href="https://www.bisnow.com/austin/news/ai/spacex-plans-to-spend-an-initial-55b-for-terafab-chip-facility-in-texas-134459" target="_blank" rel="noopener">
+      <div class="card-title-zh"><span class="card-num">20</span>SpaceX 拟初投 $55B 在 Houston 西北建首期 Terafab 芯片厂</div>
+      <h2 class="card-title">SpaceX Files Plans For $55B Terafab Chip Facility In Southeast Texas</h2>
+    </a>
+    <p class="card-summary">$55B 制造业巨型投资 (Houston 北 1 小时车程) — 长期带动 Sun Belt 住宅 / multifamily 需求结构性上行。</p>
+    <div class="card-meta">
+      <span class="card-stars">★★★★★</span>
+      <span class="impact-pill imp-lp">长期利好</span>
+      
+      <span class="card-source">Bisnow</span><span>7h ago</span>
+      <span class="card-tag tag-asset">跨资产</span>
+      <span class="card-tag tag-geo heat">Houston</span>
+      <span class="card-tag tag-geo heat">德州</span>
+      <span class="card-tag tag-topic">交易</span>
+    </div>
+  </article>
+</section>
+</main>
+
+<footer class="bottombar">
+  每天北京时间 09:00 (UTC 01:00) 自动刷新 · 筛选过去 24 小时新闻 · 模糊+实体级去重<br>
+  ★ = 重要性 (1-5) · 利好/利空 = LLM 从 BTR 视角判断 · [扩窗] = 24h 内该分类无新内容、回退 7 天 · KV 缓存 90 天历史
+</footer>
+</body>
+</html>
