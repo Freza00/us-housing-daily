@@ -1,8 +1,8 @@
 {
   "date": "2026-05-07",
-  "generated_at": 1778125926609,
+  "generated_at": 1778126234933,
   "sources_attempted": 27,
-  "sources_ok": 25,
+  "sources_ok": 24,
   "sections": [
     {
       "id": "national",
@@ -51,158 +51,81 @@
   ],
   "items": [
     {
-      "source_id": "national-mortgage-news",
-      "source_name": "National Mortgage News",
+      "source_id": "redfin-news",
+      "source_name": "Redfin News",
       "source_tier": "A",
-      "source_weight": 7,
-      "source_tags": [
-        "rates",
-        "macro"
-      ],
-      "region": "national",
-      "title": "Iran conflict sours real estate investor sentiment to 3-year low",
-      "link": "https://www.nationalmortgagenews.com/news/iran-conflict-sours-real-estate-investor-sentiment-to-3-year-low",
-      "description": "Real estate investments Iran conflict sours real estate investor sentiment to 3-year low By Colin McNamara Published May 06, 2026, 5:53 p.m. EDT | Updated May 06, 2026, 8:42 p.m. EDT 2 Min Read Facebook Twitter LinkedIn Email Real estate investor sentiment fell to its lowest level in at least three years in the first quarter, in large part due to the Iran war, a new report found. Processing Content The RCN Capital/CJ Patrick Investor Sentiment Index dropped 14 basis points to 87 last quarter, the lowest score recorded in the 11-quarter history of the report. The first quarter also represented the first time all four elements analyzed in the index, current market conditions, outlook for future market conditions, home price trends and plans for property purchases, decreased quarter over quarter. \"Investor sentiment was clearly affected by the war in Iran ,\" RCN Capital CEO Jeffrey Tesch said in a press release Wednesday. \"Almost 60% of the investors surveyed believed that the war would have a negative impact on the housing market, and on their business, and this reversed the positive outlook investors had expressed about 2026 in last quarter's sentiment index.\" Mortgage rates reached a near-four-year low at the end of February before they spiked in wake of the conflict. The percentage of investors who view the market as better than it was a year ago fell to 36% from 45% in the winter, according to the Spring 2026 RCN Capital Investor Sentiment Survey. Those who viewed the market as being worse than a year ago rose from 25% to 36% as well. Roughly a third of investors expect market conditions to improve over the next six months, down from 44% the previous quarter, while a similar percentage expect conditions to worsen, up from 19%, the release said. The index plateaued at 101 over the third and fourth quarters of last year. This quarter's score of 87 was just a point shy of last spring's score of 88, though. \"Real estate investor sentiment is in line with consumer sentiment, which recorded the lowest numbers on record in April, and homebuilder sentiment, which fell four points in April to record its lowest score in 14 years,\" said Rick Sharga, CJ Patrick Company CEO, in the release. \"Based on our survey results, the war in Iran is clearly having an impact on investor outlook, but the lackluster performance of home sales in the first quarter is also likely a contributing factor.\" Home sales fell on an annual basis in January and February, but spiked 31.6% month over month and 3.4% year over year in March, according to Remax's national housing report. The challenges mentioned most often by investors in the spring survey were: the high cost of financing, cited by just under 55%, followed by rising home prices at 33%, competition at 32%, inventory at 31% and rising costs at 30%, the release said. The Senate's 21st Century Road to Housing bill, which included a ban on home purchases by large institutional investors, was passed in March as well. But more than 46% of respondents identify as smaller investors, and don't think the bill will affect them. Another 25% of respondents were small investors who believe the ban will reduce competition. Among large investors, roughly twice as many said the ban will make it harder for them to continue to invest, while a smaller number said they'll find a way to continue to purchase properties, according to the release. Colin McNamara Reporter Colin McNamara is a reporter for National Mortgage News. He recently graduated with a bachelor's degree in journalism and minor in general business... Read full bio",
-      "published_at": 1778104409000,
-      "score": 33,
-      "tags": [
-        "rates",
-        "macro",
-        "housing",
-        "policy",
-        "trend",
-        "earnings",
-        "homebuilder"
-      ],
-      "heat_signals": [
-        "mortgage rate",
-        "outlook",
-        "trend",
-        "trends",
-        "annual",
-        "year over year",
-        "housing market"
-      ],
-      "section": "national",
-      "id": "06e76842",
-      "title_zh": "Iran 冲突致地产投资者情绪跌至三年低位，RCN 指数降至 87",
-      "summary_zh": "Q1 RCN Capital/CJ Patrick 投资者情绪指数下滑 14 bps 至 87，创 11 个季度最低；约 60% 投资者认为战争对住房市场有负面影响",
-      "importance": 4,
-      "impact": "short-neg",
-      "fetched_at": 1778125990009
-    },
-    {
-      "source_id": "housingwire",
-      "source_name": "HousingWire",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "housing",
-        "rates",
-        "policy"
-      ],
-      "region": "national",
-      "title": "Zillow bets on pre-marketing to unlock new growth",
-      "link": "https://www.housingwire.com/articles/zillow-q1-2026-revenue-profit/",
-      "description": "Zillow Group started off 2026 with a strong financial performance in the first quarter of the year, recording an 18% annual increase in revenue to $708 million and a net income of $46 million, up from $8 million in Q1 2025. Chief financial officer Jeremy Hofmann attributes this strong performance to Zillow’s consistent execution of its strategy. “We’re helping people go beyond searching and finding and really starting to buy, sell, rent and close,” Hofmann told HousingWire . “So, we&#8217;re quite pleased with that and it shows up in the numbers.” Despite a continued slow housing market and rising mortgage rates, Zillow’s residential revenue grew 8% annually to $450 million, while rental revenue grew 42% year-over-year to $183 million and mortgage revenue rose 56% from a year prior to $64 million. Zillow attributed the annual boost in residential revenue to growth across Preferred, Zillow Showcase , the company’s suite of agent software tools, and the company’s New Construction marketplace, while the mortgage revenue jump was boosted by a 96% annual increase in purchase loan origination volume to $1.5 billion. According to Zillow, Zillow Home Loans is now a top-25 purchase lender in the country. “All of this growth is proof points to us that the strategy is working well and we&#8217;re executing quite nicely and that we&#8217;re able to grow regardless of housing market conditions, which we&#8217;ve done now for three plus years and expect to continue to do,” Hofmann said. A new part of Zillow’s strategy this quarter is Zillow Preview, its pre-marketing offering for listings. In the seven weeks since the product first launched , Zillow has signed more than 60 brokerages onto Zillow Preview. “So many brokerages see value in public pre-marketing, and coming to Zillow is an opportunity to give value to everyone versus some others in the market that are gating inventory, putting inventory behind a registration wall, saying you have to sign up with a brokerage to see this inventory and Preview is the antidote to that. It is public exposure, and that is what people want,” Hofmann said. Hofmann cited a recent Harris Poll survey that found that nearly 9 in 10 Americans would be interested in viewing pre-listed homes online if they were buying a home, and 85% of soon-to-be sellers said they’d be more likely to hire an agent who can pre-market their home to the broadest online audience. Although the product is still in its early days, Hofmann said Zillow expects the product will be “incremental to the business” moving forward. As Zillow looks to the future, given today’s technology environment, AI is obviously front and center. As an early adopter of AI via the Zestimate, Zillow believes its experience with AI technology uniquely positions it to lead the housing industry into this new AI-focused chapter. “AI has been a core part of Zillow since its founding. The Zestimate was rudimentary AI and that was what we launched on 20 years ago,” Hofmann said. According to Hofmann, there is evidence of how AI is impacting Zillow’s business and its customers throughout its Q1 earnings, including a 70% increase in the Follow Up Boss user base, the nearly 100% annual increase in purchase loan origination volume, which Hofmann attributed in part to AI investments used to improve the experience for both the home buyer and the loan officer, and AI-mode, an AI assistant that takes buyers from search to close, which Hofmann said the company launched to 5% of users this quarter. “I think the technology is still nascent versus where it&#8217;s going to be three, five, seven, and 10 years from now,” Hofmann said. “So, we are investing heavily as a result. There&#8217;s a lot that we have done, here&#8217;s a lot that shows up in our results today and we do feel like we&#8217;re just scratching the surface because we do think the technology gets more and more powerful. And the advantages we have with our brand, with our content, with our context, and our in",
-      "published_at": 1778100564000,
-      "score": 24,
-      "tags": [
-        "housing",
-        "rates",
-        "policy",
-        "macro",
-        "deals",
-        "trend",
-        "earnings",
-        "brokerage"
-      ],
-      "heat_signals": [
-        "mortgage rate",
-        "annual",
-        "year-over-year",
-        "housing market"
-      ],
-      "section": "national",
-      "id": "4f25799b",
-      "title_zh": "Zillow Q1 营收 $708M 同比增 18%，购房贷款 origination 翻倍",
-      "summary_zh": "Zillow Q1 净收入 $46M（去年同期 $8M），购房贷款 origination 量增 96% 至 $15 亿，mortgage 收入涨 56%；Zillow Home Loans 跻身全美前 25 大购房贷方",
-      "importance": 4,
-      "impact": "long-pos",
-      "fetched_at": 1778125990009
-    },
-    {
-      "source_id": "realtor-research",
-      "source_name": "Realtor.com Research",
-      "source_tier": "B",
       "source_weight": 8,
       "source_tags": [
         "housing",
         "data"
       ],
       "region": "national",
-      "title": "New-Home Sales Pace Picks Up, Price Plummets in March",
-      "link": "https://www.realtor.com/research/new-home-sales-march-2026/",
-      "description": "New home sales rebounded in February and March from an especially weak January, reaching a seasonally adjusted annual rate of 682,000 in March, up 3.3% year over year. The pace of new home sales has returned closer to its regular level in recent years.",
-      "published_at": 1777993216000,
+      "title": "Land O’ Lakes, Florida is Redfin’s Hottest Neighborhood of 2026–See Which Other Places Made The Top-10 List",
+      "link": "https://www.redfin.com/news/hottest-neighborhood-2026/",
+      "description": "Land O’ Lakes, Florida is Redfin’s Hottest Neighborhood of 2026–See Which Other Places Made The Top-10 List Published on May 6th, 2026 by Celia Fernandez and Asad Khan Two Florida neighborhoods–Land O’ Lakes and Plant City–top Redfin’s list of this year’s hottest neighborhoods. Six of the top 10 are Midwest suburbs–a signal that homebuyers are chasing affordability without straying too far from big-city jobs and amenities. The New York City area still has pull, too, landing a pair of neighborhoods in the top 10. Land O’Lakes, FL is Redfin’s hottest neighborhood of 2026, with nearby Plant City, FL close behind. Oak Creek, WI takes the No. 3 spot. All in all, six of this year’s hottest neighborhoods are in the Midwest–the second straight year America’s heartland has dominated the list of hottest places for homebuyers and sellers. The suburbs of New York City are also popular with house hunters, with many people searching for homes in neighborhoods that are close to a major city–but not too close. This is according to a Redfin analysis ranking U.S. zip codes in the 100 most populous metro areas by year-over-year growth in listing views on Redfin.com and Redfin Compete Score —a measure of how difficult it is to win a home. Please note zip codes may encompass more than one neighborhood, village or town, and we use neighborhood names that are representative of the area covered. See the methodology section at the end of this report for more details. “Midwest cities and lesser-known places in Florida are having a moment—and affordability is the reason,” said Redfin Senior Economist Asad Khan . “Many of these neighborhoods sit just outside major hubs like Milwaukee, Chicago and Tampa, hitting a sweet spot: lower cost of living without giving up access to highly rated schools, shopping and dining. They have the convenience of big cities without the big-city price tags.” Land O’Lakes, FL is Redfin’s hottest neighborhood of 2026, with nearby Plant City, FL close behind. 1. Land O’ Lakes, Florida Zip code: 34637 Parent metro area: Tampa, Florida Median sale price: $425,000 Median sale price YoY: 7.6% Median days on market: 66 Change in home sales: 35.9% YoY Change in median views per listing: 90.9% YoY Share of homes that sold above list price: 7.5% In Land O’ Lakes, home sales are up 36% year over year and views of home listings nearly doubled, giving it the top spot in our ranking. Just 20 miles north of Tampa, this fast-growing suburb blends fresh new construction with established neighborhoods, giving buyers options—and a bit more breathing room than they’ll find in denser cities. With over 38,000 residents, Land O’ Lakes is drawing attention for its parks, strong public schools and easygoing lifestyle. “There’s a bit more land out here and more space between homes,” said Redfin senior agent Angelo Dass . “A lot of buyers are coming from high-tax states like New York and California, looking for more value.” It’s not just about space. Locals can bike to everyday errands, enjoy a walkable feel in parts of town and still be within reach of Clearwater’s beaches—striking a balance that’s fueling its surge in popularity. 2. Plant City, Florida Zip code: 33566 Parent metro area: Tampa, Florida Median sale price: $320,000 Median sale price YoY: -7.0% Median days on market: 46 Change in home sales: 5.9% YoY Change in median views per listing: 30.6% YoY Share of homes that sold above list price: 13% Plant City, a neighbor to Land O’Lakes, gives you more house for less money–and house hunters are taking notice. Home sales were up 6% year over year in this Florida town, and views of home listings jumped. “This area is for people who want to live in Florida but don’t want to be limited to small houses in beach towns without much breathing room between neighbors. In a place like Plant City, they can actually get land–and they get year-round sunshine, too,” Dass said. Just about 25 miles east of Tampa and 63 miles west of Orlando, this suburb allows ",
+      "published_at": 1778068821000,
       "score": 21,
       "tags": [
         "housing",
         "data",
-        "macro",
+        "nyc",
+        "california",
+        "deals",
         "trend"
       ],
       "heat_signals": [
-        "new home sales",
-        "annual",
+        " yoy",
         "year over year",
-        "new home sales"
+        "year-over-year"
       ],
       "section": "national",
-      "id": "61a5f8cf",
-      "title_zh": "3 月 new home sales 年化 68.2 万套，同比增 3.3%",
-      "summary_zh": "new home sales 从 1 月低谷反弹，3 月年化 682,000 套，回归近年常态水平，但价格显著回落",
+      "id": "e7b8e371",
+      "title_zh": "Redfin 2026 最热社区：Florida 两城领跑，Midwest 郊区占六席",
+      "summary_zh": "Land O' Lakes 与 Plant City 分列前二，Midwest 六区上榜反映买家追逐 affordability 且不愿远离大城市就业与配套",
       "importance": 3,
       "impact": "neutral",
-      "fetched_at": 1778125990009
+      "fetched_at": 1778126286263
     },
     {
-      "source_id": "cnbc-realestate",
-      "source_name": "CNBC Realty Check",
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
       "source_tier": "A",
       "source_weight": 6,
       "source_tags": [
-        "macro"
+        "housing"
       ],
       "region": "national",
-      "title": "Watch CNBC's full interview with FHFA Director Bill Pulte",
-      "link": "https://www.cnbc.com/video/2026/05/06/watch-cnbcs-full-interview-with-fhfa-director-bill-pulte.html",
-      "description": "Watch CNBC&#x27;s full interview with FHFA Director Bill Pulte Skip Navigation Markets Pre-Markets U.S. Markets Currencies Prediction Markets Cryptocurrency Futures Commodities Bonds Funds ETFs Business Economy Finance Health Science Media Real Estate Energy Climate Transportation Investigations Industrials Retail Wealth Sports Life Small Business Investing Personal Finance Fintech Financial Advisors Options Action ETF Street Buffett Archive Earnings Trader Talk Tech Cybersecurity AI Enterprise Internet Media Mobile Social Media CNBC Disruptor 50 Tech Guide Politics White House Policy Defense Congress Expanding Opportunity Video Latest Video Full Episodes Livestream Live Audio Live TV Schedule CNBC Podcasts CEO Interviews CNBC Documentaries Digital Originals Watchlist Investing Club Trust Portfolio Analysis Trade Alerts Meeting Videos Homestretch Jim&#x27;s Columns Education Subscribe PRO Pro News Josh Brown Mike Santoli Calls of the Day My Portfolio Livestream Full Episodes Stock Screener Market Forecast Options Investing Chart Investing Subscribe Livestream Menu Make It select USA INTL Livestream Search quotes, news videos Livestream Watchlist SIGN IN Create free account Markets Business Investing Tech Politics Video Watchlist Investing Club PRO Livestream Menu watch now Share Share Article via Facebook Share Article via Twitter Share Article via LinkedIn Share Article via Email Money Movers Watch CNBC&#x27;s full interview with FHFA Director Bill Pulte Bill Pulte, U.S. Federal Housing Finance Agency director, joins &#x27;Money Movers&#x27; to discuss mortgage rates, the Trump administration&#x27;s housing-related priorities, Fed Chair Jerome Powell&#x27;s legacy, and more. 09:42 Wed, May 6 2026 12:07 PM EDT watch now watch now VIDEO 02:48 A lot more equity building opportunities in our brands, says Kraft Heinz CEO 4 hours ago watch now watch now VIDEO 03:57 Zillow CEO Jeremy Wacksman: Affordability is still a challenge in the housing market watch now watch now VIDEO 01:22 Pres. Trump: Deal is getting close but Iran has not yet agreed to proposal watch now watch now VIDEO 05:05 Tom Lee: Still a good risk-reward balance in equities, even in the stocks leading the rally watch now watch now VIDEO 05:01 Consumer is meaningfully adjusting spend amid higher energy prices: Zeta Global&#x27;s Steinberg watch now watch now VIDEO 02:48 A lot more equity building opportunities in our brands, says Kraft Heinz CEO 4 hours ago watch now watch now VIDEO 03:57 Zillow CEO Jeremy Wacksman: Affordability is still a challenge in the housing market watch now watch now VIDEO 01:22 Pres. Trump: Deal is getting close but Iran has not yet agreed to proposal watch now watch now VIDEO 05:05 Tom Lee: Still a good risk-reward balance in equities, even in the stocks leading the rally watch now watch now VIDEO 05:01 Consumer is meaningfully adjusting spend amid higher energy prices: Zeta Global&#x27;s Steinberg Load More Subscribe to CNBC PRO Subscribe to Investing Club Licensing Reprints CNBC Councils Select Personal Finance Join the CNBC Panel Closed Captioning Digital Products News Releases Internships Corrections About CNBC Site Map Podcasts Careers Help Contact News Tips Got a confidential news tip? We want to hear from you. Get In Touch CNBC Newsletters Sign up for free newsletters and get more CNBC delivered to your inbox Sign Up Now Get this delivered to your inbox, and more info about our products and services. Advertise With Us Please Contact Us Ad Choices Privacy Policy Your Privacy Choices CA Notice Terms of Service © 2026 Versant Media, LLC. All Rights Reserved. A Versant Media Company. Data is a real-time snapshot *Data is delayed at least 15 minutes. Global Business and Financial News, Stock Quotes, and Market Data and Analysis. Market Data Terms of Use and Disclaimers Data also provided by",
-      "published_at": 1778083656000,
+      "title": "As Gas Prices Climb, the ‘Commute Tax’ Is Shrinking Home Searches",
+      "link": "https://www.realtor.com/news/trends/high-gas-prices-commuter-tax-homebuyers/",
+      "description": "How High Gas Prices and the &#x27;Commuter Tax&#x27; Are Impacting Homebuyers Realtor.com® Real Estate App 314,000+ Open in App Skip to content Buy Homes for sale Homes for sale Foreclosure homes New construction for sale All new construction New home construction Explore the neighborhood Housing market trends Recently sold homes Property records Home buying tips Home buying checklist Home buyers reveal: 'What I wish I had known before buying my first home' First-time home buyer resource center More home buying insights Success stories Sell Home selling tools Compare agents & pick the right one Find the right selling option for you How much can you make selling your home? See what your home is worth Home selling advice Complete guide to selling your home Should I sell my home now? How much is my home worth? How should I sell my home? How to select an agent? How to prepare your home for sale? See more home selling insights Recently sold Recently sold homes Rent Apartments For rent Apartments for rent Renter tools Contacted rentals Apply now online Landlord tools Manage rentals List your rentals Screen tenants Create a lease Collect rent online Home renting tips Renter's resource center Should I rent or buy? Debunked! 8 myths about renting you should stop believing immediately Rental report More renting insights Mortgage Mortgage rates Get pre-approved Mortgage rates Home equity financing rates Refinance rates Finance advice For veterans Calculators Mortgage calculator Refinance calculator How much house can I afford Rent vs. buy Financial advice 6 ways home buyers mess up getting a mortgage Mortgage guide Learn about home insurance More finance insights Find an Agent Find a real estate agent Search for real estate agent Why use a REALTOR ® 6 reasons you should never buy or sell a home without an agent Difference between agent, broker & REALTOR ® Listing vs. buyer agent How to find a REALTOR ® News around REALTORS ® Real estate agents reveal the toughest home buyers they've ever met More news around REALTORS ® My Home News & Insights News The latest news Housing trends Real estate news Celebrity real estate Unique homes For PROs Corporate blog Insights Buying Selling Renting Financing Moving Living Home improvement Research 2026 housing market predictions NEW 2025 hottest zip codes Guides & more All guides Complete guide on how to sell your home First-time home buyer resource center Mortgage guide Veterans home buyer guide USDA home loan guide Home insurance guide Real estate videos Housing resources About us Manage rentals Advertise News Insights NEWS TRENDS BUYING SELLING RENTING CELEBRITY HOMES ADVICE GUIDES LIVING RESEARCH MORE News Insights NEWS TRENDS Real Estate News Housing Trends Celebrity Real Estate Unique Homes Reality TV Sports Most Expensive Homes Most Popular Homes BUYING SELLING RENTING CELEBRITY HOMES ADVICE Buying Selling Renting Financing Living Moving Home Improvement GUIDES LIVING RESEARCH Trends As Gas Prices Climb, the ‘Commute Tax’ Is Shrinking Home Searches By Allaire Conte May 6, 2026 Getty Images For years, the \"drive until you qualify\" trade-off was a staple of the American dream : Buyers could trade a longer commute for more affordability and better square footage. But as gas prices surge nationwide , the math is no longer working out. A gallon of regular unleaded now sits at an average of $4.53, up more than $1.40 from a year ago, according to AAA . For the estimated 115 million people who commute to work by car alone daily in the U.S., that spike has amounted to a punishing commute tax—one that is now dictating the boundaries of the housing market. “Houston is a driving city, no way around it, and gas prices are absolutely in the conversation now in a way they weren't two years ago,” says Andrew Gardner founder of Leap Properties , a real estate services company based in Houston —where an estimated 1.2 million people commute to work daily. “Buyers are doing the math out loud,” Gardner says. “I had ",
+      "published_at": 1778105030000,
       "score": 20,
       "tags": [
-        "macro",
         "housing",
+        "multifamily",
+        "texas",
+        "houston",
+        "macro",
         "rates",
-        "policy",
+        "deals",
         "trend",
-        "earnings",
-        "homebuilder",
-        "regulator"
+        "landlord",
+        "brokerage"
       ],
       "heat_signals": [
-        "fed",
+        "houston",
         "mortgage rate",
-        "forecast",
+        "trend",
+        "trends",
         "housing market"
       ],
       "section": "national",
-      "id": "20837140",
-      "title_zh": "FHFA Director Bill Pulte 接受 CNBC 专访",
-      "summary_zh": "详细见原文——FHFA Director Bill Pulte 接受 CNBC 全程采访，内容未提供具体政策立场或数据",
-      "importance": 2,
-      "impact": "neutral",
-      "fetched_at": 1778125990009
+      "id": "1329f36c",
+      "title_zh": "油价上涨推高'通勤税'，购房者缩小搜索半径",
+      "summary_zh": "gas price 攀升使 homebuyer 减少远郊房源搜索，affordability 与通勤成本权衡加剧",
+      "importance": 3,
+      "impact": "short-neg",
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "cnbc-realestate",
@@ -213,30 +136,28 @@
         "macro"
       ],
       "region": "national",
-      "title": "This is what it costs investors to stay in cash — and what to do instead",
-      "link": "https://www.cnbc.com/2026/05/06/this-is-what-it-costs-investors-to-stay-in-cash-and-what-to-do-instead-.html",
-      "description": "While money markets and certificates of deposit are still producing solid yields, sitting in too much cash could be costing investors money. Investors have piled into cash equivalent assets in recent years — and they have stayed despite the central bank&#x27;s decision to cut the federal funds rate three times last year. The Fed&#x27;s last decrease was in December and it&#x27;s now on hold as it watches economic data and the impact of the Iran war. In an environment where cash has grown both tactically and structurally, the opportunity cost of remaining sidelined could be rising, BlackRock warned in a report last week. Money market fund assets were at $7.63 trillion as of the week ended April 29, according to the Investment Company Institute . In prior rate-cutting cycles, the one-year average return on cash after cuts began following a pause of three months or longer was about 2.8%, a BlackRock analysis showed. The firm used the Bloomberg US T-Bills 1-3 Month Index to represent cash. In contrast, bonds have historically delivered 7% to 9% over the same period, BlackRock noted. Even as recent events have made it difficult to predict how the Fed could proceed on rates – and a trio of central bank officials recently disagreed with hinting that the next move could be a cut – BlackRock is telling investors they should at least hedge their bets. The consensus trade right now is very much settling in on higher for longer, even potentially pivoting to more of a restrictive mode in Fed policy, Stephen Laipply, global co-head of iShares Fixed Income ETFs, said in an interview with CNBC. The risk there is that if things quickly resolve, albeit unexpectedly, in terms of the geopolitical risk... you may have a reversal on that, he added. As usual, by the time you may want to act on that by extending duration, even if it&#x27;s modest, rates could have already moved and repriced a different trajectory for Fed policy. Overall, the majority of traders are not pricing in a cut at all this year, according to the CME FedWatch tool . Roughly 16% see odds of rates rising at the end of 2026, while almost 12% anticipate easing. [W]e think the market continues to overprice the risk that central banks like the Fed will hike, or not cut, interest rates, UBS said in a note last week. That presents an opportunity for investors to lock in yields by adding to quality bonds, particularly in the short- and medium duration segment. Wells Fargo Investment Institute is also telling income investors they should move excess cash into bonds. Intermediate-term bonds are going to obviously outperform cash if you believe the Fed still cuts one or two more times in the next one or three years, said Luis Alvarado, the firm&#x27;s co-head of global fixed income strategy. While we park money and wait, you&#x27;re still getting paid a nice coupon in fixed income to do that. The risk is that inflation is much higher than expected, which forces the Fed to raise rates, he added. Yet Alvarado sees more probably of a hold for now as events play out. We don&#x27;t think that the price of energy will stay at these levels forever, he said. We&#x27;re still at an impasse now, but we don&#x27;t think it&#x27;s going to be sustainable when we look over the next three to five years. Where to move excess cash Investors should focus on bonds with maturities of three to seven years, although in this environment even one to three years should be fine as the Fed continues to keep rates steady, Alvarado said. He&#x27;s sticking with high-quality bonds, like mortgage-backed securities and investment-grade corporate bonds . For investors in high tax brackets, Alvarado also sees opportunities in municipal bonds, which have yields around 3.68%, he said. That converts to a taxable equivalent yield of about 5.84%, he added. That is a very high starting yield that you can sustain for a longer period of time if you are a buy-and-hold investor in municipal bonds, he said. BlackRock also strongly ",
-      "published_at": 1778094725000,
-      "score": 18,
+      "title": "Zillow CEO Jeremy Wacksman: Affordability is still a challenge in the housing market",
+      "link": "https://www.cnbc.com/video/2026/05/06/zillow-ceo-jeremy-wacksman-affordability-is-still-a-challenge-in-the-housing-market.html",
+      "description": "Zillow CEO Jeremy Wacksman joins 'Closing Bell Overtime' to talk quarterly results, the state of the housing market, headwinds for home sales, and more.",
+      "published_at": 1778101775000,
+      "score": 16,
       "tags": [
         "macro",
-        "rates",
-        "policy",
-        "institutional",
-        "mixed-asset"
+        "housing",
+        "trend",
+        "earnings"
       ],
       "heat_signals": [
-        "fed",
-        "inflation",
-        "blackrock"
+        "state of the housing",
+        "housing market"
       ],
       "section": "national",
-      "id": "75c0ab3c",
-      "title_zh": "BlackRock 警告：cash 持仓机会成本攀升，债券历史回报 7%-9%",
-      "summary_zh": "money market 资产仍处 $7.63 万亿高位；BlackRock 分析显示，Fed 暂停降息三个月后现金一年平均回报约 2.8%，同期债券历史回报 7%-9%，建议投资者对冲押注",
-      "importance": 3,
-      "impact": "long-pos",
-      "fetched_at": 1778125990009
+      "id": "281bc02c",
+      "title_zh": "Zillow CEO：住房 affordability 仍是市场核心挑战",
+      "summary_zh": "Jeremy Wacksman 称 affordability 持续制约 home sales，季度业绩承压",
+      "importance": 4,
+      "impact": "short-neg",
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "housingwire",
@@ -249,29 +170,152 @@
         "policy"
       ],
       "region": "national",
-      "title": "Millrose Properties one-year report card, Q1 2026 earnings",
-      "link": "https://www.housingwire.com/articles/millrose-1-year-q1-earnings/",
-      "description": "A year ago, when Lennar completed the spin-off of Millrose Properties into a standalone, publicly traded REIT, the sheer size, root motivation and the complex nature of the pivot ushered in an era of land-banking unlike any before. Global capital asset managers followed suit. Land-banking and asset-light or land-light business and balance sheet management began to fuse in many people’s minds into a single, inseparable notion. The Millrose spin wasn’t simply financial engineering, particularly for Lennar, which had studied and pursued the strategy patiently for several years before triggering it. It was a bet that land – the industry’s most capital-intensive, risk-layered input – could be separated, institutionalized and delivered back to builders as an on-demand service. Equally important, it stemmed from a conviction that doing so would make a homebuilding enterprise a simpler, smarter, more nimble and more homebuying customer-focused organization. One year in, Millrose CEO Darren Richman has no illusions about what had to be proven. “All the components exist in nature,” he said in a one-on-one interview this week. “But the actual composition had never been done.” That composition, Richman told us, had three tests: Could the Lennar “flywheel” function in real time? Could third-party builders adopt the model at scale? The third is the hardest test, the one in all our faces now: How would the underlying land collateral perform through a downcycle? So far, one year in, on each front, Millrose can point to validation. The company cycled land in and out of Lennar’s portfolio “in the ordinary course,” dispelling early skepticism that the REIT was merely a repository for legacy or unwanted assets. It expanded beyond its anchor [Lennar] client, growing to 17 builder counterparties. And in a housing environment Richman characterizes as “going on two years” of downcycle conditions, it has not seen a single option termination. “We’ve been able to kind of prove out the story,” Richman said. “It’s going to continue to be a show-me story… but I think the market now views us with more credibility.” The public company year-one report card The numbers support that claim – at least on a first-pass, year-one report card. Millrose reported Q1 2026 invested capital of approximately $8.7 billion, up from $8.5 billion at year-end, with 31% of that capital now deployed outside the foundational Lennar relationship. Adjusted funds from operations (AFFO) – a lens into the REIT’s recurring earnings power –came in at $125.9 million, or $0.76 per share, fully covering its dividend. Liquidity stood at roughly $1.5 billion, with a debt-to-capital ratio under 30%, preserving dry powder for ongoing expansion. Of equal note: growth is increasingly driven by repeat engagement and expanding wallet share among existing builder partners – a signal that Millrose is doing a good job of relationship-building and embedding itself operationally, not just transactionally. Still, the tone from management on the Q1 earnings call was measured rather than celebratory. Richman emphasized “disciplined deployment,” “durable relationships,” and “predictable recurring earnings” – terms that tell of a company still ultra-focused on proving itself rather than declaring victory. Industry pivot For better or worse, another significance of Millrose’s first year is not just its own performance but what its sustainable, strategic role in homebuilding reveals about the direction of the broader industry. From Richman’s vantage point, the broader industry is in a sped-up, tipping-point transformation: moving away from vertically integrated land-development-heavy models toward something closer to manufacturing. Historically, he argues, many builders were “land development companies masquerading as home builders.” Today, the leading operators are reorienting toward “velocity and volume” – controlling production cadence, managing costs and responding to customer demand in a way that resemble",
-      "published_at": 1778101825000,
-      "score": 16,
+      "title": "Women take the leadership reins at Reverse Mastermind Summit",
+      "link": "https://www.housingwire.com/articles/reverse-mastermind-summit-leadership-sales/",
+      "description": "Three women with prominent roles in the reverse mortgage industry took the stage Tuesday at the Reverse Mastermind Summit in Knoxville, Tennessee, sharing personal stories while converging on sales advice around the power of narrative, the importance of relationships with financial planners and the need for higher professional standards. Christine Jensen of Fairway Home Mortgage opened the panel with a deep dive into how the Trump administration’s signature tax bill , passed last summer, has positively impacted mortgage insurance deductibility. Senior homeowners, she said, may be able to use these savings to capitalize on the HECM for Purchase program . Christina Harmes of Barrett Financial Group followed with tips for connecting with clients and referral partners, stressing that emotional intelligence is a critically undervalued trait for loan originators. “The reverse mortgage sale is one of the highest trust sales that you could possibly be involved in,” Harmes said, adding that prospective borrowers are often afraid and human connection must come before numbers. Lisa Moriello of loanDepot argued that loan officers need to “stop thinking like employees” and develop a business ownership mindset. At a time when Home Equity Conversion Mortgage (HECM) endorsements are averaging about 2,000 per month , the typical reverse LO is closing less than one deal per month, she said — a figure more akin to a “part-time job” rather than a career. Jensen on tax deduction strategies The One Big Beautiful Bill Act that was signed by President Donald Trump in July 2025 included a provision that made the mortgage insurance tax deduction permanent. According to U.S. Mortgage Insurers , about 40 million homeowners have used private mortgage insurance to purchase or refinance a home since 1957 — including 800,000 who bought a home with it in 2024. Jensen walked the audience through a technical presentation she’d previously given to the Financial Planning Association , noting that the permanent deduction can be part of a powerful financial strategy for senior homeowners in retirement or planning for it. She also cited recent data from the National Association of Realtors showing that Americans over 60 make up nearly half of today’s homebuyers. Jensen’s case study involved a hypothetical 72-year-old couple purchasing an $800,000 home with a down payment of $509,000, with the remainder financed through a HECM for Purchase loan. They also have a retirement account with a required minimum distribution of $63,000 per year. Using the reverse mortgage proceeds, they’re able to make no payments for two years while still accruing $63,000 in deductible mortgage interest and insurance. At that point, they can use the $63,000 distribution to make a lump-sum payment on the HECM. This fully offsets the taxable portion of the distribution and saves them $13,000. Additionally, the couple could repeat the strategy every few years, with Jensen showing their total savings at roughly $27,000 after five years — an amount that exceeds their upfront costs for the reverse mortgage. “I’ve got to tell you, when I showed the financial planners how this works, they had no idea that this was possible,” Jensen said. Harmes: ‘It’s the connection that creates the relationship’ Harmes began her presentation with a deeply personal story about how reverse mortgages have the power to change and even save lives. When she was a child, her grandfather sold his home and moved into an apartment rather than exploring financing options. After the move, he fell and broke his neck, wasn’t found for days, and the last six months of his life were “an absolute living hell,” she said. Years later, when Harmes sold a reverse mortgage for the first time, her clients were already in a difficult position. The husband had recently been diagnosed with a serious illness and his wife was “terrified” of managing their home and finances alone. Harmes’s team helped the couple pay off a large debt, set up a",
+      "published_at": 1778111641000,
+      "score": 15,
       "tags": [
         "housing",
         "rates",
         "policy",
-        "trend",
-        "earnings",
-        "homebuilder"
+        "multifamily",
+        "deals"
       ],
-      "heat_signals": [
-        "year-end"
-      ],
+      "heat_signals": [],
       "section": "national",
-      "id": "9cf039e8",
-      "title_zh": "Millrose Properties 分拆满周年：land-banking 模式验证期",
-      "summary_zh": "Lennar 分拆 Millrose 为独立 REIT 满一年，CEO Darren Richman 称需验证三大测试：Lennar 飞轮实时运转、第三方建商规模化采用、土地抵押品在下行周期表现；目前仍在验证中",
+      "id": "d63b079c",
+      "title_zh": "Reverse mortgage 峰会：女性领袖强调叙事能力与专业标准",
+      "summary_zh": "HECM 月均 endorsement 仅约 2,000 笔，典型 LO 月成交不足一单；tax bill 利好 mortgage insurance 抵扣带动 HECM for Purchase",
+      "importance": 2,
+      "impact": "neutral",
+      "fetched_at": 1778126286263
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "HomeServices names Jason Waugh as next HSF Affiliates CEO",
+      "link": "https://www.housingwire.com/articles/jason-waugh-hsf-affiliates-ceo/",
+      "description": "HomeServices of America has named industry veteran Jason Waugh as successor to HSF Affiliates CEO Vince Leisey, with a leadership transition expected to begin in 2027, the company announced Wednesday. HSF Affiliates is the franchisor of the Berkshire Hathaway HomeServices real estate network, which has been in expansion mode in recent years as large brokerage brands compete for market share and recruit top-producing agents in a slower transaction environment. The planned, multi-year handoff is designed to preserve continuity for franchisees while positioning the network for its next phase of growth. Waugh returns to HomeServices of America with leadership experience on both the brokerage and franchise sides of the business. He previously led Prudential Northwest Real Estate prior to its acquisition by HomeServices and later served as president and CEO of Berkshire Hathaway HomeServices Northwest Real Estate , where he helped build one of the brand’s flagship brokerage operations. Most recently, Waugh served as president of Coldwell Banker Affiliates , one of the industry’s largest global real estate franchise organizations. In that role, he focused on franchise growth, brand strategy and network performance, according to the announcement. “Jason brings a rare combination of brokerage leadership, franchise expertise and enterprise perspective that will be invaluable as we continue to strengthen and grow our network,” Chris Kelly , president and CEO of HomeServices of America, said in the announcement. “We are thrilled to welcome him back and confident in his ability to help guide HSF Affiliates into its next chapter following a thoughtful and deliberate transition with Vince Leisey later next year.” The company said Waugh has been identified as Leisey’s successor as part of a multi-year transition plan. For now, he will be “selectively engaged in high-priority enterprise initiatives,” with a particular focus on HomeServices’ insurance segment. Leisey will remain CEO of HSF Affiliates and continue to lead the Berkshire Hathaway HomeServices franchise network through the transition period. After the change in CEO is completed, Leisey is expected to become chair of HSF Affiliates while remaining CEO of Berkshire Hathaway HomeServices Ambassador Real Estate. “As previously shared, this transition reflects a thoughtful and deliberate approach to leadership continuity,” Kelly said. “Jason’s immediate engagement ensures a seamless path forward while positioning HSF Affiliates for sustained long-term success.” Leisey framed the move as part of a longer-term strategy to keep the franchise system stable while preparing for the next market cycle. “I remain fully committed to leading this network and building on the momentum we have today,” Leisey said. “At the same time, this transition has always been about positioning the network for long-term success. Jason brings the franchise network experience, perspective, and leadership needed for what comes next, and I look forward to supporting him when that time comes while continuing to stay closely connected to the incredible people and companies across our network.” Waugh said he plans to spend the near term contributing to enterprise projects before working alongside Leisey and the HSF Affiliates team on the leadership transition. “I’m honored to return to HomeServices of America and to contribute to several meaningful initiatives ahead of working alongside Vince and the HSF Affiliates team,” Waugh said. “The strength of this network is built on its people, its brand and its shared commitment to excellence. I look forward to building on that foundation and supporting our franchisees as we continue to grow together when the transition occurs.” HomeServices of America and HSF Affiliates leadership said they expect Waugh’s experience and strategic focus to support further growth and performance for the global Berkshire Hathaway HomeServices network. This article was generated using HousingWire",
+      "published_at": 1778106472000,
+      "score": 15,
+      "tags": [
+        "housing",
+        "rates",
+        "policy",
+        "deals",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "section": "national",
+      "id": "fce18a7d",
+      "title_zh": "HomeServices 任命 Jason Waugh 为 HSF Affiliates 下任 CEO",
+      "summary_zh": "2027 年过渡，Waugh 兼具 brokerage 与 franchise 经验，Berkshire Hathaway HomeServices 网络持续扩张抢份额",
       "importance": 3,
       "impact": "neutral",
-      "fetched_at": 1778125990009
+      "fetched_at": 1778126286263
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "NAR says policies already align with new HUD stance on sharing school, crime data",
+      "link": "https://www.housingwire.com/articles/nar-says-policies-already-align-with-new-hud-stance-on-sharing-school-crime-data/",
+      "description": "The National Association of Realtors (NAR) says its existing policies already align with new federal guidance allowing agents to discuss neighborhood crime rates and school quality without violating the Fair Housing Act’s prohibition on racial steering. The Department of Housing and Urban Development (HUD) announced the new guidance last week, reversing Biden-era policies that led many real estate firms to remove or restrict such information. HUD’s announcement characterized past industry practices as restrictive — and accused NAR of imposing a “professional gag order” on members. In an emailed response to HousingWire, a NAR spokesperson disputed that framing. “NAR has never prohibited these conversations between agents and prospective homebuyers,&#8221; the spokesperson said. &#8220;NAR&#8217;s Code of Ethics, fair housing training and fair housing manuals explicitly allow members to discuss neighborhood information regarding crime and school data. For decades, NAR has emphasized that members share accurate, objective information, not opinions or hearsay. This is a risk management best practice. &#8220;Some practitioners, misunderstanding the law or seeking to eliminate all risk, may have adopted the view, ‘it’s illegal to talk about it.’ That has never been NAR’s guidance.” The NAR spokesperson added: “NAR’s current training and guidance generally align with HUD&#8217;s position that agents can and should provide prospective buyers with the information they seek on neighborhood crime and school quality, provided the information comes from an accurate third-party resource and is not subjective opinion. We believe it will be helpful to underscore among our membership that the law and our existing guidance supports these practices.&#8221; The association may provide more information on the topic, the spokesperson said. &#8220;We may supplement existing guidance and training materials to provide additional best practices on how agents may comply with the law while providing consumers with the information they seek.” Legal backing — and lingering risk Attorney Robert Butters — a former NAR deputy general counsel and antitrust trial attorney in the Federal Trade Commission’s Bureau of Competition — said HUD’s updated stance aligns with arguments he has made for years. “The assumption behind preventing that kind of information included minority home seekers being less concerned about crime statistics than majority home seekers, which I never found to be logical,&#8221; he said. &#8220;It&#8217;s the same thing with schools. Do you mean that minority home seekers don&#8217;t care about the quality of the schools their children are going to attend? None of that made any sense to me.&#8221; Butters said the prior reasoning required drawing tenuous inferences about how different groups interpret information — an approach he viewed as inconsistent with the Fair Housing Act . At the same time, he cautioned that the new guidance does not eliminate legal exposure for agents or brokerages. &#8220;There&#8217;s always a risk of being sued,&#8221; Butters said. &#8220;You open the door of your establishment, you&#8217;re taking on a degree of risk. The question is, what is your tolerance? I think the position will make it easier to defend the cases, if they come, and it may be a mitigating factor on potential plaintiffs for bringing the cases in the first place. &#8220;They&#8217;re going to have to contend with the current HUD position on that, but you really can&#8217;t eliminate down to zero risk.” He added that HUD’s interpretation, while influential, is not binding on courts — meaning judges and juries could still reach different conclusions. NAR said its position continues to emphasize a distinction between what is legally permissible and what is professionally advisable — particularly when it comes to subjective commentary. “Subjective commentary is not automatic evidence of discriminatory intent,” the spokesperson said. “But subjectiv",
+      "published_at": 1778101962000,
+      "score": 15,
+      "tags": [
+        "housing",
+        "rates",
+        "policy",
+        "macro",
+        "regulator"
+      ],
+      "heat_signals": [
+        "fed"
+      ],
+      "section": "national",
+      "id": "feb6e229",
+      "title_zh": "NAR 回应 HUD 新规：现有政策已允许讨论学区与犯罪数据",
+      "summary_zh": "HUD 撤销 Biden-era 限制，NAR 称 Code of Ethics 从未禁止客观信息分享，此前行业自我审查源于误读",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778126286263
+    },
+    {
+      "source_id": "cnbc-realestate",
+      "source_name": "CNBC Realty Check",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "macro"
+      ],
+      "region": "national",
+      "title": "Mortgage rates hit the highest level in a month, causing first-time homebuyers to drop out",
+      "link": "https://www.cnbc.com/2026/05/06/mortgage-rates-hit-the-highest-level-in-a-month-causing-lower-income-homebuyers-to-drop-out.html",
+      "description": "Mortgage rates rose last week, causing loan demand to drop back and causing the average loan size to rise — indicating that lower-income borrowers dropped out.",
+      "published_at": 1778068993000,
+      "score": 12,
+      "tags": [
+        "macro",
+        "rates",
+        "deals",
+        "mixed-asset"
+      ],
+      "heat_signals": [
+        "mortgage rate"
+      ],
+      "section": "national",
+      "id": "59c0fe63",
+      "title_zh": "30Y mortgage 升至月内高位，first-time 购房者掉队",
+      "summary_zh": "上周 mortgage rate 上行致 loan demand 回落，平均贷款额上升说明中低收入买家退出",
+      "importance": 4,
+      "impact": "short-neg",
+      "fetched_at": 1778126286263
+    },
+    {
+      "source_id": "redfin-news",
+      "source_name": "Redfin News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "Coming Soon in Michigan: A $260,000 Turnkey Home in a Lansing Suburb",
+      "link": "https://www.redfin.com/news/251-ware-st-lansing-michigan-listing/",
+      "description": "Coming Soon in New Jersey: This 3-Bedroom, 2-Bath Fixer-Upper Less Than an Hour From NYC is Set to Hit the Market This Week",
+      "published_at": 1778083766000,
+      "score": 12,
+      "tags": [
+        "housing",
+        "data",
+        "nyc"
+      ],
+      "heat_signals": [],
+      "section": "national",
+      "id": "0695e1cd",
+      "title_zh": "Michigan Lansing 郊区 $260K turnkey 房源即将上市",
+      "summary_zh": "单套房源预告，属局部市场微观信息，无趋势结论",
+      "importance": 1,
+      "impact": "neutral",
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "fed-press",
@@ -285,32 +329,30 @@
         "regulator"
       ],
       "region": "national",
-      "title": "Federal Reserve Board releases annual audited financial statements",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20260325a.htm",
-      "description": "Federal Reserve Board - Federal Reserve Board releases annual audited financial statements Skip to main content An official website of the United States Government Here&#x27;s how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( ) or https:// means you&#x27;ve safely connected to the .gov website. Share sensitive information only on official, secure websites. Back to Home Board of Governors of the Federal Reserve System Stay Connected Federal Reserve Facebook Page Federal Reserve Instagram Page Federal Reserve YouTube Page Federal Reserve Flickr Page Federal Reserve LinkedIn Page Federal Reserve Threads Page Federal Reserve X Page Federal Reserve Bluesky Page Subscribe to RSS Subscribe to Email Recent Postings Calendar Publications Site Map A-Z index Careers FAQs Videos Contact Search Submit Search Button Advanced Toggle Dropdown Menu Board of Governors of the Federal Reserve System The Federal Reserve, the central bank of the United States, provides the nation with a safe, flexible, and stable monetary and financial system. Main Menu Toggle Button Sections Search Toggle Button Search Search Submit Button Submit About the Fed Structure of the Federal Reserve System The Fed Explained Board Members Advisory Councils Federal Reserve Banks Federal Reserve Bank and Branch Directors Federal Reserve Act Currency Board Meetings Board Votes Careers Do Business with the Board Holidays Observed - K.8 Ethics & Values Contact Requesting Information (FOIA) FAQs Economic Education Fed Financial Statements Financial Innovation News & Events Press Releases Speeches & Testimony Calendar Videos Photo Gallery Conferences Monetary Policy Federal Open Market Committee About the FOMC Meeting calendars and information Transcripts and other historical materials FAQs Monetary Policy Principles and Practice Notes Policy Implementation Policy Normalization Policy Tools Reports Monetary Policy Report Beige Book Federal Reserve Balance Sheet Developments Review of Monetary Policy Strategy, Tools, and Communications Overview Supervision & Regulation Supervision Community Banks Regional Banks and Foreign Banks with U.S. Assets $100 Billion Large Banks and Large Foreign Banks Global Systemically Important Banks Financial Market Utilities Consumer Compliance Resources for Supervised Institutions Reports Federal Reserve Supervision and Regulation Report Reporting Forms Recent Reporting Form Updates Information Collections Under Review Financial Statements Securities Exchange Act of 1934 Applications/Structure Change FFIEC Municipal and Government Securities Activities Monitoring Micro Data Reference Manual Legal Developments Enforcement Actions and Legal Developments Mergers, Acquisitions, and Other Applications Process Filing Information Board and Reserve Bank Actions Supervision and Regulation Letters By Year By Topic Regulatory and Policy Resources Federal Reserve Act Bank Holding Company Act Regulations Supervision Manuals Federal Reserve Regulatory Service Disaster Preparedness and Recovery Resources Banking and Data Structure Beneficial Ownership Reports Large Commercial Banks Minority Depository Institutions U.S. Offices of Foreign Entities Financial Holding Companies Interstate Branching Securities Underwriting and Dealing Subsidiaries State Member Banks Supervised by the Federal Reserve Financial Stability Financial Stability Assessments About Financial Stability Types of Financial System Vulnerabilities & Risks Monitoring Risk Across the Financial System Proactive Monitoring of Markets & Institutions Financial Stability & Stress Testing Financial Stability Coordination & Actions Responding to Financial System Emergencies Cooperation on Financial Stability Reports Financial Stability Report Payment Systems Regulations & Statutes Regulation CC (Availability of Funds and Collection of Checks) Regulation II (Debit Card Interchange Fees and Routin",
+      "title": "Federal Reserve issues FOMC statement",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
+      "description": "Federal Reserve Board - Federal Reserve issues FOMC statement Skip to main content An official website of the United States Government Here&#x27;s how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( ) or https:// means you&#x27;ve safely connected to the .gov website. Share sensitive information only on official, secure websites. Back to Home Board of Governors of the Federal Reserve System Stay Connected Federal Reserve Facebook Page Federal Reserve Instagram Page Federal Reserve YouTube Page Federal Reserve Flickr Page Federal Reserve LinkedIn Page Federal Reserve Threads Page Federal Reserve X Page Federal Reserve Bluesky Page Subscribe to RSS Subscribe to Email Recent Postings Calendar Publications Site Map A-Z index Careers FAQs Videos Contact Search Submit Search Button Advanced Toggle Dropdown Menu Board of Governors of the Federal Reserve System The Federal Reserve, the central bank of the United States, provides the nation with a safe, flexible, and stable monetary and financial system. Main Menu Toggle Button Sections Search Toggle Button Search Search Submit Button Submit About the Fed Structure of the Federal Reserve System The Fed Explained Board Members Advisory Councils Federal Reserve Banks Federal Reserve Bank and Branch Directors Federal Reserve Act Currency Board Meetings Board Votes Careers Do Business with the Board Holidays Observed - K.8 Ethics & Values Contact Requesting Information (FOIA) FAQs Economic Education Fed Financial Statements Financial Innovation News & Events Press Releases Speeches & Testimony Calendar Videos Photo Gallery Conferences Monetary Policy Federal Open Market Committee About the FOMC Meeting calendars and information Transcripts and other historical materials FAQs Monetary Policy Principles and Practice Notes Policy Implementation Policy Normalization Policy Tools Reports Monetary Policy Report Beige Book Federal Reserve Balance Sheet Developments Review of Monetary Policy Strategy, Tools, and Communications Overview Supervision & Regulation Supervision Community Banks Regional Banks and Foreign Banks with U.S. Assets Large Banks and Large Foreign Banks Global Systemically Important Banks Financial Market Utilities Consumer Compliance Resources for Supervised Institutions Reports Federal Reserve Supervision and Regulation Report Reporting Forms Recent Reporting Form Updates Information Collections Under Review Financial Statements Securities Exchange Act of 1934 Applications/Structure Change FFIEC Municipal and Government Securities Activities Monitoring Micro Data Reference Manual Legal Developments Enforcement Actions and Legal Developments Mergers, Acquisitions, and Other Applications Process Filing Information Board and Reserve Bank Actions Supervision and Regulation Letters By Year By Topic Regulatory and Policy Resources Federal Reserve Act Bank Holding Company Act Regulations Supervision Manuals Federal Reserve Regulatory Service Disaster Preparedness and Recovery Resources Banking and Data Structure Beneficial Ownership Reports U.S. Domestically Chartered Commercial Banks Minority Depository Institutions U.S. Offices of Foreign Entities Financial Holding Companies Interstate Branching Securities Underwriting and Dealing Subsidiaries State Member Banks Supervised by the Federal Reserve Financial Stability Financial Stability Assessments About Financial Stability Types of Financial System Vulnerabilities & Risks Monitoring Risk Across the Financial System Proactive Monitoring of Markets & Institutions Financial Stability & Stress Testing Financial Stability Coordination & Actions Responding to Financial System Emergencies Cooperation on Financial Stability Reports Financial Stability Report Payment Systems Regulations & Statutes Regulation CC (Availability of Funds and Collection of Checks) Regulation II (Debit Card Interchange Fees and Routing) Regulation HH (Fi",
       "published_at": 0,
-      "score": 15,
+      "score": 12,
       "tags": [
         "rates",
         "policy",
         "macro",
         "regulator",
         "deals",
-        "trend",
         "mixed-asset"
       ],
       "heat_signals": [
         "fed",
-        "fomc",
-        "annual"
+        "fomc"
       ],
       "section": "national",
-      "id": "445c99e0",
-      "title_zh": "Fed 发布年度审计财务报表",
-      "summary_zh": "详细见原文——Fed 发布年度经审计财务报表，正文未提供具体财务数据或政策含义",
-      "importance": 1,
+      "id": "5e0b217c",
+      "title_zh": "Fed 发布 FOMC 声明，正文未披露利率决定细节",
+      "summary_zh": "详细见原文，仅知 FOMC statement 发布，无具体政策内容可提取",
+      "importance": 3,
       "impact": "neutral",
-      "fetched_at": 1778125990009
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "multifamily-dive",
@@ -321,107 +363,93 @@
         "multifamily"
       ],
       "region": "national",
-      "title": "MAA sees strong Sun Belt demand, rent growth ahead",
-      "link": "https://www.multifamilydive.com/news/maa-q1-earnings-sun-belt/819470/",
-      "description": "An article from MAA sees strong Sun Belt demand, rent growth ahead The Memphis, Tennessee-based REIT is seeing early signs of rent pricing recovery, with stronger momentum expected into peak leasing season. Published May 6, 2026 By Keith Loria Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Kena Betancur via Getty Images Listen to the article 4 min This audio is auto-generated. Please let us know if you have feedback . As apartment operators across the Sun Belt continue to navigate elevated supply and widespread concessions, early signs of rent pricing recovery are emerging, albeit unevenly. That was one of the messages from Mid-America Apartment Communities during its latest earnings call, which reported stronger-than-expected first-quarter results . “We delivered first quarter results that exceeded our expectations driven by the resilient demand in our footprint, strong resident retention, as well as our focus on expense management,” said Andrew Schaeffer, MAA’s senior vice president, treasurer and director of capital markets. Like other multifamily companies, the Memphis, Tennessee-based REIT is still contending with supply-driven pressure on new lease rates, particularly in high-growth markets. Still, MAA noted conditions improved sequentially during the quarter, helped by continued strength in renewals. “Renewal lease-over-lease growth improved 70 basis points, driving blended lease-over-lease growth up 140 basis points from the fourth quarter,” Tim Argo, executive VP and chief strategy and analysis officer, said in the call. BY THE NUMBERS Category Q1 YOY Change Property revenues $517 million -0.4% Net operating income $328.7 million -1.3% Operating expenses $188.3 million 1.3% FFO per share $2.23 0.9% Rent per unit $1,685 -0.3% Occupancy rate 95.5% -10 bps SOURCE: MAA Occupancy remained stable at 95.5% and collections stayed strong, with net delinquency at 0.3%, according to Argo. Executives noted that although new lease pricing is still under pressure, it is trending upward as the company enters the peak leasing season. Demand remains a tailwind MAA pointed to continued migration to the Sun Belt, wage growth and steady employment as key drivers of demand across its markets. “Our leasing traffic remains strong, combined to drive solid demand, as evidenced by first-quarter absorption exceeding new supply deliveries,” Schaeffer said. That demand has helped offset the impact of new deliveries, with absorption outpacing supply in the first quarter, which the company expects to continue as new construction slows. Schaeffer noted MAA anticipates gradual improvement in new lease rates through the second and early third quarters, with stronger momentum heading into summer. Development drives long-term growth With acquisition cap rates hovering around 4.5%, MAA continues to lean into development as a primary growth strategy. The company began construction on a 286-unit project in Kansas City in April and expects to start four developments this year, totaling about $350 million. That’s down from the $400 million it originally planned, but more than the $315 million it invested in two projects in 2025. “We continue to believe that’s one of the best uses of our capital to deliver long-term value for shareholders,” said President and CEO Brad Hill. MAA’s new development pipeline includes more than 4,300 units on owned or controlled land, with deliveries expected in 2028 and 2029, when supply conditions are projected to be more favorable. Hill said the firm is taking a balanced approach to capital allocation, weighing near-term opportunities like share buybacks with longer-term growth investments. In addition to funding development, the REIT repurchased $73 million of its common stock during Q1. MAA ended the quarter with an average debt maturity of 6.1 years and an effective rate of 3.9%, and issued $200 million in bonds during the period. Performance by market Results varied across MAA’s footprint l",
-      "published_at": 1778086020000,
-      "score": 26,
+      "title": "ICE enforcement sends Texas property to servicing",
+      "link": "https://www.multifamilydive.com/news/ice-enforcement-immigrant-apartment-rental-demand/819346/",
+      "description": "The Villas Del Sol property in Austin saw occupancy fall to 75% after &ldquo;decreasing local employment and ICE operations in the area,&rdquo; according to Morningstar.",
+      "published_at": 1777998463000,
+      "score": 16,
       "tags": [
         "multifamily",
         "texas",
-        "sun-belt",
-        "rates",
-        "deals",
-        "trend",
-        "earnings"
+        "austin",
+        "trend"
       ],
       "heat_signals": [
-        "sun belt",
-        "trend",
-        " yoy",
-        "rent growth",
+        "texas",
+        "austin",
         "occupancy"
       ],
       "section": "sunbelt",
-      "id": "e52e1790",
-      "title_zh": "MAA Q1：Sun Belt multifamily rent growth 拐点显现",
-      "summary_zh": "Mid-America Apartment Communities Q1 业绩超预期——Sun Belt 需求韧性强劲，renewal lease-over-lease growth 改善 70 bps，blended growth 环比升 140 bps；rent pricing 复苏初现",
-      "importance": 5,
-      "impact": "long-pos",
-      "fetched_at": 1778125990009
+      "id": "62bd817a",
+      "title_zh": "Austin 公寓入住率跌至 75%，ICE 执法与就业下滑冲击租赁",
+      "summary_zh": "The Villas Del Sol 因 ICE operations 及 local employment 恶化进入 special servicing，Sun Belt multifamily 面临移民政策风险",
+      "importance": 4,
+      "impact": "short-neg",
+      "fetched_at": 1778126286263
     },
     {
-      "source_id": "housingwire",
-      "source_name": "HousingWire",
-      "source_tier": "A",
+      "source_id": "d-magazine",
+      "source_name": "D Magazine",
+      "source_tier": "D",
+      "source_weight": 5,
+      "source_tags": [
+        "dfw"
+      ],
+      "region": "texas",
+      "title": "Face of Residential Real Estate",
+      "link": "https://www.dmagazine.com/sponsored/2026/05/face-of-residential-real-estate-2/",
+      "description": "Chase Bray, broker/owner of Bray Real Estate Group, is a lifeline for buyers and sellers as they navigate the highs and lows of an ever-changing real estate market. His firm continues to expand throughout Texas, specifically in the Dallas-Fort Worth area, including plans for new offices in North Dallas-Fort Worth and Rockwall, to go along &#8230; Continued The post Face of Residential Real Estate appeared first on D Magazine .",
+      "published_at": 1778068800000,
+      "score": 12,
+      "tags": [
+        "dfw",
+        "texas",
+        "brokerage",
+        "housing"
+      ],
+      "heat_signals": [
+        "texas",
+        "dallas",
+        "fort worth"
+      ],
+      "section": "sunbelt",
+      "id": "0f9c5246",
+      "title_zh": "DFW 经纪 Bray Real Estate Group 扩张至 North Dallas-Fort Worth 与 Rockwall",
+      "summary_zh": "单公司区域扩张，属局部市场动态，无数据结论",
+      "importance": 1,
+      "impact": "neutral",
+      "fetched_at": 1778126286263
+    },
+    {
+      "source_id": "nrhc",
+      "source_name": "National Rental Home Council (NRHC)",
+      "source_tier": "E",
       "source_weight": 9,
       "source_tags": [
-        "housing",
-        "rates",
-        "policy"
+        "btr-sfr",
+        "institutional"
       ],
       "region": "national",
-      "title": "Build-to-rent explodes in Atlanta — and agents are taking notice",
-      "link": "https://www.housingwire.com/articles/atlanta-build-to-rent-surge/",
-      "description": "No major U.S. metro area has more single-family rental (SFR) homes owned by institutional investors than Atlanta, with current totals sitting at roughly 72,000 houses — nearly doubling No. 2 Phoenix. That concentration represents about 30% of Atlanta&#8217;s single-family rental market, a share 10 times the national average, according to a new report from the American Economic Liberties Project . In some individual nearby suburbs, report findings are even starker. Corporations own 78% of all single-family rentals in Paulding County and 64% in Henry County. The report, titled &#8220;The New Rent Seekers,&#8221; argues Atlanta did not become the epicenter of corporate landlordism by accident. It points to federal policy choices after the 2008 financial crisis — from lack of support for small homebuilders to incentivizing bulk acquisitions — as key components in &#8220;turning the city into a laboratory for a new asset class.&#8221; For real estate agents working with first-time buyers , the impact is hard to miss, according to Atlanta-based eXp Realty agent Tracy Lovig. She told HousingWire it shows up in multiple cash offers on homes that need major repairs, as well as in steady conversion of for-sale inventory into permanent rental stock. &#8220;When it&#8217;s the average home prices — $400,000 to $600,000, especially $500,000 and under — the investors want to come in,&#8221; said Lovig. &#8220;And of course, they&#8217;re going to come in and bid high to start with, until they come in and do inspections, and then they get them to drop down the price. &#8220;But our first-time homebuyers and medium-income families have trouble buying these homes because of the renovations that do need to be done. They could have old roofs, old HVAC. They&#8217;re still functional, but they&#8217;re going to have to be replaced.&#8221; Atlanta household income vs. homeownership rate. Source: American Community Survey 5-year estimates Lovig recalled a recent estate sale listed at $500,000. &#8220;We had the 70s tile in the bathroom, the old wood cabinets, paneling on the walls,&#8221; she said. &#8220;So, tons of stuff needed to be updated in this house, and the ceiling in the basement was sagging. My client was willing to pay $450,000 for it. When I sent the offer in, the agent said, &#8216;You&#8217;ve got to be kidding me. We have 12 cash offers from investors at full price or higher.&#8217; &#8220;My buyer did not have the funds to go over, knowing the work that had to be done to the house. So they got outbid. When it actually went to closing, the investors had gotten them down to $480,000.&#8221; How Atlanta became ground zero After 2008, Atlanta offered a perfect storm: a swell of foreclosed homes, landlord-friendly Georgia laws with swift eviction procedures and no rent control and a homebuilding industry that had collapsed, the report cites. Data also shows the number of homebuilders in Atlanta falling by 90% since the financial crisis, from 2,000 to just 200 — with large, publicly traded builders now holding nearly 70% of the market. During one 12-month stretch beginning in July 2021, investors bought roughly one-third of homes for sale in metro Atlanta — mostly with cash offers at asking price. Attorney Laurel Kilgour, the report&#8217;s author and research manager at the American Economic Liberties Project, said impact varies dramatically by neighborhood — a nuance often lost in industry arguments. &#8220;A lot of the proponents will point to the broadest geography possible to make their point, to sort of underplay what is going on here,&#8221; Kilgour said. &#8220;So, a lot of times they will talk about the single-digit percentage of institutional investor holdings nationally, or they will look at only the entire Atlanta metro region. &#8220;That doesn&#8217;t really tell you much about what the actual control is. They find a variety of ways to sort of downplay it. You really do need to pay attention to what is going on at the neigh",
-      "published_at": 1778092165000,
-      "score": 28,
-      "tags": [
-        "housing",
-        "rates",
-        "policy",
-        "btr-sfr",
-        "macro",
-        "deals",
-        "trend",
-        "landlord"
-      ],
-      "heat_signals": [
-        "build-to-rent",
-        "single-family rental",
-        "fed",
-        "rental market"
-      ],
-      "section": "btr",
-      "id": "76e6d775",
-      "title_zh": "Atlanta BTR 大爆发：机构持有 SFR 30%（全国均值 10 倍）",
-      "summary_zh": "Atlanta 都会区机构投资者持有 SFR 约 72,000 套，占全国第一；机构持有率 30% 为全国均值 10 倍，Paulding County 更高达 78%；BTR/SFR 龙头城市从原型期进入主流期",
-      "importance": 5,
-      "impact": "long-pos",
-      "fetched_at": 1778125990009
-    },
-    {
-      "source_id": "sec-amh-8k",
-      "source_name": "SEC EDGAR — American Homes 4 Rent 8-K",
-      "source_tier": "B",
-      "source_weight": 10,
-      "source_tags": [
-        "btr-sfr",
-        "institutional",
-        "data"
-      ],
-      "region": "national",
-      "title": "AMH (American Homes 4 Rent) 8-K - Current report",
-      "link": "https://www.sec.gov/Archives/edgar/data/1562401/000156240126000028/0001562401-26-000028-index.htm",
-      "description": "Filed: 2026-05-06 AccNo: 0001562401-26-000028 Size: 10 MB Item 2.02: Results of Operations and Financial Condition Item 9.01: Financial Statements and Exhibits",
-      "published_at": 1778098432000,
-      "score": 24,
+      "title": "76 lawmakers push back on 7-year selloff rule that 'would effectively halt the production of Build-to-Rent' &#8211; ResiClub",
+      "link": "https://www.resiclubanalytics.com/p/lawmakers-against-institutional-homebuying-ban-7-year-selloff-rule-build-to-rent-btr-homebuilding",
+      "description": "",
+      "published_at": 1777581776000,
+      "score": 14,
       "tags": [
         "btr-sfr",
-        "institutional",
-        "data"
+        "institutional"
       ],
       "heat_signals": [
-        "american homes 4 rent",
-        "amh"
+        "build-to-rent"
       ],
+      "extended_window": true,
       "section": "btr",
-      "id": "b48a5e39",
-      "title_zh": "AMH 提交 8-K 报告：Q1 业绩与财务数据",
-      "summary_zh": "详细见原文——American Homes 4 Rent 于 2026-05-06 提交 8-K 当前报告，含 Item 2.02 经营业绩与 Item 9.01 财务报表，正文未披露具体数据",
-      "importance": 2,
-      "impact": "neutral",
-      "fetched_at": 1778125990009
+      "id": "85a7ec95",
+      "title_zh": "76 名议员反对 7 年 BTR 强制出售规则，称将扼杀 Build-to-Rent 供给",
+      "summary_zh": "NRHC 推动立法博弈，若规则生效 institutional BTR 开发融资将受重创",
+      "importance": 4,
+      "impact": "long-neg",
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "bisnow",
@@ -433,41 +461,68 @@
         "deals"
       ],
       "region": "national",
-      "title": "Commercial Property Prices Fall In April, Still Up 3.1% YOY",
-      "link": "https://www.bisnow.com/national/news/commercial-real-estate/commercial-property-prices-fall-april-still-up-yoy-134456",
-      "description": "News Commercial Property Prices Fall In April, Still Up 3.1% YOY National View count: National May 06, 2026 | 1:15 p.m. ET Billy Wadsack, Dallas-Fort Worth Commercial property prices fell slightly in April, though the all-property index has increased by more than 3% over the last year. Pixabay/stevepb April’s 0.1% drop in prices was the first decline of 2026 and followed two straight months of slight increases , according to Green Street ’s Commercial Property Price Index . Despite the April decrease, overall commercial property values have grown 3.1% over the last 12 months. Commercial real estate buyers have been disciplined this year, according to Peter Rothemund , Green Street co-head of strategic research. “Rent growth in many sectors is uninspiring, and investors are facing a 10-year Treasury in the mid-4’s,” Rothemund said in a statement. “That’s not much to get excited about.” Life sciences was the only primary property type to see any movement in April. That sector fell 0.7% last month, while all other asset classes were flat. Still, life sciences is up 5% over the last year. That’s the third-best performance over the past 12 months, behind data centers and strip retail. Pricing for each of those sectors is up 6% over the last year. Prices for all asset classes fell to 15.5% below their 2022 peak, with the office sector suffering the largest decline. Office prices are down 35% since the peak, and self-storage prices have fallen 22%. Prices have been kept in check by the 10-year Treasury yield, which is used to determine borrowing costs for commercial real estate loans. The Iran conflict has pushed Treasury yields up after they had remained around 4% for 2.5 years. The 10-year Treasury yield fell below 4% at the end of February but started climbing after the conflict began. It peaked at 4.4% on March 27, the highest rate since July. The 10-year Treasury came close to matching that peak over the last week and was at 4.3% as of midday Wednesday. Rothemund said last month that commercial real estate prices likely wouldn’t rise much higher due to the Iran conflict and the hold on interest rate cuts . On April 29, the Federal Open Market Committee kept its benchmark interest rate unchanged for its third consecutive meeting. Although the Federal Reserve has cut interest rates over the last year, its wait-and-see approach to start 2026 has been driven by immigration raids and changing tariff policies that have disrupted the U.S. economy and increased inflation. And the trend has been worsened by spikes in oil prices since the Iran conflict began. Federal Reserve Chair Jerome Powell said during the FOMC’s March press conference that it was too soon to know how the conflict would affect the U.S. economy. Contact Billy Wadsack at billy.wadsack@bisnow.com Related Topics: Federal Reserve , Jerome Powell , Federal open market committee , Green Street , Peter Rothemund , Green Street Commercial Property Price Index",
-      "published_at": 1778084624000,
-      "score": 31,
+      "title": "Ted Turner, Who Left A Mark On Downtown Atlanta CRE, Dies At 87",
+      "link": "https://www.bisnow.com/atlanta/news/neighborhood/while-a-media-mogul-ted-turner-also-made-his-downtown-atlanta-cre-mark-134464",
+      "description": "News Ted Turner, Who Left A Mark On Downtown Atlanta CRE, Dies At 87 Atlanta Neighborhood View count: Atlanta May 06, 2026 | 6:02 p.m. ET Jarred Schenke, Atlanta While a commercial real estate legend created one of the icons of Downtown Atlanta’s skyline, it took a media mogul to save it. Wikimedia Commons/INTX: The Internet & Television Expo Ted Turner speaking at The Internet & Television Expo in 2000 Ted Turner, the Turner Broadcasting founder, former Atlanta Braves owner and creator of the 24-hour cable news cycle, died May 6 at 87. He had been diagnosed with Lewy body dementia . While Turner never built any commercial real estate, he was a property owner and his impact on the Atlanta skyline was undeniable, having saved an ailing Omni International complex Downtown. He bought a majority stake in the 1.2M SF property from its developer and owner, Cousins Properties, in 1985 and turned it into an international media hub for CNN, complete with the iconic sign that was out front until just a few years ago. “His footprint here was incredibly impressive. He didn’t build CNN Center, but his occupancy at that time really created a destination place that lasted for many years,” Central Atlanta Progress President A.J. Robinson said. “The sign says it all. That iconic sign was kind of branded CNN and kind of branded Downtown.” Cousins founder Tom Cousins completed the Omni complex in 1972 for $76M as a sort of city-within-a-city project , which included a hotel, offices, restaurants, shops and an ice skating rink. It was also home to an indoor amusement park known as The World of Sid Marty Krofft, based on the 1970s children's television pioneering duo’s creations, such as Land of the Lost and Sigmund and the Sea Monsters . But the Omni complex was never able to buck the trend of ailing urban centers as Americans, including Atlantans, fled for the suburbs. And by 1976, the Sid Marty Krofft amusement park closed down due to dwindling attendance, leaving Cousins and a partner with a $20M loss. The developer staved off foreclosure for years before Turner stepped in. Five years after launching CNN and soon after its spinoff, Headline News, Turner negotiated to take a majority ownership of the complex in 1985 as headquarters for his media empire. Turner sold the property in 1988 for $170M, nearly three times the initial purchase price, the LA Times reported at the time . Aside from being the nexus of his cable news empire, Turner also outfitted CNN Center with his own private residence at the top. Wikimedia Commons/Connor.carey One CNN Center, the longtime home of WarnerMedia's CNN After selling his cable news empire to Time Warner — and losing control of CNN when Time Warner and AOL merged in 2010, what he said was his biggest business regret — Turner bought the historic Bona Allen Building at the corner of Ted Turner Drive and Spring Street and made it the home of Turner Enterprises and Ted’s Montana Grill corporate offices. Turner also lived on the top penthouse floor of the building, with views of CNN Center. “I live on top of my office. I had to buy the building on Luckie Street because after my disastrous merger with Time Warner, where I lost 80% of what I had, I needed some good luck,” Turner told the Buckhead Coalition in 2015, as reported by REBusiness Online . “I’m the only chain restaurant owner in the country who lives in the restaurant. That’s the way they used to do it.” Turner installed a solar array atop the parking deck next to his building at 133 Luckie St., saving 20% of Turner Building’s annual power needs, according to Turner Enterprises. Robinson said it wasn’t uncommon to see Turner walking around Downtown during that time. “It’s rare that you have someone who has more than multiple businesses Downtown and also lived partially Downtown. I can’t think of anyone else who would check that box,” he said. CNN Center now has new ownership , and the news organization has moved out of Downtown to Midtown Atlanta and New Yo",
+      "published_at": 1778100194000,
+      "score": 21,
       "tags": [
         "deals",
-        "data-center",
         "office",
-        "texas",
-        "dfw",
-        "macro",
-        "rates",
+        "hotel",
         "trend",
-        "regulator"
+        "landlord"
       ],
       "heat_signals": [
-        "dallas",
-        "fort worth",
-        "fed",
-        "fomc",
-        "rate cut",
-        "inflation",
         "trend",
-        " yoy",
-        "rent growth"
+        "annual",
+        "occupancy"
       ],
       "section": "cre",
       "cre_subcategory": null,
-      "id": "6252b544",
-      "title_zh": "Green Street 指数：4 月商业物业价格环比跌 0.1%，同比仍涨 3.1%",
-      "summary_zh": "Green Street Commercial Property Price Index 4 月下滑 0.1%，为 2026 年首次下跌；全年累计仍涨 3.1%，life sciences 跌 0.7%，data centers 与 strip retail 同比领涨 6%；office 较峰值跌 35%",
-      "importance": 3,
+      "id": "a5254dd8",
+      "title_zh": "Ted Turner 逝世，曾拯救 Atlanta Downtown CNN Center 地标",
+      "summary_zh": "媒体大亨 87 岁离世，1985 年购入 Omni complex 多数股权打造 CNN 国际媒体枢纽，对 Atlanta CRE 影响深远但属历史回顾",
+      "importance": 2,
       "impact": "neutral",
-      "fetched_at": 1778125990009
+      "fetched_at": 1778126286263
+    },
+    {
+      "source_id": "trd-national",
+      "source_name": "The Real Deal (National)",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Global Net Lease acquires industrial REIT for $535M",
+      "link": "https://therealdeal.com/national/2026/05/06/global-net-lease-acquires-industrial-reit-for-535m/",
+      "description": "Publicly traded real estate investment trust Global Net Lease is set to absorb another firm. Michael Weil’s GNL agreed to acquire industrial REIT Modiv Industrial in a $535 million all-stock transaction, the companies announced this week. The deal values Modiv’s stock at $18.82 per share, a 17 percent premium on the company’s closing price on Friday. Under the terms of the agreement, GNL will pay off Modiv’s balance sheet debt and preferred stock. GNL stockholders will own 89 percent of the combined company, while Modiv stockholders will own the other 11 percent. The deal is expected to close in the third quarter. Both companies’ boards of directors approved the deal, which will still need approval from Modiv stockholders, but not GNL stockholders. “We believe this transaction is a compelling opportunity for GNL to expedite our transition to earnings growth in 2026 following the completion of our deleveraging initiative while continuing to reduce our office exposure,” Weil said in a statement. SIGN UP Modiv’s net-leased industrial assets sport a weighted average lease term of 15 years with 2.4 percent annual rent increases. It’s not entirely clear how many assets Modiv has in its portfolio. “We have long believed that our portfolio’s quality was historically mispriced by the marketplace and that we would be receptive if someone sought to close the value gap sooner than we could,” Modiv chief executive officer Aaron Halfacre said in a statement, adding that the company drew “substantial interest” and unsolicited offers over the last year. Modiv went public in 2022 and had a portfolio valued at $597 million at the end of last year, according to Bisnow . GNL’s portfolio is valued at $5.3 billion, spanning 820 properties. Almost half of the portfolio is made up of industrial properties and distribution centers; 97 percent of its portfolio is leased. Three months ago, Brookfield Asset Management agreed to acquire industrial REIT Peakstone Realty Trust in a $1.2 billion all-cash deal, paying $21 a share, a 34 percent premium. Read more Commercial Los Angeles CRE crowdfunder Modiv wants to go public next year",
+      "published_at": 1778085926000,
+      "score": 19,
+      "tags": [
+        "deals",
+        "industrial",
+        "office",
+        "california",
+        "trend",
+        "earnings",
+        "institutional"
+      ],
+      "heat_signals": [
+        "brookfield",
+        "annual"
+      ],
+      "section": "cre",
+      "cre_subcategory": "工业",
+      "id": "57a648df",
+      "title_zh": "Global Net Lease $535M 全股票收购 Modiv Industrial，溢价 17%",
+      "summary_zh": "GNL 89% 控股合并后公司，Q3 预计交割，加速去 office 化转型并切入 15 年 WALT 工业净租赁资产",
+      "importance": 4,
+      "impact": "long-pos",
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "yardi-matrix",
@@ -480,107 +535,32 @@
         "trend"
       ],
       "region": "national",
-      "title": "Pipeline Prompts Revised Yardi Matrix Multifamily Completions Forecast",
-      "link": "https://www.yardimatrix.com/blog/pipeline-prompts-revised-multifamily-completions-forecast/",
-      "description": "News Press Releases Pipeline Prompts Revised Yardi Matrix Multifamily Completions Forecast Jeff Adler May 6, 2026 2 Min Read New quarterly estimate projects 2% increase over Q1 forecast SANTA BARBARA, Calif., May 6, 2026 – The latest quarterly Yardi ® Matrix multifamily supply forecast features a 2% increase in projected completions for 2026, reflecting updates to the under-construction pipeline since the Q1 update. The new forecast also notes that the under-construction pipeline has consistently declined since March 2024, putting 2026 on track to be the first year to record a meaningful decline in new supply since the post-pandemic supply wave. The updated 2026 forecast total, 478,239, is almost 25% less than the completions recorded in 2025. The completions forecast for 2027 and 2028 remains unchanged from the Q1 forecast. Read more about construction starts, days in construction, planned and prospective pipelines, and more in the Yardi Matrix Multifamily Supply Forecast for Q2 2026. Yardi Matrix offers the industry’s most comprehensive market intelligence tool for investment professionals, equity investors, lenders and property managers who underwrite and manage investments in commercial real estate. Yardi Matrix covers multifamily, single-family rentals/ build to rent, affordable housing, student housing, self storage, office, industrial, retail and vacant land property types. Email [email&#160;protected] , call (480) 663-1149 or visit yardimatrix.com to learn more. About Yardi Yardi ® develops industry-leading software for all types and sizes of real estate companies across the world. With more than 10,000 employees, Yardi is working with our clients to drive significant innovation in the real estate industry. For more information on how Yardi is Energized for Tomorrow, visit yardi.com . Tags Multifamily Outlook 2026 You may also like News Press Releases Yardi Matrix: Modest Multifamily Rent Growth May Signal Stabilization May 6, 2026",
-      "published_at": 1778068800000,
-      "score": 30,
+      "title": "U.S. Office Market Outlook – April 2026",
+      "link": "https://www.yardimatrix.com/blog/us-office-market-outlook/",
+      "description": "As of March 2026, the national office vacancy rate reached 17.8 percent. Read the latest Yardi Matrix&#160;Office Market Outlook. Report Highlights Vacancy improves among most markets As of March, the national office vacancy rate reached 17.8 percent—210 basis points lower from a year ago. Vacancy recovery is scattered among major markets. Austin remained the metro [&#8230;] The post U.S. Office Market Outlook – April 2026 appeared first on Yardi Matrix Blog .",
+      "published_at": 1777549750000,
+      "score": 16,
       "tags": [
         "multifamily",
         "data",
         "trend",
-        "industrial",
         "office",
-        "btr-sfr",
-        "earnings"
+        "texas",
+        "austin"
       ],
       "heat_signals": [
-        "single-family rental",
+        "austin",
         "outlook",
-        "forecast",
-        "rent growth",
-        "outlook 2026"
-      ],
-      "section": "cre",
-      "cre_subcategory": "多户",
-      "id": "8f952500",
-      "title_zh": "Yardi Matrix 上调 2026 multifamily 竣工预测 2%，但仍较 2025 年降 25%",
-      "summary_zh": "Yardi Matrix Q2 预测 2026 multifamily 竣工量 478,239 套，较 Q1 上调 2%，但同比 2025 年下降近 25%；在建 pipeline 自 2024 年 3 月起持续收缩，2026 年料为疫后供应潮首现显著回落",
-      "importance": 4,
-      "impact": "long-pos",
-      "fetched_at": 1778125990009
-    },
-    {
-      "source_id": "trd-national",
-      "source_name": "The Real Deal (National)",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "World’s largest bicycle manufacturer rides into Boulder",
-      "link": "https://therealdeal.com/national/denver/2026/05/06/giant-group-worlds-biggest-bike-maker-moves-hq-to-boulder/",
-      "description": "The world’s largest bicycle manufacturer is moving its U.S. headquarters to Boulder . Giant Group U.S.A., the American subsidiary of Taiwan -based Giant Group Manufacturing, signed a 10-year lease for 44,000 square feet at 3825 Walnut Street, the Denver Business Journal reported . The building is owned by Boulder-based Conscience Bay, according to tax assessor records. Giant’s headquarters will take up almost half of the 100,000-square-foot building, which Conscience Bay previously planned to redevelop into a life sciences campus. Giant Group U.S.A. will move from Newbury Park in Southern California to the Denver area . The company plans to move next year, following a nine-month renovation. The building is almost entirely a warehouse with roughly 16,000 square feet of office space. Layne McBride of the Colorado Group represented Giant in the deal. SIGN UP Boulder is a top cycling hub in the United States, with over 300 miles of bikeways and 100 pedestrian underpasses that avoid vehicular traffic intersections. It’s also a training ground for professional cyclists and triathletes. Giant is working with an architect to design its headquarters, which will include retail space, a showroom and office space. The relocation deepens Giant’s foothold in Boulder after its subsidiary SPIA Cycling acquired Stages Cycling out of bankruptcy in 2024. Foundation Fitness, Stages’ parent company, filed for Chapter 11 bankruptcy protection last summer before Giant stepped in to buy its assets. Stages is expected to vacate its headquarters at 5335 Sterling Drive and fold operations into Giant’s Walnut Street base. The 22,000-square-foot Sterling Drive property is being marketed for sale for $5.5 million. Giant previously estimated the headquarters move could eventually bring about 125 jobs to Boulder, though staffing is planned to ramp up gradually as the company grows into the space. — Chris Malone Méndez Read more Residential Denver Denver-area apartment vacancy reaches near two-decade high",
-      "published_at": 1778112000000,
-      "score": 17,
-      "tags": [
-        "deals",
-        "industrial",
-        "office",
-        "multifamily",
-        "california",
-        "trend"
-      ],
-      "heat_signals": [
         "vacancy"
       ],
       "section": "cre",
-      "cre_subcategory": null,
-      "id": "ee0d0d6f",
-      "title_zh": "全球最大自行车制造商 Giant Group 迁入 Boulder，签 10 年 44K SF 租约",
-      "summary_zh": "Giant Group U.S.A. 从加州迁至 Colorado Boulder，承租 44,000 SF 工业办公混合物业；房东 Conscience Bay 原拟改建为 life sciences 园区，现转向骑行产业租户",
-      "importance": 2,
+      "cre_subcategory": "办公",
+      "id": "46a274c1",
+      "title_zh": "美国 office vacancy 3 月降至 17.8%，YoY 改善 210 bps",
+      "summary_zh": "Yardi Matrix 数据：全国 office 空置率 17.8% 为复苏信号，但 Austin 等市场仍承压，recovery 分散不均",
+      "importance": 4,
       "impact": "neutral",
-      "fetched_at": 1778125990009
-    },
-    {
-      "source_id": "trd-national",
-      "source_name": "The Real Deal (National)",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Colliers-branded TIC deals spark state, federal probes",
-      "link": "https://therealdeal.com/national/2026/05/06/colliers-branded-tic-deals-spark-state-federal-probes/",
-      "description": "A sprawling web of tenant-in-common deals tied to a Utah sponsor is under state and federal scrutiny as regulators probe allegations that retirees were sold high-risk real estate investments under the veneer of a global brokerage brand. Millcreek Commercial Properties, led by Kevin Long, marketed fractional stakes in medical office buildings as stable, passive-income plays. But according to Bisnow , those investments unraveled as tenants failed, leases proved illusory and property values collapsed, wiping out investors. The fallout has triggered at least 14 lawsuits across five states since 2023, alongside parallel investigations. The Securities and Exchange Commission has contacted investors, signaling an early-stage federal probe, while Utah’s Division of Real Estate has accused Long of multiple rule violations, including withholding material information about failing tenants while continuing to sell interests. A core allegation is that Millcreek used marketing materials bearing Colliers’ branding to build trust, pitching properties as leased to fast-growing healthcare tenants at above-market rents. In reality, several of those tenants — including Healthcare Solutions Holdings, Neuragenex and Pulse Healthcare — later filed for bankruptcy, often without ever occupying space or paying rent. Investors claim they were sold inflated valuations tied to those shaky leases. In one case, a Georgia property flipped from $1.1 million to $5.5 million in under a year before ultimately selling for $1.4 million. Others say distributions dried up within months, despite assurances of “hassle-free” income. Colliers, which has moved to dismiss several lawsuits, says it had no contract with Millcreek. It’s unclear whether the brokerage authorized the use of its branding, a central issue in the litigation. SIGN UP An unsigned memorandum of understanding submitted in court filings suggested a closer relationship, including commissions on TIC sales and the use of Colliers’ name in marketing. Behind the scenes, emails cited in lawsuits show Millcreek scrambling as deals faltered. In one exchange, Long acknowledged cash flow problems, writing that the firm lacked funds to pay an investor. The human toll is steep. Investors — many using 1031 exchanges tied to retirement savings — report losses in the hundreds of thousands or more. Some cannot afford to join lawsuits due to legal costs. The cases underscore familiar risks in TIC structures, which require unanimous ownership decisions and offer limited liquidity. But attorneys allege this operation went further, misrepresenting leases, subsidizing tenants without disclosure and bypassing investor oversight. Most cases remain in early stages with discovery underway. — Holden Walter-Warner Read more Commercial Dallas Colliers accused of enticing small investors into shady deals",
-      "published_at": 1778095132000,
-      "score": 15,
-      "tags": [
-        "deals",
-        "office",
-        "texas",
-        "dfw",
-        "macro",
-        "policy",
-        "brokerage"
-      ],
-      "heat_signals": [
-        "dallas",
-        "fed"
-      ],
-      "section": "cre",
-      "cre_subcategory": null,
-      "id": "24ce3904",
-      "title_zh": "Colliers 品牌 TIC 交易涉欺诈，SEC 与州监管介入调查",
-      "summary_zh": "Millcreek Commercial Properties 借 Colliers 品牌营销医疗办公楼 fractional stakes，涉虚假租约、估值 inflated；至少 14 起诉讼横跨 5 州，SEC 已联系投资者，Utah 州指控多项违规",
-      "importance": 3,
-      "impact": "short-neg",
-      "fetched_at": 1778125990009
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "bisnow",
@@ -592,91 +572,31 @@
         "deals"
       ],
       "region": "national",
-      "title": "SpaceX Files Plans For $55B Terafab Chip Facility In Southeast Texas",
-      "link": "https://www.bisnow.com/austin/news/ai/spacex-plans-to-spend-an-initial-55b-for-terafab-chip-facility-in-texas-134459",
-      "description": "News SpaceX Files Plans For $55B Terafab Chip Facility In Southeast Texas Austin AI View count: Austin AI May 06, 2026 | 3:18 p.m. ET Alexis Kramer, East Coast Editor Elon Musk’s SpaceX is proposing to invest an initial $55B to build the first hub of its highly anticipated chipmaking project a little over an hour northwest of Houston. Pexels/SpaceX SpaceX submitted a public filing to construct a semiconductor manufacturing facility in Grimes County, Texas, Reuters reported Wednesday. It's the latest step forward for Musk’s new multibillion-dollar project, dubbed Terafab, which seeks to produce more than one terawatt of computing power per year for use on Earth and in future space travel. The Grimes County Commissioners Court will convene on June 3 to consider a property tax abatement for SpaceX’s proposal, according to a public notice . The notice doesn’t mention Terafab by name but describes the planned project as a “multi-phase, next-generation, vertically integrated semiconductor manufacturing and advanced computing fabrication facility.” The notice also says SpaceX’s estimated total investment could reach $119B if the project expands into additional phases. A spokesperson for SpaceX didn’t immediately respond to a request for comment. Terafab, announced last month, is a joint venture between Tesla , SpaceX and xAI that aims to produce artificial intelligence chips at scale and reduce reliance on external chip suppliers such as Samsung and TSMC . It’s part of Musk’s broader pivot toward establishing an integrated AI ecosystem as his companies boost spending on data centers and related infrastructure. The current worldwide output of AI chip plants is about 20 gigawatts per year, which makes up only about 2% of what his project needs, Musk said in a video posted on X last month. “We need to build the Terafab or we don’t have the chips. And we need the chips,” he said. Musk had initially said last month that he selected Austin for the first Terafab facility but did not name a specific location at that time. Contact Alexis Kramer at alexis.kramer@bisnow.com Related Topics: SpaceX , semiconductors , Elon Musk , AI",
-      "published_at": 1778091186000,
-      "score": 15,
+      "title": "St. Regis Residences Developer: Affordability Isn't A Problem",
+      "link": "https://www.bisnow.com/houston/news/construction-development/satya-breaks-ground-st-regis-residences-houston-134462",
+      "description": "News St. Regis Residences Developer: Affordability Isn't A Problem Houston Construction Dev View count: Houston C D May 06, 2026 | 5:24 p.m. ET Maddy McCarty, Houston Houston-based developer Satya broke ground Wednesday on the St. Regis Residences, Houston, which is already about half sold to wealthy buyers seeking a lock-and-leave lifestyle . Courtesy of Shimahara Visual A rendering of the porte cochere entrance at The St. Regis Residences, Houston The speed of sales at the 38-story tower exemplifies the demand for luxury-branded condominiums in the Houston market, Satya CEO Sunny Bathija said. Forty-five percent of the 90 planned units are presold, including all seven penthouses. Bathija initially worried that the project team had designed too many penthouses. But after seeing buyer behavior, the developers are leaving flexibility to combine units, creating even bigger floor plans totaling 9K SF. “I don’t think affordability is a problem,” Bathija said. “They want the lifestyle, they want the brand, they want the luxury. They have the money. They don’t want to leave the luxury of a house for something just normal.” The project at 102 Asbury St. is slated for completion in the first quarter of 2029. It will be the first purely residential St. Regis development in Texas. Other branded condos planned in the Inner Loop include The Ritz-Carlton Hotel Residences at 2120 Post Oak Blvd. and The Birdsall, Auberge Collection at The RO , which will have 44 private residences above a 105-room luxury hotel. Making the St. Regis exclusively residential was another way of catering to the luxury buyer, Bathija said. “You don’t have to share your $8M unit,” he said. “You want to be with like-minded people.” St. Regis Residences start at $3M. The last remaining penthouse was listed in January for $14.5M, or $3,100 per SF, shattering the price-per-square-foot record for Houston high-rise condos. Without disclosing actual sales prices, Douglas Elliman Development Marketing, which is managing sales and marketing, said the project has broken that record. “This is really becoming the quality of residential lifestyle that all buyers are seeking,” Jay Phillip Parker, CEO of Douglas Elliman’s Florida region brokerage, said at the groundbreaking event Wednesday. “This will undoubtedly become an iconic destination for residential living in Houston.” Courtesy of Shimahara Visual A rendering of The St. Regis Residences, Houston The St. Regis Residences development is on 4 acres of previously undeveloped land just north of Buffalo Bayou . The project will include more than 40K SF of amenities and services, including St. Regis Butler Service, valet and concierge. Amenities will include an Astor dining room and a cognac bar on the 20th floor, as well as a pool deck with cabanas, a fitness area, a spa, a wellness center, an owner’s lounge, a pet spa, butterfly gardens and full-building generator backup. Since plans were first revealed in late 2024 , Satya altered the design to add more units and another floor of penthouses. “I wish I had added three more floors,” Bathija said Wednesday. But the number of units is intentionally in a sweet spot, he said, adding that it is small enough to help the project feel exclusive but large enough to generate a return on the land and construction. Bathija bought the land over three years ago, he said, recalling a time he showed it to a Marriott representative on a “mushy,” rainy day. Bathija spent a year talking with Marriott , the parent company of St. Regis, before approaching IBC Bank for its $255M construction loan , IBC Bank Houston CEO Jeff Samples said. While the project had to hit certain thresholds to secure financing and start construction, Samples and Bathija both cited their 25-year professional relationship and Satya’s development experience as reassuring factors for the loan. There is a real need for branded, high-end luxury homes in Houston, and the projects underway likely won’t be the last, Samples said. ",
+      "published_at": 1778096665000,
+      "score": 14,
       "tags": [
         "deals",
-        "data-center",
+        "hotel",
         "texas",
         "houston",
-        "austin"
+        "earnings",
+        "brokerage"
       ],
       "heat_signals": [
         "texas",
-        "houston",
-        "austin"
+        "houston"
       ],
       "section": "cre",
       "cre_subcategory": null,
-      "id": "77271d29",
-      "title_zh": "SpaceX 拟投 $550 亿于 Texas 建 Terafab 芯片厂，总投资或达 $1,190 亿",
-      "summary_zh": "SpaceX 向 Texas Grimes County 提交半导体制造设施申请，Terafab 首期投资 $55B，多期扩展后或达 $119B；6 月 3 日审议 property tax abatement；Tesla、SpaceX、xAI 合资旨在替代 Samsung、TSMC",
-      "importance": 4,
-      "impact": "long-pos",
-      "fetched_at": 1778125990009
-    },
-    {
-      "source_id": "multifamily-dive",
-      "source_name": "Multifamily Dive",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "multifamily"
-      ],
-      "region": "national",
-      "title": "Apartment execs say Iran conflict adds ‘noise’ to the economy",
-      "link": "https://www.multifamilydive.com/news/iran-conflict-gas-prices-10-year-treasury/819468/",
-      "description": "An article from Apartment execs say Iran conflict adds ‘noise’ to the economy Rising gas and prices are hitting some apartment firms, but overall, they say the impact of the military action hasn’t produced unmanageable issues. Published May 6, 2026 Leslie Shaver Senior Reporter Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Smoke billows after overnight airstrikes on oil depots on March 8, 2026 in Tehran, Iran. Majid Saeedi via Getty Images Listen to the article 4 min This audio is auto-generated. Please let us know if you have feedback . The conflict in Iran hasn’t been a major talking point in multifamily circles. The major apartment REITs largely avoided the subject on their recent earnings calls, and other executives say it’s not a top-of--mind subject. “The war conflict hasn’t yet been a topic many are talking about in our world,” Jon Tullo, executive vice president of client services at apartment manager AMC, told Multifamily Dive in emailed comments. But the military action that began in late February has had very real effects on the overall economy, as the price of oil jumped to over $100 a barrel before coming down , 10-year Treasuries surged and a general sense of uncertainty has continued to resonate in an already-uncertain labor climate. “It's more noise,” said BAM Capital Founder and CEO Ivan Barratt, who noted defense buildup could bring manufacturing jobs to his Midwestern markets. “And the more noise we have, the harder it is to find the signal.” Treasury fluctuations The most significant impact of the Iran conflict, according to Tyler Chesser, co-founder and managing partner at Louisville, Kentucky-based multifamily firm CF Capital, lies in financing costs. “The 10-year Treasury moved from below 4% in late February up to the mid-4% range after the strikes, and that flows directly into our debt costs and exit cap rate assumptions,” Chesser said in emailed comments to Multifamily Dive. Right now, apartment values are stable, even with Treasury fluctuations. But a longer military action introduces more risk. “Valuations are largely unchanged in the short term, but that could change if the conflict is prolonged,” Chesser said. Tullo cites recent stock market performance as evidence that the “capital markets sector more or less currently trusts the military’s execution of its stated objectives,” thereby reducing the likelihood of liquidity issues. “However, the global developments are rapidly unfolding and we are watching for any market shifts that will impact our owners,” Tullo said. Gas prices Though Talonvest Capital Co-Founding Principal Thomas Sherlock doesn’t think the military action in the Middle East has fundamentally impacted transaction volume in the multifamily sector, rising gas prices have been noticeable. “The spike in energy prices has had a negative impact on operating profits,” Sherlock said in emailed comments. Tullo is also watching the downstream impact of elevated energy prices. “We expect there will potentially be an inflationary impact on a wide range of consumer items,” he said. “However, from our vantage point as an operator, we don’t anticipate a huge, unmanageable impact.” Developers are also getting hit. Underwriting apartment construction is already difficult. Rising fuel prices are adding another obstacle, according to John McCullough, president of Kennedy-Wilson’s Multifamily Development Group. “Everything that comes to our job comes on the back of the truck,” McCullough said. “So when gas goes up $1 , it has an impact.” Lingering uncertainty When queried about the war's impact, apartment executives continue to go back to one word: uncertainty. For instance, the military action is introducing uncertainty among investment committees, further muddying the waters when companies underwrite deals, according to Chesser. “Deals that were getting closer to clearing in February paused in March while everyone re-underwrote with a higher 10-year and stress-test",
-      "published_at": 1778081137000,
-      "score": 15,
-      "tags": [
-        "multifamily",
-        "macro",
-        "earnings"
-      ],
-      "heat_signals": [
-        "inflation"
-      ],
-      "section": "cre",
-      "cre_subcategory": null,
-      "id": "5d592f0e",
-      "title_zh": "Iran 冲突对 multifamily 影响有限，高管称属\"噪音\"级扰动",
-      "summary_zh": "主要 apartment REITs 业绩会几乎未提及 Iran 战争；AMC 高管称非行业焦点，BAM Capital 认为国防建设或利好 Midwest 制造业就业；油价破百后回落，10Y Treasury 飙升，整体影响可控",
+      "id": "f771c66e",
+      "title_zh": "Houston St. Regis Residences 预售 45%，开发商称 luxury 无 affordability 之忧",
+      "summary_zh": "Satya CEO Sunny Bathija 称 90 单元中 penthouse 售罄，买家追求品牌与生活方式，2029 Q1 交付",
       "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778125990009
-    },
-    {
-      "source_id": "connect-cre",
-      "source_name": "Connect CRE",
-      "source_tier": "A",
-      "source_weight": 7,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Apartment Management Consultants Rolls Out Prisma Residential Portal Across Portfolio",
-      "link": "https://www.connectcre.com/stories/apartment-management-consultants-rolls-out-prisma-residential-portal-across-portfolio/",
-      "description": "Apartment Management Consultants (AMC) has selected and deployed Prisma Prop Tech as its primary resident portal and payments platform across its managed portfolio of apartment communities. Across its 900-plus managed properties, AMC leverages Prisma's platform and mobile application to drive value for residents and owners. Prisma is providing AMC with a unified resident platform that includes digital ... The post Apartment Management Consultants Rolls Out Prisma Residential Portal Across Portfolio appeared first on Connect CRE .",
-      "published_at": 1778104501000,
-      "score": 13,
-      "tags": [
-        "deals",
-        "multifamily"
-      ],
-      "heat_signals": [],
-      "section": "cre",
-      "cre_subcategory": null,
-      "id": "e4060933",
-      "title_zh": "AMC 部署 Prisma Prop Tech 为 900+ 物业统一住户平台",
-      "summary_zh": "Apartment Management Consultants 在管理超 900 处物业全面上线 Prisma 住户门户与支付平台，提供数字化统一体验",
-      "importance": 2,
-      "impact": "neutral",
-      "fetched_at": 1778125990009
+      "impact": "long-pos",
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "trd-national",
@@ -688,32 +608,62 @@
         "deals"
       ],
       "region": "national",
-      "title": "Starwood faces default on $265M hotel portfolio loan",
-      "link": "https://therealdeal.com/national/2026/05/06/starwood-capital-faces-default-on-265m-hotel-portfolio/",
-      "description": "Barry Sternlicht’s Starwood Capital Group is staring down the barrel of another major commercial real estate default. A $265 million loan taken out in 2018 by a Starwood affiliate against a 22-property hotel portfolio has been shipped to special servicing as the landlord struggles to keep its head above water, according to public loan data. The commercial mortgage-backed securities debt was transferred into special servicer K-Star Asset Management’s control in January due to an “imminent monetary default,” according to loan data from Morningstar Credit. The portfolio spans properties totaling 2,943 keys across 12 states and 17 cities, with a concentration in the Midwest including three in the Chicago area, as well as one in West Palm Beach, Florida. The hotels operate primarily under the Marriott, Hilton and IHG brand families. While the loan doesn’t mature until 2027 and interest payments have been made through April, the portfolio’s underlying financials have deteriorated significantly. By mid-2025, its debt service coverage ratio based on net cash flow plummeted to a dismal 0.64, meaning it was generating less than 65 percent of the revenue needed to cover the cost of loan interest. That marks a steep drop from the robust 2.07 ratio underwritten at origination. Occupancy at the hotels has remained sluggish, hovering at just 63 percent. Servicer commentary attributes the distressed metrics to the portfolio’s protracted recovery from the initial impacts of the pandemic. SIGN UP Starwood has already submitted a modification proposal to the loan’s noteholders in hopes of avoiding a worst-case scenario, although the terms haven’t been made public. Both K-Star Asset Management and Starwood both declined to comment. This isn’t Sternlicht’s first rodeo with distressed hospitality debt. Starwood’s massive commercial real estate empire is still grappling with a potent cocktail of post-pandemic market realities and the crushing weight of capital costs due to interest rate hikes that kicked off in 2022. Case in point: A $577 million loan for another large Starwood lodging portfolio — comprising 65 mixed-service hotels and 6,366 keys — was also forced into special servicing in early 2025 due to payment default. By September 2025, Starwood inked a modification agreement to aggressively sell off underperforming assets and adjust cash-management provisions to salvage the rest of the portfolio. As of the end of March, the firm had successfully dumped 21 of those hotels, resulting in a cumulative debt paydown of $122.6 million. While K-Star is also the special servicer for the $577 million debt package, it’s unclear if the two will work out a similar plan for this more recent distressed debt package. Read more Commercial National Starwood wheels and deals to fix $800M loan default",
-      "published_at": 1778093555000,
-      "score": 21,
+      "title": "Boston-area university sells half of its campus for luxury development",
+      "link": "https://therealdeal.com/national/boston/2026/05/06/boston-area-school-sells-campus-for-luxury-development/",
+      "description": "A pair of real estate developers is taking advantage of a Boston-area college’s desire to consolidate and raise cash. AvalonBay Communities and Winn Development Company scored approval from local officials for a 340-unit luxury housing project on the south campus of Salem State University, a public college located roughly 16 miles north of Boston, the Boston Business Journal reported . The agreement to sell the property to the developers was reached two years ago, but remains contingent on a few factors. The purchase price was not disclosed by the school. It is set to become public when the sale closes. “The sale of South Campus allows the university to focus on a smaller footprint, alleviating some operational costs associated with deferred maintenance and outdated facilities,” university officials said in a statement. The luxury multifamily development, dubbed Avalon Salem and set to unfold at 8 Harrison Road, is only the first phase of the broader Forest River Residences project, which is expected to include another 145 units on the campus site. The subsequent phase will involve a mix of new construction and repurposing of existing buildings. SIGN UP The 23-acre lot will also include more than 500 parking spaces. The approval process dates back to a plan announced by the school last spring to sell its south campus and shift all of its classes north. The sale of the campus cancels more than $50 million in deferred maintenance and operational costs. The school intends to complete its campus consolidation by fall 2027. Construction on the luxury housing is expected to begin this summer, though the school will maintain ownership of the site until all classes are moved to the other part of the campus. Proximity to schools has long been of interest to developers in the Boston area, whether for student use or otherwise. Controversial landlord Alpha Management recently acquired a handful of off-campus housing properties in Boston’s Brighton neighborhood for a combined $36 million , offering close access to major universities like Boston College and Boston University. — Holden Walter-Warner Read more Commercial Boston Boston’s “most infamous landlord” still making deals",
+      "published_at": 1778099490000,
+      "score": 12,
       "tags": [
         "deals",
-        "hotel",
-        "macro",
-        "rates",
-        "trend",
-        "institutional",
+        "multifamily",
         "landlord"
       ],
-      "heat_signals": [
-        "rate hike",
-        "starwood",
-        "occupancy"
+      "heat_signals": [],
+      "section": "cre",
+      "cre_subcategory": null,
+      "id": "102a7231",
+      "title_zh": "AvalonBay 与 Winn 获批开发 Salem State University 南校区 340 单元 luxury 住宅",
+      "summary_zh": "23 英亩校园土地出售，取消 $50M+ 递延维护成本，Forest River Residences 首期 Avalon Salem 启动",
+      "importance": 3,
+      "impact": "long-pos",
+      "fetched_at": 1778126286263
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
       ],
-      "section": "institutional",
-      "id": "29444c57",
-      "title_zh": "Starwood $2.65 亿酒店组合贷款转入 special servicing，DSCR 跌至 0.64",
-      "summary_zh": "Barry Sternlicht 旗下 Starwood 22 处酒店、2,943 keys 的 $265M CMBS 贷款因\"迫在眉睫的违约\"于 1 月转入 K-Star special servicing；DSCR 从 origination 时 2.07 暴跌至 0.64，入住率仅 63%",
-      "importance": 4,
-      "impact": "short-neg",
-      "fetched_at": 1778125990009
+      "region": "national",
+      "title": "Town Lane, Gillon Property Acquire 460,000 SF Retail, Office Property in Allen, Texas",
+      "link": "https://rebusinessonline.com/town-lane-gillon-property-acquire-460000-sf-retail-office-property-in-allen-texas/",
+      "description": "Acquisitions Office Retail Texas Town Lane, Gillon Property Acquire 460,000 SF Retail, Office Property in Allen, Texas by Taylor Williams May 6, 2026 May 6, 2026 1 ALLEN, TEXAS — A partnership between two investment firms, New York-based Town Lane and Dallas-based Gillon Property Group, has acquired Watters Creek Village, a 460,000-square-foot retail and office property located in the northeastern Dallas suburb of Allen. Built on 46 acres in 2008, Watters Creek Village consists of 360,000 square feet of retail space that is anchored by a Market Street grocery store and 100,000 square feet of boutique office space. Other retail tenants include Anthropologie, Barnes Noble, Lululemon, Mi Cocina, Pure Barre, Sephora and Warby Parker. A fund backed by Ares Real Estate financed the acquisition. The seller and sales price were not disclosed. The new ownership plans to make capital improvements to the property. Share Facebook Twitter Linkedin Email previous post JLL Brokers 271,689 SF Industrial Campus in Cedar Park, Texas You may also like JLL Brokers 271,689 SF Industrial Campus in Cedar... May 6, 2026 Hunter Advisors Arranges Sale of 136-Room Hotel in... May 6, 2026 Finial Group Negotiates 12,500 SF Industrial Lease in... May 6, 2026 Newmark Negotiates $64M Sale of Apartment Community in... May 6, 2026 Colliers Brokers Sale of 483-Unit Apartment Community in... May 6, 2026 Choate Construction to Relocate Atlanta Office to 57,000... May 6, 2026 Woodside Health Acquires 40,000 SF Medical Office Building... May 6, 2026 Cushman Wakefield Brokers $49M Sale of Northern... May 6, 2026 IPA Brokers Sale of 300-Unit River Oaks Apartment... May 6, 2026",
+      "published_at": 1778079271000,
+      "score": 12,
+      "tags": [
+        "deals",
+        "industrial",
+        "office",
+        "multifamily",
+        "hotel",
+        "texas",
+        "dfw"
+      ],
+      "heat_signals": [
+        "texas",
+        "dallas"
+      ],
+      "section": "cre",
+      "cre_subcategory": "办公",
+      "id": "940355a8",
+      "title_zh": "Town Lane 与 Gillon 收购 Allen, Texas 460K SF 零售办公混合物业",
+      "summary_zh": "Watters Creek Village 获 Ares Real Estate 资助，计划资本改造，Dallas 郊区 retail/office 仍具机构投资吸引力",
+      "importance": 3,
+      "impact": "long-pos",
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "pere-news",
@@ -726,17 +676,15 @@
         "trend"
       ],
       "region": "national",
-      "title": "Ares’ Phillips: ‘We're on track for another record year of fundraising’",
-      "link": "https://www.perenews.com/ares-phillips-were-on-track-for-another-record-year-of-fundraising/",
-      "description": "Managers Ares’ Phillips: ‘We&#8217;re on track for another record year of fundraising’ The Los Angeles-based firm raised $5bn of equity and debt commitments for real estate in Q1 2026 and expects to close on more capital later this year. Silvia Saccardi - 6 hours ago Share A - A + 100% PERE Create an account to continue reading Expert intelligence on the funds, deals and trends shaping global private real estate. CREATE AN ACCOUNT SIGN IN TAGS Capital Formation Asia-Pacific North America Europe Share this Twitter Linkedin Silvia Saccardi",
-      "published_at": 1778080415000,
-      "score": 20,
+      "title": "Private real estate’s compensation recovery gathers steam",
+      "link": "https://www.perenews.com/private-real-estates-compensation-recovery-gathers-steam/",
+      "description": "Managers Private real estate’s compensation recovery gathers steam In 2025, industry professionals saw median remuneration gains in all but one category, according to Sousou Partners and PERE’s latest compensation survey. Christie Ou - 18 hours ago Share A - A + 100% PERE Create an account to continue reading Expert intelligence on the funds, deals and trends shaping global private real estate. CREATE AN ACCOUNT SIGN IN TAGS Human Capital Asia-Pacific Data Snapshot North America Europe Share this Twitter Linkedin Christie Ou",
+      "published_at": 1778029245000,
+      "score": 18,
       "tags": [
         "institutional",
         "deals",
         "trend",
-        "california",
-        "earnings",
         "mixed-asset"
       ],
       "heat_signals": [
@@ -744,12 +692,12 @@
         "trends"
       ],
       "section": "institutional",
-      "id": "cdb85bad",
-      "title_zh": "Ares Q1 地产募资 $50 亿，全年有望再创纪录",
-      "summary_zh": "Ares Management Q1 房地产股权与债务承诺募资 $5bn，管理层 Phillips 表示全年有望再创年度募资纪录",
-      "importance": 4,
+      "id": "6285443a",
+      "title_zh": "Private real estate 薪酬复苏：2025 年除一类外全员中位数上涨",
+      "summary_zh": "Sousou Partners 调查示 compensation recovery 扩散，人力资本竞争加剧印证行业景气回升",
+      "importance": 3,
       "impact": "long-pos",
-      "fetched_at": 1778125990009
+      "fetched_at": 1778126286263
     },
     {
       "source_id": "pere-news",
@@ -762,11 +710,11 @@
         "trend"
       ],
       "region": "national",
-      "title": "Blue Owl raises $9bn across four real estate funds",
-      "link": "https://www.perenews.com/blue-owl-raises-9bn-across-four-real-estate-funds/",
-      "description": "Managers Blue Owl raises $9bn across four real estate funds The New York-based firm’s net lease strategy has been a major driver of its real estate capital raising activity. Evelyn Lee - 1 hour ago Share A - A + 100% PERE Create an account to continue reading Expert intelligence on the funds, deals and trends shaping global private real estate. CREATE AN ACCOUNT SIGN IN TAGS PEI Group Data Net Lease Data Centers Debt North America Europe Share this Twitter Linkedin Evelyn Lee",
-      "published_at": 1778079587000,
-      "score": 20,
+      "title": "Berkshire Global: Real estate M&#038;A sees a temporary changing of the guard",
+      "link": "https://www.perenews.com/berkshire-global-real-estate-ma-sees-a-temporary-changing-of-the-guard/",
+      "description": "Deals Berkshire Global: Real estate M&#038;A sees a temporary changing of the guard Non-alts buyers are stepping into the breach as large, publicly traded investment managers take a breather, according to Drew Murphy, partner and head of the private markets advisory practice at Berkshire Global Advisors. Guest Writer - 1 day ago Share A - A + 100% PERE Create an account to continue reading Expert intelligence on the funds, deals and trends shaping global private real estate. CREATE AN ACCOUNT SIGN IN TAGS Data Centers Data Snapshot Sovereign Wealth Fund North America Insurance Company Europe Pension Fund Alternatives Share this Twitter Linkedin Guest Writer",
+      "published_at": 1778029212000,
+      "score": 18,
       "tags": [
         "institutional",
         "deals",
@@ -778,12 +726,12 @@
         "trends"
       ],
       "section": "institutional",
-      "id": "4670cee0",
-      "title_zh": "Blue Owl 四支地产基金募资 $90 亿，net lease 策略为核心驱动",
-      "summary_zh": "Blue Owl 于四支房地产基金共募得 $9bn，net lease 策略为资本募集主要驱动力，覆盖 data centers 与 debt 等策略",
+      "id": "adf4c042",
+      "title_zh": "Real estate M&A 格局生变：非另类买家暂替上市资管巨头",
+      "summary_zh": "Berkshire Global 指出 large public investment managers 暂停收购，sovereign wealth fund、insurance、pension 等 non-alts 买家填补缺口，属 temporary 轮换",
       "importance": 4,
-      "impact": "long-pos",
-      "fetched_at": 1778125990009
+      "impact": "neutral",
+      "fetched_at": 1778126286263
     }
   ],
   "errors": [
@@ -793,6 +741,10 @@
     },
     {
       "source": "Multi-Housing News",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "Lance Lambert / ResiClub",
       "error": "HTTP 403"
     }
   ]
