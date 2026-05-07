@@ -737,8 +737,17 @@ ${lines.join("\n\n")}
   const text = data.choices?.[0]?.message?.content ?? "";
   const cleaned = text.replace(/```json\s*/g, "").replace(/```\s*$/g, "").trim();
 
-  let parsed = [];
-  try { parsed = JSON.parse(cleaned); } catch { parsed = []; }
+  let parsed;
+  try {
+    parsed = JSON.parse(cleaned);
+  } catch (e) {
+    log(`🤖 LLM raw content (first 500): ${cleaned.slice(0, 500)}`);
+    throw new Error(`LLM JSON parse failed: ${e.message}`);
+  }
+  if (!Array.isArray(parsed) || parsed.length === 0) {
+    log(`🤖 LLM raw content (first 500): ${cleaned.slice(0, 500)}`);
+    throw new Error(`LLM returned non-array or empty result (got ${typeof parsed}, length ${Array.isArray(parsed) ? parsed.length : "n/a"})`);
+  }
 
   const titleMap = new Map(), summaryMap = new Map(), impMap = new Map(), dirMap = new Map();
   for (const p of parsed) {

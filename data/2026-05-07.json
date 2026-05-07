@@ -1,6 +1,6 @@
 {
   "date": "2026-05-07",
-  "generated_at": 1778146211961,
+  "generated_at": 1778147489241,
   "sources_attempted": 32,
   "sources_ok": 32,
   "sections": [
@@ -94,73 +94,11 @@
       ],
       "section": "national",
       "id": "0359eaad",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
+      "title_zh": "3月 JOLTS 建筑职位空缺微升，整体就业市场持续降温",
+      "summary_zh": "3月建筑开放岗位小幅增加，但较三年前明显回落；全国职位空缺降至687万，持续低于800万门槛，理论上支持 Fed 继续降息，但能源价格上涨构成干扰",
+      "importance": 5,
       "impact": "neutral",
-      "fetched_at": 1778146274794
-    },
-    {
-      "source_id": "housingwire",
-      "source_name": "HousingWire",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "housing",
-        "rates",
-        "policy"
-      ],
-      "region": "national",
-      "title": "Compass International Holdings names president of integrated services",
-      "link": "https://www.housingwire.com/articles/compass-perkins-integrated-services/",
-      "description": "Compass International Holdings has appointed a longtime executive to lead its integrated services division. Cory Perkins will oversee the unit, which focuses on combining services such as title, escrow and other transaction support into a more unified platform. The appointment follows the planned retirement of Don Casey, who will remain involved with the business in an advisory role. Perkins steps into a position he previously developed while at Compass, where he built out the integrated services division and helped expand the brokerage’s footprint across the United States. In his new role, he will lead the combined services operations formed after the integration of Compass and Anywhere assets. Perkins said the role centers on improving coordination across services that support real estate transactions. &#8220;It&#8217;s a privilege to step into this role and work alongside the talented teams and storied brands that Compass and Anywhere have brought together into a single organization. With the best people and technology powering our integrated services businesses, we have the real opportunity to set the bar for service excellence in our industry. I couldn&#8217;t be more energized to kick off this journey in support of our real estate professionals and their clients.&#8221; Compass Chairman and CEO Robert Reffkin said the company is focused on improving client experience through integration. “The best companies in the world make client experiences better and more seamless at every step,” said Reffkin. “Cory has proven he knows how to build and scale integrated services that deliver real value to agents and their clients. He’s the right leader to lead our combined integrated services team and take them to the next level.” Perkins brings experience in both real estate operations and venture capital, including time at First Round Capital. During more than eight years at Compass, he helped lead expansion into more than 20 markets and supported the opening of more than 100 offices nationwide. He later developed the integrated services division, focusing on increasing adoption of title and escrow offerings among agents. This article was generated using HousingWire Automation and reviewed by a HousingWire editor before publication. The system helps convert company announcements and industry data into HousingWire-style news coverage. Related More: Brokerage Compass Title insurance",
-      "published_at": 1778098310000,
-      "score": 13,
-      "tags": [
-        "housing",
-        "rates",
-        "policy",
-        "brokerage"
-      ],
-      "heat_signals": [],
-      "section": "national",
-      "id": "babe8798",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
-    },
-    {
-      "source_id": "housingwire",
-      "source_name": "HousingWire",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "housing",
-        "rates",
-        "policy"
-      ],
-      "region": "national",
-      "title": "How AI accelerates construction draws and cuts review times",
-      "link": "https://www.housingwire.com/articles/ai-transforming-construction-draws/",
-      "description": "Construction project finance plays a crucial, time-sensitive role in residential construction, helping contractors, remodelers, and builders access funding draws throughout a project’s lifecycle. Historically, however, the process has been inefficient , requiring lengthy review and approval timelines that cause delays and take attention and manpower away from other important tasks. “It’s just one of the most inundated, labor-intensive, inefficient processes that exists in construction,” said Thomas Schlegel, VP of Engineering at Built Technologies . While many companies have worked to improve the efficiency of construction draws, Built Technologies believes it has achieved a meaningful breakthrough in recent months with the full rollout of its Draw Agent. How technology and AI can improve construction draw times In residential construction, construction draw timelines typically run about seven business days. However, this process is gradually becoming much faster as companies leverage artificial intelligence to automate much of the end-to-end build-cycle data. Built Technologies, for example, now achieves an average construction draw timeline of three business days. The company shortened the construction draw process by replacing fragmented communication and workflows, such as emails, spreadsheets, PDFs, and hundreds of required documents, with a centralized platform that grants both lenders and borrowers access. This centralized system organizes essential documents such as invoices, lien waivers, inspections, photos, plans and budgets into one place. It also enables users to communicate directly with lenders, see outstanding requirements, submit draw requests and schedule third-party inspections. However, the biggest breakthrough for Built Technologies is its new Draw Agent, which the company announced in 2025 and fully rolled out earlier this year. The Draw Agent allows users to access simple construction draws within minutes. The Draw Agent activates when it detects a new draw and fully automates the draw review process in three modes. One of the Draw Agent’s biggest impacts is its automatic review times. According to Schlegel, it can often take 20 to 40 hours for a human to review a construction draw request. While most users are open to using AI in the review process, not everyone fully trusts the technology yet. As a result, the Draw Agent system rolls out to users in stages, gradually expanding its level of responsibility to encourage adoption and ease the transition from manual review to full automation. During the first stage, audit mode, the AI tool conducts a read-only analysis of the draw package, ensuring that all information is correct and consistent. As users become more confident in the Draw Agent’s abilities, they can transition to assist mode. Using assist mode, one can leverage the AI agent to complete select tasks like scheduling inspections or sending borrower communications, while still maintaining approval control. The most advanced stage is automate mode, in which the Draw Agent independently completes and the full review and approval process, ultimately requiring very little user involvement other than complex cases. This tool ultimately enables approval within minutes. The Draw Agent technology was a major breakthrough, Schlegel said. He has been with Built Technologies for eight years, and has seen firsthand how quickly AI transformed the construction draw process. “Over that eight-year process, we&#8217;ve been making incremental improvements, roughly, say, every month or every quarter. Last year was a watershed moment for the capabilities of these models. They have gotten so good that now we are starting to trust them with more and more things,” he said. Benefits to contractors, builders and lenders In April, Built Technologies announced that it partnered with U.S. Bank to offer construction loans. Other banks, like Citi , also utilize Built. Lenders, Schlegel said, have responded well to the use o",
-      "published_at": 1778096107000,
-      "score": 13,
-      "tags": [
-        "housing",
-        "rates",
-        "policy",
-        "deals"
-      ],
-      "heat_signals": [],
-      "section": "national",
-      "id": "a0b2dc33",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
+      "fetched_at": 1778147544344
     },
     {
       "source_id": "realtor-news",
@@ -188,11 +126,11 @@
       ],
       "section": "national",
       "id": "6a2499fc",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
+      "title_zh": "2026 春季房市遇「怕买贵」心理关卡，量增价稳却成交停滞",
+      "summary_zh": "库存上升、mortgage rate 回落背景下，买家因「fear of overpaying」观望情绪浓厚，春季旺季呈现「vibes problem」",
+      "importance": 4,
+      "impact": "short-neg",
+      "fetched_at": 1778147544344
     },
     {
       "source_id": "inman",
@@ -216,11 +154,73 @@
       "heat_signals": [],
       "section": "national",
       "id": "1c3d4a28",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
+      "title_zh": "RE/MAX 多年衰退终被 Real 收购，品牌易主落定",
+      "summary_zh": "RE/MAX 长期业绩下滑后落入 Real 手中，传统经纪特许经营模式在佣金诉讼与市场份额流失双重压力下被迫求变",
+      "importance": 4,
+      "impact": "short-neg",
+      "fetched_at": 1778147544344
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "How AI accelerates construction draws and cuts review times",
+      "link": "https://www.housingwire.com/articles/ai-transforming-construction-draws/",
+      "description": "Construction project finance plays a crucial, time-sensitive role in residential construction, helping contractors, remodelers, and builders access funding draws throughout a project’s lifecycle. Historically, however, the process has been inefficient , requiring lengthy review and approval timelines that cause delays and take attention and manpower away from other important tasks. “It’s just one of the most inundated, labor-intensive, inefficient processes that exists in construction,” said Thomas Schlegel, VP of Engineering at Built Technologies . While many companies have worked to improve the efficiency of construction draws, Built Technologies believes it has achieved a meaningful breakthrough in recent months with the full rollout of its Draw Agent. How technology and AI can improve construction draw times In residential construction, construction draw timelines typically run about seven business days. However, this process is gradually becoming much faster as companies leverage artificial intelligence to automate much of the end-to-end build-cycle data. Built Technologies, for example, now achieves an average construction draw timeline of three business days. The company shortened the construction draw process by replacing fragmented communication and workflows, such as emails, spreadsheets, PDFs, and hundreds of required documents, with a centralized platform that grants both lenders and borrowers access. This centralized system organizes essential documents such as invoices, lien waivers, inspections, photos, plans and budgets into one place. It also enables users to communicate directly with lenders, see outstanding requirements, submit draw requests and schedule third-party inspections. However, the biggest breakthrough for Built Technologies is its new Draw Agent, which the company announced in 2025 and fully rolled out earlier this year. The Draw Agent allows users to access simple construction draws within minutes. The Draw Agent activates when it detects a new draw and fully automates the draw review process in three modes. One of the Draw Agent’s biggest impacts is its automatic review times. According to Schlegel, it can often take 20 to 40 hours for a human to review a construction draw request. While most users are open to using AI in the review process, not everyone fully trusts the technology yet. As a result, the Draw Agent system rolls out to users in stages, gradually expanding its level of responsibility to encourage adoption and ease the transition from manual review to full automation. During the first stage, audit mode, the AI tool conducts a read-only analysis of the draw package, ensuring that all information is correct and consistent. As users become more confident in the Draw Agent’s abilities, they can transition to assist mode. Using assist mode, one can leverage the AI agent to complete select tasks like scheduling inspections or sending borrower communications, while still maintaining approval control. The most advanced stage is automate mode, in which the Draw Agent independently completes and the full review and approval process, ultimately requiring very little user involvement other than complex cases. This tool ultimately enables approval within minutes. The Draw Agent technology was a major breakthrough, Schlegel said. He has been with Built Technologies for eight years, and has seen firsthand how quickly AI transformed the construction draw process. “Over that eight-year process, we&#8217;ve been making incremental improvements, roughly, say, every month or every quarter. Last year was a watershed moment for the capabilities of these models. They have gotten so good that now we are starting to trust them with more and more things,” he said. Benefits to contractors, builders and lenders In April, Built Technologies announced that it partnered with U.S. Bank to offer construction loans. Other banks, like Citi , also utilize Built. Lenders, Schlegel said, have responded well to the use o",
+      "published_at": 1778096107000,
+      "score": 13,
+      "tags": [
+        "housing",
+        "rates",
+        "policy",
+        "deals"
+      ],
+      "heat_signals": [],
+      "section": "national",
+      "id": "a0b2dc33",
+      "title_zh": "Built Technologies AI 工具将 construction draw 周期从7天压缩至3天",
+      "summary_zh": "Built Technologies 全面推出 Draw Agent，以 AI 和集中化平台替代邮件、PDF 等碎片化流程，住宅建筑贷款放款效率提升约57%",
       "importance": 3,
+      "impact": "long-pos",
+      "fetched_at": 1778147544344
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Compass International Holdings names president of integrated services",
+      "link": "https://www.housingwire.com/articles/compass-perkins-integrated-services/",
+      "description": "Compass International Holdings has appointed a longtime executive to lead its integrated services division. Cory Perkins will oversee the unit, which focuses on combining services such as title, escrow and other transaction support into a more unified platform. The appointment follows the planned retirement of Don Casey, who will remain involved with the business in an advisory role. Perkins steps into a position he previously developed while at Compass, where he built out the integrated services division and helped expand the brokerage’s footprint across the United States. In his new role, he will lead the combined services operations formed after the integration of Compass and Anywhere assets. Perkins said the role centers on improving coordination across services that support real estate transactions. &#8220;It&#8217;s a privilege to step into this role and work alongside the talented teams and storied brands that Compass and Anywhere have brought together into a single organization. With the best people and technology powering our integrated services businesses, we have the real opportunity to set the bar for service excellence in our industry. I couldn&#8217;t be more energized to kick off this journey in support of our real estate professionals and their clients.&#8221; Compass Chairman and CEO Robert Reffkin said the company is focused on improving client experience through integration. “The best companies in the world make client experiences better and more seamless at every step,” said Reffkin. “Cory has proven he knows how to build and scale integrated services that deliver real value to agents and their clients. He’s the right leader to lead our combined integrated services team and take them to the next level.” Perkins brings experience in both real estate operations and venture capital, including time at First Round Capital. During more than eight years at Compass, he helped lead expansion into more than 20 markets and supported the opening of more than 100 offices nationwide. He later developed the integrated services division, focusing on increasing adoption of title and escrow offerings among agents. This article was generated using HousingWire Automation and reviewed by a HousingWire editor before publication. The system helps convert company announcements and industry data into HousingWire-style news coverage. Related More: Brokerage Compass Title insurance",
+      "published_at": 1778098310000,
+      "score": 13,
+      "tags": [
+        "housing",
+        "rates",
+        "policy",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "section": "national",
+      "id": "babe8798",
+      "title_zh": "Compass 任命 Cory Perkins 统整 integrated services 业务",
+      "summary_zh": "Cory Perkins 接替退休的 Don Casey，领导 Compass 与 Anywhere 资产整合后的统一服务平台，属常规人事安排",
+      "importance": 2,
       "impact": "neutral",
-      "fetched_at": 1778146274794
+      "fetched_at": 1778147544344
     },
     {
       "source_id": "inman",
@@ -244,11 +244,98 @@
       "heat_signals": [],
       "section": "national",
       "id": "370c5484",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
+      "title_zh": "Compass 升任 Cory Perkins 执掌 integrated services 部门",
+      "summary_zh": "Cory Perkins 获擢升领导 Compass 整合服务部门，推进 title、escrow 等交易支持业务的平台化协同，与新闻[2]为同一事件不同报道",
+      "importance": 1,
       "impact": "neutral",
-      "fetched_at": 1778146274794
+      "fetched_at": 1778147544344
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "Latest Las Vegas housing report shows lower prices, fewer sales - ktnv.com",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQQm1GQkFwcnZ2UUNKRVktTEUzY0pybVlSNExzaFVpXzdBWE9mWVJpaGF0RVdtNzBJVEdIa2JWdGFlT0pNbzhlQ21MSy1VbndiQ3dvTWRLUkNxVndSb2xaNmFIQUNneFdHVldPR3dQRXVrd0NlQ1phQXBYYS1MRXpJTFE1UWFLb2RyYXUyQjBYWTFPdw?oc=5",
+      "description": "Latest Las Vegas housing report shows lower prices, fewer sales &nbsp;&nbsp; ktnv.com",
+      "published_at": 1778097620000,
+      "score": 11,
+      "tags": [
+        "sunbelt",
+        "data",
+        "mixed-asset"
+      ],
+      "heat_signals": [],
+      "section": "sunbelt",
+      "id": "1d3bc228",
+      "title_zh": "Las Vegas 4月房价下跌、销量萎缩，Sun Belt 降温信号延续",
+      "summary_zh": "Las Vegas 最新房市报告显示价格走低但销售仍放缓，Sun Belt 典型市场供需调整尚未完成，买方观望持续",
+      "importance": 3,
+      "impact": "short-neg",
+      "fetched_at": 1778147544344
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "Despite economic uncertainty, Nashville's housing squeeze keeps tightening | Opinion - The Tennessean",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPUlB3dzRZTTBLVmFIZGItUzc2RzhOSFlDMEpVdFptWENrRFdSYXQ5Um9rQjBvdzg3Y2pnSkEyWVloTDhWaXMwbXNfRlZjZ0hGd3dQNmt3QUl2SU1qU3pXT1lCdnpHOEkzUm5KS2lwYm5EaXltWUFBS1VKNGFJcndnaE5fZFpFS21ESE9sZXBWZXZfYkx5MzhKTG84dVNBcVhrUnhpVEZn?oc=5",
+      "description": "Despite economic uncertainty, Nashville's housing squeeze keeps tightening | Opinion &nbsp;&nbsp; The Tennessean",
+      "published_at": 1778061720000,
+      "score": 11,
+      "tags": [
+        "sunbelt",
+        "data",
+        "mixed-asset"
+      ],
+      "heat_signals": [],
+      "section": "sunbelt",
+      "id": "54b5b72f",
+      "title_zh": "Nashville 住房紧缺加剧，经济不确定性下供需矛盾仍紧绷",
+      "summary_zh": "Tennessean 评论指出 Nashville 住房 squeeze 持续收紧，供给短缺未因经济前景不明而缓解，属区域市场结构性矛盾",
+      "importance": 3,
+      "impact": "long-pos",
+      "fetched_at": 1778147544344
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "Las Vegas housing sales slow down in April despite lower prices, new report shows - KLAS 8 News Now",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaFdkWFRpcUZLMVRYSkpsMG1nRERJOEt3Y28xSGdPWEVYTTEyX3JYSkJQQzExMFRYd3hQTTk1QTg1Z2pscE1aX3FCTllUbjFIZ1RhUDNpa0ttZkVhbENhUXVxRUt3ZWUyVGJkdU5XZk43Z3J1V3Fkc3NrTTI3N0xrMHNHLVRVV3JUaHk5bVZMa3J4aE52M1MwOUVuYlUySUktR2UtYzJZYXFFT1RxdzRLbTFzRDBOanZKQmY3WGZMTdIBxAFBVV95cUxOc05XXzR4elNXd01zYXFFWk9QOE9QdVBabmhBLXJLRkNENTIta1JtMnR4bjY0cjdPZHpfbWtPeDBEbXlzZm5HRFRhcFpCcmFDZF9nT1BWa0QyMTdPNXJQSlFGWXNSMFhka0RZb01XZGhaaFozSHp2U0R3RDRnRG9jdFlKei0zYnVyeThZXzlOSlVwLVA5TXM2YmRyb3BVNkJkaWxDLXFyejlWQ1RPWVE3WXVrZGEzUEM3NHJOMl9mN25WdUFI?oc=5",
+      "description": "Las Vegas housing sales slow down in April despite lower prices, new report shows &nbsp;&nbsp; KLAS 8 News Now",
+      "published_at": 1778068800000,
+      "score": 11,
+      "tags": [
+        "sunbelt",
+        "data",
+        "mixed-asset"
+      ],
+      "heat_signals": [],
+      "section": "sunbelt",
+      "id": "1db8f496",
+      "title_zh": "Las Vegas 4月房市：降价未能提振交易量",
+      "summary_zh": "KLAS 报道确认 Las Vegas 4月住宅销售放缓、价格下行，与新闻[8]为同一市场数据的不同媒体跟进，影响待观察",
+      "importance": 2,
+      "impact": "short-neg",
+      "fetched_at": 1778147544344
     },
     {
       "source_id": "d-magazine",
@@ -277,134 +364,11 @@
       ],
       "section": "sunbelt",
       "id": "0f9c5246",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
+      "title_zh": "Texas DFW 小型经纪 Bray Real Estate Group 扩张布点",
+      "summary_zh": "Chase Bray 旗下经纪行计划在 North DFW 及 Rockwall 增设办公室，属区域市场个体扩张动态",
+      "importance": 1,
       "impact": "neutral",
-      "fetched_at": 1778146274794
-    },
-    {
-      "source_id": "google-news-sunbelt",
-      "source_name": "Google News — Sun Belt Housing Market",
-      "source_tier": "D",
-      "source_weight": 7,
-      "source_tags": [
-        "sunbelt",
-        "data"
-      ],
-      "region": "sunbelt",
-      "title": "Latest Las Vegas housing report shows lower prices, fewer sales - ktnv.com",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQQm1GQkFwcnZ2UUNKRVktTEUzY0pybVlSNExzaFVpXzdBWE9mWVJpaGF0RVdtNzBJVEdIa2JWdGFlT0pNbzhlQ21MSy1VbndiQ3dvTWRLUkNxVndSb2xaNmFIQUNneFdHVldPR3dQRXVrd0NlQ1phQXBYYS1MRXpJTFE1UWFLb2RyYXUyQjBYWTFPdw?oc=5",
-      "description": "Latest Las Vegas housing report shows lower prices, fewer sales &nbsp;&nbsp; ktnv.com",
-      "published_at": 1778097620000,
-      "score": 11,
-      "tags": [
-        "sunbelt",
-        "data",
-        "mixed-asset"
-      ],
-      "heat_signals": [],
-      "section": "sunbelt",
-      "id": "1d3bc228",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
-    },
-    {
-      "source_id": "google-news-sunbelt",
-      "source_name": "Google News — Sun Belt Housing Market",
-      "source_tier": "D",
-      "source_weight": 7,
-      "source_tags": [
-        "sunbelt",
-        "data"
-      ],
-      "region": "sunbelt",
-      "title": "Las Vegas housing sales slow down in April despite lower prices, new report shows - KLAS 8 News Now",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaFdkWFRpcUZLMVRYSkpsMG1nRERJOEt3Y28xSGdPWEVYTTEyX3JYSkJQQzExMFRYd3hQTTk1QTg1Z2pscE1aX3FCTllUbjFIZ1RhUDNpa0ttZkVhbENhUXVxRUt3ZWUyVGJkdU5XZk43Z3J1V3Fkc3NrTTI3N0xrMHNHLVRVV3JUaHk5bVZMa3J4aE52M1MwOUVuYlUySUktR2UtYzJZYXFFT1RxdzRLbTFzRDBOanZKQmY3WGZMTdIBxAFBVV95cUxOc05XXzR4elNXd01zYXFFWk9QOE9QdVBabmhBLXJLRkNENTIta1JtMnR4bjY0cjdPZHpfbWtPeDBEbXlzZm5HRFRhcFpCcmFDZF9nT1BWa0QyMTdPNXJQSlFGWXNSMFhka0RZb01XZGhaaFozSHp2U0R3RDRnRG9jdFlKei0zYnVyeThZXzlOSlVwLVA5TXM2YmRyb3BVNkJkaWxDLXFyejlWQ1RPWVE3WXVrZGEzUEM3NHJOMl9mN25WdUFI?oc=5",
-      "description": "Las Vegas housing sales slow down in April despite lower prices, new report shows &nbsp;&nbsp; KLAS 8 News Now",
-      "published_at": 1778068800000,
-      "score": 11,
-      "tags": [
-        "sunbelt",
-        "data",
-        "mixed-asset"
-      ],
-      "heat_signals": [],
-      "section": "sunbelt",
-      "id": "1db8f496",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
-    },
-    {
-      "source_id": "google-news-sunbelt",
-      "source_name": "Google News — Sun Belt Housing Market",
-      "source_tier": "D",
-      "source_weight": 7,
-      "source_tags": [
-        "sunbelt",
-        "data"
-      ],
-      "region": "sunbelt",
-      "title": "Despite economic uncertainty, Nashville's housing squeeze keeps tightening | Opinion - The Tennessean",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPUlB3dzRZTTBLVmFIZGItUzc2RzhOSFlDMEpVdFptWENrRFdSYXQ5Um9rQjBvdzg3Y2pnSkEyWVloTDhWaXMwbXNfRlZjZ0hGd3dQNmt3QUl2SU1qU3pXT1lCdnpHOEkzUm5KS2lwYm5EaXltWUFBS1VKNGFJcndnaE5fZFpFS21ESE9sZXBWZXZfYkx5MzhKTG84dVNBcVhrUnhpVEZn?oc=5",
-      "description": "Despite economic uncertainty, Nashville's housing squeeze keeps tightening | Opinion &nbsp;&nbsp; The Tennessean",
-      "published_at": 1778061720000,
-      "score": 11,
-      "tags": [
-        "sunbelt",
-        "data",
-        "mixed-asset"
-      ],
-      "heat_signals": [],
-      "section": "sunbelt",
-      "id": "54b5b72f",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
-    },
-    {
-      "source_id": "bisnow",
-      "source_name": "Bisnow",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Ted Turner, Who Left A Mark On Downtown Atlanta CRE, Dies At 87",
-      "link": "https://www.bisnow.com/atlanta/news/neighborhood/while-a-media-mogul-ted-turner-also-made-his-downtown-atlanta-cre-mark-134464",
-      "description": "News Ted Turner, Who Left A Mark On Downtown Atlanta CRE, Dies At 87 Atlanta Neighborhood View count: Atlanta May 06, 2026 | 6:02 p.m. ET Jarred Schenke, Atlanta While a commercial real estate legend created one of the icons of Downtown Atlanta’s skyline, it took a media mogul to save it. Wikimedia Commons/INTX: The Internet & Television Expo Ted Turner speaking at The Internet & Television Expo in 2000 Ted Turner, the Turner Broadcasting founder, former Atlanta Braves owner and creator of the 24-hour cable news cycle, died May 6 at 87. He had been diagnosed with Lewy body dementia . While Turner never built any commercial real estate, he was a property owner and his impact on the Atlanta skyline was undeniable, having saved an ailing Omni International complex Downtown. He bought a majority stake in the 1.2M SF property from its developer and owner, Cousins Properties, in 1985 and turned it into an international media hub for CNN, complete with the iconic sign that was out front until just a few years ago. “His footprint here was incredibly impressive. He didn’t build CNN Center, but his occupancy at that time really created a destination place that lasted for many years,” Central Atlanta Progress President A.J. Robinson said. “The sign says it all. That iconic sign was kind of branded CNN and kind of branded Downtown.” Cousins founder Tom Cousins completed the Omni complex in 1972 for $76M as a sort of city-within-a-city project , which included a hotel, offices, restaurants, shops and an ice skating rink. It was also home to an indoor amusement park known as The World of Sid Marty Krofft, based on the 1970s children's television pioneering duo’s creations, such as Land of the Lost and Sigmund and the Sea Monsters . But the Omni complex was never able to buck the trend of ailing urban centers as Americans, including Atlantans, fled for the suburbs. And by 1976, the Sid Marty Krofft amusement park closed down due to dwindling attendance, leaving Cousins and a partner with a $20M loss. The developer staved off foreclosure for years before Turner stepped in. Five years after launching CNN and soon after its spinoff, Headline News, Turner negotiated to take a majority ownership of the complex in 1985 as headquarters for his media empire. Turner sold the property in 1988 for $170M, nearly three times the initial purchase price, the LA Times reported at the time . Aside from being the nexus of his cable news empire, Turner also outfitted CNN Center with his own private residence at the top. Wikimedia Commons/Connor.carey One CNN Center, the longtime home of WarnerMedia's CNN After selling his cable news empire to Time Warner — and losing control of CNN when Time Warner and AOL merged in 2010, what he said was his biggest business regret — Turner bought the historic Bona Allen Building at the corner of Ted Turner Drive and Spring Street and made it the home of Turner Enterprises and Ted’s Montana Grill corporate offices. Turner also lived on the top penthouse floor of the building, with views of CNN Center. “I live on top of my office. I had to buy the building on Luckie Street because after my disastrous merger with Time Warner, where I lost 80% of what I had, I needed some good luck,” Turner told the Buckhead Coalition in 2015, as reported by REBusiness Online . “I’m the only chain restaurant owner in the country who lives in the restaurant. That’s the way they used to do it.” Turner installed a solar array atop the parking deck next to his building at 133 Luckie St., saving 20% of Turner Building’s annual power needs, according to Turner Enterprises. Robinson said it wasn’t uncommon to see Turner walking around Downtown during that time. “It’s rare that you have someone who has more than multiple businesses Downtown and also lived partially Downtown. I can’t think of anyone else who would check that box,” he said. CNN Center now has new ownership , and the news organization has moved out of Downtown to Midtown Atlanta and New Yo",
-      "published_at": 1778100194000,
-      "score": 21,
-      "tags": [
-        "deals",
-        "office",
-        "hotel",
-        "trend",
-        "landlord"
-      ],
-      "heat_signals": [
-        "trend",
-        "annual",
-        "occupancy"
-      ],
-      "section": "cre",
-      "cre_subcategory": null,
-      "id": "a5254dd8",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
+      "fetched_at": 1778147544344
     },
     {
       "source_id": "bisnow",
@@ -441,11 +405,11 @@
       "section": "cre",
       "cre_subcategory": null,
       "id": "73f429d7",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
+      "title_zh": "气候高风险区 CRE 估值因保险成本飙涨折让16.9%",
+      "summary_zh": "First Street 研究显示，飓风、野火等气候敏感市场 CRE 价值较低风险区低16.9%；2017-2024年保险成本 CAGR 达14.3%，multifamily 单户保险费用从$286飙至$879，严重侵蚀 NOI",
+      "importance": 5,
+      "impact": "short-neg",
+      "fetched_at": 1778147544344
     },
     {
       "source_id": "bisnow",
@@ -457,30 +421,29 @@
         "deals"
       ],
       "region": "national",
-      "title": "Ideaya Biosciences Expanding Into 80K SF In South San Francisco",
-      "link": "https://www.bisnow.com/san-francisco/news/life-sciences/ideaya-biosciences-expanding-80k-sf-south-san-francisco-134468",
-      "description": "News Ideaya Biosciences Expanding Into 80K SF In South San Francisco San Francisco Life Sciences View count: San Francisco Life Sciences May 06, 2026 | 8:29 p.m. ET Rob Sabo, Bisnow Google Maps 5000 Shoreline Court Clinical-stage cancer research company Ideaya Biosciences increased its footprint in South San Francisco with a 25K SF lease expansion at 5000 Shoreline Court. In June 2023, Ideaya leased 44K SF at the property owned by DivcoWest , which acquired the vacant 140K SF waterfront building at Sierra Point a year earlier and began converting it into laboratory space. Ideaya originally leased space on the first and third floors, and in 2024, it added 11,300 SF in a lease commencing in January 2025. Ideaya's most recent expansion takes a portion of available space on the second floor as well, according to documents filed with the Securities and Exchange Commission. Ideaya plans to occupy office and lab space on the second floor on March 1, 2027, following completion of tenant improvements. The first-year monthly rental rate for the expansion is $5.35 per SF, rolling to $5.50 per SF in Year 7 for an annualized payment of just under $2M in 2034. Lease terms include an option for expansion on the second floor. Ahead of its move into the new space, Ideaya Bio will take an additional 10,600 SF of temporary office space on the first floor, along with 2,600 SF of flex space, while DivcoWest begins tenant improvements. The San Francisco-based real estate investment firm said it would contribute $6.8M to TI work. DivcoWest purchased the former Johnson Johnson facility at 5000 Shoreline Court for $165M, the San Francisco Business Times reported . In repositioning the asset into Class-A lab and office space, DivcoWest outfitted the building with a new 1,200-kilowatt generator system, upgraded electrical systems to accommodate 4,000 amps of power delivery, and replaced rooftop mechanical systems. Ideaya's lease continues a trend of smaller deals being inked for lab and office space in the Bay Area . In the first quarter, average lease size in the Bay Area’s life sciences market was just under 20K SF, a 28.5% decline from the market’s five-year average lease size of nearly 28K SF , according to Newmark . Contact Rob Sabo at rob.sabo@bisnow.com Related Topics: DivcoWest , Johnson Johnson",
-      "published_at": 1778105185000,
-      "score": 18,
+      "title": "Nvidia, Manufacturer To Build 3 U.S. Plants To Support Data Centers",
+      "link": "https://www.bisnow.com/national/news/industrial/nvidia-partners-on-us-data-center-material-manufacturing-facilities-134455",
+      "description": "News Nvidia, Manufacturer To Build 3 U.S. Plants To Support Data Centers National Industrial View count: National Industrial May 06, 2026 | 1:39 p.m. ET Emily Wishingrad, Washington, D.C. Chip giant Nvidia is partnering with Corning, a manufacturer of connectivity equipment used in data centers, to create U.S. facilities where Corning can produce its transmission materials. Pixabay/Lucent_Designs_dinoson20 The partnership plans to build three new manufacturing facilities in North Carolina and Texas, the companies announced Wednesday . The new facilities would allow Corning to multiply its U.S.-based manufacturing capacity of optical connectivity equipment by 10 and expand its U.S. fiber production capacity by more than 50%. The companies didn't disclose the size of the planned developments or where they would be located in those states. But they said the three facilities would create more than 3,000 “high-paying jobs.” In the release, Nvidia founder and CEO Jensen Huang said artificial intelligence is creating a “once-in-a-generation opportunity to reinvigorate American manufacturing and supply chains.” “What NVIDIA is doing is nothing short of extraordinary, not just for the future of artificial intelligence, but for the American advanced manufacturing workforce,” Corning CEO Wendell Weeks said. “This partnership is proof that AI is not just a technology story. It is a manufacturing story, and it is happening here in the United States.” In January, Corning reached a deal with Meta , worth up to $6B, to supply the tech giant's North Carolina data centers with its connectivity technology. The supply deal came after Corning announced in October it planned to expand its plant in Hickory, North Carolina, with an investment of between $170M and $268M. Corning's stock price surged after Wednesday's announcement, up more than 13% as of 1:20 p.m. ET, and Nvidia's was up 4%. Nvidia, the world's largest company by market cap at $4.97T, supplies the majority of the world's data center chips. Over the past year, it has been dipping into other segments of the AI and data center infrastructure world through partnerships. The company this week partnered with PulteGroup and a San Francisco-based startup on a strategy to install small data center “nodes” on commercial and residential properties. In January, Nvidia announced a partnership with pharmaceutical company Eli Lilly to build an AI-powered laboratory in South San Francisco, with plans to spend $1B on infrastructure and talent over five years. And in September, the company announced it was making a $100B equity infusion into OpenAI to support its plan to build out facilities for at least 10 gigawatts of AI computing capacity. Contact Emily Wishingrad at emily.wishingrad@bisnow.com Related Topics: data center , Eli Lilly , Nvidia , PulteGroup , OpenAI , Corning",
+      "published_at": 1778080830000,
+      "score": 13,
       "tags": [
         "deals",
-        "office",
-        "california",
-        "trend",
-        "earnings"
+        "data-center",
+        "industrial",
+        "texas",
+        "california"
       ],
       "heat_signals": [
-        "trend",
-        "annual"
+        "texas"
       ],
       "section": "cre",
-      "cre_subcategory": null,
-      "id": "2722c105",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
+      "cre_subcategory": "数据中心",
+      "id": "ceb807b7",
+      "title_zh": "Nvidia 联手 Corning 在美建3座工厂，数据中心供应链本土化提速",
+      "summary_zh": "Nvidia 与 Corning 计划在 North Carolina 和 Texas 新建3座制造设施，光学连接设备产能扩10倍、光纤产能增50%以上，创造3000+高薪岗位，AI 驱动制造业回流",
+      "importance": 5,
+      "impact": "long-pos",
+      "fetched_at": 1778147544344
     },
     {
       "source_id": "bisnow",
@@ -511,75 +474,11 @@
       "section": "cre",
       "cre_subcategory": null,
       "id": "f3b12f56",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
-    },
-    {
-      "source_id": "bisnow",
-      "source_name": "Bisnow",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Nvidia, Manufacturer To Build 3 U.S. Plants To Support Data Centers",
-      "link": "https://www.bisnow.com/national/news/industrial/nvidia-partners-on-us-data-center-material-manufacturing-facilities-134455",
-      "description": "News Nvidia, Manufacturer To Build 3 U.S. Plants To Support Data Centers National Industrial View count: National Industrial May 06, 2026 | 1:39 p.m. ET Emily Wishingrad, Washington, D.C. Chip giant Nvidia is partnering with Corning, a manufacturer of connectivity equipment used in data centers, to create U.S. facilities where Corning can produce its transmission materials. Pixabay/Lucent_Designs_dinoson20 The partnership plans to build three new manufacturing facilities in North Carolina and Texas, the companies announced Wednesday . The new facilities would allow Corning to multiply its U.S.-based manufacturing capacity of optical connectivity equipment by 10 and expand its U.S. fiber production capacity by more than 50%. The companies didn't disclose the size of the planned developments or where they would be located in those states. But they said the three facilities would create more than 3,000 “high-paying jobs.” In the release, Nvidia founder and CEO Jensen Huang said artificial intelligence is creating a “once-in-a-generation opportunity to reinvigorate American manufacturing and supply chains.” “What NVIDIA is doing is nothing short of extraordinary, not just for the future of artificial intelligence, but for the American advanced manufacturing workforce,” Corning CEO Wendell Weeks said. “This partnership is proof that AI is not just a technology story. It is a manufacturing story, and it is happening here in the United States.” In January, Corning reached a deal with Meta , worth up to $6B, to supply the tech giant's North Carolina data centers with its connectivity technology. The supply deal came after Corning announced in October it planned to expand its plant in Hickory, North Carolina, with an investment of between $170M and $268M. Corning's stock price surged after Wednesday's announcement, up more than 13% as of 1:20 p.m. ET, and Nvidia's was up 4%. Nvidia, the world's largest company by market cap at $4.97T, supplies the majority of the world's data center chips. Over the past year, it has been dipping into other segments of the AI and data center infrastructure world through partnerships. The company this week partnered with PulteGroup and a San Francisco-based startup on a strategy to install small data center “nodes” on commercial and residential properties. In January, Nvidia announced a partnership with pharmaceutical company Eli Lilly to build an AI-powered laboratory in South San Francisco, with plans to spend $1B on infrastructure and talent over five years. And in September, the company announced it was making a $100B equity infusion into OpenAI to support its plan to build out facilities for at least 10 gigawatts of AI computing capacity. Contact Emily Wishingrad at emily.wishingrad@bisnow.com Related Topics: data center , Eli Lilly , Nvidia , PulteGroup , OpenAI , Corning",
-      "published_at": 1778080830000,
-      "score": 13,
-      "tags": [
-        "deals",
-        "data-center",
-        "industrial",
-        "texas",
-        "california"
-      ],
-      "heat_signals": [
-        "texas"
-      ],
-      "section": "cre",
-      "cre_subcategory": "数据中心",
-      "id": "ceb807b7",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
-    },
-    {
-      "source_id": "trd-national",
-      "source_name": "The Real Deal (National)",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Boston-area university sells half of its campus for luxury development",
-      "link": "https://therealdeal.com/national/boston/2026/05/06/boston-area-school-sells-campus-for-luxury-development/",
-      "description": "A pair of real estate developers is taking advantage of a Boston-area college’s desire to consolidate and raise cash. AvalonBay Communities and Winn Development Company scored approval from local officials for a 340-unit luxury housing project on the south campus of Salem State University, a public college located roughly 16 miles north of Boston, the Boston Business Journal reported . The agreement to sell the property to the developers was reached two years ago, but remains contingent on a few factors. The purchase price was not disclosed by the school. It is set to become public when the sale closes. “The sale of South Campus allows the university to focus on a smaller footprint, alleviating some operational costs associated with deferred maintenance and outdated facilities,” university officials said in a statement. The luxury multifamily development, dubbed Avalon Salem and set to unfold at 8 Harrison Road, is only the first phase of the broader Forest River Residences project, which is expected to include another 145 units on the campus site. The subsequent phase will involve a mix of new construction and repurposing of existing buildings. SIGN UP The 23-acre lot will also include more than 500 parking spaces. The approval process dates back to a plan announced by the school last spring to sell its south campus and shift all of its classes north. The sale of the campus cancels more than $50 million in deferred maintenance and operational costs. The school intends to complete its campus consolidation by fall 2027. Construction on the luxury housing is expected to begin this summer, though the school will maintain ownership of the site until all classes are moved to the other part of the campus. Proximity to schools has long been of interest to developers in the Boston area, whether for student use or otherwise. Controversial landlord Alpha Management recently acquired a handful of off-campus housing properties in Boston’s Brighton neighborhood for a combined $36 million , offering close access to major universities like Boston College and Boston University. — Holden Walter-Warner Read more Commercial Boston Boston’s “most infamous landlord” still making deals",
-      "published_at": 1778099490000,
-      "score": 12,
-      "tags": [
-        "deals",
-        "multifamily",
-        "landlord"
-      ],
-      "heat_signals": [],
-      "section": "cre",
-      "cre_subcategory": null,
-      "id": "102a7231",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
+      "title_zh": "Bronx 恶房东被罚$31M，Fannie Mae 启动法拍、市府介入重组",
+      "summary_zh": "Karan Singh 及 Rajmattie Persaud 因近2000项违规被判$31M 罚款，$900K 账户冻结；Fannie Mae 去年已因$61.5M 贷款违约启动 foreclosure，市府任命 CRO 主导500户修复",
+      "importance": 4,
+      "impact": "short-neg",
+      "fetched_at": 1778147544344
     },
     {
       "source_id": "bisnow",
@@ -605,73 +504,112 @@
       "section": "cre",
       "cre_subcategory": "办公",
       "id": "98f396df",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
+      "title_zh": "White & Case 承租 Grosvenor DC 整栋办公楼94%面积，196K SF 租约落地",
+      "summary_zh": "律所 White & Case 签约承租 Grosvenor 旗下1701 Pennsylvania Ave NW 共12层196K SF，占楼宇总面积94%，触发$200M+级翻新工程，2029年入驻，标志 DC office 市场大型律所搬迁潮延续",
+      "importance": 4,
+      "impact": "long-pos",
+      "fetched_at": 1778147544344
     },
     {
-      "source_id": "pere-news",
-      "source_name": "PERE News",
-      "source_tier": "B",
-      "source_weight": 10,
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
       "source_tags": [
-        "institutional",
-        "deals",
-        "trend"
+        "mixed-asset",
+        "deals"
       ],
       "region": "national",
-      "title": "Private real estate’s compensation recovery gathers steam",
-      "link": "https://www.perenews.com/private-real-estates-compensation-recovery-gathers-steam/",
-      "description": "In 2025, industry professionals saw median remuneration gains in all but one category, according to Sousou Partners and PERE’s latest compensation survey.",
-      "published_at": 1778029245000,
-      "score": 12,
+      "title": "Ideaya Biosciences Expanding Into 80K SF In South San Francisco",
+      "link": "https://www.bisnow.com/san-francisco/news/life-sciences/ideaya-biosciences-expanding-80k-sf-south-san-francisco-134468",
+      "description": "News Ideaya Biosciences Expanding Into 80K SF In South San Francisco San Francisco Life Sciences View count: San Francisco Life Sciences May 06, 2026 | 8:29 p.m. ET Rob Sabo, Bisnow Google Maps 5000 Shoreline Court Clinical-stage cancer research company Ideaya Biosciences increased its footprint in South San Francisco with a 25K SF lease expansion at 5000 Shoreline Court. In June 2023, Ideaya leased 44K SF at the property owned by DivcoWest , which acquired the vacant 140K SF waterfront building at Sierra Point a year earlier and began converting it into laboratory space. Ideaya originally leased space on the first and third floors, and in 2024, it added 11,300 SF in a lease commencing in January 2025. Ideaya's most recent expansion takes a portion of available space on the second floor as well, according to documents filed with the Securities and Exchange Commission. Ideaya plans to occupy office and lab space on the second floor on March 1, 2027, following completion of tenant improvements. The first-year monthly rental rate for the expansion is $5.35 per SF, rolling to $5.50 per SF in Year 7 for an annualized payment of just under $2M in 2034. Lease terms include an option for expansion on the second floor. Ahead of its move into the new space, Ideaya Bio will take an additional 10,600 SF of temporary office space on the first floor, along with 2,600 SF of flex space, while DivcoWest begins tenant improvements. The San Francisco-based real estate investment firm said it would contribute $6.8M to TI work. DivcoWest purchased the former Johnson Johnson facility at 5000 Shoreline Court for $165M, the San Francisco Business Times reported . In repositioning the asset into Class-A lab and office space, DivcoWest outfitted the building with a new 1,200-kilowatt generator system, upgraded electrical systems to accommodate 4,000 amps of power delivery, and replaced rooftop mechanical systems. Ideaya's lease continues a trend of smaller deals being inked for lab and office space in the Bay Area . In the first quarter, average lease size in the Bay Area’s life sciences market was just under 20K SF, a 28.5% decline from the market’s five-year average lease size of nearly 28K SF , according to Newmark . Contact Rob Sabo at rob.sabo@bisnow.com Related Topics: DivcoWest , Johnson Johnson",
+      "published_at": 1778105185000,
+      "score": 18,
       "tags": [
-        "institutional",
         "deals",
+        "office",
+        "california",
         "trend",
-        "mixed-asset"
+        "earnings"
       ],
-      "heat_signals": [],
-      "section": "institutional",
-      "id": "6285443a",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
+      "heat_signals": [
+        "trend",
+        "annual"
+      ],
+      "section": "cre",
+      "cre_subcategory": null,
+      "id": "2722c105",
+      "title_zh": "Ideaya Biosciences 扩租 South San Francisco 80K SF 生命 science 空间",
+      "summary_zh": "癌症研究公司 Ideaya 在 DivcoWest 旗下 Sierra Point 物业累计承租约80K SF，首年租金$5.35/SF，2034年年化租金近$2M，显示 Bay Area 生命 science 租赁需求韧性",
       "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778146274794
+      "impact": "long-pos",
+      "fetched_at": 1778147544344
     },
     {
-      "source_id": "pere-news",
-      "source_name": "PERE News",
-      "source_tier": "B",
-      "source_weight": 10,
+      "source_id": "trd-national",
+      "source_name": "The Real Deal (National)",
+      "source_tier": "A",
+      "source_weight": 8,
       "source_tags": [
-        "institutional",
-        "deals",
-        "trend"
+        "mixed-asset",
+        "deals"
       ],
       "region": "national",
-      "title": "Berkshire Global: Real estate M&#038;A sees a temporary changing of the guard",
-      "link": "https://www.perenews.com/berkshire-global-real-estate-ma-sees-a-temporary-changing-of-the-guard/",
-      "description": "Non-alts buyers are stepping into the breach as large, publicly traded investment managers take a breather, according to Drew Murphy, partner and head of the private markets advisory practice at Berkshire Global Advisors.",
-      "published_at": 1778029212000,
+      "title": "Boston-area university sells half of its campus for luxury development",
+      "link": "https://therealdeal.com/national/boston/2026/05/06/boston-area-school-sells-campus-for-luxury-development/",
+      "description": "A pair of real estate developers is taking advantage of a Boston-area college’s desire to consolidate and raise cash. AvalonBay Communities and Winn Development Company scored approval from local officials for a 340-unit luxury housing project on the south campus of Salem State University, a public college located roughly 16 miles north of Boston, the Boston Business Journal reported . The agreement to sell the property to the developers was reached two years ago, but remains contingent on a few factors. The purchase price was not disclosed by the school. It is set to become public when the sale closes. “The sale of South Campus allows the university to focus on a smaller footprint, alleviating some operational costs associated with deferred maintenance and outdated facilities,” university officials said in a statement. The luxury multifamily development, dubbed Avalon Salem and set to unfold at 8 Harrison Road, is only the first phase of the broader Forest River Residences project, which is expected to include another 145 units on the campus site. The subsequent phase will involve a mix of new construction and repurposing of existing buildings. SIGN UP The 23-acre lot will also include more than 500 parking spaces. The approval process dates back to a plan announced by the school last spring to sell its south campus and shift all of its classes north. The sale of the campus cancels more than $50 million in deferred maintenance and operational costs. The school intends to complete its campus consolidation by fall 2027. Construction on the luxury housing is expected to begin this summer, though the school will maintain ownership of the site until all classes are moved to the other part of the campus. Proximity to schools has long been of interest to developers in the Boston area, whether for student use or otherwise. Controversial landlord Alpha Management recently acquired a handful of off-campus housing properties in Boston’s Brighton neighborhood for a combined $36 million , offering close access to major universities like Boston College and Boston University. — Holden Walter-Warner Read more Commercial Boston Boston’s “most infamous landlord” still making deals",
+      "published_at": 1778099490000,
       "score": 12,
       "tags": [
-        "institutional",
         "deals",
-        "trend",
-        "mixed-asset"
+        "multifamily",
+        "landlord"
       ],
       "heat_signals": [],
-      "section": "institutional",
-      "id": "adf4c042",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
+      "section": "cre",
+      "cre_subcategory": null,
+      "id": "102a7231",
+      "title_zh": "AvalonBay 与 Winn 获批开发 Salem State University 南校区340户 luxury 公寓",
+      "summary_zh": "开发商获 Boston 近郊 Salem State University 南校区23英亩地块开发权，首阶段340户 luxury multifamily，后续追加145户；校方借此削减$5000万+递延维护成本",
       "importance": 3,
+      "impact": "long-pos",
+      "fetched_at": 1778147544344
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Ted Turner, Who Left A Mark On Downtown Atlanta CRE, Dies At 87",
+      "link": "https://www.bisnow.com/atlanta/news/neighborhood/while-a-media-mogul-ted-turner-also-made-his-downtown-atlanta-cre-mark-134464",
+      "description": "News Ted Turner, Who Left A Mark On Downtown Atlanta CRE, Dies At 87 Atlanta Neighborhood View count: Atlanta May 06, 2026 | 6:02 p.m. ET Jarred Schenke, Atlanta While a commercial real estate legend created one of the icons of Downtown Atlanta’s skyline, it took a media mogul to save it. Wikimedia Commons/INTX: The Internet & Television Expo Ted Turner speaking at The Internet & Television Expo in 2000 Ted Turner, the Turner Broadcasting founder, former Atlanta Braves owner and creator of the 24-hour cable news cycle, died May 6 at 87. He had been diagnosed with Lewy body dementia . While Turner never built any commercial real estate, he was a property owner and his impact on the Atlanta skyline was undeniable, having saved an ailing Omni International complex Downtown. He bought a majority stake in the 1.2M SF property from its developer and owner, Cousins Properties, in 1985 and turned it into an international media hub for CNN, complete with the iconic sign that was out front until just a few years ago. “His footprint here was incredibly impressive. He didn’t build CNN Center, but his occupancy at that time really created a destination place that lasted for many years,” Central Atlanta Progress President A.J. Robinson said. “The sign says it all. That iconic sign was kind of branded CNN and kind of branded Downtown.” Cousins founder Tom Cousins completed the Omni complex in 1972 for $76M as a sort of city-within-a-city project , which included a hotel, offices, restaurants, shops and an ice skating rink. It was also home to an indoor amusement park known as The World of Sid Marty Krofft, based on the 1970s children's television pioneering duo’s creations, such as Land of the Lost and Sigmund and the Sea Monsters . But the Omni complex was never able to buck the trend of ailing urban centers as Americans, including Atlantans, fled for the suburbs. And by 1976, the Sid Marty Krofft amusement park closed down due to dwindling attendance, leaving Cousins and a partner with a $20M loss. The developer staved off foreclosure for years before Turner stepped in. Five years after launching CNN and soon after its spinoff, Headline News, Turner negotiated to take a majority ownership of the complex in 1985 as headquarters for his media empire. Turner sold the property in 1988 for $170M, nearly three times the initial purchase price, the LA Times reported at the time . Aside from being the nexus of his cable news empire, Turner also outfitted CNN Center with his own private residence at the top. Wikimedia Commons/Connor.carey One CNN Center, the longtime home of WarnerMedia's CNN After selling his cable news empire to Time Warner — and losing control of CNN when Time Warner and AOL merged in 2010, what he said was his biggest business regret — Turner bought the historic Bona Allen Building at the corner of Ted Turner Drive and Spring Street and made it the home of Turner Enterprises and Ted’s Montana Grill corporate offices. Turner also lived on the top penthouse floor of the building, with views of CNN Center. “I live on top of my office. I had to buy the building on Luckie Street because after my disastrous merger with Time Warner, where I lost 80% of what I had, I needed some good luck,” Turner told the Buckhead Coalition in 2015, as reported by REBusiness Online . “I’m the only chain restaurant owner in the country who lives in the restaurant. That’s the way they used to do it.” Turner installed a solar array atop the parking deck next to his building at 133 Luckie St., saving 20% of Turner Building’s annual power needs, according to Turner Enterprises. Robinson said it wasn’t uncommon to see Turner walking around Downtown during that time. “It’s rare that you have someone who has more than multiple businesses Downtown and also lived partially Downtown. I can’t think of anyone else who would check that box,” he said. CNN Center now has new ownership , and the news organization has moved out of Downtown to Midtown Atlanta and New Yo",
+      "published_at": 1778100194000,
+      "score": 21,
+      "tags": [
+        "deals",
+        "office",
+        "hotel",
+        "trend",
+        "landlord"
+      ],
+      "heat_signals": [
+        "trend",
+        "annual",
+        "occupancy"
+      ],
+      "section": "cre",
+      "cre_subcategory": null,
+      "id": "a5254dd8",
+      "title_zh": "媒体大亨 Ted Turner 逝世，曾拯救 Atlanta Downtown 地标 CNN Center",
+      "summary_zh": "Ted Turner 于5月6日去世，享年87岁；1985年购入 Omni International 综合体并打造 CNN 总部，对 Atlanta Downtown CRE 影响深远但属历史回顾",
+      "importance": 2,
       "impact": "neutral",
-      "fetched_at": 1778146274794
+      "fetched_at": 1778147544344
     },
     {
       "source_id": "pere-news",
@@ -699,11 +637,73 @@
       "extended_window": true,
       "section": "institutional",
       "id": "c710edfd",
-      "title_zh": "",
-      "summary_zh": "（摘要生成失败）",
+      "title_zh": "TPG 启动房地产大规模募资周期，四支基金同步推进",
+      "summary_zh": "TPG 正为3支地产基金募资并计划下月推出第4支新工具，头部另类资管机构 real estate fundraising 活跃度显著回升",
+      "importance": 4,
+      "impact": "long-pos",
+      "fetched_at": 1778147544344
+    },
+    {
+      "source_id": "pere-news",
+      "source_name": "PERE News",
+      "source_tier": "B",
+      "source_weight": 10,
+      "source_tags": [
+        "institutional",
+        "deals",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Private real estate’s compensation recovery gathers steam",
+      "link": "https://www.perenews.com/private-real-estates-compensation-recovery-gathers-steam/",
+      "description": "In 2025, industry professionals saw median remuneration gains in all but one category, according to Sousou Partners and PERE’s latest compensation survey.",
+      "published_at": 1778029245000,
+      "score": 12,
+      "tags": [
+        "institutional",
+        "deals",
+        "trend",
+        "mixed-asset"
+      ],
+      "heat_signals": [],
+      "section": "institutional",
+      "id": "6285443a",
+      "title_zh": "2025年私募地产薪酬复苏，中位数全类别普涨仅一类例外",
+      "summary_zh": "Sousou Partners 与 PERE 联合调查显示，private real estate 从业者2025年薪酬中位数几乎所有类别均回升，行业 compensation recovery 势头确立",
+      "importance": 3,
+      "impact": "long-pos",
+      "fetched_at": 1778147544344
+    },
+    {
+      "source_id": "pere-news",
+      "source_name": "PERE News",
+      "source_tier": "B",
+      "source_weight": 10,
+      "source_tags": [
+        "institutional",
+        "deals",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Berkshire Global: Real estate M&#038;A sees a temporary changing of the guard",
+      "link": "https://www.perenews.com/berkshire-global-real-estate-ma-sees-a-temporary-changing-of-the-guard/",
+      "description": "Non-alts buyers are stepping into the breach as large, publicly traded investment managers take a breather, according to Drew Murphy, partner and head of the private markets advisory practice at Berkshire Global Advisors.",
+      "published_at": 1778029212000,
+      "score": 12,
+      "tags": [
+        "institutional",
+        "deals",
+        "trend",
+        "mixed-asset"
+      ],
+      "heat_signals": [],
+      "section": "institutional",
+      "id": "adf4c042",
+      "title_zh": "大型上市资管 M&A 暂歇，非另类买家趁机补缺",
+      "summary_zh": "Berkshire Global 指出公开交易大型投资经理暂停并购之际，non-alts 买家介入填补真空，real estate M&A 市场出现阶段性买方结构转换",
       "importance": 3,
       "impact": "neutral",
-      "fetched_at": 1778146274794
+      "fetched_at": 1778147544344
     }
   ],
   "errors": []
