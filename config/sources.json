@@ -117,6 +117,24 @@
       "region": "florida"
     },
     {
+      "id": "google-news-sunbelt",
+      "name": "Google News — Sun Belt Housing Market",
+      "url": "https://news.google.com/rss/search?q=%22housing+market%22+(Phoenix+OR+Tampa+OR+Atlanta+OR+Charlotte+OR+Nashville+OR+%22Las+Vegas%22+OR+Jacksonville+OR+Orlando+OR+Raleigh+OR+Memphis)&hl=en-US&gl=US&ceid=US:en",
+      "tier": "D",
+      "tags": ["sunbelt", "data"],
+      "weight": 7,
+      "region": "sunbelt"
+    },
+    {
+      "id": "nahb-eyeonhousing",
+      "name": "NAHB Eye on Housing",
+      "url": "https://eyeonhousing.org/feed/",
+      "tier": "B",
+      "tags": ["data", "trend", "policy"],
+      "weight": 8,
+      "region": "national"
+    },
+    {
       "id": "calculated-risk",
       "name": "Calculated Risk (Bill McBride)",
       "url": "https://feeds.feedburner.com/CalculatedRisk",

@@ -451,8 +451,8 @@ const SECTIONS = [
 
 const RE_BTR = /\b(btr|build[-\s]?to[-\s]?rent|sfr|single[-\s]?family\s+rental|invitation\s+homes|american\s+homes\s+4\s+rent|tricon|pretium|progress\s+residential|home\s+partners|nrhc|rental\s+home\s+council)\b/i;
 const RE_INST = /\b(blackstone|kkr|brookfield|starwood|tpg|pgim|nuveen|cohen\s*(?:&|and)\s*steers|principal\s+real\s+estate|pere|fundraising|fundraise|major\s+fundraising|capital\s+raise|lp\s+commitment|gp\s+stake|reit\s+ipo|secondary\s+sale|continuation\s+vehicle|allocator|institutional\s+investor|private\s+real\s+estate)\b/i;
-const RE_SUNBELT = /\b(texas|houston|dallas|fort\s+worth|dfw|austin|san\s+antonio|phoenix|arizona|atlanta|georgia|charlotte|nashville|tennessee|tampa|miami|orlando|jacksonville|florida|raleigh|charleston|sun\s*belt|sunbelt)\b/i;
-const RE_RES = /\b(housing|home(?:s|owner)?|landlord|rental|rent\s|mortgage|residential|multifamily|apartment|single[-\s]?family)\b/i;
+const RE_SUNBELT = /\b(texas|houston|dallas|fort\s+worth|dfw|austin|san\s+antonio|phoenix|arizona|atlanta|georgia|charlotte|nashville|tennessee|tampa|miami|orlando|jacksonville|florida|raleigh|charleston|las\s+vegas|nevada|memphis|birmingham|mobile|pensacola|new\s+orleans|louisiana|sun\s*belt|sunbelt)\b/i;
+const RE_RES = /\b(housing|home(?:s|owner|builder|buyer|seller|loan|equity)?|condo(?:minium)?s?|townhomes?|townhouses?|co-?op|HOA|landlord|rental|rent\s|mortgage|residential|multifamily|apartment|single[-\s]?family|new\s+home|existing\s+home)\b/i;
 const RE_CRE = /\b(industrial|office|data\s+center|warehouse|warehousing|logistics\s+center|sf\s+industrial|sf\s+office|sf\s+lease|commercial\s+real\s+estate|\bcre\b|class\s+a\s+office|cap\s+rate|headquarters|\bhq\b|academic\s+project|life\s+sciences|retail\s+center|\bretail\b|hotel|hospitality|lodging|multifamily|apartment\s+(?:building|community)|rental\s+market|landlords?|rental\s+(?:property|properties|portfolio|housing|losses))\b/i;
 const HOMEBUILDER_RE = /\b(homebuilder|home\s+builder|starts\s+sales|new\s+homes\s+at|townhomes?|breaks\s+ground|grand\s+opening)\b/i;
 const TITLE_CRE = /\b(industrial|office|data\s+center|warehouse|warehousing|logistics|\bhq\b|headquarters|hotel|hospitality|retail\s+center|life\s+sciences)\b/i;
@@ -668,8 +668,17 @@ async function summarizeBatch(items, opts) {
   const prompt = `给每条新闻产出 4 字段 {i, t, s, imp, dir}：
 - t: 中文译标（≤ 30 中文字符），中文语序重组
 - s: 一句中文摘要（≤ 60 中文字符），必须给结论 / 数字 / 立场
-- imp: 1-5 整数（重要性）
+- imp: 1-5 整数（重要性 — 见下方 imp 评分细则）
 - dir: long-pos / short-pos / neutral / short-neg / long-neg
+
+【imp 评分细则 — 必须严格分级，禁止全部 3】
+imp=5：systemic / 大型基金巨额募资 / 头部 REIT 财报或违约 / Fed 降息加息 / 联邦立法重大变动 / 新出炉的关键宏观数据（CPI / 就业 / 房价指数）
+imp=4：行业中等动作 — 单 deal $200M+ / 大型 IPO 或并购 / Sun Belt 关键 metro 房市拐点信号 / 重要监管政策更新
+imp=3：常规动态 — 单 deal $50-200M / 区域市场月度趋势 / 中型公司业绩 / 政策细节
+imp=2：花絮性动作 — 个人公司任命 / 设计趋势 / 小型扩张 / 已知信息的不同角度报道
+imp=1：边缘信息 — 单 unit listing / 单 broker 新闻 / 评论而非新闻 / 八卦
+
+20 条新闻里：必须有 ≥ 2 条 imp=5、≥ 4 条 imp=4，≤ 5 条 imp ≤ 2。否则视为评分失败。如果今天确实没有大新闻，宁可降低高分数量也不要全 3。
 
 【中英文混排示例（必须严格仿照这种风格输出）】
 输入: "Mortgage rates hit the highest level in a month, causing first-time homebuyers to drop out"
@@ -949,6 +958,20 @@ async function main() {
     withSummary = await summarizeBatch(top, { endpoint: llmEndpoint, apiKey: llmKey, model: llmModel });
     log(`🤖 LLM ok`);
   }
+
+  // 7.5 importance-aware 重排：section 内按 weighted_score = importance * 5 + score * 0.5 降序
+  // LLM 给的 importance 与系统 score 共同决定最终展示顺序，让真正重要的新闻浮到 section 顶部
+  const _sectionOrder = SECTIONS.map(s => s.id);
+  withSummary.sort((a, b) => {
+    const sa = _sectionOrder.indexOf(a.section);
+    const sb = _sectionOrder.indexOf(b.section);
+    if (sa !== sb) return sa - sb;
+    const wa = (a.importance || 3) * 5 + (a.score || 0) * 0.5;
+    const wb = (b.importance || 3) * 5 + (b.score || 0) * 0.5;
+    return wb - wa;
+  });
+  const impDist = withSummary.reduce((acc, it) => { acc[it.importance || 3] = (acc[it.importance || 3] || 0) + 1; return acc; }, {});
+  log(`📊 importance dist: ${JSON.stringify(impDist)}`);
 
   // 8. 写出
   const date = new Date(now).toISOString().slice(0, 10);

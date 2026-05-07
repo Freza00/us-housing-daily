@@ -286,20 +286,6 @@
     "shown_date": "2026-05-07"
   },
   {
-    "url": "https://www.cnbc.com/video/2026/05/06/watch-cnbcs-full-interview-with-fhfa-director-bill-pulte.html",
-    "tokens": [
-      "watch",
-      "cnbc",
-      "full",
-      "interview",
-      "fhfa",
-      "director",
-      "bill",
-      "pulte"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
     "url": "https://www.cnbc.com/2026/05/06/this-is-what-it-costs-investors-to-stay-in-cash-and-what-to-do-instead-.html",
     "tokens": [
       "costs",
@@ -323,15 +309,29 @@
     "shown_date": "2026-05-07"
   },
   {
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSkhVV193UmFyZ3VvemVxeUxnQjJRa1FHWTd3bmU3d3dpYy12R1FYZmpkbmJIZm1yMlE5dVZkZGNxU3ZsaHpXMUZpMmZZNVJtdnpjU0lsSC1ZRDhkb1hJRG1FeXhNaGRqdHRCdzd3d0N5Q3dGQVFDLWlueWNqX1RTdHM0M1NiaDlLcnNrQWNpWlY1VGFhSEx2RFpNRm4?oc=5",
+    "url": "https://www.cnbc.com/video/2026/05/06/zillow-ceo-jeremy-wacksman-affordability-is-still-a-challenge-in-the-housing-market.html",
     "tokens": [
-      "years",
-      "long",
-      "decline",
-      "drove",
-      "remax",
-      "hands",
-      "inman"
+      "zillow",
+      "jeremy",
+      "wacksman",
+      "affordability",
+      "challenge",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/05/06/watch-cnbcs-full-interview-with-fhfa-director-bill-pulte.html",
+    "tokens": [
+      "watch",
+      "cnbc",
+      "full",
+      "interview",
+      "fhfa",
+      "director",
+      "bill",
+      "pulte"
     ],
     "shown_date": "2026-05-07"
   },
@@ -349,40 +349,51 @@
     "shown_date": "2026-05-07"
   },
   {
-    "url": "https://phoenixagentmagazine.com/2026/05/01/housing-scorecard-april-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=housing-scorecard-april-2026",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNS3Y4enJtUkFBUmJBbG1RVTZsQkhOcVNCTm1QWHNDNFBTTkFoTGhmZWtSQjNGUkVnUGpRMFQ3NkNPTDVRcWZHbXJwSGZ3ZndmSVNxMWFfaThmUUh0QmhGT2taQ2NGeUNBMDNrVUJKRmkwM0x5UUNna0M1ME1mVldwMkhoTDZZSFh3MTI4Mzh0UVdIWVpFSDJMMTd3?oc=5",
     "tokens": [
-      "existing",
-      "home",
-      "sales",
-      "increase",
-      "annually",
-      "phoenix"
+      "central",
+      "florida",
+      "codes",
+      "rank",
+      "among",
+      "nation",
+      "hottest",
+      "housing",
+      "markets",
+      "business",
+      "journals"
     ],
     "shown_date": "2026-05-07"
   },
   {
-    "url": "https://www.multifamilydive.com/news/doj-georgia-apartment-company-settlement-disability-discrimination/819258/",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQcGhXSnBBeURWNzNqU3lRc2V5aTN6Si1Tb3VPd3o3MzFncV9WQVBpSWtBU0NhTEJMOG5MTlIxb0ZiVmNiUTlSQ1Z2QU0zeW9WcXhHNnRQdE8zdnpSVDZ6ZHZORXluVElCMWlaMFpoOThtRldJczVkZUdOaEJZNHNwY0JzRHVOWHZwZDFfc0k1eGlfMEVDdFV5OGR6RVlIemRFVnZyc3VnR1YzTFNMNkV5eEdwUmg2cHZHQVJlWg?oc=5",
     "tokens": [
-      "georgia",
-      "apartment",
-      "companies",
-      "$750k",
-      "federal",
-      "disability",
-      "case"
+      "vegas",
+      "volatile",
+      "housing",
+      "market",
+      "decades",
+      "long",
+      "roller",
+      "coaster",
+      "review",
+      "journal"
     ],
     "shown_date": "2026-05-07"
   },
   {
-    "url": "https://trerc.tamu.edu/blog/how-texans-can-protest-their-property-tax-appraisal/",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPajYxOFpmWHpGUE15X2VKX1pfRTVqNlEteWUtWUlMeTdvTnpLUW9xdzQ0X0V2eEZGVVhQaHlXYzlDdTg2cWtKQnVwVktmU3lGUFhvZ19LOGpWU0U4bDUzUUpfbGlKaGktUF9ncnJfM0ZFcU1pMVhkR24tMWpncS01VFJXVGtzS0FmRFNXNU8tMW9KT0dXRGhKSmtXT29FZHpz?oc=5",
     "tokens": [
-      "building",
-      "strong",
-      "case",
-      "your",
-      "property",
-      "appraisal",
-      "protest"
+      "city",
+      "council",
+      "considers",
+      "audit",
+      "atlanta",
+      "housing",
+      "help",
+      "center",
+      "civic",
+      "circle"
     ],
     "shown_date": "2026-05-07"
   },
@@ -455,18 +466,6 @@
     "shown_date": "2026-05-07"
   },
   {
-    "url": "https://www.bisnow.com/austin-san-antonio/news/hotel/hotels-key-ingredient-austins-determined-growth-134460",
-    "tokens": [
-      "developers",
-      "bullish",
-      "hotels",
-      "anchors",
-      "mixed",
-      "projects"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
     "url": "https://therealdeal.com/national/2026/05/06/colliers-branded-tic-deals-spark-state-federal-probes/",
     "tokens": [
       "colliers",
@@ -476,6 +475,18 @@
       "state",
       "federal",
       "probes"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.bisnow.com/austin-san-antonio/news/hotel/hotels-key-ingredient-austins-determined-growth-134460",
+    "tokens": [
+      "developers",
+      "bullish",
+      "hotels",
+      "anchors",
+      "mixed",
+      "projects"
     ],
     "shown_date": "2026-05-07"
   },

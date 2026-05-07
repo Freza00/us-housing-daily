@@ -6,7 +6,8 @@ const newsList = $('newsList');
 const filterbar = $('filterbar');
 const datestrip = $('datestrip');
 const updatedEl = $('updated');
-const sourcesCountEl = $('sourcesCount');
+// 注意：不要缓存 #sourcesCount DOM 引用 — applyLanguage() 会重写 #sourcesInfo 的 innerHTML，
+// 销毁原 span。每次写值时 freshly query 才能命中实时 DOM 节点。
 const refreshBtn = $('refreshBtn');
 const langSeg = $('langSeg');
 const calendarDialog = $('calendarDialog');
@@ -477,7 +478,8 @@ async function loadNews(date) {
     currentData = await r.json();
     selectedDate = currentData.date || null;
     updatedEl.textContent = formatUpdated(currentData.generated_at);
-    sourcesCountEl.textContent = `${currentData.sources_ok}/${currentData.sources_attempted}`;
+    const sc = document.getElementById('sourcesCount');
+    if (sc) sc.textContent = `${currentData.sources_ok}/${currentData.sources_attempted}`;
     applyFilter();
     renderDateStrip();
   } catch (e) {
