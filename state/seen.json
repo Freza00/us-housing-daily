@@ -1,5 +1,277 @@
 [
   {
+    "url": "https://www.nationalmortgagenews.com/news/iran-conflict-sours-real-estate-investor-sentiment-to-3-year-low",
+    "tokens": [
+      "iran",
+      "conflict",
+      "sours",
+      "investor",
+      "sentiment",
+      "year"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/articles/us-punts-on-debt-auctions-signaling-no-changes-into-2027",
+    "tokens": [
+      "punts",
+      "debt",
+      "auctions",
+      "signaling",
+      "changes",
+      "2027"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/uwm-posts-strong-q1-amid-two-harbors-battle",
+    "tokens": [
+      "posts",
+      "strong",
+      "midst",
+      "harbors",
+      "battle"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/how-fhas-new-loss-mit-rules-are-squeezing-servicers",
+    "tokens": [
+      "loss",
+      "rules",
+      "squeezing",
+      "servicers"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUWxZQ1F0YzVIZFZLaGp0VEJ0VXRrNF9wMTZzVFBRakZVV1pfQ25FY1pXczRVQ1ZlU1dRRkNydE00YXhNOVRrcjk3T2dLaWFGQlZReHRMbEMzVEtZNmxJbGdWdzJNTHhUeTdhY2oyM0puTTA5eF83V1lyazc5b2RFb1VJSDFCcFI3XzZLMzFubHpRaEVROEt0UThNRzRvVHZ1Ti1aVF80ZHo3SWJyUEdHYUhwaGRYMUtBeGoyTmYxSGQ?oc=5",
+    "tokens": [
+      "remodeling",
+      "growth",
+      "slow",
+      "sharply",
+      "early",
+      "2027",
+      "harvard",
+      "joint",
+      "center",
+      "housing",
+      "studies",
+      "inman"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.redfin.com/news/hottest-neighborhood-2026/",
+    "tokens": [
+      "land",
+      "lakes",
+      "florida",
+      "redfin",
+      "hottest",
+      "neighborhood",
+      "2026",
+      "other",
+      "places",
+      "list"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/top-female-mortgage-originators-of-2025",
+    "tokens": [
+      "female",
+      "mortgage",
+      "originators",
+      "2025"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPVmU2OVc2QV9ZN1pKV1JsdzhvTElBVldkT3lvT2xzYUkyVkNBQ1ZtT3Q4d3BQT2Q2NWRFSTlKY1VNSDhsQXVmbW41bWYwWVZKVWZnSVp5eFI5T1ZSRzNTYTV4UzJTRk1uRUpQdjRnb19jU2F0SG9wZXZkUF9pYWVkUmJVbE9VM3FKeXk0cUhDb3U1OGpPdmc0SS1zRE1HV0wydWc0eDBCRzhoeU9KR1NhMGk3Y1JpdEhwTFZN?oc=5",
+    "tokens": [
+      "mauricio",
+      "umansky",
+      "things",
+      "believe",
+      "numbers",
+      "back",
+      "inman"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://phoenixagentmagazine.com/2026/05/01/housing-scorecard-april-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=housing-scorecard-april-2026",
+    "tokens": [
+      "existing",
+      "home",
+      "sales",
+      "increase",
+      "annually",
+      "phoenix"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNa1E4cHREUnBzQWZJSXJtVWJMVFNNeUowYTZsTjVRLTRDQTZTSjFHcEl6N1dfdENkVXQxM0w4NUFQZEJ6UGlBdjNtSG1ERVFfMzJRNU91OU9sVC1mb1FZSXBuV0dwNURoNlQ1U21zZVNyMlR6bkFabVJCeDVOekV0V1I0SmlacWlDNHcwbldWMGhsSmhHaDNqRW0wSldGQWdLTGJVaw?oc=5",
+    "tokens": [
+      "charlotte",
+      "housing",
+      "market",
+      "gains",
+      "spring",
+      "momentum",
+      "yahoo",
+      "finance"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQOExNa21yeXNkMUNrTWlTNUZzSXlHQXNGaGtXSHJsVXUtcnE2ZjUySUJ2cm1VaVQzY3IyMmZ3U0tOVEk4MG9CNlUyV2xhMGpIQWZ2Sk43QU9aQWRKakZpdHZmbDQyN2hKRFNqSlphOVd4MW1hUjBGUXFJZ2pLSGs4bkZRaGRpTHJla1V2RG9kcGNJTHFCWndzUzVpcGRCdFFacDBKRVQyYUZfOWk2bDlRRWh3YUkzanhVYnNMT3dHWjVvMnh4c0tZ?oc=5",
+    "tokens": [
+      "preiss",
+      "company",
+      "chief",
+      "student",
+      "housing",
+      "market",
+      "challenges",
+      "bizwomen",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/doj-georgia-apartment-company-settlement-disability-discrimination/819258/",
+    "tokens": [
+      "georgia",
+      "apartment",
+      "companies",
+      "$750k",
+      "federal",
+      "disability",
+      "case"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.bisnow.com/london/news/student-housing/pbsa-deals-hit-21b-dominus-cheyne-capital-snag-250m-funding-134449",
+    "tokens": [
+      "dominus",
+      "cheyne",
+      "capital",
+      "snag",
+      "250",
+      "funding",
+      "student",
+      "deals"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.bisnow.com/south-florida/news/multifamily/spanish-developer-denies-allegations-fraud-breach-contract-6000-unit-housing-project-134463",
+    "tokens": [
+      "pablo",
+      "castro",
+      "denies",
+      "laura",
+      "tauber",
+      "ever",
+      "partner",
+      "000",
+      "unit",
+      "huehub",
+      "project"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://rebusinessonline.com/town-lane-gillon-property-acquire-460000-sf-retail-office-property-in-allen-texas/",
+    "tokens": [
+      "town",
+      "lane",
+      "gillon",
+      "property",
+      "acquire",
+      "460",
+      "000",
+      "retail",
+      "office",
+      "allen",
+      "texas"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://houstonagentmagazine.com/2026/05/06/spanish-language-mortgage-lender-americasa-houston-office/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=spanish-language-mortgage-lender-americasa-houston-office",
+    "tokens": [
+      "spanish",
+      "language",
+      "mortgage",
+      "lender",
+      "americasa",
+      "opens",
+      "houston",
+      "office"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.bisnow.com/philadelphia/news/economic-development/jefferson-students-market-east-134458",
+    "tokens": [
+      "proposal",
+      "jefferson",
+      "students",
+      "envisions",
+      "market",
+      "east",
+      "free",
+      "graduate",
+      "residential"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.perenews.com/private-real-estates-loss-investigation/",
+    "tokens": [
+      "private",
+      "losses",
+      "prompt",
+      "search",
+      "answers"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.perenews.com/azora-hires-former-partners-group-exec-to-lead-international-expansion/",
+    "tokens": [
+      "azora",
+      "hires",
+      "former",
+      "partners",
+      "group",
+      "exec",
+      "lead",
+      "international",
+      "expansion"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.perenews.com/david-hodes-why-chatham-they-leaned-in-heavily-on-technology/",
+    "tokens": [
+      "david",
+      "hodes",
+      "chatham",
+      "leaned",
+      "heavily",
+      "technology"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
     "url": "https://eyeonhousing.org/2026/05/slight-rise-for-open-construction-jobs-in-march/",
     "tokens": [
       "slight",
