@@ -1,11 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": null,
+  "buildCommand": "mkdir -p public/data && cp -r data/* public/data/ 2>/dev/null || true",
   "outputDirectory": "public",
   "framework": null,
-  "rewrites": [
-    { "source": "/data/:path*", "destination": "/data/:path*" }
-  ],
   "headers": [
     {
       "source": "/data/(.*)",
