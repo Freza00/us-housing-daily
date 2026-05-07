@@ -1,8 +1,8 @@
 {
   "date": "2026-05-07",
-  "generated_at": 1778142742245,
-  "sources_attempted": 30,
-  "sources_ok": 29,
+  "generated_at": 1778146211961,
+  "sources_attempted": 32,
+  "sources_ok": 32,
   "sections": [
     {
       "id": "national",
@@ -56,6 +56,113 @@
   ],
   "items": [
     {
+      "source_id": "nahb-eyeonhousing",
+      "source_name": "NAHB Eye on Housing",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "data",
+        "trend",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Slight Rise for Open Construction Jobs in March",
+      "link": "https://eyeonhousing.org/2026/05/slight-rise-for-open-construction-jobs-in-march/",
+      "description": "Slight Rise for Open Construction Jobs in March &#8211; Eye On Housing Skip to content Search Research/Data Housing Economics Plus Books Dashboards Local Data Research Studies Services Indices Team Videos Research/Data Housing Economics Plus Books Dashboards Local Data Research Studies Services Indices Team Videos Eye On Housing National Association of Home Builders Economic Research Blog Slight Rise for Open Construction Jobs in March May 6, 2026 Robert Dietz No Comments The number of open positions in the construction sector edged higher in March, per the Bureau of Labor Statistics Job Openings and Labor Turnover Survey (JOLTS) . The current level of open jobs is down measurably from three years ago due to declines in construction activity, particularly in housing. However, recent gains for nonresidential construction have not fully offset soft conditions for housing with respect to the demand for construction labor. The number of open jobs for the overall economy declined, falling from 6.92 million in February to 6.87 million in March. The March reading was down from a year ago (6.95 million) due to a cooling labor market. Previous NAHB analysis indicated that this number had to fall below eight million on a sustained basis for the Federal Reserve to move forward on interest rate reductions. With estimates remaining below eight million for national job openings, the Fed, in theory, should be able to cut further. However, this is situation is complicated by rising energy costs due to the Iran war. The number of open construction sector jobs increased for the month, rising slightly from 201,000 in February to 224,000 in March. This total was down compared to a year ago (278,000). The chart below notes the declining trend that has been in place for unfilled construction jobs since the Fed raised the federal funds rate and home building weakened. While home building employment was declining during the second half of 2025, other subsectors of the construction industry have expanded (e.g. data centers). This has produced volatility within a reduced range in the job openings series since 2024. The construction job openings rate increased to 2.6% in March, down from the 3.3% rate estimated a year ago. The layoff rate in construction declined slightly to 1.7% in March. The quits rate increased to 1.7% for the month. Job Openings and Labor Turnover Survey (JOLTS) , JOLTS Prev Previous New Home Sales Rise, Supported by Limited Existing Inventory Next State-Level Employment Situation: March 2026 Next Leave a Reply Cancel reply Your email address will not be published. Required fields are marked * Comment * Name * Email * Website Yes, add me to your mailing list Share this Page Subscribe to Blog Subscribe Search by Category Construction Statistics Finance Home Sales and Prices Labor Force Macroeconomics Market Trends Policy Research Construction Statistics Finance Home Sales and Prices Labor Force Macroeconomics Market Trends Policy Research Video Updates View Economics Team on the Road To schedule a presentation for your group email econ@nahb.org. Housing Economics Plus Become a Plus subscriber today to view NAHB&#8217;s premium economic content: Industry Forecasts Housing Statistics Exclusive Webinars National Updates Sponsors © 2026 NAHB. All Rights Reserved. NAHB.org Facebook-f Linkedin-in Instagram Youtube X-twitter Contact Us: econ@nahb.org Subscribe Please leave this field empty Subscribe to Blog via Email Email Frequency * Instant Daily Weekly Check your inbox or spam folder to confirm your subscription. Construction Statistics Single-Family Multifamily Remodeling Labor Force Construction Wages Employment Data Job Openings Finance Builder Loans Consumer Finance Mortgages Home Sales and Prices Housing Affordability Housing Prices Housing Sales Macroeconomics Federal Reserve GDP Inflation Market Trends Housing Characteristics Housing Demand Industry Demographics Policy Research Building Materials Homeownership Tax Policy Local Dat",
+      "published_at": 1778071020000,
+      "score": 30,
+      "tags": [
+        "data",
+        "trend",
+        "policy",
+        "data-center",
+        "multifamily",
+        "housing",
+        "macro",
+        "rates",
+        "deals",
+        "regulator"
+      ],
+      "heat_signals": [
+        "fed",
+        "inflation",
+        "new home sales",
+        "forecast",
+        "trend",
+        "trends",
+        "new home sales"
+      ],
+      "section": "national",
+      "id": "0359eaad",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Compass International Holdings names president of integrated services",
+      "link": "https://www.housingwire.com/articles/compass-perkins-integrated-services/",
+      "description": "Compass International Holdings has appointed a longtime executive to lead its integrated services division. Cory Perkins will oversee the unit, which focuses on combining services such as title, escrow and other transaction support into a more unified platform. The appointment follows the planned retirement of Don Casey, who will remain involved with the business in an advisory role. Perkins steps into a position he previously developed while at Compass, where he built out the integrated services division and helped expand the brokerage’s footprint across the United States. In his new role, he will lead the combined services operations formed after the integration of Compass and Anywhere assets. Perkins said the role centers on improving coordination across services that support real estate transactions. &#8220;It&#8217;s a privilege to step into this role and work alongside the talented teams and storied brands that Compass and Anywhere have brought together into a single organization. With the best people and technology powering our integrated services businesses, we have the real opportunity to set the bar for service excellence in our industry. I couldn&#8217;t be more energized to kick off this journey in support of our real estate professionals and their clients.&#8221; Compass Chairman and CEO Robert Reffkin said the company is focused on improving client experience through integration. “The best companies in the world make client experiences better and more seamless at every step,” said Reffkin. “Cory has proven he knows how to build and scale integrated services that deliver real value to agents and their clients. He’s the right leader to lead our combined integrated services team and take them to the next level.” Perkins brings experience in both real estate operations and venture capital, including time at First Round Capital. During more than eight years at Compass, he helped lead expansion into more than 20 markets and supported the opening of more than 100 offices nationwide. He later developed the integrated services division, focusing on increasing adoption of title and escrow offerings among agents. This article was generated using HousingWire Automation and reviewed by a HousingWire editor before publication. The system helps convert company announcements and industry data into HousingWire-style news coverage. Related More: Brokerage Compass Title insurance",
+      "published_at": 1778098310000,
+      "score": 13,
+      "tags": [
+        "housing",
+        "rates",
+        "policy",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "section": "national",
+      "id": "babe8798",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "How AI accelerates construction draws and cuts review times",
+      "link": "https://www.housingwire.com/articles/ai-transforming-construction-draws/",
+      "description": "Construction project finance plays a crucial, time-sensitive role in residential construction, helping contractors, remodelers, and builders access funding draws throughout a project’s lifecycle. Historically, however, the process has been inefficient , requiring lengthy review and approval timelines that cause delays and take attention and manpower away from other important tasks. “It’s just one of the most inundated, labor-intensive, inefficient processes that exists in construction,” said Thomas Schlegel, VP of Engineering at Built Technologies . While many companies have worked to improve the efficiency of construction draws, Built Technologies believes it has achieved a meaningful breakthrough in recent months with the full rollout of its Draw Agent. How technology and AI can improve construction draw times In residential construction, construction draw timelines typically run about seven business days. However, this process is gradually becoming much faster as companies leverage artificial intelligence to automate much of the end-to-end build-cycle data. Built Technologies, for example, now achieves an average construction draw timeline of three business days. The company shortened the construction draw process by replacing fragmented communication and workflows, such as emails, spreadsheets, PDFs, and hundreds of required documents, with a centralized platform that grants both lenders and borrowers access. This centralized system organizes essential documents such as invoices, lien waivers, inspections, photos, plans and budgets into one place. It also enables users to communicate directly with lenders, see outstanding requirements, submit draw requests and schedule third-party inspections. However, the biggest breakthrough for Built Technologies is its new Draw Agent, which the company announced in 2025 and fully rolled out earlier this year. The Draw Agent allows users to access simple construction draws within minutes. The Draw Agent activates when it detects a new draw and fully automates the draw review process in three modes. One of the Draw Agent’s biggest impacts is its automatic review times. According to Schlegel, it can often take 20 to 40 hours for a human to review a construction draw request. While most users are open to using AI in the review process, not everyone fully trusts the technology yet. As a result, the Draw Agent system rolls out to users in stages, gradually expanding its level of responsibility to encourage adoption and ease the transition from manual review to full automation. During the first stage, audit mode, the AI tool conducts a read-only analysis of the draw package, ensuring that all information is correct and consistent. As users become more confident in the Draw Agent’s abilities, they can transition to assist mode. Using assist mode, one can leverage the AI agent to complete select tasks like scheduling inspections or sending borrower communications, while still maintaining approval control. The most advanced stage is automate mode, in which the Draw Agent independently completes and the full review and approval process, ultimately requiring very little user involvement other than complex cases. This tool ultimately enables approval within minutes. The Draw Agent technology was a major breakthrough, Schlegel said. He has been with Built Technologies for eight years, and has seen firsthand how quickly AI transformed the construction draw process. “Over that eight-year process, we&#8217;ve been making incremental improvements, roughly, say, every month or every quarter. Last year was a watershed moment for the capabilities of these models. They have gotten so good that now we are starting to trust them with more and more things,” he said. Benefits to contractors, builders and lenders In April, Built Technologies announced that it partnered with U.S. Bank to offer construction loans. Other banks, like Citi , also utilize Built. Lenders, Schlegel said, have responded well to the use o",
+      "published_at": 1778096107000,
+      "score": 13,
+      "tags": [
+        "housing",
+        "rates",
+        "policy",
+        "deals"
+      ],
+      "heat_signals": [],
+      "section": "national",
+      "id": "a0b2dc33",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
       "source_id": "realtor-news",
       "source_name": "Realtor.com News",
       "source_tier": "A",
@@ -64,268 +171,28 @@
         "housing"
       ],
       "region": "national",
-      "title": "As Gas Prices Climb, the ‘Commute Tax’ Is Shrinking Home Searches",
-      "link": "https://www.realtor.com/news/trends/high-gas-prices-commuter-tax-homebuyers/",
-      "description": "How High Gas Prices and the &#x27;Commuter Tax&#x27; Are Impacting Homebuyers Realtor.com® Real Estate App 314,000+ Open in App Skip to content Buy Homes for sale Homes for sale Foreclosure homes New construction for sale All new construction New home construction Explore the neighborhood Housing market trends Recently sold homes Property records Home buying tips Home buying checklist Home buyers reveal: 'What I wish I had known before buying my first home' First-time home buyer resource center More home buying insights Success stories Sell Home selling tools Compare agents & pick the right one Find the right selling option for you How much can you make selling your home? See what your home is worth Home selling advice Complete guide to selling your home Should I sell my home now? How much is my home worth? How should I sell my home? How to select an agent? How to prepare your home for sale? See more home selling insights Recently sold Recently sold homes Rent Apartments For rent Apartments for rent Renter tools Contacted rentals Apply now online Landlord tools Manage rentals List your rentals Screen tenants Create a lease Collect rent online Home renting tips Renter's resource center Should I rent or buy? Debunked! 8 myths about renting you should stop believing immediately Rental report More renting insights Mortgage Mortgage rates Get pre-approved Mortgage rates Home equity financing rates Refinance rates Finance advice For veterans Calculators Mortgage calculator Refinance calculator How much house can I afford Rent vs. buy Financial advice 6 ways home buyers mess up getting a mortgage Mortgage guide Learn about home insurance More finance insights Find an Agent Find a real estate agent Search for real estate agent Why use a REALTOR ® 6 reasons you should never buy or sell a home without an agent Difference between agent, broker & REALTOR ® Listing vs. buyer agent How to find a REALTOR ® News around REALTORS ® Real estate agents reveal the toughest home buyers they've ever met More news around REALTORS ® My Home News & Insights News The latest news Housing trends Real estate news Celebrity real estate Unique homes For PROs Corporate blog Insights Buying Selling Renting Financing Moving Living Home improvement Research 2026 housing market predictions NEW 2025 hottest zip codes Guides & more All guides Complete guide on how to sell your home First-time home buyer resource center Mortgage guide Veterans home buyer guide USDA home loan guide Home insurance guide Real estate videos Housing resources About us Manage rentals Advertise News Insights NEWS TRENDS BUYING SELLING RENTING CELEBRITY HOMES ADVICE GUIDES LIVING RESEARCH MORE News Insights NEWS TRENDS Real Estate News Housing Trends Celebrity Real Estate Unique Homes Reality TV Sports Most Expensive Homes Most Popular Homes BUYING SELLING RENTING CELEBRITY HOMES ADVICE Buying Selling Renting Financing Living Moving Home Improvement GUIDES LIVING RESEARCH Trends As Gas Prices Climb, the ‘Commute Tax’ Is Shrinking Home Searches By Allaire Conte May 6, 2026 Getty Images For years, the \"drive until you qualify\" trade-off was a staple of the American dream : Buyers could trade a longer commute for more affordability and better square footage. But as gas prices surge nationwide , the math is no longer working out. A gallon of regular unleaded now sits at an average of $4.53, up more than $1.40 from a year ago, according to AAA . For the estimated 115 million people who commute to work by car alone daily in the U.S., that spike has amounted to a punishing commute tax—one that is now dictating the boundaries of the housing market. “Houston is a driving city, no way around it, and gas prices are absolutely in the conversation now in a way they weren't two years ago,” says Andrew Gardner founder of Leap Properties , a real estate services company based in Houston —where an estimated 1.2 million people commute to work daily. “Buyers are doing the math out loud,” Gardner says. “I had ",
-      "published_at": 1778105030000,
-      "score": 18,
+      "title": "The Spring Housing Market Has a Vibes Problem as ‘Fear of Overpaying’ Takes Hold",
+      "link": "https://www.realtor.com/news/trends/spring-housing-market-2026-consumer-sentiment-vibes/",
+      "description": "Inventory is up and mortgage rates are cooling, yet the 2026 spring housing market remains stuck in a psychological showdown.",
+      "published_at": 1778031720000,
+      "score": 13,
       "tags": [
         "housing",
-        "multifamily",
-        "texas",
-        "houston",
         "macro",
         "rates",
-        "deals",
-        "trend",
-        "landlord",
-        "brokerage"
+        "trend"
       ],
       "heat_signals": [
-        "houston",
         "mortgage rate",
-        "trend",
-        "trends",
         "housing market"
       ],
       "section": "national",
-      "id": "1329f36c",
-      "title_zh": "油价攀升压缩通勤半径，购房者缩小 search 范围",
-      "summary_zh": "高油价带来的'通勤税'效应使买家减少远郊房源搜索， affordability 压力下 location 偏好向内收缩",
-      "importance": 3,
-      "impact": "short-neg",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "lance-lambert",
-      "source_name": "Lance Lambert / ResiClub",
-      "source_tier": "B",
-      "source_weight": 10,
-      "source_tags": [
-        "housing",
-        "data",
-        "trend"
-      ],
-      "region": "national",
-      "title": "Which housing markets have the most—and least—mortgage distress right now? - Fast Company",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObnM2UGlsamRhYUJVc3BHMnl0b0xiZ3ZtQUN4U1ZIYXpfWDR1cXZmeDh1YlQ5ZzlhRmlSZmpvNkdJX2xpcW1rYXhSbW9zSFprNkd0cnlFSGd3dlU5LTFPMms4VzFEbTRIRWZGc1lfY2xHQVlRWnlOQldEVy1CVk9nYjQ3enF4VVZ1VEVpTTM0b1BtQllSaERtbjI4SHBZZ1Z0V0poSTlOSUVzaXUySEE?oc=5",
-      "description": "Which housing markets have the most—and least—mortgage distress right now? &nbsp;&nbsp; Fast Company",
-      "published_at": 1778085277000,
-      "score": 17,
-      "tags": [
-        "housing",
-        "data",
-        "trend"
-      ],
-      "heat_signals": [
-        "housing market"
-      ],
-      "section": "national",
-      "id": "cfa5a7c4",
-      "title_zh": "全美 mortgage distress 区域分化，细节待披露",
-      "summary_zh": "不同都会区房贷违约压力差异显著，具体排名与数据影响待观察",
+      "id": "6a2499fc",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
       "importance": 3,
       "impact": "neutral",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "cnbc-realestate",
-      "source_name": "CNBC Realty Check",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "macro"
-      ],
-      "region": "national",
-      "title": "Zillow CEO Jeremy Wacksman: Affordability is still a challenge in the housing market",
-      "link": "https://www.cnbc.com/video/2026/05/06/zillow-ceo-jeremy-wacksman-affordability-is-still-a-challenge-in-the-housing-market.html",
-      "description": "Zillow CEO Jeremy Wacksman joins 'Closing Bell Overtime' to talk quarterly results, the state of the housing market, headwinds for home sales, and more.",
-      "published_at": 1778101775000,
-      "score": 16,
-      "tags": [
-        "macro",
-        "housing",
-        "trend",
-        "earnings"
-      ],
-      "heat_signals": [
-        "state of the housing",
-        "housing market"
-      ],
-      "section": "national",
-      "id": "281bc02c",
-      "title_zh": "Zillow CEO：housing affordability 仍是核心挑战",
-      "summary_zh": "Jeremy Wacksman 称可负担性制约 home sales，季度业绩承压，市场逆风持续",
-      "importance": 4,
-      "impact": "short-neg",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "housingwire",
-      "source_name": "HousingWire",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "housing",
-        "rates",
-        "policy"
-      ],
-      "region": "national",
-      "title": "NAR says policies already align with new HUD stance on sharing school, crime data",
-      "link": "https://www.housingwire.com/articles/nar-says-policies-already-align-with-new-hud-stance-on-sharing-school-crime-data/",
-      "description": "The National Association of Realtors (NAR) says its existing policies already align with new federal guidance allowing agents to discuss neighborhood crime rates and school quality without violating the Fair Housing Act’s prohibition on racial steering. The Department of Housing and Urban Development (HUD) announced the new guidance last week, reversing Biden-era policies that led many real estate firms to remove or restrict such information. HUD’s announcement characterized past industry practices as restrictive — and accused NAR of imposing a “professional gag order” on members. In an emailed response to HousingWire, a NAR spokesperson disputed that framing. “NAR has never prohibited these conversations between agents and prospective homebuyers,&#8221; the spokesperson said. &#8220;NAR&#8217;s Code of Ethics, fair housing training and fair housing manuals explicitly allow members to discuss neighborhood information regarding crime and school data. For decades, NAR has emphasized that members share accurate, objective information, not opinions or hearsay. This is a risk management best practice. &#8220;Some practitioners, misunderstanding the law or seeking to eliminate all risk, may have adopted the view, ‘it’s illegal to talk about it.’ That has never been NAR’s guidance.” The NAR spokesperson added: “NAR’s current training and guidance generally align with HUD&#8217;s position that agents can and should provide prospective buyers with the information they seek on neighborhood crime and school quality, provided the information comes from an accurate third-party resource and is not subjective opinion. We believe it will be helpful to underscore among our membership that the law and our existing guidance supports these practices.&#8221; The association may provide more information on the topic, the spokesperson said. &#8220;We may supplement existing guidance and training materials to provide additional best practices on how agents may comply with the law while providing consumers with the information they seek.” Legal backing — and lingering risk Attorney Robert Butters — a former NAR deputy general counsel and antitrust trial attorney in the Federal Trade Commission’s Bureau of Competition — said HUD’s updated stance aligns with arguments he has made for years. “The assumption behind preventing that kind of information included minority home seekers being less concerned about crime statistics than majority home seekers, which I never found to be logical,&#8221; he said. &#8220;It&#8217;s the same thing with schools. Do you mean that minority home seekers don&#8217;t care about the quality of the schools their children are going to attend? None of that made any sense to me.&#8221; Butters said the prior reasoning required drawing tenuous inferences about how different groups interpret information — an approach he viewed as inconsistent with the Fair Housing Act . At the same time, he cautioned that the new guidance does not eliminate legal exposure for agents or brokerages. &#8220;There&#8217;s always a risk of being sued,&#8221; Butters said. &#8220;You open the door of your establishment, you&#8217;re taking on a degree of risk. The question is, what is your tolerance? I think the position will make it easier to defend the cases, if they come, and it may be a mitigating factor on potential plaintiffs for bringing the cases in the first place. &#8220;They&#8217;re going to have to contend with the current HUD position on that, but you really can&#8217;t eliminate down to zero risk.” He added that HUD’s interpretation, while influential, is not binding on courts — meaning judges and juries could still reach different conclusions. NAR said its position continues to emphasize a distinction between what is legally permissible and what is professionally advisable — particularly when it comes to subjective commentary. “Subjective commentary is not automatic evidence of discriminatory intent,” the spokesperson said. “But subjectiv",
-      "published_at": 1778101962000,
-      "score": 15,
-      "tags": [
-        "housing",
-        "rates",
-        "policy",
-        "macro",
-        "regulator"
-      ],
-      "heat_signals": [
-        "fed"
-      ],
-      "section": "national",
-      "id": "feb6e229",
-      "title_zh": "NAR 回应 HUD 新政：crime、school 数据分享本就合规",
-      "summary_zh": "NAR 否认曾禁止经纪人讨论社区 crime 与 school 信息，称现有政策与 HUD 新指引一致；Biden 时代'自我审查'系从业者误读",
-      "importance": 3,
-      "impact": "neutral",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "housingwire",
-      "source_name": "HousingWire",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "housing",
-        "rates",
-        "policy"
-      ],
-      "region": "national",
-      "title": "State zoning preemption tested as Colorado lot bills fail",
-      "link": "https://www.housingwire.com/articles/colorado-zoning-preemption-limits/",
-      "description": "After years of pushing housing affordability reforms, Colorado legislators hit a wall — crashing up against the limits of how much zoning control they could strip from local governments. This year, they sought to require most cities to allow single-family homes on lots as small as 2,000 square feet, about a third the size of typical lots in many locales. The bill passed the state&#8217;s House but stalled in the Senate in late April. A similar bill – requiring cities to allow owners to split lots – also passed the House before meeting the same fate. Colorado has emerged as a national model for state-level zoning reform that pre-empts local governments. That has come with a price. Home rule cities sued Democratic Gov. Jared Polis over an executive order threatening to cut them off from $280 million in grants, loans and tax credits if they did not comply with major housing reforms he signed into law two years ago. Colorado&#8217;s struggle illustrates a defining feature of the nation&#8217;s housing debate: Party affiliation provides no immunity from political blowback. A Republican-controlled Texas legislature passed Senate Bill 15 last year, capping the minimum lot size cities can require at 3,000 square feet, and Republican Gov. Greg Abbott signed it into law in June 2025. Yet even in Texas, the bill drew fierce opposition from local governments. It&#8217;s the same local-control fights playing out in Colorado. Seeking smaller lots for smaller, more affordable homes Sen. Matt Ball, the bill&#8217;s Senate sponsor, opened an April 23 committee hearing on House Bill 1114 by acknowledging the need for lot-size reduction. He then quickly delivered the bill&#8217;s death sentence. &#8220;I do want to say at the outset that we will hear witness testimony on this bill, and then I will be postponing it indefinitely,&#8221; Ball said. A week later, Ball delivered the same message for the lot-split bill at the same Senate committee meeting, but without witness testimony. The arguments for smaller homes and density had already been made. Knowing the HB 1114 was dead, proponents and opponents proceeded with testimony. &#8220;If we used 2,000 as kind of a pre-bubble benchmark for home ownership rate and maintained it, we&#8217;d have 62,000 more owner-occupied units today,&#8221; Scott Cox, a Colorado-based home building consultant and a contributor to The Builder&#8217;s Daily, told the committee. Cox noted that much of the legislative effort on housing — at both the local and state levels — targets rental rather than owner-occupied housing. &#8220;If we do not find ways to allow more single-family housing, we are guaranteed that those prices will continue to rise faster than the majority of the population&#8217;s ability to pay for it,&#8221; Cox said. &#8220;Detached homes will become, simply become a luxury good.&#8221; Tim Lightly, CEO of the Colorado Association of Home Builders , noted that HB 1114 does not mandate smaller homes or smaller lots. &#8220;This represents one of the first proposals in a very long time to be truly free market oriented,&#8221; Lightly said. &#8220;It says we&#8217;re going to legalize a greater variety of housing and let the market determine where it works.&#8221; Arguments for and against Nationally, smaller homes draw support as a path to ownership for first-time buyers and empty nesters downsizing. AARP has backed smaller housing in states across the country for seniors choosing to age in place. Echoing that theme, Kip Kolkmeier, a retired land-use attorney and former chair of the Lakewood Planning Commission, told the committee that he and his wife had to leave the city because smaller homes to downsize into simply did not exist. Kolkmeier said smaller lots reduce land costs — one of the biggest factors in home prices. &#8220;People are clamoring for this,&#8221; he said. &#8220;This is what your constituents want.&#8221; Not all municipalities agreed. City leaders in Lakewood, a Denver suburb, voted",
-      "published_at": 1778102657000,
-      "score": 14,
-      "tags": [
-        "housing",
-        "rates",
-        "policy",
-        "texas",
-        "deals"
-      ],
-      "heat_signals": [
-        "texas"
-      ],
-      "section": "national",
-      "id": "0ccfd2cc",
-      "title_zh": "Colorado lot size 改革遇阻，state zoning preemption 边界显现",
-      "summary_zh": "两项允许 2,000 SF 小地块及 lot split 的法案在 Senate 搁浅；Texas SB15 虽通过但地方反弹激烈，州权 override local control 政治代价显著",
-      "importance": 4,
-      "impact": "neutral",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "housingwire",
-      "source_name": "HousingWire",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "housing",
-        "rates",
-        "policy"
-      ],
-      "region": "national",
-      "title": "Amended class-action lawsuit accuses Veterans United of ‘bait-and-switch’ tactics",
-      "link": "https://www.housingwire.com/articles/veterans-united-lawsuit-bait-switch/",
-      "description": "Plaintiffs filed an amended complaint against Veterans United Home Loans , owned by Mortgage Research Center , adding claims of “bait-and-switch” and misleading advertising tactics, according to court filings reviewed by HousingWire . The original complaint filed in February alleges the lender misled homebuyers into believing it is connected to the U.S. Department of Veterans Affairs (VA), while also distributing leads to preferred agents who, upon closing a home sale, pay the company roughly 35% of their commission. Agents who do not refer loans back allegedly stop receiving leads. The plaintiffs claim Veterans United loans are more costly and carry higher interest rates than other lenders. The lender filed a motion to dismiss in April , saying plaintiffs failed to present “any concrete and particularized injury.&#8221; The amended complaint filed on Monday, however, describes a “bait-and-switch” tactic in which the lender would initially offer artificially favorable, non-fixed terms during the shopping phase to attract borrowers, only to raise the costs and interest rates later at the “lock” phase. Borrowers often proceed anyway, believing they’re dealing with the VA or because they have already paid money they will forfeit if they lose the house, the lawsuit states. Supporting documents from a confidential loan officer show a case where the rate increased by 0.25% in just three days despite market conditions improving. “The mortgage market demonstrably improved during this three-day period by about .25%. Veterans United’s practice of blaming ‘market conditions’ for an increase in rates is demonstrably false,” the lawsuit states. In response, Chad Moller, corporate communications manager at Veterans United, said the amended complaint “adds volume and hyperbole, not substance.” “We intend to vigorously defend ourselves from these meritless claims,” Moller said. “Veterans United Home Loans and Veterans United Realty have never held themselves out as the VA or any other government agency.” The company was founded and is run by three individuals with no military service records, the original complaint states. Moller adds that the lender’s name “was never a problem until a class-action attorney needed it to be.” “We frequently tell our customers that we are not a government agency or part of the VA, and we appreciate the plaintiff’s class-action attorneys identifying in the complaint more than a dozen examples of where we do so,” Moller added. The amended complaint brings 15 plaintiffs (up from three in the original) and eight claims (compared to four previously). These include two counts of Real Estate Settlement Procedures Act (RESPA) violations, violations of consumer protection laws in five states (Missouri, Illinois, New York, Ohio and Texas) and unjust enrichment. They also bring expanded testimonies from six confidential loan officers and five real estate agents. The case is in the U.S. District Court for the Western District of Missouri against Veterans United, Realty Search Solutions , Realty Search Solutions Network (d/b/a Veterans United Realty ) and Mortgage Research Center. The plaintiffs are homeowners who obtained loans from Veterans United between 2018 and 2025. They are represented by Hagens Berman , who had clients in cases involving Zillow and Rocket Companies , following settlements tied to real estate brokerage commissions that totaled more than $1 billion. Related More: Lawsuit Real Estate Settlement Procedures Act VA Loan Veterans United Home Loans",
-      "published_at": 1778095523000,
-      "score": 14,
-      "tags": [
-        "housing",
-        "rates",
-        "policy",
-        "texas",
-        "deals",
-        "brokerage"
-      ],
-      "heat_signals": [
-        "texas"
-      ],
-      "section": "national",
-      "id": "554b75b6",
-      "title_zh": "Veterans United 遭 amended 集体诉讼：'bait-and-switch' 与误导营销",
-      "summary_zh": "原告指控其借 VA 名义获客、向 agent 收 35% 佣金返点；修订诉状称利率在 lock 阶段被人为抬升 25 bps，细节待法院认定",
-      "importance": 3,
-      "impact": "short-neg",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "housingwire",
-      "source_name": "HousingWire",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "housing",
-        "rates",
-        "policy"
-      ],
-      "region": "national",
-      "title": "Women take the leadership reins at Reverse Mastermind Summit",
-      "link": "https://www.housingwire.com/articles/reverse-mastermind-summit-leadership-sales/",
-      "description": "Three women with prominent roles in the reverse mortgage industry took the stage Tuesday at the Reverse Mastermind Summit in Knoxville, Tennessee, sharing personal stories while converging on sales advice around the power of narrative, the importance of relationships with financial planners and the need for higher professional standards. Christine Jensen of Fairway Home Mortgage opened the panel with a deep dive into how the Trump administration’s signature tax bill , passed last summer, has positively impacted mortgage insurance deductibility. Senior homeowners, she said, may be able to use these savings to capitalize on the HECM for Purchase program . Christina Harmes of Barrett Financial Group followed with tips for connecting with clients and referral partners, stressing that emotional intelligence is a critically undervalued trait for loan originators. “The reverse mortgage sale is one of the highest trust sales that you could possibly be involved in,” Harmes said, adding that prospective borrowers are often afraid and human connection must come before numbers. Lisa Moriello of loanDepot argued that loan officers need to “stop thinking like employees” and develop a business ownership mindset. At a time when Home Equity Conversion Mortgage (HECM) endorsements are averaging about 2,000 per month , the typical reverse LO is closing less than one deal per month, she said — a figure more akin to a “part-time job” rather than a career. Jensen on tax deduction strategies The One Big Beautiful Bill Act that was signed by President Donald Trump in July 2025 included a provision that made the mortgage insurance tax deduction permanent. According to U.S. Mortgage Insurers , about 40 million homeowners have used private mortgage insurance to purchase or refinance a home since 1957 — including 800,000 who bought a home with it in 2024. Jensen walked the audience through a technical presentation she’d previously given to the Financial Planning Association , noting that the permanent deduction can be part of a powerful financial strategy for senior homeowners in retirement or planning for it. She also cited recent data from the National Association of Realtors showing that Americans over 60 make up nearly half of today’s homebuyers. Jensen’s case study involved a hypothetical 72-year-old couple purchasing an $800,000 home with a down payment of $509,000, with the remainder financed through a HECM for Purchase loan. They also have a retirement account with a required minimum distribution of $63,000 per year. Using the reverse mortgage proceeds, they’re able to make no payments for two years while still accruing $63,000 in deductible mortgage interest and insurance. At that point, they can use the $63,000 distribution to make a lump-sum payment on the HECM. This fully offsets the taxable portion of the distribution and saves them $13,000. Additionally, the couple could repeat the strategy every few years, with Jensen showing their total savings at roughly $27,000 after five years — an amount that exceeds their upfront costs for the reverse mortgage. “I’ve got to tell you, when I showed the financial planners how this works, they had no idea that this was possible,” Jensen said. Harmes: ‘It’s the connection that creates the relationship’ Harmes began her presentation with a deeply personal story about how reverse mortgages have the power to change and even save lives. When she was a child, her grandfather sold his home and moved into an apartment rather than exploring financing options. After the move, he fell and broke his neck, wasn’t found for days, and the last six months of his life were “an absolute living hell,” she said. Years later, when Harmes sold a reverse mortgage for the first time, her clients were already in a difficult position. The husband had recently been diagnosed with a serious illness and his wife was “terrified” of managing their home and finances alone. Harmes’s team helped the couple pay off a large debt, set up a",
-      "published_at": 1778111641000,
-      "score": 13,
-      "tags": [
-        "housing",
-        "rates",
-        "policy",
-        "multifamily",
-        "deals"
-      ],
-      "heat_signals": [],
-      "section": "national",
-      "id": "d63b079c",
-      "title_zh": "Reverse mortgage 女性领袖：HECM 月均仅 2,000 单，LO 产能逼近兼职",
-      "summary_zh": "panel 指出 HECM endorsement 低迷、典型 reverse LO 月成交不足一单；tax bill 利好 mortgage insurance 抵扣，HECM for Purchase 或受益",
-      "importance": 2,
-      "impact": "neutral",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "housingwire",
-      "source_name": "HousingWire",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "housing",
-        "rates",
-        "policy"
-      ],
-      "region": "national",
-      "title": "HomeServices names Jason Waugh as next HSF Affiliates CEO",
-      "link": "https://www.housingwire.com/articles/jason-waugh-hsf-affiliates-ceo/",
-      "description": "HomeServices of America has named industry veteran Jason Waugh as successor to HSF Affiliates CEO Vince Leisey, with a leadership transition expected to begin in 2027, the company announced Wednesday. HSF Affiliates is the franchisor of the Berkshire Hathaway HomeServices real estate network, which has been in expansion mode in recent years as large brokerage brands compete for market share and recruit top-producing agents in a slower transaction environment. The planned, multi-year handoff is designed to preserve continuity for franchisees while positioning the network for its next phase of growth. Waugh returns to HomeServices of America with leadership experience on both the brokerage and franchise sides of the business. He previously led Prudential Northwest Real Estate prior to its acquisition by HomeServices and later served as president and CEO of Berkshire Hathaway HomeServices Northwest Real Estate , where he helped build one of the brand’s flagship brokerage operations. Most recently, Waugh served as president of Coldwell Banker Affiliates , one of the industry’s largest global real estate franchise organizations. In that role, he focused on franchise growth, brand strategy and network performance, according to the announcement. “Jason brings a rare combination of brokerage leadership, franchise expertise and enterprise perspective that will be invaluable as we continue to strengthen and grow our network,” Chris Kelly , president and CEO of HomeServices of America, said in the announcement. “We are thrilled to welcome him back and confident in his ability to help guide HSF Affiliates into its next chapter following a thoughtful and deliberate transition with Vince Leisey later next year.” The company said Waugh has been identified as Leisey’s successor as part of a multi-year transition plan. For now, he will be “selectively engaged in high-priority enterprise initiatives,” with a particular focus on HomeServices’ insurance segment. Leisey will remain CEO of HSF Affiliates and continue to lead the Berkshire Hathaway HomeServices franchise network through the transition period. After the change in CEO is completed, Leisey is expected to become chair of HSF Affiliates while remaining CEO of Berkshire Hathaway HomeServices Ambassador Real Estate. “As previously shared, this transition reflects a thoughtful and deliberate approach to leadership continuity,” Kelly said. “Jason’s immediate engagement ensures a seamless path forward while positioning HSF Affiliates for sustained long-term success.” Leisey framed the move as part of a longer-term strategy to keep the franchise system stable while preparing for the next market cycle. “I remain fully committed to leading this network and building on the momentum we have today,” Leisey said. “At the same time, this transition has always been about positioning the network for long-term success. Jason brings the franchise network experience, perspective, and leadership needed for what comes next, and I look forward to supporting him when that time comes while continuing to stay closely connected to the incredible people and companies across our network.” Waugh said he plans to spend the near term contributing to enterprise projects before working alongside Leisey and the HSF Affiliates team on the leadership transition. “I’m honored to return to HomeServices of America and to contribute to several meaningful initiatives ahead of working alongside Vince and the HSF Affiliates team,” Waugh said. “The strength of this network is built on its people, its brand and its shared commitment to excellence. I look forward to building on that foundation and supporting our franchisees as we continue to grow together when the transition occurs.” HomeServices of America and HSF Affiliates leadership said they expect Waugh’s experience and strategic focus to support further growth and performance for the global Berkshire Hathaway HomeServices network. This article was generated using HousingWire",
-      "published_at": 1778106472000,
-      "score": 13,
-      "tags": [
-        "housing",
-        "rates",
-        "policy",
-        "deals",
-        "brokerage"
-      ],
-      "heat_signals": [],
-      "section": "national",
-      "id": "fce18a7d",
-      "title_zh": "HomeServices 任命 Jason Waugh 接任 HSF Affiliates CEO",
-      "summary_zh": "2027 年过渡期启动，Waugh 兼具 brokerage 与 franchise 背景，Berkshire Hathaway HomeServices 网络扩张战略延续",
-      "importance": 2,
-      "impact": "neutral",
-      "fetched_at": 1778142784912
+      "fetched_at": 1778146274794
     },
     {
       "source_id": "inman",
@@ -337,9 +204,9 @@
         "brokerage"
       ],
       "region": "national",
-      "title": "Gary Keller: Private listings could make MLS a ‘market of last resort’ - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcW1ZQmNuM05lVWlDdnhnS3k0T1JDbGg4MGlBWGhHY2k3Uk90eGlyT1hoTFprbzQ3cEJ3WkhIMkZocG9ldDJFVC1mMjh6N0k5X3JwTkZySjZNRE5rQ1Y4bDNvYi1ndGg4VEotWDNjbWUtNWdKeENiTndaU0VOSFZCR09GM29BOG1fcFNvb0Q2OTZtMmFZdlRWWGV4VGROeVducUo4?oc=5",
-      "description": "Gary Keller: Private listings could make MLS a ‘market of last resort’ &nbsp;&nbsp; Inman Real Estate News",
+      "title": "The years-long decline that drove REMAX into the hands of Real - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSkhVV193UmFyZ3VvemVxeUxnQjJRa1FHWTd3bmU3d3dpYy12R1FYZmpkbmJIZm1yMlE5dVZkZGNxU3ZsaHpXMUZpMmZZNVJtdnpjU0lsSC1ZRDhkb1hJRG1FeXhNaGRqdHRCdzd3d0N5Q3dGQVFDLWlueWNqX1RTdHM0M1NiaDlLcnNrQWNpWlY1VGFhSEx2RFpNRm4?oc=5",
+      "description": "The years-long decline that drove REMAX into the hands of Real &nbsp;&nbsp; Inman Real Estate News",
       "published_at": 1778079014000,
       "score": 12,
       "tags": [
@@ -348,177 +215,164 @@
       ],
       "heat_signals": [],
       "section": "national",
-      "id": "1fea3422",
-      "title_zh": "Gary Keller 预警：private listings 或使 MLS 沦为'最后 resort'",
-      "summary_zh": "Keller Williams 创始人称 off-MLS 交易泛滥将削弱多重上市系统核心地位，行业分销格局面临重构",
-      "importance": 4,
-      "impact": "short-neg",
-      "fetched_at": 1778142784912
+      "id": "1c3d4a28",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
     },
     {
-      "source_id": "lance-lambert",
-      "source_name": "Lance Lambert / ResiClub",
-      "source_tier": "B",
-      "source_weight": 10,
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
       "source_tags": [
         "housing",
-        "data",
-        "trend"
+        "brokerage"
       ],
       "region": "national",
-      "title": "Florida posts first positive single-family home price change after 13 months, Lance Lambert notes - Traders Union",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMzRvdlFuMGZxdjd3Y3BJMjgxam1ELURwU1ZnRy1tUlo4cV9iNFZpcnRaQ2JsOUZ5MTVtem0zZWtLU2FkYVpma1d1Uk4xZ2lCRmdNX05tVkNKVHhrSkRCRURiT05GNDY4VkhLUDZZTkJvUTJQamI4RDQtLVFHenBDVWYyOW80TFlNTEE?oc=5",
-      "description": "Florida posts first positive single-family home price change after 13 months, Lance Lambert notes &nbsp;&nbsp; Traders Union",
-      "published_at": 1778036120000,
+      "title": "Compass Taps Cory Perkins To Lead Integrated Services Division - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNV0xTSkJMRmRTQm93T19TOGxVTzk1amE5bXNnckhEc3ZDWVlrUUVwcHFmTmxmeGhmcHV1Tm5yU29ZVlZ1alZ0bDQ2MjZZbHpBOWhEN2VuR0hzVE01OHFDTUVkVUVRaVVvT2dTdzFYSnRuRy1jbFJnM2hSTmduSWdOWHBZQV9Xb2l4VnFXWHpiVWVySTFMQ0R1eHRnWHM?oc=5",
+      "description": "Compass Taps Cory Perkins To Lead Integrated Services Division &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1778090438000,
       "score": 12,
       "tags": [
         "housing",
-        "data",
-        "trend"
+        "brokerage"
       ],
       "heat_signals": [],
-      "section": "sunbelt",
-      "id": "3ad0648a",
-      "title_zh": "Florida 单户住宅价格 13 个月来首现正增长",
-      "summary_zh": "Lance Lambert 追踪数据显示 Sunshine State 房价同比拐点出现，前期调整或近尾声",
-      "importance": 4,
-      "impact": "long-pos",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "miami-agent",
-      "source_name": "Miami Agent Magazine",
-      "source_tier": "D",
-      "source_weight": 6,
-      "source_tags": [
-        "miami",
-        "florida",
-        "brokerage"
-      ],
-      "region": "florida",
-      "title": "Housing Scorecard: Existing-home sales rise across South Florida",
-      "link": "https://southfloridaagentmagazine.com/2026/04/30/existing-home-sales-rise/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=existing-home-sales-rise",
-      "description": "At the same time, housing inventory was down, while days on market were up.",
-      "published_at": 1777571677000,
-      "score": 9,
-      "tags": [
-        "miami",
-        "florida",
-        "brokerage",
-        "housing",
-        "trend"
-      ],
-      "heat_signals": [
-        "existing-home sales"
-      ],
-      "extended_window": true,
-      "section": "sunbelt",
-      "id": "11ba0dd7",
-      "title_zh": "South Florida 成屋销售回升，库存下降、DOM 拉长",
-      "summary_zh": "existing-home sales 区域回暖但市场分化，成交周期延长显示定价压力仍存",
+      "section": "national",
+      "id": "370c5484",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
       "importance": 3,
       "impact": "neutral",
-      "fetched_at": 1778142784912
+      "fetched_at": 1778146274794
     },
     {
-      "source_id": "phoenix-agent",
-      "source_name": "Phoenix Agent Magazine",
+      "source_id": "d-magazine",
+      "source_name": "D Magazine",
       "source_tier": "D",
-      "source_weight": 6,
+      "source_weight": 5,
       "source_tags": [
-        "phoenix",
-        "arizona",
-        "brokerage"
+        "dfw"
       ],
-      "region": "arizona",
-      "title": "REMAX: Phoenix home sales jump in March",
-      "link": "https://phoenixagentmagazine.com/2026/05/01/remax-home-sales-march/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=remax-home-sales-march",
-      "description": "Nationally, home sales in the 50 metro areas surveyed by REMAX posted their largest monthly gain in three years, increasing 31.6%. The post REMAX: Phoenix home sales jump in March appeared first on Phoenix Agent Magazine .",
-      "published_at": 1777657225000,
-      "score": 6,
+      "region": "texas",
+      "title": "Face of Residential Real Estate",
+      "link": "https://www.dmagazine.com/sponsored/2026/05/face-of-residential-real-estate-2/",
+      "description": "Chase Bray, broker/owner of Bray Real Estate Group, is a lifeline for buyers and sellers as they navigate the highs and lows of an ever-changing real estate market. His firm continues to expand throughout Texas, specifically in the Dallas-Fort Worth area, including plans for new offices in North Dallas-Fort Worth and Rockwall, to go along &#8230; Continued The post Face of Residential Real Estate appeared first on D Magazine .",
+      "published_at": 1778068800000,
+      "score": 12,
       "tags": [
-        "phoenix",
-        "arizona",
+        "dfw",
+        "texas",
         "brokerage",
         "housing"
       ],
-      "heat_signals": [],
-      "extended_window": true,
+      "heat_signals": [
+        "texas",
+        "dallas",
+        "fort worth"
+      ],
       "section": "sunbelt",
-      "id": "6e861e2b",
-      "title_zh": "RE/MAX：Phoenix 3 月 home sales 跳升，全国 50 都会区环比增 31.6%",
-      "summary_zh": "创三年最大月度涨幅，春季旺季叠加利率窗口推动 demand 集中释放",
-      "importance": 4,
-      "impact": "long-pos",
-      "fetched_at": 1778142784912
+      "id": "0f9c5246",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
     },
     {
-      "source_id": "atlanta-agent",
-      "source_name": "Atlanta Agent Magazine",
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
       "source_tier": "D",
-      "source_weight": 6,
+      "source_weight": 7,
       "source_tags": [
-        "atlanta",
-        "georgia",
-        "brokerage"
+        "sunbelt",
+        "data"
       ],
-      "region": "georgia",
-      "title": "Trilogy Investment closes on Powder Springs BTR project REV3 at Hill Road",
-      "link": "https://atlantaagentmagazine.com/2026/04/30/trilogy-rev3-at-hill-road/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=trilogy-rev3-at-hill-road",
-      "description": "The development will bring 120 townhomes to market when it opens in the fourth quarter. The post Trilogy Investment closes on Powder Springs BTR project REV3 at Hill Road appeared first on Atlanta Agent Magazine .",
-      "published_at": 1777572670000,
+      "region": "sunbelt",
+      "title": "Latest Las Vegas housing report shows lower prices, fewer sales - ktnv.com",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQQm1GQkFwcnZ2UUNKRVktTEUzY0pybVlSNExzaFVpXzdBWE9mWVJpaGF0RVdtNzBJVEdIa2JWdGFlT0pNbzhlQ21MSy1VbndiQ3dvTWRLUkNxVndSb2xaNmFIQUNneFdHVldPR3dQRXVrd0NlQ1phQXBYYS1MRXpJTFE1UWFLb2RyYXUyQjBYWTFPdw?oc=5",
+      "description": "Latest Las Vegas housing report shows lower prices, fewer sales &nbsp;&nbsp; ktnv.com",
+      "published_at": 1778097620000,
       "score": 11,
       "tags": [
-        "atlanta",
-        "georgia",
-        "brokerage",
-        "btr-sfr",
-        "earnings"
-      ],
-      "heat_signals": [
-        "btr"
-      ],
-      "extended_window": true,
-      "section": "btr",
-      "id": "9666a2e2",
-      "title_zh": "Trilogy Investment 完成 Powder Springs BTR 项目收购",
-      "summary_zh": "REV3 at Hill Road 将供应 120 套 townhome，Q4 入市；Atlanta BTR 赛道持续扩容",
-      "importance": 3,
-      "impact": "long-pos",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "pretium-partners",
-      "source_name": "Pretium Partners",
-      "source_tier": "B",
-      "source_weight": 8,
-      "source_tags": [
-        "btr-sfr",
-        "institutional"
-      ],
-      "region": "national",
-      "title": "Pretium Founder and CEO Don Mullen on Bloomberg’s The Close",
-      "link": "https://pretium.com/pretium-founder-and-ceo-don-mullen-on-bloombergs-the-close/",
-      "description": "Pretium Founder and CEO Don Mullen joined Romaine Bostick and Katie Greifeld on Bloomberg Television’s The Close to discuss how Pretium is helping expand U.S. housing supply as a critical lender to homebuilders, while providing quality affordable housing to hardworking families and expanding pathways to homeownership for our residents. The post Pretium Founder and CEO Don Mullen on Bloomberg’s The Close appeared first on Pretium .",
-      "published_at": 1777949700000,
-      "score": 9,
-      "tags": [
-        "btr-sfr",
-        "institutional"
+        "sunbelt",
+        "data",
+        "mixed-asset"
       ],
       "heat_signals": [],
-      "extended_window": true,
-      "section": "btr",
-      "id": "e6f7844f",
-      "title_zh": "Pretium CEO Don Mullen：builder 贷款与 affordable housing 双轨扩张",
-      "summary_zh": "Mullen 强调 Pretium 作为 homebuilder 关键 lender 角色，同步扩宽居民 homeownership 路径",
+      "section": "sunbelt",
+      "id": "1d3bc228",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
       "importance": 3,
-      "impact": "long-pos",
-      "fetched_at": 1778142784912
+      "impact": "neutral",
+      "fetched_at": 1778146274794
     },
     {
-      "source_id": "trd-national",
-      "source_name": "The Real Deal (National)",
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "Las Vegas housing sales slow down in April despite lower prices, new report shows - KLAS 8 News Now",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQaFdkWFRpcUZLMVRYSkpsMG1nRERJOEt3Y28xSGdPWEVYTTEyX3JYSkJQQzExMFRYd3hQTTk1QTg1Z2pscE1aX3FCTllUbjFIZ1RhUDNpa0ttZkVhbENhUXVxRUt3ZWUyVGJkdU5XZk43Z3J1V3Fkc3NrTTI3N0xrMHNHLVRVV3JUaHk5bVZMa3J4aE52M1MwOUVuYlUySUktR2UtYzJZYXFFT1RxdzRLbTFzRDBOanZKQmY3WGZMTdIBxAFBVV95cUxOc05XXzR4elNXd01zYXFFWk9QOE9QdVBabmhBLXJLRkNENTIta1JtMnR4bjY0cjdPZHpfbWtPeDBEbXlzZm5HRFRhcFpCcmFDZF9nT1BWa0QyMTdPNXJQSlFGWXNSMFhka0RZb01XZGhaaFozSHp2U0R3RDRnRG9jdFlKei0zYnVyeThZXzlOSlVwLVA5TXM2YmRyb3BVNkJkaWxDLXFyejlWQ1RPWVE3WXVrZGEzUEM3NHJOMl9mN25WdUFI?oc=5",
+      "description": "Las Vegas housing sales slow down in April despite lower prices, new report shows &nbsp;&nbsp; KLAS 8 News Now",
+      "published_at": 1778068800000,
+      "score": 11,
+      "tags": [
+        "sunbelt",
+        "data",
+        "mixed-asset"
+      ],
+      "heat_signals": [],
+      "section": "sunbelt",
+      "id": "1db8f496",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "Despite economic uncertainty, Nashville's housing squeeze keeps tightening | Opinion - The Tennessean",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPUlB3dzRZTTBLVmFIZGItUzc2RzhOSFlDMEpVdFptWENrRFdSYXQ5Um9rQjBvdzg3Y2pnSkEyWVloTDhWaXMwbXNfRlZjZ0hGd3dQNmt3QUl2SU1qU3pXT1lCdnpHOEkzUm5KS2lwYm5EaXltWUFBS1VKNGFJcndnaE5fZFpFS21ESE9sZXBWZXZfYkx5MzhKTG84dVNBcVhrUnhpVEZn?oc=5",
+      "description": "Despite economic uncertainty, Nashville's housing squeeze keeps tightening | Opinion &nbsp;&nbsp; The Tennessean",
+      "published_at": 1778061720000,
+      "score": 11,
+      "tags": [
+        "sunbelt",
+        "data",
+        "mixed-asset"
+      ],
+      "heat_signals": [],
+      "section": "sunbelt",
+      "id": "54b5b72f",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
       "source_tier": "A",
       "source_weight": 8,
       "source_tags": [
@@ -526,32 +380,72 @@
         "deals"
       ],
       "region": "national",
-      "title": "Global Net Lease acquires industrial REIT for $535M",
-      "link": "https://therealdeal.com/national/2026/05/06/global-net-lease-acquires-industrial-reit-for-535m/",
-      "description": "Publicly traded real estate investment trust Global Net Lease is set to absorb another firm. Michael Weil’s GNL agreed to acquire industrial REIT Modiv Industrial in a $535 million all-stock transaction, the companies announced this week. The deal values Modiv’s stock at $18.82 per share, a 17 percent premium on the company’s closing price on Friday. Under the terms of the agreement, GNL will pay off Modiv’s balance sheet debt and preferred stock. GNL stockholders will own 89 percent of the combined company, while Modiv stockholders will own the other 11 percent. The deal is expected to close in the third quarter. Both companies’ boards of directors approved the deal, which will still need approval from Modiv stockholders, but not GNL stockholders. “We believe this transaction is a compelling opportunity for GNL to expedite our transition to earnings growth in 2026 following the completion of our deleveraging initiative while continuing to reduce our office exposure,” Weil said in a statement. SIGN UP Modiv’s net-leased industrial assets sport a weighted average lease term of 15 years with 2.4 percent annual rent increases. It’s not entirely clear how many assets Modiv has in its portfolio. “We have long believed that our portfolio’s quality was historically mispriced by the marketplace and that we would be receptive if someone sought to close the value gap sooner than we could,” Modiv chief executive officer Aaron Halfacre said in a statement, adding that the company drew “substantial interest” and unsolicited offers over the last year. Modiv went public in 2022 and had a portfolio valued at $597 million at the end of last year, according to Bisnow . GNL’s portfolio is valued at $5.3 billion, spanning 820 properties. Almost half of the portfolio is made up of industrial properties and distribution centers; 97 percent of its portfolio is leased. Three months ago, Brookfield Asset Management agreed to acquire industrial REIT Peakstone Realty Trust in a $1.2 billion all-cash deal, paying $21 a share, a 34 percent premium. Read more Commercial Los Angeles CRE crowdfunder Modiv wants to go public next year",
-      "published_at": 1778085926000,
+      "title": "Ted Turner, Who Left A Mark On Downtown Atlanta CRE, Dies At 87",
+      "link": "https://www.bisnow.com/atlanta/news/neighborhood/while-a-media-mogul-ted-turner-also-made-his-downtown-atlanta-cre-mark-134464",
+      "description": "News Ted Turner, Who Left A Mark On Downtown Atlanta CRE, Dies At 87 Atlanta Neighborhood View count: Atlanta May 06, 2026 | 6:02 p.m. ET Jarred Schenke, Atlanta While a commercial real estate legend created one of the icons of Downtown Atlanta’s skyline, it took a media mogul to save it. Wikimedia Commons/INTX: The Internet & Television Expo Ted Turner speaking at The Internet & Television Expo in 2000 Ted Turner, the Turner Broadcasting founder, former Atlanta Braves owner and creator of the 24-hour cable news cycle, died May 6 at 87. He had been diagnosed with Lewy body dementia . While Turner never built any commercial real estate, he was a property owner and his impact on the Atlanta skyline was undeniable, having saved an ailing Omni International complex Downtown. He bought a majority stake in the 1.2M SF property from its developer and owner, Cousins Properties, in 1985 and turned it into an international media hub for CNN, complete with the iconic sign that was out front until just a few years ago. “His footprint here was incredibly impressive. He didn’t build CNN Center, but his occupancy at that time really created a destination place that lasted for many years,” Central Atlanta Progress President A.J. Robinson said. “The sign says it all. That iconic sign was kind of branded CNN and kind of branded Downtown.” Cousins founder Tom Cousins completed the Omni complex in 1972 for $76M as a sort of city-within-a-city project , which included a hotel, offices, restaurants, shops and an ice skating rink. It was also home to an indoor amusement park known as The World of Sid Marty Krofft, based on the 1970s children's television pioneering duo’s creations, such as Land of the Lost and Sigmund and the Sea Monsters . But the Omni complex was never able to buck the trend of ailing urban centers as Americans, including Atlantans, fled for the suburbs. And by 1976, the Sid Marty Krofft amusement park closed down due to dwindling attendance, leaving Cousins and a partner with a $20M loss. The developer staved off foreclosure for years before Turner stepped in. Five years after launching CNN and soon after its spinoff, Headline News, Turner negotiated to take a majority ownership of the complex in 1985 as headquarters for his media empire. Turner sold the property in 1988 for $170M, nearly three times the initial purchase price, the LA Times reported at the time . Aside from being the nexus of his cable news empire, Turner also outfitted CNN Center with his own private residence at the top. Wikimedia Commons/Connor.carey One CNN Center, the longtime home of WarnerMedia's CNN After selling his cable news empire to Time Warner — and losing control of CNN when Time Warner and AOL merged in 2010, what he said was his biggest business regret — Turner bought the historic Bona Allen Building at the corner of Ted Turner Drive and Spring Street and made it the home of Turner Enterprises and Ted’s Montana Grill corporate offices. Turner also lived on the top penthouse floor of the building, with views of CNN Center. “I live on top of my office. I had to buy the building on Luckie Street because after my disastrous merger with Time Warner, where I lost 80% of what I had, I needed some good luck,” Turner told the Buckhead Coalition in 2015, as reported by REBusiness Online . “I’m the only chain restaurant owner in the country who lives in the restaurant. That’s the way they used to do it.” Turner installed a solar array atop the parking deck next to his building at 133 Luckie St., saving 20% of Turner Building’s annual power needs, according to Turner Enterprises. Robinson said it wasn’t uncommon to see Turner walking around Downtown during that time. “It’s rare that you have someone who has more than multiple businesses Downtown and also lived partially Downtown. I can’t think of anyone else who would check that box,” he said. CNN Center now has new ownership , and the news organization has moved out of Downtown to Midtown Atlanta and New Yo",
+      "published_at": 1778100194000,
+      "score": 21,
+      "tags": [
+        "deals",
+        "office",
+        "hotel",
+        "trend",
+        "landlord"
+      ],
+      "heat_signals": [
+        "trend",
+        "annual",
+        "occupancy"
+      ],
+      "section": "cre",
+      "cre_subcategory": null,
+      "id": "a5254dd8",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Insurance Drags Down Property Values By 17% In Climate-Sensitive Markets, Study Shows",
+      "link": "https://www.bisnow.com/national/news/capital-markets/climate-risk-us-commercial-property-values-study-134469",
+      "description": "News Insurance Drags Down Property Values By 17% In Climate-Sensitive Markets, Study Shows National Capital Markets View count: National Capital Markets May 06, 2026 | 12:03 a.m. ET Ethan Rothstein, Deputy Managing Editor The effects of climate change are starting to take a toll on real estate owners where it hurts them the most: their property values. In markets with higher risks of natural disasters, such as hurricanes, wildfires and flash floods, market values for commercial real estate are 16.9% lower than in markets with lower climate risk, according to a report climate risk data firm First Street shared with Bisnow . Wikimedia Commons/Chabad Lubavitch Flooding in Houston after Hurricane Harvey The gap is a result of an increasingly costly and volatile market for commercial real estate insurance , which is less regulated than homeowners insurance and thus more susceptible to sharp price increases. It also shows how thinning margins are sowing doubt about the long-term health of properties in areas vulnerable to climate risk, according to the report. Across the four major asset classes of multifamily, office, industrial and retail, insurance costs grew by 154% between 2017 and 2024, at a compound annual growth rate of 14.3%, according to First Street. In the first 17 years of the 21st century, the annual increase was 4.6% on average. The problem is most acute for multifamily owners, which saw their insurance costs rise from an average of $285.83 per unit in 2017 to $878.91 per unit in 2024, a 207.5% increase, according to the report. Multifamily assets in high-risk markets have 69% higher premiums on average than those in low-risk areas, according to First Street. As a result, multifamily properties in high-risk markets trade at a 25% discount to those in low-risk areas. Property values are directly tied to their operating income, and even if landlords can pass on the increase in insurance costs to their tenants, the increased rental rates can raise vacancy risk. Multifamily owners aren't able to pass on the costs directly, and in 2024, insurance ate up 6.6% of landlords' net operating income, according to First Street. First Street analyzed 25 years of performance data from the National Council of Real Estate Investment Fiduciaries across 120 U.S. metro areas to produce the report, its first attempt at quantifying the impact of climate risk on commercial real estate performance. Insurance consumed 4.1% of all properties' NOI in 2024, up from 1.9% in 2017. “We’re really focused on what are the tangible economic and financial impacts of climate risk,” First Street Chief Economist Jeremy Porter said in an interview. Insurers are, too. Insurance rates are higher and take a bigger chunk out of properties' income in high-risk areas. The study compared properties based on baseline market value, expenditures and incomes from NCREIF data. “Setting all these indicators constant and just measuring climate, there’s this consistent impact from this observed survey data of high-risk versus low-risk markets,” Porter said. Insurance rates on industrial properties in high-risk areas have risen at three times the rate of those in low-risk markets, according to First Street. Insurance consumed 5.9% of industrial NOI in high-risk markets in 2024, compared to 2.4% for buildings in low-risk markets. After a hurricane-free 2025, the property insurance market is expected to soften this year, with some insurers projecting rates to drop from last year's level by double digits. “We are seeing the end of the hardening market,” Porter said. “Every time we go through a market-hardening period, we raise the level. It becomes the new baseline. It may dip a little bit, but it basically doesn’t go down.” The rates for reinsurance, in which insurers pass some of their risk down in what is essentially insurance for insurers, have fallen , as those are the companies most directly affected by natural disasters. Property owners should be paying careful attenti",
+      "published_at": 1778105961000,
       "score": 19,
       "tags": [
         "deals",
         "industrial",
         "office",
-        "california",
+        "multifamily",
+        "texas",
+        "houston",
+        "rates",
+        "policy",
         "trend",
-        "earnings",
-        "institutional"
+        "landlord"
       ],
       "heat_signals": [
-        "brookfield",
-        "annual"
+        "houston",
+        "annual",
+        "vacancy"
       ],
       "section": "cre",
-      "cre_subcategory": "工业",
-      "id": "57a648df",
-      "title_zh": "GNL $535M 全股票收购 Modiv Industrial，office 敞口继续削减",
-      "summary_zh": "$18.82/股溢价 17%，GNL 股东占合并后 89%；Modiv 工业资产 WALT 15 年、年租金涨幅 2.4%，交易预计 Q3 完成",
-      "importance": 4,
-      "impact": "long-pos",
-      "fetched_at": 1778142784912
+      "cre_subcategory": null,
+      "id": "73f429d7",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
     },
     {
       "source_id": "bisnow",
@@ -563,31 +457,99 @@
         "deals"
       ],
       "region": "national",
-      "title": "SpaceX Files Plans For $55B Terafab Chip Facility In Southeast Texas",
-      "link": "https://www.bisnow.com/austin/news/ai/spacex-plans-to-spend-an-initial-55b-for-terafab-chip-facility-in-texas-134459",
-      "description": "News SpaceX Files Plans For $55B Terafab Chip Facility In Southeast Texas Austin AI View count: Austin AI May 06, 2026 | 3:18 p.m. ET Alexis Kramer, East Coast Editor Elon Musk’s SpaceX is proposing to invest an initial $55B to build the first hub of its highly anticipated chipmaking project a little over an hour northwest of Houston. Pexels/SpaceX SpaceX submitted a public filing to construct a semiconductor manufacturing facility in Grimes County, Texas, Reuters reported Wednesday. It's the latest step forward for Musk’s new multibillion-dollar project, dubbed Terafab, which seeks to produce more than one terawatt of computing power per year for use on Earth and in future space travel. The Grimes County Commissioners Court will convene on June 3 to consider a property tax abatement for SpaceX’s proposal, according to a public notice . The notice doesn’t mention Terafab by name but describes the planned project as a “multi-phase, next-generation, vertically integrated semiconductor manufacturing and advanced computing fabrication facility.” The notice also says SpaceX’s estimated total investment could reach $119B if the project expands into additional phases. A spokesperson for SpaceX didn’t immediately respond to a request for comment. Terafab, announced last month, is a joint venture between Tesla , SpaceX and xAI that aims to produce artificial intelligence chips at scale and reduce reliance on external chip suppliers such as Samsung and TSMC . It’s part of Musk’s broader pivot toward establishing an integrated AI ecosystem as his companies boost spending on data centers and related infrastructure. The current worldwide output of AI chip plants is about 20 gigawatts per year, which makes up only about 2% of what his project needs, Musk said in a video posted on X last month. “We need to build the Terafab or we don’t have the chips. And we need the chips,” he said. Musk had initially said last month that he selected Austin for the first Terafab facility but did not name a specific location at that time. Contact Alexis Kramer at alexis.kramer@bisnow.com Related Topics: SpaceX , semiconductors , Elon Musk , AI",
-      "published_at": 1778091186000,
-      "score": 15,
+      "title": "Ideaya Biosciences Expanding Into 80K SF In South San Francisco",
+      "link": "https://www.bisnow.com/san-francisco/news/life-sciences/ideaya-biosciences-expanding-80k-sf-south-san-francisco-134468",
+      "description": "News Ideaya Biosciences Expanding Into 80K SF In South San Francisco San Francisco Life Sciences View count: San Francisco Life Sciences May 06, 2026 | 8:29 p.m. ET Rob Sabo, Bisnow Google Maps 5000 Shoreline Court Clinical-stage cancer research company Ideaya Biosciences increased its footprint in South San Francisco with a 25K SF lease expansion at 5000 Shoreline Court. In June 2023, Ideaya leased 44K SF at the property owned by DivcoWest , which acquired the vacant 140K SF waterfront building at Sierra Point a year earlier and began converting it into laboratory space. Ideaya originally leased space on the first and third floors, and in 2024, it added 11,300 SF in a lease commencing in January 2025. Ideaya's most recent expansion takes a portion of available space on the second floor as well, according to documents filed with the Securities and Exchange Commission. Ideaya plans to occupy office and lab space on the second floor on March 1, 2027, following completion of tenant improvements. The first-year monthly rental rate for the expansion is $5.35 per SF, rolling to $5.50 per SF in Year 7 for an annualized payment of just under $2M in 2034. Lease terms include an option for expansion on the second floor. Ahead of its move into the new space, Ideaya Bio will take an additional 10,600 SF of temporary office space on the first floor, along with 2,600 SF of flex space, while DivcoWest begins tenant improvements. The San Francisco-based real estate investment firm said it would contribute $6.8M to TI work. DivcoWest purchased the former Johnson Johnson facility at 5000 Shoreline Court for $165M, the San Francisco Business Times reported . In repositioning the asset into Class-A lab and office space, DivcoWest outfitted the building with a new 1,200-kilowatt generator system, upgraded electrical systems to accommodate 4,000 amps of power delivery, and replaced rooftop mechanical systems. Ideaya's lease continues a trend of smaller deals being inked for lab and office space in the Bay Area . In the first quarter, average lease size in the Bay Area’s life sciences market was just under 20K SF, a 28.5% decline from the market’s five-year average lease size of nearly 28K SF , according to Newmark . Contact Rob Sabo at rob.sabo@bisnow.com Related Topics: DivcoWest , Johnson Johnson",
+      "published_at": 1778105185000,
+      "score": 18,
       "tags": [
         "deals",
-        "data-center",
-        "texas",
-        "houston",
-        "austin"
+        "office",
+        "california",
+        "trend",
+        "earnings"
       ],
       "heat_signals": [
-        "texas",
-        "houston",
-        "austin"
+        "trend",
+        "annual"
       ],
       "section": "cre",
       "cre_subcategory": null,
-      "id": "77271d29",
-      "title_zh": "SpaceX 拟投 $55B 于 Texas 建 Terafab 芯片厂，总投可达 $119B",
-      "summary_zh": "Grimes County 半导体制造基地 6 月审议 tax abatement；Tesla-SpaceX-xAI 合资项目旨在降低对 Samsung、TSMC 依赖",
+      "id": "2722c105",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
       "importance": 3,
       "impact": "neutral",
-      "fetched_at": 1778142784912
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "City Fines Bronx 'Worst Landlords' $31M, Pushes To Intervene In Foreclosure",
+      "link": "https://www.bisnow.com/new-york/news/multifamily/zohran-mamdani-bronx-landlords-karan-singh-rajmattie-persaud-court-judgment-134452",
+      "description": "News City Fines Bronx 'Worst Landlords' $31M, Pushes To Intervene In Foreclosure New York Multifamily View count: New York Multifamily May 06, 2026 | 1:32 p.m. ET Sasha Jones, New York City After racking up almost 2,000 violations, two Bronx landlords have been ordered to pay tens of millions of dollars in penalties over the conditions of their buildings. Karan Singh and Rajmattie Persaud , the owners of Robert Fulton Terrace and Fordham Towers, have been slapped with a $31M judgment in a lawsuit brought by the New York City Department of Housing Preservation and Development, Mayor Zohran Mamdani and HPD Commissioner Dina Levy announced Wednesday . YouTube/NYC Mayor's Office Mayor Zohran Mamdani, flanked by Public Advocate Jumaane Williams and Mayor's Office to Protect Tenants Director Cea Weaver, at a press conference May 6, 2026 As part of the judgment, over $900K will be frozen from Singh and Persaud's bank accounts. A housing court judge ordered an independent chief restructuring officer to be appointed. They will use the funds to make critical repairs to the 500 units across the two buildings. Fannie Mae already initiated foreclosure proceedings on the buildings last year after the landlords defaulted on a $61.5M mortgage. In court filings, the lender alleged that the Environmental Control Board had filed hundreds of violations against both properties, totaling nearly $705K in fines. The complaint also alleged that the landlords owe several liens on the properties for unpaid utilities, including about $4M to the New York City Water Board and $3M to Consolidated Edison. Another lawsuit, filed by the Legal Aid Society on behalf of 62 tenants in 2024, claimed that the Fulton property had 600 HPD violations, with 200 classified as “immediately hazardous.” The violations, which include chronic heat and hot water outages, broken elevators and infestations, now total nearly 2,000, Legal Aid Society Staff Attorney Zoe Kheyman said in a statement on Wednesday. Singh and Persaud have also previously made appearances on New York City Public Advocate Jumaane Williams ’ Worst Landlord Watchlist. Google Maps Fulton Towers at 530-540 E. 169th St. in the Bronx The Mamdani administration is now asking that Fannie Mae work with HPD and tenants to identify a buyer who will be able to maintain the buildings. “This administration secured the largest penalty in HPD’s history because no landlord is above the law. But penalties alone are not enough,” Mamdani said in a statement. “We are taking control of the situation to make sure repairs are made and conditions are permanently improved.” The case, brought by the Anti-Harassment Unit within HPD’s Housing Litigation Division, was first filed in 2024. Levy noted that she organized with the tenants in the buildings in 2009, when the properties transitioned out of the Mitchell-Lama Program. The court judgment will give HPD “leverage in bankruptcy proceedings, which we’ll use to deliver better outcomes for residents,” Levy said in a statement. The city previously objected to the bankruptcy sale of Pinnacle Group ’s 5,200-unit portfolio. Nonetheless, the sale to Zohar Levy ’s Summit Properties USA was approved by a judge just days after Mamdani took office. Contact Sasha Jones at sasha.jones@bisnow.com Related Topics: Fannie Mae , Bronx , Legal Aid Society , Department of Housing Preservation and Development , Jumaane Williams , Karan Singh , Cea Weaver , Zohran Mamdani , Rajmattie Persaud , Dina Levy , Zoe Kheyman",
+      "published_at": 1778081126000,
+      "score": 14,
+      "tags": [
+        "deals",
+        "office",
+        "multifamily",
+        "nyc",
+        "macro",
+        "landlord"
+      ],
+      "heat_signals": [
+        "fannie mae"
+      ],
+      "section": "cre",
+      "cre_subcategory": null,
+      "id": "f3b12f56",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Nvidia, Manufacturer To Build 3 U.S. Plants To Support Data Centers",
+      "link": "https://www.bisnow.com/national/news/industrial/nvidia-partners-on-us-data-center-material-manufacturing-facilities-134455",
+      "description": "News Nvidia, Manufacturer To Build 3 U.S. Plants To Support Data Centers National Industrial View count: National Industrial May 06, 2026 | 1:39 p.m. ET Emily Wishingrad, Washington, D.C. Chip giant Nvidia is partnering with Corning, a manufacturer of connectivity equipment used in data centers, to create U.S. facilities where Corning can produce its transmission materials. Pixabay/Lucent_Designs_dinoson20 The partnership plans to build three new manufacturing facilities in North Carolina and Texas, the companies announced Wednesday . The new facilities would allow Corning to multiply its U.S.-based manufacturing capacity of optical connectivity equipment by 10 and expand its U.S. fiber production capacity by more than 50%. The companies didn't disclose the size of the planned developments or where they would be located in those states. But they said the three facilities would create more than 3,000 “high-paying jobs.” In the release, Nvidia founder and CEO Jensen Huang said artificial intelligence is creating a “once-in-a-generation opportunity to reinvigorate American manufacturing and supply chains.” “What NVIDIA is doing is nothing short of extraordinary, not just for the future of artificial intelligence, but for the American advanced manufacturing workforce,” Corning CEO Wendell Weeks said. “This partnership is proof that AI is not just a technology story. It is a manufacturing story, and it is happening here in the United States.” In January, Corning reached a deal with Meta , worth up to $6B, to supply the tech giant's North Carolina data centers with its connectivity technology. The supply deal came after Corning announced in October it planned to expand its plant in Hickory, North Carolina, with an investment of between $170M and $268M. Corning's stock price surged after Wednesday's announcement, up more than 13% as of 1:20 p.m. ET, and Nvidia's was up 4%. Nvidia, the world's largest company by market cap at $4.97T, supplies the majority of the world's data center chips. Over the past year, it has been dipping into other segments of the AI and data center infrastructure world through partnerships. The company this week partnered with PulteGroup and a San Francisco-based startup on a strategy to install small data center “nodes” on commercial and residential properties. In January, Nvidia announced a partnership with pharmaceutical company Eli Lilly to build an AI-powered laboratory in South San Francisco, with plans to spend $1B on infrastructure and talent over five years. And in September, the company announced it was making a $100B equity infusion into OpenAI to support its plan to build out facilities for at least 10 gigawatts of AI computing capacity. Contact Emily Wishingrad at emily.wishingrad@bisnow.com Related Topics: data center , Eli Lilly , Nvidia , PulteGroup , OpenAI , Corning",
+      "published_at": 1778080830000,
+      "score": 13,
+      "tags": [
+        "deals",
+        "data-center",
+        "industrial",
+        "texas",
+        "california"
+      ],
+      "heat_signals": [
+        "texas"
+      ],
+      "section": "cre",
+      "cre_subcategory": "数据中心",
+      "id": "ceb807b7",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
     },
     {
       "source_id": "trd-national",
@@ -599,101 +561,25 @@
         "deals"
       ],
       "region": "national",
-      "title": "World’s largest bicycle manufacturer rides into Boulder",
-      "link": "https://therealdeal.com/national/denver/2026/05/06/giant-group-worlds-biggest-bike-maker-moves-hq-to-boulder/",
-      "description": "The world’s largest bicycle manufacturer is moving its U.S. headquarters to Boulder . Giant Group U.S.A., the American subsidiary of Taiwan -based Giant Group Manufacturing, signed a 10-year lease for 44,000 square feet at 3825 Walnut Street, the Denver Business Journal reported . The building is owned by Boulder-based Conscience Bay, according to tax assessor records. Giant’s headquarters will take up almost half of the 100,000-square-foot building, which Conscience Bay previously planned to redevelop into a life sciences campus. Giant Group U.S.A. will move from Newbury Park in Southern California to the Denver area . The company plans to move next year, following a nine-month renovation. The building is almost entirely a warehouse with roughly 16,000 square feet of office space. Layne McBride of the Colorado Group represented Giant in the deal. SIGN UP Boulder is a top cycling hub in the United States, with over 300 miles of bikeways and 100 pedestrian underpasses that avoid vehicular traffic intersections. It’s also a training ground for professional cyclists and triathletes. Giant is working with an architect to design its headquarters, which will include retail space, a showroom and office space. The relocation deepens Giant’s foothold in Boulder after its subsidiary SPIA Cycling acquired Stages Cycling out of bankruptcy in 2024. Foundation Fitness, Stages’ parent company, filed for Chapter 11 bankruptcy protection last summer before Giant stepped in to buy its assets. Stages is expected to vacate its headquarters at 5335 Sterling Drive and fold operations into Giant’s Walnut Street base. The 22,000-square-foot Sterling Drive property is being marketed for sale for $5.5 million. Giant previously estimated the headquarters move could eventually bring about 125 jobs to Boulder, though staffing is planned to ramp up gradually as the company grows into the space. — Chris Malone Méndez Read more Residential Denver Denver-area apartment vacancy reaches near two-decade high",
-      "published_at": 1778112000000,
-      "score": 15,
+      "title": "Boston-area university sells half of its campus for luxury development",
+      "link": "https://therealdeal.com/national/boston/2026/05/06/boston-area-school-sells-campus-for-luxury-development/",
+      "description": "A pair of real estate developers is taking advantage of a Boston-area college’s desire to consolidate and raise cash. AvalonBay Communities and Winn Development Company scored approval from local officials for a 340-unit luxury housing project on the south campus of Salem State University, a public college located roughly 16 miles north of Boston, the Boston Business Journal reported . The agreement to sell the property to the developers was reached two years ago, but remains contingent on a few factors. The purchase price was not disclosed by the school. It is set to become public when the sale closes. “The sale of South Campus allows the university to focus on a smaller footprint, alleviating some operational costs associated with deferred maintenance and outdated facilities,” university officials said in a statement. The luxury multifamily development, dubbed Avalon Salem and set to unfold at 8 Harrison Road, is only the first phase of the broader Forest River Residences project, which is expected to include another 145 units on the campus site. The subsequent phase will involve a mix of new construction and repurposing of existing buildings. SIGN UP The 23-acre lot will also include more than 500 parking spaces. The approval process dates back to a plan announced by the school last spring to sell its south campus and shift all of its classes north. The sale of the campus cancels more than $50 million in deferred maintenance and operational costs. The school intends to complete its campus consolidation by fall 2027. Construction on the luxury housing is expected to begin this summer, though the school will maintain ownership of the site until all classes are moved to the other part of the campus. Proximity to schools has long been of interest to developers in the Boston area, whether for student use or otherwise. Controversial landlord Alpha Management recently acquired a handful of off-campus housing properties in Boston’s Brighton neighborhood for a combined $36 million , offering close access to major universities like Boston College and Boston University. — Holden Walter-Warner Read more Commercial Boston Boston’s “most infamous landlord” still making deals",
+      "published_at": 1778099490000,
+      "score": 12,
       "tags": [
         "deals",
-        "industrial",
-        "office",
         "multifamily",
-        "california",
-        "trend"
-      ],
-      "heat_signals": [
-        "vacancy"
-      ],
-      "section": "cre",
-      "cre_subcategory": null,
-      "id": "ee0d0d6f",
-      "title_zh": "全球最大自行车制造商 Giant Group 迁入 Boulder，签 10 年 44K SF 租约",
-      "summary_zh": "从加州 Newbury Park 搬迁，深化 Colorado 骑行产业集聚；建筑原为 warehouse，将改造为 showroom+office+retail",
-      "importance": 2,
-      "impact": "neutral",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "bisnow",
-      "source_name": "Bisnow",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "St. Regis Residences Developer: Affordability Isn't A Problem",
-      "link": "https://www.bisnow.com/houston/news/construction-development/satya-breaks-ground-st-regis-residences-houston-134462",
-      "description": "News St. Regis Residences Developer: Affordability Isn't A Problem Houston Construction Dev View count: Houston C D May 06, 2026 | 5:24 p.m. ET Maddy McCarty, Houston Houston-based developer Satya broke ground Wednesday on the St. Regis Residences, Houston, which is already about half sold to wealthy buyers seeking a lock-and-leave lifestyle . Courtesy of Shimahara Visual A rendering of the porte cochere entrance at The St. Regis Residences, Houston The speed of sales at the 38-story tower exemplifies the demand for luxury-branded condominiums in the Houston market, Satya CEO Sunny Bathija said. Forty-five percent of the 90 planned units are presold, including all seven penthouses. Bathija initially worried that the project team had designed too many penthouses. But after seeing buyer behavior, the developers are leaving flexibility to combine units, creating even bigger floor plans totaling 9K SF. “I don’t think affordability is a problem,” Bathija said. “They want the lifestyle, they want the brand, they want the luxury. They have the money. They don’t want to leave the luxury of a house for something just normal.” The project at 102 Asbury St. is slated for completion in the first quarter of 2029. It will be the first purely residential St. Regis development in Texas. Other branded condos planned in the Inner Loop include The Ritz-Carlton Hotel Residences at 2120 Post Oak Blvd. and The Birdsall, Auberge Collection at The RO , which will have 44 private residences above a 105-room luxury hotel. Making the St. Regis exclusively residential was another way of catering to the luxury buyer, Bathija said. “You don’t have to share your $8M unit,” he said. “You want to be with like-minded people.” St. Regis Residences start at $3M. The last remaining penthouse was listed in January for $14.5M, or $3,100 per SF, shattering the price-per-square-foot record for Houston high-rise condos. Without disclosing actual sales prices, Douglas Elliman Development Marketing, which is managing sales and marketing, said the project has broken that record. “This is really becoming the quality of residential lifestyle that all buyers are seeking,” Jay Phillip Parker, CEO of Douglas Elliman’s Florida region brokerage, said at the groundbreaking event Wednesday. “This will undoubtedly become an iconic destination for residential living in Houston.” Courtesy of Shimahara Visual A rendering of The St. Regis Residences, Houston The St. Regis Residences development is on 4 acres of previously undeveloped land just north of Buffalo Bayou . The project will include more than 40K SF of amenities and services, including St. Regis Butler Service, valet and concierge. Amenities will include an Astor dining room and a cognac bar on the 20th floor, as well as a pool deck with cabanas, a fitness area, a spa, a wellness center, an owner’s lounge, a pet spa, butterfly gardens and full-building generator backup. Since plans were first revealed in late 2024 , Satya altered the design to add more units and another floor of penthouses. “I wish I had added three more floors,” Bathija said Wednesday. But the number of units is intentionally in a sweet spot, he said, adding that it is small enough to help the project feel exclusive but large enough to generate a return on the land and construction. Bathija bought the land over three years ago, he said, recalling a time he showed it to a Marriott representative on a “mushy,” rainy day. Bathija spent a year talking with Marriott , the parent company of St. Regis, before approaching IBC Bank for its $255M construction loan , IBC Bank Houston CEO Jeff Samples said. While the project had to hit certain thresholds to secure financing and start construction, Samples and Bathija both cited their 25-year professional relationship and Satya’s development experience as reassuring factors for the loan. There is a real need for branded, high-end luxury homes in Houston, and the projects underway likely won’t be the last, Samples said. ",
-      "published_at": 1778096665000,
-      "score": 14,
-      "tags": [
-        "deals",
-        "hotel",
-        "texas",
-        "houston",
-        "earnings",
-        "brokerage"
-      ],
-      "heat_signals": [
-        "texas",
-        "houston"
-      ],
-      "section": "cre",
-      "cre_subcategory": null,
-      "id": "f771c66e",
-      "title_zh": "Houston St. Regis Residences 预售 45%，luxury condo 需求韧性凸显",
-      "summary_zh": "Satya CEO 称 affordability 非高端客群考量；全部 7 套 penthouse 售罄，项目可合并单元至 9K SF，2029 Q1 交付",
-      "importance": 3,
-      "impact": "long-pos",
-      "fetched_at": 1778142784912
-    },
-    {
-      "source_id": "rebusiness-online",
-      "source_name": "REBusiness Online",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Choate Construction to Relocate Atlanta Office to 57,000 SF Space at Terraces in Central Perimeter",
-      "link": "https://rebusinessonline.com/choate-construction-to-relocate-atlanta-office-to-57000-sf-space-at-terraces-in-central-perimeter/",
-      "description": "Terraces is a 1 million-square-foot office campus in Atlanta's Central Perimeter submarket. Choate Construction will move into its 57,000-square-foot space at Terraces in first-quarter 2027. Georgia Leasing Activity Office Southeast Choate Construction to Relocate Atlanta Office to 57,000 SF Space at Terraces in Central Perimeter by John Nelson May 6, 2026 May 6, 2026 2 ATLANTA — Choate Construction has signed a lease to relocate its corporate headquarters to Terraces, a 1 million-square-foot office campus in Atlanta’s Central Perimeter submarket. The locally based general contractor will move its more than 200 employees to the two-building campus in first-quarter 2027. The 57,000-square-foot lease brings Terraces to 80 percent occupancy. Brooke Dewey and Glenn Aspinwall of JLL represented the landlord, MetLife Investment Management, which manages Terraces on behalf of an undisclosed client. Jeff Heller and John Winter of Stream Realty Partners represented Choate Construction. Smallwood is providing interior design services for the tenant’s new space, as well as branding and graphic design services. Share Facebook Twitter Linkedin Email previous post Woodside Health Acquires 40,000 SF Medical Office Building in Chapel Hill, North Carolina next post Colliers Brokers Sale of 483-Unit Apartment Community in Greensboro, North Carolina You may also like Town Lane, Gillon Property Acquire 460,000 SF Retail,... May 6, 2026 Finial Group Negotiates 12,500 SF Industrial Lease in... May 6, 2026 Newmark Negotiates $64M Sale of Apartment Community in... May 6, 2026 Colliers Brokers Sale of 483-Unit Apartment Community in... May 6, 2026 Woodside Health Acquires 40,000 SF Medical Office Building... May 6, 2026 Accredo Health Group Signs 40,873 SF Industrial Lease... May 6, 2026 EPIC Insurance Signs Office Lease Expansion in Midtown... May 6, 2026 Alta Warehousing Signs 392,066 SF Industrial Lease in... May 5, 2026 Finial Group Negotiates 24,150 SF Industrial Lease in... May 5, 2026",
-      "published_at": 1778077156000,
-      "score": 13,
-      "tags": [
-        "deals",
-        "industrial",
-        "office",
-        "multifamily",
-        "trend",
         "landlord"
       ],
-      "heat_signals": [
-        "occupancy"
-      ],
+      "heat_signals": [],
       "section": "cre",
-      "cre_subcategory": "办公",
-      "id": "a05cdc22",
-      "title_zh": "Choate Construction 签约迁入 Atlanta Central Perimeter 57K SF",
-      "summary_zh": "Terraces 出租率升至 80%，200+ 员工 2027 Q1 入驻；JLL 代表 MetLife Investment Management  landlord 端",
-      "importance": 2,
+      "cre_subcategory": null,
+      "id": "102a7231",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
       "impact": "neutral",
-      "fetched_at": 1778142784912
+      "fetched_at": 1778146274794
     },
     {
       "source_id": "bisnow",
@@ -705,33 +591,120 @@
         "deals"
       ],
       "region": "national",
-      "title": "Prepare For Relaunch: Peakline Targets $1.3B Fundraise For Opportunity Zones",
-      "link": "https://www.bisnow.com/national/news/opportunity-zones/prepare-for-relaunch-peakline-rolls-out-fund-targeting-13b-for-opportunity-zones-134424",
-      "description": "Peakline Real Estate Funds is getting an early start to raising money ahead of the relaunch of opportunity zones.",
-      "published_at": 1777995551000,
-      "score": 10,
+      "title": "White & Case Takes Nearly Entire Building In D.C. Office Relocation",
+      "link": "https://www.bisnow.com/washington-dc/news/office/law-firm-coming-to-anchor-nearly-full-building-near-white-house-134461",
+      "description": "News White & Case Takes Nearly Entire Building In D.C. Office Relocation Washington, D.C. Office View count: Washington, D.C. Office May 06, 2026 | 4:46 p.m. ET Emily Wishingrad, Washington, D.C. The list of major law firm relocations driving the D.C. office market continues to unfurl. White Case signed a lease to occupy 196K SF across 12 floors at Grosvenor ’s 1701 Pennsylvania Ave. NW, the owner announced Wednesday in a joint release with the law firm’s broker, JLL . Google Maps Grosvenor's office building at 1701 Pennsylvania Ave. NW The deal kick-starts a two-year renovation project at the 1960s-era property across the street from the White House. The work is set to include full exterior window replacements, a new rooftop penthouse, lobby and common area improvements, and a new fitness facility. It is expected to be completed in November 2028, and White Case is planning to move in by December of the following year. Grosvenor didn't disclose the cost of the renovation. Once the renovation is complete, the property will total 208K SF, with White Case taking 94% of its total office space. “We’re pleased to reaffirm our long-term commitment to Washington, D.C. with this landmark lease that reflects strong client demand and a continued investment in our people,” White Case Office Executive Partner Hansel Pham said in the release. White Case is currently at 701 13th St. NW, next to a Metro Center station entrance. The firm had signed a 149K SF renewal at the 421K SF building owned by Jamestown in 2014. Grosvenor, which is the real estate development and investment business of the Duke of Westminster Hugh Grosvenor , has owned the Pennsylvania Avenue property for 40 years. It was last renovated in 2006, according to its website. The property is home to ground-floor retailers Peet’s Coffee, Potbelly and Immigrant Food. “With White Case as the long-term tenant and a comprehensive renovation program, the delivery of this remarkable asset will set a new standard for the Pennsylvania Avenue corridor,” Grosvenor Executive Vice President of Investment Mark Purdy said. Grosvenor was represented in the deal by Cushman Wakefield’s John Skolnik and Michael Katcher . In the years since the pandemic, D.C. trophy office development and redevelopments have been fueled solely by law firm anchor preleases. BXP has two 320K SF trophy office buildings planned for law firm anchors in downtown D.C.: one at Metro Center and the other in the West End . They follow Rockefeller Group and Stonebridge ’s redevelopment of the former WMATA headquarters building for Crowell Moring, which it completed at the end of the year, and Skanska ’s ground-up 17xM, which it developed for anchor tenant Gibson, Dunn Crutcher and delivered in 2024. Contact Emily Wishingrad at emily.wishingrad@bisnow.com Related Topics: JLL , White Case , Cushman Wakefield , Grosvenor",
+      "published_at": 1778093941000,
+      "score": 12,
       "tags": [
-        "mixed-asset",
-        "deals"
+        "deals",
+        "office",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "section": "cre",
+      "cre_subcategory": "办公",
+      "id": "98f396df",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "pere-news",
+      "source_name": "PERE News",
+      "source_tier": "B",
+      "source_weight": 10,
+      "source_tags": [
+        "institutional",
+        "deals",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Private real estate’s compensation recovery gathers steam",
+      "link": "https://www.perenews.com/private-real-estates-compensation-recovery-gathers-steam/",
+      "description": "In 2025, industry professionals saw median remuneration gains in all but one category, according to Sousou Partners and PERE’s latest compensation survey.",
+      "published_at": 1778029245000,
+      "score": 12,
+      "tags": [
+        "institutional",
+        "deals",
+        "trend",
+        "mixed-asset"
+      ],
+      "heat_signals": [],
+      "section": "institutional",
+      "id": "6285443a",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "pere-news",
+      "source_name": "PERE News",
+      "source_tier": "B",
+      "source_weight": 10,
+      "source_tags": [
+        "institutional",
+        "deals",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Berkshire Global: Real estate M&#038;A sees a temporary changing of the guard",
+      "link": "https://www.perenews.com/berkshire-global-real-estate-ma-sees-a-temporary-changing-of-the-guard/",
+      "description": "Non-alts buyers are stepping into the breach as large, publicly traded investment managers take a breather, according to Drew Murphy, partner and head of the private markets advisory practice at Berkshire Global Advisors.",
+      "published_at": 1778029212000,
+      "score": 12,
+      "tags": [
+        "institutional",
+        "deals",
+        "trend",
+        "mixed-asset"
+      ],
+      "heat_signals": [],
+      "section": "institutional",
+      "id": "adf4c042",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
+      "importance": 3,
+      "impact": "neutral",
+      "fetched_at": 1778146274794
+    },
+    {
+      "source_id": "pere-news",
+      "source_name": "PERE News",
+      "source_tier": "B",
+      "source_weight": 10,
+      "source_tags": [
+        "institutional",
+        "deals",
+        "trend"
+      ],
+      "region": "national",
+      "title": "TPG prepares for 'major fundraising cycle' in real estate",
+      "link": "https://www.perenews.com/tpg-prepares-for-major-fundraising-cycle-in-real-estate/",
+      "description": "The firm is raising capital for three real estate funds and plans to launch a fourth vehicle next month.",
+      "published_at": 1778012627000,
+      "score": 12,
+      "tags": [
+        "institutional",
+        "deals",
+        "trend",
+        "mixed-asset"
       ],
       "heat_signals": [],
       "extended_window": true,
       "section": "institutional",
-      "id": "6e2464ba",
-      "title_zh": "Peakline 提前启动 $1.3B Opportunity Zones 基金募资",
-      "summary_zh": "OZ 政策重启前抢跑布局，机会区地产投资热度回升，细节待披露",
+      "id": "c710edfd",
+      "title_zh": "",
+      "summary_zh": "（摘要生成失败）",
       "importance": 3,
-      "impact": "long-pos",
-      "fetched_at": 1778142784912
+      "impact": "neutral",
+      "fetched_at": 1778146274794
     }
   ],
-  "errors": [
-    {
-      "source": "PERE News",
-      "error": "This operation was aborted",
-      "attempted_urls": [
-        "https://www.perenews.com/feed/"
-      ]
-    }
-  ]
+  "errors": []
 }
