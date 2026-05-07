@@ -111,9 +111,10 @@ function parseFeed(xml, source) {
         firstMatch(b, /<summary[^>]*>([\s\S]*?)<\/summary>/i) ||
           firstMatch(b, /<content[^>]*>([\s\S]*?)<\/content>/i),
       );
-      const pub =
+      const pub = decode(
         firstMatch(b, /<published[^>]*>([\s\S]*?)<\/published>/i) ||
-        firstMatch(b, /<updated[^>]*>([\s\S]*?)<\/updated>/i);
+          firstMatch(b, /<updated[^>]*>([\s\S]*?)<\/updated>/i),
+      );
       if (!title || !link) continue;
       items.push(makeItem(source, title, link, desc, pub));
     }
@@ -128,9 +129,10 @@ function parseFeed(xml, source) {
         firstMatch(b, /<description[^>]*>([\s\S]*?)<\/description>/i) ||
           firstMatch(b, /<content:encoded[^>]*>([\s\S]*?)<\/content:encoded>/i),
       );
-      const pub =
+      const pub = decode(
         firstMatch(b, /<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i) ||
-        firstMatch(b, /<dc:date[^>]*>([\s\S]*?)<\/dc:date>/i);
+          firstMatch(b, /<dc:date[^>]*>([\s\S]*?)<\/dc:date>/i),
+      );
       if (!title || !link) continue;
       items.push(makeItem(source, title, link, desc, pub));
     }
@@ -158,7 +160,10 @@ function makeItem(source, title, link, desc, pub) {
 // 抓取 RSS feeds
 // ============================================================
 const UA_BROWSER = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
-const UA_SEC = " Research News Agent contact@example.com";
+// SEC EDGAR 公平使用政策要求 fetcher 在 User-Agent 里携带真实联系方式 — 配置 SEC_CONTACT_EMAIL 为你自己的邮箱
+const UA_SEC = process.env.SEC_CONTACT_EMAIL
+  ? `us-housing-daily-news-agent ${process.env.SEC_CONTACT_EMAIL}`
+  : "us-housing-daily-news-agent contact@example.com";
 const SEC_TICKER = {
   "sec-invh-8k": "INVH (Invitation Homes)",
   "sec-amh-8k": "AMH (American Homes 4 Rent)",
@@ -170,30 +175,78 @@ const pickUA = (s) => {
   return UA_BROWSER;
 };
 
+function buildHeaders(s, url) {
+  const ua = pickUA(s);
+  if (ua === UA_SEC) {
+    return {
+      "User-Agent": UA_SEC,
+      "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, */*",
+      "Accept-Language": "en-US,en;q=0.9",
+    };
+  }
+  let referer = "";
+  try { referer = new URL(url).origin + "/"; } catch {}
+  return {
+    "User-Agent": UA_BROWSER,
+    "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, */*;q=0.9",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Sec-Ch-Ua": '"Chromium";v="120", "Not(A:Brand";v="24", "Google Chrome";v="120"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"macOS"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+    ...(referer ? { "Referer": referer } : {}),
+  };
+}
+
+async function fetchOnce(url, headers, timeoutMs = 12000) {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const r = await fetch(url, { signal: ctrl.signal, headers });
+    if (!r.ok) return { ok: false, status: r.status, error: `HTTP ${r.status}` };
+    const xml = await r.text();
+    return { ok: true, xml };
+  } catch (e) {
+    return { ok: false, error: e.message || String(e) };
+  } finally {
+    clearTimeout(t);
+  }
+}
+
+async function fetchSourceWithFallbacks(s) {
+  const candidates = [s.url, ...(Array.isArray(s.alternates) ? s.alternates : [])];
+  const attempted = [];
+  let lastError = null;
+  for (let i = 0; i < candidates.length; i++) {
+    const url = candidates[i];
+    attempted.push(url);
+    const headers = buildHeaders(s, url);
+    let res = await fetchOnce(url, headers);
+    // primary 上的 5xx / 网络错误重试一次（403 不重试，直接走 alternate）
+    if (!res.ok && i === 0 && (!res.status || res.status >= 500)) {
+      await new Promise(r => setTimeout(r, 1500));
+      res = await fetchOnce(url, headers);
+    }
+    if (res.ok) {
+      return { source: s, items: parseFeed(res.xml, s), attempted_urls: attempted, fetched_url: url };
+    }
+    lastError = res.error;
+  }
+  return { source: s, items: [], error: lastError ?? "fetch failed", attempted_urls: attempted };
+}
+
 async function fetchAllSources(sources) {
   return Promise.all(sources.map(async (s) => {
-    try {
-      const ctrl = new AbortController();
-      const t = setTimeout(() => ctrl.abort(), 12000);
-      const r = await fetch(s.url, {
-        signal: ctrl.signal,
-        headers: {
-          "User-Agent": pickUA(s),
-          "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, */*",
-          "Accept-Language": "en-US,en;q=0.9",
-        },
-      });
-      clearTimeout(t);
-      if (!r.ok) return { source: s, items: [], error: `HTTP ${r.status}` };
-      const xml = await r.text();
-      const items = parseFeed(xml, s);
-      // SEC 标题加 ticker
-      const ticker = SEC_TICKER[s.id];
-      if (ticker) for (const it of items) it.title = `${ticker} ${it.title}`;
-      return { source: s, items };
-    } catch (e) {
-      return { source: s, items: [], error: e.message };
-    }
+    const r = await fetchSourceWithFallbacks(s);
+    if (r.error) return r;
+    const ticker = SEC_TICKER[s.id];
+    if (ticker) for (const it of r.items) it.title = `${ticker} ${it.title}`;
+    return r;
   }));
 }
 
@@ -386,12 +439,14 @@ function appendToSeen(seen, newItems, date) {
 // ============================================================
 // 分类 / Section
 // ============================================================
+// extendedWindow=true 的 section 在 24h 内候选不足 2 条时允许扩到 7d 池（标记 extended_window）；
+// 高频 section (national/cre) 严格 24h，避免几天前的住宅新闻混入。
 const SECTIONS = [
-  { id: "national", label: "全国住宅市场", emoji: "🏠", desc: "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk", quota: 5, maxPerSource: 2 },
-  { id: "sunbelt",  label: "Sunbelt 住宅", emoji: "🌵", desc: "Sun Belt 各州住宅与租赁市场 — 至少一条德州三城", quota: 4, maxPerSource: 2, texasCityRequired: true },
-  { id: "btr",      label: "全国 BTR / SFR", emoji: "🏘", desc: "Build-to-Rent / Single-Family Rental — 至少一条德州三城", quota: 3, maxPerSource: 2, texasCityRequired: true },
-  { id: "cre",      label: "全国 CRE", emoji: "🏢", desc: "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE — 至少一条德州三城", quota: 5, maxPerSource: 2, texasCityRequired: true },
-  { id: "institutional", label: "全国机构资本", emoji: "💰", desc: "PE / REIT 募资、并购、IPO、机构持仓 — 至少一条德州三城", quota: 3, maxPerSource: 2, texasCityRequired: true },
+  { id: "national", label: "全国住宅市场", emoji: "🏠", desc: "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk", quota: 5, maxPerSource: 2, extendedWindow: false },
+  { id: "sunbelt",  label: "Sunbelt 住宅", emoji: "🌵", desc: "Sun Belt 各州住宅与租赁市场 — 至少一条德州三城", quota: 4, maxPerSource: 2, texasCityRequired: true, extendedWindow: true },
+  { id: "btr",      label: "全国 BTR / SFR", emoji: "🏘", desc: "Build-to-Rent / Single-Family Rental — 至少一条德州三城", quota: 3, maxPerSource: 2, texasCityRequired: true, extendedWindow: true },
+  { id: "cre",      label: "全国 CRE", emoji: "🏢", desc: "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE — 至少一条德州三城", quota: 5, maxPerSource: 2, texasCityRequired: true, extendedWindow: false },
+  { id: "institutional", label: "全国机构资本", emoji: "💰", desc: "PE / REIT 募资、并购、IPO、机构持仓 — 至少一条德州三城", quota: 3, maxPerSource: 2, texasCityRequired: true, extendedWindow: true },
 ];
 
 const RE_BTR = /\b(btr|build[-\s]?to[-\s]?rent|sfr|single[-\s]?family\s+rental|invitation\s+homes|american\s+homes\s+4\s+rent|tricon|pretium|progress\s+residential|home\s+partners|nrhc|rental\s+home\s+council)\b/i;
@@ -404,6 +459,15 @@ const TITLE_CRE = /\b(industrial|office|data\s+center|warehouse|warehousing|logi
 const CRE_LEANING_SOURCES = new Set(["bisnow","trd-national","connect-cre","rebusiness-online","multi-housing-news","multifamily-dive","yardi-matrix"]);
 const RE_TX3 = /\b(dfw|dallas|fort\s+worth|houston|austin)\b/i;
 
+// multifamily / apartment 资产类标识（用于精细化分类 — Sun Belt 的 multifamily 归 sunbelt，否则归 cre）
+const RE_MULTIFAMILY_ASSET = /\b(multifamily|apartments?\s+(?:building|community|complex)?|\bmaa\b|essex\s+property|equity\s+residential|avalonbay|camden\s+property|udr\s+inc|mid-?america\s+apartment)\b/i;
+// 区域研究/数据源 — title 通常不带城市但内容默认地产相关，可以兜底进 sunbelt
+const TX_RESEARCH_SOURCES = new Set(["trerc"]);
+// Sun Belt 区域字段值（source.region 可取此集合中任一值即视为 Sun Belt 地区源）
+const SUNBELT_REGIONS = new Set(["texas", "arizona", "georgia", "florida", "north-carolina", "tennessee", "sunbelt"]);
+// 业内花絮（设计趋势、人事变动、新办公室、培训）— 不算地区房市新闻，应归 national 而非 sunbelt
+const RE_NON_HOUSING_MARKET = /\b(luxury\s+home|design\s+trends?|trends?\s+defining|named\s+(?:president|ceo|coo|cfo|chief|new)|opens?\s+(?:\w+\s+)?office|brokerage\s+expan|elev(?:ate|ating)\s+your|face\s+of\s+residential|REALTOR(?:S|®|\s)|coaching|webinar)\b/i;
+
 function classify(item) {
   const t = item.title.toLowerCase();
   if (RE_BTR.test(t)) return "btr";
@@ -411,12 +475,20 @@ function classify(item) {
   const titleHasCRE = TITLE_CRE.test(t);
   const titleHasSB = RE_SUNBELT.test(t);
   const titleHasRes = RE_RES.test(t);
-  const res = RE_RES.test(t) || (item.tags||[]).includes("multifamily") || (item.tags||[]).includes("btr-sfr");
-  const sbMatch = (titleHasSB && res) || (item.region === "texas" && titleHasRes);
-  if (sbMatch && !titleHasCRE) return "sunbelt";
+  const titleHasMultifamily = RE_MULTIFAMILY_ASSET.test(t);
+  // sunbelt：(a) title 含 Sun Belt 城市/州 + residential（含 multifamily），或 (b) source.region∈SUNBELT_REGIONS + residential，或 (c) trerc 区域研究源兜底。
+  // 排除商业资产 title（data center/office → cre）、业内花絮（设计趋势/任命/新办公室 → national）。
+  // 注意：multifamily 在 Sun Belt 范围内仍归 sunbelt（用户期望），只有非 Sun Belt 的 multifamily 才走 cre fallback。
+  const sbMatch = !titleHasCRE && !RE_NON_HOUSING_MARKET.test(t) && (
+    (titleHasSB && titleHasRes) ||
+    (SUNBELT_REGIONS.has(item.region) && titleHasRes) ||
+    TX_RESEARCH_SOURCES.has(item.source_id)
+  );
+  if (sbMatch) return "sunbelt";
   if (!HOMEBUILDER_RE.test(t)) {
     if (RE_CRE.test(t)) return "cre";
     if (CRE_LEANING_SOURCES.has(item.source_id)) return "cre";
+    if (titleHasMultifamily) return "cre"; // 非 Sun Belt 的 multifamily 资产类 → cre
   }
   return "national";
 }
@@ -468,17 +540,8 @@ function pickBySection(items, totalLimit, globalMax = 4) {
     return { section: s, items: taken };
   });
 
-  const reached = () => result.reduce((a, r) => a + r.items.length, 0) >= totalLimit;
-  let progress = true;
-  while (!reached() && progress) {
-    progress = false;
-    for (const r of result) {
-      if (reached()) break;
-      const before = r.items.length;
-      tryTake({ ...r.section, quota: r.items.length + 1 }, buckets.get(r.section.id), r.items);
-      if (r.items.length > before) progress = true;
-    }
-  }
+  // 严格 quota：不再用突破 quota 的 while 循环。补位由 ensureSectionMinimum + main 里
+  // 的 fillers 三段策略接管，确保 national 不会无脑堆积。
 
   // 德州三城保底
   ensureTexasCity(result, buckets, sorted);
@@ -528,15 +591,27 @@ function ensureTexasCity(result, buckets, allCandidates) {
   }
 }
 
-function ensureSectionMinimum(result, fallbackPool) {
+function ensureSectionMinimum(result, fresh24h, fresh7d, minPerSection = 2) {
   const picked = new Set();
   for (const r of result) for (const it of r.items) picked.add(it.link);
   for (const r of result) {
-    if (r.items.length > 0) continue;
-    const cand = fallbackPool
-      .filter(it => classify(it) === r.section.id && !picked.has(it.link))
-      .sort((a, b) => b.score - a.score)[0];
-    if (cand) { r.items.push({ ...cand, extended_window: true }); picked.add(cand.link); }
+    while (r.items.length < minPerSection) {
+      // 先 24h
+      let cand = fresh24h
+        .filter(it => classify(it) === r.section.id && !picked.has(it.link))
+        .sort((a, b) => b.score - a.score)[0];
+      let isExtended = false;
+      // 24h 没了 + section 允许扩窗 → 7d
+      if (!cand && r.section.extendedWindow) {
+        cand = fresh7d
+          .filter(it => classify(it) === r.section.id && !picked.has(it.link))
+          .sort((a, b) => b.score - a.score)[0];
+        isExtended = true;
+      }
+      if (!cand) break;
+      r.items.push(isExtended ? { ...cand, extended_window: true } : cand);
+      picked.add(cand.link);
+    }
   }
 }
 
@@ -587,7 +662,7 @@ async function summarizeBatch(items, opts) {
     `[${i + 1}] (${it.source_name}) ${it.title}\n正文片段: ${it.description.slice(0, 1500)}`);
 
   // System prompt — 强制中文输出
-  const systemPrompt = `你是  的美国住宅地产中文研究员。所有 "t" (中文译标) 和 "s" (中文摘要) 字段必须用中文输出，绝对不能整句用英文。仅保留 公司名 / 行业缩写 / 政府机构 / 数据指标 / 数字单位 / 英文地名 等专有术语为英文。`;
+  const systemPrompt = `你是美国住宅地产中文研究员。所有 "t" (中文译标) 和 "s" (中文摘要) 字段必须用中文输出，绝对不能整句用英文。仅保留 公司名 / 行业缩写 / 政府机构 / 数据指标 / 数字单位 / 英文地名 等专有术语为英文。`;
 
   // User prompt — 含示例
   const prompt = `给每条新闻产出 4 字段 {i, t, s, imp, dir}：
@@ -624,7 +699,8 @@ async function summarizeBatch(items, opts) {
 ✓ s 必须给结论 / 数字 / 立场之一
 ✗ 禁止整句英文输出
 ✗ 禁止"X 谈了/讨论了/表态了"没结论的句式
-✗ 信息不足以提取结论时，s 写"详细见原文"+最少事实，不要编
+✗ 严禁出现"详细见原文 / 详见原文 / 见原文 / 欲知详情请查阅原文"等占位短语
+✓ 正文片段不足时：基于 title 推断事件本身、相关方、行业含义，给出 30-60 中文字符摘要；不要编具体数字，但可以写"细节待披露 / 影响待观察"等措辞
 
 输出 JSON 数组（不带 markdown code fence）：
 
@@ -694,8 +770,14 @@ async function main() {
   const errors = [];
   let okCount = 0;
   for (const r of fetchResults) {
-    if (r.error) errors.push({ source: r.source.name, error: r.error });
-    else okCount++;
+    if (r.error) {
+      errors.push({ source: r.source.name, error: r.error, attempted_urls: r.attempted_urls });
+    } else {
+      okCount++;
+      if (r.fetched_url && r.fetched_url !== r.source.url) {
+        log(`  ↳ ${r.source.name}: 走 alternate ${r.fetched_url}`);
+      }
+    }
   }
   const allItems = fetchResults.flatMap(r => r.items);
   log(`📰 fetched ${okCount}/${fetchResults.length} sources OK, ${allItems.length} raw items`);
@@ -737,6 +819,15 @@ async function main() {
   const fresh7d = filterAlreadySeen(deduped7d, seenAll);
   log(`📅 cross-day filter: seen ${seenAll.length} → fresh ${fresh24h.length} (24h) / ${fresh7d.length} (7d)`);
 
+  // [debug] 池子分布
+  const poolDist = (pool, label) => {
+    const c = { national: 0, sunbelt: 0, btr: 0, cre: 0, institutional: 0 };
+    for (const it of pool) c[classify(it)] = (c[classify(it)] || 0) + 1;
+    log(`📊 ${label}: ${SECTIONS.map(s => `${s.id}=${c[s.id]}`).join(" ")}`);
+  };
+  poolDist(fresh24h, "fresh24h dist");
+  poolDist(fresh7d, "fresh7d  dist");
+
   // 4. Enrich top-30 (并发 fetch full HTML)
   const candidates = fresh24h.sort((a, b) => b.score - a.score).slice(0, ENRICH_TOP_N);
   log(`📄 enriching top-${candidates.length} candidates...`);
@@ -749,9 +840,9 @@ async function main() {
   const rescored = enriched.map(it => scoreItem(it, now));
   const rededuped = dedupe(rescored);
 
-  // 6. Section 配额挑选
+  // 6. Section 配额挑选 — 每 section 至少 2 条；national/cre 严格 24h，sunbelt/btr/inst 不够时扩到 7d
   const sectioned = pickBySection(rededuped, DAILY_LIMIT);
-  ensureSectionMinimum(sectioned, fresh7d);
+  ensureSectionMinimum(sectioned, fresh24h, fresh7d, 2);
   let top = sectioned.flatMap(s => s.items.map(it => {
     const out = { ...it, section: s.section.id };
     if (s.section.id === "cre") out.cre_subcategory = detectCreSubcategory(it);
@@ -771,21 +862,57 @@ async function main() {
     top = top.slice(top.length - DAILY_LIMIT);
     log(`🔻 trimmed from ${before} → ${top.length} (cut ${before - DAILY_LIMIT} lowest-score items)`);
   } else if (top.length < DAILY_LIMIT) {
-    // 少了 → 从全局候选 (rededuped + fresh7d) 按 score 补
+    // 少了 → 三段补位：(1) 24h+quota 限额；(2) 7d+仅扩窗 section+quota 限额；(3) 24h 兜底不限 quota
     const need = DAILY_LIMIT - top.length;
     const links = new Set(top.map(it => it.link));
-    const all = [...rededuped, ...fresh7d.filter(it => !rededuped.some(x => x.link === it.link))];
-    const fillers = all
+    const all24 = [...rededuped, ...fresh24h.filter(it => !rededuped.some(x => x.link === it.link))]
       .filter(it => !links.has(it.link))
-      .sort((a, b) => b.score - a.score)
-      .slice(0, need);
+      .sort((a, b) => b.score - a.score);
+    const sectionById = new Map(SECTIONS.map(s => [s.id, s]));
+    const perSection = new Map(SECTIONS.map(s => [s.id, top.filter(t => t.section === s.id).length]));
+    const fillers = [];
+    // pass 1: 24h 池 + quota 严格
+    for (const it of all24) {
+      if (fillers.length >= need) break;
+      const sid = classify(it);
+      const sec = sectionById.get(sid);
+      if (!sec) continue;
+      if ((perSection.get(sid) || 0) >= sec.quota) continue;
+      fillers.push(it);
+      perSection.set(sid, (perSection.get(sid) || 0) + 1);
+    }
+    // pass 2: 7d 池 + 仅扩窗 section + quota 严格
+    if (fillers.length < need) {
+      const used = new Set(fillers.map(it => it.link));
+      const all7 = fresh7d
+        .filter(it => !links.has(it.link) && !used.has(it.link))
+        .sort((a, b) => b.score - a.score);
+      for (const it of all7) {
+        if (fillers.length >= need) break;
+        const sid = classify(it);
+        const sec = sectionById.get(sid);
+        if (!sec || !sec.extendedWindow) continue;
+        if ((perSection.get(sid) || 0) >= sec.quota) continue;
+        fillers.push({ ...it, extended_window: true });
+        perSection.set(sid, (perSection.get(sid) || 0) + 1);
+      }
+    }
+    // pass 3: 兜底 — 还不够就在 24h 池里不限 quota 补（极端情况下宁可 national 多也不要让 cre/national 用旧数据）
+    if (fillers.length < need) {
+      const used = new Set(fillers.map(it => it.link));
+      for (const it of all24) {
+        if (fillers.length >= need) break;
+        if (used.has(it.link)) continue;
+        fillers.push(it);
+      }
+    }
     for (const it of fillers) {
       const sid = classify(it);
       const enriched = { ...it, section: sid };
       if (sid === "cre") enriched.cre_subcategory = detectCreSubcategory(it);
       top.push(enriched);
     }
-    log(`🔺 filled from ${DAILY_LIMIT - need} → ${top.length} (added ${fillers.length} highest-score items from fallback pool)`);
+    log(`🔺 filled from ${DAILY_LIMIT - need} → ${top.length} (pass1 24h-quota → pass2 7d-extend → pass3 24h-flex)`);
   }
   // 重新排序：让前端按 section 顺序渲染
   const sectionOrder = SECTIONS.map(s => s.id);

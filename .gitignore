@@ -1,19 +1,14 @@
 node_modules/
-.wrangler/
-.dev.vars
-.env
-.env.*
 dist/
 *.log
 .DS_Store
 
-# 旧本地 dry-run state（已被 state/seen.json 替代）
-.seen.json
+# secret env vars — 本地配置文件不进 git，但保留 .env.example 模板
+.env
+.env.*
+!.env.example
 
-# 旧 sample 输出（已被 data/latest.json 替代）
-sample-output.json
+# Vercel CLI / buildCommand 本地跑出来的产物
 .vercel
-
-# Vercel buildCommand 本地跑出来的镜像 + 误操作残留 + npm preview symlink
 public/data
 data/data

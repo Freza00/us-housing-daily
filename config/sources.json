@@ -14,6 +14,9 @@
       "id": "inman",
       "name": "Inman News",
       "url": "https://www.inman.com/feed/",
+      "alternates": [
+        "https://news.google.com/rss/search?q=site:inman.com&hl=en-US&gl=US&ceid=US:en"
+      ],
       "tier": "A",
       "tags": ["housing", "brokerage"],
       "weight": 8,
@@ -41,6 +44,9 @@
       "id": "multi-housing-news",
       "name": "Multi-Housing News",
       "url": "https://www.multihousingnews.com/feed/",
+      "alternates": [
+        "https://news.google.com/rss/search?q=site:multihousingnews.com&hl=en-US&gl=US&ceid=US:en"
+      ],
       "tier": "A",
       "tags": ["multifamily"],
       "weight": 9,
@@ -84,6 +90,33 @@
       "region": "texas"
     },
     {
+      "id": "phoenix-agent",
+      "name": "Phoenix Agent Magazine",
+      "url": "https://phoenixagentmagazine.com/feed/",
+      "tier": "D",
+      "tags": ["phoenix", "arizona", "brokerage"],
+      "weight": 6,
+      "region": "arizona"
+    },
+    {
+      "id": "atlanta-agent",
+      "name": "Atlanta Agent Magazine",
+      "url": "https://atlantaagentmagazine.com/feed/",
+      "tier": "D",
+      "tags": ["atlanta", "georgia", "brokerage"],
+      "weight": 6,
+      "region": "georgia"
+    },
+    {
+      "id": "miami-agent",
+      "name": "Miami Agent Magazine",
+      "url": "https://miamiagentmagazine.com/feed/",
+      "tier": "D",
+      "tags": ["miami", "florida", "brokerage"],
+      "weight": 6,
+      "region": "florida"
+    },
+    {
       "id": "calculated-risk",
       "name": "Calculated Risk (Bill McBride)",
       "url": "https://feeds.feedburner.com/CalculatedRisk",
@@ -96,6 +129,9 @@
       "id": "lance-lambert",
       "name": "Lance Lambert / ResiClub",
       "url": "https://lancelambert.substack.com/feed",
+      "alternates": [
+        "https://news.google.com/rss/search?q=%22Lance+Lambert%22+OR+%22ResiClub%22&hl=en-US&gl=US&ceid=US:en"
+      ],
       "tier": "B",
       "tags": ["housing", "data", "trend"],
       "weight": 10,

@@ -149,7 +149,7 @@ function escapeHtml(s) {
 }
 
 // ========== 渲染：tag chip ==========
-// 固定 filter 集 — 行业惯例 +  BTR 视角的核心 9 个 tag
+// 固定 filter 集 — 行业惯例 + BTR 视角的核心 9 个 tag
 // 每天稳定显示，count = 当天数据中匹配的条数；count=0 时灰色 disabled 但保留 chip
 const FIXED_FILTERS = [
   { id: '__all',         label: '全部' },
