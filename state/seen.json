@@ -1,233 +1,5 @@
 [
   {
-    "url": "https://www.realtor.com/news/trends/high-gas-prices-commuter-tax-homebuyers/",
-    "tokens": [
-      "prices",
-      "climb",
-      "commute",
-      "shrinking",
-      "home",
-      "searches"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/social-security-longevity-tax-torpedo-retirement-plans/",
-    "tokens": [
-      "rising",
-      "life",
-      "expectancy",
-      "threatening",
-      "social",
-      "security",
-      "future",
-      "homeownership"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/reverse-mastermind-summit-leadership-sales/",
-    "tokens": [
-      "women",
-      "take",
-      "leadership",
-      "reins",
-      "reverse",
-      "mastermind",
-      "summit"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/jason-waugh-hsf-affiliates-ceo/",
-    "tokens": [
-      "homeservices",
-      "names",
-      "jason",
-      "waugh",
-      "next",
-      "affiliates"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260325a.htm",
-    "tokens": [
-      "federal",
-      "reserve",
-      "board",
-      "releases",
-      "annual",
-      "audited",
-      "financial",
-      "statements"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/05/06/mortgage-rates-hit-the-highest-level-in-a-month-causing-lower-income-homebuyers-to-drop-out.html",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "highest",
-      "level",
-      "month",
-      "causing",
-      "first",
-      "time",
-      "homebuyers",
-      "drop"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.dmagazine.com/sponsored/2026/05/face-of-residential-real-estate-2/",
-    "tokens": [
-      "face",
-      "residential"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.resiclubanalytics.com/p/lawmakers-against-institutional-homebuying-ban-7-year-selloff-rule-build-to-rent-btr-homebuilding",
-    "tokens": [
-      "lawmakers",
-      "push",
-      "back",
-      "year",
-      "selloff",
-      "rule",
-      "effectively",
-      "halt",
-      "production",
-      "build",
-      "rent",
-      "8211",
-      "resiclub"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/05/06/global-net-lease-acquires-industrial-reit-for-535m/",
-    "tokens": [
-      "global",
-      "lease",
-      "acquires",
-      "industrial",
-      "reit",
-      "$535m"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.bisnow.com/austin/news/ai/spacex-plans-to-spend-an-initial-55b-for-terafab-chip-facility-in-texas-134459",
-    "tokens": [
-      "spacex",
-      "files",
-      "$55b",
-      "terafab",
-      "chip",
-      "facility",
-      "southeast",
-      "texas"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/iran-conflict-gas-prices-10-year-treasury/819468/",
-    "tokens": [
-      "apartment",
-      "execs",
-      "iran",
-      "conflict",
-      "adds",
-      "noise",
-      "economy"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.bisnow.com/houston/news/construction-development/satya-breaks-ground-st-regis-residences-houston-134462",
-    "tokens": [
-      "regis",
-      "residences",
-      "developer",
-      "affordability",
-      "problem"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/apartment-management-consultants-rolls-out-prisma-residential-portal-across-portfolio/",
-    "tokens": [
-      "apartment",
-      "management",
-      "consultants",
-      "rolls",
-      "prisma",
-      "residential",
-      "portal",
-      "across",
-      "portfolio"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/alchemy-properties-plans-resi-conversion-of-vacant-tribeca-garage/",
-    "tokens": [
-      "alchemy",
-      "properties",
-      "resi",
-      "conversion",
-      "vacant",
-      "tribeca",
-      "garage"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://rebusinessonline.com/choate-construction-to-relocate-atlanta-office-to-57000-sf-space-at-terraces-in-central-perimeter/",
-    "tokens": [
-      "choate",
-      "construction",
-      "relocate",
-      "atlanta",
-      "office",
-      "000",
-      "space",
-      "terraces",
-      "central",
-      "perimeter"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://therealdeal.com/national/boston/2026/05/06/boston-area-school-sells-campus-for-luxury-development/",
-    "tokens": [
-      "boston",
-      "area",
-      "university",
-      "sells",
-      "half",
-      "campus",
-      "luxury",
-      "development"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
-    "url": "https://www.perenews.com/blue-owl-raises-9bn-across-four-real-estate-funds/",
-    "tokens": [
-      "blue",
-      "raises",
-      "$9b",
-      "across",
-      "four",
-      "funds"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
     "url": "https://www.nationalmortgagenews.com/news/iran-conflict-sours-real-estate-investor-sentiment-to-3-year-low",
     "tokens": [
       "iran",
@@ -251,6 +23,19 @@
     "shown_date": "2026-05-07"
   },
   {
+    "url": "https://www.realtor.com/research/new-home-sales-march-2026/",
+    "tokens": [
+      "home",
+      "sales",
+      "pace",
+      "picks",
+      "price",
+      "plummets",
+      "march"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
     "url": "https://www.cnbc.com/video/2026/05/06/watch-cnbcs-full-interview-with-fhfa-director-bill-pulte.html",
     "tokens": [
       "watch",
@@ -261,6 +46,17 @@
       "director",
       "bill",
       "pulte"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/05/06/this-is-what-it-costs-investors-to-stay-in-cash-and-what-to-do-instead-.html",
+    "tokens": [
+      "costs",
+      "investors",
+      "stay",
+      "cash",
+      "instead"
     ],
     "shown_date": "2026-05-07"
   },
@@ -277,13 +73,16 @@
     "shown_date": "2026-05-07"
   },
   {
-    "url": "https://www.cnbc.com/2026/05/06/this-is-what-it-costs-investors-to-stay-in-cash-and-what-to-do-instead-.html",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260325a.htm",
     "tokens": [
-      "costs",
-      "investors",
-      "stay",
-      "cash",
-      "instead"
+      "federal",
+      "reserve",
+      "board",
+      "releases",
+      "annual",
+      "audited",
+      "financial",
+      "statements"
     ],
     "shown_date": "2026-05-07"
   },
@@ -350,18 +149,6 @@
     "shown_date": "2026-05-07"
   },
   {
-    "url": "https://www.bisnow.com/atlanta/news/neighborhood/while-a-media-mogul-ted-turner-also-made-his-downtown-atlanta-cre-mark-134464",
-    "tokens": [
-      "turner",
-      "left",
-      "mark",
-      "downtown",
-      "atlanta",
-      "dies"
-    ],
-    "shown_date": "2026-05-07"
-  },
-  {
     "url": "https://therealdeal.com/national/denver/2026/05/06/giant-group-worlds-biggest-bike-maker-moves-hq-to-boulder/",
     "tokens": [
       "world",
@@ -387,19 +174,44 @@
     "shown_date": "2026-05-07"
   },
   {
-    "url": "https://www.perenews.com/2910-north-arthur-ashe-boulevard-richmond-former-greyhound-bus-station-set-for-multifamily-transformation/",
+    "url": "https://www.bisnow.com/austin/news/ai/spacex-plans-to-spend-an-initial-55b-for-terafab-chip-facility-in-texas-134459",
     "tokens": [
-      "2910",
-      "north",
-      "arthur",
-      "ashe",
-      "boulevard",
-      "richmond",
-      "former",
-      "greyhound",
-      "station",
-      "multifamily",
-      "transformation"
+      "spacex",
+      "files",
+      "$55b",
+      "terafab",
+      "chip",
+      "facility",
+      "southeast",
+      "texas"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/iran-conflict-gas-prices-10-year-treasury/819468/",
+    "tokens": [
+      "apartment",
+      "execs",
+      "iran",
+      "conflict",
+      "adds",
+      "noise",
+      "economy"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/apartment-management-consultants-rolls-out-prisma-residential-portal-across-portfolio/",
+    "tokens": [
+      "apartment",
+      "management",
+      "consultants",
+      "rolls",
+      "prisma",
+      "residential",
+      "portal",
+      "across",
+      "portfolio"
     ],
     "shown_date": "2026-05-07"
   },
@@ -426,6 +238,18 @@
       "record",
       "year",
       "fundraising"
+    ],
+    "shown_date": "2026-05-07"
+  },
+  {
+    "url": "https://www.perenews.com/blue-owl-raises-9bn-across-four-real-estate-funds/",
+    "tokens": [
+      "blue",
+      "raises",
+      "$9b",
+      "across",
+      "four",
+      "funds"
     ],
     "shown_date": "2026-05-07"
   }

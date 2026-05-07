@@ -12,3 +12,8 @@ dist/
 
 # 旧 sample 输出（已被 data/latest.json 替代）
 sample-output.json
+.vercel
+
+# Vercel buildCommand 本地跑出来的镜像 + 误操作残留 + npm preview symlink
+public/data
+data/data

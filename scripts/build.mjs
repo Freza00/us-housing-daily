@@ -40,10 +40,27 @@ const DATA_DIR = path.join(ROOT, "data");
 const SEEN_FILE = path.join(STATE_DIR, "seen.json");
 const SEEN_MAX_AGE_DAYS = 21;
 const DAILY_LIMIT = 20;
-const MAX_AGE_HOURS = 24;
+// 时间窗：绝对边界 [昨天 8:57 北京, 今天 8:57 北京)，对应 UTC [昨天 00:57, 今天 00:57)
+// 这个窗口跨日刚好接续 — 第二天的 [今天 8:57, 明天 8:57) 接前一天截止时间，不重不漏
+const WINDOW_END_UTC_HOUR = 0;
+const WINDOW_END_UTC_MIN = 57;
 const ENRICH_TOP_N = 30;
 const ENRICH_TIMEOUT_MS = 8000;
 const ENRICH_MAX_BODY = 4000;
+
+// 计算"上一次 8:57 北京"作为时间窗上界 (close interval)
+// 例：cron 在 UTC 00:57:01 触发 → upperBound = 今天 UTC 00:57:00 → 窗口 = [昨天 00:57, 今天 00:57)
+function computeWindowBounds(now) {
+  const upper = new Date(now);
+  upper.setUTCHours(WINDOW_END_UTC_HOUR, WINDOW_END_UTC_MIN, 0, 0);
+  // 如果 cron 提前几秒触发或时间偏移导致 now 还没到 00:57，回退一天
+  if (now < upper.getTime()) upper.setUTCDate(upper.getUTCDate() - 1);
+  return {
+    upper: upper.getTime(),
+    lower24h: upper.getTime() - 24 * 3600 * 1000,
+    lower7d: upper.getTime() - 7 * 24 * 3600 * 1000,
+  };
+}
 
 // 确保目录存在
 for (const dir of [STATE_DIR, DATA_DIR]) {
@@ -568,34 +585,64 @@ async function summarizeBatch(items, opts) {
   if (items.length === 0) return [];
   const lines = items.map((it, i) =>
     `[${i + 1}] (${it.source_name}) ${it.title}\n正文片段: ${it.description.slice(0, 1500)}`);
-  const prompt = `你是 Wan Bridge 美国住宅地产研究员。给每条新闻产出 4 字段 {i, t, s, imp, dir}。
+
+  // System prompt — 强制中文输出
+  const systemPrompt = `你是 Wan Bridge 的美国住宅地产中文研究员。所有 "t" (中文译标) 和 "s" (中文摘要) 字段必须用中文输出，绝对不能整句用英文。仅保留 公司名 / 行业缩写 / 政府机构 / 数据指标 / 数字单位 / 英文地名 等专有术语为英文。`;
+
+  // User prompt — 含示例
+  const prompt = `给每条新闻产出 4 字段 {i, t, s, imp, dir}：
+- t: 中文译标（≤ 30 中文字符），中文语序重组
+- s: 一句中文摘要（≤ 60 中文字符），必须给结论 / 数字 / 立场
+- imp: 1-5 整数（重要性）
+- dir: long-pos / short-pos / neutral / short-neg / long-neg
+
+【中英文混排示例（必须严格仿照这种风格输出）】
+输入: "Mortgage rates hit the highest level in a month, causing first-time homebuyers to drop out"
+正文: "Mortgage rates rose, loan demand dropped..."
+输出: {"i":1, "t":"30Y mortgage 升至月内高位，first-time 购房者掉队", "s":"上周 mortgage rate 上行致 loan demand 回落，平均贷款额上升说明中低收入买家退出", "imp":4, "dir":"short-neg"}
+
+输入: "MAA sees strong Sun Belt demand, rent growth ahead"
+正文: "Mid-America Apartment Communities Q1 earnings call..."
+输出: {"i":2, "t":"MAA Q1：Sun Belt multifamily rent growth 拐点显现", "s":"Mid-America Apartment Communities Q1 业绩 — Sun Belt 入住率回升、rent growth 拐点出现", "imp":5, "dir":"long-pos"}
+
+输入: "Build-to-rent explodes in Atlanta — and agents are taking notice"
+正文: "30% of Atlanta SFR market is institutional-owned, 10x national avg..."
+输出: {"i":3, "t":"Atlanta BTR 大爆发：机构持有 SFR 30%（全国均值 10 倍）", "s":"Atlanta 都会区机构投资者持有 SFR 约 30%，是全国均值 10 倍；BTR/SFR 龙头城市从原型期进入主流期", "imp":5, "dir":"long-pos"}
 
 【保留英文 — 行业惯例不翻译】
-公司 / 媒体 / 人名（Blackstone, Pretium, Bloomberg 等）
-行业缩写（REIT, IPO, M&A, BTR, SFR, NOI, cap rate, refi, special servicing 等）
-政府机构（Fed, FOMC, FHFA, HUD, Treasury, CFPB, SEC, Senate, ICE 等）
-数据指标（JOLTS, CPI, PMMS, Case-Shiller, new home sales, existing home sales, housing starts 等）
-单位 / 数字（Q3, $1.75B, 475K SF, 6.3%, 30Y mortgage, bps）
-英文地名（Manhattan, NYC, Sun Belt 等）
+公司 / 媒体 / 人名：Blackstone, KKR, Pretium, Bloomberg, Cleary Gottlieb, MAA, AMH, INVH 等
+行业缩写：REIT, IPO, M&A, BTR, SFR, NOI, LTV, DSCR, cap rate, refi, special servicing
+政府机构：Fed, FOMC, FHFA, HUD, Treasury, CFPB, SEC, Senate, ICE
+数据指标：JOLTS, CPI, PMMS, Case-Shiller, new home sales, existing home sales, housing starts
+单位 / 数字：Q1/Q2/Q3/Q4, $1.75B, 475K SF, 6.3%, 30Y mortgage, bps, YoY
+英文地名：Manhattan, NYC, Sun Belt, Houston, Austin, DFW（除非通用译名如"曼哈顿"）
+
+中文化的：政策 / 宏观 / 利率 / 多户 / 办公 / 工业 / 数据中心 / 零售 / 酒店 / 租约 / 并购 / 募资 / 业绩 / 趋势 / 业主 / 经纪 / 监管 等
 
 【硬约束】
-✓ s 必须给出结论 / 数字 / 立场 / 方向之一；imp 1-5；dir 五选一 (long-pos/short-pos/neutral/short-neg/long-neg)
-✗ 禁止 "X 谈了/讨论了/表态了" 没结论的句式 / 禁止编造 / 信息不足时写"详细见原文"+最少事实
+✓ t 和 s 必须用中文写（保留英文术语除外）— 这是强制要求！
+✓ s 必须给结论 / 数字 / 立场之一
+✗ 禁止整句英文输出
+✗ 禁止"X 谈了/讨论了/表态了"没结论的句式
+✗ 信息不足以提取结论时，s 写"详细见原文"+最少事实，不要编
 
-输出 JSON 数组 (不带 markdown code fence)：[{"i":N,"t":"...","s":"...","imp":N,"dir":"..."}, ...]
+输出 JSON 数组（不带 markdown code fence）：
 
 新闻列表：
 
 ${lines.join("\n\n")}
 
-请直接输出 JSON 数组：`;
+请直接输出 JSON 数组（每条都要严格仿照上面示例的中文风格）：`;
 
   const r = await fetch(opts.endpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json", "Authorization": `Bearer ${opts.apiKey}` },
     body: JSON.stringify({
       model: opts.model,
-      messages: [{ role: "user", content: prompt }],
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: prompt },
+      ],
       max_tokens: 4000,
       temperature: 0.3,
     }),
@@ -653,34 +700,36 @@ async function main() {
   const allItems = fetchResults.flatMap(r => r.items);
   log(`📰 fetched ${okCount}/${fetchResults.length} sources OK, ${allItems.length} raw items`);
 
-  // 2. 打分 + 24h 过滤 + 实体级去重
+  // 2. 打分 + 时间窗过滤 + 实体级去重
+  // 时间窗：绝对边界 [昨天 8:57 北京, 今天 8:57 北京)，跨日不重不漏
   const now = Date.now();
+  const { upper, lower24h, lower7d } = computeWindowBounds(now);
+  log(`⏰ window UTC [${new Date(lower24h).toISOString().slice(0,16)} ~ ${new Date(upper).toISOString().slice(0,16)})`);
+  log(`⏰        北京 [${new Date(lower24h + 8*3600*1000).toISOString().slice(0,16).replace('T',' ')} ~ ${new Date(upper + 8*3600*1000).toISOString().slice(0,16).replace('T',' ')})`);
+
   const scored = allItems.map(it => scoreItem(it, now));
   const sourcesById = new Map(config.sources.map(s => [s.id, s]));
   const HOUSING_KW = ["housing","home","rental","rent","mortgage","real estate","btr","single-family","multifamily","apartment","homeowner","fhfa","freddie","fannie","fed rate","construction","homebuilder","zillow","redfin"];
-  const cutoff24h = now - MAX_AGE_HOURS * 3600 * 1000;
-  const filtered24h = scored.filter(it => {
-    if (it.published_at > 0 && it.published_at < cutoff24h) return false;
-    const src = sourcesById.get(it.source_id);
-    if (src?.filter_required) {
-      const t = `${it.title} ${it.description}`.toLowerCase();
-      if (!HOUSING_KW.some(k => t.includes(k))) return false;
-    }
+
+  function inWindow(it, lowerBound) {
+    // 没 pub_date 的接受（兜底）— 部分信源 RSS 不带 pubDate
+    if (!it.published_at) return true;
+    if (it.published_at < lowerBound) return false;
+    if (it.published_at >= upper) return false; // 严格小于上界 → 接续不重叠
     return true;
-  });
-  const cutoff7d = now - 7 * 24 * 3600 * 1000;
-  const filtered7d = scored.filter(it => {
-    if (it.published_at > 0 && it.published_at < cutoff7d) return false;
+  }
+  function passesFilterRequired(it) {
     const src = sourcesById.get(it.source_id);
-    if (src?.filter_required) {
-      const t = `${it.title} ${it.description}`.toLowerCase();
-      if (!HOUSING_KW.some(k => t.includes(k))) return false;
-    }
-    return true;
-  });
+    if (!src?.filter_required) return true;
+    const t = `${it.title} ${it.description}`.toLowerCase();
+    return HOUSING_KW.some(k => t.includes(k));
+  }
+
+  const filtered24h = scored.filter(it => inWindow(it, lower24h) && passesFilterRequired(it));
+  const filtered7d = scored.filter(it => inWindow(it, lower7d) && passesFilterRequired(it));
   const deduped24h = dedupe(filtered24h);
   const deduped7d = dedupe(filtered7d);
-  log(`⏰ 24h filter ${filtered24h.length} → dedupe ${deduped24h.length}`);
+  log(`⏰ 24h-window filter ${filtered24h.length} → dedupe ${deduped24h.length}`);
 
   // 3. 跨日去重
   const seenAll = pruneSeen(loadSeen(), now);
@@ -708,10 +757,52 @@ async function main() {
     if (s.section.id === "cre") out.cre_subcategory = detectCreSubcategory(it);
     return out;
   }));
-  log(`🏆 picked ${top.length} items across ${SECTIONS.length} sections`);
-  for (const r of sectioned) {
-    const ext = r.items.filter(x => x.extended_window).length;
-    log(`   ${r.section.emoji} ${r.section.label}: ${r.items.length}/${r.section.quota}${ext > 0 ? ` (${ext} 扩窗)` : ""}`);
+
+  // 7. 强制总数 = DAILY_LIMIT (不能多不能少)
+  if (top.length > DAILY_LIMIT) {
+    // 多了 → 砍非扩窗最低分
+    const before = top.length;
+    top.sort((a, b) => {
+      // 扩窗优先保留
+      if (!!a.extended_window !== !!b.extended_window) return a.extended_window ? -1 : 1;
+      return a.score - b.score; // 升序，最低分排前面
+    });
+    // 砍最低分（数组前面）直到 length = limit
+    top = top.slice(top.length - DAILY_LIMIT);
+    log(`🔻 trimmed from ${before} → ${top.length} (cut ${before - DAILY_LIMIT} lowest-score items)`);
+  } else if (top.length < DAILY_LIMIT) {
+    // 少了 → 从全局候选 (rededuped + fresh7d) 按 score 补
+    const need = DAILY_LIMIT - top.length;
+    const links = new Set(top.map(it => it.link));
+    const all = [...rededuped, ...fresh7d.filter(it => !rededuped.some(x => x.link === it.link))];
+    const fillers = all
+      .filter(it => !links.has(it.link))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, need);
+    for (const it of fillers) {
+      const sid = classify(it);
+      const enriched = { ...it, section: sid };
+      if (sid === "cre") enriched.cre_subcategory = detectCreSubcategory(it);
+      top.push(enriched);
+    }
+    log(`🔺 filled from ${DAILY_LIMIT - need} → ${top.length} (added ${fillers.length} highest-score items from fallback pool)`);
+  }
+  // 重新排序：让前端按 section 顺序渲染
+  const sectionOrder = SECTIONS.map(s => s.id);
+  top.sort((a, b) => {
+    const sa = sectionOrder.indexOf(a.section);
+    const sb = sectionOrder.indexOf(b.section);
+    if (sa !== sb) return sa - sb;
+    return b.score - a.score;
+  });
+
+  log(`🏆 final ${top.length} items across ${SECTIONS.length} sections`);
+  const sectionCount = {};
+  for (const it of top) sectionCount[it.section] = (sectionCount[it.section] || 0) + 1;
+  for (const s of SECTIONS) {
+    const n = sectionCount[s.id] || 0;
+    const ext = top.filter(it => it.section === s.id && it.extended_window).length;
+    log(`   ${s.emoji} ${s.label}: ${n}/${s.quota}${ext > 0 ? ` (${ext} 扩窗)` : ""}`);
   }
 
   // 7. LLM 摘要

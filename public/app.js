@@ -50,33 +50,49 @@ function escapeHtml(s) {
 }
 
 // ========== 渲染：tag chip ==========
+// 固定 filter 集 — 行业惯例 + Wan Bridge BTR 视角的核心 9 个 tag
+// 每天稳定显示，count = 当天数据中匹配的条数；count=0 时灰色 disabled 但保留 chip
+const FIXED_FILTERS = [
+  { id: '__all',         label: '全部' },
+  { id: 'btr-sfr',       label: 'BTR/SFR' },
+  { id: 'multifamily',   label: '多户' },
+  { id: 'office',        label: '办公' },
+  { id: 'industrial',    label: '工业' },
+  { id: 'data-center',   label: '数据中心' },
+  { id: 'sun-belt',      label: 'Sun Belt' },
+  { id: 'institutional', label: '机构' },
+  { id: 'rates',         label: '利率' },
+  { id: 'policy',        label: '政策' },
+];
+
 function renderTags(items) {
+  // 先算每个 tag 在当天 items 里的频次
   const counter = new Map();
   for (const it of items) {
     for (const t of (it.tags || [])) {
-      if (TAG_LABEL[t]) counter.set(t, (counter.get(t) || 0) + 1);
+      counter.set(t, (counter.get(t) || 0) + 1);
     }
   }
-  // 按 4 维度排序，dimension 内按计数降序
-  const ordered = [...counter.entries()].sort((a, b) => {
-    const da = TAG_DIM_ORDER.indexOf(TAG_DIM[a[0]] || 'topic');
-    const db = TAG_DIM_ORDER.indexOf(TAG_DIM[b[0]] || 'topic');
-    if (da !== db) return da - db;
-    return b[1] - a[1];
-  });
+  // sun-belt 兼容：item 的 tags 没主动加 sun-belt 但有 texas/houston/dfw/austin → 视为 sun-belt
+  const sunBeltCount = items.filter(it => {
+    const t = it.tags || [];
+    return t.includes('sun-belt') || t.includes('texas') || t.includes('dfw') ||
+           t.includes('houston') || t.includes('austin') || t.includes('florida');
+  }).length;
 
   filterbar.innerHTML = '';
-  const allBtn = document.createElement('button');
-  allBtn.className = 'chip' + (activeTag === '__all' ? ' active' : '');
-  allBtn.textContent = `全部 ${items.length}`;
-  allBtn.dataset.tag = '__all';
-  filterbar.appendChild(allBtn);
-
-  for (const [tag, n] of ordered) {
+  for (const f of FIXED_FILTERS) {
     const b = document.createElement('button');
-    b.className = 'chip' + (activeTag === tag ? ' active' : '');
-    b.dataset.tag = tag;
-    b.textContent = `${tagLabel(tag)} ${n}`;
+    let count;
+    if (f.id === '__all') count = items.length;
+    else if (f.id === 'sun-belt') count = sunBeltCount;
+    else count = counter.get(f.id) || 0;
+    b.className = 'chip' +
+      (activeTag === f.id ? ' active' : '') +
+      (count === 0 && f.id !== '__all' ? ' disabled' : '');
+    b.dataset.tag = f.id;
+    b.disabled = count === 0 && f.id !== '__all';
+    b.textContent = `${f.label} ${count}`;
     filterbar.appendChild(b);
   }
 }
@@ -150,7 +166,7 @@ function renderCard(it, i) {
   const creTag = it.cre_subcategory
     ? `<span class="card-tag cre-cat">${escapeHtml(it.cre_subcategory)}</span>`
     : '';
-  const numHtml = `<span class="card-num">${i + 1}</span>`;
+  const numHtml = `<span class="card-num">${i}</span>`;
   const titleZh = it.title_zh
     ? `<div class="card-title-zh">${numHtml}${escapeHtml(it.title_zh)}</div>`
     : '';
@@ -223,9 +239,19 @@ function renderItems(items) {
 function applyFilter() {
   if (!currentData) return;
   const items = currentData.items || [];
-  const filtered = activeTag === '__all'
-    ? items
-    : items.filter(it => (it.tags || []).includes(activeTag));
+  let filtered;
+  if (activeTag === '__all') {
+    filtered = items;
+  } else if (activeTag === 'sun-belt') {
+    // Sun Belt 兼容：含 sun-belt / texas / dfw / houston / austin / florida
+    filtered = items.filter(it => {
+      const t = it.tags || [];
+      return t.includes('sun-belt') || t.includes('texas') || t.includes('dfw') ||
+             t.includes('houston') || t.includes('austin') || t.includes('florida');
+    });
+  } else {
+    filtered = items.filter(it => (it.tags || []).includes(activeTag));
+  }
   renderTags(items);
   renderItems(filtered);
 }
