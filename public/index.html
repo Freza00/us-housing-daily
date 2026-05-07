@@ -13,9 +13,13 @@
     <div class="brand">
       <span class="logo">🏠</span>
       <h1>US Housing Daily</h1>
-      <span class="tagline">美国住宅地产每日 20 条</span>
+      <span class="tagline" id="tagline">美国住宅地产每日 20 条</span>
     </div>
     <div class="meta">
+      <div class="lang-seg" id="langSeg" role="group" title="切换语言 / Switch language">
+        <button data-lang="zh" class="lang-btn">中</button>
+        <button data-lang="en" class="lang-btn">EN</button>
+      </div>
       <span id="updated">加载中…</span>
       <button id="refreshBtn" title="重新加载">↻</button>
     </div>
@@ -35,21 +39,21 @@
   </main>
 
   <footer class="bottombar">
-    <span>每天 UTC 11:00 / 23:00 自动更新</span>
+    <span id="cronInfo">每天北京 09:00 自动更新（数据截止 08:57）</span>
     <span class="dot">·</span>
-    <span>信源：<span id="sourcesCount">—</span> 个</span>
+    <span id="sourcesInfo">信源：<span id="sourcesCount">—</span> 个 OK</span>
   </footer>
 
   <dialog id="calendarDialog">
     <div class="cal-head">
-      <button id="calPrev" aria-label="上个月">‹</button>
+      <button id="calPrev" aria-label="prev">‹</button>
       <h3 id="calTitle">—</h3>
-      <button id="calNext" aria-label="下个月">›</button>
+      <button id="calNext" aria-label="next">›</button>
     </div>
-    <div class="cal-weekdays"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+    <div class="cal-weekdays" id="calWeekdays"></div>
     <div class="cal-grid" id="calGrid"></div>
     <div class="cal-foot">
-      <span class="cal-legend"><span class="cal-dot"></span>有报告</span>
+      <span class="cal-legend"><span class="cal-dot"></span><span id="calLegendText">有报告</span></span>
       <button id="calClose">关闭</button>
     </div>
   </dialog>

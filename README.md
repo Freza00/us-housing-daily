@@ -1,6 +1,6 @@
 # US Housing Daily — 美国住宅地产新闻聚合 Agent
 
-每天北京时间 09:00 自动跑一遍：抓 27 个一手信源 → 24h 时间窗 → 实体级去重 → 跨日去重（rolling 21d）→ enrich 全文 → 5 section 配额挑选 → LLM 一次性产出 21 条中文译标 + 摘要 + ★重要性 + 利好利空。结果写成静态 JSON、提交到 git、Vercel 自动部署。
+每天北京时间 08:57 截止数据、08:57:01 GitHub Actions 触发，约 09:00 页面更新：抓 27 个一手信源 → 24h 时间窗 → 实体级去重 → 跨日去重（rolling 21d）→ enrich 全文 → 5 section 配额挑选 → LLM 一次性产出 21 条中文译标 + 摘要 + ★重要性 + 利好利空。结果写成静态 JSON、提交到 git、Vercel 自动部署。
 
 ```
 RSS 抓取 (27 源)
@@ -25,7 +25,7 @@ news-agent/
 ├── README.md                      # 本文件
 ├── package.json
 ├── vercel.json                    # Vercel 静态站配置 (cache headers + routing)
-├── .github/workflows/daily.yml    # 每天 09:00 北京时间 cron
+├── .github/workflows/daily.yml    # 每天 UTC 00:57 (北京 08:57) cron
 ├── config/
 │   └── sources.json               # 27 个 RSS 源（可编辑）
 ├── scripts/
@@ -41,7 +41,7 @@ news-agent/
 │   └── dates.json                 # 日期索引
 ├── state/                         # 跨日 seen list (commit 进 repo)
 │   └── seen.json
-└── src/                           # (旧 Cloudflare Worker 代码 — 不再使用，可删)
+└── (旧文件可删: src/ wrangler.toml tsconfig.json preview.html — 见 README 末尾)
 ```
 
 ---
@@ -96,7 +96,7 @@ Vercel 会自动检测 `vercel.json`，把 `public/` 目录当作静态站点托
 
 ### 5. 验证 cron
 
-接下来每天 UTC 01:00（北京 09:00）GitHub Action 会自动跑一次，commit 新的 `data/2026-MM-DD.json`，Vercel 监听 main 分支变化自动重新部署。第二天早上打开页面就是最新内容。
+接下来每天 UTC 00:57（北京 08:57）GitHub Action 会自动跑一次，commit 新的 `data/2026-MM-DD.json`，Vercel 监听 main 分支变化自动重新部署，约北京 09:00 页面更新。窗口是绝对边界 `[昨天 08:57, 今天 08:57)`，跨日不重不漏。
 
 ---
 

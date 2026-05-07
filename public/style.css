@@ -49,8 +49,36 @@ a { color: inherit; text-decoration: none; }
   background: transparent; border: 1px solid var(--border); color: var(--text-dim);
   width: 28px; height: 28px; border-radius: 6px; cursor: pointer;
   font-size: 15px; line-height: 1;
+  font-family: inherit;
 }
 #refreshBtn:hover { color: var(--accent); border-color: var(--accent); }
+
+/* 语言切换 — 双钮 segmented control 中 | EN */
+.lang-seg {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 28px;
+}
+.lang-btn {
+  background: transparent;
+  border: 0;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: background .12s, color .12s;
+}
+.lang-btn + .lang-btn { border-left: 1px solid var(--border); }
+.lang-btn:hover:not(.active) { background: var(--bg-hover); color: var(--text); }
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
 
 /* 顶部 14 天日期 strip */
 .datestrip {
