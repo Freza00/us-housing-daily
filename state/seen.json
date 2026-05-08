@@ -1,5 +1,265 @@
 [
   {
+    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-may-7-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "rise",
+      "6.37%"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.redfin.com/news/pending-home-sales-rise-spring/",
+    "tokens": [
+      "pending",
+      "home",
+      "sales",
+      "highest",
+      "level",
+      "nearly",
+      "years"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/rocket-q1-2026-earnings/",
+    "tokens": [
+      "rocket",
+      "beats",
+      "earnings",
+      "guidance",
+      "strongest",
+      "quarterly",
+      "profit",
+      "four",
+      "years"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSmI3M01sN1dSUHJrZ0lNdkI5ZG94TVFLOGVDdHV3Z1ZlR1BOaXpfeFVVQnp4STRuN2NuMWRSUlRfNmpEaXpSOE9DNHlmam1pZ3pKT25YRXhwV3NfU0Juc0VadlpmZ1EwNTdXTTFBcm5adDdaTmh4ODU5Rms1RGVEVXZycVlDV19vNkVudi1RWk1HYUZpcU5tQnJZbUxUbFZWLWZBNHhXb2U1bUM2cmo4?oc=5",
+    "tokens": [
+      "iran",
+      "reconsidering",
+      "rate",
+      "hikes",
+      "divided",
+      "ever",
+      "inman"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/05/private-residential-construction-spending-increases-in-march/",
+    "tokens": [
+      "private",
+      "residential",
+      "construction",
+      "spending",
+      "increases",
+      "march"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/apartment-rent-april-yardi/819621/",
+    "tokens": [
+      "apartment",
+      "rents",
+      "tepid",
+      "bump",
+      "april",
+      "yardi"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://trerc.tamu.edu/blog/supply-is-back-confidence-is-not-inside-texas-shifting-spring-housing-market/",
+    "tokens": [
+      "supply",
+      "back",
+      "confidence",
+      "inside",
+      "texas",
+      "shifting",
+      "spring",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/ice-enforcement-immigrant-apartment-rental-demand/819346/",
+    "tokens": [
+      "enforcement",
+      "sends",
+      "texas",
+      "property",
+      "servicing"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/sparks-flare-over-florida-law-to-target-idle-golf-courses-for-housing/",
+    "tokens": [
+      "sparks",
+      "flare",
+      "florida",
+      "target",
+      "idle",
+      "golf",
+      "courses",
+      "housing"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMVRrWW9iRENzSk4yRU9IdzdzbTZsSV9BSHMxQjNONXQ5dkRWM2xPMDlCYkZGeGowOG1TRkt6MXc5cm1qN3g1SWFfbmhBbHR0dG5yWVBKbVh5N0FPeHhfQS10bGc2TXNfM1VZS3RSZWlVQ1VnZTlYSWJuMEhtVGNYNHpBdDJqZw?oc=5",
+    "tokens": [
+      "daily",
+      "2026",
+      "trinitas",
+      "breaks",
+      "ground",
+      "$80m",
+      "development",
+      "list"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/reality-tv/ant-anstead-renee-zellweger-guest-lawsuit-laguna-beach-home/",
+    "tokens": [
+      "anstead",
+      "renee",
+      "zellweger",
+      "$10",
+      "million",
+      "lawsuit",
+      "guest",
+      "alleged",
+      "injury",
+      "laguna",
+      "beach",
+      "rental",
+      "home"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/dallas-ft-worth/news/office/att-to-more-than-double-its-building-space-at-14b-hq-in-dallas-suburb-134432",
+    "tokens": [
+      "double",
+      "footprint",
+      "$1.4b",
+      "dallas",
+      "suburb"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/hotel/starwood-grappling-with-looming-265m-hotel-portfolio-default-134479",
+    "tokens": [
+      "starwood",
+      "grapples",
+      "potential",
+      "$265m",
+      "hotel",
+      "portfolio",
+      "default"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/capital-markets/soloviev-18b-loan-cash-in-on-9-west-57th-134486",
+    "tokens": [
+      "soloviev",
+      "pocket",
+      "$526m",
+      "refi"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/industrial/eqt-to-spend-11b-buying-into-americold-warehouses-as-reit-continues-loss-streak-134477",
+    "tokens": [
+      "spend",
+      "$1.1b",
+      "buying",
+      "americold",
+      "warehouses"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-capital-markets/people-will-be-surprised-following-3b-blackstone-buyout-qts-founder-launches-new-data-center-firm-134487",
+    "tokens": [
+      "following",
+      "$3b",
+      "blackstone",
+      "buyout",
+      "founder",
+      "launches",
+      "data",
+      "center",
+      "firm"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/value-add-fund-multifamily-investment-strategy/819624/",
+    "tokens": [
+      "group",
+      "apexone",
+      "partner",
+      "$500m",
+      "multifamily",
+      "fund"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.perenews.com/blueprint-blue-owls-net-lease-equity-haul-private-real-estate-compensation-survey-ares-q1-fundraising/",
+    "tokens": [
+      "blueprint",
+      "blue",
+      "lease",
+      "equity",
+      "haul",
+      "private",
+      "compensation",
+      "survey",
+      "ares",
+      "fundraising"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/s3-raises-1-3b-of-capital-with-third-credit-fund/",
+    "tokens": [
+      "raises",
+      "$1.3b",
+      "capital",
+      "third",
+      "credit",
+      "fund"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/07/zillow-posts-46m-profit-in-first-quarter/",
+    "tokens": [
+      "zillow",
+      "posts",
+      "$46m",
+      "profit",
+      "first",
+      "quarter"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/iran-conflict-sours-real-estate-investor-sentiment-to-3-year-low",
     "tokens": [
       "iran",

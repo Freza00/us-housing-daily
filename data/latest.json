@@ -1,6 +1,6 @@
 {
   "date": "2026-05-08",
-  "generated_at": 1778230273558,
+  "generated_at": 1778230587777,
   "sources_attempted": 34,
   "sources_ok": 34,
   "sections": [
@@ -56,454 +56,42 @@
   ],
   "items": [
     {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
+      "source_id": "realtor-research",
+      "source_name": "Realtor.com Research",
+      "source_tier": "B",
       "source_weight": 8,
       "source_tags": [
         "housing",
-        "brokerage"
+        "data"
       ],
       "region": "national",
-      "title": "This REMAX Merger Isn't A Masterstroke. It's A Strategic Escape Hatch - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYmw3ZDk0dUtmZTZqNWNwNjJUSWlvUUJxSGlpall6SDBsbnJwX2QxX1ZvWWtOMnA1TVBELWVCQjJOUWZOdnpkYmJOZXBJbGVJM2xaUEZ0UzMtSHdlc05KZUxmajdzTkRqOXNaTGVfSndUaVA1Zkt3ZE14NG5vak1fd0t2TU5UOUE0YWZMZlMxRnQ1QmgtZHBuOWQ0c0p5R3BYRHc?oc=5",
-      "description": "This REMAX Merger Isn't A Masterstroke. It's A Strategic Escape Hatch &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778074223000,
-      "score": 10,
-      "tags": [
-        "brokerage",
-        "deals"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "Real-REMAX合并的战略解读，涉及行业头部企业战略调整；与10/28/29/33/38为同一事件不同角度，选此条因其分析深度较好，imp=3。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "RE/MAX 与 Real 合并非妙手，实为战略逃生口",
-      "summary_zh": "brokerage 整合背后系 RE/MAX 困境求生，非强强联合，franchise 模式承压",
-      "impact": "short-neg",
-      "id": "36ff27f4",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "MRED Goes National: How Agents Can Protect Local MLS Systems - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPajJqMWQ2OVUzOG5HUktmT3d4ZkM3NmJaNTVJOFdRWk4zc2ZMcXhrN3VRaTZvLXR5dmY3TDlJaS1aanV3Rld4U0hDZ0NRSkZ0djFrYWRQWmJ3d2tQeUZrRllLRGNZNUZSV1JNUUctbkU0TWtkUXAtb2FIZkVZYmFKRXFKWVVZbVFFNWN1UlA5SDVpbW9BVHkzNw?oc=5",
-      "description": "MRED Goes National: How Agents Can Protect Local MLS Systems &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778031243000,
-      "score": 9,
-      "tags": [
-        "brokerage",
-        "policy"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "MRED全国性扩张触及MLS系统底层基础设施变革，对经纪人作业模式有深远影响；属于重要行业政策/结构动态，imp=3。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "MRED 扩张全国，agent 如何保卫本地 MLS 体系",
-      "summary_zh": "regional MLS 走向 national 化，local broker 面临数据控制权流失风险",
-      "impact": "neutral",
-      "id": "41333cb0",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "trd-national",
-      "source_name": "The Real Deal (National)",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Kenny G’s former Hunts Point mansion sells at steep discount",
-      "link": "https://therealdeal.com/national/seattle/2026/05/05/hunts-point-mansion-sale-ranks-among-washingtons-priciest/",
-      "description": "A Hunts Point waterfront estate tied to telecommunications mogul Bruce McCaw sold for more than half of its original list price.&#160; Bruce McCaw sold the 17,600-square-foot manse for $38 million, landing among the priciest home sales in Washington history, even as it closed at a deep discount, the Seattle Times and Puget Sound Business Journal reported.&#160; The price amounts to $2,159 per square foot. It’s $47 million off McCaw’s original $85 million asking price in 2022. That figure made it the most expensive listing in Northwest Multiple Listing Service history. The mansion was most rece",
-      "published_at": 1778024145000,
-      "score": 9,
+      "title": "Mortgage Rates Rise to 6.37%",
+      "link": "https://www.realtor.com/research/freddie-mac-mortgage-rates-may-7-2026/",
+      "description": "Data , Economic Coverage , Housing Finance , Weekly Mortgage Rate Mortgage Rates Rise to 6.37% By Hannah Jones May 07, 2026 What happened to mortgage rates this week? The Freddie Mac 30-year mortgage rate climbed 7 basis points to 6.37%, extending last week&#8217;s upward trend as renewed conflict in the Middle East rattled financial markets and pushed borrowing costs higher. U.S. forces clashed with Iran in the Strait of Hormuz this week, reigniting inflation fears and sending Treasury yields, which mortgage rates closely track, sharply higher before a partial pullback in yields on Thursday offered some tentative relief. After a brief period of optimism that rates might finally be settling down, this fresh escalation served as a reminder that the path to lower rates runs squarely through the Persian Gulf right now. What does this mean for the housing market? The ongoing conflict has kept oil prices elevated, feeding inflation and giving the Federal Reserve little reason to cut rates anytime soon. The bottom line for borrowers is that the forces keeping rates up are global, and there is no clear near-term catalyst for a meaningful, sustained decline. Despite this less-than-sunny outlook, mortgage rates remain near their lowest levels in the past few springs. This means buyers are still in a better position to afford a home this buying season compared to years past, especially as home prices continue to soften . For buyers still struggling with affordability, a growing number of American families are finding a creative path forward through buying together. A new Realtor.com® report finds that nearly 4 million households have already embraced multigenerational living , and the trend is accelerating as families pool incomes and share costs to make homeownership work. While multigenerational homes carry a premium, the financial logic is compelling as a combined household income can stretch a budget significantly further than any single buyer could manage alone, while also offsetting costs like childcare and elder care, which weigh heavily on family finances. For buyers who have struggled to make the numbers work solo, bringing family into the equation could be the key to getting through the door. The market is more navigable than the headlines suggest for buyers willing to think creatively about their options. Whether that means shopping lenders to secure a better rate , using time on the sidelines to build a stronger down payment, or exploring multigenerational living to make the numbers work, the path to homeownership remains open.",
+      "published_at": 1778169619000,
+      "score": 29,
       "tags": [
         "housing",
-        "california"
-      ],
-      "heat_signals": [],
-      "importance": 2,
-      "selector_reason": "单笔豪宅交易折扣案例，虽金额较大（$38M）但属单一资产价格信号，可作为高端住宅市场冷却的参考数据点；硬性排除单listing但此条有市场指示意义，imp=2。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "Kenny G 旧宅腰斩成交，豪宅市场深度折价",
-      "summary_zh": "Hunts Point 17,600 SF 豪宅以 $38M 成交，较 $85M 挂牌价折价 45%，$2,159/SF",
-      "impact": "short-neg",
-      "id": "7811d413",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "Real-REMAX Deal, Compass Empire, MRED Expansion: Top 5 - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVlFjQmtiNU5WZGJPREVzRnlYbWd1M1NmM1hiNEVzdlIyTmkzTnhxQlJhMlloZGU3N0wxSkhnRWZ5UlJ5LWxHUW1FclplTUt3X0x5WVUwb0s1ODBUc1dfUUlJeERqNXRoNVRPNUhnVnlVYXA0dDJGLWNtSTQ0QkhRZzFLTkJsYU5acThsYVVn?oc=5",
-      "description": "Real-REMAX Deal, Compass Empire, MRED Expansion: Top 5 &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1777652142000,
-      "score": 8,
-      "tags": [
-        "brokerage",
-        "deals"
-      ],
-      "heat_signals": [],
-      "importance": 2,
-      "selector_reason": "行业周度Top5综述，包含Real-REMAX、Compass、MRED等多个事件概括；作为meta总结价值有限但可覆盖多主题，imp=2。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "Real-RE/MAX 交易、Compass 版图、MRED 扩张一周 top 5",
-      "summary_zh": "brokerage M&A 加速，行业 consolidation 趋势明确，中小 player 生存空间收窄",
-      "impact": "neutral",
-      "id": "5520a7cb",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "housing"
-      ],
-      "region": "national",
-      "title": "White House Press Secretary Karoline Leavitt Welcomes Baby Girl—2 Weeks After Beginning Maternity Leave",
-      "link": "https://www.realtor.com/news/celebrity-real-estate/karoline-leavitt-husband-nicholas-riccio-have-baby-girl/",
-      "description": "White House Press Secretary Karoline Leavitt Welcomes Baby Girl Realtor.com® Real Estate App 314,000+ Open in App Skip to content Buy Homes for sale Homes for sale Foreclosure homes New construction for sale All new construction New home construction Homes values Housing market Recently sold homes Property records Home buying tips Home buying checklist Home buyers reveal: 'What I wish I had known before buying my first home' First-time home buyer resource center More home buying insights Success stories Sell Home selling tools Compare agents & pick the right one Find the right selling option for you How much can you make selling your home? See what your home is worth Home selling advice Complete guide to selling your home Should I sell my home now? How much is my home worth? How should I sell my home? How to select an agent? How to prepare your home for sale? See more home selling insights Recently sold Recently sold homes Rent Apartments For rent Apartments for rent Renter tools Contacted rentals Apply now online Landlord tools Manage rentals List your rentals Screen tenants Create a lease Collect rent online Home renting tips Renter's resource center Should I rent or buy? Debunked! 8 myths about renting you should stop believing immediately Rental report More renting insights Mortgage Mortgage rates Get pre-approved Mortgage rates Home equity financing rates Refinance rates Finance advice For veterans Calculators Mortgage calculator Refinance calculator How much house can I afford Rent vs. buy Financial advice 6 ways home buyers mess up getting a mortgage Mortgage guide Learn about home insurance More finance insights Find Realtors ® Find REALTORS ® Search for real estate agent Why use a REALTOR ® 6 reasons you should never buy or sell a home without an agent Difference between agent, broker & REALTOR ® Listing vs. buyer agent How to find a REALTOR ® News around REALTORS ® Real estate agents reveal the toughest home buyers they've ever met More news around REALTORS ® My Home News & Insights News The latest news Housing trends Real estate news Celebrity real estate Unique homes For PROs Corporate blog Insights Buying Selling Renting Financing Moving Living Home improvement Research 2026 housing market predictions NEW 2025 hottest zip codes Guides & more All guides Complete guide on how to sell your home First-time home buyer resource center Mortgage guide Veterans home buyer guide USDA home loan guide Home insurance guide Real estate videos Housing resources About us Manage rentals Advertise News Insights NEWS TRENDS BUYING SELLING RENTING CELEBRITY HOMES ADVICE GUIDES LIVING RESEARCH MORE News Insights NEWS TRENDS Real Estate News Housing Trends Celebrity Real Estate Unique Homes Reality TV Sports Most Expensive Homes Most Popular Homes BUYING SELLING RENTING CELEBRITY HOMES ADVICE Buying Selling Renting Financing Living Moving Home Improvement GUIDES LIVING RESEARCH Celebrity Real Estate White House Press Secretary Karoline Leavitt Welcomes Baby Girl—2 Weeks After Beginning Maternity Leave By Kelsi Karruli May 7, 2026 Bloomberg via Getty Images White House Press Secretary Karoline Leavitt has given birth to a \"perfect\" and \"healthy\" baby girl—just two weeks after she began her maternity leave . The 28-year-old, who tied the knot to husband Nicholas Riccio , 61, in January 2025, took to Instagram to announce the arrival of her second child, daughter Viviana . Leavitt was seen holding her baby in their adorable nursery, which was adorned with pink decorations. “On May 1st, Viviana aka ‘Vivi’ joined our family, and our hearts instantly exploded with love. She is perfect and healthy, and her big brother is joyfully adjusting to life with his new baby sister. We are enjoying every moment in our blissful newborn bubble,” Leavitt said on her post. She added, \"Thank you to everyone who reached out with prayers during my pregnancy - I truly felt them throughout the entire experience. God is Good.\" Loading... White House Press Secret",
-      "published_at": 1778165687000,
-      "score": 17,
-      "tags": [
-        "housing",
-        "multifamily",
-        "macro",
         "rates",
-        "deals",
-        "trend",
-        "landlord",
-        "brokerage"
+        "data"
       ],
       "heat_signals": [
+        "fed",
+        "inflation",
         "mortgage rate",
+        "freddie mac",
+        "outlook",
         "trend",
-        "trends",
         "housing market"
       ],
-      "importance": 3,
-      "_from_fallback": true,
-      "section": "national",
-      "title_zh": "白宫发言人产女，与住宅地产无直接关联",
-      "summary_zh": "Karoline Leavitt maternity leave 属政治人物个人新闻，对 housing market 无实质影响",
-      "impact": "neutral",
-      "id": "02a375df",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "AI data centers face neighborhood pushback, Redfin finds - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVng3MzZycDRUbHVlblVXdHZWb0NnNDJ4enFjaDFjQlhnTlBYNU1FMUtQMnpYS2dndHdBYTA2emNnNkdkZmNXWEsyZnFiSGpqQThmUkk5RVhwemJvLTFCR2xWNWZHaE9kRVhJMEJrSk5lQl9feWxuVDBCWmZYU1RmaHp1aTMxbjdDNlB2NTJYd2RRVUVqYmN2WlpOVjFQcWM?oc=5",
-      "description": "AI data centers face neighborhood pushback, Redfin finds &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1777909958000,
-      "score": 8,
-      "tags": [
-        "data-center",
-        "trend"
-      ],
-      "heat_signals": [],
       "importance": 4,
-      "selector_reason": "AI数据中心面临社区抵制，Redfin数据支撑，涉及数据中心这一热门CRE子领域与住宅社区的冲突；属于重要CRE基础设施与社区关系监管议题，imp=4。",
-      "section": "cre",
-      "extended_window": true,
-      "title_zh": "AI data center 遭社区抵制，Redfin 调研揭示 NIMBY 升温",
-      "summary_zh": "居民反对 data center 建设致项目 delay 风险上升，power & land 需求与 local 矛盾加剧",
+      "selector_reason": "抵押贷款利率升至6.37%，中东冲突推高收益率，直接影响全国住宅购买力，属于关键市场拐点信号。",
+      "section": "national",
+      "title_zh": "30Y mortgage 升至 6.37%，中东冲突推升借贷成本",
+      "summary_zh": "Freddie Mac 30Y mortgage rate 上行 7 bps 至 6.37%，伊朗局势加剧通胀担忧，Fed 短期降息无望，borrower 承压但春季利率仍处近年低位",
       "impact": "short-neg",
-      "id": "0ab34718",
-      "fetched_at": 1778230349986,
-      "cre_subcategory": "数据中心"
-    },
-    {
-      "source_id": "bisnow",
-      "source_name": "Bisnow",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "A Real Estate Operator Used Colliers' Brand To Sell Retirees Risky Investments. Many Lost Everything",
-      "link": "https://www.bisnow.com/national/news/commercial-real-estate/millcreek-commercial-properties-kevin-long-colliers-134392",
-      "description": "",
-      "published_at": 1777659966000,
-      "score": 8,
-      "tags": [
-        "mixed-asset",
-        "regulation"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Colliers品牌被滥用向退休人员推销高风险投资，涉及重大消费者保护问题与品牌信任危机；Bisnow调查报道，属于重要行业监管/伦理事件，imp=4。",
-      "section": "cre",
-      "extended_window": true,
-      "title_zh": "地产运营商冒用 Colliers 品牌向退休者兜售高风险投资",
-      "summary_zh": "senior investor 遭欺诈损失惨重，regulatory 合规与 brand 滥用问题暴露",
-      "impact": "short-neg",
-      "id": "b1c78c8c",
-      "fetched_at": 1778230349986,
-      "cre_subcategory": null
-    },
-    {
-      "source_id": "cnbc-realestate",
-      "source_name": "CNBC Realty Check",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "macro"
-      ],
-      "region": "national",
-      "title": "Nvidia and PulteGroup are helping this startup put mini data centers on homes",
-      "link": "https://www.cnbc.com/2026/05/05/nvidia-pulte-span-mini-data-centers-on-homes.html",
-      "description": "A network of Span nodes, communicating with each other across the country, is the equivalent of a small to mid-sized traditional data center.",
-      "published_at": 1778093999000,
-      "score": 8,
-      "tags": [
-        "data-center",
-        "tech-adoption"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Nvidia与PulteGroup合作将迷你数据中心部署于住宅，融合住宅、数据中心、能源基础设施三大主题；创新模式可能重塑住宅与数字基础设施关系，imp=4。",
-      "section": "cre",
-      "extended_window": true,
-      "title_zh": "Nvidia 与 PulteGroup 联手推动住宅 mini data center",
-      "summary_zh": "Span node 网络等效中小 data center，residential energy infrastructure 新场景落地",
-      "impact": "long-pos",
-      "id": "c54b64f5",
-      "fetched_at": 1778230349986,
-      "cre_subcategory": "数据中心"
-    },
-    {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "housing"
-      ],
-      "region": "national",
-      "title": "DJ Samantha Michelle Debuts Eclectic Recording Studio Inside New York Apartment Where She Makes Music Magic",
-      "link": "https://www.realtor.com/news/celebrity-real-estate/dj-samantha-michelle-burning-man-home-recording-studio/",
-      "description": "DJ Samantha Michelle Unveils Designer Recording Studio at New York Home Realtor.com® Real Estate App 314,000+ Open in App Skip to content Buy Homes for sale Homes for sale Foreclosure homes New construction for sale All new construction New home construction Explore the neighborhood Housing market trends Recently sold homes Property records Home buying tips Home buying checklist Home buyers reveal: 'What I wish I had known before buying my first home' First-time home buyer resource center More home buying insights Success stories Sell Home selling tools Compare agents & pick the right one Find the right selling option for you How much can you make selling your home? See what your home is worth Home selling advice Complete guide to selling your home Should I sell my home now? How much is my home worth? How should I sell my home? How to select an agent? How to prepare your home for sale? See more home selling insights Recently sold Recently sold homes Rent Apartments For rent Apartments for rent Renter tools Contacted rentals Apply now online Landlord tools Manage rentals List your rentals Screen tenants Create a lease Collect rent online Home renting tips Renter's resource center Should I rent or buy? Debunked! 8 myths about renting you should stop believing immediately Rental report More renting insights Mortgage Mortgage rates Get pre-approved Mortgage rates Home equity financing rates Refinance rates Finance advice For veterans Calculators Mortgage calculator Refinance calculator How much house can I afford Rent vs. buy Financial advice 6 ways home buyers mess up getting a mortgage Mortgage guide Learn about home insurance More finance insights Find an Agent Find a real estate agent Search for real estate agent Why use a REALTOR ® 6 reasons you should never buy or sell a home without an agent Difference between agent, broker & REALTOR ® Listing vs. buyer agent How to find a REALTOR ® News around REALTORS ® Real estate agents reveal the toughest home buyers they've ever met More news around REALTORS ® My Home News & Insights News The latest news Housing trends Real estate news Celebrity real estate Unique homes For PROs Corporate blog Insights Buying Selling Renting Financing Moving Living Home improvement Research 2026 housing market predictions NEW 2025 hottest zip codes Guides & more All guides Complete guide on how to sell your home First-time home buyer resource center Mortgage guide Veterans home buyer guide USDA home loan guide Home insurance guide Real estate videos Housing resources About us Manage rentals Advertise News Insights NEWS TRENDS BUYING SELLING RENTING CELEBRITY HOMES ADVICE GUIDES LIVING RESEARCH MORE News Insights NEWS TRENDS Real Estate News Housing Trends Celebrity Real Estate Unique Homes Reality TV Sports Most Expensive Homes Most Popular Homes BUYING SELLING RENTING CELEBRITY HOMES ADVICE Buying Selling Renting Financing Living Moving Home Improvement GUIDES LIVING RESEARCH Celebrity Real Estate DJ Samantha Michelle Debuts Eclectic Recording Studio Inside New York Apartment Where She Makes Music Magic By Karli Mullane May 7, 2026 Samantha Michelle DJ Samantha Michelle has decorated her New York City apartment in the same style she composes her electronic dance music: with a mix of global influences. The Toronto-born music producer, who has opened for headliners such as Cascada and Galantis , performed at Burning Man, and worked events for business titans such as Dolce Gabbana and the Wall Street Journal, first moved to her Greenwich Village apartment building while attending New York University. After graduation, she held on to the 900-square-foot unit, but left to live in Los Angeles for a year and then London for seven, before returning to the Big Apple in 2018. It was a chance encounter with a fellow resident in the pre-war co-op building that put her on track to purchase her current place in April 2023, Michelle reveals in the latest edition of Celebrity Sanctuary . “I had been living in a diff",
-      "published_at": 1778145420000,
-      "score": 17,
-      "tags": [
-        "housing",
-        "multifamily",
-        "nyc",
-        "california",
-        "macro",
-        "rates",
-        "deals",
-        "trend",
-        "landlord",
-        "brokerage"
-      ],
-      "heat_signals": [
-        "mortgage rate",
-        "trend",
-        "trends",
-        "housing market"
-      ],
-      "importance": 3,
-      "_from_fallback": true,
-      "section": "cre",
-      "title_zh": "DJ Samantha Michelle 纽约公寓录音室亮相",
-      "summary_zh": "celebrity property 展示属 lifestyle 新闻，对 NYC multifamily market 无指标意义",
-      "impact": "neutral",
-      "id": "9c243a41",
-      "fetched_at": 1778230349986,
-      "cre_subcategory": null
-    },
-    {
-      "source_id": "connect-cre",
-      "source_name": "Connect CRE",
-      "source_tier": "A",
-      "source_weight": 7,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "New York People and Company News, Week of May 8, 2026",
-      "link": "https://www.connectcre.com/stories/new-york-people-and-company-news-week-of-may-8-2026/",
-      "description": "The post New York People and Company News, Week of May 8, 2026 appeared first on Connect CRE .",
-      "published_at": 1778189033000,
-      "score": 11,
-      "tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "_from_fallback": true,
-      "section": "cre",
-      "title_zh": "纽约人事与公司动态周报，CRE 领域常规资讯",
-      "summary_zh": "Connect CRE 例行汇总，无重大 deals 或 policy 披露，影响待观察",
-      "impact": "neutral",
-      "id": "38163ea3",
-      "fetched_at": 1778230349986,
-      "cre_subcategory": null
-    },
-    {
-      "source_id": "bisnow",
-      "source_name": "Bisnow",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Opportunity Zones Grow From 'Teenager To Adulthood' But Are Still In The Awkward Phase",
-      "link": "https://www.bisnow.com/national/news/opportunity-zones/opportunity-zones-grow-from-teenager-to-adulthood-but-are-still-in-the-awkward-phase-134417",
-      "description": "Opportunity zones are in limbo as investors look less than a year down the road and see a shining, permanent, new program offering the same, or better, incentives. The shift from fleeting tax break to permanent fixture of the tax code is alone a...",
-      "published_at": 1777929524000,
-      "score": 8,
-      "tags": [
-        "policy",
-        "trend"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Opportunity Zones政策从临时优惠转向永久化关键节点，涉及联邦税收政策对CRE投资的结构性影响；政策重大变动窗口期，imp=4。",
-      "section": "institutional",
-      "extended_window": true,
-      "title_zh": "Opportunity Zone 从临时优惠迈向税法永久化",
-      "summary_zh": "program 延续预期增强，但 transition 期 investor 观望，deployed capital 增速或放缓",
-      "impact": "neutral",
-      "id": "f4a288d6",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "housing"
-      ],
-      "region": "national",
-      "title": "Actor Niko Foster Lists Custom Nevada Mansion for $22 Million: Amenity-Packed ‘Masterpiece’ Boasts 7 Waterfalls and Private ‘Wine Grotto",
-      "link": "https://www.realtor.com/news/celebrity-real-estate/niko-foster-nevada-mansion-grotto-waterfalls-sale/",
-      "description": "Actor Niko Foster Lists $22 Million Amenity-Packed Nevada &#x27;Masterpiece&#x27; Realtor.com for iOS 502,000+ Open in App Skip to content Buy Homes for sale Homes for sale Foreclosure homes New construction for sale All new construction New home construction Explore the neighborhood Housing market trends Recently sold homes Property records Home buying tips Home buying checklist Home buyers reveal: 'What I wish I had known before buying my first home' First-time home buyer resource center More home buying insights Success stories Sell Home selling tools Compare agents & pick the right one Find the right selling option for you How much can you make selling your home? See what your home is worth Home selling advice Complete guide to selling your home Should I sell my home now? How much is my home worth? How should I sell my home? How to select an agent? How to prepare your home for sale? See more home selling insights Recently sold Recently sold homes Rent Apartments For rent Apartments for rent Renter tools Contacted rentals Apply now online Landlord tools Manage rentals List your rentals Screen tenants Create a lease Collect rent online Home renting tips Renter's resource center Should I rent or buy? Debunked! 8 myths about renting you should stop believing immediately Rental report More renting insights Mortgage Mortgage rates Get pre-approved Mortgage rates Home equity financing rates Refinance rates Finance advice For veterans Calculators Mortgage calculator Refinance calculator How much house can I afford Rent vs. buy Financial advice 6 ways home buyers mess up getting a mortgage Mortgage guide Learn about home insurance More finance insights Find an Agent Find a real estate agent Search for real estate agent Why use a REALTOR ® 6 reasons you should never buy or sell a home without an agent Difference between agent, broker & REALTOR ® Listing vs. buyer agent How to find a REALTOR ® News around REALTORS ® Real estate agents reveal the toughest home buyers they've ever met More news around REALTORS ® My Home News & Insights News The latest news Housing trends Real estate news Celebrity real estate Unique homes For PROs Corporate blog Insights Buying Selling Renting Financing Moving Living Home improvement Research 2026 housing market predictions NEW 2025 hottest zip codes Guides & more All guides Complete guide on how to sell your home First-time home buyer resource center Mortgage guide Veterans home buyer guide USDA home loan guide Home insurance guide Real estate videos Housing resources About us Manage rentals Advertise News Insights NEWS TRENDS BUYING SELLING RENTING CELEBRITY HOMES ADVICE GUIDES LIVING RESEARCH MORE News Insights NEWS TRENDS Real Estate News Housing Trends Celebrity Real Estate Unique Homes Reality TV Sports Most Expensive Homes Most Popular Homes BUYING SELLING RENTING CELEBRITY HOMES ADVICE Buying Selling Renting Financing Living Moving Home Improvement GUIDES LIVING RESEARCH Celebrity Real Estate Actor Niko Foster Lists Custom Nevada Mansion for $22 Million: Amenity-Packed ‘Masterpiece’ Boasts 7 Waterfalls and Private ‘Wine Grotto By Kristine Hansen May 7, 2026 Stephen Morgan; Getty Images Actor and producer Niko Foster has put his jaw-dropping Nevada mansion on the market for $21.9 million —12 years after work was completed on the extraordinary custom-built \"masterpiece.\" The 14,000-square-foot dwelling is located in an exclusive community just outside of Las Vegas and boasts incredible unobstructed views of the Strip, as well as an array of upscale amenities that rival those found at five-star resorts. Niko—who most recently starred in the 2025 thriller \"The Wrecker\" alongside Harvey Keitel and Mena Suvari —and his wife, Stephanie Foster , spared no expense in the design of their six-bedroom, 10-bathroom abode, which is tucked into the MacDonald Highlands community in Henderson, NV . This guard-gated community is only a 20-minute drive from the Strip and very lavish and luxurious, where lot sizes",
-      "published_at": 1778156122000,
-      "score": 17,
-      "tags": [
-        "housing",
-        "multifamily",
-        "macro",
-        "rates",
-        "deals",
-        "trend",
-        "landlord",
-        "brokerage"
-      ],
-      "heat_signals": [
-        "mortgage rate",
-        "trend",
-        "trends",
-        "housing market"
-      ],
-      "section": "national",
-      "importance": 3,
-      "_from_fallback": true,
-      "title_zh": "演员 Niko Foster $22M 挂牌内华达定制豪宅",
-      "summary_zh": "luxury listing 含 7 处瀑布与酒窖，属 ultra-high-end 个别案例，不反映 market 趋势",
-      "impact": "neutral",
-      "id": "d15f47a4",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "Agents are on the move. 5 questions they should ask first - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWM1Nkd4S3ZGdXZSYV8yQl9VU1oteDRXQWJieXJCcTlzU0pYeGltSjJfZHNENzBhZEZLS2VPcEtDUGlQaWotc0daMWNNVVBRdEFsZWYtaXk2QjB5VHhwek81QkxkMF9jSWV6amVmckx6RUxYNE5waXQ4eU9zU2dfN09QTFpRVnIy?oc=5",
-      "description": "Agents are on the move. 5 questions they should ask first &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778187952000,
-      "score": 12,
-      "tags": [
-        "housing",
-        "brokerage"
-      ],
-      "heat_signals": [],
-      "section": "national",
-      "importance": 3,
-      "_from_fallback": true,
-      "title_zh": "Agent 跳槽潮起，转换 brokerage 前 5 问",
-      "summary_zh": "commission split、tech stack、brand 价值为核心考量，行业流动性上升",
-      "impact": "neutral",
-      "id": "3a01b6e6",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "Interactive Dashboard: Explore Results Of Intel's April Survey - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUFQ2TXI3ZWp5cEFDaFhnSVBtci1BS0ZMRXJCZnJBUEtWUGtQNE9GM2VuNjJ3SFRqQnhPMmxzMnpfcV9ZXzJvajM2RmVSQXdaa29ZeGhDbE0xSC1tdGozM19Xa1B5QnV1MGZZRUM3RDVMc0NibFJDVEpCSjVGU0V5NzM0REQzV3lUOWU5MFEwY25fWF85a3FjVmRB?oc=5",
-      "description": "Interactive Dashboard: Explore Results Of Intel's April Survey &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778163713000,
-      "score": 12,
-      "tags": [
-        "housing",
-        "brokerage"
-      ],
-      "heat_signals": [],
-      "section": "national",
-      "importance": 3,
-      "_from_fallback": true,
-      "title_zh": "Inman Intel 4 月调研交互仪表盘上线",
-      "summary_zh": "agent sentiment 与 market outlook 数据可视化，具体结论待解读",
-      "impact": "neutral",
-      "id": "52ae588e",
-      "fetched_at": 1778230349986
+      "id": "2e36c468",
+      "fetched_at": 1778230768556
     },
     {
       "source_id": "redfin-news",
@@ -515,179 +103,628 @@
         "data"
       ],
       "region": "national",
-      "title": "Viral HomeGoods Finds Are Everywhere—Here’s How to Use Them to Boost Your Home’s Value",
-      "link": "https://www.redfin.com/news/viral-homegoods-finds-how-to-use-to-boost-home-value/",
-      "description": "Viral decor from retailers like HomeGoods can help a listing stand out—but agents say bold pieces should make up no more than 10% of a home’s overall design. Natural materials, layered textures, and just one or two statement accents can add personality to a space without overwhelming buyers. Scrolling through viral HomeGoods hauls is a [&#8230;] The post Viral HomeGoods Finds Are Everywhere—Here’s How to Use Them to Boost Your Home’s Value appeared first on Redfin Real Estate News .",
-      "published_at": 1778157001000,
-      "score": 12,
+      "title": "Pending Home Sales Hit Highest Level in Nearly 4 Years",
+      "link": "https://www.redfin.com/news/pending-home-sales-rise-spring/",
+      "description": "More homebuyers jumped into the market as mortgage rates came down temporarily last week, but it’s still slower than past springs. U.S. pending home sales hit their highest level since September 2022 during the four weeks ending May 3. They rose 7.7% year over year on a seasonally adjusted basis. There are a few reasons [&#8230;] The post Pending Home Sales Hit Highest Level in Nearly 4 Years appeared first on Redfin Real Estate News .",
+      "published_at": 1778155245000,
+      "score": 22,
       "tags": [
         "housing",
-        "data"
-      ],
-      "heat_signals": [],
-      "section": "national",
-      "importance": 3,
-      "_from_fallback": true,
-      "title_zh": "HomeGoods  viral 单品助力 home value 提升",
-      "summary_zh": "staging 策略建议：statement piece 占比 ≤10%，natural material 与 texture 为关键",
-      "impact": "neutral",
-      "id": "ca8ce94e",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "The San Francisco housing market is unhinged. Now it's also a game - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNE9QdGlWT3N2b1RaOVJrdEJ3M0VsVlkxaEFtTmViSWppcWEwOFpDR3pUamdVSFhyWjFQOV9nbk9IR1Z4SXp1a3NSekM5dVQ1djZIaF9PRjh4Ri1fS1otbF9UWG9pd0pIREJoeWQ2M2VlYmJlT0pkdm91ZUhMdjRDUGYwQnF2cXp4NFlBanBWM3l0NTM5R1RyekdCckhSMkk?oc=5",
-      "description": "The San Francisco housing market is unhinged. Now it's also a game &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1777997666000,
-      "score": 12,
-      "tags": [
-        "housing",
-        "brokerage",
-        "california",
+        "data",
         "trend"
       ],
       "heat_signals": [
+        "mortgage rate",
+        "pending home sales",
+        "year over year",
+        "pending home sales"
+      ],
+      "importance": 4,
+      "selector_reason": "待售房屋销售达近4年最高水平，7.7%同比增长，是全国住宅市场关键拐点信号。",
+      "section": "national",
+      "title_zh": "Pending home sales 创近四年新高，同比增 7.7%",
+      "summary_zh": "截至 5 月 3 日四周 pending home sales 达 2022 年 9 月以来最高，YoY +7.7%，但增速仍慢于往年春季旺季",
+      "impact": "long-pos",
+      "id": "25455306",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Rocket beats earnings guidance with strongest quarterly profit in four years",
+      "link": "https://www.housingwire.com/articles/rocket-q1-2026-earnings/",
+      "description": "Rocket Companies reported its most profitable quarter in four years as artificial intelligence initiatives , a larger servicing portfolio and recent acquisitions helped the Detroit-based firm grow market share despite a choppy mortgage backdrop. The Detroit-based company reported net revenue of $2.94 billion for the quarter ending March 31, up from $1.1 billion in the same period a year earlier. Adjusted revenue rose to $2.82 billion, up from $1.36 billion in Q1 2025, and exceeding the high end of the company’s guidance range. &#8220;This quarter shows the model is working,” CEO Varun Krishna said during the company&#8217;s earnings call. “We delivered a strong performance in a volatile market. &#8230; Rocket is no longer the same company that it was three years ago. The shape of our business has not just changed — it has fundamentally evolved. &#8220;We are not waiting for the market to normalize. We are building a company that can win in the market we have.&#8221; Adjusted net income totaled $422 million, compared with $80 million in the first quarter of 2025, while adjusted EBITDA increased to $738 million, up from $169 million. Diluted earnings per share were 10 cents, compared with a loss of 8 cents a year ago. &#8220;In Q1, we beat guidance, expanded EBITDA margins and grew market share in both refinance and purchase,&#8221; Rocket president and chief financial officer Brian Brown said during Thursday&#8217;s earnings call, crediting the record quarter to margins that expanded to 26%. Rocket generated $49.4 billion in total net rate lock volume during the quarter and $44.7 billion in closed mortgage origination volume. Excluding correspondent lending , the company originated $37.8 billion in closed loan volume with a gain-on-sale margin of 3.22%. The company generated more than $1 billion in servicing fee income during the quarter, supported by a servicing portfolio that reached $2.1 trillion in unpaid principal balance across 9.4 million loans as of March 31. Total liquidity stood at $9.4 billion, including $2.7 billion in cash and cash equivalents. The company also had access to $2.3 billion in undrawn lines of credit and $4.4 billion in available mortgage servicing rights and advance lines of credit, its press release noted. &#8220;Closed loan volume from our servicing portfolio hit an all-time high, with 54% of refinance closings coming from existing service clients,&#8221; Brown added. Rocket’s direct-to-consumer segment, Rocket Mortgage , generated $2.23 billion in total revenue during the first quarter, up from $793 million a year earlier. Adjusted revenue rose to $2.11 billion from $1.05 billion, while contribution margin increased to $1.15 billion from $407 million. Brown provided an update on Rocket&#8217;s origination capacity. In 2024, Rocket reported that it had the capacity to originate up to $150 billion without adding fixed costs. &#8220;We now have up to $300 billion of origination capacity with several hundred fewer production team members than we had back in 2024. We&#8217;ve done this two years ahead of schedule, while actively reducing fixed costs through synergies,&#8221; Brown said. For Q2 2026, Rocket forecasts adjusted revenue between $2.7 billion and $2.9 billion. Key Q1 accomplishments Rocket said integration efforts tied to its acquisition of Mr. Cooper are progressing ahead of schedule. More than half of the servicing portfolio has been migrated to a unified platform, and the company said it expects to achieve its planned $400 million in expense synergies by the end of 2026, a year earlier than originally projected. &#8220;Integration is not putting logos next to each other; it is making the company work better, faster and with more force,&#8221; Krishna told investors on Thursday. &#8220;In 2025, we built the foundation, we expanded the ecosystem, we strengthened the platform, we widened the top of the funnel, we improved distribution. In 2026, we are bringing it all together across search, ",
+      "published_at": 1778189892000,
+      "score": 16,
+      "tags": [
+        "lender",
+        "earnings"
+      ],
+      "heat_signals": [
+        "forecast"
+      ],
+      "importance": 4,
+      "selector_reason": "Rocket Companies创四年最强季度利润，AI与收购驱动，净收入29.4亿美元，抵押贷款市场头部企业业绩。",
+      "section": "national",
+      "title_zh": "Rocket Q1 盈利创四年新高，AI 驱动市占率扩张",
+      "summary_zh": "Rocket Companies Q1 adjusted net income $422M，EPS $0.10 同比扭亏，adjusted EBITDA $738M 远超指引，AI 与收购推动 refinance 及 purchase 市占双升",
+      "impact": "long-pos",
+      "id": "3eb09d2a",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "The Iran war has the Fed reconsidering rate hikes — and more divided than ever - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSmI3M01sN1dSUHJrZ0lNdkI5ZG94TVFLOGVDdHV3Z1ZlR1BOaXpfeFVVQnp4STRuN2NuMWRSUlRfNmpEaXpSOE9DNHlmam1pZ3pKT25YRXhwV3NfU0Juc0VadlpmZ1EwNTdXTTFBcm5adDdaTmh4ODU5Rms1RGVEVXZycVlDV19vNkVudi1RWk1HYUZpcU5tQnJZbUxUbFZWLWZBNHhXb2U1bUM2cmo4?oc=5",
+      "description": "The Iran war has the Fed reconsidering rate hikes — and more divided than ever &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1777932890000,
+      "score": 12,
+      "tags": [
+        "rates",
+        "macro"
+      ],
+      "heat_signals": [
+        "fed",
+        "rate hike"
+      ],
+      "importance": 4,
+      "selector_reason": "伊朗战争导致Fed重新考虑加息，内部分歧加剧，关键宏观政策信号，与利率决策直接相关。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Iran 战争致 Fed 内部对加息分歧加剧",
+      "summary_zh": "中东冲突令 FOMC 重新考量 rate hike 路径，委员会分歧加大，货币政策不确定性上升，影响待观察",
+      "impact": "neutral",
+      "id": "e2bd9bc3",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "nahb-eyeonhousing",
+      "source_name": "NAHB Eye on Housing",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "data",
+        "trend",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Private Residential Construction Spending Increases in March",
+      "link": "https://eyeonhousing.org/2026/05/private-residential-construction-spending-increases-in-march/",
+      "description": "Private Residential Construction Spending Increases in March &#8211; Eye On Housing Skip to content Search Research/Data Housing Economics Plus Books Dashboards Local Data Research Studies Services Indices Team Videos Research/Data Housing Economics Plus Books Dashboards Local Data Research Studies Services Indices Team Videos Eye On Housing National Association of Home Builders Economic Research Blog Private Residential Construction Spending Increases in March May 7, 2026 Na Zhao No Comments Private residential construction spending was up 1.7% in March 2026, following two straight months of declines. The increase was broad-based, with gains in single-family, multifamily construction, and home improvement spending. Moreover, total private residential construction spending was 3.6% higher than a year ago. According to the latest construction spending data from the U.S. Census, single-family construction spending increased 2.7% in March, consistent with the steady builder confidence reflected in the NAHB/Wells Fargo Housing Market Index (HMI). Despite the monthly gain, single-family construction spending was down 4.2% over a year ago. Meanwhile, multifamily construction spending edged up 0.3% in March. This marks the second monthly increase after two consecutive months of modest declines. Compared to a year earlier, multifamily spending was 0.5% higher. Improvement spending (remodeling) also increased in March, rising 0.9% for the month. Remodeling remained a bright spot on a year-over-year basis, with spending up 14.3% from March 2025. The NAHB construction spending index is shown in the graph below. The index illustrates how spending on single-family construction has slowed since early 2024, reflecting the impacts of elevated interest rates and ongoing uncertainty over building material tariffs. Multifamily construction spending growth has also slowed down after the peak in July 2023, with the index largely plateauing since late 2024. In contrast, improvement spending has been on an upward trend since the beginning of 2025, supported in part by the aging housing stock and sustained demand for renovation. Spending on private nonresidential construction was down 2.1% over a year ago. The annual private nonresidential spending decrease was driven by a $39 billion drop in manufacturing construction spending. construction spending , private residential construction spending Prev Previous Multifamily Developer Confidence Holds Steady in First Quarter Leave a Reply Cancel reply Your email address will not be published. Required fields are marked * Comment * Name * Email * Website Yes, add me to your mailing list Share this Page Subscribe to Blog Subscribe Search by Category Construction Statistics Finance Home Sales and Prices Labor Force Macroeconomics Market Trends Policy Research Construction Statistics Finance Home Sales and Prices Labor Force Macroeconomics Market Trends Policy Research Video Updates View Economics Team on the Road To schedule a presentation for your group email econ@nahb.org. Housing Economics Plus Become a Plus subscriber today to view NAHB&#8217;s premium economic content: Industry Forecasts Housing Statistics Exclusive Webinars National Updates Sponsors © 2026 NAHB. All Rights Reserved. NAHB.org Facebook-f Linkedin-in Instagram Youtube X-twitter Contact Us: econ@nahb.org Subscribe Please leave this field empty Subscribe to Blog via Email Email Frequency * Instant Daily Weekly Check your inbox or spam folder to confirm your subscription. Construction Statistics Single-Family Multifamily Remodeling Labor Force Construction Wages Employment Data Job Openings Finance Builder Loans Consumer Finance Mortgages Home Sales and Prices Housing Affordability Housing Prices Housing Sales Macroeconomics Federal Reserve GDP Inflation Market Trends Housing Characteristics Housing Demand Industry Demographics Policy Research Building Materials Homeownership Tax Policy Local Data NAHB Indices Research Studies",
+      "published_at": 1778174392000,
+      "score": 37,
+      "tags": [
+        "housing",
+        "construction",
+        "data"
+      ],
+      "heat_signals": [
+        "fed",
+        "inflation",
+        "forecast",
+        "trend",
+        "trends",
+        "annual",
+        "year-over-year",
+        "housing market",
+        "construction spending"
+      ],
+      "importance": 3,
+      "selector_reason": "私人住宅建设支出3月增长1.7%，涵盖单户、多户及装修，是住宅市场供给侧的重要月度指标。",
+      "section": "national",
+      "title_zh": "3 月 private residential construction spending 回升 1.7%",
+      "summary_zh": "私人住宅建设支出终结两月连跌，single-family +2.7%、multifamily +0.3%、improvement +0.9%，但 single-family YoY 仍降 4.2%",
+      "impact": "neutral",
+      "id": "bfb804f3",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "Apartment rents saw ‘tepid’ bump in April: Yardi",
+      "link": "https://www.multifamilydive.com/news/apartment-rent-april-yardi/819621/",
+      "description": "An article from Apartment rents saw ‘tepid’ bump in April: Yardi Rents grew $4 month over month, but the industry is seeing less than the usual seasonal price increase this spring, according to the real estate research firm. Published May 7, 2026 Julie Strupp Senior Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Getty Images Listen to the article 5 min This audio is auto-generated. Please let us know if you have feedback . Apartment rents ticked up from March to April but remain lower than a year ago as operators see less than the usual seasonal bounce, according to an April 30 report from Yardi Matrix. Rents are down YOY in almost two-thirds of Yardi Matrix’s top 30 metros. The average advertised rent in the U.S. grew $4 month over month in April to $1,758, which was down 0.2% year over year and represented about one-third of the average growth rate between 2012 and 2019, per the report. “While April saw a second month of growth after declining during the winter, the increase was tepid,” according to Yardi. “The $4 increase is less than the usual seasonal bump and will hardly excite those looking to return to normal growth levels.” Advertised rents in single-family build-to-rent properties rose $7 month over month in April to $2,211, but were down 0.5% year over year. There are signs that a measure in the 21st Century ROAD to Housing Act that would force operators to sell their BTR SFRs after seven years is already impacting Houston, one of the country’s biggest BTR markets, per Yardi. Headwinds The elevated volume of new apartment supply working through lease-up remains the primary constraint on rent growth, according to Yardi. Demand has also softened and absorption has stagnated in the past few quarters. Consumer confidence is low and job growth remains soft, per Yardi. Many households face growing difficulties in the so-called K-shaped economy , which describes how higher-income households are increasingly better off, while lower-income ones are falling further behind, according to CNBC. The ongoing war in Iran has also contributed to elevated energy prices, which are constraining household budgets, per the report. Since negotiations with Iran appear stalled, there is limited visibility on when these pressures may ease . “Many in the industry are expecting/hoping that rent growth will return to the long-term average in the 2.5% to 3% range, but that may not be on the near-term horizon,” according to the report. However, “to get to the long-term average, rent growth must turn positive in markets in the Sun Belt and Mountain West that have recorded negative growth over the last two years.” With moderating population growth, cooling migration and an uncertain economic outlook, a near-term acceleration in demand appears unlikely, per the report. Nonetheless, rent growth is expected to increase gradually as inventory is absorbed over time. Strategies and opportunities The highest rent gains continue to be concentrated in primary markets such as New York, Chicago and San Francisco, as well as Midwest markets like Minneapolis and Saint Paul, Minnesota; Kansas City in Missouri and Kansas; and Indianapolis. Charlotte, North Carolina; Houston and Austin in Texas; Orlando and Tampa in Florida; and other markets saw MOM and YOY rent declines in April. However, several other high-supply markets are showing early signs of stabilization: Miami; Phoenix; Raleigh, North Carolina; Denver; Nashville, Tennessee; and Dallas all posted growth in April but declined year over year. “While this improvement is not yet broad-based or sustained, it suggests conditions may be beginning to turn a corner, though a gradual recovery is still expected,” according to Yardi. Regardless of overall performance, each metro area has pockets that outperform the larger market depending on the local economic picture and supply characteristics, per the report. Investors can also find opportunities in distressed and value-add",
+      "published_at": 1778176620000,
+      "score": 45,
+      "tags": [
+        "multifamily",
+        "trend",
+        "data"
+      ],
+      "heat_signals": [
+        "build-to-rent",
+        "btr",
+        " sfr",
+        "texas",
+        "houston",
+        "dallas",
+        "austin",
+        "sun belt",
+        "outlook",
+        " yoy",
+        "year over year",
+        "rent growth"
+      ],
+      "importance": 3,
+      "selector_reason": "全国多户住宅租金数据，Yardi报告显示4月租金仅增$4且同比下跌，反映春季租赁市场疲软，属于常规市场动态监测。",
+      "section": "sunbelt",
+      "title_zh": "4 月 apartment rent 仅微涨 $4，季节性反弹乏力",
+      "summary_zh": "Yardi 数据显示全美 advertised rent MoM +$4 至 $1,758，YoY -0.2%，增幅仅为 2012-2019 均值三分之一，BTR SFR rent 亦 YoY -0.5%",
+      "impact": "short-neg",
+      "id": "f2d4fa14",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "trerc",
+      "source_name": "Texas Real Estate Research Center (TRERC)",
+      "source_tier": "D",
+      "source_weight": 9,
+      "source_tags": [
+        "texas",
+        "data",
+        "trend"
+      ],
+      "region": "texas",
+      "title": "Supply Is Back, Confidence Is Not: Inside Texas’ Shifting Spring Housing Market",
+      "link": "https://trerc.tamu.edu/blog/supply-is-back-confidence-is-not-inside-texas-shifting-spring-housing-market/",
+      "description": "May 7, 2026 Supply Is Back, Confidence Is Not: Inside Texas’ Shifting Spring Housing Market A confluence of factors is reshaping the state’s housing market this spring. What does that mean for buyers and sellers? By Yanling Mayer quick links Tierra Grande NewsTalk Texas Blog Content Library Data Gallery As the housing market heads into its busiest stretch of the year, a mix of global and domestic pressures—disruptions to the supply of oil and petro-products, a sharp rise in energy prices, renewed inflation, rising mortgage rates, and shifting consumer sentiment—are all converging to impact the 2026 spring season and likely beyond. The question now is whether this spring will feel noticeably different from the momentum that had been building at the start of 2026. Mortgage Rates Reverse Course At the beginning of the year, expectations for a more active and balanced spring market were building. Mortgage rates had been on a steady decline since last June, continuing to fall through January and February 2026 and even briefly dropping below 6 percent. That trend reversed in March following the outbreak of the Iran conflict. The average rate on 30-year conforming mortgages jumped by 50 basis points in April (see figure) as inflation re-accelerated amid rising energy costs and disruptions in global energy market. As of the first week of May, rates remained more than 25 basis points above their February/March low. Rising mortgage rates, weakening consumer sentiment, renewed inflation, and economic uncertainty are now weighing on buyer demand just as the market typically gains momentum heading into spring. Weekly Rates on 30-Year Conforming Mortgages Source: Freddie Mac PMMS, accessed at FRED More Sellers, More Inventory, More Price Weakness Fresh listings have been on the rise as sellers position themselves for the seasonal upswing. As of March, new-listing activity is running modestly ahead of last year. With more sellers returning to the market after sitting out the quiet winter months, inventory has been replenishing quickly and is already exceeding last year’s levels. Although inventory isn’t growing as sharply as it did last year, it remains on track to reach new highs this spring. Supply conditions are again shifting in the buyer’s favor, and rising inventory is expected to put additional pricing pressure on sellers, especially at a time when rising mortgage rates, renewed inflation, and heightened economic uncertainty are weighing on consumers. A More Negotiable Spring Market The Iran conflict is ongoing with no clear resolution on the table. As of May 4, crude oil prices (West Texas Intermediate) are trading at $105-$106 per barrel, roughly 80 percent higher than the $60-$65 range seen in January and February. The 10-year treasury yield has hit new highs daily since mid-April and has now climbed to 4.45 percent. With a typical mortgage spread of about 2 percentage points, investors’ demand on higher treasury yield has already pushed 30‑year mortgage rates into the mid‑6 percent range. In periods of heightened market volatility and uncertainty, spreads typically widen further, which could send mortgage rates back to the levels seen last spring after the eruption of global tariff wars. Buyer demand is expected to soften as mortgage rates and inflation shift. Even buyers not already sidelined by rising rates may choose to exercise more caution, taking more time to navigate the market and the economy. Signs point to another spring season of slower demand, steady seller participation, more price adjustments, and a generally more negotiable market. Views expressed on The 338 are those of the authors and do not imply endorsement by the Texas Real Estate Research Center, Division of Research, or Texas A M University. Did you like this Post? 6 In This Post Contents Mortgage Rates Reverse Course More Sellers, More Inventory, More Price Weakness A More Negotiable Spring Market Topics Housing Subscribe Subscribe to The 338 You might also ",
+      "published_at": 1778158800000,
+      "score": 26,
+      "tags": [
+        "housing",
+        "texas",
+        "trend"
+      ],
+      "heat_signals": [
+        "texas",
+        "inflation",
+        "mortgage rate",
+        "freddie mac",
+        "trend",
         "housing market"
       ],
-      "section": "national",
       "importance": 3,
-      "_from_fallback": true,
-      "extended_window": true,
-      "title_zh": "旧金山房市失控，开发商推出 board game 讽刺",
-      "summary_zh": "SF housing affordability crisis 极端化，market dysfunction 引发社会文化反响",
+      "selector_reason": "Texas春季住宅市场综合分析，供应回升但信心不足，能源价格与利率多重压力，Sun Belt关键市场动态。",
+      "section": "sunbelt",
+      "title_zh": "Texas 春季房市供给回升但信心不足，mortgage rate 反弹 50 bps",
+      "summary_zh": "Iran 冲突致 30Y mortgage 4 月跳升 50 bps，能源涨价与通胀重燃叠加 consumer sentiment 走弱，Texas 春季 momentum 受挫",
       "impact": "short-neg",
-      "id": "04f40d05",
-      "fetched_at": 1778230349986
+      "id": "cbe68027",
+      "fetched_at": 1778230768556
     },
     {
-      "source_id": "inman",
-      "source_name": "Inman News",
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "ICE enforcement sends Texas property to servicing",
+      "link": "https://www.multifamilydive.com/news/ice-enforcement-immigrant-apartment-rental-demand/819346/",
+      "description": "The Villas Del Sol property in Austin saw occupancy fall to 75% after &ldquo;decreasing local employment and ICE operations in the area,&rdquo; according to Morningstar.",
+      "published_at": 1777998463000,
+      "score": 15,
+      "tags": [
+        "multifamily",
+        "distress",
+        "austin"
+      ],
+      "heat_signals": [
+        "texas",
+        "austin",
+        "occupancy"
+      ],
+      "importance": 3,
+      "selector_reason": "ICE执法导致Austin多户住宅入住率降至75%，反映移民政策对地方租赁市场的直接冲击。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "ICE 执法冲击 Austin 公寓，入住率跌至 75% 转入 special servicing",
+      "summary_zh": "The Villas Del Sol 因当地就业下滑及 ICE 行动 occupancy 降至 75%，已转入 special servicing，细节待披露",
+      "impact": "short-neg",
+      "id": "62bd817a",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Sparks flare over Florida law to target idle golf courses for housing",
+      "link": "https://www.housingwire.com/articles/sparks-flare-over-florida-law-to-target-idle-golf-courses-for-housing/",
+      "description": "A bill overriding local zoning authority to allow housing on idle Southeast Florida golf courses drew little public attention during Florida&#8217;s legislative session. When the Infill Redevelopment Act passed, warnings over problems it could cause bubbled up, but only in limited circles. It passed in March without a single &#8220;nay&#8221; vote in the Senate and overwhelmingly cleared the House. The bill landed on Gov. Ron DeSantis&#8217; desk this week, and now what were isolated warnings have flared up into threats of lawsuits as homeowners fear their million-dollar views of golf course greens and fairways will disappear. &#8220;You&#8217;re going to see a lot of angry voters,&#8221; Steve Geller, a Broward County commissioner and former state senator, told The Builder&#8217;s Daily . The bill is the latest in a series of state laws that have made Florida a national example for stripping local governments of zoning authority in the name of housing affordability – a pattern that has sparked lawsuits and resistance from counties and municipalities statewide. A narrow law impacting three counties Sponsored by Miami state Sen. Alexis Calatayud, the bill explicitly bars local governments from adopting or enforcing any ordinance, regulation or law that &#8220;restricts, prohibits, or otherwise limits&#8221; residential development on qualifying parcels. A staff-level administrative approval is all the law demands. Qualifying land must be a minimum of five acres of environmentally impacted land in a county with a population exceeding 1.475 million and at least 15 municipalities. Those thresholds limit the law&#8217;s reach to Miami-Dade, Broward and Palm Beach counties. The bill&#8217;s most detailed section addresses former recreational facilities – specifically naming golf courses, tennis courts, swimming pools and clubhouses. Developers seeking to build on such sites must prove that the facilities have been idle for at least 12 consecutive months, pay double the applicable parks and recreation impact fees, and notify adjacent property owners by certified mail. Those neighbors have 90 days to purchase the land at a price capped by law before the developer can proceed. Critics warn the peril may outweigh the promise. Insurance defense attorney John Riordan of Kelley Kronenberg in West Palm Beach told the Insurance Journal the legislation &#8220;is likely to generate several categories of litigation, including insurance coverage disputes, construction defect/toxic exposure claims, mass tort litigation, and government preemption challenges.&#8221; Calatayud has argued the bill does not remove existing environmental cleanup requirements and only removes zoning barriers that have driven up costs for developers and homebuyers. A pattern of pushback DeSantis signed the Live Local Act in 2023 to fund workforce housing and streamline development as a housing crisis emerged from the state&#8217;s nation-leading population growth during the COVID-19 pandemic. But the state has also become a litmus test for local government pushback. Hillsborough County sued the state in March, arguing Live Local is unconstitutional because it undermines local land-use control and violates due process. Developers have sued municipalities that rejected Live Local projects. In late March, a Broward County judge ruled in favor of Hollywood&#8217;s decision to reject a proposed 17-story beachfront tower under Live Local rules. Keith Poliakoff, the developer&#8217;s attorney, told The Builder&#8217;s Daily that the developer filed a notice of appeal but is awaiting a decision on a motion to reconsider. To counter local government resistance, state lawmakers have tweaked Live Local three times. The 4.0 version passed earlier this year. Defining the affordability challenge &#8220;The Legislature finds that this state&#8217;s urban areas lack sufficient land for the development of additional residential uses, which has led to a shortage of supply,&#8221; the bill",
+      "published_at": 1778187136000,
+      "score": 13,
+      "tags": [
+        "housing",
+        "florida",
+        "policy"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "Florida州法推翻地方 zoning 允许高尔夫球场建住房，DeSantis签署，涉及重要州级住房政策争议。",
+      "section": "sunbelt",
+      "title_zh": "Florida 新法强制闲置高尔夫球场改建住宅，引发诉讼威胁",
+      "summary_zh": "Infill Redevelopment Act 剥夺地方 zoning 权限，允许 Southeast Florida 三县高尔夫球场改住宅，业主强烈反对，DeSantis 尚未签署",
+      "impact": "neutral",
+      "id": "a918b48a",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "btrlist",
+      "source_name": "BTR List (via Google News)",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "btr-sfr"
+      ],
+      "region": "national",
+      "title": "BTR Daily - May 7, 2026 - Trinitas breaks ground on $80M development - BTR List",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMVRrWW9iRENzSk4yRU9IdzdzbTZsSV9BSHMxQjNONXQ5dkRWM2xPMDlCYkZGeGowOG1TRkt6MXc5cm1qN3g1SWFfbmhBbHR0dG5yWVBKbVh5N0FPeHhfQS10bGc2TXNfM1VZS3RSZWlVQ1VnZTlYSWJuMEhtVGNYNHpBdDJqZw?oc=5",
+      "description": "BTR Daily - May 7, 2026 - Trinitas breaks ground on $80M development &nbsp;&nbsp; BTR List",
+      "published_at": 1778150232000,
+      "score": 17,
+      "tags": [
+        "btr-sfr"
+      ],
+      "heat_signals": [
+        "btr"
+      ],
+      "importance": 3,
+      "_from_fallback": true,
+      "section": "btr",
+      "title_zh": "Trinitas $80M BTR 项目动工，细节待披露",
+      "summary_zh": "Trinitas 启动 $80M BTR development，具体位置及单元数未披露，影响待观察",
+      "impact": "neutral",
+      "id": "37c712b1",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "Ant Anstead and Renee Zellweger Hit With $10 Million Lawsuit From Guest Over Alleged Injury at Laguna Beach Rental Home",
+      "link": "https://www.realtor.com/news/reality-tv/ant-anstead-renee-zellweger-guest-lawsuit-laguna-beach-home/",
+      "description": "Renee Zellweger and Ant Anstead are being sued for more than $10 million in damages, over an alleged injury at his rental home.",
+      "published_at": 1778174909000,
+      "score": 10,
+      "tags": [
+        "housing"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "_from_fallback": true,
+      "section": "btr",
+      "title_zh": "Ant Anstead 与 Renee Zellweger 因出租物业客人受伤遭索赔 $10M",
+      "summary_zh": "Laguna Beach 出租房屋客人 alleged injury 引发 $10M 诉讼，属房东 liability 风险个案，对 BTR SFR 运营合规性具警示意义",
+      "impact": "short-neg",
+      "id": "7d87cb79",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
       "source_tier": "A",
       "source_weight": 8,
       "source_tags": [
-        "housing",
-        "brokerage"
+        "mixed-asset",
+        "deals"
       ],
       "region": "national",
-      "title": "Did Real just buy itself a 'channel conflict' with the REMAX deal? - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQX3dFRzR3TmNBckhfWnVBWldTNHhLUHBUZ0JRRkJvUXlzY25wNllUODVWSDJuMHgwQjM2QnJpOUx2THQ4azdJSlA0Q09PQVRVWmZjUmdlQ0U4eVVueFNwaVpsUUFjSkI1alV3R2NCbEhXVzdZMEY2QjU3LXMxajZua1JlQkN2YVlYNmlIbERRLTNoel8ySlYwYzN5ejdFdw?oc=5",
-      "description": "Did Real just buy itself a 'channel conflict' with the REMAX deal? &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778129550000,
+      "title": "AT&T To More Than Double Footprint With $1.4B HQ In Dallas Suburb",
+      "link": "https://www.bisnow.com/dallas-ft-worth/news/office/att-to-more-than-double-its-building-space-at-14b-hq-in-dallas-suburb-134432",
+      "description": "AT&T’s new $1.35B global headquarters in Plano is set to have more than twice the amount of space of its current 1M SF Whitacre Tower building in Downtown Dallas.",
+      "published_at": 1778002489000,
       "score": 10,
       "tags": [
-        "housing",
-        "brokerage"
-      ],
-      "heat_signals": [],
-      "section": "national",
-      "importance": 3,
-      "_from_fallback": true,
-      "title_zh": "Real 收购 RE/MAX 是否自陷 channel conflict",
-      "summary_zh": "dual brokerage 与 franchise 模式并存，agent 归属与 revenue 分配冲突待解",
-      "impact": "short-neg",
-      "id": "5d6df861",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "d-magazine",
-      "source_name": "D Magazine",
-      "source_tier": "D",
-      "source_weight": 5,
-      "source_tags": [
+        "office",
+        "deals",
         "dfw"
-      ],
-      "region": "texas",
-      "title": "Women’s Health Startup Dotted Named Social Innovator of the Year at United Way’s The Pitch",
-      "link": "https://www.dmagazine.com/philanthropy-nonprofits/2026/05/womens-health-startup-dotted-named-social-innovator-of-the-year-at-united-ways-the-pitch/",
-      "description": "Dotted, a women’s health startup dedicated to menstrual and reproductive care, claimed the top social innovator prize at United Way of Metropolitan Dallas’ “The Pitch,” held at the Toyota Music Factory in Irving. The winning venture, which took home $115,000, particularly focuses on menstrual and reproductive health, an area founder Dejanae Parkman said is often &#8230; Continued The post Women’s Health Startup Dotted Named Social Innovator of the Year at United Way’s The Pitch appeared first on D Magazine .",
-      "published_at": 1778169600000,
-      "score": 10,
-      "tags": [
-        "dfw",
-        "texas",
-        "housing"
       ],
       "heat_signals": [
         "dallas"
       ],
-      "section": "national",
-      "importance": 3,
-      "_from_fallback": true,
-      "title_zh": "女性健康初创 Dotted 获 United Way 社会创新奖",
-      "summary_zh": "DFW 本地创业赛事，$115K 奖金，与 residential real estate 无直接关联",
-      "impact": "neutral",
-      "id": "dd599e37",
-      "fetched_at": 1778230349986
+      "importance": 4,
+      "selector_reason": "AT&T 14亿美元Plano新总部，规模超现有两倍，Sun Belt企业迁移与办公市场大型交易。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "AT&T $1.35B Plano 新总部面积翻倍，DFW office 获大单",
+      "summary_zh": "AT&T 全球总部迁往 Plano，$1.35B 投资、超 2M SF，为 DFW office market 注入长期需求，corporate relocation 趋势延续",
+      "impact": "long-pos",
+      "id": "bdcdbb42",
+      "fetched_at": 1778230768556,
+      "cre_subcategory": "办公"
     },
     {
-      "source_id": "d-magazine",
-      "source_name": "D Magazine",
-      "source_tier": "D",
-      "source_weight": 5,
-      "source_tags": [
-        "dfw"
-      ],
-      "region": "texas",
-      "title": "Christopher M. Farish: Dallas Family Lawyer for Collaborative Divorce &#038; Mediation",
-      "link": "https://www.dmagazine.com/sponsored/2026/05/christopher-farish-dallas-family-lawyer-collaborative-divorce/",
-      "description": "Most often when people think of divorce, they picture a dramatic battle that ends in a courtroom in front of a judge or jury. Christopher Farish approaches divorce in a different way for his clients, working diligently to get them to a place where they can resolve their differences in a better, healthier way that &#8230; Continued The post Christopher M. Farish: Dallas Family Lawyer for Collaborative Divorce & Mediation appeared first on D Magazine .",
-      "published_at": 1778155200000,
-      "score": 10,
-      "tags": [
-        "dfw",
-        "texas",
-        "housing"
-      ],
-      "heat_signals": [
-        "dallas"
-      ],
-      "section": "national",
-      "importance": 3,
-      "_from_fallback": true,
-      "title_zh": "Dallas 家事律师 Christopher Farish 推广协作离婚",
-      "summary_zh": "D Magazine 本地专业服务 profile，非 housing market 相关资讯",
-      "impact": "neutral",
-      "id": "ce6a830f",
-      "fetched_at": 1778230349986
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
       "source_tier": "A",
       "source_weight": 8,
       "source_tags": [
-        "housing",
-        "brokerage"
+        "mixed-asset",
+        "deals"
       ],
       "region": "national",
-      "title": "The \"Pink Tax\" Doesn't Stop At The Cash Register - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNOVZpXzhlUlBkcTF0eXhOQmttbG1tWVZqSnVDcFNKUFNabUJ6TVp5eUM3UmVxWjlpcHBqMDY0eEJCamE0ejdLOE9NRl9PZlZkSklRaDU4eDVYcDFZNmZKVzNNa3FnS1Z2VnNLVldKaEN3eUdBZGdyWXZzbWhyeUNWSEs2dzJrQQ?oc=5",
-      "description": "The \"Pink Tax\" Doesn't Stop At The Cash Register &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778095493000,
-      "score": 10,
+      "title": "Starwood Grapples With Potential $265M Hotel Portfolio Default",
+      "link": "https://www.bisnow.com/national/news/hotel/starwood-grappling-with-looming-265m-hotel-portfolio-default-134479",
+      "description": "News Starwood Grapples With Potential $265M Hotel Portfolio Default National Hotel View count: National Hotel May 07, 2026 | 1:52 p.m. ET Bianca Barragán, Southern California Google Maps 1808 S. Australian Ave. in West Palm Beach, Florida, one of the properties in the hotel portfolio Starwood Capital Group is battling a looming default on a hotel portfolio spanning nearly 3,000 keys across 12 states. A 2018 CMBS loan for a 22-property hotel portfolio was transferred to special servicer K-Star Asset Management in January for “imminent monetary default,” The Real Deal reported . The portfolio contains 2,943 doors across 12 states and 17 cities. The hotels are largely Marriott, Hilton and IHG-branded locations, concentrated in the Midwest, including three in the Chicago area. The $265M loan doesn't mature until 2027, and the borrower, a Starwood affiliate, is current through April on interest payments, but default alarm was sounded due to the portfolio's fundamentals, which have weakened considerably compared to the time of underwriting. Occupancy at the hotels averages around 63%. The portfolio was generating less than 65% of the revenue it needed to cover the cost of the loan's interest as of mid-2025. At the time of origination, it was underwritten as generating more than double the cost to cover loan interest, according to TRD. Starwood has had issues with other large portfolio loans coming due. Last spring, a $577.3M Starwood CMBS loan secured by 65 hotels across 21 states was transferred to special servicing , also due to cash flow problems. Starwood found a way forward for that portfolio. It secured a loan modification, and as of the end of March, it had sold off 21 of the portfolio's lower-performing hotels and was able to contribute $122.6M to paying down the debt, TRD reported. The hotel market is grappling with revenue that's flat or declining as international tourism numbers remain down. Events like the FIFA World Cup , which were anticipated windfalls for hotel owners, have failed to make good on the promise of bringing in waves of bookings. Nevertheless, with record levels of debt available, there are still lots of investors eager to buy hotels, and transactions are expected to rise this year, Bisnow has reported. Contact Bianca Barragán at bianca.barragan@bisnow.com Related Topics: Starwood Capital Group , hotel market , hotel distress , K-Star Asset Management",
+      "published_at": 1778170626000,
+      "score": 19,
       "tags": [
-        "housing",
-        "brokerage"
+        "hotel",
+        "distress",
+        "institutional"
+      ],
+      "heat_signals": [
+        "starwood",
+        "occupancy"
+      ],
+      "importance": 4,
+      "selector_reason": "Starwood 2.65亿美元酒店组合面临违约，2,943间客房跨12州，CMBS转特殊服务商，属于大型CRE违约风险事件。",
+      "section": "cre",
+      "title_zh": "Starwood $265M hotel portfolio 濒临违约，已转入 special servicing",
+      "summary_zh": "22 家酒店 2,943 keys 的 2018 CMBS loan 因基本面恶化转入 K-Star special servicing，occupancy 63%、DSCR 不足 0.65x，maturity 2027 但违约风险迫近",
+      "impact": "short-neg",
+      "id": "6a6ec62e",
+      "fetched_at": 1778230768556,
+      "cre_subcategory": "酒店"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Soloviev To Pocket $526M In 9 W. 57th St. Refi",
+      "link": "https://www.bisnow.com/new-york/news/capital-markets/soloviev-18b-loan-cash-in-on-9-west-57th-134486",
+      "description": "News Soloviev To Pocket $526M In 9 W. 57th St. Refi New York Capital Markets View count: New York Capital Markets May 07, 2026 | 4:29 p.m. ET Ethan Rothstein, Deputy Managing Editor Sheldon Solow famously kept occupancy low for decades at 9 W. 57th St., preferring exclusivity over cash flow at the office tower overlooking Central Park. His son, Stefan Soloviev, took a different approach after inheriting the family business in 2020. He spent $53M renovating the building, pushed occupancy above 91% and is now poised to cash out in a major way. Soloviev is set to pocket more than $500M through a refinancing of the Billionaires’ Row tower. Google Maps 9 W. 57th St. The Soloviev Group has lined up a $1.8B CMBS loan from Bank of America , Wells Fargo and Citi Real Estate Funding to refinance 9 W. 57th St., according to S P Global . The five-year loan will pay off the building’s existing $1.2B mortgage, which matures later this year. About $857M of that debt is securitized in the JPMCC 2016-NINE CMBS trust, with the remainder spread across several conduit CMBS loans. The refinancing will also fund $40M in closing costs and $34M in landlord obligations. The remaining $526M would be returned to Soloviev in cash, according to S P Global’s presale report. The mortgage is expected to close on May 27. The building’s existing debt, originated in 2016, carries a 2.85% rate, according to the Morningstar Credit database. A Bank of America spokesperson declined to comment. Shortly after this story's publication, Soloviev Group announced that it closed the refinancing at an interest rate of 4.97%. When the tower is stabilized, it will be valued at $3.9B, according to the release. “This refinancing is a clear validation of the strength of 9 West 57th Street and the collaborative success of lead lender Bank of America, and secondary leads Wells Fargo and Citibank,” Soloviev said in a statement. The 50-story, 1.7M SF tower opened in 1974 after Solow spent decades assembling the site. The building is often simply called Nine West because the shoe company was founded there and took its name from the address. Solow was known as a notoriously difficult landlord, sometimes rejecting tenants for seemingly arbitrary reasons, including misidentifying an artist whose work hung in the building, The Wall Street Journal reported . Soloviev, 50, took his family’s original surname when he was 23. Since taking over the business, he has brought in new works by Picasso, Matisse and Miró, added a 20K SF fitness center and upgraded the building’s amenities to better compete with newer towers like One Vanderbilt and those in Hudson Yards , the WSJ reported last month. Those efforts appear to have paid off. The building averaged 71% occupancy over the past 24 years but was 91.7% leased at the end of April, according to S P Global. Its net operating income also jumped 45% between 2021 and 2025, rising from $106.1M to $153.4M. Its largest tenant is Apollo Global Management , which leases 430K SF and subleases an additional 32K SF from Sculptor Capital Management. Apollo also has the option to expand into multiple floors as they become available. Chanel , Sculptor and Davidson Kempner Capital Management are also major tenants. Even as occupancy has climbed, Soloviev has continued to command some of the market’s highest rents. In March, Soloviev announced a record New York City office lease at $327.50 per SF for the building’s top floor. The tenant was later revealed to be HBeyond , a company owned by the family of a Mexican billionaire. Soloviev signed seven leases totaling 58K SF that begin this year and next at an average rent of $205 per SF, according to S P — well above Midtown’s average asking rent of $84.77 per SF in April, according to CBRE . The refinancing underscores how aggressively lenders and bond investors are still chasing top-tier Manhattan office assets despite higher interest rates. More than $14B of CMBS debt was issued against New York City office prop",
+      "published_at": 1778178738000,
+      "score": 15,
+      "tags": [
+        "office",
+        "deals",
+        "nyc"
+      ],
+      "heat_signals": [
+        "occupancy"
+      ],
+      "importance": 4,
+      "selector_reason": "Soloviev 18亿美元CMBS再融资9 W. 57th St.，套现超5亿美元，纽约地标性办公楼大额交易。",
+      "section": "cre",
+      "title_zh": "Soloviev 9 W. 57th St. $1.8B refi 套现 $526M",
+      "summary_zh": "Billionaires' Row 地标 office occupancy 91%，$1.8B CMBS loan 置换 2016 年 $1.2B 旧债，2.85% 低利率到期后成功 refi，显示 prime NYC office 仍具流动性",
+      "impact": "long-pos",
+      "id": "4457506d",
+      "fetched_at": 1778230768556,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "EQT To Spend $1.1B Buying Into Americold Warehouses",
+      "link": "https://www.bisnow.com/national/news/industrial/eqt-to-spend-11b-buying-into-americold-warehouses-as-reit-continues-loss-streak-134477",
+      "description": "Global investment giant EQT Real Estate is buying into the middling U.S. cold storage sector with a $1.3B joint venture with publicly traded operator Americold Realty Trust.",
+      "published_at": 1778168378000,
+      "score": 12,
+      "tags": [
+        "industrial",
+        "deals",
+        "institutional"
       ],
       "heat_signals": [],
-      "section": "national",
+      "importance": 4,
+      "selector_reason": "EQT 13亿美元合资进入Americold冷库，全球投资巨头布局工业地产，大型机构交易。",
+      "section": "cre",
+      "title_zh": "EQT $1.3B 入股 Americold，押注冷链物流",
+      "summary_zh": "EQT Real Estate 与 Americold Realty Trust 成立 JV，$1.3B 布局美国 cold storage 工业地产，institutional capital 持续流入 niche logistics",
+      "impact": "long-pos",
+      "id": "16a86867",
+      "fetched_at": 1778230768556,
+      "cre_subcategory": "仓储 / 物流"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Following $3B Blackstone Buyout, QTS Founder Launches New Data Center Firm",
+      "link": "https://www.bisnow.com/national/news/data-center-capital-markets/people-will-be-surprised-following-3b-blackstone-buyout-qts-founder-launches-new-data-center-firm-134487",
+      "description": "News Following $3B Blackstone Buyout, QTS Founder Launches New Data Center Firm Data Center Capital Markets View count: National Capital Markets May 07, 2026 | 3:45 p.m. ET Dan Rabb, Data Centers The founder and longtime CEO of data center giant QTS is launching a new digital infrastructure development firm, just a year after accepting a $3B buyout to depart his former company. Courtesy of QII Chad Williams, founder and longtime CEO of data center giant QTS, is launching his next venture: Quality Infratech Intelligence. Quality Growth Cos. — the family office of former QTS CEO Chad Williams — is launching QII, an independent company that plans to develop gigawatt-scale campuses for data centers, advanced manufacturing and other energy-intensive industries. The new venture’s name, which stands for Quality Infratech Intelligence, is pronounced “Q-2.” In an interview with Bisnow , its founder said this is a reference to the firm serving as a second chapter following his departure from Blackstone -owned QTS in spring 2025. Williams had been at the helm of QTS for close to 20 years. He led the company from being a family-owned firm through an initial public offering on the New York Stock Exchange in 2013 to its eventual sale to Blackstone in a $10B take-private deal in 2021. QTS ranked as North America's largest data center landlord at the time of Williams’ exit, which was reportedly prompted by clashes over the direction of the company with Blackstone and other senior leaders. Williams declined to discuss the specifics of those reports, but he said that experience has informed his strategy for QII. Williams insists the new company isn't simply a continuation of the business model he developed at QTS. He says QII is centered around a vision of campuses not only for data centers but for hosting a vertically integrated digital infrastructure ecosystem in which artificial intelligence data centers enable the build-out of advanced manufacturing and other AI-reliant industrials. “There's demand coming that's not just AI factories, it is industrial infrastructure, where technology and infrastructure come together at scales that have never been needed or required before for this next generation,” Williams said. “We won't be able to do that on every campus because there has to be land available, and sometimes you have enough for one or the other. But where you can gather those resources together, I think this will be unique.” QII has yet to unveil any specific projects or sites where these powered campuses will be built. Still, Williams anticipates multiple announcements by year-end once those projects are “certain and moving forward.” While QII has provided few specifics about its future development plans, Williams told Bisnow the firm is focused on nontraditional data center locations outside of primary markets. He said he has executed this approach successfully in the past, with QTS developing major facilities in places like Atlanta and Richmond before they became major digital infrastructure hubs. “I've gone sometimes where people have not thought to go or not been able to go, for whatever reason, and I think you should see that to be a consistent path going forward,” Williams said. “There may be a couple announcements where people go, 'Oh, geez, why didn’t I think of that?'” Although a growing share of developers building gigawatt-scale data center campuses are turning to on-site generation and behind-the-meter power deals to skirt yearslong wait times for electricity from the grid, QII is “committed to a grid-only strategy,” at least for now, according to Williams. Rich Voorberg, the former president of Siemens Energy North America, will lead QII’s energy strategy. Courtesy of QII QII's leadership team: Mark Westhoff, Rich Voorberg, Alex Rose, Chad Williams and Jeremy Bardin Williams said his and Voorberg’s deep relationships with utilities and experience navigating the energy landscape are a key competitive advantage over the bevy o",
+      "published_at": 1778177051000,
+      "score": 19,
+      "tags": [
+        "data-center",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [
+        "blackstone",
+        "year-end"
+      ],
       "importance": 3,
-      "_from_fallback": true,
+      "selector_reason": "QTS创始人Chad Williams在黑石30亿美元收购后创立新数据中心公司，属于重要人物行业动态。",
+      "section": "cre",
+      "title_zh": "QTS 创始人 Chad Williams 被 Blackstone $3B 收购一年后创办新数据中心公司",
+      "summary_zh": "Chad Williams 推出 Quality Infratech Intelligence，计划开发 gigawatt-scale 数据中心园区，Blackstone 收购后分歧促其另起炉灶",
+      "impact": "neutral",
+      "id": "a76f7e5a",
+      "fetched_at": 1778230768556,
+      "cre_subcategory": "数据中心"
+    },
+    {
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "ECI Group, ApexOne partner on $500M multifamily fund",
+      "link": "https://www.multifamilydive.com/news/value-add-fund-multifamily-investment-strategy/819624/",
+      "description": "An article from ECI Group, ApexOne partner on $500M multifamily fund ApexOne’s acquisition teams “are seeing a significant uptick of both marketed and off-market deals throughout our targeted markets,” the firm’s Ernest Johnson said. Published May 7, 2026 Leslie Shaver Senior Reporter Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Inscription West Palm Beach in West Palm Beach, Florida, which is owned by ECI Group. Permission granted by ECI Group Partners: ECI Group and ApexOne Investment Partners Equity capitalization: $500 million Acquisition pipeline: 20-25 properties Target regions: Sun Belt, Midwest and Mountain West On May 6, ECI Group and ApexOne Investment Partners launched a strategic joint venture, ApexOne-ECI Multifamily Fund VI LP, according to a press release. The ECI-ApexOne venture joins a handful of other value-add vehicles recently launched in the multifamily sector. The timing of these funds doesn’t appear to be a coincidence, as investors are beginning to see strong buying opportunities. Ernest Johnson, partner and executive managing director of ApexOne, said that his firm believes the U.S. apartment market is in a “cyclical adjustment” following the rapid asset-value appreciation through early 2022. “Our acquisition teams are seeing a significant uptick of both marketed and off-market deals throughout our targeted markets,” Johnson told Multifamily Dive in emailed comments. “Many more than a year ago.” ECI CEO and Chief Operating Officer Seth Greenberg said that sponsors, investors and lenders have been waiting for the market to improve. But now sentiment is changing. “It appears the realization that current market conditions are the new normal is beginning to take hold and people are acting accordingly,” Greenberg told Multifamily Dive in emailed comments. The fund, which will seek total equity capitalization of $500 million , aims to acquire, invest in, strategically redevelop and renovate, lease and manage institutional-quality multifamily assets across the Sun Belt, the Midwest and the Mountain West, per the release. “No single part of the country is immune from the stress we see in the market,” Johnson said. The Sun Belt and Mountain West regions create opportunities “due to past overbuilding,” he said, while the Midwest “creates opportunities from delayed physical improvements and the timing of debt maturities.” Big commitments ECI and ApexOne, the fund's co-general partners, have committed to co-invest more than $100 million of the fund's $500 million total equity capitalization alongside committed investor equity capital, per the release. Collectively, the firms have acquired or developed approximately 50,000 units and invested over $7 billion across more than 160 multifamily communities in the Sun Belt, Southwest and Midwest regions. ECI Group’s capital commitment to the fund is in partnership with Almanac Realty Investors, a business unit of a business unit of Neuberger Berman . The value-add fund will target existing properties rather than ground-up developments, with an emphasis on both newer-vintage and traditional multifamily assets, including workforce housing communities. Johnson says 35% to 40% of the opportunities available are traditional value-add properties in need of light physical upgrades. “The balance are opportunities created by a stressed capital stack,” he said. “All of the properties will benefit from the improved operations that ECI can generate through their AI-driven management and leasing systems.” For Greenberg, items that make a unit more livable, such as better light, more modern kitchens and flooring, as well as other modernizing amenity packages, present opportunities to improve both asset value and a resident's living experience. “We also believe our focus on customer service will help improve the performance of the properties we acquire and manage,” he said. Value-add fund growth The value-add fund space has gotten crowded over the la",
+      "published_at": 1778177321000,
+      "score": 14,
+      "tags": [
+        "multifamily",
+        "fundraising",
+        "institutional"
+      ],
+      "heat_signals": [
+        "sun belt"
+      ],
+      "importance": 4,
+      "selector_reason": "ECI Group与ApexOne成立5亿美元多户基金，目标Sun Belt/Midwest/Mountain West 20-25处物业，中型机构募资。",
+      "section": "institutional",
+      "title_zh": "ECI 与 ApexOne 启动 $500M multifamily value-add fund",
+      "summary_zh": "ApexOne-ECI Multifamily Fund VI LP 目标 Sun Belt、Midwest、Mountain West 20-25 项资产，收购 pipeline 同比显著增加，机构看好 apartment cyclical adjustment 底部机会",
+      "impact": "long-pos",
+      "id": "48313485",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "pere-news",
+      "source_name": "PERE News",
+      "source_tier": "B",
+      "source_weight": 10,
+      "source_tags": [
+        "institutional",
+        "deals",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Blueprint: Blue Owl’s net lease equity haul; private real estate compensation survey; Ares’ Q1 fundraising",
+      "link": "https://www.perenews.com/blueprint-blue-owls-net-lease-equity-haul-private-real-estate-compensation-survey-ares-q1-fundraising/",
+      "description": "Blue Owl reported gathering $3 billion in equity for its net lease strategy, accounting for three-quarters of its Q1 real estate equity raised; private real estate compensation is rebounding with chief financial officer roles at operational platforms seeing highest growth rate among categories. Elsewhere, Ares Management is on track to achieve a record fundraising year, locking $5 billion of equity and debt commitments for real estate in the first quarter; and more in today’s digest, exclusively for our valued subscribers.",
+      "published_at": 1778083077000,
+      "score": 12,
+      "tags": [
+        "fundraising",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "Blue Owl 30亿美元净租赁股权募资，Ares Q1锁定50亿美元房地产承诺，头部机构募资动态。",
+      "section": "institutional",
       "extended_window": true,
-      "title_zh": "Pink Tax 延伸至房地产，女性购房成本隐性偏高",
-      "summary_zh": "女性 single homebuyer 面临更高 mortgage rate 与 appraisal gap，gender gap 待政策关注",
-      "impact": "short-neg",
-      "id": "023acbae",
-      "fetched_at": 1778230349986
+      "title_zh": "Blue Owl Q1 净租赁策略募资 $3B，Ares 地产募资势头强劲",
+      "summary_zh": "Blue Owl net lease 占 Q1 地产股权募资 75%，Ares Q1 锁定 $5B 地产股债承诺，private real estate CFO 薪酬反弹，机构配置意愿回升",
+      "impact": "long-pos",
+      "id": "e692d4fb",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "S3 Raises $1.3B of Capital with Third Credit Fund",
+      "link": "https://www.connectcre.com/stories/s3-raises-1-3b-of-capital-with-third-credit-fund/",
+      "description": "Private construction lender S3 Capital announced the final close of S3 LB RE Credit Fund III with $850 million of discretionary fund commitments and an additional $465 million of co-investment commitments. The fund closed at its hard cap, exceeding its initial $650-million target. The fundraise brings total investable capital to approximately $1.3 billion and supports expected loan ... The post S3 Raises $1.3B of Capital with Third Credit Fund appeared first on Connect CRE .",
+      "published_at": 1778192027000,
+      "score": 11,
+      "tags": [
+        "lender",
+        "fundraising"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "S3 Capital第三信贷基金募资13亿美元，超额完成6.5亿目标，大型私募 construction lender 募资。",
+      "section": "institutional",
+      "title_zh": "S3 Capital 第三支信贷基金募资 $1.3B 达 hard cap",
+      "summary_zh": "S3 LB RE Credit Fund III 超募至 $850M 基金承诺+$465M co-investment，总额 $1.3B，construction lending 资本供给充裕",
+      "impact": "long-pos",
+      "id": "997b05a0",
+      "fetched_at": 1778230768556
+    },
+    {
+      "source_id": "trd-national",
+      "source_name": "The Real Deal (National)",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Zillow posts $46M profit in first quarter",
+      "link": "https://therealdeal.com/national/2026/05/07/zillow-posts-46m-profit-in-first-quarter/",
+      "description": "Zillow Group posted $46 million in first-quarter net income, nearly six times what it earned in the same period a year ago. Revenue at the Seattle-based home search giant rose 18 percent year over year to $708 million in the quarter that ended March 31, according to a release issued Wednesday afternoon. Traffic to Zillow’s websites and mobile apps was down 3 percent from the first quarter last year, coming in at 220 million monthly unique users. The growth came against a flatter picture for the industry . The broader residential real estate industry expanded by 2 percent in the last quarter, according to the National Association of Realtors, and Zillow estimated industry-wide purchase mortgage origination volume declined about 1 percent year over year. Mortgages revenue jumped 56 percent year over year to $64 million, driven by a 96 percent increase in purchase loan origination volume to $1.5 billion. The for-sale business overall pulled in $514 million, up 12 percent, with residential revenue rising 8 percent to $450 million on growth. Revenue from rentals climbed 42 percent to $183 million, with multifamily revenue up 57 percent. Zillow CFO Jeremy Hoffman said during Wednesday’s earnings call Zillow’s rental inventory reached 76,000 total properties, up 38 percent from last year. Adjusted EBITDA for the quarter was $182 million, with margin holding flat at 26 percent from last year. That metric took a hit from legal headwinds, the company said, noting that it had $11 million in incremental year-over-year legal expenses. Hoffman said the company expects $20 million in incremental year-over-year legal costs in Q2, and expects legal costs to ease in the second half of the year. Zillow has been fighting several lawsuits over the last year, from competitors like Compass and CoStar, as well as government regulators. Compass dropped its lawsuit in March after a protracted fight over Zillow’s listing access standards. The Federal Trade Commission sued Zillow and Redfin in September , alleging the companies colluded in a $100 million agreement to syndicate rental listings. SIGN UP Hoffman said Zillow expects $750 million to $765 million revenue in the second quarter, a 16 percent growth year-over-year. AI integration Pointing to the recent launch of Zillow AI mode, Wacksman said the company was focused on integrating AI across its products and operations. He said the company has an advantage over generic AI tools and other real estate platforms, saying Zillow can use proprietary data like home browsing patterns, messages, closed deals and other metrics to power AI tools. Zillow debuted a consumer-facing AI mode in March that is currently available to about 5 percent of Zillow’s audience, and Wacksman said the company plans to expand it throughout the year. “Zillow users in AI mode are having deeper, more substantive conversations than they do in traditional search, and we are seeing more actionable engagement as a result,” Wacksman said. Wacksman also noted the company’s recently announced partnership with Realtor.com, which will see Zillow Preview listings syndicated to Realtor.com for its similarly titled Realtor.com Preview program. Wacksman said the deal will put pre-marketed listings in front of more consumers outside private channels. “It’s really just a win-win for both Zillow and our agent partners, as well, obviously, as Realtor,” Wacksman said. Read more Residential National Zillow turned fourth-quarter profit despite lawsuits, flat housing market",
+      "published_at": 1778162400000,
+      "score": 23,
+      "tags": [
+        "brokerage",
+        "earnings"
+      ],
+      "heat_signals": [
+        "fed",
+        "year over year",
+        "year-over-year",
+        "housing market"
+      ],
+      "importance": 3,
+      "selector_reason": "Zillow一季度盈利4600万美元，收入增长18%，反映在线房地产平台业绩，属于中型公司财报。",
+      "section": "national",
+      "title_zh": "Zillow Q1 净利 $46M 增近六倍，rental 收入大涨 42%",
+      "summary_zh": "Zillow Q1 revenue $708M YoY +18%，rentals revenue +42% 至 $183M，multifamily +57%，inventory 76K 套增 38%，但 traffic -3% 至 220M MAU",
+      "impact": "long-pos",
+      "id": "d6d81ece",
+      "fetched_at": 1778230768556
     }
   ],
   "errors": [],
@@ -697,24 +734,26 @@
     "writer_audit": [
       {
         "stage": "selector",
-        "input": 41,
-        "output": 13
+        "input": 136,
+        "output": 53
       },
       {
         "stage": "tagger",
-        "items": 13
+        "items": 53
       },
       {
         "stage": "dedupe",
-        "before": 13,
-        "after": 8
+        "before": 53,
+        "after": 46
       },
       {
         "stage": "pick",
         "section_counts": {
-          "national": 14,
+          "national": 6,
+          "sunbelt": 4,
+          "btr": 2,
           "cre": 5,
-          "institutional": 1
+          "institutional": 3
         }
       },
       {
@@ -722,6 +761,6 @@
         "items": 20
       }
     ],
-    "candidate_pool_size": 41
+    "candidate_pool_size": 136
   }
 }
