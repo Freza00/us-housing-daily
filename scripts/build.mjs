@@ -443,13 +443,13 @@ function appendToSeen(seen, newItems, date) {
 // 高频 section (national/cre) 严格 24h，避免几天前的住宅新闻混入。
 const SECTIONS = [
   { id: "national", label: "全国住宅市场", emoji: "🏠", desc: "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk", quota: 5, maxPerSource: 2, extendedWindow: false },
-  { id: "sunbelt",  label: "Sunbelt 住宅", emoji: "🌵", desc: "Sun Belt 各州住宅与租赁市场 — 至少一条德州三城", quota: 4, maxPerSource: 2, texasCityRequired: true, extendedWindow: true },
-  { id: "btr",      label: "全国 BTR / SFR", emoji: "🏘", desc: "Build-to-Rent / Single-Family Rental — 至少一条德州三城", quota: 3, maxPerSource: 2, texasCityRequired: true, extendedWindow: true },
-  { id: "cre",      label: "全国 CRE", emoji: "🏢", desc: "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE — 至少一条德州三城", quota: 5, maxPerSource: 2, texasCityRequired: true, extendedWindow: false },
-  { id: "institutional", label: "全国机构资本", emoji: "💰", desc: "PE / REIT 募资、并购、IPO、机构持仓 — 至少一条德州三城", quota: 3, maxPerSource: 2, texasCityRequired: true, extendedWindow: true },
+  { id: "sunbelt",  label: "Sunbelt 住宅", emoji: "🌵", desc: "Sun Belt 各州住宅与租赁市场", quota: 4, maxPerSource: 2, texasCityRequired: true, extendedWindow: true },
+  { id: "btr",      label: "全国 BTR / SFR", emoji: "🏘", desc: "Build-to-Rent / Single-Family Rental", quota: 3, maxPerSource: 2, texasCityRequired: true, extendedWindow: true },
+  { id: "cre",      label: "全国 CRE", emoji: "🏢", desc: "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE", quota: 5, maxPerSource: 2, texasCityRequired: true, extendedWindow: false },
+  { id: "institutional", label: "全国机构资本", emoji: "💰", desc: "PE / REIT 募资、并购、IPO、机构持仓", quota: 3, maxPerSource: 2, texasCityRequired: true, extendedWindow: true },
 ];
 
-const RE_BTR = /\b(btr|build[-\s]?to[-\s]?rent|sfr|single[-\s]?family\s+rental|invitation\s+homes|american\s+homes\s+4\s+rent|tricon|pretium|progress\s+residential|home\s+partners|nrhc|rental\s+home\s+council)\b/i;
+const RE_BTR = /\b(btr|build[-\s]?to[-\s]?rent|build[-\s]?for[-\s]?rent|sfr|single[-\s]?family\s+rental|single[-\s]?family\s+for\s+rent|sfr\s+portfolio|rental\s+homes?|rental\s+home\s+council|nrhc|invitation\s+homes|invh\b|american\s+homes\s+4\s+rent|amh\b|tricon|pretium|progress\s+residential|home\s+partners(?:\s+of\s+america)?|firstkey\s+homes|main\s+street\s+renewal|roofstock)\b/i;
 const RE_INST = /\b(blackstone|kkr|brookfield|starwood|tpg|pgim|nuveen|cohen\s*(?:&|and)\s*steers|principal\s+real\s+estate|pere|fundraising|fundraise|major\s+fundraising|capital\s+raise|lp\s+commitment|gp\s+stake|reit\s+ipo|secondary\s+sale|continuation\s+vehicle|allocator|institutional\s+investor|private\s+real\s+estate)\b/i;
 const RE_SUNBELT = /\b(texas|houston|dallas|fort\s+worth|dfw|austin|san\s+antonio|phoenix|arizona|atlanta|georgia|charlotte|nashville|tennessee|tampa|miami|orlando|jacksonville|florida|raleigh|charleston|las\s+vegas|nevada|memphis|birmingham|mobile|pensacola|new\s+orleans|louisiana|sun\s*belt|sunbelt)\b/i;
 const RE_RES = /\b(housing|home(?:s|owner|builder|buyer|seller|loan|equity)?|condo(?:minium)?s?|townhomes?|townhouses?|co-?op|HOA|landlord|rental|rent\s|mortgage|residential|multifamily|apartment|single[-\s]?family|new\s+home|existing\s+home)\b/i;
@@ -468,10 +468,18 @@ const SUNBELT_REGIONS = new Set(["texas", "arizona", "georgia", "florida", "nort
 // 业内花絮（设计趋势、人事变动、新办公室、培训）— 不算地区房市新闻，应归 national 而非 sunbelt
 const RE_NON_HOUSING_MARKET = /\b(luxury\s+home|design\s+trends?|trends?\s+defining|named\s+(?:president|ceo|coo|cfo|chief|new)|opens?\s+(?:\w+\s+)?office|brokerage\s+expan|elev(?:ate|ating)\s+your|face\s+of\s+residential|REALTOR(?:S|®|\s)|coaching|webinar)\b/i;
 
+function isBtrItem(item) {
+  // 来源元数据优先：source 自带 btr-sfr tag 直接归 btr，title 不命中关键词也不漏
+  // （nrhc / pretium-partners / sec-invh-8k / sec-amh-8k 在 config/sources.json 都打了此 tag）
+  const srcTags = item.source_tags || [];
+  if (srcTags.includes("btr-sfr")) return true;
+  return RE_BTR.test(item.title);
+}
+
 function classify(item) {
   const t = item.title.toLowerCase();
-  if (RE_BTR.test(t)) return "btr";
-  if (RE_INST.test(t) || ["pere-news","sec-invh-8k","sec-amh-8k","pretium-partners"].includes(item.source_id)) return "institutional";
+  if (isBtrItem(item)) return "btr";
+  if (RE_INST.test(t) || item.source_id === "pere-news") return "institutional";
   const titleHasCRE = TITLE_CRE.test(t);
   const titleHasSB = RE_SUNBELT.test(t);
   const titleHasRes = RE_RES.test(t);
@@ -550,7 +558,7 @@ function pickBySection(items, totalLimit, globalMax = 4) {
 
 function ensureTexasCity(result, buckets, allCandidates) {
   const matchers = {
-    btr: (it) => RE_BTR.test(it.title),
+    btr: (it) => isBtrItem(it),
     institutional: (it) => {
       const ti = it.title.toLowerCase();
       return RE_INST.test(ti) || (it.tags||[]).includes("institutional");
@@ -594,6 +602,7 @@ function ensureTexasCity(result, buckets, allCandidates) {
 function ensureSectionMinimum(result, fresh24h, fresh7d, minPerSection = 2) {
   const picked = new Set();
   for (const r of result) for (const it of r.items) picked.add(it.link);
+  const underMin = []; // 诊断：到最后仍 < minPerSection 的 section
   for (const r of result) {
     while (r.items.length < minPerSection) {
       // 先 24h
@@ -612,7 +621,24 @@ function ensureSectionMinimum(result, fresh24h, fresh7d, minPerSection = 2) {
       r.items.push(isExtended ? { ...cand, extended_window: true } : cand);
       picked.add(cand.link);
     }
+    // 不再静默吞掉 — 把不足条目记录到诊断
+    if (r.items.length < minPerSection) {
+      const pool24 = fresh24h.filter(it => classify(it) === r.section.id).length;
+      const pool7d = fresh7d.filter(it => classify(it) === r.section.id).length;
+      const reason = `pool empty after 24h=${pool24} / 7d=${pool7d}` +
+        (r.section.extendedWindow ? "" : " (extendedWindow=false)");
+      log(`⚠️  section "${r.section.id}" under minimum: ${r.items.length}/${minPerSection} — ${reason}`);
+      underMin.push({
+        section: r.section.id,
+        count: r.items.length,
+        min: minPerSection,
+        pool24h: pool24,
+        pool7d: pool7d,
+        extendedWindow: !!r.section.extendedWindow,
+      });
+    }
   }
+  return { underMin };
 }
 
 // ============================================================
@@ -860,7 +886,7 @@ async function main() {
 
   // 6. Section 配额挑选 — 每 section 至少 2 条；national/cre 严格 24h，sunbelt/btr/inst 不够时扩到 7d
   const sectioned = pickBySection(rededuped, DAILY_LIMIT);
-  ensureSectionMinimum(sectioned, fresh24h, fresh7d, 2);
+  const minDiag = ensureSectionMinimum(sectioned, fresh24h, fresh7d, 2);
   let top = sectioned.flatMap(s => s.items.map(it => {
     const out = { ...it, section: s.section.id };
     if (s.section.id === "cre") out.cre_subcategory = detectCreSubcategory(it);
@@ -992,6 +1018,9 @@ async function main() {
     sections: SECTIONS,
     items: withSummary,
     errors,
+    _diagnostics: {
+      sectionsUnderMin: minDiag?.underMin || [],
+    },
   };
   fs.writeFileSync(path.join(DATA_DIR, "latest.json"), JSON.stringify(payload, null, 2));
   fs.writeFileSync(path.join(DATA_DIR, `${date}.json`), JSON.stringify(payload, null, 2));

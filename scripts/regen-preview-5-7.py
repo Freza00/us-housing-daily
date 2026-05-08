@@ -126,10 +126,10 @@ TAG_DIM = {**{a:'asset' for a in ['housing','multifamily','btr-sfr','office','in
 HEAT_TAGS = {'btr-sfr','texas','dfw','houston','austin','sun-belt','institutional','policy','rates'}
 DIM_ORDER = ['asset','geo','topic','actor']
 SEC_DESC = {'national':'全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk',
-            'sunbelt':'Sun Belt 各州住宅与租赁市场 — 至少一条德州三城',
-            'btr':'Build-to-Rent / Single-Family Rental — 至少一条德州三城',
-            'cre':'办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE — 至少一条德州三城',
-            'institutional':'PE / REIT 募资、并购、IPO、机构持仓 — 至少一条德州三城'}
+            'sunbelt':'Sun Belt 各州住宅与租赁市场',
+            'btr':'Build-to-Rent / Single-Family Rental',
+            'cre':'办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE',
+            'institutional':'PE / REIT 募资、并购、IPO、机构持仓'}
 IMPACT = {'long-pos':('长期利好','imp-lp'), 'short-pos':('短期利好','imp-sp'),
           'neutral':('中性','imp-n'), 'short-neg':('短期利空','imp-sn'), 'long-neg':('长期利空','imp-ln')}
 

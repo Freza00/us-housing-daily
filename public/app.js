@@ -45,10 +45,10 @@ const I18N = {
     },
     sec_desc: {
       national: '全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk',
-      sunbelt: 'Sun Belt 各州住宅与租赁市场 — 至少一条德州三城',
-      btr: 'Build-to-Rent / Single-Family Rental — 至少一条德州三城',
-      cre: '办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE — 至少一条德州三城',
-      institutional: 'PE / REIT 募资、并购、IPO、机构持仓 — 至少一条德州三城',
+      sunbelt: 'Sun Belt 各州住宅与租赁市场',
+      btr: 'Build-to-Rent / Single-Family Rental',
+      cre: '办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE',
+      institutional: 'PE / REIT 募资、并购、IPO、机构持仓',
     },
     filters: {
       __all: '全部', 'btr-sfr': 'BTR/SFR', multifamily: '多户', office: '办公',
@@ -87,10 +87,10 @@ const I18N = {
     },
     sec_desc: {
       national: 'National housing market, macro rates, policy — NAR / Realtor / Zillow / Calculated Risk',
-      sunbelt: 'Sun Belt residential & rental markets — ≥1 Texas tri-city',
-      btr: 'Build-to-Rent / Single-Family Rental — ≥1 Texas tri-city',
-      cre: 'Office / Industrial / Data Center / Multifamily / Hotel — ≥1 Texas tri-city',
-      institutional: 'PE / REIT fundraising, M&A, IPO, holdings — ≥1 Texas tri-city',
+      sunbelt: 'Sun Belt residential & rental markets',
+      btr: 'Build-to-Rent / Single-Family Rental',
+      cre: 'Office / Industrial / Data Center / Multifamily / Hotel',
+      institutional: 'PE / REIT fundraising, M&A, IPO, holdings',
     },
     filters: {
       __all: 'All', 'btr-sfr': 'BTR/SFR', multifamily: 'Multifamily', office: 'Office',
