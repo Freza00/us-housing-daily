@@ -1,5 +1,274 @@
 [
   {
+    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-may-7-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "rise",
+      "6.37%"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/05/private-residential-construction-spending-increases-in-march/",
+    "tokens": [
+      "private",
+      "residential",
+      "construction",
+      "spending",
+      "increases",
+      "march"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.redfin.com/news/pending-home-sales-rise-spring/",
+    "tokens": [
+      "pending",
+      "home",
+      "sales",
+      "highest",
+      "level",
+      "nearly",
+      "years"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/why-adu-financing-deserves-more-attention-from-home-equity-lenders/",
+    "tokens": [
+      "financing",
+      "deserves",
+      "attention",
+      "home",
+      "equity",
+      "lenders"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/homebuyer-aid-middle-class-price-pressures/",
+    "tokens": [
+      "homebuyer",
+      "broadens",
+      "middle",
+      "class",
+      "price",
+      "pressures"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/mirage-captions-real-estate-agents-ai-video-creators/",
+    "tokens": [
+      "captions",
+      "turned",
+      "busy",
+      "agents",
+      "video",
+      "creators"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.realtor.com/research/weekly-housing-trends-view-data-week-may-2-2026/",
+    "tokens": [
+      "weekly",
+      "housing",
+      "trends",
+      "market",
+      "update",
+      "week",
+      "ending",
+      "2026"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://trerc.tamu.edu/blog/supply-is-back-confidence-is-not-inside-texas-shifting-spring-housing-market/",
+    "tokens": [
+      "supply",
+      "back",
+      "confidence",
+      "inside",
+      "texas",
+      "shifting",
+      "spring",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/sparks-flare-over-florida-law-to-target-idle-golf-courses-for-housing/",
+    "tokens": [
+      "sparks",
+      "flare",
+      "florida",
+      "target",
+      "idle",
+      "golf",
+      "courses",
+      "housing"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/high-street-tokyu-break-ground-on-281-unit-multifamily-project-in-downtown-richardson-texas/",
+    "tokens": [
+      "high",
+      "street",
+      "tokyu",
+      "break",
+      "ground",
+      "281",
+      "unit",
+      "multifamily",
+      "project",
+      "downtown",
+      "richardson",
+      "texas"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNY3h4U1NRdlFlbHlwUWd5dmdqTDBDNmoxMzBqX0RVbjRSTFV0c1RLWDEwT0FSRUdYR09hNGY3YV9Xemx5cC0yMDVLdjN3M2VDdzJiWVVkQXlWa21pTGlzdEcyejFEY2xRWGlwclBQVmF2bHRvUUJmbjkwT21tdG9HbGRKdDhDRjNKYUVIS2NnVlFPVzRaV09NaDRHak1aOTg?oc=5",
+    "tokens": [
+      "time",
+      "look",
+      "current",
+      "metro",
+      "phoenix",
+      "housing",
+      "market",
+      "media"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/reality-tv/ant-anstead-renee-zellweger-guest-lawsuit-laguna-beach-home/",
+    "tokens": [
+      "anstead",
+      "renee",
+      "zellweger",
+      "$10",
+      "million",
+      "lawsuit",
+      "guest",
+      "alleged",
+      "injury",
+      "laguna",
+      "beach",
+      "rental",
+      "home"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/07/zillow-posts-46m-profit-in-first-quarter/",
+    "tokens": [
+      "zillow",
+      "posts",
+      "$46m",
+      "profit",
+      "first",
+      "quarter"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/capital-markets/soloviev-18b-loan-cash-in-on-9-west-57th-134486",
+    "tokens": [
+      "soloviev",
+      "pocket",
+      "$526m",
+      "refi"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/05/multifamily-developer-confidence-holds-steady-in-first-quarter/",
+    "tokens": [
+      "multifamily",
+      "developer",
+      "confidence",
+      "holds",
+      "steady",
+      "first",
+      "quarter"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/senior-housing/healthcare-reit-enters-senior-housing-market-with-3-property-425m-deal-134474",
+    "tokens": [
+      "healthcare",
+      "reit",
+      "enters",
+      "senior",
+      "housing",
+      "market",
+      "$425m",
+      "deal"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/celebrity-real-estate/sharon-tate-mansion-murders-home-for-rent/",
+    "tokens": [
+      "mansion",
+      "site",
+      "sharon",
+      "tate",
+      "murder",
+      "hits",
+      "rental",
+      "market",
+      "$247,500",
+      "month"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/hotel/starwood-grappling-with-looming-265m-hotel-portfolio-default-134479",
+    "tokens": [
+      "starwood",
+      "grapples",
+      "potential",
+      "$265m",
+      "hotel",
+      "portfolio",
+      "default"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-capital-markets/people-will-be-surprised-following-3b-blackstone-buyout-qts-founder-launches-new-data-center-firm-134487",
+    "tokens": [
+      "following",
+      "$3b",
+      "blackstone",
+      "buyout",
+      "founder",
+      "launches",
+      "data",
+      "center",
+      "firm"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.perenews.com/the-two-types-of-real-estate-managers-are-becoming-increasingly-alike/",
+    "tokens": [
+      "types",
+      "managers",
+      "becoming",
+      "increasingly",
+      "alike"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/iran-conflict-sours-real-estate-investor-sentiment-to-3-year-low",
     "tokens": [
       "iran",
