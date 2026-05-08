@@ -123,6 +123,7 @@ function parseFeed(xml, source) {
           firstMatch(b, /<updated[^>]*>([\s\S]*?)<\/updated>/i),
       );
       if (!title || !link) continue;
+      if (isMetaTitle(title)) continue;
       items.push(makeItem(source, title, link, desc, pub));
     }
   } else {
@@ -141,10 +142,22 @@ function parseFeed(xml, source) {
           firstMatch(b, /<dc:date[^>]*>([\s\S]*?)<\/dc:date>/i),
       );
       if (!title || !link) continue;
+      if (isMetaTitle(title)) continue;
       items.push(makeItem(source, title, link, desc, pub));
     }
   }
   return items;
+}
+
+// 质量 filter：排除 RSS 偶尔抛出的 meta / 归档 / 分类索引页面（不是新闻）
+const META_TITLE_RE = /^(archive|tag:|category:|categories|index|sitemap|page \d+|all posts)\b/i;
+const META_TITLE_CONTAINS = /\b(archive(s)? -|page \d+ of|all categories)\b/i;
+function isMetaTitle(title) {
+  const t = String(title || "").trim();
+  if (t.length < 15) return true; // 太短的标题大概率是 nav/meta
+  if (META_TITLE_RE.test(t)) return true;
+  if (META_TITLE_CONTAINS.test(t)) return true;
+  return false;
 }
 
 function makeItem(source, title, link, desc, pub) {
