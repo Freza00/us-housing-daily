@@ -301,6 +301,25 @@
       "weight": 10,
       "region": "national",
       "ua_style": "sec"
+    },
+    {
+      "id": "btrlist",
+      "name": "BTR List (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site:news.btrlist.com&hl=en-US&gl=US&ceid=US:en",
+      "tier": "B",
+      "tags": ["btr-sfr"],
+      "weight": 8,
+      "region": "national"
+    },
+    {
+      "id": "google-news-btr",
+      "name": "Google News — BTR / SFR keywords",
+      "url": "https://news.google.com/rss/search?q=%22build-to-rent%22+OR+%22single-family+rental%22+OR+%22Invitation+Homes%22+OR+%22American+Homes+4+Rent%22+OR+Tricon+OR+Pretium+OR+%22Progress+Residential%22+OR+Roofstock+OR+%22Main+Street+Renewal%22+OR+%22FirstKey+Homes%22+OR+%22Home+Partners%22&hl=en-US&gl=US&ceid=US:en",
+      "tier": "B",
+      "tags": ["btr-sfr"],
+      "weight": 6,
+      "region": "national",
+      "filter_required": true
     }
   ]
 }

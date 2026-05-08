@@ -830,6 +830,9 @@ function buildSectionsPromptBlock(secDef) {
     if (s.geography) {
       lines.push(`地理范围: ${s.geography.join("; ")}`);
     }
+    if (s.geography_excluded) {
+      lines.push(`地理排除: ${s.geography_excluded.join("; ")}`);
+    }
   }
   lines.push(`\n## Edge cases`);
   for (const e of secDef.edge_cases) {

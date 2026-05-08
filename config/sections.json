@@ -43,6 +43,11 @@
         "Tennessee (Nashville / Memphis)",
         "Louisiana / Alabama / Mississippi"
       ],
+      "geography_excluded": [
+        "California 不算 Sun Belt（LA / SF / Bay Area / SD / Chula Vista 等）→ cre 或 national",
+        "New Mexico 不算 Sun Belt（Albuquerque / Santa Fe）→ national",
+        "西海岸（OR / WA）→ national 或 cre"
+      ],
       "include": [
         "上述 Sun Belt 州 / 城的住宅市场 / 多户公寓 / 租赁市场 / 房价 / 库存",
         "区域研究机构发布的报告（如 Texas Real Estate Research Center）",
