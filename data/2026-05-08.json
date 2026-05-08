@@ -1,6 +1,6 @@
 {
   "date": "2026-05-08",
-  "generated_at": 1778229538129,
+  "generated_at": 1778229956281,
   "sources_attempted": 34,
   "sources_ok": 34,
   "sections": [
@@ -56,6 +56,38 @@
   ],
   "items": [
     {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "The Real-REMAX Deal: Consumers Are Coming For Your Commission - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTTBQVEVZYlJ3ZUY0UU4tQllZQWhJcGpXRDE5WGRvVXZHOVh6T0p5Sk8yMnB5QUJJSXZ2bmVmN2V6cFRudTJ3bjBUNy0tRXBSeXdzWnhRcHl3SWxEYnRHUnJMcHdKcDFZaTZhdk1SblpwSGN0M1ZuMVhScXo4V3J6VTlrblczS2tkSG5fOVdiYnhrempqNnFWeHp3?oc=5",
+      "description": "The Real-REMAX Deal: Consumers Are Coming For Your Commission &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1777885650000,
+      "score": 8,
+      "tags": [
+        "housing",
+        "national",
+        "policy",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "Real-REMAX交易持续发酵，消费者佣金结构面临根本性压力；imp=4因涉及全国经纪行业商业模式变革，属重要监管/行业结构性动态。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "消费者追讨佣金，RE/MAX 等传统 brokerage 承压",
+      "summary_zh": "买方佣金诉讼余波下，消费者维权意识升温，传统佣金模式面临重构",
+      "impact": "short-neg",
+      "id": "77cd32d8",
+      "fetched_at": 1778230064056
+    },
+    {
       "source_id": "houston-agent",
       "source_name": "Houston Agent Magazine",
       "source_tier": "D",
@@ -65,116 +97,60 @@
         "brokerage"
       ],
       "region": "texas",
-      "title": "eXp acquires NextHome",
-      "link": "https://houstonagentmagazine.com/2026/05/07/exp-acquires-nexthome/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=exp-acquires-nexthome",
-      "description": "eXp acquires NextHome by Jacqui Mueller May 07, 2026 Shares of eXp’s stock will also begin trading on the Nasdaq Global Market under the new ticker symbol, “AGNT.” eXp World Holding s has acquired NextHome , which includes more than 500 franchisees across the United States. The acquisition positions eXp as a multi-model platform for real estate professionals. Shares of eXp’s stock will also begin trading on the Nasdaq Global Market under the new ticker symbol, “AGNT.” The company says the change reflects its ongoing shift toward a cloud-based, technology-driven platform for independent agents and brokers. Leo Pareja , CEO of eXp Realty, said, “The industry has reached a tipping point. A one-size-fits-all model no longer works for the visionary entrepreneur. AGNT is a declaration of who we build for. Adding the NextHome franchise model gives our agents and franchise owners maximum optionality, backed by a proven leadership team and now with a unified world-class infrastructure and an expanded global network. Teams and agents need more paths forward, and the industry needs companies led by people who don’t just talk about being agent-centric but live it. We’re building a platform that supports multiple models, because every agent and every consumer served deserves choice.” “Joining forces with eXp World Holdings is a natural evolution of our ‘humans over houses’ mission,” James Dwiggins, co-CEO of NextHome added . “By plugging into the most agent-centric real estate engine in the world, our franchise owners and agents will now gain access to unmatched depth, inventory, global network and the kind of industry talent and influence that moves markets. We looked at every real estate company across the U.S., and eXp aligns with us the most — from company culture to philosophy to a leadership team that truly advocates for agents and consumers. This is the right partner to grow the NextHome brand and lead franchise expansion across the world.” Posted In: National News , National News , News + Features Tags: eXp World Holdings , James Dwiggins , Leo Pareja , NextHome Read More Related to This Post Zillow, Realtor.com join forces for Preview listing data share REMAX: Houston home sales jump in March Is the American Dream even on the table anymore? HUD gives green light to agents sharing crime, school-quality data to clients after pullback under Biden Real Brokerage to acquire REMAX, form Real REMAX Group MRED expands nationwide access as Compass becomes first brokerage to share listings on PLN Boomers still buying the most US homes as first-time buyers fall to all-time low Average monthly mortgage payments top $2K for first time Join the conversation Cancel reply Save my name, email, and website in this browser for the next time I comment.",
-      "published_at": 1778175084000,
-      "score": 11,
+      "title": "Zillow, Realtor.com join forces for Preview listing data share",
+      "link": "https://houstonagentmagazine.com/2026/05/06/zillow-realtor-com-preview-listing-data-share/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=zillow-realtor-com-preview-listing-data-share",
+      "description": "Zillow Preview listings will be available on Realtor.com as early as this summer, the two companies announced. The post Zillow, Realtor.com join forces for Preview listing data share appeared first on Houston Agent Magazine .",
+      "published_at": 1778070758000,
+      "score": 9,
       "tags": [
-        "brokerage",
-        "deals"
+        "housing",
+        "national",
+        "tech-adoption",
+        "brokerage"
       ],
       "heat_signals": [
         "houston"
       ],
-      "importance": 4,
-      "selector_reason": "eXp收购NextHome（500+加盟商）并更名AGNT、转板Nasdaq，属全国性经纪公司重大并购与资本动作；反映行业整合加速，影响MLS生态与代理商业模式。",
-      "section": "national",
-      "title_zh": "eXp 收购 NextHome，500+ 加盟商并入多模式平台",
-      "summary_zh": "eXp 收购 NextHome 500 余家加盟商，股票转板 Nasdaq 并更换 ticker 为 AGNT，强化 agent-centric 定位",
-      "impact": "long-pos",
-      "id": "1062e8bc",
-      "fetched_at": 1778229698872
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "‘We are bringing MRED national,’ Compass CEO says - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPallVMkVsRVJEWDE0bnJSdWVWWGFlZlo1c0RMNWJUcUxwSElfTVFJTGdsankzemhHU3E4cWdzdkFzQ183b0pZblpJblV1UGFrLTNXQ2RFN3Vtc0hXWnVid1Z6RVpTb0VUWUVJa1JlYUVxSGVvdFUyNmNDakl1MGVnOWY2ZFZBQjFPczNuekR5OE4tSV92UVpfd3ZwWUgzazkxWGEya2FZTXpEdndyeVRQLW5GbmdBbEk?oc=5",
-      "description": "‘We are bringing MRED national,’ Compass CEO says &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778088639000,
-      "score": 10,
-      "tags": [
-        "brokerage",
-        "tech-adoption"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Compass CEO宣布MRED全国化扩张，属MLS基础设施重大变革；直接影响全国房源数据流通与经纪人工作流，与Zillow-Realtor.com数据共享形成行业格局重塑。",
+      "importance": 3,
+      "selector_reason": "Zillow与Realtor.com就Preview房源数据共享达成合作，涉及全国最大两大家居信息平台数据整合；imp=3因对全国住宅市场信息流通有行业影响。",
       "section": "national",
       "extended_window": true,
-      "title_zh": "Compass CEO 宣布 MRED 全国扩张计划",
-      "summary_zh": "Compass 计划将 MRED 推向全国，细节待披露，影响待观察",
+      "title_zh": "Zillow 与 Realtor.com 联手共享 Preview listing 数据",
+      "summary_zh": "今夏起 Zillow Preview 房源将同步至 Realtor.com，MLS 数据壁垒进一步松动",
       "impact": "neutral",
-      "id": "0d813972",
-      "fetched_at": 1778229698872
+      "id": "0c7f4d53",
+      "fetched_at": 1778230064056
     },
     {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
+      "source_id": "realtor-research",
+      "source_name": "Realtor.com Research",
+      "source_tier": "B",
       "source_weight": 8,
       "source_tags": [
         "housing",
-        "brokerage"
+        "data"
       ],
       "region": "national",
-      "title": "Zillow, Realtor.com to share pre-market listings this summer - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWVY2T2gxVmdpS3VRUjUxcTNGZHNOYVdUcFlRcFAtT2d6VUdodXJXRjNOaFNReGNEZklFWU1ReS0xZXZuZUtOeFp1YWFZaF9GWWJ6TFZKOV8tUWtHUFVHdVoza0ROOXpxMm9kQWtpWHVtM2JGSE9ReDlTMHdXWGFKV0ZTbHlweTZGSjVsNDlhZ0RrZk5VMUxiUA?oc=5",
-      "description": "Zillow, Realtor.com to share pre-market listings this summer &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778012877000,
+      "title": "Under the Same Roof: Multigenerational Living in the U.S.",
+      "link": "https://www.realtor.com/research/multigeneration-2026/",
+      "description": "This Mother's Day, nearly 3 million owner-occupied homes across America have at least two mothers living under one roof, sharing the joys and responsibilities of raising the next generation together. That sense of shared purpose and care is at the heart of multigenerational living, a housing arrangement that is quietly shaping American family life.",
+      "published_at": 1777975215000,
       "score": 9,
       "tags": [
-        "brokerage",
-        "tech-adoption"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Zillow与Realtor.com达成pre-market listings数据共享，属全国住宅市场重大平台合作；改变房源曝光时序与经纪人竞争规则，影响MLS传统垄断地位。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "Zillow 与 Realtor.com 今夏共享 pre-market listings",
-      "summary_zh": "两大平台打通 pre-market listings 数据，提升房源曝光与交易效率",
-      "impact": "long-pos",
-      "id": "46a88ba6",
-      "fetched_at": 1778229698872
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
         "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "Is the MLS consolidation wave accelerating? - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQ3lRUk5NY1RyRzdLeXU2aXpvQ3dnX0xTbFBEOFVDV2g2cy1KUGU5dWVsRG1jTVRYRkpIYzRxUHo3RFYtNldMcURvTzlwQkVVMVZWMEdGOUJBRU1OMFZqT0t2cFRTZHZwNTBMSXpwYW11SDNtd0ZHeFpDLXNaVG9SbU9fNXpPcGZTVTlFQmxPVnRRMWRHNGZhRFJ2cTRSWG5OQlhsQ3hSU0R4cDVLTEd3cFI3MA?oc=5",
-      "description": "Is the MLS consolidation wave accelerating? &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1777989332000,
-      "score": 9,
-      "tags": [
-        "brokerage",
+        "national",
         "trend"
       ],
       "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "MLS整合浪潮加速的专题分析，直接关联MRED全国化与Zillow-Realtor.com合作；属住宅市场基础设施系统性变革，影响全国经纪行业结构。",
+      "importance": 3,
+      "selector_reason": "Realtor.com研究揭示美国近300万业主自住房屋为多代同堂居住，反映全国住宅需求结构变化；imp=3因属全国性住宅趋势研究，对住房需求分析有参考价值。",
       "section": "national",
       "extended_window": true,
-      "title_zh": "MLS 整合浪潮是否加速引发行业关注",
-      "summary_zh": "MLS consolidation 趋势升温，对 brokerage 佣金结构与数据控制影响待观察",
-      "impact": "neutral",
-      "id": "ab65b70e",
-      "fetched_at": 1778229698872
+      "title_zh": "美国 multigenerational living 近 300 万户，双母亲家庭成新趋势",
+      "summary_zh": "约 300 万 owner-occupied 住宅存在两代母亲同住，家庭结构变化催生 housing 新需求",
+      "impact": "long-pos",
+      "id": "88631989",
+      "fetched_at": 1778230064056
     },
     {
       "source_id": "inman",
@@ -186,25 +162,66 @@
         "brokerage"
       ],
       "region": "national",
-      "title": "The Credit Stress Signals That Housing Headlines Are Missing - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNVVZDbU5zS3MwNlV0eGhqYWE4d01JWDZuRkF4Sk9KVklnTzRJdlNEelZUa3VqVjJrbWtqM3JENm1lYWJKRHZOdHRacUJNUWNNMGN6cFFWX1NjOEZ6VTBQRXBNVlNSNWhIQXBXaHNYaFExbUxGeFJUY3FwNjFVZ0NoYWQzcC1veTVnYjhZNVBHb29GclJNM2ZCQ3Fn?oc=5",
-      "description": "The Credit Stress Signals That Housing Headlines Are Missing &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1777923696000,
+      "title": "Century 21 CEO: \"I Think You're Going To See More Consolidation\" - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTHJJcktkaExfQ0R1OGVqeVZtYnZkVmVZbUdQMlViRHdJdVViTkJRZDJKQURlSFBQc05QN0RYd3IwOWVSd1VZYWg1Y0tIcGlUUi1DOWN1MmJMUkpQeFBDTmZGbzVQRC1iZDRPdG81eWxpSG9reUk0bUVybW1DMks3MmNLZmtRTzFvWUtPZnJpd3RqRHpBSFZqNmdaVXIyWnN1a18wUVk4WEQ0dTVybGlsR0l5Q29DWURh?oc=5",
+      "description": "Century 21 CEO: \"I Think You're Going To See More Consolidation\" &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1777649290000,
       "score": 8,
       "tags": [
         "housing",
-        "macro"
+        "national",
+        "trend",
+        "brokerage"
       ],
       "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "住房头条忽略的信贷压力信号，属全国住宅市场宏观金融风险预警；涉及信用紧缩对购房能力的潜在冲击，为利率与房贷市场提供反向指标。",
+      "importance": 3,
+      "selector_reason": "Century 21 CEO预言更多行业整合，呼应Real-REMAX交易后的并购趋势；imp=3因属行业高管观点，对全国住宅经纪市场整合有信号意义。",
       "section": "national",
       "extended_window": true,
-      "title_zh": "信贷压力信号被住房头条忽视",
-      "summary_zh": "credit stress 指标暗藏风险， headline 乐观情绪或掩盖底层脆弱性",
+      "title_zh": "Century 21 CEO 预警：brokerage 行业整合将加速",
+      "summary_zh": "头部高管公开表态 more consolidation 将至，中小 brokerage 生存压力加剧",
       "impact": "short-neg",
-      "id": "cd43571b",
-      "fetched_at": 1778229698872
+      "id": "5778a578",
+      "fetched_at": 1778230064056
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "Even if You’re Not Cash-Rich, Your Home Equity Could Help Your Kid Buy a House",
+      "link": "https://www.realtor.com/news/trends/parents-use-home-equity-help-kids-buy-house/",
+      "description": "How Parents Can Use Home Equity To Help Their Kids Buy a House Realtor.com® Real Estate App 314,000+ Open in App Skip to content Buy Homes for sale Homes for sale Foreclosure homes New construction for sale All new construction New home construction Explore the neighborhood Housing market trends Recently sold homes Property records Home buying tips Home buying checklist Home buyers reveal: 'What I wish I had known before buying my first home' First-time home buyer resource center More home buying insights Success stories Sell Home selling tools Compare agents & pick the right one Find the right selling option for you How much can you make selling your home? See what your home is worth Home selling advice Complete guide to selling your home Should I sell my home now? How much is my home worth? How should I sell my home? How to select an agent? How to prepare your home for sale? See more home selling insights Recently sold Recently sold homes Rent Apartments For rent Apartments for rent Renter tools Contacted rentals Apply now online Landlord tools Manage rentals List your rentals Screen tenants Create a lease Collect rent online Home renting tips Renter's resource center Should I rent or buy? Debunked! 8 myths about renting you should stop believing immediately Rental report More renting insights Mortgage Mortgage rates Get pre-approved Mortgage rates Home equity financing rates Refinance rates Finance advice For veterans Calculators Mortgage calculator Refinance calculator How much house can I afford Rent vs. buy Financial advice 6 ways home buyers mess up getting a mortgage Mortgage guide Learn about home insurance More finance insights Find an Agent Find a real estate agent Search for real estate agent Why use a REALTOR ® 6 reasons you should never buy or sell a home without an agent Difference between agent, broker & REALTOR ® Listing vs. buyer agent How to find a REALTOR ® News around REALTORS ® Real estate agents reveal the toughest home buyers they've ever met More news around REALTORS ® My Home News & Insights News The latest news Housing trends Real estate news Celebrity real estate Unique homes For PROs Corporate blog Insights Buying Selling Renting Financing Moving Living Home improvement Research 2026 housing market predictions NEW 2025 hottest zip codes Guides & more All guides Complete guide on how to sell your home First-time home buyer resource center Mortgage guide Veterans home buyer guide USDA home loan guide Home insurance guide Real estate videos Housing resources About us Manage rentals Advertise News Insights NEWS TRENDS BUYING SELLING RENTING CELEBRITY HOMES ADVICE GUIDES LIVING RESEARCH MORE News Insights NEWS TRENDS Real Estate News Housing Trends Celebrity Real Estate Unique Homes Reality TV Sports Most Expensive Homes Most Popular Homes BUYING SELLING RENTING CELEBRITY HOMES ADVICE Buying Selling Renting Financing Living Moving Home Improvement GUIDES LIVING RESEARCH Trends Even if You’re Not Cash-Rich, Your Home Equity Could Help Your Kid Buy a House By Allaire Conte May 7, 2026 Realtor.comm For parents, helping a child buy their first home used to be a question: Should you step in, or should they do it on their own? But after years of first-time buyers being priced out, a new consensus seems to be forming: If you can help, you probably should. Nearly three-quarters of parents with children at home (74%) say they would consider or have already started financially planning to help their kids buy a home one day, according to a recent Northwestern Mutual survey . For cash-rich parents, that help may come through “ giving while living ”—passing liquid assets to children now, rather than waiting for an inheritance later. The practice is already having a measurable effect on the housing market. In 2025, 22% of first-time buyers said they used a gift or loan from a friend or relative for their down payment, according to the National Association of Realtors® . But not every parent has a large pile of cash t",
+      "published_at": 1778200320000,
+      "score": 17,
+      "tags": [
+        "housing",
+        "multifamily",
+        "macro",
+        "rates",
+        "deals",
+        "trend",
+        "landlord",
+        "brokerage"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "trend",
+        "trends",
+        "housing market"
+      ],
+      "importance": 3,
+      "_from_fallback": true,
+      "section": "national",
+      "title_zh": "父母 home equity 成子女购房新资金来源",
+      "summary_zh": "home equity 提取助力下一代买房，代际财富转移缓解 first-time buyer 首付困境",
+      "impact": "long-pos",
+      "id": "b4e677d5",
+      "fetched_at": 1778230064056
     },
     {
       "source_id": "google-news-sunbelt",
@@ -216,183 +233,26 @@
         "data"
       ],
       "region": "sunbelt",
-      "title": "New Beltline bike lanes; cooling ATL market; South Downtown addition - Urbanize Atlanta",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOc2VxeENjNldKRUI2MlpKUnRTMFhhTDVPcHJUVEdjSjlWRmtqT2ZWVDBmOFRBQUJ5UTdsTGsxdV9DMXpPVlVJWEc4ZG9sUmNmbC1NaDNBM0xXVmlLR0dmNW1OT2JjTUJzd2xjSWxhODVsR0lENi1pZUduWVFYbzg1VzV5WF9IMzRXT3k0SGloTUtxV0lGcGxjZl9sRUZZSzlHazJJ?oc=5",
-      "description": "New Beltline bike lanes; cooling ATL market; South Downtown addition &nbsp;&nbsp; Urbanize Atlanta",
-      "published_at": 1778069229000,
+      "title": "Phoenix housing inventory surges toward record highs - MSN",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWnZFd0Nua1JqY2huVFZyd0d1Q1NMczBaZVFNNFRWWnVGakRKUHZaaE5SYkRJMW50VEl2MHJrbzFVMVVlWWg3aUlIN1ZEeVFPYl9aNmdWVW5ibW1JOFUyOGZxZ2drWGlrRG15bTk1TzhBZTFqQmRSV216ZTdyNFhya0NSRW1xanJmNEtwT0lXaGZZWVAydXVnS3g2eW5Nempjczg0?oc=5",
+      "description": "Phoenix housing inventory surges toward record highs &nbsp;&nbsp; MSN",
+      "published_at": 1778090520000,
       "score": 9,
       "tags": [
         "housing",
-        "atlanta",
-        "trend"
+        "phoenix",
+        "data"
       ],
       "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "亚特兰大Beltline新自行车道、市场降温、South Downtown新增开发，属Sun Belt住宅/城市更新综合动态；'cooling ATL market'为区域房市拐点信号。",
+      "importance": 4,
+      "selector_reason": "凤凰城住房库存飙升至接近历史高位，为Sun Belt关键metro房市拐点信号；imp=4因库存激增直接影响价格走势与区域市场平衡，属重要区域住宅动态。",
       "section": "sunbelt",
       "extended_window": true,
-      "title_zh": "Atlanta Beltline 新建自行车道，市场降温信号显现",
-      "summary_zh": "ATL 市场 cooling，South Downtown 新增供应，Sun Belt 需求端趋缓",
+      "title_zh": "Phoenix 住房库存冲至历史高位，供过于求隐现",
+      "summary_zh": "inventory 激增逼近纪录水平，Sun Belt 热门市场供需格局逆转风险上升",
       "impact": "short-neg",
-      "id": "0e414972",
-      "fetched_at": 1778229698872
-    },
-    {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "housing"
-      ],
-      "region": "national",
-      "title": "Texas Homeowners Accuse SpaceX of Damaging Property With Sonic Booms From Rockets",
-      "link": "https://www.realtor.com/news/trends/texas-homeowners-sue-spacex-sonic-booms-property-damage/",
-      "description": "More than 150 Texas homeowners filed two lawsuits against Elon Musk's SpaceX, alleging property damage from launches and engine testing.",
-      "published_at": 1778103249000,
-      "score": 9,
-      "tags": [
-        "housing",
-        "texas",
-        "policy"
-      ],
-      "heat_signals": [
-        "texas"
-      ],
-      "importance": 3,
-      "selector_reason": "150+德州业主起诉SpaceX火箭音爆致财产损害，属Sun Belt住宅/基础设施冲突事件；反映德州太空海岸周边房市的新兴风险因素。",
-      "section": "sunbelt",
-      "extended_window": true,
-      "title_zh": "150+ Texas 房主起诉 SpaceX 火箭音爆致房屋受损",
-      "summary_zh": "超 150 户 Texas 居民因 SpaceX 发射及引擎测试提起财产损害赔偿诉讼",
-      "impact": "short-neg",
-      "id": "db54e600",
-      "fetched_at": 1778229698872
-    },
-    {
-      "source_id": "multifamily-dive",
-      "source_name": "Multifamily Dive",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "multifamily"
-      ],
-      "region": "national",
-      "title": "Affordable housing development is boosting Oklahoma’s economy: report",
-      "link": "https://www.multifamilydive.com/news/affordable-housing-development-oklahoma-urban-institute/819242/",
-      "description": "Every dollar in tax credit equity across 45 multifamily housing projects is yielding higher economic returns in the state, an Urban Institute study found.",
-      "published_at": 1777907342000,
-      "score": 9,
-      "tags": [
-        "multifamily",
-        "trend"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "可负担住房税收抵免权益对俄克拉荷马州经济的乘数效应，属全国住宅政策/经济适用房重要研究；Urban Institute背书，具联邦政策参考价值。",
-      "section": "sunbelt",
-      "extended_window": true,
-      "title_zh": "可负担住房开发提振 Oklahoma 经济",
-      "summary_zh": "Urban Institute 研究显示，45 个 multifamily 项目每 1 美元 tax credit equity 产生更高经济回报",
-      "impact": "long-pos",
-      "id": "838cbc32",
-      "fetched_at": 1778229698872
-    },
-    {
-      "source_id": "houston-agent",
-      "source_name": "Houston Agent Magazine",
-      "source_tier": "D",
-      "source_weight": 6,
-      "source_tags": [
-        "houston",
-        "brokerage"
-      ],
-      "region": "texas",
-      "title": "Cory Perkins to head Compass’ mortgage, title, insurance operations as president of integrated services",
-      "link": "https://houstonagentmagazine.com/2026/05/07/cory-perkins-compass-mortgage-title-insurance-president-of-integrated-services/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=cory-perkins-compass-mortgage-title-insurance-president-of-integrated-services",
-      "description": "Cory Perkins to head Compass’ mortgage, title, insurance operations as president of integrated services by Emily Marek May 07, 2026 Cory Perkins will serve as the president of Compass' integrated services division. Compass International Holdings appointed Cory Perkins its new president of integrated services. Perkins will step into the role following the retirement of current department head Don Casey, who led the division as an executive advisor. Perkins has been with Compass for more than eight years and played a vital role in the brokerage’s nationwide expansion and the development of its integrated services division. His new position will expand to include leadership over the organization’s mortgage, title, escrow and insurance operations. “It’s a privilege to step into this role and work alongside the talented teams and storied brands that Compass and Anywhere have brought together into a single organization,” Perkins said in a press release. “With the best people and technology powering our integrated services businesses, we have the real opportunity to set the bar for service excellence in our industry. I couldn’t be more energized to kick off this journey in support of our real estate professionals and their clients.” Posted In: Making Moves Tags: compass , Compass International Holdings , Cory Perkins , Don Casey , making moves , SC Read More Related to This Post Spanish-language mortgage lender Americasa opens Houston office Amber Kuhl to open new JLA/Collection office serving Lake Conroe market The W Group moves to Compass Nan and Company to open sixth Houston-area office in Memorial area Real Brokerage to acquire REMAX, form Real REMAX Group Compass taps Greg Hague for director of home sale strategy role LA-based KB Home relocates to Arizona David Assid named Houston division president for First America Homes Join the conversation Cancel reply Save my name, email, and website in this browser for the next time I comment.",
-      "published_at": 1778159728000,
-      "score": 11,
-      "tags": [
-        "houston",
-        "brokerage",
-        "office",
-        "texas",
-        "deals",
-        "homebuilder"
-      ],
-      "heat_signals": [
-        "houston"
-      ],
-      "importance": 3,
-      "_from_fallback": true,
-      "section": "sunbelt",
-      "title_zh": "Cory Perkins 升任 Compass 综合服务总裁",
-      "summary_zh": "Perkins 接管 mortgage、title、escrow、insurance 业务，Don Casey 退休，强化 one-stop 平台战略",
-      "impact": "neutral",
-      "id": "379cc544",
-      "fetched_at": 1778229698872
-    },
-    {
-      "source_id": "btrlist",
-      "source_name": "BTR List (via Google News)",
-      "source_tier": "B",
-      "source_weight": 8,
-      "source_tags": [
-        "btr-sfr"
-      ],
-      "region": "national",
-      "title": "BTR Daily - May 7, 2026 - Trinitas breaks ground on $80M development - BTR List",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMVRrWW9iRENzSk4yRU9IdzdzbTZsSV9BSHMxQjNONXQ5dkRWM2xPMDlCYkZGeGowOG1TRkt6MXc5cm1qN3g1SWFfbmhBbHR0dG5yWVBKbVh5N0FPeHhfQS10bGc2TXNfM1VZS3RSZWlVQ1VnZTlYSWJuMEhtVGNYNHpBdDJqZw?oc=5",
-      "description": "BTR Daily - May 7, 2026 - Trinitas breaks ground on $80M development &nbsp;&nbsp; BTR List",
-      "published_at": 1778150232000,
-      "score": 17,
-      "tags": [
-        "btr-sfr",
-        "construction",
-        "btr-operator"
-      ],
-      "heat_signals": [
-        "btr"
-      ],
-      "importance": 3,
-      "selector_reason": "Trinitas启动$80M BTR项目，属于BTR/SFR主题的重要开发动态；deal规模达BTR领域中等水平，且为实际开工信号。",
-      "section": "btr",
-      "title_zh": "Trinitas $80M BTR 项目破土动工",
-      "summary_zh": "Trinitas 启动 $80M build-to-rent 开发，BTR 供给侧持续扩张",
-      "impact": "long-pos",
-      "id": "37c712b1",
-      "fetched_at": 1778229698872
-    },
-    {
-      "source_id": "btrlist",
-      "source_name": "BTR List (via Google News)",
-      "source_tier": "B",
-      "source_weight": 8,
-      "source_tags": [
-        "btr-sfr"
-      ],
-      "region": "national",
-      "title": "Archive - BTR List",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUks2SUw3Z29uT1NON1MycENyRG9fWjh2aXl5TVowR25raWhKbHMwR2ZwWTJxX3NNbkw4OWxjTnBOYjlQNE51LUQzb2dsUXhPd3FzUTJ6MUkyOVZ4QU9HbjJhT3BBQlp6S0lKQUo3Z3gxcUs0bFZyb2Iwc0VrMGFqa3FWMUV5TzBUMU1KY29scw?oc=5",
-      "description": "Archive &nbsp;&nbsp; BTR List",
-      "published_at": 1777896354000,
-      "score": 11,
-      "tags": [
-        "btr-sfr"
-      ],
-      "heat_signals": [
-        "btr"
-      ],
-      "importance": 3,
-      "_from_fallback": true,
-      "section": "btr",
-      "extended_window": true,
-      "title_zh": "BTR List 归档页面无实质内容",
-      "summary_zh": "无有效信息，影响待观察",
-      "impact": "neutral",
-      "id": "853291a4",
-      "fetched_at": 1778229698872
+      "id": "ed547073",
+      "fetched_at": 1778230064056
     },
     {
       "source_id": "rebusiness-online",
@@ -404,121 +264,94 @@
         "deals"
       ],
       "region": "national",
-      "title": "Balfour Beatty Signs 35,139 SF Office Lease at Victory Park in Dallas",
-      "link": "https://rebusinessonline.com/balfour-beatty-signs-35139-sf-office-lease-at-victory-park-in-dallas/",
-      "description": "Leasing Activity Office Texas Balfour Beatty Signs 35,139 SF Office Lease at Victory Park in Dallas by Taylor Williams May 7, 2026 May 7, 2026 2 DALLAS — Balfour Beatty has signed a 35,139-square-foot office lease in the Victory Park area of Dallas. The construction and infrastructure development company is taking space at One Victory Park, a 20-story, 435,606-square-foot building. Matt Schendle and Carrie Halbrooks of Cushman Wakefield represented the landlord, New York City-based investment firm Clarion Partners, in the lease negotiations. Andrew Cheney of Lee Associates, along with Phil Puckett and Harlan Davis of CBRE, represented Balfour Beatty. Share Facebook Twitter Linkedin Email previous post PAGEWOOD Buys 14,000 SF Office, Retail Building in West Houston, Plans Redevelopment next post High Street, Tokyu Break Ground on 281-Unit Multifamily Project in Downtown Richardson, Texas You may also like High Street, Tokyu Break Ground on 281-Unit Multifamily... May 7, 2026 PAGEWOOD Buys 14,000 SF Office, Retail Building in... May 7, 2026 Franklin Street Arranges Sale of 12,705 SF Office... May 7, 2026 Betches Media Signs 23,038 SF Office Lease in... May 7, 2026 Newmark Brokers $28M Sale of Office Building in... May 7, 2026 Dick’s House of Sport to Join Rock Run... May 7, 2026 JPMorgan Chase Opens 34,000 SF Office Building in... May 7, 2026 Town Lane, Gillon Property Acquire 460,000 SF Retail,... May 6, 2026 JLL Brokers Sale of 271,689 SF Industrial Campus... May 6, 2026",
-      "published_at": 1778164767000,
+      "title": "Franklin Street Arranges Sale of 12,705 SF Office Building in Pflugerville, Texas",
+      "link": "https://rebusinessonline.com/franklin-street-arranges-sale-of-12705-sf-office-building-in-pflugerville-texas/",
+      "description": "Acquisitions Civic Office Texas Franklin Street Arranges Sale of 12,705 SF Office Building in Pflugerville, Texas by Taylor Williams May 7, 2026 May 7, 2026 3 PFLUGERVILLE, TEXAS — Tampa-based brokerage firm Franklin Street has arranged the sale of a 12,705-square-foot office building in the northern Austin suburb of Pflugerville. The building at 508 Old Austin Hutto Road was built in 2013 and will be the future home of the Cameron Road Church of Christ. Marshall Durrett and Laura Fretwell of Franklin Street represented the church in the transaction. The seller was an entity doing business as Government Leases LLC. Share Facebook Twitter Linkedin Email previous post Continental Realty Acquires 14-Property Shopping Center Portfolio in Southeast, Midwest next post PAGEWOOD Buys 14,000 SF Office, Retail Building in West Houston, Plans Redevelopment You may also like High Street, Tokyu Break Ground on 281-Unit Multifamily... May 7, 2026 Balfour Beatty Signs 35,139 SF Office Lease at... May 7, 2026 PAGEWOOD Buys 14,000 SF Office, Retail Building in... May 7, 2026 Continental Realty Acquires 14-Property Shopping Center Portfolio in... May 7, 2026 JLL Negotiates Sale of 557-Unit Self-Storage Facility in... May 7, 2026 Marcus Millichap Brokers $16.5M Sale of Upper... May 7, 2026 Betches Media Signs 23,038 SF Office Lease in... May 7, 2026 Newmark Brokers $28M Sale of Office Building in... May 7, 2026 Cica-Huntek Chemical Technology Buys 25,880 SF Industrial Building... May 7, 2026",
+      "published_at": 1778164310000,
       "score": 13,
       "tags": [
         "office",
-        "dfw",
-        "deals"
+        "austin",
+        "deals",
+        "brokerage"
       ],
       "heat_signals": [
         "texas",
         "houston",
-        "dallas"
+        "austin"
       ],
-      "importance": 3,
-      "selector_reason": "Balfour Beatty在达拉斯Victory Park签署35,139 SF办公租约，反映Sun Belt办公市场RTO需求信号；租户为大型基建公司，具区域指标意义。",
+      "importance": 2,
+      "selector_reason": "德州Pflugerville小型办公物业交易（12,705 SF），金额未披露且规模小，属于常规地方交易花絮；imp=2因其对Sun Belt CRE有微弱记录价值。",
       "section": "cre",
-      "title_zh": "Balfour Beatty 承租 Dallas Victory Park 35K SF office",
-      "summary_zh": "Clarion Partners 旗下 One Victory Park 签下 35,139 SF 租约，DFW office 需求局部回暖",
-      "impact": "long-pos",
-      "id": "0961cc49",
-      "fetched_at": 1778229698872,
-      "cre_subcategory": "办公"
-    },
-    {
-      "source_id": "rebusiness-online",
-      "source_name": "REBusiness Online",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Hunter Advisors Brokers Sale of 233-Room Homewood Suites Chicago-Downtown Hotel",
-      "link": "https://rebusinessonline.com/hunter-advisors-brokers-sale-of-233-room-homewood-suites-chicago-downtown-hotel/",
-      "description": "The hotel is located at 40 E. Grand Ave. and occupies floors six through 19 of the building. Acquisitions Hospitality Illinois Midwest Hunter Advisors Brokers Sale of 233-Room Homewood Suites Chicago-Downtown Hotel by Kristin Harlow May 7, 2026 May 7, 2026 3 CHICAGO — Hunter Advisors has brokered the sale of the Homewood Suites Chicago-Downtown hotel, a 233-room, extended-stay property in Chicago. Spencer Davidson and Riana Stadlen of Hunter brokered the sale. The Hilton-branded hotel is located at 40 E. Grand Ave., one block from the Magnificent Mile. The all-suite property occupies floors six through 19 of a 19-story building and offers apartment-style accommodations with fully equipped kitchens and separate living and sleeping areas. Amenities include 1,784 square feet of meeting space, a rooftop indoor pool and fitness center, a business center and complimentary breakfast. According to Hunter, the asset offers value-add opportunities. Share Facebook Twitter Linkedin Email previous post Dick’s House of Sport to Join Rock Run Collection in Joliet, Illinois next post Cica-Huntek Chemical Technology Buys 25,880 SF Industrial Building in Phoenix You may also like PAGEWOOD Buys 14,000 SF Office, Retail Building in... May 7, 2026 Franklin Street Arranges Sale of 12,705 SF Office... May 7, 2026 Continental Realty Acquires 14-Property Shopping Center Portfolio in... May 7, 2026 JLL Negotiates Sale of 557-Unit Self-Storage Facility in... May 7, 2026 Marcus Millichap Brokers $16.5M Sale of Upper... May 7, 2026 Newmark Brokers $28M Sale of Office Building in... May 7, 2026 Cica-Huntek Chemical Technology Buys 25,880 SF Industrial Building... May 7, 2026 Dick’s House of Sport to Join Rock Run... May 7, 2026 JPMorgan Chase Opens 34,000 SF Office Building in... May 7, 2026",
-      "published_at": 1778161678000,
-      "score": 10,
-      "tags": [
-        "hotel",
-        "deals"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "Hunter Advisors促成芝加哥233间Homewood Suites酒店交易，属全国CRE酒店板块中型deal；位置核心且具增值改造潜力，反映商务旅行复苏信号。",
-      "section": "cre",
-      "title_zh": "Hunter Advisors 促成 Chicago 233 间 Homewood Suites 交易",
-      "summary_zh": "Magnificent Mile 旁 extended-stay 酒店成交，含 value-add 改造机会",
+      "title_zh": "Franklin Street 促成 Austin 郊区 12,705 SF office 交易",
+      "summary_zh": "Pflugerville 教堂买家接手 2013 年建 office 物业，Austin CRE 小型 deal 活跃度尚可",
       "impact": "neutral",
-      "id": "bcf408eb",
-      "fetched_at": 1778229698872,
-      "cre_subcategory": "酒店"
-    },
-    {
-      "source_id": "rebusiness-online",
-      "source_name": "REBusiness Online",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Cica-Huntek Chemical Technology Buys 25,880 SF Industrial Building in Phoenix",
-      "link": "https://rebusinessonline.com/cica-huntek-chemical-technology-buys-25880-sf-industrial-building-in-phoenix/",
-      "description": "PHOENIX — Cica-Huntek Chemical Technology USA Corp. has acquired a freestanding industrial building, located at 1654 W. Knudsen Drive in Phoenix, from AMDVI LLC for $8 million. Michael Kitlica and John Pompey of Cushman &#38; Wakefield represented the buyer in the deal. The site includes a 25,880-square-foot industrial building on 1.5 acres of land. Cica-Huntek will use the property to expand its U.S. operations and strengthen its ability to serve the rapidly growing semiconductor ecosystem in North Phoenix, including Taiwan Semiconductor Manufacturing Co. (TSMC). The property offers a functio",
-      "published_at": 1778161820000,
-      "score": 10,
-      "tags": [
-        "industrial",
-        "phoenix",
-        "deals"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "Cica-Huntek以$8M收购凤凰城工业建筑服务TSMC半导体生态，属Sun Belt工业/物流关键产业配套；契合亚利桑那州制造业回流主题，但单体规模偏小。",
-      "section": "cre",
-      "title_zh": "Cica-Huntek $8M 收购 Phoenix 25K SF 工业物业",
-      "summary_zh": "买家布局 North Phoenix 半导体生态，TSMC 供应链带动的 industrial 需求持续",
-      "impact": "long-pos",
-      "id": "71b09de2",
-      "fetched_at": 1778229698872,
-      "cre_subcategory": "工业"
-    },
-    {
-      "source_id": "rebusiness-online",
-      "source_name": "REBusiness Online",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "JPMorgan Chase Opens 34,000 SF Office Building in Winnetka, Illinois",
-      "link": "https://rebusinessonline.com/jpmorgan-chase-opens-34000-sf-office-building-in-winnetka-illinois/",
-      "description": "WINNETKA, ILL. — JPMorgan Chase has opened its new three-story office building at the corner of Green Bay Road and Elm Street in Winnetka. Located at the site of the North Shore’s first-ever bank, the building houses J.P. Morgan Private Bank’s new North Shore office and Client Center. A new Chase retail branch anchors the ground floor. The development doubles the square footage of the former site to 34,000 square feet. Designed by Gensler, the project created 250 local jobs through construction, with 20 percent of the work awarded to local minority and women-owned businesses. With more than 14",
-      "published_at": 1778161594000,
-      "score": 10,
-      "tags": [
-        "office",
-        "deals"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "JPMorgan Chase在Winnetka开设34,000 SF办公大楼，含私人银行与零售分行；反映大型金融机构对高端社区物理网点的持续投资，属银行CRE策略信号。",
-      "section": "cre",
-      "title_zh": "JPMorgan Chase Winnetka 34K SF office 开业",
-      "summary_zh": "Private Bank 与零售网点入驻，250 个 construction jobs，20% 分包给少数族裔及女性企业",
-      "impact": "long-pos",
-      "id": "91e4c86c",
-      "fetched_at": 1778229698872,
+      "id": "65540fba",
+      "fetched_at": 1778230064056,
       "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Laemmle Re-Acquires North Hollywood Theater It Sold to Developer",
+      "link": "https://www.connectcre.com/stories/laemmle-family-re-acquires-north-hollywood-theatre-it-sold-to-developer/",
+      "description": "Pegasus advised on the $6.5-million acquisition of the&#160;Laemmle&#160;NoHo 7, a marquee theater-anchored mixed-use retail and office property located in the NoHo Arts District in North Hollywood. Pegasus exclusively advised the buyer, a Los Angeles-based investor group led by the&#160;Laemmle&#160;family, founders and operators of Laemmle&#160;Theatres. Located at 5240 Lankershim Blvd in North Hollywood, the 32,809-square-foot property ... The post Laemmle Re-Acquires North Hollywood Theater It Sold to Developer appeared first on Connect CRE .",
+      "published_at": 1778190538000,
+      "score": 11,
+      "tags": [
+        "mixed-asset",
+        "california",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "Laemmle家族以650万美元回购NoHo剧院物业，涉及文化地标资产与混合用途零售/办公；imp=3因属特定文化资产交易但金额有限，为CRE区域动态。",
+      "section": "cre",
+      "title_zh": "Laemmle 家族 $6.5M 回购 North Hollywood 剧院 mixed-use 物业",
+      "summary_zh": "原业主 re-acquire 32,809 SF 零售+办公资产，owner-user 情感价值驱动 CRE 交易",
+      "impact": "neutral",
+      "id": "30973e18",
+      "fetched_at": 1778230064056,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Dick’s House of Sport to Join Rock Run Collection in Joliet, Illinois",
+      "link": "https://rebusinessonline.com/dicks-house-of-sport-to-join-rock-run-collection-in-joliet-illinois/",
+      "description": "JOLIET, ILL. — Dick’s House of Sport is slated to open at Rock Run Collection, a mixed-use development in Joliet. The City of Joliet approved a strategic investment to support the retailer’s addition to the property. Dick’s House of Sport is an interactive, experience-driven concept designed to engage athletes, families and the broader community. The store offers a climbing wall, multiple golf bays and multi-sport cages that can be used for baseball, softball and soccer. Rock Run Collection, developed by Cullinan Properties, is a 300-acre mixed-use project located at the intersection of I-55 a",
+      "published_at": 1778161632000,
+      "score": 10,
+      "tags": [
+        "retail",
+        "national",
+        "deals"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "Dick's House of Sport入驻伊利诺伊州300英亩混合用途开发项目，体现体验式零售与大型混合用途趋势；imp=3因属全国性零售CRE扩张信号。",
+      "section": "cre",
+      "title_zh": "Dick's House of Sport 入驻 Joliet 300 英亩 mixed-use 项目",
+      "summary_zh": "体验型零售概念落地，地方政府 strategic investment 加持，retail CRE 业态升级",
+      "impact": "long-pos",
+      "id": "02a204b3",
+      "fetched_at": 1778230064056,
+      "cre_subcategory": null
     },
     {
       "source_id": "bisnow",
@@ -530,55 +363,273 @@
         "deals"
       ],
       "region": "national",
-      "title": "481 U.S. Breweries Closed In 2025. The Empty Real Estate Is Proving Hard To Fill",
-      "link": "https://www.bisnow.com/national/news/hospitality-entertainment/craft-breweries-slowdown-real-estate-hangover-134438",
-      "description": "Craft breweries used to drive the transformation of vacant warehouses, storefronts and other repurposed buildings into neighborhood gathering places. Beneath Edison bulbs and exposed beams, people packed into tap and tasting rooms for flights of locally...",
-      "published_at": 1778012393000,
+      "title": "Phoenix Office Developers Lean On Retail As An RTO Incentive",
+      "link": "https://www.bisnow.com/phoenix/news/office/ground-floor-retail-offerings-boost-office-scene-in-phoenix-area-134439",
+      "description": "Developers are considering using ground-floor retail to give their new office developments a boost in metro Phoenix. When a new office is being developed, it is often packaged as part of a mixed-use property, according to developers speaking at Bisnow’s...",
+      "published_at": 1778012955000,
       "score": 9,
       "tags": [
-        "retail",
-        "trend"
+        "office",
+        "phoenix",
+        "trend",
+        "developer"
       ],
       "heat_signals": [],
       "importance": 3,
-      "selector_reason": "2025年美国481家精酿啤酒厂关闭及空置物业难去化，属全国CRE零售/适应性再利用结构性议题；反映消费趋势变化对实体空间的长期影响。",
+      "selector_reason": "凤凰城开发商以底层零售作为RTO（返回办公室）激励手段，反映Sun Belt办公市场创新策略；imp=3因属区域CRE市场适应性动态。",
       "section": "cre",
       "extended_window": true,
-      "title_zh": "2025 年 481 家美国精酿啤酒厂关闭，空置物业难去化",
-      "summary_zh": "brewery 退潮遗留大量 hard-to-fill 存量，retail/industrial adaptive reuse 需求萎缩",
-      "impact": "short-neg",
-      "id": "7eb726e2",
-      "fetched_at": 1778229698872,
+      "title_zh": "Phoenix office developer 以 ground-floor retail 吸引 RTO",
+      "summary_zh": "RTO 疲软下，developer 借 retail 配套提升 office 吸引力，混合用途成新标配",
+      "impact": "neutral",
+      "id": "f102415d",
+      "fetched_at": 1778230064056,
+      "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "Historic Cast Iron Building in New York Is Turned Into Stunning ‘Architectural Gem’ That Is Causing a Serious Stir With Wealthy Buyers",
+      "link": "https://www.realtor.com/news/unique-homes/historic-tribeca-cast-iron-building-transformation-luxury/",
+      "description": "Even before it was completed, 32 Walker Street in Tribeca sparked serious interest from wealthy buyers—prompting units to fly off the shelf.",
+      "published_at": 1778122500000,
+      "score": 8,
+      "tags": [
+        "housing",
+        "nyc",
+        "deals"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "纽约Tribeca历史铸铁建筑改造为高端住宅并引发富豪抢购，体现全国住宅高端市场热度；imp=3因属全国住宅市场高端产品动态，但为单个项目。",
+      "section": "cre",
+      "title_zh": "Tribeca 铸铁建筑改造豪宅未完工即售罄",
+      "summary_zh": "32 Walker Street 豪宅化改造引发 wealthy buyer 抢购，Manhattan 高端 residential 需求韧性仍存",
+      "impact": "long-pos",
+      "id": "b5637dd4",
+      "fetched_at": 1778230064056,
       "cre_subcategory": null
     },
     {
-      "source_id": "redfin-news",
-      "source_name": "Redfin News",
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Boulder Group Arranges $3.8M Sale of Walgreens-Occupied Retail Property in Metro Detroit",
+      "link": "https://rebusinessonline.com/boulder-group-arranges-3-8m-sale-of-walgreens-occupied-retail-property-in-metro-detroit/",
+      "description": "ROCHESTER HILLS, MICH. — The Boulder Group has arranged the $3.8 million sale of a single-tenant retail property net leased to Walgreens in Rochester Hills. Located at 2985 Crooks Road, the 14,820-square-foot building was constructed in 2005. Randy Blankstein, Jimmy Goodman and John Feeney of Boulder Group represented the seller, an East Coast-based investor. The buyer was a West Coast-based investor. The Walgreens lease expires on July 31, 2035. The tenant has operated at the location since 2005. The post Boulder Group Arranges $3.8M Sale of Walgreens-Occupied Retail Property in Metro Detroit",
+      "published_at": 1778161535000,
+      "score": 10,
+      "tags": [
+        "retail",
+        "national",
+        "deals",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "importance": 2,
+      "selector_reason": "底特律都会区Walgreens单租户零售物业380万美元出售，属小型净租赁交易；imp=2因金额低且为常见零售CRE花絮。",
+      "section": "cre",
+      "title_zh": "Boulder Group 促成 $3.8M Walgreens 单租户零售物业交易",
+      "summary_zh": "Metro Detroit 14,820 SF net lease retail 换手，Walgreens 租约至 2035 年，cap rate 型资产受追捧",
+      "impact": "neutral",
+      "id": "315edfaa",
+      "fetched_at": 1778230064056,
+      "cre_subcategory": "零售"
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "LeAnn Rimes Breaks Silence on ‘Real Housewives of Beverly Hills’ Rumors Following Diss From Brandi Glanville",
+      "link": "https://www.realtor.com/news/reality-tv/leann-rimes-denies-real-housewives-of-beverly-hills-rumors-brandi-glanville/",
+      "description": "LeAnn Rimes Breaks Silence on ‘Real Housewives of Beverly Hills’ Rumors Realtor.com® Real Estate App 314,000+ Open in App Skip to content Buy Homes for sale Homes for sale Foreclosure homes New construction for sale All new construction New home construction Homes values Housing market Recently sold homes Property records Home buying tips Home buying checklist Home buyers reveal: 'What I wish I had known before buying my first home' First-time home buyer resource center More home buying insights Success stories Sell Home selling tools Compare agents & pick the right one Find the right selling option for you How much can you make selling your home? See what your home is worth Home selling advice Complete guide to selling your home Should I sell my home now? How much is my home worth? How should I sell my home? How to select an agent? How to prepare your home for sale? See more home selling insights Recently sold Recently sold homes Rent Apartments For rent Apartments for rent Renter tools Contacted rentals Apply now online Landlord tools Manage rentals List your rentals Screen tenants Create a lease Collect rent online Home renting tips Renter's resource center Should I rent or buy? Debunked! 8 myths about renting you should stop believing immediately Rental report More renting insights Mortgage Mortgage rates Get pre-approved Mortgage rates Home equity financing rates Refinance rates Finance advice For veterans Calculators Mortgage calculator Refinance calculator How much house can I afford Rent vs. buy Financial advice 6 ways home buyers mess up getting a mortgage Mortgage guide Learn about home insurance More finance insights Find Realtors ® Find REALTORS ® Search for real estate agent Why use a REALTOR ® 6 reasons you should never buy or sell a home without an agent Difference between agent, broker & REALTOR ® Listing vs. buyer agent How to find a REALTOR ® News around REALTORS ® Real estate agents reveal the toughest home buyers they've ever met More news around REALTORS ® My Home News & Insights News The latest news Housing trends Real estate news Celebrity real estate Unique homes For PROs Corporate blog Insights Buying Selling Renting Financing Moving Living Home improvement Research 2026 housing market predictions NEW 2025 hottest zip codes Guides & more All guides Complete guide on how to sell your home First-time home buyer resource center Mortgage guide Veterans home buyer guide USDA home loan guide Home insurance guide Real estate videos Housing resources About us Manage rentals Advertise News Insights NEWS TRENDS BUYING SELLING RENTING CELEBRITY HOMES ADVICE GUIDES LIVING RESEARCH MORE News Insights NEWS TRENDS Real Estate News Housing Trends Celebrity Real Estate Unique Homes Reality TV Sports Most Expensive Homes Most Popular Homes BUYING SELLING RENTING CELEBRITY HOMES ADVICE Buying Selling Renting Financing Living Moving Home Improvement GUIDES LIVING RESEARCH Reality TV LeAnn Rimes Breaks Silence on ‘Real Housewives of Beverly Hills’ Rumors Following Diss From Brandi Glanville By Kelsi Karruli May 7, 2026 Tibrina Hobson/FilmMagic LeAnn Rimes has vehemently denied rumors she is joining the \"Real Housewives of Beverly Hills\" after Brandi Glanville dissed her on social media. Glanvile, 53, brought the reported feud between her and Rimes, 43, to new heights on May 6 when she penned on X, \"I hope it's true about RHOBH I mean she got everything else of mine — husband, kids, boobs, bronco, random illnesses she might as well just be a housewife and finish it off once and for all.\" Her message was in response to a post from Deuxmoi claiming that Rimes was poised to join the hit show next season. However, Rimes set the record straight after former \"Bachelorette\" star Rachel Lindsay mentioned the rumor on the \"Ringer Reality TV\" podcast. Loading... LeAnn Rimes has vehemently denied rumors she is joining the \"Real Housewives of Beverly Hills\" after Brandi Glanville dissed her on social media. Jason Kempin/Getty Images “T",
+      "published_at": 1778188516000,
+      "score": 17,
+      "tags": [
+        "housing",
+        "multifamily",
+        "macro",
+        "rates",
+        "deals",
+        "trend",
+        "landlord",
+        "brokerage"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "trend",
+        "trends",
+        "housing market"
+      ],
+      "section": "national",
+      "importance": 3,
+      "_from_fallback": true,
+      "title_zh": "娱乐新闻误标 housing 标签，内容无地产实质信息",
+      "summary_zh": "LeAnn Rimes 真人秀传闻与 residential 市场无关，属数据噪音",
+      "impact": "neutral",
+      "id": "2515c71f",
+      "fetched_at": 1778230064056
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "EXCLUSIVE: Shannen Doherty’s Malibu Mansion Finds a Buyer—Months After Undergoing a $500K Price Drop",
+      "link": "https://www.realtor.com/news/celebrity-real-estate/shannen-doherty-malibu-home-sells-after-price-cut/",
+      "description": "EXCLUSIVE: Shannen Doherty&#x27;s Malibu Mansion Finds a Buyer Realtor.com® Real Estate App 314,000+ Open in App Skip to content Buy Homes for sale Homes for sale Foreclosure homes New construction for sale All new construction New home construction Explore the neighborhood Housing market trends Recently sold homes Property records Home buying tips Home buying checklist Home buyers reveal: 'What I wish I had known before buying my first home' First-time home buyer resource center More home buying insights Success stories Sell Home selling tools Compare agents & pick the right one Find the right selling option for you How much can you make selling your home? See what your home is worth Home selling advice Complete guide to selling your home Should I sell my home now? How much is my home worth? How should I sell my home? How to select an agent? How to prepare your home for sale? See more home selling insights Recently sold Recently sold homes Rent Apartments For rent Apartments for rent Renter tools Contacted rentals Apply now online Landlord tools Manage rentals List your rentals Screen tenants Create a lease Collect rent online Home renting tips Renter's resource center Should I rent or buy? Debunked! 8 myths about renting you should stop believing immediately Rental report More renting insights Mortgage Mortgage rates Get pre-approved Mortgage rates Home equity financing rates Refinance rates Finance advice For veterans Calculators Mortgage calculator Refinance calculator How much house can I afford Rent vs. buy Financial advice 6 ways home buyers mess up getting a mortgage Mortgage guide Learn about home insurance More finance insights Find an Agent Find a real estate agent Search for real estate agent Why use a REALTOR ® 6 reasons you should never buy or sell a home without an agent Difference between agent, broker & REALTOR ® Listing vs. buyer agent How to find a REALTOR ® News around REALTORS ® Real estate agents reveal the toughest home buyers they've ever met More news around REALTORS ® My Home News & Insights News The latest news Housing trends Real estate news Celebrity real estate Unique homes For PROs Corporate blog Insights Buying Selling Renting Financing Moving Living Home improvement Research 2026 housing market predictions NEW 2025 hottest zip codes Guides & more All guides Complete guide on how to sell your home First-time home buyer resource center Mortgage guide Veterans home buyer guide USDA home loan guide Home insurance guide Real estate videos Housing resources About us Manage rentals Advertise News Insights NEWS TRENDS BUYING SELLING RENTING CELEBRITY HOMES ADVICE GUIDES LIVING RESEARCH MORE News Insights NEWS TRENDS Real Estate News Housing Trends Celebrity Real Estate Unique Homes Reality TV Sports Most Expensive Homes Most Popular Homes BUYING SELLING RENTING CELEBRITY HOMES ADVICE Buying Selling Renting Financing Living Moving Home Improvement GUIDES LIVING RESEARCH Celebrity Real Estate EXCLUSIVE: Shannen Doherty’s Malibu Mansion Finds a Buyer—Months After Undergoing a $500K Price Drop By Kelsi Karruli May 7, 2026 Getty Images for Hallmark Channel Late actress Shannen Doherty 's longtime Malibu property has found a buyer—just two months after being relisted with a steep price cut. Doherty, who died July 13, 2024, at the age of 53, following a lengthy battle with cancer, purchased the elegant abode in 2004 for $2.56 million. The home was later described as her personal \"sanctuary,\" where she was able to escape the hustle and bustle of Hollywood , particularly during her lengthy cancer battle. The stunning property lingered on the market for months after her death, before being delisted, and then relisted March 2 with a newly discounted price of $8.25 million. And, apparently the price drop attracted a buyer, as Realtor.com® can exclusively reveal that the home is in the contingency phase, meaning that an offer has been accepted; however, it depends on certain conditions being met. Loading... Late ac",
+      "published_at": 1778175750000,
+      "score": 17,
+      "tags": [
+        "housing",
+        "multifamily",
+        "macro",
+        "rates",
+        "deals",
+        "trend",
+        "landlord",
+        "brokerage"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "trend",
+        "trends",
+        "housing market"
+      ],
+      "section": "national",
+      "importance": 3,
+      "_from_fallback": true,
+      "title_zh": "Malibu 豪宅降价 $500K 后成交， celebrity 住宅流动性分化",
+      "summary_zh": "Shannen Doherty 物业历经调价终觅买家，luxury 市场议价空间扩大",
+      "impact": "neutral",
+      "id": "c813f64f",
+      "fetched_at": 1778230064056
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "Savannah Guthrie Returns to ‘Today’ After Sudden Exit Sparked Concerns Over Mom Nancy’s Kidnapping Case",
+      "link": "https://www.realtor.com/news/celebrity-real-estate/savannah-guthrie-returns-to-today-show-exit-nancy-guthrie-may-7-update/",
+      "description": "Savannah Guthrie Returns to &#x27;Today&#x27; After Exit Sparked Concerns Realtor.com® Real Estate App 314,000+ Open in App Skip to content Buy Homes for sale Homes for sale Foreclosure homes New construction for sale All new construction New home construction Explore the neighborhood Housing market trends Recently sold homes Property records Home buying tips Home buying checklist Home buyers reveal: 'What I wish I had known before buying my first home' First-time home buyer resource center More home buying insights Success stories Sell Home selling tools Compare agents & pick the right one Find the right selling option for you How much can you make selling your home? See what your home is worth Home selling advice Complete guide to selling your home Should I sell my home now? How much is my home worth? How should I sell my home? How to select an agent? How to prepare your home for sale? See more home selling insights Recently sold Recently sold homes Rent Apartments For rent Apartments for rent Renter tools Contacted rentals Apply now online Landlord tools Manage rentals List your rentals Screen tenants Create a lease Collect rent online Home renting tips Renter's resource center Should I rent or buy? Debunked! 8 myths about renting you should stop believing immediately Rental report More renting insights Mortgage Mortgage rates Get pre-approved Mortgage rates Home equity financing rates Refinance rates Finance advice For veterans Calculators Mortgage calculator Refinance calculator How much house can I afford Rent vs. buy Financial advice 6 ways home buyers mess up getting a mortgage Mortgage guide Learn about home insurance More finance insights Find an Agent Find a real estate agent Search for real estate agent Why use a REALTOR ® 6 reasons you should never buy or sell a home without an agent Difference between agent, broker & REALTOR ® Listing vs. buyer agent How to find a REALTOR ® News around REALTORS ® Real estate agents reveal the toughest home buyers they've ever met More news around REALTORS ® My Home News & Insights News The latest news Housing trends Real estate news Celebrity real estate Unique homes For PROs Corporate blog Insights Buying Selling Renting Financing Moving Living Home improvement Research 2026 housing market predictions NEW 2025 hottest zip codes Guides & more All guides Complete guide on how to sell your home First-time home buyer resource center Mortgage guide Veterans home buyer guide USDA home loan guide Home insurance guide Real estate videos Housing resources About us Manage rentals Advertise News Insights NEWS TRENDS BUYING SELLING RENTING CELEBRITY HOMES ADVICE GUIDES LIVING RESEARCH MORE News Insights NEWS TRENDS Real Estate News Housing Trends Celebrity Real Estate Unique Homes Reality TV Sports Most Expensive Homes Most Popular Homes BUYING SELLING RENTING CELEBRITY HOMES ADVICE Buying Selling Renting Financing Living Moving Home Improvement GUIDES LIVING RESEARCH Celebrity Real Estate Savannah Guthrie Returns to ‘Today’ After Sudden Exit Sparked Concerns Over Mom Nancy’s Kidnapping Case By Kelsi Karruli May 7, 2026 NDZ/Star Max/GC Images To see our latest updates on the Nancy Guthrie case, please click here . Savannah Guthrie returned to NBC studios after sparking concern that there had been a major update in the case of her missing mother, Nancy Guthrie , when she abruptly exited the show during the previous day’s broadcast. The \"Today\" show co-anchor was all smiles on May 7, when she came back to the morning show after leaving 30 minutes before it was set to end on May 6. “Savannah had to leave a little early. She’ll be right back tomorrow, though,\" co-host Craig Melvin said on May 6. Although her departure raised alarms among fans, a source told Page Six that her exit had \"nothing\" to do with her missing mom, adding that she had to leave \"for some sort of appointment.\" Loading... Savannah Guthrie returned to NBC studios after sparking concern that there had been a major update in th",
+      "published_at": 1778163189000,
+      "score": 17,
+      "tags": [
+        "housing",
+        "multifamily",
+        "macro",
+        "rates",
+        "deals",
+        "trend",
+        "landlord",
+        "brokerage"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "trend",
+        "trends",
+        "housing market"
+      ],
+      "section": "national",
+      "importance": 3,
+      "_from_fallback": true,
+      "title_zh": "娱乐新闻误标 housing 标签，内容无地产实质信息",
+      "summary_zh": "Savannah Guthrie 节目回归与 residential 市场无关，属数据噪音",
+      "impact": "neutral",
+      "id": "61004806",
+      "fetched_at": 1778230064056
+    },
+    {
+      "source_id": "houston-agent",
+      "source_name": "Houston Agent Magazine",
+      "source_tier": "D",
+      "source_weight": 6,
+      "source_tags": [
+        "houston",
+        "brokerage"
+      ],
+      "region": "texas",
+      "title": "6 design trends defining luxury homes in 2026",
+      "link": "https://houstonagentmagazine.com/2026/05/04/6-design-trends-defining-luxury-homes-in-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=6-design-trends-defining-luxury-homes-in-2026",
+      "description": "Luxury spaces that focus on well-being, comfort and personal meaning are shaping everything in the home, from material selection and layout to color, light and more. The post 6 design trends defining luxury homes in 2026 appeared first on Houston Agent Magazine .",
+      "published_at": 1777895966000,
+      "score": 13,
+      "tags": [
+        "houston",
+        "brokerage",
+        "texas",
+        "trend",
+        "housing"
+      ],
+      "heat_signals": [
+        "houston",
+        "trend",
+        "trends"
+      ],
+      "section": "national",
+      "importance": 3,
+      "_from_fallback": true,
+      "extended_window": true,
+      "title_zh": "2026 年 luxury home 六大设计趋势聚焦 wellness 与个性化",
+      "summary_zh": "健康、舒适、个人意义成核心诉求，高端住宅产品力竞争维度升级",
+      "impact": "neutral",
+      "id": "dfda711d",
+      "fetched_at": 1778230064056
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
       "source_tier": "A",
       "source_weight": 8,
       "source_tags": [
         "housing",
-        "data"
+        "brokerage"
       ],
       "region": "national",
-      "title": "Should You Buy a Home Before Getting Married? Economist Says Yes.",
-      "link": "https://www.redfin.com/news/should-you-buy-a-home-before-getting-married/",
-      "description": "A social norm that ties homebuying to marriage is delaying women's path to homeownership, even when they can afford to buy on their own. 31% of single men ages 25-34 own their home, compared with 23% of single women the same age—a 30% gap. Marriage increases the likelihood of owning a home by 26%, even [&#8230;] The post Should You Buy a Home Before Getting Married? Economist Says Yes. appeared first on Redfin Real Estate News .",
-      "published_at": 1778166549000,
+      "title": "How 'The Turner Test' can help you navigate real estate's new normal - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9GcDBhdjBQZFdjM25KV1FTd0xaaGFGMmtwWExRREdfX3c1RUxGUmhueVpZdjNILXJHVlEzZUUwUHoyQjB0MFpWa29jRDdJMjRqQXZTUEFkX1NiU0pyd0ZBejVSb1BGb2NuRzJMU3NTLWtHcmJZYXdFYQ?oc=5",
+      "description": "How 'The Turner Test' can help you navigate real estate's new normal &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1778176452000,
       "score": 12,
       "tags": [
         "housing",
-        "trend"
+        "brokerage"
       ],
       "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "Redfin经济学家关于单身女性购房与婚姻关系的分析，触及全国住宅市场结构性趋势；有具体数据支撑（性别购房率差距30%），属住房可负担性议题。",
       "section": "national",
-      "title_zh": "经济学家建议婚前购房，女性 homeownership 受婚姻观念拖累",
-      "summary_zh": "25-34 岁单身男性住房拥有率 31% vs 女性 23%，婚姻提升购房概率 26%，传统观念延迟女性置业",
+      "importance": 3,
+      "_from_fallback": true,
+      "title_zh": "The Turner Test 助经纪人适应 commission 变革新环境",
+      "summary_zh": "新佣金规则下，agent 价值验证框架浮现，brokerage 服务模式转型加速",
       "impact": "neutral",
-      "id": "31a0b8a4",
-      "fetched_at": 1778229698872
+      "id": "2182bca7",
+      "fetched_at": 1778230064056
     },
     {
       "source_id": "inman",
@@ -590,55 +641,25 @@
         "brokerage"
       ],
       "region": "national",
-      "title": "Zillow Is Making Itself 'Increasingly Indispensable' With AI - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRWNmZUR0MTdOcVQwZU1PT3R6QVVnb3d1UEozYktobnZEVHdqaEROYi1DSVBMckFpRWhIVlQtNml6U1JrMTViLVgzOUxoWDBHaUl1NXVaU2VweTlqUVJwUEZ4TGlhaVVlSk9jNUdSdDd4d25lMzNReURBbDdLZ2JYWHNZajVCMm5YeHQxOVhodENEODZKOGNr?oc=5",
-      "description": "Zillow Is Making Itself 'Increasingly Indispensable' With AI &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778104009000,
-      "score": 10,
+      "title": "Oppenheim Talks LA Mansion Tax As NYC Weighs Pied-à-terre Proposal - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNV3N1anZtVjdIWGN6WmtEQ3pDdEMxWEEwbG1yMC1ldm5wSjg5WmlsZnpncGVDbC1sZlRzTTNmWVpUVUd1eWdDRlJXTU5lSnpnT3U3bUtiUFgwWkFNcFAzaXVjZEFMbi00ekg1eU4zaXotR2pvbjBmUDU2ZEFycVF5c3g4Nmg3aXZTcTVWYnpwWGM5YjBnaDdzTGNLZFBXQ3REOWc?oc=5",
+      "description": "Oppenheim Talks LA Mansion Tax As NYC Weighs Pied-à-terre Proposal &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1778153441000,
+      "score": 12,
       "tags": [
-        "brokerage",
-        "tech-adoption"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "Zillow通过AI强化平台不可替代性，属 PropTech/住宅平台竞争关键动态；头部平台技术升级影响全国房源分发效率与消费者行为。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "Zillow 借 AI 强化平台不可替代性",
-      "summary_zh": "Zillow AI 布局加深用户粘性，对 brokerage 与 portals 竞争格局影响待观察",
-      "impact": "long-pos",
-      "id": "b1c2023c",
-      "fetched_at": 1778229698872
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
         "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "Agent and loan officer sentenced in $17M Ponzi scheme - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNUpSS0FnX3V4UVBiM0k1REV1NktaWEx2QXh0ekpWb25WQjltYWlGWTBObHFJai00R0tYY09HSkQycGNrSVN1dmRCai04cVZEUFhNejRqV0EwaHNCc2J6eGkycFZtNHBtWHpSSUNvOTJoUjFrMEFnN0xsTkdzUXNOMXJOeGxVTmYwLU8yZnVjUQ?oc=5",
-      "description": "Agent and loan officer sentenced in $17M Ponzi scheme &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1777989207000,
-      "score": 9,
-      "tags": [
         "brokerage",
-        "regulation"
+        "nyc"
       ],
       "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "经纪人与贷款官因$17M庞氏骗局被判刑，属行业监管与合规重要案例；金额较大且涉及职业信任危机，具警示效应。",
       "section": "national",
-      "extended_window": true,
-      "title_zh": "Agent 与 loan officer 因 $17M Ponzi 骗局获刑",
-      "summary_zh": "房地产从业者参与 $17M 欺诈案被判刑，行业监管与声誉风险上升",
+      "importance": 3,
+      "_from_fallback": true,
+      "title_zh": "LA mansion tax 与 NYC pied-à-terre 提案联动引关注",
+      "summary_zh": "双城豪宅税负政策共振，wealthy buyer 跨市场置业成本面临上行",
       "impact": "short-neg",
-      "id": "51744ac1",
-      "fetched_at": 1778229698872
+      "id": "e97bd499",
+      "fetched_at": 1778230064056
     },
     {
       "source_id": "inman",
@@ -650,25 +671,53 @@
         "brokerage"
       ],
       "region": "national",
-      "title": "Home prices ticked up in most metros during Q1 - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeU90dlNSZElCbnVCRXQwUmo3bVJ6bFplVTh3SXl3UEdGQkVmZ19kNmJuaEdmQVFaRmFCOHhwajRIU0RXNkxLS3JJaldrVWs4WmZnNjhVUWR4SWdBTXhydElxNmFYV3ZnVk9OaG5OUVItWnAxNjlEa2dWOFNkbnRzUHd5R3pqMjg?oc=5",
-      "description": "Home prices ticked up in most metros during Q1 &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778019039000,
-      "score": 9,
+      "title": "Inman names the next wave of Future Leaders in Real Estate - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQR0dqNEFuZlRhMEptT2FUMmM4N1pYcDd1anJJWENKUHpzWkxRelY4WmUxT2tlbks3TzhNLU9WN0ZRLWcwOVdFQUhYa3RwTno3V0lDZTR0TTUzcFV2UDBXbjJTU1VDTFdJQWN4ZmNlczVtdTZMVlpMVm1WU085dDNvWGc3bll5VVhmU2JsT1ZaSVZ1WnVpTUlj?oc=5",
+      "description": "Inman names the next wave of Future Leaders in Real Estate &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1778155305000,
+      "score": 12,
       "tags": [
         "housing",
-        "data"
+        "brokerage"
       ],
       "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "Q1大多数都会区房价上涨，属全国住宅市场关键价格数据；季度性宏观指标，为美联储政策与购房者预期提供参考。",
       "section": "national",
-      "extended_window": true,
-      "title_zh": "Q1 多数都会区房价小幅上涨",
-      "summary_zh": "Q1 多数 metro home prices 环比上行，住房市场韧性超预期",
-      "impact": "long-pos",
-      "id": "032cf6b4",
-      "fetched_at": 1778229698872
+      "importance": 3,
+      "_from_fallback": true,
+      "title_zh": "Inman 公布新一批 real estate 未来领袖名单",
+      "summary_zh": "行业人才梯队评选揭晓，新生代 leadership 对 brokerage 创新方向具风向标意义",
+      "impact": "neutral",
+      "id": "8048e7b0",
+      "fetched_at": 1778230064056
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "What to do when fair housing turns into fear housing - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQdUhicm91NHAwcXBOZ3ZsRWtKcWE5YXItWjYzdnF2ek9SaUpsNXZHd1RERjlqQkFwX0ZqXzl1YUxLM01ZcHN4alBiX3U4QXJhY2dJYXlyWVZKM0F5b3NnbWZqSFp2WFNaUGRzNXl0Mjk0U1FWTE5HYl9nUExtMWZEZUc5OG5WM25KZkE?oc=5",
+      "description": "What to do when fair housing turns into fear housing &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1778187488000,
+      "score": 12,
+      "tags": [
+        "housing",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "section": "national",
+      "importance": 3,
+      "_from_fallback": true,
+      "title_zh": "fair housing 执行趋严致 agent 畏缩，合规风险升温",
+      "summary_zh": "监管加码下从业者 fear housing 心态蔓延，交易摩擦成本或上升",
+      "impact": "short-neg",
+      "id": "64afd096",
+      "fetched_at": 1778230064056
     }
   ],
   "errors": [],
@@ -678,25 +727,24 @@
     "writer_audit": [
       {
         "stage": "selector",
-        "input": 62,
-        "output": 27
+        "input": 54,
+        "output": 13
       },
       {
         "stage": "tagger",
-        "items": 27
+        "items": 13
       },
       {
         "stage": "dedupe",
-        "before": 27,
-        "after": 25
+        "before": 13,
+        "after": 11
       },
       {
         "stage": "pick",
         "section_counts": {
-          "national": 9,
-          "sunbelt": 4,
-          "btr": 2,
-          "cre": 5
+          "national": 13,
+          "sunbelt": 1,
+          "cre": 6
         }
       },
       {
@@ -704,6 +752,6 @@
         "items": 20
       }
     ],
-    "candidate_pool_size": 62
+    "candidate_pool_size": 54
   }
 }
