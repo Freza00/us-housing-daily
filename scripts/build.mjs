@@ -885,10 +885,49 @@ async function callLLM(systemPrompt, userPrompt, opts, label = "llm") {
   return text.replace(/```json\s*/g, "").replace(/```\s*$/g, "").trim();
 }
 
-function safeParseJSON(text, label) {
+// 提取 stream of top-level JSON objects（处理 LLM 偶尔吐 NDJSON / 多对象未包数组的情况）
+// 用 brace 计数法，跳过字符串内的 { } 不计入深度
+function extractJSONObjects(text) {
+  const out = [];
+  let depth = 0, inStr = false, escape = false, start = -1;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (escape) { escape = false; continue; }
+    if (inStr) {
+      if (c === "\\") escape = true;
+      else if (c === '"') inStr = false;
+      continue;
+    }
+    if (c === '"') { inStr = true; continue; }
+    if (c === '{') { if (depth === 0) start = i; depth++; }
+    else if (c === '}') {
+      depth--;
+      if (depth === 0 && start >= 0) {
+        try { out.push(JSON.parse(text.slice(start, i + 1))); } catch {}
+        start = -1;
+      }
+    }
+  }
+  return out;
+}
+
+// expectArray=true 时，若 JSON.parse 失败或返回非数组，尝试用 brace counting 提取多个对象
+function safeParseJSON(text, label, expectArray = false) {
   try {
-    return JSON.parse(text);
+    const v = JSON.parse(text);
+    if (expectArray && !Array.isArray(v)) {
+      // single object 包成 array — 偶尔 LLM 只返回一个对象代表"只有一条"
+      return [v];
+    }
+    return v;
   } catch (e) {
+    if (expectArray) {
+      const objs = extractJSONObjects(text);
+      if (objs.length > 0) {
+        log(`🤖 ${label} fallback parse: extracted ${objs.length} object(s) from non-array stream`);
+        return objs;
+      }
+    }
     log(`🤖 ${label} raw (first 600): ${text.slice(0, 600)}`);
     throw new Error(`${label} JSON parse failed: ${e.message}`);
   }
@@ -907,10 +946,20 @@ async function globalPassWriter(candidates, opts, priorOutput, priorIssues) {
 
   let feedbackBlock = "";
   if (priorOutput && priorIssues) {
-    const issuesStr = priorIssues.map(x =>
+    // 反馈给 writer 时限到最严重的 8 条；issue_type 优先级：should_exclude > duplicate > section_wrong > quota_violation > 其他
+    const SEVERITY = {
+      should_exclude: 0, duplicate: 1, section_wrong: 2, quota_violation: 3,
+      tag_invalid: 4, incomplete: 5, rating_imbalance: 6, tag_redundant: 7,
+    };
+    const sortedIssues = [...priorIssues].sort((a, b) =>
+      (SEVERITY[a.issue_type] ?? 99) - (SEVERITY[b.issue_type] ?? 99)
+    );
+    const topIssues = sortedIssues.slice(0, 8);
+    const issuesStr = topIssues.map(x =>
       `- item_id=${x.item_id} type=${x.issue_type}: ${x.description}${x.suggested_fix ? ` → 建议: ${x.suggested_fix}` : ""}`
     ).join("\n");
-    feedbackBlock = `\n\n## 上一轮 Reviewer 反馈（必须修复）\n上一轮你产出的 20 条被 reviewer 标记了以下问题：\n${issuesStr}\n\n请重新选择 / 重新分类 / 重新打 tag / 重新评级，修正这些问题。`;
+    const more = priorIssues.length > topIssues.length ? `\n（reviewer 还指出了 ${priorIssues.length - topIssues.length} 条次要问题，未列出 — 你修好上面这些再说）` : "";
+    feedbackBlock = `\n\n## 上一轮 Reviewer 反馈（必须修复，按严重程度排序）\n${issuesStr}${more}\n\n请重新选择 / 重新分类 / 重新打 tag / 重新评级，修正这些问题。`;
   }
 
   const userPrompt = `${sectionsBlock}
@@ -947,20 +996,31 @@ ${tagsBlock}
 ## 保留英文术语
 公司 / 媒体 / 人名（Blackstone / KKR / MAA / INVH ...）；行业缩写（REIT, IPO, M&A, BTR, SFR, NOI, LTV, DSCR, cap rate, refi, special servicing）；政府机构（Fed, FOMC, FHFA, HUD, Treasury, CFPB, SEC）；数据指标（JOLTS, CPI, PMMS, Case-Shiller）；单位（Q1, $1.75B, 475K SF, 6.3%, 30Y mortgage, bps）；英文地名（Manhattan, Sun Belt, Houston, Austin, DFW）。
 
-## 输出
-JSON 数组，20 条，按 section 顺序排列（national → sunbelt → btr → cre → institutional），每个 section 内按 importance × 5 + 综合判断降序。每条字段：
+## 输出格式（极其严格 — retry 时尤其要按这个）
+- **必须是单个 JSON 数组**：以 \`[\` 开头，以 \`]\` 结尾
+- **不要 NDJSON**（不要每行一个对象不包数组）
+- **不要 markdown code fence**（不要包 \`\`\`json \`\`\`）
+- **不要解释文字**（除 reason 字段外，输出里不要任何中文/英文说明）
+- 数组长度严格 = 20，按 section 顺序排列（national → sunbelt → btr → cre → institutional），每 section 内按 importance × 5 + 综合判断降序
+- 每条字段：
 {"i": <候选序号>, "section": "<id>", "tags": [...], "t": "<中文标题>", "s": "<中文摘要>", "imp": <1-5>, "dir": "<long-pos|short-pos|neutral|short-neg|long-neg>", "reason": "<选取与归类理由>"}
 
 ## 候选 ${candidates.length} 条
 ${candidatesBlock}${feedbackBlock}
 
-请直接输出 JSON 数组（无 markdown code fence），20 条，严格满足 quota ${quotas}：`;
+现在直接输出 JSON 数组（\`[\` 开头 \`]\` 结尾，无 code fence，无 NDJSON，无前后说明），20 条，严格满足 quota ${quotas}：`;
 
   log(`✍️  writer prompt size: ~${Math.round(userPrompt.length / 4)} tokens, candidates=${candidates.length}`);
   const text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 8000 }, "writer");
-  const parsed = safeParseJSON(text, "writer");
+  let parsed = safeParseJSON(text, "writer", true);
   if (!Array.isArray(parsed)) throw new Error(`writer returned non-array (got ${typeof parsed})`);
-  log(`✍️  writer returned ${parsed.length} items`);
+  // 限定到 DAILY_LIMIT 条 — LLM 偶尔会返回 19/21；多了 truncate，少了让 reviewer flag
+  if (parsed.length > DAILY_LIMIT) {
+    log(`✍️  writer returned ${parsed.length} items, truncating to ${DAILY_LIMIT}`);
+    parsed = parsed.slice(0, DAILY_LIMIT);
+  } else {
+    log(`✍️  writer returned ${parsed.length} items`);
+  }
   return parsed;
 }
 
