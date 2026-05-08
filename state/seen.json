@@ -1,5 +1,267 @@
 [
   {
+    "url": "https://www.multifamilydive.com/news/apartment-rent-april-yardi/819621/",
+    "tokens": [
+      "apartment",
+      "rents",
+      "tepid",
+      "bump",
+      "april",
+      "yardi"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/mortgage-rates-rise-but-there-are-signs-of-moderation-ahead",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "rise",
+      "there",
+      "signs",
+      "moderation",
+      "ahead"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/springfield-massachusetts-illinois-hottest-markets-april-2026/",
+    "tokens": [
+      "tale",
+      "springfields",
+      "massachusetts",
+      "tops",
+      "hottest",
+      "markets",
+      "list",
+      "illinois",
+      "twin",
+      "home",
+      "prices",
+      "soar"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/industrial/eqt-to-spend-11b-buying-into-americold-warehouses-as-reit-continues-loss-streak-134477",
+    "tokens": [
+      "spend",
+      "$1.1b",
+      "buying",
+      "americold",
+      "warehouses"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.realtor.com/research/new-home-sales-march-2026/",
+    "tokens": [
+      "home",
+      "sales",
+      "pace",
+      "picks",
+      "price",
+      "plummets",
+      "march"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/05/07/home-sales-stuck-at-same-levels-from-last-year-says-zillow-chief-economist.html",
+    "tokens": [
+      "home",
+      "sales",
+      "stuck",
+      "same",
+      "levels",
+      "last",
+      "year",
+      "zillow",
+      "chief",
+      "economist"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/mario-alvarez-jr-brings-1b-track-record-to-exp-commercial/",
+    "tokens": [
+      "mario",
+      "alvarez",
+      "brings",
+      "$1b",
+      "track",
+      "record",
+      "commercial"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQV0FRcjl6MktiZ3lWQm9OMjdxVk5fVUthZWZpakRLejllRTFaTTJDckZRcXB6b2p6bXByYmtRQjczUkdWckpHNTBoalJtRDBKbzZ3cUZibVkyb3FPSDdPdFVmMmcxSTRPTFhRSG9WZG5VZEVWbWxUNWV3SzcxaEFMclFJTmUtTUFHNmE1U3hScy1nY0FKbEZqWFR4a1BTT1czT284Uw?oc=5",
+    "tokens": [
+      "high",
+      "mortgage",
+      "rates",
+      "create",
+      "divided",
+      "housing",
+      "market",
+      "tampa"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/rocket-q1-2026-earnings/",
+    "tokens": [
+      "rocket",
+      "beats",
+      "earnings",
+      "guidance",
+      "strongest",
+      "quarterly",
+      "profit",
+      "four",
+      "years"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/05/mortgage-rates-climb-as-inflation-rebounds-and-yields-rise/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "climb",
+      "inflation",
+      "rebounds",
+      "yields",
+      "rise"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://therealdeal.com/national/philadelphia/2026/05/07/critical-philly-development-site-in-market-east-up-for-grabs/",
+    "tokens": [
+      "critical",
+      "philly",
+      "development",
+      "site",
+      "market",
+      "east",
+      "grabs"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/07/ted-turner-leaves-behind-real-estate-conservation-legacy/",
+    "tokens": [
+      "turner",
+      "leaves",
+      "behind",
+      "conservation",
+      "legacy"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/07/compass-stock-surges-30-post-earnings/",
+    "tokens": [
+      "compass",
+      "stock",
+      "surges",
+      "30%",
+      "post",
+      "earnings"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/cushman-wakefield-posts-highest-lease-rev-in-company-history-believes-ai-is-driving-demand-134476",
+    "tokens": [
+      "cushman",
+      "wakefield",
+      "revenue",
+      "climbs",
+      "leases",
+      "drive",
+      "dealmaking"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/ice-enforcement-immigrant-apartment-rental-demand/819346/",
+    "tokens": [
+      "enforcement",
+      "sends",
+      "texas",
+      "property",
+      "servicing"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/value-add-fund-multifamily-investment-strategy/819624/",
+    "tokens": [
+      "group",
+      "apexone",
+      "partner",
+      "$500m",
+      "multifamily",
+      "fund"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.redfin.com/news/3104-rivercrest-drive-austin-texas-listing/",
+    "tokens": [
+      "listed",
+      "texas",
+      "$12",
+      "million",
+      "lakefront",
+      "luxurious",
+      "inside"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/thomas-james-homes-ceo-schlageter/",
+    "tokens": [
+      "thomas",
+      "james",
+      "homes",
+      "details",
+      "firm",
+      "forward"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/reverse-mortgage-branding-tactics/",
+    "tokens": [
+      "onetrust",
+      "reverse",
+      "mortgage",
+      "leader",
+      "gabe",
+      "bodner",
+      "personal",
+      "branding",
+      "tactics"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/bank-fights-fed-to-offer-cash-guarantee-mortgages",
+    "tokens": [
+      "bank",
+      "fights",
+      "offer",
+      "cash",
+      "guarantee",
+      "mortgages"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
     "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-may-7-2026/",
     "tokens": [
       "mortgage",
