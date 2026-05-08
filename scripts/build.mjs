@@ -1181,7 +1181,8 @@ async function writerReviewerLoop(candidates, opts) {
 // Stage 7 [Agent D: Translator]: 选定的 20 条做翻译 + dir + reason
 // 每 stage 职责单一，prompt 简单，准确性可独立验证。无需 reviewer。
 
-const SELECTOR_TARGET_MIN = 30;
+// SELECTOR_TARGET_MIN 必须 ≥ DAILY_LIMIT，否则下游 fallback 接管 selector 没看过的低质条目
+const SELECTOR_TARGET_MIN = 25;
 const SELECTOR_TARGET_MAX = 40;
 
 function buildSelectorCandidatesBlock(candidates) {
@@ -1200,7 +1201,9 @@ async function importanceSelector(candidates, opts) {
 
   const systemPrompt = `你是新闻重要性评估专家。任务：从一批美国住宅 / 商业地产新闻中识别最重要的若干条，评出 importance 分。你不打标签、不分类、不翻译 — 只关心"这条新闻有多重要"。`;
 
-  const userPrompt = `从下方 ${candidates.length} 条候选中，选出最重要的约 ${target} 条（${SELECTOR_TARGET_MIN}-${SELECTOR_TARGET_MAX} 条范围内）。
+  const userPrompt = `从下方 ${candidates.length} 条候选中，选出 ${target} 条（**最少 ${SELECTOR_TARGET_MIN} 条，最多 ${SELECTOR_TARGET_MAX} 条；少于 ${SELECTOR_TARGET_MIN} 视为失败**）。
+
+下游需要从你选的池子里挑 20 条最终发布。如果你选 < ${SELECTOR_TARGET_MIN} 条，下游会从未筛选的 raw 候选里凑数（质量低）。所以**即使候选池整体偏弱**，你也要选够 ${SELECTOR_TARGET_MIN} 条，把弱信号条目打 imp=2 / imp=3 也得选上，让下游有更多选择空间。但仍要严格执行硬性排除（celebrity / 单 listing / meta 页面 / 信息残缺 / 重复报道）。
 
 ## 评分标准
 imp=5: systemic — Fed 决策 / 大型基金巨额募资（$500M+）/ 头部 REIT 财报或违约 / 联邦立法重大变动 / 关键宏观数据（CPI / 就业 / 房价指数）
