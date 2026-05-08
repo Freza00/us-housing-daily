@@ -453,7 +453,17 @@ function filterAlreadySeen(items, seen, threshold = 0.7) {
   });
 }
 function appendToSeen(seen, newItems, date) {
-  return [...newItems.map(it => ({ url: it.link, tokens: tokenize(it.title), shown_date: date })), ...seen];
+  // 同一天多次 build 时去重：以 URL 为 key 合并，保留最新 shown_date
+  // 防止测试 / 多次 trigger 把 seen.json 灌爆，导致下次 build 候选池被掏空
+  const newEntries = newItems.map(it => ({ url: it.link, tokens: tokenize(it.title), shown_date: date }));
+  const byUrl = new Map();
+  for (const e of [...newEntries, ...seen]) {
+    const cur = byUrl.get(e.url);
+    if (!cur || Date.parse(e.shown_date) > Date.parse(cur.shown_date)) {
+      byUrl.set(e.url, e);
+    }
+  }
+  return [...byUrl.values()];
 }
 
 // ============================================================
