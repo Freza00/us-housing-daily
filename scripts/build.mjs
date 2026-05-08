@@ -34,12 +34,19 @@ const ROOT = path.resolve(__dirname, "..");
 // 配置
 // ============================================================
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config/sources.json"), "utf8"));
+// 新 writer / reviewer 用的边界定义与 tag 白名单。
+// WRITER_MODE=global 时被 globalPassWriter / reviewerAgent 读取；legacy mode 不依赖。
+const SECTIONS_DEF = JSON.parse(fs.readFileSync(path.join(ROOT, "config/sections.json"), "utf8"));
+const TAGS_DEF = JSON.parse(fs.readFileSync(path.join(ROOT, "config/tags.json"), "utf8"));
 
 const STATE_DIR = path.join(ROOT, "state");
 const DATA_DIR = path.join(ROOT, "data");
 const SEEN_FILE = path.join(STATE_DIR, "seen.json");
 const SEEN_MAX_AGE_DAYS = 21;
 const DAILY_LIMIT = 20;
+const WRITER_MODE = process.env.WRITER_MODE || "legacy"; // legacy | global
+const REVIEWER_MAX_LOOPS = 2;
+const GLOBAL_CANDIDATE_POOL_SIZE = 80; // writer 看到的候选总数
 // 时间窗：绝对边界 [昨天 8:57 北京, 今天 8:57 北京)，对应 UTC [昨天 00:57, 今天 00:57)
 // 这个窗口跨日刚好接续 — 第二天的 [今天 8:57, 明天 8:57) 接前一天截止时间，不重不漏
 const WINDOW_END_UTC_HOUR = 0;
@@ -802,6 +809,289 @@ function hashLink(url) {
 }
 
 // ============================================================
+// 全局通读 Writer + Reviewer (WRITER_MODE=global)
+// ============================================================
+// 目标：取代 pickBySection (regex 分类) + summarizeBatch (仅翻译) 两步。
+// LLM 一次通读 80 条候选 → 选出 20 条 + 分类 + 打 tag + 评级 + 翻译。
+// Reviewer 第二次调用做去重/分类/tag/评级一致性审查；fail 则 loop 回 writer，最多 2 次。
+// 凑数 / 八卦 / 占位符等问题在 prompt 内通过明确 exclusion 解决。
+
+function buildSectionsPromptBlock(secDef) {
+  const lines = [];
+  lines.push(`## 5 个 section 定义（硬约束 — 必须严格归入其中之一）`);
+  for (const s of secDef.sections) {
+    lines.push(`\n### ${s.id} — ${s.label_zh} ${s.emoji}（quota=${s.quota}${s.extended_window ? ", extended_window=允许" : ""}）`);
+    lines.push(`Include:`);
+    for (const r of s.include) lines.push(`  - ${r}`);
+    lines.push(`Exclude:`);
+    for (const r of s.exclude) lines.push(`  - ${r}`);
+    if (s.geography) {
+      lines.push(`地理范围: ${s.geography.join("; ")}`);
+    }
+  }
+  lines.push(`\n## Edge cases`);
+  for (const e of secDef.edge_cases) {
+    lines.push(`- ${e.scenario} → ${e.rule}`);
+  }
+  lines.push(`\n## 硬性排除规则`);
+  lines.push(`- ${secDef.global_rules.exclusion_floor}`);
+  lines.push(`- 同一事件 / 同一标的的不同条目必须合并为单条，引用最权威信源`);
+  return lines.join("\n");
+}
+
+function buildTagsPromptBlock(tagsDef) {
+  const lines = [];
+  lines.push(`## Tag 白名单（必须从此处选，不允许自创）`);
+  lines.push(`约束：每条最多 ${tagsDef.constraints.max_tags_per_item} 个 tag；asset/geo/actor 各最多 1 个，topic 最多 2 个；父子关系（如 dfw ⊂ texas ⊂ sun-belt）只打最具体的那个。`);
+  for (const [dimName, dim] of Object.entries(tagsDef.dimensions)) {
+    lines.push(`\n### ${dimName} — ${dim._desc}`);
+    for (const t of dim.tags) {
+      lines.push(`  - ${t.id}: ${t.applies_to}`);
+    }
+  }
+  return lines.join("\n");
+}
+
+function buildCandidatesBlock(candidates) {
+  return candidates.map((it, i) => {
+    const ageH = it.published_at ? ((Date.now() - it.published_at) / 3600_000).toFixed(0) : "?";
+    const body = (it.description || "").slice(0, 1500);
+    const srcTags = (it.source_tags || []).join(",");
+    const extFlag = it._ext_eligible ? " [EXT-7D]" : "";
+    return `[${i + 1}] (${it.source_name}, tier=${it.source_tier}, ${ageH}h ago${extFlag}, region=${it.region}, src_tags=[${srcTags}], score=${it.score})\nTitle: ${it.title}\nBody: ${body}`;
+  }).join("\n\n");
+}
+
+async function callLLM(systemPrompt, userPrompt, opts, label = "llm") {
+  const r = await fetch(opts.endpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Authorization": `Bearer ${opts.apiKey}` },
+    body: JSON.stringify({
+      model: opts.model,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
+      ],
+      max_tokens: opts.maxTokens || 6000,
+      temperature: opts.temperature ?? 0.3,
+    }),
+  });
+  if (!r.ok) {
+    const errText = (await r.text()).slice(0, 500);
+    throw new Error(`${label} API ${r.status}: ${errText}`);
+  }
+  const data = await r.json();
+  const text = data.choices?.[0]?.message?.content ?? "";
+  return text.replace(/```json\s*/g, "").replace(/```\s*$/g, "").trim();
+}
+
+function safeParseJSON(text, label) {
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    log(`🤖 ${label} raw (first 600): ${text.slice(0, 600)}`);
+    throw new Error(`${label} JSON parse failed: ${e.message}`);
+  }
+}
+
+async function globalPassWriter(candidates, opts, priorOutput, priorIssues) {
+  const sectionsBlock = buildSectionsPromptBlock(SECTIONS_DEF);
+  const tagsBlock = buildTagsPromptBlock(TAGS_DEF);
+  const candidatesBlock = buildCandidatesBlock(candidates);
+
+  const quotas = SECTIONS_DEF.sections.map(s => `${s.id}=${s.quota}`).join(", ");
+  const sectionIds = SECTIONS_DEF.sections.map(s => s.id);
+  const validImpacts = ["long-pos", "short-pos", "neutral", "short-neg", "long-neg"];
+
+  const systemPrompt = `你是美国住宅地产中文研究员，每天从 ${candidates.length} 条候选新闻中选出最重要的 20 条。你的判断必须横向比较所有候选，不是逐条独立处理。所有 t / s 字段用中文输出（保留行业英文术语）。`;
+
+  let feedbackBlock = "";
+  if (priorOutput && priorIssues) {
+    const issuesStr = priorIssues.map(x =>
+      `- item_id=${x.item_id} type=${x.issue_type}: ${x.description}${x.suggested_fix ? ` → 建议: ${x.suggested_fix}` : ""}`
+    ).join("\n");
+    feedbackBlock = `\n\n## 上一轮 Reviewer 反馈（必须修复）\n上一轮你产出的 20 条被 reviewer 标记了以下问题：\n${issuesStr}\n\n请重新选择 / 重新分类 / 重新打 tag / 重新评级，修正这些问题。`;
+  }
+
+  const userPrompt = `${sectionsBlock}
+
+${tagsBlock}
+
+## 任务
+从下方 ${candidates.length} 条候选中，选出最重要的 20 条美国住宅 / 商业地产新闻，并对每条做：
+1. 归入 5 个 section 之一：${sectionIds.join(" | ")}
+2. 配额硬约束（不能多不能少）：${quotas}（合计 20）
+3. 打 tag（从白名单选，约束见 tag 章节）
+4. 评级 importance ∈ [1,5] 整数 + impact ∈ {${validImpacts.join("|")}}
+5. 中文译标 t（≤ 30 中文字符）+ 中文摘要 s（≤ 60 中文字符，必给结论/数字/立场）
+6. reason: 2 句话说明为什么选这条 + 为什么归这个 section（用于 audit）
+
+## 排序与挑选原则
+- **横向比较所有 ${candidates.length} 条**，按系统性影响 / 数字规模 / 受众相关度排序，取 top 20
+- **凑数禁令**：宁可某 section 不达 quota（reviewer 会 flag 但允许），也不要塞低信号条目。但目前要求满足 quota，所以若某 section 候选不足，从该 section 池里挑次优而非塞错类
+- **去重**：同一事件 / 同一公司同一交易 / 同一数据点的不同来源报道，合并为单条，pick 最权威信源
+- **硬性排除**：celebrity / 八卦 / 单 unit listing / 单 broker 任命 / design trends / coaching webinar / 信息残缺（"详情待披露"）必须淘汰
+- **[EXT-7D] 标记的候选**：来自 7 天扩展窗口（不在 24h 新鲜池），仅当对应 section 是扩窗类（sunbelt / btr / institutional）才允许选；且每个 section 的扩窗条目 ≤ 1 条优先
+
+## importance 分级（强制分布：≥ 2 条 imp=5，≥ 4 条 imp=4，≤ 5 条 imp ≤ 2）
+- imp=5: systemic — Fed 决策 / 大型基金巨额募资 / 头部 REIT 财报或违约 / 联邦立法重大 / 关键宏观数据
+- imp=4: 行业中等 — 单 deal $200M+ / 大型 IPO 或并购 / Sun Belt 关键 metro 房市拐点 / 重要监管政策
+- imp=3: 常规动态 — 单 deal $50-200M / 区域月度趋势 / 中型公司业绩 / 政策细节
+- imp=2: 花絮 — 个人公司任命 / 设计趋势 / 小型扩张 / 已知信息的不同角度
+- imp=1: 边缘 — 评论而非新闻 / 八卦 / 单个 listing
+
+## 中英文混排示例
+{"i":1, "section":"national", "tags":["housing","rates","macro"], "t":"30Y mortgage 升至月内高位，first-time 购房者掉队", "s":"上周 mortgage rate 上行致 loan demand 回落，平均贷款额上升说明中低收入买家退出", "imp":4, "dir":"short-neg", "reason":"全国住宅市场指标变化，影响所有买家；归 national 因为是宏观利率新闻而非区域市场。"}
+{"i":2, "section":"sunbelt", "tags":["multifamily","dfw","trend"], "t":"MAA Q1：Sun Belt multifamily rent growth 拐点显现", "s":"Mid-America Apartment Communities Q1 业绩 — Sun Belt 入住率回升、rent growth 拐点出现", "imp":5, "dir":"long-pos", "reason":"Sun Belt 区域租金拐点信号，对德州 multifamily 直接利好；MAA 主营 Sun Belt 故归 sunbelt 而非 cre。"}
+
+## 保留英文术语
+公司 / 媒体 / 人名（Blackstone / KKR / MAA / INVH ...）；行业缩写（REIT, IPO, M&A, BTR, SFR, NOI, LTV, DSCR, cap rate, refi, special servicing）；政府机构（Fed, FOMC, FHFA, HUD, Treasury, CFPB, SEC）；数据指标（JOLTS, CPI, PMMS, Case-Shiller）；单位（Q1, $1.75B, 475K SF, 6.3%, 30Y mortgage, bps）；英文地名（Manhattan, Sun Belt, Houston, Austin, DFW）。
+
+## 输出
+JSON 数组，20 条，按 section 顺序排列（national → sunbelt → btr → cre → institutional），每个 section 内按 importance × 5 + 综合判断降序。每条字段：
+{"i": <候选序号>, "section": "<id>", "tags": [...], "t": "<中文标题>", "s": "<中文摘要>", "imp": <1-5>, "dir": "<long-pos|short-pos|neutral|short-neg|long-neg>", "reason": "<选取与归类理由>"}
+
+## 候选 ${candidates.length} 条
+${candidatesBlock}${feedbackBlock}
+
+请直接输出 JSON 数组（无 markdown code fence），20 条，严格满足 quota ${quotas}：`;
+
+  log(`✍️  writer prompt size: ~${Math.round(userPrompt.length / 4)} tokens, candidates=${candidates.length}`);
+  const text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 8000 }, "writer");
+  const parsed = safeParseJSON(text, "writer");
+  if (!Array.isArray(parsed)) throw new Error(`writer returned non-array (got ${typeof parsed})`);
+  log(`✍️  writer returned ${parsed.length} items`);
+  return parsed;
+}
+
+function reviewerSystemPrompt() {
+  return `你是美国住宅地产新闻的资深 reviewer，对一份 20 条精选新闻做二阶审查。你审查的核心维度：去重 / tag 一致性 / 分类正确性 / 评级合理性 / 完整性。你不直接修改内容，只输出 issues 列表，由 writer 重做。判断要严格，但不要鸡蛋里挑骨头 — 只 flag 实际影响阅读体验的问题。`;
+}
+
+async function reviewerAgent(writerOutput, opts) {
+  const sectionsBlock = buildSectionsPromptBlock(SECTIONS_DEF);
+  const tagsBlock = buildTagsPromptBlock(TAGS_DEF);
+  const validImpacts = ["long-pos", "short-pos", "neutral", "short-neg", "long-neg"];
+  const validSections = SECTIONS_DEF.sections.map(s => s.id);
+  const allTags = new Set();
+  for (const dim of Object.values(TAGS_DEF.dimensions)) for (const t of dim.tags) allTags.add(t.id);
+  const tagDimMap = {};
+  for (const [dimName, dim] of Object.entries(TAGS_DEF.dimensions)) {
+    for (const t of dim.tags) tagDimMap[t.id] = dimName;
+  }
+
+  const itemsBlock = writerOutput.map((it, idx) => {
+    const tagsList = (it.tags || []).map(t => `${t}(${tagDimMap[t] || "?"})`).join(", ");
+    return `[${idx + 1}] section=${it.section} imp=${it.imp ?? it.importance} dir=${it.dir ?? it.impact}\n  t: ${it.t || it.title_zh}\n  s: ${it.s || it.summary_zh}\n  tags: ${tagsList}\n  reason: ${it.reason || "(无)"}`;
+  }).join("\n\n");
+
+  const userPrompt = `${sectionsBlock}
+
+${tagsBlock}
+
+## 待审查的 20 条 writer 产出
+
+${itemsBlock}
+
+## 审查清单
+对上面 20 条逐条审查：
+
+1. **section 正确性**：每条的 section 是否符合 sections 定义？典型错误 — Sun Belt 城市的 office 被塞进 sunbelt（应归 cre）；celebrity 新闻被塞进任何 section（应不入选）；BTR/SFR 项目被塞进 sunbelt（应归 btr）。
+2. **section 配额**：实际分布是否符合 ${SECTIONS_DEF.sections.map(s => `${s.id}=${s.quota}`).join(", ")}？
+3. **tag 合法性**：每条的 tag 是否全部在白名单内？是否同 dimension 重复？是否打了父子重叠（texas + dfw + sun-belt）？
+4. **去重**：是否存在同一事件 / 同一公司同一交易 / 同一数据点的多条？
+5. **评级合理性**：imp 分布是否满足 ≥ 2 条 imp=5、≥ 4 条 imp=4、≤ 5 条 imp ≤ 2？是否存在明显失衡（重大政策 imp=2，八卦 imp=5）？
+6. **完整性**：是否有信息残缺条目（"详情待披露"、s 没结论 / 没数字 / 没立场、t 仍是英文）？
+7. **硬性排除**：是否混入 celebrity / 八卦 / 单 unit listing / 单 broker 任命？
+
+## 输出格式
+JSON 对象（无 markdown code fence）：
+{
+  "status": "pass" | "fail",
+  "issues": [
+    {"item_id": <1-20>, "issue_type": "section_wrong" | "tag_invalid" | "tag_redundant" | "duplicate" | "rating_imbalance" | "incomplete" | "should_exclude" | "quota_violation", "description": "<具体问题>", "suggested_fix": "<建议>"}
+  ],
+  "overall_quality_note": "<一句话总评>"
+}
+
+判定：issues 为空或全部是无关紧要的小瑕疵 → status=pass；存在分类错位 / 八卦 / 配额违反 / 多条重复 → status=fail。
+
+请直接输出 JSON：`;
+
+  log(`👁️  reviewer prompt size: ~${Math.round(userPrompt.length / 4)} tokens`);
+  const text = await callLLM(reviewerSystemPrompt(), userPrompt, { ...opts, maxTokens: 3000, temperature: 0.2 }, "reviewer");
+  const parsed = safeParseJSON(text, "reviewer");
+  if (typeof parsed.status !== "string") throw new Error(`reviewer returned no status field`);
+  if (!Array.isArray(parsed.issues)) parsed.issues = [];
+  log(`👁️  reviewer status=${parsed.status} issues=${parsed.issues.length}`);
+  return parsed;
+}
+
+// 把 writer 输出的 {i, section, tags, t, s, imp, dir, reason} 映射回我们 pipeline 的标准 item shape
+function applyWriterOutput(candidates, writerItems) {
+  const validImpacts = new Set(["long-pos", "short-pos", "neutral", "short-neg", "long-neg"]);
+  const validSections = new Set(SECTIONS_DEF.sections.map(s => s.id));
+  const allTags = new Set();
+  for (const dim of Object.values(TAGS_DEF.dimensions)) for (const t of dim.tags) allTags.add(t.id);
+  const fetchedAt = Date.now();
+  const out = [];
+  for (const w of writerItems) {
+    const candIdx = (typeof w.i === "number" ? w.i : parseInt(w.i, 10)) - 1;
+    if (candIdx < 0 || candIdx >= candidates.length) {
+      log(`⚠️  writer returned invalid candidate index ${w.i} (pool size ${candidates.length}) — skip`);
+      continue;
+    }
+    const cand = candidates[candIdx];
+    const tags = Array.isArray(w.tags) ? w.tags.filter(t => allTags.has(t)) : [];
+    const section = validSections.has(w.section) ? w.section : "national";
+    const imp = Math.max(1, Math.min(5, Math.round(Number(w.imp) || 3)));
+    const dir = validImpacts.has(w.dir) ? w.dir : "neutral";
+    const item = {
+      ...cand,
+      id: hashLink(cand.link),
+      section,
+      tags,
+      title_zh: w.t || "",
+      summary_zh: w.s || "（摘要生成失败）",
+      importance: imp,
+      impact: dir,
+      writer_reason: w.reason || "",
+      fetched_at: fetchedAt,
+    };
+    if (cand._ext_eligible) {
+      item.extended_window = true;
+      delete item._ext_eligible;
+    }
+    out.push(item);
+  }
+  return out;
+}
+
+// 主入口：writer + reviewer + loop
+async function writerReviewerLoop(candidates, opts) {
+  const audit = [];
+  let writerItems = await globalPassWriter(candidates, opts);
+  let reviewResult = await reviewerAgent(writerItems, opts);
+  audit.push({ round: 1, status: reviewResult.status, issues: reviewResult.issues, note: reviewResult.overall_quality_note });
+
+  let loopCount = 0;
+  while (reviewResult.status === "fail" && loopCount < REVIEWER_MAX_LOOPS) {
+    loopCount++;
+    log(`🔁 reviewer fail — retry ${loopCount}/${REVIEWER_MAX_LOOPS}`);
+    writerItems = await globalPassWriter(candidates, opts, writerItems, reviewResult.issues);
+    reviewResult = await reviewerAgent(writerItems, opts);
+    audit.push({ round: loopCount + 1, status: reviewResult.status, issues: reviewResult.issues, note: reviewResult.overall_quality_note });
+  }
+
+  if (reviewResult.status === "fail") {
+    log(`⚠️  reviewer still fail after ${REVIEWER_MAX_LOOPS} retries — publishing anyway with audit log`);
+  }
+
+  const items = applyWriterOutput(candidates, writerItems);
+  return { items, audit, candidate_pool_size: candidates.length };
+}
+
+// ============================================================
 // 主流程
 // ============================================================
 async function main() {
@@ -884,129 +1174,190 @@ async function main() {
   const rescored = enriched.map(it => scoreItem(it, now));
   const rededuped = dedupe(rescored);
 
-  // 6. Section 配额挑选 — 每 section 至少 2 条；national/cre 严格 24h，sunbelt/btr/inst 不够时扩到 7d
-  const sectioned = pickBySection(rededuped, DAILY_LIMIT);
-  const minDiag = ensureSectionMinimum(sectioned, fresh24h, fresh7d, 2);
-  let top = sectioned.flatMap(s => s.items.map(it => {
-    const out = { ...it, section: s.section.id };
-    if (s.section.id === "cre") out.cre_subcategory = detectCreSubcategory(it);
-    return out;
-  }));
-
-  // 7. 强制总数 = DAILY_LIMIT (不能多不能少)
-  if (top.length > DAILY_LIMIT) {
-    // 多了 → 砍非扩窗最低分
-    const before = top.length;
-    top.sort((a, b) => {
-      // 扩窗优先保留
-      if (!!a.extended_window !== !!b.extended_window) return a.extended_window ? -1 : 1;
-      return a.score - b.score; // 升序，最低分排前面
-    });
-    // 砍最低分（数组前面）直到 length = limit
-    top = top.slice(top.length - DAILY_LIMIT);
-    log(`🔻 trimmed from ${before} → ${top.length} (cut ${before - DAILY_LIMIT} lowest-score items)`);
-  } else if (top.length < DAILY_LIMIT) {
-    // 少了 → 三段补位：(1) 24h+quota 限额；(2) 7d+仅扩窗 section+quota 限额；(3) 24h 兜底不限 quota
-    const need = DAILY_LIMIT - top.length;
-    const links = new Set(top.map(it => it.link));
-    const all24 = [...rededuped, ...fresh24h.filter(it => !rededuped.some(x => x.link === it.link))]
-      .filter(it => !links.has(it.link))
-      .sort((a, b) => b.score - a.score);
-    const sectionById = new Map(SECTIONS.map(s => [s.id, s]));
-    const perSection = new Map(SECTIONS.map(s => [s.id, top.filter(t => t.section === s.id).length]));
-    const fillers = [];
-    // pass 1: 24h 池 + quota 严格
-    for (const it of all24) {
-      if (fillers.length >= need) break;
-      const sid = classify(it);
-      const sec = sectionById.get(sid);
-      if (!sec) continue;
-      if ((perSection.get(sid) || 0) >= sec.quota) continue;
-      fillers.push(it);
-      perSection.set(sid, (perSection.get(sid) || 0) + 1);
-    }
-    // pass 2: 7d 池 + 仅扩窗 section + quota 严格
-    if (fillers.length < need) {
-      const used = new Set(fillers.map(it => it.link));
-      const all7 = fresh7d
-        .filter(it => !links.has(it.link) && !used.has(it.link))
-        .sort((a, b) => b.score - a.score);
-      for (const it of all7) {
-        if (fillers.length >= need) break;
-        const sid = classify(it);
-        const sec = sectionById.get(sid);
-        if (!sec || !sec.extendedWindow) continue;
-        if ((perSection.get(sid) || 0) >= sec.quota) continue;
-        fillers.push({ ...it, extended_window: true });
-        perSection.set(sid, (perSection.get(sid) || 0) + 1);
-      }
-    }
-    // pass 3: 兜底 — 还不够就在 24h 池里不限 quota 补（极端情况下宁可 national 多也不要让 cre/national 用旧数据）
-    if (fillers.length < need) {
-      const used = new Set(fillers.map(it => it.link));
-      for (const it of all24) {
-        if (fillers.length >= need) break;
-        if (used.has(it.link)) continue;
-        fillers.push(it);
-      }
-    }
-    for (const it of fillers) {
-      const sid = classify(it);
-      const enriched = { ...it, section: sid };
-      if (sid === "cre") enriched.cre_subcategory = detectCreSubcategory(it);
-      top.push(enriched);
-    }
-    log(`🔺 filled from ${DAILY_LIMIT - need} → ${top.length} (pass1 24h-quota → pass2 7d-extend → pass3 24h-flex)`);
-  }
-  // 重新排序：让前端按 section 顺序渲染
-  const sectionOrder = SECTIONS.map(s => s.id);
-  top.sort((a, b) => {
-    const sa = sectionOrder.indexOf(a.section);
-    const sb = sectionOrder.indexOf(b.section);
-    if (sa !== sb) return sa - sb;
-    return b.score - a.score;
-  });
-
-  log(`🏆 final ${top.length} items across ${SECTIONS.length} sections`);
-  const sectionCount = {};
-  for (const it of top) sectionCount[it.section] = (sectionCount[it.section] || 0) + 1;
-  for (const s of SECTIONS) {
-    const n = sectionCount[s.id] || 0;
-    const ext = top.filter(it => it.section === s.id && it.extended_window).length;
-    log(`   ${s.emoji} ${s.label}: ${n}/${s.quota}${ext > 0 ? ` (${ext} 扩窗)` : ""}`);
-  }
-
-  // 7. LLM 摘要
+  // 6. 选取 + 摘要 — 两条路径
+  //    legacy: 正则 classify + section 配额 + 三段补位 → LLM 仅翻译
+  //    global: LLM 一次通读全部候选 → 选 20 + 分类 + 打 tag + 翻译 + 评级；reviewer 二阶审查 + loop
   const skipLLM = process.env.LLM_SKIP === "1";
   const llmKey = process.env.LLM_API_KEY;
   const llmEndpoint = process.env.LLM_ENDPOINT;
   const llmModel = process.env.LLM_MODEL;
   let withSummary;
-  if (skipLLM) {
-    log(`🤖 LLM_SKIP=1 — skipping LLM, output without Chinese summaries`);
-    const fetchedAt = Date.now();
-    withSummary = top.map(it => ({ ...it, id: hashLink(it.link), title_zh: "", summary_zh: "(LLM_SKIP)", importance: 3, impact: "neutral", fetched_at: fetchedAt }));
-  } else if (!llmKey || !llmEndpoint || !llmModel) {
-    throw new Error("Missing required env vars: LLM_API_KEY, LLM_ENDPOINT, LLM_MODEL (or set LLM_SKIP=1 to skip LLM)");
-  } else {
-    log(`🤖 calling LLM: ${llmEndpoint} model=${llmModel} batch=${top.length}`);
-    withSummary = await summarizeBatch(top, { endpoint: llmEndpoint, apiKey: llmKey, model: llmModel });
-    log(`🤖 LLM ok`);
-  }
+  let writerAudit = null;
+  let candidatePoolSize = 0;
+  let minDiag = null;
 
-  // 7.5 importance-aware 重排：section 内按 weighted_score = importance * 5 + score * 0.5 降序
-  // LLM 给的 importance 与系统 score 共同决定最终展示顺序，让真正重要的新闻浮到 section 顶部
-  const _sectionOrder = SECTIONS.map(s => s.id);
-  withSummary.sort((a, b) => {
-    const sa = _sectionOrder.indexOf(a.section);
-    const sb = _sectionOrder.indexOf(b.section);
-    if (sa !== sb) return sa - sb;
-    const wa = (a.importance || 3) * 5 + (a.score || 0) * 0.5;
-    const wb = (b.importance || 3) * 5 + (b.score || 0) * 0.5;
-    return wb - wa;
-  });
-  const impDist = withSummary.reduce((acc, it) => { acc[it.importance || 3] = (acc[it.importance || 3] || 0) + 1; return acc; }, {});
-  log(`📊 importance dist: ${JSON.stringify(impDist)}`);
+  const dryGlobal = WRITER_MODE === "global-dry";
+  if ((WRITER_MODE === "global" || dryGlobal) && !skipLLM) {
+    if (!dryGlobal && (!llmKey || !llmEndpoint || !llmModel)) {
+      throw new Error("Missing required env vars: LLM_API_KEY, LLM_ENDPOINT, LLM_MODEL (or use WRITER_MODE=global-dry to inspect prompt without calling LLM)");
+    }
+    // 候选池：rededuped (enriched 30) + fresh24h 高分项 + fresh7d 中"扩窗 section"潜在候选
+    // 扩窗候选打 _ext_eligible 标记 — writer 选中后会被 applyWriterOutput 设为 extended_window=true
+    const enrichedSet = new Set(rededuped.map(it => it.link));
+    const inPool = new Set(rededuped.map(it => it.link));
+    const extras24 = fresh24h
+      .filter(it => !inPool.has(it.link))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, Math.max(0, Math.floor(GLOBAL_CANDIDATE_POOL_SIZE * 0.7) - rededuped.length));
+    for (const it of extras24) inPool.add(it.link);
+    // 7d 池补足 — 仅对扩窗 section 有意义（btr / sunbelt / institutional）
+    const ext7d = fresh7d
+      .filter(it => !inPool.has(it.link))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, Math.max(0, GLOBAL_CANDIDATE_POOL_SIZE - rededuped.length - extras24.length))
+      .map(it => ({ ...it, _ext_eligible: true }));
+    const candidatePool = [...rededuped, ...extras24, ...ext7d].sort((a, b) => b.score - a.score);
+    candidatePoolSize = candidatePool.length;
+    log(`🌐 WRITER_MODE=${WRITER_MODE} — pool=${candidatePoolSize} (enriched=${rededuped.length} + 24h=${extras24.length} + 7d-ext=${ext7d.length})`);
+
+    if (dryGlobal) {
+      // dry mode：只构造 prompt 输出到 stdout，不调 LLM，不写盘 — 立即退出
+      const sectionsBlock = buildSectionsPromptBlock(SECTIONS_DEF);
+      const tagsBlock = buildTagsPromptBlock(TAGS_DEF);
+      const candidatesBlock = buildCandidatesBlock(candidatePool);
+      const writerPromptSize = sectionsBlock.length + tagsBlock.length + candidatesBlock.length;
+      log(`🌐 DRY: writer prompt blocks — sections ~${Math.round(sectionsBlock.length/4)} tok, tags ~${Math.round(tagsBlock.length/4)} tok, candidates ~${Math.round(candidatesBlock.length/4)} tok, total ~${Math.round(writerPromptSize/4)} tok`);
+      log(`🌐 DRY: pool section dist (legacy classify, 仅供对比):`);
+      const dist = { national: 0, sunbelt: 0, btr: 0, cre: 0, institutional: 0 };
+      for (const it of candidatePool) dist[classify(it)] = (dist[classify(it)] || 0) + 1;
+      for (const s of SECTIONS) log(`     ${s.id}: ${dist[s.id]} (target quota=${s.quota})`);
+      log(`🌐 DRY: 已退出，未写 data/latest.json 也未更新 state/seen.json`);
+      log(`✅ Done in ${((Date.now() - startedAt) / 1000).toFixed(1)}s (dry)`);
+      return; // 不继续往下走 — 不写盘，不更新 seen
+    } else {
+      const result = await writerReviewerLoop(candidatePool, { endpoint: llmEndpoint, apiKey: llmKey, model: llmModel });
+      withSummary = result.items;
+      writerAudit = result.audit;
+
+      // CRE 子分类延用 detectCreSubcategory（前端依赖此字段）
+      for (const it of withSummary) {
+        if (it.section === "cre") it.cre_subcategory = detectCreSubcategory(it);
+      }
+
+      // 实际配额检查
+      const sectionCount = {};
+      for (const it of withSummary) sectionCount[it.section] = (sectionCount[it.section] || 0) + 1;
+      log(`🏆 global writer final ${withSummary.length} items, audit rounds=${writerAudit.length}`);
+      for (const s of SECTIONS) {
+        const n = sectionCount[s.id] || 0;
+        const expected = SECTIONS_DEF.sections.find(x => x.id === s.id)?.quota ?? s.quota;
+        const flag = n === expected ? "" : ` ⚠️  expected ${expected}`;
+        log(`   ${s.emoji} ${s.label}: ${n}${flag}`);
+      }
+      const impDist = withSummary.reduce((acc, it) => { acc[it.importance || 3] = (acc[it.importance || 3] || 0) + 1; return acc; }, {});
+      log(`📊 importance dist: ${JSON.stringify(impDist)}`);
+    }
+  } else {
+    // legacy 路径：正则 classify + 配额挑选 + LLM 仅翻译
+    const sectioned = pickBySection(rededuped, DAILY_LIMIT);
+    minDiag = ensureSectionMinimum(sectioned, fresh24h, fresh7d, 2);
+    let top = sectioned.flatMap(s => s.items.map(it => {
+      const out = { ...it, section: s.section.id };
+      if (s.section.id === "cre") out.cre_subcategory = detectCreSubcategory(it);
+      return out;
+    }));
+
+    // 强制总数 = DAILY_LIMIT
+    if (top.length > DAILY_LIMIT) {
+      const before = top.length;
+      top.sort((a, b) => {
+        if (!!a.extended_window !== !!b.extended_window) return a.extended_window ? -1 : 1;
+        return a.score - b.score;
+      });
+      top = top.slice(top.length - DAILY_LIMIT);
+      log(`🔻 trimmed from ${before} → ${top.length} (cut ${before - DAILY_LIMIT} lowest-score items)`);
+    } else if (top.length < DAILY_LIMIT) {
+      const need = DAILY_LIMIT - top.length;
+      const links = new Set(top.map(it => it.link));
+      const all24 = [...rededuped, ...fresh24h.filter(it => !rededuped.some(x => x.link === it.link))]
+        .filter(it => !links.has(it.link))
+        .sort((a, b) => b.score - a.score);
+      const sectionById = new Map(SECTIONS.map(s => [s.id, s]));
+      const perSection = new Map(SECTIONS.map(s => [s.id, top.filter(t => t.section === s.id).length]));
+      const fillers = [];
+      for (const it of all24) {
+        if (fillers.length >= need) break;
+        const sid = classify(it);
+        const sec = sectionById.get(sid);
+        if (!sec) continue;
+        if ((perSection.get(sid) || 0) >= sec.quota) continue;
+        fillers.push(it);
+        perSection.set(sid, (perSection.get(sid) || 0) + 1);
+      }
+      if (fillers.length < need) {
+        const used = new Set(fillers.map(it => it.link));
+        const all7 = fresh7d
+          .filter(it => !links.has(it.link) && !used.has(it.link))
+          .sort((a, b) => b.score - a.score);
+        for (const it of all7) {
+          if (fillers.length >= need) break;
+          const sid = classify(it);
+          const sec = sectionById.get(sid);
+          if (!sec || !sec.extendedWindow) continue;
+          if ((perSection.get(sid) || 0) >= sec.quota) continue;
+          fillers.push({ ...it, extended_window: true });
+          perSection.set(sid, (perSection.get(sid) || 0) + 1);
+        }
+      }
+      if (fillers.length < need) {
+        const used = new Set(fillers.map(it => it.link));
+        for (const it of all24) {
+          if (fillers.length >= need) break;
+          if (used.has(it.link)) continue;
+          fillers.push(it);
+        }
+      }
+      for (const it of fillers) {
+        const sid = classify(it);
+        const enriched2 = { ...it, section: sid };
+        if (sid === "cre") enriched2.cre_subcategory = detectCreSubcategory(it);
+        top.push(enriched2);
+      }
+      log(`🔺 filled from ${DAILY_LIMIT - need} → ${top.length} (pass1 24h-quota → pass2 7d-extend → pass3 24h-flex)`);
+    }
+
+    const sectionOrder = SECTIONS.map(s => s.id);
+    top.sort((a, b) => {
+      const sa = sectionOrder.indexOf(a.section);
+      const sb = sectionOrder.indexOf(b.section);
+      if (sa !== sb) return sa - sb;
+      return b.score - a.score;
+    });
+
+    log(`🏆 final ${top.length} items across ${SECTIONS.length} sections`);
+    const sectionCount = {};
+    for (const it of top) sectionCount[it.section] = (sectionCount[it.section] || 0) + 1;
+    for (const s of SECTIONS) {
+      const n = sectionCount[s.id] || 0;
+      const ext = top.filter(it => it.section === s.id && it.extended_window).length;
+      log(`   ${s.emoji} ${s.label}: ${n}/${s.quota}${ext > 0 ? ` (${ext} 扩窗)` : ""}`);
+    }
+
+    if (skipLLM) {
+      log(`🤖 LLM_SKIP=1 — skipping LLM, output without Chinese summaries`);
+      const fetchedAt = Date.now();
+      withSummary = top.map(it => ({ ...it, id: hashLink(it.link), title_zh: "", summary_zh: "(LLM_SKIP)", importance: 3, impact: "neutral", fetched_at: fetchedAt }));
+    } else if (!llmKey || !llmEndpoint || !llmModel) {
+      throw new Error("Missing required env vars: LLM_API_KEY, LLM_ENDPOINT, LLM_MODEL (or set LLM_SKIP=1 to skip LLM)");
+    } else {
+      log(`🤖 calling LLM (legacy translate-only): ${llmEndpoint} model=${llmModel} batch=${top.length}`);
+      withSummary = await summarizeBatch(top, { endpoint: llmEndpoint, apiKey: llmKey, model: llmModel });
+      log(`🤖 LLM ok`);
+    }
+
+    // importance-aware 重排
+    const _sectionOrder = SECTIONS.map(s => s.id);
+    withSummary.sort((a, b) => {
+      const sa = _sectionOrder.indexOf(a.section);
+      const sb = _sectionOrder.indexOf(b.section);
+      if (sa !== sb) return sa - sb;
+      const wa = (a.importance || 3) * 5 + (a.score || 0) * 0.5;
+      const wb = (b.importance || 3) * 5 + (b.score || 0) * 0.5;
+      return wb - wa;
+    });
+    const impDist = withSummary.reduce((acc, it) => { acc[it.importance || 3] = (acc[it.importance || 3] || 0) + 1; return acc; }, {});
+    log(`📊 importance dist: ${JSON.stringify(impDist)}`);
+  }
 
   // 8. 写出
   const date = new Date(now).toISOString().slice(0, 10);
@@ -1019,11 +1370,35 @@ async function main() {
     items: withSummary,
     errors,
     _diagnostics: {
+      writer_mode: WRITER_MODE,
       sectionsUnderMin: minDiag?.underMin || [],
+      ...(writerAudit ? {
+        writer_audit: writerAudit,
+        candidate_pool_size: candidatePoolSize,
+      } : {}),
     },
   };
   fs.writeFileSync(path.join(DATA_DIR, "latest.json"), JSON.stringify(payload, null, 2));
   fs.writeFileSync(path.join(DATA_DIR, `${date}.json`), JSON.stringify(payload, null, 2));
+
+  // Prerender — 在 public/index.html 注入 inline initial-data，让首屏直出内容
+  // 避免 SSR 骨架闪烁，改善 SEO / 社交分享预览。app.js 检测到 initial-data 时优先使用
+  try {
+    const indexPath = path.join(ROOT, "public/index.html");
+    const tpl = fs.readFileSync(indexPath, "utf8");
+    const safeJson = JSON.stringify(payload).replace(/<\/script>/gi, "<\\/script>");
+    const dataTag = `<script id="initial-data" type="application/json">${safeJson}</script>\n  <script src="/app.js"></script>`;
+    const stripped = tpl.replace(/\s*<script id="initial-data"[\s\S]*?<\/script>/, "");
+    const replaced = stripped.replace(/<script src="\/app\.js"><\/script>/, dataTag);
+    if (replaced !== tpl) {
+      fs.writeFileSync(indexPath, replaced);
+      log(`💾 prerendered public/index.html with inline initial-data (~${Math.round(safeJson.length / 1024)} KB)`);
+    } else {
+      log(`⚠️  prerender skipped — could not find <script src="/app.js"></script> anchor in index.html`);
+    }
+  } catch (e) {
+    log(`⚠️  prerender failed (non-fatal): ${e.message}`);
+  }
 
   // dates.json — 累计日期索引
   const datesFile = path.join(DATA_DIR, "dates.json");

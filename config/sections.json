@@ -1,0 +1,183 @@
+{
+  "_doc": "5 个 section 的边界定义。writer 和 reviewer agent 都从此文件读取，确保 LLM 分类与人工 audit 用同一套标准。Edge cases 是关键：解决正则歧义（multifamily 在 Sun Belt vs 非 Sun Belt 应归哪里 / 名人新闻是否入选 / 行业花絮归 national 还是 sunbelt）。",
+  "sections": [
+    {
+      "id": "national",
+      "label_zh": "全国住宅市场",
+      "label_en": "National Residential Market",
+      "emoji": "🏠",
+      "quota": 5,
+      "extended_window": false,
+      "include": [
+        "全美层面的住宅价格 / 库存 / 销量 / 房贷利率 / 联邦层面政策",
+        "全国性数据指标：Case-Shiller / FHFA HPI / new home sales / existing home sales / housing starts / pending sales / 30Y mortgage rate",
+        "全美宏观指标只要影响住宅需求即可纳入：Fed 决议、CPI、就业（仅当 housing 含义明显）",
+        "全国性 zillow / redfin / realtor.com 月度市场报告",
+        "全国性住宅政策 / NAR / 协会动作 / homebuyer aid 全国项目",
+        "全国 homebuilder 季度财报与新房动态（除非项目本身是 sunbelt 重点城市，那归 sunbelt）"
+      ],
+      "exclude": [
+        "商业地产（office / industrial / data center / hotel / retail）→ cre",
+        "纯地区性住宅新闻 → sunbelt 或不入选",
+        "BTR / SFR 资产类 → btr",
+        "PE / REIT 募资并购 → institutional",
+        "design trends / 任命公告 / 经纪人 coaching / 单 broker 新闻 → 不入选",
+        "celebrity / 八卦 / 单 unit listing / 豪宅租金 → 不入选"
+      ]
+    },
+    {
+      "id": "sunbelt",
+      "label_zh": "Sunbelt 住宅",
+      "label_en": "Sun Belt Residential",
+      "emoji": "🌵",
+      "quota": 4,
+      "extended_window": true,
+      "geography": [
+        "Texas (Houston / Dallas / Fort Worth / DFW / Austin / San Antonio)",
+        "Florida (Miami / Orlando / Tampa / Jacksonville)",
+        "Arizona (Phoenix / Scottsdale)",
+        "Nevada (Las Vegas)",
+        "Georgia (Atlanta)",
+        "North Carolina (Charlotte / Raleigh)",
+        "South Carolina (Charleston)",
+        "Tennessee (Nashville / Memphis)",
+        "Louisiana / Alabama / Mississippi"
+      ],
+      "include": [
+        "上述 Sun Belt 州 / 城的住宅市场 / 多户公寓 / 租赁市场 / 房价 / 库存",
+        "区域研究机构发布的报告（如 Texas Real Estate Research Center）",
+        "Sun Belt 区域的 multifamily 新建项目 / 租金趋势 / 入住率（资产虽是多户但优先地理）",
+        "Sun Belt metro 的房贷违约率 / 库存拐点 / 区域购买力分析"
+      ],
+      "exclude": [
+        "Sun Belt 的 office / data center / industrial / hotel / retail → cre",
+        "Sun Belt 的 BTR/SFR 项目（资产类优先）→ btr",
+        "Sun Belt 的机构资本动作（PE 募资、REIT IPO）→ institutional",
+        "全国性新闻提到 Sun Belt 例子 → national"
+      ],
+      "texas_city_required": true
+    },
+    {
+      "id": "btr",
+      "label_zh": "全国 BTR / SFR",
+      "label_en": "Build-to-Rent / Single-Family Rental",
+      "emoji": "🏘",
+      "quota": 3,
+      "extended_window": true,
+      "include": [
+        "Build-to-Rent 项目 / 资金 / 政策",
+        "Single-Family Rental 行业动态",
+        "INVH / AMH / Tricon / Pretium / Progress Residential / Home Partners / FirstKey Homes / Main Street Renewal / Roofstock 等龙头公司新闻",
+        "NRHC（National Rental Home Council）行业声音",
+        "机构持有 SFR 比例研究、SFR 资产证券化"
+      ],
+      "exclude": [
+        "个人 / 名人租房纠纷 → 不入选（无系统性意义）",
+        "传统 multifamily（公寓楼）→ sunbelt 或 cre",
+        "homebuilder 卖给 BTR 基金的 deal → 仍归 btr（资产实质）"
+      ]
+    },
+    {
+      "id": "cre",
+      "label_zh": "全国 CRE",
+      "label_en": "Commercial Real Estate",
+      "emoji": "🏢",
+      "quota": 5,
+      "extended_window": false,
+      "include": [
+        "Office / Class A office",
+        "Industrial / warehouse / logistics",
+        "Data center",
+        "Retail / shopping center",
+        "Hotel / hospitality / lodging",
+        "Multifamily（非 Sun Belt 区域）— 大型公寓楼资产为核心新闻",
+        "Senior housing / life sciences",
+        "CRE refinance / 大宗交易 / cap rate / 退租率 / leasing 数据",
+        "CRE 公司 / REIT 财报（除 BTR/SFR 龙头公司，那归 btr）"
+      ],
+      "exclude": [
+        "纯住宅 → national 或 sunbelt",
+        "BTR/SFR → btr",
+        "CRE 基金募资本身 → institutional"
+      ],
+      "texas_city_required": true
+    },
+    {
+      "id": "institutional",
+      "label_zh": "全国机构资本",
+      "label_en": "Institutional Capital",
+      "emoji": "💰",
+      "quota": 3,
+      "extended_window": true,
+      "include": [
+        "PE 房地产基金募资 / 关闭 / capital raise",
+        "REIT IPO / 私有化 / 大型并购 / 退出",
+        "GP stake / 二级市场 / 延续基金（continuation vehicle）",
+        "LP commitment 大单",
+        "Blackstone / KKR / Brookfield / Starwood / TPG / PGIM / Nuveen / Cohen & Steers / Principal RE 等机构动作",
+        "PERE / IPE / Real Estate Capital 等机构媒体的核心报道"
+      ],
+      "exclude": [
+        "单个项目并购（非战略级）→ cre 或对应资产类 section",
+        "REIT 单季度业绩（除非违约 / 战略转型）→ cre",
+        "公司任命 / 行业人事 → 不入选（除非 CEO/CIO 等关键岗位且伴随战略变化）"
+      ],
+      "texas_city_required": false
+    }
+  ],
+  "global_rules": {
+    "total_count": 20,
+    "per_section_min": 2,
+    "duplicate_event_handling": "同一事件 / 同一标的的不同条目应在 writer 内部合并为单条，引用最权威信源；reviewer 必须检测重复。",
+    "tier_priority": "信源 tier 仅用于打分排序（A>B>D>E），不影响分类",
+    "exclusion_floor": "celebrity / 八卦 / 单 unit listing / 单 broker 信息 / design trends / 任命公告 不入选；reviewer 必须 flag。",
+    "extended_window_marker": "extended_window=true 的 section 当 24h 池为空时可用 7d 池，但每条必须打 extended_window=true 标记，前端显示 [ext] 徽章"
+  },
+  "edge_cases": [
+    {
+      "scenario": "Sun Belt 区域的 multifamily 公寓项目",
+      "rule": "归 sunbelt（地理优先于资产）",
+      "rationale": "用户期望：Sun Belt 是地区主题，multifamily 是 Sun Belt 区域内的核心资产形式"
+    },
+    {
+      "scenario": "Sun Belt 城市的 office 或 data center",
+      "rule": "归 cre（资产优先于地理，因为商业资产已脱离住宅范畴）",
+      "rationale": "section 的核心维度：sunbelt 关注住宅市场，office/data center 不属于住宅"
+    },
+    {
+      "scenario": "全国 multifamily 公司财报（如 MAA / Equity Residential）",
+      "rule": "MAA 因主营 Sun Belt 归 sunbelt；Equity Residential / AvalonBay 等沿岸为主的归 cre",
+      "rationale": "看公司主要资产分布"
+    },
+    {
+      "scenario": "REIT 财报（如 Zillow / Realogy）",
+      "rule": "若是中介 / iBuyer 类 → national；若是 BTR/SFR 龙头 → btr；若是商业资产 REIT → cre；若财报本身体现机构战略大调整 → institutional",
+      "rationale": "看主营业务"
+    },
+    {
+      "scenario": "celebrity 名人租房 / 豪宅交易（金额 < $5M / 无系统性影响）",
+      "rule": "不入选",
+      "rationale": "信号过弱"
+    },
+    {
+      "scenario": "design trends / 行业活动 / coaching webinar / brokerage 任命",
+      "rule": "不入选（除非头部公司 CEO/CIO 任命伴随战略变化）",
+      "rationale": "非市场新闻"
+    },
+    {
+      "scenario": "homebuilder 卖给 BTR 基金的批发交易",
+      "rule": "归 btr",
+      "rationale": "BTR 资产形成路径，是 BTR 行业新闻"
+    },
+    {
+      "scenario": "全国性 homebuilder 新房销售数据",
+      "rule": "归 national",
+      "rationale": "宏观住宅市场信号"
+    },
+    {
+      "scenario": "Sun Belt 单城市的 homebuilder 项目动工",
+      "rule": "归 sunbelt（若区域 metric 重要）；否则不入选",
+      "rationale": "看是否承载区域市场信号"
+    }
+  ]
+}

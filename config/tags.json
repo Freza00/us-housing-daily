@@ -1,0 +1,84 @@
+{
+  "_doc": "Tag 白名单 — 4 维度封闭词表。LLM 必须从此处选 tag，不允许自创。reviewer 校验 tag ∈ 词表 ∧ 同 dimension 不重复。每条新闻最多 5 个 tag，总长度 ≤ 4 个 dimension（即 asset / geo / topic / actor 各最多 1 个，topic 可至 2）。父子关系（如 dfw ⊂ texas ⊂ sun-belt）由 LLM 选最具体的那个，不要同时打父和子。",
+  "constraints": {
+    "max_tags_per_item": 5,
+    "max_per_dimension": {
+      "asset": 1,
+      "geo": 1,
+      "topic": 2,
+      "actor": 1
+    },
+    "hierarchy_rule": "若候选包含父子关系（如 dfw + texas + sun-belt），仅打最具体的层级。例：title 提 Dallas → 只打 'dfw'，不打 'texas' / 'sun-belt'。"
+  },
+  "dimensions": {
+    "asset": {
+      "_desc": "资产类型 — 住宅 / 多户 / 商业资产细分。每条最多 1 个。",
+      "tags": [
+        { "id": "housing", "label_zh": "住宅市场", "applies_to": "national / sunbelt 的住宅价格 / 销量 / 库存 / 房贷 / 政策；通用住宅市场指标" },
+        { "id": "multifamily", "label_zh": "多户公寓", "applies_to": "公寓楼 / apartment community / multifamily REIT 财报 / 租赁市场" },
+        { "id": "btr-sfr", "label_zh": "BTR / SFR", "applies_to": "build-to-rent + 单户出租；INVH / AMH / Tricon / Pretium / Progress 等" },
+        { "id": "office", "label_zh": "办公", "applies_to": "Class A office / 办公楼 / HQ relocation" },
+        { "id": "industrial", "label_zh": "工业 / 仓储", "applies_to": "industrial / warehouse / logistics" },
+        { "id": "data-center", "label_zh": "数据中心", "applies_to": "data center 项目 / 公司" },
+        { "id": "hotel", "label_zh": "酒店", "applies_to": "hotel / hospitality / lodging" },
+        { "id": "retail", "label_zh": "零售", "applies_to": "retail center / shopping center / 街铺" },
+        { "id": "senior-housing", "label_zh": "养老地产", "applies_to": "senior housing / 养老社区" },
+        { "id": "life-sciences", "label_zh": "生命科学", "applies_to": "life sciences 实验室 / 生物科技园" },
+        { "id": "mixed-asset", "label_zh": "混合资产", "applies_to": "兜底：跨多种资产类型的报道（仅当其他 asset tag 都不适用）" }
+      ]
+    },
+    "geo": {
+      "_desc": "地理 — 国家 / 区域 / 州 / 都会区。每条最多 1 个。优先选最具体的层级。",
+      "tags": [
+        { "id": "national", "label_zh": "全国", "applies_to": "全美层面新闻 / 联邦数据 / 全国政策" },
+        { "id": "sun-belt", "label_zh": "Sun Belt", "applies_to": "Sun Belt 区域整体（多州 / 跨州研究）；单城市优先用更具体 tag" },
+        { "id": "texas", "label_zh": "德州", "applies_to": "德州整体新闻；具体到 DFW / Houston / Austin 时用更具体 tag" },
+        { "id": "dfw", "label_zh": "DFW", "applies_to": "Dallas / Fort Worth / DFW 都会区" },
+        { "id": "houston", "label_zh": "Houston", "applies_to": "Houston metro" },
+        { "id": "austin", "label_zh": "Austin", "applies_to": "Austin metro" },
+        { "id": "phoenix", "label_zh": "Phoenix", "applies_to": "Phoenix / Arizona 主要 metro" },
+        { "id": "florida", "label_zh": "佛州", "applies_to": "Florida 整体；Miami / Orlando / Tampa / Jacksonville" },
+        { "id": "atlanta", "label_zh": "Atlanta", "applies_to": "Atlanta / Georgia" },
+        { "id": "carolinas", "label_zh": "Carolinas", "applies_to": "Charlotte / Raleigh / Charleston / NC / SC" },
+        { "id": "nashville", "label_zh": "Nashville", "applies_to": "Nashville / Memphis / Tennessee" },
+        { "id": "las-vegas", "label_zh": "Las Vegas", "applies_to": "Las Vegas / Nevada" },
+        { "id": "nyc", "label_zh": "NYC", "applies_to": "Manhattan / NYC / 三州区" },
+        { "id": "california", "label_zh": "加州", "applies_to": "LA / SF / Bay Area / 加州整体" }
+      ]
+    },
+    "topic": {
+      "_desc": "主题 — 新闻的内容驱动力。每条最多 2 个。",
+      "tags": [
+        { "id": "rates", "label_zh": "利率", "applies_to": "mortgage rate / Fed rate / bps / 30Y mortgage" },
+        { "id": "macro", "label_zh": "宏观", "applies_to": "Fed / FOMC / CPI / 就业 / 通胀（含住宅含义）" },
+        { "id": "policy", "label_zh": "政策", "applies_to": "立法 / 监管 / NAR / HUD / FHFA / state law / zoning" },
+        { "id": "data", "label_zh": "数据", "applies_to": "Case-Shiller / housing starts / new home sales / pending sales / FHFA HPI / JOLTS" },
+        { "id": "deals", "label_zh": "交易", "applies_to": "并购 / 大宗交易 / 出售 / 收购 / refinance" },
+        { "id": "earnings", "label_zh": "财报", "applies_to": "上市公司季报 / 全年业绩" },
+        { "id": "fundraising", "label_zh": "募资", "applies_to": "PE 基金募资 / capital raise / LP commitment" },
+        { "id": "ipo", "label_zh": "IPO", "applies_to": "IPO / 私有化 / 上市动作" },
+        { "id": "trend", "label_zh": "趋势研究", "applies_to": "outlook / forecast / 趋势报告 / 月度市场综述" },
+        { "id": "construction", "label_zh": "新建", "applies_to": "housing starts / 项目动工 / 新建库存" },
+        { "id": "distress", "label_zh": "违约 / 困境", "applies_to": "special servicing / 违约 / foreclosure / loss mitigation" },
+        { "id": "tech-adoption", "label_zh": "技术应用", "applies_to": "AI / proptech / 工具采用（仅当影响行业结构性变化时）" },
+        { "id": "regulation", "label_zh": "监管动作", "applies_to": "具体监管行动 / 罚款 / 调查（区别于宏观 policy）" }
+      ]
+    },
+    "actor": {
+      "_desc": "市场参与者类型 — 谁是新闻主角。每条最多 1 个。",
+      "tags": [
+        { "id": "institutional", "label_zh": "机构", "applies_to": "PE / REIT / fund / capital allocator" },
+        { "id": "homebuilder", "label_zh": "homebuilder", "applies_to": "Lennar / DR Horton / KB / Pulte / Toll Brothers / Meritage 等" },
+        { "id": "lender", "label_zh": "贷款方", "applies_to": "银行 / 抵押贷款机构 / 私募信贷 / mortgage lender" },
+        { "id": "landlord", "label_zh": "业主", "applies_to": "传统出租方 / 散户业主 / 个人投资者" },
+        { "id": "brokerage", "label_zh": "经纪", "applies_to": "Realtor / 经纪公司 / MLS 数据 / NAR 行业声明" },
+        { "id": "regulator", "label_zh": "监管机构", "applies_to": "Fed / FOMC / FHFA / HUD / Treasury / CFPB / SEC / 州监管" },
+        { "id": "developer", "label_zh": "开发商", "applies_to": "项目开发方 / 商业地产开发商" },
+        { "id": "btr-operator", "label_zh": "BTR/SFR 运营商", "applies_to": "INVH / AMH / Tricon / Pretium / Progress / NRHC 成员" }
+      ]
+    }
+  },
+  "deprecated_aliases": {
+    "_desc": "旧 tag → 新 tag 映射，用于兼容历史数据 / 渐进迁移。当前为空 — 全部 tag 与历史保持兼容。"
+  }
+}

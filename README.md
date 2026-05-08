@@ -86,9 +86,25 @@ That's it for local. For continuous daily updates on free tiers (GitHub Actions 
 
 - **Add or remove a source** — edit `config/sources.json`. Each entry needs `id`, `name`, `url`, `tier` (A–E), `tags` (canonical IDs from `scripts/build.mjs`), `weight` (1–10), `region`. Optional: `alternates: []` for 403-prone feeds, `ua_style: "sec"` for SEC EDGAR fair-use UA.
 - **Tweak section quotas** — `SECTIONS` array near the top of `scripts/build.mjs`. Each section has `quota` (target count) and `extendedWindow` (whether to fall back to the 7-day pool when 24h pool is dry).
-- **Reclassify items** — `classify()` and the `RE_*` regex patterns. The current logic routes `multifamily-in-Sun-Belt` to the sunbelt section and bare `multifamily` (no Sun Belt city) to CRE; flip this by editing `RE_MULTIFAMILY_ASSET` and `SUNBELT_REGIONS`.
-- **Change the language or tone** — the LLM `systemPrompt` in `summarizeBatch()` is in Chinese; rewrite it for English, German, etc. A few in-prompt examples teach the model the desired voice.
+- **Reclassify items (legacy mode)** — `classify()` and the `RE_*` regex patterns. The current logic routes `multifamily-in-Sun-Belt` to the sunbelt section and bare `multifamily` (no Sun Belt city) to CRE; flip this by editing `RE_MULTIFAMILY_ASSET` and `SUNBELT_REGIONS`.
+- **Section boundary definitions (global mode)** — `config/sections.json` defines each section's include/exclude rules and edge cases that the writer + reviewer LLMs both consume. Edit here when you want the LLM to apply different judgment without changing code.
+- **Tag whitelist (global mode)** — `config/tags.json` is the closed vocabulary of 4-dimension tags (asset / geo / topic / actor). Add new tags here; the writer is constrained to choose from this list and the reviewer enforces the whitelist.
+- **Change the language or tone** — the LLM `systemPrompt` in `summarizeBatch()` (legacy) or `globalPassWriter()` (global) is in Chinese; rewrite it for English, German, etc. A few in-prompt examples teach the model the desired voice.
 - **Use a different LLM provider** — set `LLM_ENDPOINT` to any OpenAI-compatible chat-completions URL. Tested with Kimi (Moonshot), GPT-4o-mini, Claude Haiku via proxy, Together, Fireworks.
+
+### `WRITER_MODE` — pick the writer pipeline
+
+| Value | Behavior |
+|-------|----------|
+| `legacy` (default) | Regex-based classify + section quota fill (3-pass). LLM only translates the already-picked 20. Cheap (~1 LLM call). |
+| `global` | LLM reads ~80 candidates in one pass, picks 20, classifies, tags, rates, translates. A reviewer LLM then audits and can loop back up to 2x. Cost: 2–6 LLM calls/day. |
+| `global-dry` | Same as `global` but stops at prompt construction — no LLM call, no file writes. Use to inspect prompt size and pool composition without burning tokens. |
+
+Run with `WRITER_MODE=global node scripts/build.mjs`. The audit log is persisted in `data/latest.json` under `_diagnostics.writer_audit` (round-by-round issues from the reviewer).
+
+### First-paint prerender
+
+After writing `data/latest.json`, the build also injects the same payload as `<script id="initial-data" type="application/json">…</script>` into `public/index.html`. The frontend reads that inline data on page load before falling back to a `fetch('/data/latest.json')`. Removes the "loading…" flash, gives search engines + social-share previews real content, and adds ~50 KB to the HTML (gzipped ~10 KB on the wire).
 
 ## Status & limitations
 

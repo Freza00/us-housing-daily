@@ -469,19 +469,39 @@ function formatUpdated(generatedAt) {
   return t().updated_prefix + new Date(generatedAt).toLocaleString(locale, opts) + ' (' + t().timezone_label + ')';
 }
 
+// 首次加载 latest 时优先用预渲染的 inline 数据（pipeline 在 public/index.html 注入）
+// 避免首屏闪烁，让 SEO / 分享预览能拿到内容
+let initialDataConsumed = false;
+function readInlineInitialData() {
+  const el = document.getElementById('initial-data');
+  if (!el) return null;
+  try {
+    const txt = el.textContent || '';
+    return txt ? JSON.parse(txt) : null;
+  } catch { return null; }
+}
+function applyLoadedData(data) {
+  currentData = data;
+  selectedDate = currentData.date || null;
+  updatedEl.textContent = formatUpdated(currentData.generated_at);
+  const sc = document.getElementById('sourcesCount');
+  if (sc) sc.textContent = `${currentData.sources_ok}/${currentData.sources_attempted}`;
+  applyFilter();
+  renderDateStrip();
+}
+
 async function loadNews(date) {
-  newsList.innerHTML = `<div class="loader">${t().loading}</div>`;
+  if (!date && !initialDataConsumed) {
+    initialDataConsumed = true;
+    const inline = readInlineInitialData();
+    if (inline) { applyLoadedData(inline); return; }
+  }
+  newsList.replaceChildren(Object.assign(document.createElement('div'), { className: 'loader', textContent: t().loading }));
   try {
     const url = date ? `/data/${encodeURIComponent(date)}.json` : '/data/latest.json';
     const r = await fetch(url, { cache: 'no-store' });
     if (!r.ok) throw new Error('HTTP ' + r.status);
-    currentData = await r.json();
-    selectedDate = currentData.date || null;
-    updatedEl.textContent = formatUpdated(currentData.generated_at);
-    const sc = document.getElementById('sourcesCount');
-    if (sc) sc.textContent = `${currentData.sources_ok}/${currentData.sources_attempted}`;
-    applyFilter();
-    renderDateStrip();
+    applyLoadedData(await r.json());
   } catch (e) {
     newsList.innerHTML = `<div class="empty">${t().load_failed}: ${escapeHtml(e.message)}<br><br>${t().load_failed_hint}</div>`;
   }
