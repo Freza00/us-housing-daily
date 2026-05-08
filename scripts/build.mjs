@@ -486,7 +486,9 @@ function isBtrItem(item) {
 function classify(item) {
   const t = item.title.toLowerCase();
   if (isBtrItem(item)) return "btr";
-  if (RE_INST.test(t) || item.source_id === "pere-news") return "institutional";
+  // 移除 source_id === "pere-news" 强制规则：PERE 偶尔发具体物业项目（如 multifamily redev），
+  // 让内容关键词决定，避免污染 institutional section（典型反例 — Richmond Greyhound 改造被错归）
+  if (RE_INST.test(t)) return "institutional";
   const titleHasCRE = TITLE_CRE.test(t);
   const titleHasSB = RE_SUNBELT.test(t);
   const titleHasRes = RE_RES.test(t);
@@ -1201,7 +1203,7 @@ imp=1: 边缘 — 评论而非新闻 / 八卦
 
 - **全国住宅市场**（mortgage / 利率 / 全国销量库存 / 联邦政策）：选 ≥ 7 条
 - **Sun Belt 住宅**（Texas / Florida / Arizona / Georgia / NC 等的住宅、多户、租赁）：选 ≥ 5 条
-- **BTR / SFR**（build-to-rent / single-family rental / INVH / AMH / Tricon / Pretium 等）：选 ≥ 4 条
+- **BTR / SFR**（build-to-rent / single-family rental / SFR portfolio / NRHC / Invitation Homes / INVH / American Homes 4 Rent / AMH / Tricon / Pretium / Progress Residential / FirstKey Homes / Main Street Renewal / Home Partners / Roofstock 等）：选 ≥ 4 条。**这些公司 / 关键词只要在 title 或 body 出现就视为 BTR 候选，必须考虑入选**
 - **全国 CRE**（office / industrial / data-center / hotel / retail / 非 Sun Belt 多户）：选 ≥ 7 条
 - **机构资本**（PE 房地产基金募资 / REIT IPO / Blackstone / KKR / Brookfield 等机构动作）：选 ≥ 4 条
 
@@ -1241,23 +1243,37 @@ ${block}
   return selected;
 }
 
-// Stage 3: Tagger — 4 维度白名单打 tag
+// Stage 3: Tagger — 4 维度白名单打 tag + 直接产出 section（5 选 1）
 async function tagger(items, opts) {
   const tagsBlock = buildTagsPromptBlock(TAGS_DEF);
+  // 紧凑的 section 定义（仅给 tagger 决策用，避免 prompt 过长）
+  const sectionGuide = SECTIONS_DEF.sections.map(s =>
+    `- **${s.id}** (${s.label_zh})：${s.include[0]}${s.include[1] ? "；" + s.include[1] : ""}`
+  ).join("\n");
+  const sectionEdges = SECTIONS_DEF.edge_cases.slice(0, 5).map(e =>
+    `- ${e.scenario} → ${e.rule}`
+  ).join("\n");
+
   const itemsBlock = items.map((it, i) =>
     `[${i + 1}] ${it.title}\nBody: ${(it.description || "").slice(0, 800)}`
   ).join("\n\n");
 
-  const systemPrompt = `你是新闻 tag 打标专家。给每条新闻按 4 维度白名单打 tag。你不选新闻、不分类、不翻译 — 只关心 tag 准确性。`;
+  const systemPrompt = `你是新闻 tag + section 打标专家。给每条新闻按 4 维度白名单打 tag，并归入 5 个 section 之一。你不选新闻、不评级、不翻译 — 只关心 tag 准确性和 section 归属。`;
 
   const userPrompt = `${tagsBlock}
 
+## Section 归属（每条必须选 1 个）
+${sectionGuide}
+
+### 关键边界规则
+${sectionEdges}
+
 ## 任务
-给下方 ${items.length} 条新闻每条打 tag。严格遵守白名单与维度上限。
+给下方 ${items.length} 条新闻每条产出 section + tags。严格遵守 tag 白名单与维度上限；section 必须 ∈ {national, sunbelt, btr, cre, institutional}。
 
 ## 输出格式
 JSON 数组（[ 开头 ] 结尾，无 markdown，无解释）：
-[{"i": <候选序号>, "tags": [<canonical-id>, ...]}]
+[{"i": <候选序号>, "section": "<id>", "tags": [<canonical-id>, ...]}]
 
 ## 新闻列表
 ${itemsBlock}
@@ -1271,17 +1287,29 @@ ${itemsBlock}
 
   const allTags = new Set();
   for (const dim of Object.values(TAGS_DEF.dimensions)) for (const t of dim.tags) allTags.add(t.id);
+  const validSections = new Set(SECTIONS_DEF.sections.map(s => s.id));
 
   const tagMap = new Map();
+  const secMap = new Map();
   for (const p of parsed) {
     const idx = (typeof p.i === "number" ? p.i : parseInt(p.i, 10)) - 1;
     const tags = Array.isArray(p.tags) ? p.tags.filter(t => allTags.has(t)) : [];
-    if (idx >= 0 && idx < items.length) tagMap.set(idx, tags);
+    const section = validSections.has(p.section) ? p.section : null;
+    if (idx >= 0 && idx < items.length) {
+      tagMap.set(idx, tags);
+      if (section) secMap.set(idx, section);
+    }
   }
 
-  const result = items.map((it, idx) => ({ ...it, tags: tagMap.get(idx) || it.tags || [] }));
+  const result = items.map((it, idx) => ({
+    ...it,
+    tags: tagMap.get(idx) || it.tags || [],
+    section: secMap.get(idx) || null, // 由 pickFinal20 兜底（classifyByTags）
+  }));
   const avgTags = result.reduce((s, x) => s + (x.tags || []).length, 0) / result.length;
-  log(`🏷️  tagger done — avg ${avgTags.toFixed(1)} tags/item`);
+  const taggedSec = result.filter(it => it.section).length;
+  const dist = result.reduce((a, x) => { const s = x.section || "?"; a[s] = (a[s] || 0) + 1; return a; }, {});
+  log(`🏷️  tagger done — avg ${avgTags.toFixed(1)} tags/item, section打标=${taggedSec}/${result.length}, dist=${JSON.stringify(dist)}`);
   return result;
 }
 
@@ -1401,8 +1429,17 @@ function pickFinal20(items, rawPool = []) {
   const QUOTA = { national: 5, sunbelt: 4, btr: 3, cre: 5, institutional: 3 };
   const TX_REQUIRED = new Set(["sunbelt", "btr", "cre", "institutional"]);
 
-  // 先按 tag → section 分类（重写 item.section）
-  const annotated = items.map(it => ({ ...it, section: classifyByTags(it) }));
+  // 优先用 tagger 直接产出的 section；缺失才回 rule-based classifyByTags 兜底
+  let useTagger = 0, useFallback = 0;
+  const annotated = items.map(it => {
+    if (it.section && ["national", "sunbelt", "btr", "cre", "institutional"].includes(it.section)) {
+      useTagger++;
+      return it;
+    }
+    useFallback++;
+    return { ...it, section: classifyByTags(it) };
+  });
+  log(`📦 section source: tagger=${useTagger}, classifyByTags fallback=${useFallback}`);
 
   // 按 section 分桶
   const bySection = { national: [], sunbelt: [], btr: [], cre: [], institutional: [] };
@@ -1599,6 +1636,16 @@ ${block}
 async function multiAgentPipeline(candidates, opts) {
   const audit = [];
   log(`🚀 multi-agent pipeline starting with ${candidates.length} candidates`);
+
+  // 诊断：BTR / 各 section 在原始候选池里的关键词覆盖（title + body）
+  const btrTermsRe = /\b(btr|build[-\s]?to[-\s]?rent|build[-\s]?for[-\s]?rent|sfr|single[-\s]?family\s+rental|rental\s+homes?|invitation\s+homes|invh|american\s+homes\s+4\s+rent|\bamh\b|tricon|pretium|progress\s+residential|home\s+partners|firstkey|main\s+street\s+renewal|roofstock|nrhc)\b/i;
+  const btrInPool = candidates.filter(it => btrTermsRe.test(`${it.title} ${it.description || ""}`));
+  log(`🔬 candidate pool BTR-term scan: ${btrInPool.length}/${candidates.length} items mention BTR/SFR companies or terms in title+body`);
+  if (btrInPool.length > 0) {
+    for (const it of btrInPool.slice(0, 5)) {
+      log(`   • [${it.source_name}] ${it.title.slice(0, 100)}`);
+    }
+  }
 
   // Stage 2: importance selector
   const selected = await importanceSelector(candidates, opts);
