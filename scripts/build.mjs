@@ -1152,6 +1152,419 @@ async function writerReviewerLoop(candidates, opts) {
 }
 
 // ============================================================
+// 多 Agent Pipeline（WRITER_MODE=global v2 — 默认）
+// ============================================================
+// Stage 1 [filter, 已有]: time + dedupe → 100-200 candidates
+// Stage 2 [Agent A: Selector]: 100-200 → 选 30-40 最重要 + imp 评级
+// Stage 3 [Agent B: Tagger]: 30-40 → 4 维度白名单打 tag
+// Stage 4 [Agent C: Dedupe]: 跨条目重复合并（基于 title + tag + entity）
+// Stage 5 [脚本: classifyByTags]: tag → section（rule-based, 完全可解释）
+// Stage 6 [脚本: pickFinal20]: section 配额 + 德州三城硬约束 + ≥2/section
+// Stage 7 [Agent D: Translator]: 选定的 20 条做翻译 + dir + reason
+// 每 stage 职责单一，prompt 简单，准确性可独立验证。无需 reviewer。
+
+const SELECTOR_TARGET_MIN = 30;
+const SELECTOR_TARGET_MAX = 40;
+
+function buildSelectorCandidatesBlock(candidates) {
+  return candidates.map((it, i) => {
+    const ageH = it.published_at ? ((Date.now() - it.published_at) / 3600_000).toFixed(0) : "?";
+    const body = (it.description || "").slice(0, 1000);
+    const ext = it._ext_eligible ? " [EXT-7D]" : "";
+    return `[${i + 1}] (${it.source_name}, tier=${it.source_tier}, ${ageH}h ago${ext}, region=${it.region})\nTitle: ${it.title}\nBody: ${body}`;
+  }).join("\n\n");
+}
+
+// Stage 2: 重要性选择器 — 不打 tag，不分 section，不翻译，专心评估"哪些值得选"
+async function importanceSelector(candidates, opts) {
+  const target = Math.min(SELECTOR_TARGET_MAX, Math.max(SELECTOR_TARGET_MIN, Math.floor(candidates.length * 0.35)));
+  const block = buildSelectorCandidatesBlock(candidates);
+
+  const systemPrompt = `你是新闻重要性评估专家。任务：从一批美国住宅 / 商业地产新闻中识别最重要的若干条，评出 importance 分。你不打标签、不分类、不翻译 — 只关心"这条新闻有多重要"。`;
+
+  const userPrompt = `从下方 ${candidates.length} 条候选中，选出最重要的约 ${target} 条（${SELECTOR_TARGET_MIN}-${SELECTOR_TARGET_MAX} 条范围内）。
+
+## 评分标准
+imp=5: systemic — Fed 决策 / 大型基金巨额募资（$500M+）/ 头部 REIT 财报或违约 / 联邦立法重大变动 / 关键宏观数据（CPI / 就业 / 房价指数）
+imp=4: 行业中等 — 单 deal $200M+ / 大型 IPO 或并购 / Sun Belt 关键 metro 房市拐点信号 / 重要监管政策
+imp=3: 常规动态 — 单 deal $50-200M / 区域市场月度趋势 / 中型公司业绩 / 政策细节
+imp=2: 花絮 — 个人公司任命 / 设计趋势 / 小型扩张 / 已知信息的不同角度报道
+imp=1: 边缘 — 评论而非新闻 / 八卦
+
+## 强制分布（必须严格满足）
+- 至少 3 条 imp=5
+- 至少 6 条 imp=4
+- 至多 5 条 imp ≤ 2
+
+## 硬性排除（这些必须不入选）
+- celebrity / 名人 / 八卦
+- 单 unit listing / 单豪宅租赁
+- 单 broker / 单 agent 任命公告
+- design trends / coaching / webinar
+- 信息残缺（"详情待披露"、"具体数据 pending"等）
+- 重复报道（同一事件优先选 tier 最高的信源那条）
+
+## 输出格式
+JSON 数组（必须以 [ 开头 ] 结尾，不要 markdown，不要解释）：
+[{"i": <候选序号>, "imp": <1-5>, "reason": "<2句中文：为什么选 + 为什么这个 imp>"}]
+
+## 候选 ${candidates.length} 条
+${block}
+
+直接输出 JSON 数组：`;
+
+  log(`📋 selector prompt size: ~${Math.round(userPrompt.length / 4)} tokens, candidates=${candidates.length}, target=${target}`);
+  const text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 6000 }, "selector");
+  let parsed = safeParseJSON(text, "selector", true);
+  if (!Array.isArray(parsed)) throw new Error(`selector returned non-array`);
+
+  // 应用到候选：返回选中的 candidate items + imp/reason 注入
+  const selected = [];
+  for (const s of parsed) {
+    const idx = (typeof s.i === "number" ? s.i : parseInt(s.i, 10)) - 1;
+    if (idx < 0 || idx >= candidates.length) continue;
+    const imp = Math.max(1, Math.min(5, Math.round(Number(s.imp) || 3)));
+    selected.push({ ...candidates[idx], importance: imp, selector_reason: s.reason || "" });
+  }
+  log(`📋 selector picked ${selected.length} items (imp dist: ${JSON.stringify(selected.reduce((a, x) => { a[x.importance] = (a[x.importance] || 0) + 1; return a; }, {}))})`);
+  return selected;
+}
+
+// Stage 3: Tagger — 4 维度白名单打 tag
+async function tagger(items, opts) {
+  const tagsBlock = buildTagsPromptBlock(TAGS_DEF);
+  const itemsBlock = items.map((it, i) =>
+    `[${i + 1}] ${it.title}\nBody: ${(it.description || "").slice(0, 800)}`
+  ).join("\n\n");
+
+  const systemPrompt = `你是新闻 tag 打标专家。给每条新闻按 4 维度白名单打 tag。你不选新闻、不分类、不翻译 — 只关心 tag 准确性。`;
+
+  const userPrompt = `${tagsBlock}
+
+## 任务
+给下方 ${items.length} 条新闻每条打 tag。严格遵守白名单与维度上限。
+
+## 输出格式
+JSON 数组（[ 开头 ] 结尾，无 markdown，无解释）：
+[{"i": <候选序号>, "tags": [<canonical-id>, ...]}]
+
+## 新闻列表
+${itemsBlock}
+
+直接输出 JSON 数组：`;
+
+  log(`🏷️  tagger prompt size: ~${Math.round(userPrompt.length / 4)} tokens, items=${items.length}`);
+  const text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 4000 }, "tagger");
+  const parsed = safeParseJSON(text, "tagger", true);
+  if (!Array.isArray(parsed)) throw new Error(`tagger returned non-array`);
+
+  const allTags = new Set();
+  for (const dim of Object.values(TAGS_DEF.dimensions)) for (const t of dim.tags) allTags.add(t.id);
+
+  const tagMap = new Map();
+  for (const p of parsed) {
+    const idx = (typeof p.i === "number" ? p.i : parseInt(p.i, 10)) - 1;
+    const tags = Array.isArray(p.tags) ? p.tags.filter(t => allTags.has(t)) : [];
+    if (idx >= 0 && idx < items.length) tagMap.set(idx, tags);
+  }
+
+  const result = items.map((it, idx) => ({ ...it, tags: tagMap.get(idx) || it.tags || [] }));
+  const avgTags = result.reduce((s, x) => s + (x.tags || []).length, 0) / result.length;
+  log(`🏷️  tagger done — avg ${avgTags.toFixed(1)} tags/item`);
+  return result;
+}
+
+// Stage 4: 跨条目去重 — LLM-based, 输入精简（只看 title + tags），输出合并组
+async function llmDedupe(items, opts) {
+  if (items.length < 2) return items;
+  const block = items.map((it, i) =>
+    `[${i + 1}] (${it.source_name}, tier=${it.source_tier}, imp=${it.importance}, tags=[${(it.tags||[]).join(",")}])\n  ${it.title}`
+  ).join("\n");
+
+  const systemPrompt = `你是新闻去重专家。识别下方列表中"同一事件 / 同一公司同一交易 / 同一数据点"的不同来源报道，标出哪些应合并。`;
+
+  const userPrompt = `## 去重规则
+- 同一公司 + 同一动作（财报 / 募资 / 并购）→ 同一事件
+- 同一数据指标 + 相同时间窗 → 同一事件
+- 同一立法 / 政策 → 同一事件
+- 仅 title 措辞不同但讲同一件事 → 同一事件
+- 不同公司、不同事件 → 不合并（即使主题相同，如两个独立 BTR 项目）
+
+## 保留规则（同组中保留哪条）
+1. 优先保留 tier 高（A > B > D > E）
+2. 同 tier 优先保留 imp 高
+3. 同 imp 优先保留 title 信息更完整
+
+## 输出格式
+JSON（[ 开头 ] 结尾不行，这次输出对象，{ 开头 } 结尾）：
+{"groups": [{"keep": <候选序号>, "drop": [<候选序号>, ...]}]}
+
+如果没有重复，输出 {"groups": []}。
+
+## 候选 ${items.length} 条
+${block}
+
+直接输出 JSON 对象：`;
+
+  log(`🔍 dedupe prompt size: ~${Math.round(userPrompt.length / 4)} tokens, items=${items.length}`);
+  const text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 2000 }, "dedupe");
+  let parsed;
+  try { parsed = safeParseJSON(text, "dedupe", false); } catch (e) {
+    log(`⚠️  dedupe parse failed, skipping LLM dedupe: ${e.message}`);
+    return items;
+  }
+  const groups = Array.isArray(parsed?.groups) ? parsed.groups : [];
+  if (groups.length === 0) {
+    log(`🔍 dedupe: no duplicates found`);
+    return items;
+  }
+  const dropSet = new Set();
+  for (const g of groups) {
+    const drops = Array.isArray(g.drop) ? g.drop : [];
+    for (const d of drops) {
+      const idx = (typeof d === "number" ? d : parseInt(d, 10)) - 1;
+      if (idx >= 0 && idx < items.length) dropSet.add(idx);
+    }
+  }
+  const kept = items.filter((_, i) => !dropSet.has(i));
+  log(`🔍 dedupe: ${items.length} → ${kept.length} (merged ${dropSet.size} duplicates across ${groups.length} groups)`);
+  return kept;
+}
+
+// Stage 5: 规则化 tag → section 分类（不依赖 LLM，完全可解释）
+function classifyByTags(item) {
+  const tags = new Set(item.tags || []);
+  const has = (t) => tags.has(t);
+  const hasAny = (...ts) => ts.some(t => tags.has(t));
+
+  const SUNBELT_GEOS = ["sun-belt", "texas", "dfw", "houston", "austin", "phoenix", "florida", "atlanta", "carolinas", "nashville", "las-vegas"];
+  const CRE_ASSETS = ["office", "industrial", "data-center", "retail", "hotel", "senior-housing", "life-sciences"];
+  const inSunBelt = SUNBELT_GEOS.some(g => has(g));
+
+  // 1. BTR/SFR 资产 → btr（最高优先级，资产实质优先）
+  if (has("btr-sfr")) return "btr";
+
+  // 2. CRE 类资产（office/industrial/data-center/retail/hotel/senior-housing/life-sciences）→ cre
+  //    注：即使是 Sun Belt 城市的 office，也归 cre（资产维度优先于地理）
+  if (CRE_ASSETS.some(a => has(a))) return "cre";
+
+  // 3. 机构资本相关：actor=institutional + topic=fundraising/ipo/deals → institutional
+  //    （非 BTR/CRE 资产前提下，机构动作本身是新闻主体）
+  if (has("institutional") && hasAny("fundraising", "ipo")) return "institutional";
+
+  // 4. multifamily 资产：地理决定归属
+  //    Sun Belt geo → sunbelt（地理优先 — Sun Belt 多户是 Sun Belt 主题）
+  //    其他 → cre（多户公寓属于 CRE 范畴）
+  if (has("multifamily")) {
+    return inSunBelt ? "sunbelt" : "cre";
+  }
+
+  // 5. housing 资产：地理决定归属
+  //    Sun Belt geo → sunbelt
+  //    national / 其他 → national
+  if (has("housing")) {
+    return inSunBelt ? "sunbelt" : "national";
+  }
+
+  // 6. 无具体资产标签但有 fundraising/ipo + actor=institutional → institutional
+  if (has("institutional") && hasAny("fundraising", "ipo", "deals")) return "institutional";
+
+  // 7. mixed-asset 兜底
+  if (has("mixed-asset")) {
+    if (has("institutional")) return "institutional";
+    return inSunBelt ? "sunbelt" : "national";
+  }
+
+  // 8. 完全无资产 tag — 看 actor / topic
+  if (has("regulator") || has("policy") || has("rates") || has("macro") || has("data")) return "national";
+  if (has("institutional")) return "institutional";
+
+  // 兜底
+  return "national";
+}
+
+// Stage 6: 规则化最终挑选 — section 配额 + 德州三城硬约束
+function pickFinal20(items) {
+  // 配额（与 SECTIONS 对齐）
+  const QUOTA = { national: 5, sunbelt: 4, btr: 3, cre: 5, institutional: 3 };
+  const TX_REQUIRED = new Set(["sunbelt", "btr", "cre", "institutional"]);
+
+  // 先按 tag → section 分类（重写 item.section）
+  const annotated = items.map(it => ({ ...it, section: classifyByTags(it) }));
+
+  // 按 section 分桶
+  const bySection = { national: [], sunbelt: [], btr: [], cre: [], institutional: [] };
+  for (const it of annotated) if (bySection[it.section]) bySection[it.section].push(it);
+
+  // 每桶按 imp desc, score desc 排序
+  for (const s of Object.keys(bySection)) {
+    bySection[s].sort((a, b) =>
+      (b.importance ?? 3) - (a.importance ?? 3) || (b.score ?? 0) - (a.score ?? 0)
+    );
+  }
+
+  log(`📦 section pool: ${Object.entries(bySection).map(([s, arr]) => `${s}=${arr.length}`).join(" ")}`);
+
+  const result = [];
+  const txDiag = [];
+
+  // 第一遍：每个 section 先放德州三城（如果要求且有），再按 imp 顺序填到 quota
+  for (const [secId, quota] of Object.entries(QUOTA)) {
+    const pool = bySection[secId];
+    const picked = [];
+
+    // 德州三城硬约束（sunbelt/btr/cre/institutional）
+    if (TX_REQUIRED.has(secId) && pool.length > 0) {
+      const txItem = pool.find(it => hitsTexasCity(it));
+      if (txItem) {
+        picked.push(txItem);
+        txDiag.push(`${secId}:✓`);
+      } else {
+        txDiag.push(`${secId}:✗ no-tx`);
+      }
+    }
+
+    // 按 imp 顺序填到 quota
+    const pickedSet = new Set(picked.map(x => x.link));
+    for (const it of pool) {
+      if (picked.length >= quota) break;
+      if (pickedSet.has(it.link)) continue;
+      picked.push(it);
+      pickedSet.add(it.link);
+    }
+
+    if (picked.length < quota) {
+      log(`⚠️  section "${secId}" under quota: ${picked.length}/${quota} (pool=${pool.length})`);
+    }
+
+    for (const it of picked) result.push(it);
+  }
+  log(`📦 texas-3-city: ${txDiag.join(" ")}`);
+
+  // 处理 < 20 的兜底：从全池按 imp 拿剩余的填到 20
+  if (result.length < DAILY_LIMIT) {
+    const taken = new Set(result.map(x => x.link));
+    const overflow = annotated
+      .filter(x => !taken.has(x.link))
+      .sort((a, b) => (b.importance ?? 3) - (a.importance ?? 3) || (b.score ?? 0) - (a.score ?? 0));
+    for (const it of overflow) {
+      if (result.length >= DAILY_LIMIT) break;
+      result.push(it);
+    }
+    log(`📦 backfill to ${DAILY_LIMIT}: filled from cross-section overflow pool`);
+  }
+
+  // 处理 > 20 的兜底（理论上不会发生，因配额合计 = 20）
+  if (result.length > DAILY_LIMIT) result.length = DAILY_LIMIT;
+
+  // 设置 extended_window 标记
+  for (const it of result) {
+    if (it._ext_eligible) {
+      it.extended_window = true;
+      delete it._ext_eligible;
+    }
+  }
+  return result;
+}
+
+// Stage 7: Translator — 翻译选定的 20 条
+async function translator(items, opts) {
+  const block = items.map((it, i) =>
+    `[${i + 1}] section=${it.section} imp=${it.importance} tags=[${(it.tags||[]).join(",")}]\n  Title: ${it.title}\n  Body: ${(it.description || "").slice(0, 1500)}`
+  ).join("\n\n");
+
+  const systemPrompt = `你是美国住宅地产中文研究员，给已选定的新闻做中文译标 + 摘要 + 影响方向。所有 t / s 字段用中文（保留行业英文术语）。不选新闻、不打 tag、不分类。`;
+
+  const userPrompt = `给下方 ${items.length} 条新闻每条产出：
+- t: 中文译标（≤ 30 中文字符），中文语序重组
+- s: 中文摘要（≤ 60 中文字符），必给结论 / 数字 / 立场
+- dir: long-pos / short-pos / neutral / short-neg / long-neg
+
+## 中英混排（保留英文术语）
+公司 / 媒体 / 人名（Blackstone, KKR, MAA, INVH...）；行业缩写（REIT, IPO, M&A, BTR, SFR, NOI, LTV, DSCR, cap rate, refi, special servicing）；政府机构（Fed, FOMC, FHFA, HUD, Treasury, CFPB, SEC）；数据指标（JOLTS, CPI, PMMS, Case-Shiller, new home sales, existing home sales, housing starts）；单位（Q1-Q4, $1.75B, 475K SF, 6.3%, 30Y mortgage, bps, YoY）；英文地名（Manhattan, Sun Belt, Houston, Austin, DFW）。
+
+## 中英混排示例（必须严格仿照风格）
+{"i":1, "t":"30Y mortgage 升至月内高位，first-time 购房者掉队", "s":"上周 mortgage rate 上行致 loan demand 回落，平均贷款额上升说明中低收入买家退出", "dir":"short-neg"}
+{"i":2, "t":"MAA Q1：Sun Belt multifamily rent growth 拐点显现", "s":"Mid-America Apartment Communities Q1 业绩 — Sun Belt 入住率回升、rent growth 拐点出现", "dir":"long-pos"}
+
+## 硬约束
+✓ t / s 必须用中文写
+✗ 禁止整句英文输出
+✗ 禁止"详细见原文 / 见原文"等占位短语
+✓ 正文不足时基于 title 推断，可写"细节待披露 / 影响待观察"
+
+## 输出
+JSON 数组（[ 开头 ] 结尾，无 markdown，无解释，长度严格 = ${items.length}）：
+[{"i": <序号>, "t": "<中文标>", "s": "<中文摘要>", "dir": "<方向>"}]
+
+## 新闻列表
+${block}
+
+直接输出 JSON 数组：`;
+
+  log(`🌐 translator prompt size: ~${Math.round(userPrompt.length / 4)} tokens, items=${items.length}`);
+  const text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 6000 }, "translator");
+  const parsed = safeParseJSON(text, "translator", true);
+  if (!Array.isArray(parsed)) throw new Error(`translator returned non-array`);
+
+  const validImpacts = new Set(["long-pos", "short-pos", "neutral", "short-neg", "long-neg"]);
+  const transMap = new Map();
+  for (const p of parsed) {
+    const idx = (typeof p.i === "number" ? p.i : parseInt(p.i, 10)) - 1;
+    if (idx < 0 || idx >= items.length) continue;
+    transMap.set(idx, {
+      title_zh: p.t || "",
+      summary_zh: p.s || "（摘要生成失败）",
+      impact: validImpacts.has(p.dir) ? p.dir : "neutral",
+    });
+  }
+
+  const fetchedAt = Date.now();
+  return items.map((it, idx) => {
+    const tr = transMap.get(idx) || { title_zh: "", summary_zh: "（翻译丢失）", impact: "neutral" };
+    return { ...it, ...tr, id: hashLink(it.link), fetched_at: fetchedAt };
+  });
+}
+
+// Orchestrator: 串起 7 stages
+async function multiAgentPipeline(candidates, opts) {
+  const audit = [];
+  log(`🚀 multi-agent pipeline starting with ${candidates.length} candidates`);
+
+  // Stage 2: importance selector
+  const selected = await importanceSelector(candidates, opts);
+  audit.push({ stage: "selector", input: candidates.length, output: selected.length });
+
+  if (selected.length < DAILY_LIMIT) {
+    log(`⚠️  selector returned only ${selected.length} items (< ${DAILY_LIMIT}) — pipeline may under-fill`);
+  }
+
+  // Stage 3: tagger
+  const tagged = await tagger(selected, opts);
+  audit.push({ stage: "tagger", items: tagged.length });
+
+  // Stage 4: dedupe
+  const deduped = await llmDedupe(tagged, opts);
+  audit.push({ stage: "dedupe", before: tagged.length, after: deduped.length });
+
+  // Stage 5: section classify (rule-based, no LLM call)
+  // Done inline in pickFinal20 via classifyByTags
+
+  // Stage 6: final pick (rule-based, no LLM call)
+  const picked = pickFinal20(deduped);
+  const sectionCount = {};
+  for (const it of picked) sectionCount[it.section] = (sectionCount[it.section] || 0) + 1;
+  log(`📦 final pick: ${JSON.stringify(sectionCount)} (total ${picked.length})`);
+  audit.push({ stage: "pick", section_counts: sectionCount });
+
+  // Stage 7: translator
+  const translated = await translator(picked, opts);
+  audit.push({ stage: "translator", items: translated.length });
+
+  return { items: translated, audit, candidate_pool_size: candidates.length };
+}
+
+// ============================================================
 // 主流程
 // ============================================================
 async function main() {
@@ -1251,20 +1664,19 @@ async function main() {
     if (!dryGlobal && (!llmKey || !llmEndpoint || !llmModel)) {
       throw new Error("Missing required env vars: LLM_API_KEY, LLM_ENDPOINT, LLM_MODEL (or use WRITER_MODE=global-dry to inspect prompt without calling LLM)");
     }
-    // 候选池：rededuped (enriched 30) + fresh24h 高分项 + fresh7d 中"扩窗 section"潜在候选
-    // 扩窗候选打 _ext_eligible 标记 — writer 选中后会被 applyWriterOutput 设为 extended_window=true
+    // 候选池：fresh24h 全量（80-150）+ fresh7d 顶部高分（约 30，标记 _ext_eligible）→ 100-200
+    // 已经过 dedup + cross-day filter，rededuped (enriched 30) 用于优先 — 这些有完整 body
     const enrichedSet = new Set(rededuped.map(it => it.link));
     const inPool = new Set(rededuped.map(it => it.link));
     const extras24 = fresh24h
       .filter(it => !inPool.has(it.link))
-      .sort((a, b) => b.score - a.score)
-      .slice(0, Math.max(0, Math.floor(GLOBAL_CANDIDATE_POOL_SIZE * 0.7) - rededuped.length));
+      .sort((a, b) => b.score - a.score);
     for (const it of extras24) inPool.add(it.link);
-    // 7d 池补足 — 仅对扩窗 section 有意义（btr / sunbelt / institutional）
+    // 7d 池仅取顶部 30 条作为扩窗候选（btr/sunbelt/institutional 在 24h 池干涸时备用）
     const ext7d = fresh7d
       .filter(it => !inPool.has(it.link))
       .sort((a, b) => b.score - a.score)
-      .slice(0, Math.max(0, GLOBAL_CANDIDATE_POOL_SIZE - rededuped.length - extras24.length))
+      .slice(0, 30)
       .map(it => ({ ...it, _ext_eligible: true }));
     const candidatePool = [...rededuped, ...extras24, ...ext7d].sort((a, b) => b.score - a.score);
     candidatePoolSize = candidatePool.length;
@@ -1274,18 +1686,17 @@ async function main() {
       // dry mode：只构造 prompt 输出到 stdout，不调 LLM，不写盘 — 立即退出
       const sectionsBlock = buildSectionsPromptBlock(SECTIONS_DEF);
       const tagsBlock = buildTagsPromptBlock(TAGS_DEF);
-      const candidatesBlock = buildCandidatesBlock(candidatePool);
-      const writerPromptSize = sectionsBlock.length + tagsBlock.length + candidatesBlock.length;
-      log(`🌐 DRY: writer prompt blocks — sections ~${Math.round(sectionsBlock.length/4)} tok, tags ~${Math.round(tagsBlock.length/4)} tok, candidates ~${Math.round(candidatesBlock.length/4)} tok, total ~${Math.round(writerPromptSize/4)} tok`);
+      const selectorBlock = buildSelectorCandidatesBlock(candidatePool);
+      log(`🌐 DRY: prompt sizes — sections ~${Math.round(sectionsBlock.length/4)} tok, tags ~${Math.round(tagsBlock.length/4)} tok, selector ~${Math.round(selectorBlock.length/4)} tok`);
       log(`🌐 DRY: pool section dist (legacy classify, 仅供对比):`);
       const dist = { national: 0, sunbelt: 0, btr: 0, cre: 0, institutional: 0 };
       for (const it of candidatePool) dist[classify(it)] = (dist[classify(it)] || 0) + 1;
       for (const s of SECTIONS) log(`     ${s.id}: ${dist[s.id]} (target quota=${s.quota})`);
       log(`🌐 DRY: 已退出，未写 data/latest.json 也未更新 state/seen.json`);
       log(`✅ Done in ${((Date.now() - startedAt) / 1000).toFixed(1)}s (dry)`);
-      return; // 不继续往下走 — 不写盘，不更新 seen
+      return;
     } else {
-      const result = await writerReviewerLoop(candidatePool, { endpoint: llmEndpoint, apiKey: llmKey, model: llmModel });
+      const result = await multiAgentPipeline(candidatePool, { endpoint: llmEndpoint, apiKey: llmKey, model: llmModel });
       withSummary = result.items;
       writerAudit = result.audit;
 
@@ -1294,10 +1705,10 @@ async function main() {
         if (it.section === "cre") it.cre_subcategory = detectCreSubcategory(it);
       }
 
-      // 实际配额检查
+      // 配额检查
       const sectionCount = {};
       for (const it of withSummary) sectionCount[it.section] = (sectionCount[it.section] || 0) + 1;
-      log(`🏆 global writer final ${withSummary.length} items, audit rounds=${writerAudit.length}`);
+      log(`🏆 multi-agent final ${withSummary.length} items, stages=${writerAudit.length}`);
       for (const s of SECTIONS) {
         const n = sectionCount[s.id] || 0;
         const expected = SECTIONS_DEF.sections.find(x => x.id === s.id)?.quota ?? s.quota;
