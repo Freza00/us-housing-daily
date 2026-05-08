@@ -1,8 +1,8 @@
 {
   "date": "2026-05-08",
-  "generated_at": 1778226648010,
+  "generated_at": 1778227109159,
   "sources_attempted": 32,
-  "sources_ok": 28,
+  "sources_ok": 31,
   "sections": [
     {
       "id": "national",
@@ -56,40 +56,6 @@
   ],
   "items": [
     {
-      "source_id": "cnbc-realestate",
-      "source_name": "CNBC Realty Check",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "macro"
-      ],
-      "region": "national",
-      "title": "Job openings and labor turnover comes in at 6.86 million; new home sales rise to 682,000",
-      "link": "https://www.cnbc.com/video/2026/05/05/job-openings-and-labor-turnover-comes-in-at-6-point-86-million-new-home-sales-rise-to-682000.html",
-      "description": "CNBC's Rick Santelli and Diana Olick break down the latest economic and housing data.",
-      "published_at": 1777990613000,
-      "score": 12,
-      "tags": [
-        "housing",
-        "national",
-        "data",
-        "macro"
-      ],
-      "heat_signals": [
-        "new home sales",
-        "new home sales"
-      ],
-      "importance": 5,
-      "selector_reason": "JOLTS职位空缺686万+新屋销售68.2万套的双重关键宏观数据发布，直接关联美联储决策与住房市场健康度评估。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "JOLTS 职位空缺 686 万，new home sales 升至 68.2 万",
-      "summary_zh": "劳动力市场与住房数据双改善，new home sales 超预期提振 builder 信心",
-      "impact": "long-pos",
-      "id": "a7d90cc2",
-      "fetched_at": 1778226824013
-    },
-    {
       "source_id": "national-mortgage-news",
       "source_name": "National Mortgage News",
       "source_tier": "A",
@@ -99,94 +65,90 @@
         "macro"
       ],
       "region": "national",
-      "title": "Zillow drops as profit view misses on legal, ad costs",
-      "link": "https://www.nationalmortgagenews.com/articles/zillow-drops-as-profit-view-misses-on-legal-ad-costs",
-      "description": "Earnings Zillow drops as profit view misses on legal, ad costs By Judy Lagrou Published May 07, 2026, 9:53 a.m. EDT 1 Min Read Facebook Twitter LinkedIn Email Zillow Group Inc. shares dropped as much as 9% in post-market trading on Wednesday after the company forecast second-quarter profit that missed Wall Street expectations, citing legal and advertising expenses and a flat housing market. Processing Content The online real estate marketplace sees second-quarter adjusted earnings before interest, taxes, depreciation and amortization in a range of $150 million to $165 million, missing the average analyst estimate of $191 million. It forecast revenue of $750 million to $765 million, with the midpoint below the consensus of $761.1 million. READ MORE: The highest paid mortgage executives in 2025 The results add to mixed signals from the US real estate market after March new-home sales rose faster than expected while homebuilders' sentiment fell to a seven-month low in April as the Middle East war pushed up mortgage rates, gas prices and materials costs. Industry peer Compass Inc. this week forecast stronger-than-expected quarterly revenue. \"2026 is off to a slower start than I think folks anticipated,\" Zillow Chief Financial Officer Jeremy Hofmann said in an interview. \"Our job is to execute and grow regardless of what the housing market does.\" Hofmann said separately on the company's earnings call that the \"housing market's been effectively flat. We're not planning for that to get better. It may, but we're not planning for it.\" The forecasts overshadowed an upbeat first quarter. The Seattle-based company posted an 18% year-on-year rise in revenue to $708 million, near the high end of its guidance and above the consensus for $705.2 million. First-quarter rentals revenue rose 42% from a year earlier to $183 million and mortgage revenue climbed 56% to $64 million, both beating Wall Street estimates. In March, Compass dropped its lawsuit against Zillow that sought to block Zillow from refusing to list homes that had been advertised elsewhere first. The stock fell 33% this year through Wednesday's close, compared with a 7.6% increase for the S P 500 index. Judy Lagrou Bloomberg News",
-      "published_at": 1778162030000,
-      "score": 19,
-      "tags": [
-        "housing",
-        "earnings",
-        "brokerage"
-      ],
-      "heat_signals": [
-        "mortgage rate",
-        "forecast",
-        "housing market"
-      ],
-      "importance": 4,
-      "selector_reason": "Zillow作为头部房产科技平台发布季度指引大幅低于预期，股价跌9%，反映住房市场疲软与法律成本压力，属于头部企业财报对行业有风向标意义。",
-      "section": "national",
-      "title_zh": "Zillow Q2 利润指引miss，盘后跌 9%",
-      "summary_zh": "法律与广告成本拖累， adjusted EBITDA 指引 $150-165M 低于共识 $191M，housing market 持续 flat",
-      "impact": "short-neg",
-      "id": "9eefac60",
-      "fetched_at": 1778226824013
-    },
-    {
-      "source_id": "realtor-research",
-      "source_name": "Realtor.com Research",
-      "source_tier": "B",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "data"
-      ],
-      "region": "national",
-      "title": "New-Construction Insights: Urban New Builds Are Scarce and Expensive",
-      "link": "https://www.realtor.com/research/new-construction-insights-2026q1/",
-      "description": "Affordability , Data , Economic Coverage , New Home Construction New-Construction Insights: Urban New Builds Are Scarce and Expensive By Joel Berner May 07, 2026 Home Construction Highlights New-construction prices are flat year over year, but existing-home prices are falling, driving up the new-construction premium nationally to 15.1%. New builds on the market saw price reductions at a higher rate than existing homes for a second quarter, reflecting demand weakness and active price management by builders to account for it. A vast majority of new builds are in suburban ZIP codes, though some metropolitan areas have over 50% of their new builds in urban areas. The new-construction premium is much higher in urban ZIP codes than in suburban ones, reflecting both the demand for new builds in those areas and the difficulty of delivering them. National overview The median listing price for new-construction homes dipped from the fourth quarter of 2025 into the first quarter of 2026, coming in at $449,373. The quarter-to-quarter decline was an expected seasonal shift, and the first quarterly readout of 2026 is actually right in line with where prices were one year ago at this time ($449,150). New-construction prices are flat, but existing-home prices are starting to fall in a noticeable way, down 0.9% year over year to $390,550. Existing-home prices are falling even as the number of existing homes for sale is starting to grow at its slowest pace in years, signaling some demand softness in this segment resulting from high mortgage rates and consumer uncertainty. New-construction inventory growth has held steady in the 5% to 9% range year over year, and existing-home inventory growth is slowing to match it. For the second quarter in a row , new homes on the market have had their prices reduced at a higher rate than existing homes. That this is occurring at the same time that prices overall for new construction have held steady suggests that builders are actively managing prices on their inventory, starting them higher and adjusting down to meet buyers where they are. This active price management has not added to time on the market, which has held constant (though at a higher level) for new construction even as the existing-home market’s pace continues to slow. The price per square foot, a measurement of the underlying value of homes for sale, is falling for both new construction and existing homes. The market had been showing the unusual result of price per square foot being higher for existing homes than for new homes for most of 2025, but the past two quarters have returned this measure to its expected territory with new homes commanding a higher price per square foot ($217) than existing homes ($216). The return to normalcy is due to a large drop ($5 per square foot) year over year in existing-home price per square foot coinciding with a smaller one for new homes ($1 per square foot). The slowdown in existing homes coming on the market and the retreat in existing-home prices have led to the share of new-construction listings on the market holding basically steady at 19.3% (compared to 19.4% last year at this time) and the new-construction premium increasing slightly to 15.1% (from 14.0% last year). In all, the market of new homes for sale has displayed exceptional stability in recent quarters and years, even as the existing-home market has been much more volatile. This all comes as builders face significant headwinds in terms of their growing costs of labor and materials and the affordability-constrained buyers they must compete with the existing-home segment over. Urbanicity analysis To better understand how the market for new homes compares to the market for existing homes, we take a closer look at where the homes are located. Namely, we categorize every ZIP code in the United States into one of four categories based on government designation for rural areas, the population density of the ZIP code, its membership in a major metropo",
-      "published_at": 1778148056000,
-      "score": 17,
+      "title": "Trump signs bill to expedite tribal mortgage lending",
+      "link": "https://www.nationalmortgagenews.com/news/trump-signs-bill-to-expedite-tribal-mortgage-lending",
+      "description": "Industry News Trump signs bill to expedite tribal mortgage lending By Spencer Lee CloseText About Spencer twitter Spencer_NYC linkedin spencer-lee-journo Published May 07, 2026, 4:42 p.m. EDT 2 Min Read Facebook Twitter LinkedIn Email President Trump signed new legislation this week aimed to facilitate mortgage lending and open up homeownership to members of Native American communities across the U.S. Processing Content Sponsored by members of South Dakota's congressional delegation, the Tribal Trust Land Homeownership Act sets new timelines for the review and processing of mortgage applications involving properties on reservations and other land overseen by the Bureau of Indian Affairs. \"For years, affordable housing opportunities on tribal trust land have been hard to come by in South Dakota and across the nation due in part to the BIA's challenging mortgage approval process,\" said Sen. John Thune, R-S.D., sponsor of the bill in Congress' upper chamber , in a press release. \"With the enactment of our legislation, this mortgage approval process will now be expedited, encouraging homeownership across Indian Country,\" he said. The bureaucracy surrounding obtaining mortgages on tribal trust land, which requires approval from BIA, frequently created delays for what \"is supposed to take 30 days but often takes over one year,\" according to Thune's counterpart, Sen. Mike Rounds, R-S.D. \"This is a long-overdue win for tribal communities in South Dakota,\" Rounds said. What is required in the new legislation With the new law in place, the Bureau of Indian Affairs will be required to adhere to the following timelines. Completion of the preliminary review of single-family mortgage packages within 10 days to ensure all necessary documents are in place. Notification to the lender of any missing documents in the mortgage-application package in no more than two subsequent days. Final approval or denial of the application by the bureau within 30 days. Processing of a certified title-status report , if not previously completed, within 10 days of mortgage approval. Any reason for delays to the mandated timelines will be sent from BIA to the applicant and their lender. The new act also establishes the newly created position of realty ombudsman within the bureau, to serve under the direction of the Secretary of the Interior. The ombudsman will be responsible for ensuring that all BIA regional offices meet the review and processing deadlines. In a review conducted by the Government Accountability Office in 2023, bureau officials cited staff shortages in some of its offices as a primary cause of inconsistencies in the time it took to successfully complete loan processing. Following publication of the review, the Department of the Interior made several recommendations, including updated training and oversight policies to track results that could shorten the time frames. Introduced last year, the Tribal Trust Land Homeownership Act passed unanimously in the Senate in December. The bill was subsequently approved by the House of Representatives in March this year. Native American homeownership advocacy groups, likewise, welcomed the new law after it became official upon President Trump's signing. \"By removing unnecessary bureaucratic delays, this bill helps unlock opportunity for Native families, strengthens pathways to homeownership and supports economic mobility in our communities,\" said National American Indian Housing Council executive director Rudy Soto. \"We look forward to continued collaboration to build on this momentum and ensure tribal housing is fully included in the broader national housing agenda,\" he concluded. Spencer Lee Technology Reporter Spencer Lee is a New York-based technology reporter at National Mortgage News, whose coverage area spans artificial intelligence, fintech platforms... Read full bio twitter linkedin",
+      "published_at": 1778186566000,
+      "score": 11,
       "tags": [
         "housing",
         "national",
-        "data",
-        "homebuilder"
+        "policy",
+        "regulator"
       ],
-      "heat_signals": [
-        "mortgage rate",
-        "year over year"
-      ],
-      "importance": 4,
-      "selector_reason": "Realtor.com官方研究揭示新建房溢价升至15.1%且城市新建房稀缺昂贵，属于关键市场结构性数据，对供需分析和政策制定有参考价值。",
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "联邦立法重大变动：特朗普签署部落信托土地住房所有权法案，简化原住民保留地抵押贷款审批流程，属于联邦层面的住房政策突破。imp=5因其为联邦立法且影响全国原住民社区住房可及性。",
       "section": "national",
-      "title_zh": "Urban new build 稀缺且溢价高，new-construction premium 达 15.1%",
-      "summary_zh": "新建房价格同比 flat，existing-home 价格跌 0.9%，builder 主动降价管理需求疲软",
-      "impact": "short-neg",
-      "id": "0c98904e",
-      "fetched_at": 1778226824013
+      "title_zh": "Trump 签署法案加速 tribal mortgage lending，BIA 审批时限收紧",
+      "summary_zh": "Tribal Trust Land Homeownership Act 将 BIA 抵押贷款审批从逾一年压缩至 30 天，利好 Native American 住房可及性",
+      "impact": "long-pos",
+      "id": "aa6c8b24",
+      "fetched_at": 1778227312548
     },
     {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
+      "source_id": "cnbc-realestate",
+      "source_name": "CNBC Realty Check",
       "source_tier": "A",
       "source_weight": 6,
       "source_tags": [
-        "housing"
+        "macro"
       ],
       "region": "national",
-      "title": "Mortgage Interest Rates Today: Rates Jump to 6.37% as Iran War Keeps Oil Prices Elevated",
-      "link": "https://www.realtor.com/news/trends/mortgage-interest-rates-now-may-7-2026/",
-      "description": "The average rate on 30-year fixed home loans increased to 6.37% for the week ending May 7 as the U.S.-Iran conflict dragged on.",
-      "published_at": 1778169600000,
-      "score": 12,
+      "title": "Mortgage rates hit the highest level in a month, causing first-time homebuyers to drop out",
+      "link": "https://www.cnbc.com/2026/05/06/mortgage-rates-hit-the-highest-level-in-a-month-causing-lower-income-homebuyers-to-drop-out.html",
+      "description": "Mortgage rates rose last week, causing loan demand to drop back and causing the average loan size to rise — indicating that lower-income borrowers dropped out.",
+      "published_at": 1778068993000,
+      "score": 10,
       "tags": [
         "housing",
         "national",
         "rates"
       ],
       "heat_signals": [
-        "30-year fixed"
+        "mortgage rate"
       ],
-      "importance": 4,
-      "selector_reason": "30年固定房贷利率跳升至6.37%且明确关联伊朗战争推升油价，属关键宏观利率指标，直接影响购房需求与再融资活动。",
+      "importance": 5,
+      "selector_reason": "关键宏观数据信号：抵押贷款利率升至月度最高，首次购房者退出市场，贷款需求下降且平均贷款规模上升，直接反映全国住宅市场利率敏感性和购买力分化。imp=5因属关键宏观市场拐点信号。",
       "section": "national",
-      "title_zh": "30Y mortgage rate 跳升至 6.37%，Iran 冲突推高油价",
-      "summary_zh": "地缘政治风险传导至 mortgage market，borrowing cost 上升压制 affordability",
+      "extended_window": true,
+      "title_zh": "30Y mortgage 升至月内高位，first-time 购房者掉队",
+      "summary_zh": "上周 mortgage rate 上行致 loan demand 回落，平均贷款额上升说明中低收入买家退出",
       "impact": "short-neg",
-      "id": "4c17e973",
-      "fetched_at": 1778226824013
+      "id": "59c0fe63",
+      "fetched_at": 1778227312548
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Iran War Helps Drive Residential Investor Sentiment To 3-Year Low",
+      "link": "https://www.bisnow.com/national/news/multifamily/survey-residential-investor-sentiment-plummets-3-year-low-134453",
+      "description": "Residential real estate investors are the most pessimistic they have been in three years, with fresh survey data showing sentiment sliding as geopolitical turmoil, weak home sales and rising costs squeeze the market.",
+      "published_at": 1778082279000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "national",
+        "trend",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "系统性市场情绪指标：伊朗战争推动住宅投资者情绪降至三年最低，地缘政治 turmoil、疲软销售和成本上升三重挤压，Bisnow A级信源的调查数据具有行业代表性。imp=5因系统性影响全国住宅投资。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Iran 战争拖累 residential investor sentiment 创三年新低",
+      "summary_zh": "地缘政治动荡叠加销售疲软与成本上升，investor sentiment 跌至 2023 年以来最悲观水平",
+      "impact": "short-neg",
+      "id": "16c04bbc",
+      "fetched_at": 1778227312548
     },
     {
       "source_id": "inman",
@@ -198,30 +160,56 @@
         "brokerage"
       ],
       "region": "national",
-      "title": "The Iran war has the Fed reconsidering rate hikes — and more divided than ever - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSmI3M01sN1dSUHJrZ0lNdkI5ZG94TVFLOGVDdHV3Z1ZlR1BOaXpfeFVVQnp4STRuN2NuMWRSUlRfNmpEaXpSOE9DNHlmam1pZ3pKT25YRXhwV3NfU0Juc0VadlpmZ1EwNTdXTTFBcm5adDdaTmh4ODU5Rms1RGVEVXZycVlDV19vNkVudi1RWk1HYUZpcU5tQnJZbUxUbFZWLWZBNHhXb2U1bUM2cmo4?oc=5",
-      "description": "The Iran war has the Fed reconsidering rate hikes — and more divided than ever &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1777932890000,
+      "title": "EXp just bought NextHome. Here’s what’s next - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWTdkS3hPT1VZdDJjOHVldkJrMndiSnpqYTdMN1RMQVBidkV4LUtZNV82VGJtYXE2dEtNZkU3SnVIVTNOUUQ0d3hWUWdSVnBKS0FXOHlqZzhPRm44N1NwTlAzT2VDVEtERUZ3QjNPdlFZUV9QNVh3cWZYa1BBZEdYYw?oc=5",
+      "description": "EXp just bought NextHome. Here’s what’s next &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1778176024000,
       "score": 12,
       "tags": [
-        "housing",
+        "brokerage",
         "national",
-        "macro",
-        "regulator"
+        "deals"
       ],
-      "heat_signals": [
-        "fed",
-        "rate hike"
-      ],
+      "heat_signals": [],
       "importance": 4,
-      "selector_reason": "美联储因伊朗战争重新考虑加息路径且内部分歧加剧，属系统性货币政策转向信号，对房地产融资成本有决定性影响。",
+      "selector_reason": "行业中等并购：eXp收购NextHome（500+加盟商），并更名为AGNT在纳斯达克交易，涉及上市平台战略转型和多模式扩张，交易规模虽 undisclosed 但平台意义重大。imp=4因大型行业并购及上市主体战略调整。",
+      "section": "national",
+      "title_zh": "eXp Realty 收购 NextHome，brokerage 整合再进一步",
+      "summary_zh": "eXp 完成 NextHome 收购，细节待披露，预计强化 franchise 网络与 agent 规模",
+      "impact": "neutral",
+      "id": "d2eea3bb",
+      "fetched_at": 1778227312548
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Compass earnings show scale of growth after buying Anywhere - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQX3ZvSUxEMzE3eXFpd1JXS0VENmVta2hwNjZNUVdRaGFJN0lCTUFzZGh0UGVTOHZlUklkNDVHQWFPYk5mN3hpSDJlcDFmaHItZnI4dU16TDdYRGtHNGRRdmUwZWI3RTEtQ3lRZThSdE1GOUNSaEx3enZoeDFlenZteTk1bS1oaDZYeURNeXRZOEdFR3U2akhMSUhWSkpyUVJ3YnpGYmE5YlNudGZaZk14bQ?oc=5",
+      "description": "Compass earnings show scale of growth after buying Anywhere &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1778027854000,
+      "score": 9,
+      "tags": [
+        "brokerage",
+        "national",
+        "earnings"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "头部企业财报：Compass收购Anywhere后的首份财报显示增长规模，涉及全国最大经纪平台之一的整合成效，对行业格局有指示意义。imp=4因头部企业并购后业绩验证。",
       "section": "national",
       "extended_window": true,
-      "title_zh": "Iran 战争令 Fed 重新考虑加息，内部分歧加剧",
-      "summary_zh": "FOMC 政策路径不确定性上升，rate cut 预期延后风险增加，housing 融资成本承压",
-      "impact": "short-neg",
-      "id": "e2bd9bc3",
-      "fetched_at": 1778226824013
+      "title_zh": "Compass 并购 Anywhere 后首份财报，规模效应显现",
+      "summary_zh": "Compass Q1 业绩展示 Anywhere 整合后的增长体量，具体数字待观察",
+      "impact": "neutral",
+      "id": "520e9dd4",
+      "fetched_at": 1778227312548
     },
     {
       "source_id": "rebusiness-online",
@@ -233,151 +221,223 @@
         "deals"
       ],
       "region": "national",
-      "title": "Walker &#038; Dunlop Arranges $79M Refinancing for Multifamily Property in Florida Panhandle",
-      "link": "https://rebusinessonline.com/walker-dunlop-arranges-79m-refinancing-for-multifamily-property-in-florida-panhandle/",
-      "description": "SANTA ROSA BEACH, FLA. — Walker &#38; Dunlop has arranged a $79 million loan for the refinancing of The Jewel at Santa Rosa Beach, a Class A, 408-unit apartment community in Florida’s Panhandle region. Jeremy Pino, Livingston Hessam, Carl Passmore, Kyle Miller, Keith Melton and David Strange of Walker &#38; Dunlop arranged the interest-only, nonrecourse bridge loan through an institutional debt fund on behalf of the borrower, Bristol Development Group. Located at 158 Malachite Way, The Jewel sits along US Highway 98 and three miles north of the popular 30A corridor. The property features one-,",
-      "published_at": 1778163312000,
+      "title": "PAGEWOOD Buys 14,000 SF Office, Retail Building in West Houston, Plans Redevelopment",
+      "link": "https://rebusinessonline.com/pagewood-buys-14000-sf-office-retail-building-in-west-houston-plans-redevelopment/",
+      "description": "Acquisitions Development Office Retail Texas PAGEWOOD Buys 14,000 SF Office, Retail Building in West Houston, Plans Redevelopment by Taylor Williams May 7, 2026 May 7, 2026 3 HOUSTON — PAGEWOOD has purchased a 14,000-square-foot office and retail building at 1440 Brittmoore Road in West Houston with plans to undertake a redevelopment. The local owner-operator plans to occupy 6,000 square feet within the building for its new headquarters and to tenant the remainder of the space with food-and-beverage and/or fitness concepts. The project, which will be known as The Outpost at Brittmoore, is expected to be complete in the fourth quarter. Share Facebook Twitter Linkedin Email previous post Franklin Street Arranges Sale of 12,705 SF Office Building in Pflugerville, Texas next post Balfour Beatty Signs 35,139 SF Office Lease at Victory Park in Dallas You may also like High Street, Tokyu Break Ground on 281-Unit Multifamily... May 7, 2026 Balfour Beatty Signs 35,139 SF Office Lease at... May 7, 2026 Franklin Street Arranges Sale of 12,705 SF Office... May 7, 2026 Continental Realty Acquires 14-Property Shopping Center Portfolio in... May 7, 2026 Crescent, Stockbridge Capital Break Ground on 277-Unit Apartment... May 7, 2026 JLL Negotiates Sale of 557-Unit Self-Storage Facility in... May 7, 2026 Marcus Millichap Brokers $16.5M Sale of Upper... May 7, 2026 Marx Realty Underway on 58,000 SF Retail Expansion... May 7, 2026 Betches Media Signs 23,038 SF Office Lease in... May 7, 2026",
+      "published_at": 1778164534000,
+      "score": 13,
+      "tags": [
+        "mixed-asset",
+        "houston",
+        "deals",
+        "developer"
+      ],
+      "heat_signals": [
+        "texas",
+        "houston",
+        "dallas"
+      ],
+      "importance": 2,
+      "selector_reason": "小型CRE交易：PAGEWOOD购买1.4万SF休斯顿西办公零售建筑计划再开发，A级信源但规模小。imp=2因小型本地交易，作为Sun Belt CRE补充覆盖。",
+      "section": "sunbelt",
+      "title_zh": "PAGEWOOD 收购 Houston 14K SF 混合物业，计划 redevelopment",
+      "summary_zh": "West Houston office/retail 资产将改造为总部+餐饮健身空间，Q4 完工，自用比例约 43%",
+      "impact": "long-pos",
+      "id": "2b698fe8",
+      "fetched_at": 1778227312548
+    },
+    {
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "UDR becomes first REIT to go to a monthly dividend",
+      "link": "https://www.multifamilydive.com/news/apartment-reit-earnings-multifamily-supply/819237/",
+      "description": "The Colorado REIT saw conditions in the Sun Belt deteriorate in April, as it looks to add properties in Portland, Oregon.",
+      "published_at": 1777917519000,
       "score": 10,
       "tags": [
         "multifamily",
-        "florida",
-        "deals",
-        "lender"
+        "sun-belt",
+        "earnings",
+        "institutional"
       ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "Walker & Dunlop安排7900万美元多户型再融资，属中型贷款交易，反映佛罗里达Panhandle地区公寓资本化运作。",
+      "heat_signals": [
+        "sun belt"
+      ],
+      "importance": 4,
+      "selector_reason": "头部REIT创新：UDR成为首家实行月度分红的REIT，同时披露Sun Belt市场4月恶化及波特兰扩张计划，兼具财务创新和市场区域转向信号。imp=4因REIT首创性分红政策及Sun Belt拐点预警。",
       "section": "sunbelt",
-      "title_zh": "Walker & Dunlop 为 Florida Panhandle multifamily 安排 $79M refi",
-      "summary_zh": "Class A 公寓社区获 institutional debt fund 过桥贷款，Sun Belt 租赁资产仍获资本青睐",
-      "impact": "long-pos",
-      "id": "ad1c2e29",
-      "fetched_at": 1778226824013
+      "extended_window": true,
+      "title_zh": "UDR 首创 REIT 月度派息，Sun Belt 4 月景气恶化",
+      "summary_zh": "Sun Belt multifamily 供需承压，UDR 转月度 dividend 并寻求 Portland 扩张以分散风险",
+      "impact": "short-neg",
+      "id": "5da14409",
+      "fetched_at": 1778227312548
     },
     {
-      "source_id": "bisnow",
-      "source_name": "Bisnow",
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
       "source_tier": "A",
-      "source_weight": 8,
+      "source_weight": 6,
       "source_tags": [
         "mixed-asset",
         "deals"
       ],
       "region": "national",
-      "title": "AT&T To More Than Double Footprint With $1.4B HQ In Dallas Suburb",
-      "link": "https://www.bisnow.com/dallas-ft-worth/news/office/att-to-more-than-double-its-building-space-at-14b-hq-in-dallas-suburb-134432",
-      "description": "AT&T’s new $1.35B global headquarters in Plano is set to have more than twice the amount of space of its current 1M SF Whitacre Tower building in Downtown Dallas.",
-      "published_at": 1778002489000,
+      "title": "Crescent, Stockbridge Capital Break Ground on 277-Unit Apartment Development in West Nashville",
+      "link": "https://rebusinessonline.com/crescent-stockbridge-capital-break-ground-on-277-unit-apartment-development-in-west-nashville/",
+      "description": "NASHVILLE, TENN. — Crescent Communities has broken ground on NOVEL Richland Creek, a 277-unit multifamily development located in west Nashville. The Charlotte-based firm is co-developing the community with San Francisco-based Stockbridge Capital Group, which owns the adjacent Lion’s Head Village, a shopping center anchored by Trader Joe’s. Designed by KTGY, NOVEL Richland Creek will feature studio, one-, two- and three-bedroom apartments, as well as 4,800 square feet of retail space and direct trailhead access to the Richland Creek Greenway. Amenities will include a lobby with a café and wine ",
+      "published_at": 1778163461000,
       "score": 10,
       "tags": [
+        "multifamily",
+        "nashville",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "区域市场动态：Crescent与Stockbridge在纳什维尔西区分阶段开发277单元公寓，含零售及绿道接入，反映Sun Belt（田纳西）多户开发持续活跃。imp=3因中型开发项目的区域市场指示。",
+      "section": "sunbelt",
+      "title_zh": "Crescent 与 Stockbridge Capital 启动 Nashville 277-unit 公寓开发",
+      "summary_zh": "NOVEL Richland Creek 毗邻 Trader Joe's  anchored retail，含 4,800 SF 零售及 greenway 直通",
+      "impact": "long-pos",
+      "id": "0ee35985",
+      "fetched_at": 1778227312548
+    },
+    {
+      "source_id": "lance-lambert",
+      "source_name": "Lance Lambert / ResiClub",
+      "source_tier": "B",
+      "source_weight": 10,
+      "source_tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Lance Lambert: Florida homebuilders see stabilization and sales growth in Q126 - Traders Union",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSF9idlAzbmF5Z2VNenhUSHZCY1FGUU1xQzBLVDlYRnNxOXVSVXBaMVN5OTB4Z0ZSaFJvU2VrWGZkR0g2bUpQY0UyQXlxY05icG1IbWF5X1F5X0wwbld2R28taHllRHU4ek9ta1pqbXVfcVpLUl9fc2JoMlJSOXdXUVUyRFFIVEZwRVlQVU1n?oc=5",
+      "description": "Lance Lambert: Florida homebuilders see stabilization and sales growth in Q126 &nbsp;&nbsp; Traders Union",
+      "published_at": 1777897509000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "florida",
+        "trend",
+        "homebuilder"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "Sun Belt住宅市场：佛罗里达建筑商Q1销售企稳增长，ResiClub B级信源，反映Sun Belt关键州住宅市场底部信号。imp=3因区域住宅趋势数据。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "Florida homebuilder Q1 销售企稳回升",
+      "summary_zh": "Lance Lambert 数据显示 Florida 住宅市场 stabilization 与销售增长并行，builder 信心修复",
+      "impact": "long-pos",
+      "id": "a1272d8e",
+      "fetched_at": 1778227312548
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Newmark Brokers $28M Sale of Office Building in Herndon, Virginia",
+      "link": "https://rebusinessonline.com/newmark-brokers-28m-sale-of-office-building-in-herndon-virginia/",
+      "description": "HERNDON, VA. — Newmark has brokered the approximately $28 million sale of Monument III, a nearly 200,000-square-foot office building located in Herndon, a city in Northern Virginia’s Dulles Technology Corridor. New York City-based Crown Properties purchased the building from Santander Bank. Jud Ryan, James Cassidy and Grant Marley of Newmark represented the seller in the transaction. Joe Donato and Andrew Asbill, also with Newmark, secured acquisition financing for Crown Properties. The buyer has tapped Andy Klaff, Stephen Hoffeditz, Dominic Orcino, Debbie Cross and Wes Evans of Newmark to ove",
+      "published_at": 1778162573000,
+      "score": 12,
+      "tags": [
         "office",
-        "dfw",
+        "national",
         "deals"
       ],
       "heat_signals": [
-        "dallas"
+        "fed"
       ],
       "importance": 4,
-      "selector_reason": "AT&T 13.5亿美元新建达拉斯总部且面积翻倍，属大型企业房地产资本支出决策，对达拉斯办公市场有显著拉动效应。",
+      "selector_reason": "单deal接近$200M：Newmark促成$2800万Herndon办公楼交易，位于北弗吉尼亚Dulles科技走廊，涉及Crown Properties收购及Santander出售，A级信源。imp=4因大型CRE交易及科技走廊区位重要性。",
       "section": "cre",
-      "extended_window": true,
-      "title_zh": "AT&T $1.35B Plano 新总部面积翻倍于 Dallas 现有楼宇",
-      "summary_zh": "企业总部迁移 DFW suburb，1M+ SF 新增 office demand，suburban CRE 获长期 anchor tenant",
-      "impact": "long-pos",
-      "id": "bdcdbb42",
-      "fetched_at": 1778226824013,
+      "title_zh": "Newmark 促成 Virginia Herndon $28M office 交易",
+      "summary_zh": "Crown Properties 购入 Dulles Technology Corridor 近 200K SF Monument III，Newmark 包办经纪与融资",
+      "impact": "neutral",
+      "id": "b863d70a",
+      "fetched_at": 1778227312548,
       "cre_subcategory": "办公"
     },
     {
-      "source_id": "connect-cre",
-      "source_name": "Connect CRE",
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
       "source_tier": "A",
-      "source_weight": 7,
+      "source_weight": 9,
       "source_tags": [
-        "mixed-asset",
-        "deals"
+        "multifamily"
       ],
       "region": "national",
-      "title": "Newmark Represents Anheuser-Busch in $360M Sale of Former Newark Complex",
-      "link": "https://www.connectcre.com/stories/newmark-represents-anheuser-busch-in-360m-sale-of-former-newark-complex/",
-      "description": "Newmark Group advised Anheuser-Busch in the $360-million sale of its former facility in Newark, NJ, to Goodman Group, a global leader in industrial real estate ownership and development. The beverage giant closed the 75-year-old facility in January. Executive vice chairman Adam Doneger and executive managing director Adam Petrillo served as exclusive advisors to Anheuser-Busch. Executive managing director Avery ... The post Newmark Represents Anheuser-Busch in $360M Sale of Former Newark Complex appeared first on Connect CRE .",
-      "published_at": 1778186934000,
-      "score": 11,
+      "title": "Essex posts positive Q1 with strength in Northern California",
+      "link": "https://www.multifamilydive.com/news/essex-earnings-q1-2026-west-coast/819355/",
+      "description": "The San Mateo-based REIT benefitted from low apartment supply and high demand stemming from the San Francisco area&rsquo;s AI-related boom.",
+      "published_at": 1778006880000,
+      "score": 10,
       "tags": [
-        "industrial",
+        "multifamily",
+        "california",
+        "earnings",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "头部REIT财报：Essex Q1业绩向好，受益于北加州低供应和AI相关需求 boom，反映科技驱动下的区域多户市场分化，A级信源Multifamily Dive。imp=4因头部REIT财报及科技-住房联动信号。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "Essex Q1 业绩向好，Northern California AI 需求拉动",
+      "summary_zh": "San Mateo-based REIT 受益于 San Francisco 湾区低供给及 AI 产业 boom 带来的 apartment demand",
+      "impact": "long-pos",
+      "id": "608bede0",
+      "fetched_at": 1778227312548,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "‘Shark Tank’ Star Kevin O’Leary Defends Massive Military Data Center Project in Utah",
+      "link": "https://www.realtor.com/news/real-estate-news/shark-tank-kevin-oleary-utah-data-center-box-elder/",
+      "description": "The serial entrepreneur and crypto investor is behind the largest planned data center in the U.S.—and some locals aren't happy.",
+      "published_at": 1778194453000,
+      "score": 10,
+      "tags": [
+        "data-center",
+        "national",
         "deals",
         "institutional"
       ],
       "heat_signals": [],
       "importance": 4,
-      "selector_reason": "Newmark促成Anheuser-Busch 3.6亿美元出售纽瓦克工业综合体，属大型工业地产交易，反映制造业资产剥离与物流地产需求。",
+      "selector_reason": "大型数据中心项目：Kevin O'Leary在犹他州计划建设美国最大数据中心，涉及军事用途及地方争议，Realtor.com A级信源，属CRE关键基础设施领域。imp=4因大型国家级基础设施项目及政策敏感性。",
       "section": "cre",
-      "title_zh": "Newmark 代理 Anheuser-Busch $360M Newark 工业资产出售",
-      "summary_zh": "75 年老厂关闭后转售 Goodman Group，industrial redevelopment 价值释放，Newmark 获大额佣金",
+      "title_zh": "Kevin O'Leary 为 Utah 巨型 military data center 辩护",
+      "summary_zh": "拟建美国最大 data center 遭 local 反对，O'Leary 坚持推进，具体影响待观察",
       "impact": "neutral",
-      "id": "e646245e",
-      "fetched_at": 1778226824013,
-      "cre_subcategory": null
-    },
-    {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "housing"
-      ],
-      "region": "national",
-      "title": "Mamdani’s Rent Freeze Faces First Major Test in Preliminary Rent Guidelines Board Vote",
-      "link": "https://www.realtor.com/news/trends/mamdani-rent-freeze-rent-guidelines-board-prelim-vote/",
-      "description": "NYC’s rent board will vote on early rent guidelines, testing Mamdani’s freeze as small owners warn older buildings face rising costs.",
-      "published_at": 1778187705000,
-      "score": 10,
-      "tags": [
-        "multifamily",
-        "nyc",
-        "policy",
-        "landlord"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "纽约市租金冻结提案面临首次关键投票，属重要地方监管政策测试，对全国最大租赁市场有示范效应。",
-      "section": "cre",
-      "title_zh": "NYC 租金指导委员会初步投票，Mamdani 租金冻结面临首考",
-      "summary_zh": "small owners 警告老旧建筑成本上升，rent control 政策若通过将压缩 landlord NOI",
-      "impact": "short-neg",
-      "id": "8df27e2f",
-      "fetched_at": 1778226824013,
-      "cre_subcategory": null
-    },
-    {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "housing"
-      ],
-      "region": "national",
-      "title": "The World Cup Rental Surge Spawns Fears of Squatter Scams",
-      "link": "https://www.realtor.com/news/trends/world-cup-rental-boom-squatter-scams/",
-      "description": "The FIFA 2026 World Cup is driving a massive surge in short-term rentals. But advisories are emerging about professional squatters scams.",
-      "published_at": 1778174120000,
-      "score": 10,
-      "tags": [
-        "hotel",
-        "trend"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "2026世界杯催生短租热潮与专业占屋诈骗风险，属大型事件驱动的住房市场衍生风险预警。",
-      "section": "cre",
-      "title_zh": "2026 World Cup 短租 surge 催生 squatter scam 风险",
-      "summary_zh": "短期租赁需求激增但监管滞后，professional squatter 威胁 landlord 现金流与资产安全",
-      "impact": "short-neg",
-      "id": "8a761c54",
-      "fetched_at": 1778226824013,
-      "cre_subcategory": null
+      "id": "f42e479d",
+      "fetched_at": 1778227312548,
+      "cre_subcategory": "数据中心"
     },
     {
       "source_id": "rebusiness-online",
@@ -389,26 +449,27 @@
         "deals"
       ],
       "region": "national",
-      "title": "Continental Realty Acquires 14-Property Shopping Center Portfolio in Southeast, Midwest",
-      "link": "https://rebusinessonline.com/continental-realty-acquires-14-property-shopping-center-portfolio-in-southeast-midwest/",
-      "description": "BALTIMORE AND HILLARD, OHIO — Continental Realty Corp. has purchased a 14-property shopping center portfolio spread across seven states in the Southeast and Midwest. The Baltimore-based firm purchased the more than 2 million-square-foot portfolio from Hillard-based US Properties Group Inc. for an undisclosed price. Chris Decoufle and Kevin Hurley of CBRE represented the seller in the off-market transaction. The acquisition grows Continental Realty’s holdings to nearly $5 billion in assets under management and expands its geographic footprint to 16 states, including its entry into Ohio. The por",
-      "published_at": 1778163728000,
+      "title": "Lincoln Breaks Ground on Office-to-Industrial Redevelopment Near Phoenix Sky Harbor Airport",
+      "link": "https://rebusinessonline.com/lincoln-breaks-ground-on-office-to-industrial-redevelopment-near-phoenix-sky-harbor-airport/",
+      "description": "TEMPE, ARIZ. — Lincoln Property Co. has broken ground on Sky Harbor Logistics, an office-to-industrial conversion project in Tempe. Located at 1515 W. 14th St., the development will bring two Class A logistics buildings to the Phoenix Sky Harbor International Airport submarket. Lincoln has been active on the Sky Harbor Logistics site since 2024, managing the demolition of an almost 220,000-square-foot office building and parking garage to make the parcel shovel-ready. The infill site was originally developed as an industrial property in 1977 and converted to office use in 2018. Upon completion",
+      "published_at": 1778162037000,
       "score": 10,
       "tags": [
-        "retail",
-        "deals",
-        "institutional"
+        "industrial",
+        "phoenix",
+        "construction",
+        "developer"
       ],
       "heat_signals": [],
       "importance": 3,
-      "selector_reason": "Continental Realty收购14物业超200万平方英尺零售组合，资产规模接近中型门槛，属区域零售地产整合动态。",
+      "selector_reason": "CRE类型转换趋势：Lincoln在凤凰城Sky Harbor机场附近启动办公转工业项目，拆毁22万SF办公楼建物流设施，反映办公过剩与工业需求结构性调整。imp=3因办公-工业转换的典型趋势案例。",
       "section": "cre",
-      "title_zh": "Continental Realty 收购 14 处购物中心，AUM 近 $50 亿",
-      "summary_zh": "2M+ SF 跨区域 retail portfolio  off-market 交易，Southeast/Midwest 零售资产获 institutional capital 配置",
+      "title_zh": "Lincoln 启动 Phoenix Sky Harbor office-to-industrial 改造",
+      "summary_zh": "Tempe 220K SF 原 office 拆除后建两栋 Class A logistics，回归 1977 年工业用途本质",
       "impact": "long-pos",
-      "id": "e5fb0bed",
-      "fetched_at": 1778226824013,
-      "cre_subcategory": null
+      "id": "97c8420f",
+      "fetched_at": 1778227312548,
+      "cre_subcategory": "工业"
     },
     {
       "source_id": "bisnow",
@@ -420,25 +481,60 @@
         "deals"
       ],
       "region": "national",
-      "title": "Duke Of Westminster's Firm To Sell U.S. Real Estate Portfolio",
-      "link": "https://www.bisnow.com/national/news/capital-markets/duke-of-westminster-firm-to-sell-us-portfolio-134482",
-      "description": "News Duke Of Westminster's Firm To Sell U.S. Real Estate Portfolio National Capital Markets View count: National Capital Markets May 07, 2026 | 1:24 p.m. ET Jarred Schenke, Atlanta The British property company owned by the Duke of Westminster plans to sell $954M worth of holdings as it shifts away from direct real estate ownership in the U.S. Google Maps 394 Pacific Ave. in San Francisco Grosvenor Group Holdings Ltd., which controls nearly $13B in assets globally, will put its U.S. real estate portfolio up for sale over the next few years, Bloomberg reported . The group will instead focus on direct investments in Europe and joint venture investments in the U.S. and beyond. The move comes after the group recorded about a $147M loss in North America last year. “In a challenging year for global real estate, our international property performance reflected diverging market conditions, with a strong UK performance helping to offset weakness in North America,” Grosvenor CEO James Raynor told Bloomberg. In contrast, Grosvenor’s UK properties generated more than $120M in 2025, according to Bloomberg, driven by strong retail, office and residential performance with properties in London’s West End. Raynor said the firm plans to sell its directly owned U.S. holdings over the next three to five years and refocus on investment partnerships, the Financial Times reported . About 40% of Grosvenor’s U.S. investments are made through partnerships, according to the FT. Earlier this week, Grosvenor sold 394 Pacific Ave., a 54,700 SF office building in San Francisco’s Jackson Square, to a division of Swiss insurer Zurich for $32.8M, The Real Deal reported . Grosvenor paid $32.3M for the property in 2016. Grosvenor is owned by Hugh Grosvenor, the 35-year-old seventh Duke of Westminster, who himself has a net worth of more than $12.7B, according to Bloomberg. Founded in 1677, Grosvenor helped to develop properties in London neighborhoods such as Mayfair, Belgravia and Pimlico. The firm also announced this week that it secured a 196K SF lease across a dozen floors of 1701 Pennsylvania Ave. NW in Washington, D.C., to global law firm White Case. The firm is set to take over 94% of the 1960s-era building once a two-year renovation project is complete. Contact Jarred Schenke at jarred@bisnow.com Related Topics: Grosvenor Group , Jackson Square , Grosvenor , Duke of Westminster , Hugh Grosvenor , Zurich , James Raynor , 394 Pacific Ave.",
-      "published_at": 1778170264000,
-      "score": 12,
+      "title": "Cousins, Piedmont Tout Rebounded Office Demand In Sun Belt",
+      "link": "https://www.bisnow.com/atlanta/news/office/cousins-sees-a-reacceleration-of-corporate-in-migration-to-sun-belt-134447",
+      "description": "Corporate in-migration into the Sun Belt has picked up steam again as the largest office landlord in Metro Atlanta reports it has more than 1M SF in the pipeline in potential lease deals.",
+      "published_at": 1778023986000,
+      "score": 10,
       "tags": [
-        "mixed-asset",
-        "deals",
+        "office",
+        "sun-belt",
+        "trend",
+        "institutional"
+      ],
+      "heat_signals": [
+        "sun belt"
+      ],
+      "importance": 3,
+      "selector_reason": "Sun Belt办公需求信号：Cousins和Piedmont报告亚特兰大超100万SF潜在租约管道，Sun Belt企业迁入加速，A级信源Bisnow。imp=3因Sun Belt办公市场回暖的区域拐点信号。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "Cousins、Piedmont 称 Sun Belt office demand 反弹",
+      "summary_zh": "Metro Atlanta 最大 office landlord  pipeline 超 1M SF 潜在租约，corporate in-migration 重加速",
+      "impact": "long-pos",
+      "id": "17a6ceaf",
+      "fetched_at": 1778227312548,
+      "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "cnbc-realestate",
+      "source_name": "CNBC Realty Check",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "macro"
+      ],
+      "region": "national",
+      "title": "How startup Propy is deploying $100 million to put real estate deals on the blockchain",
+      "link": "https://www.cnbc.com/2026/05/07/startup-propy-real-estate-deals-blockchain.html",
+      "description": "A version of this article first appeared in the CNBC Property Play newsletter with Diana Olick. Property Play covers new and evolving opportunities for the real estate investor, from individuals to venture capitalists, private equity funds, family offices, institutional investors and large public companies. Sign up to receive future editions, straight to your inbox. Anyone who has bought or sold a home knows how long and tedious the closing process can be. It involves antiquated paperwork requiring multiple signatures from various parties, disclosures and a heap of compliance forms. Some of the process has been digitized, but mostly not. One remedy is emerging: put it all on the blockchain. Propy, a Miami-based blockchain technology company that launched in 2017, has been trying to modernize the closing process and recently got a big financial boost to do it. In late January, Propy announced it had secured a $100 million credit facility from Metropolitan Partners Group, a private investment firm. The money would be used, it said, to consolidate title and escrow companies into an artificial intelligence-powered, end-to-end closing platform. We have this conviction that blockchain is the next phenomenon after the internet, said Natalia Karayaneva, founder and CEO of Propy. The internet moved information, blockchain will move value. It already is moving money. It&#x27;s moving Treasurys. However, the real estate industry is still behind. That&#x27;s primarily because the industry doesn&#x27;t exactly understand blockchain, Karayaneva said. Blockchain is like a massive, shared, digital filing cabinet that no one person can control. Things that are recorded on the blockchain cannot be altered. This technology allows us to record deeds and transactions, and it&#x27;s impossible to change this data, Karayaneva said. It allows us to be a fraudless system. As of now Propy has purchased four established title companies, but the transition is not easy. Those title companies have a very big fear of AI, and when we acquire them, we have this in-person training both on AI and blockchain and cryptocurrency. We have established courses and training for those escrow officers on how to do transactions, but once they understand, the transaction happens on its own, Karayaneva said. She noted closings that once took weeks can now take just a few hours. When Propy receives a signed purchase agreement for a property, whether it&#x27;s from REITs, a real estate developer or a Realtor, its AI extracts the data – purchase agreement, address, all the contingencies, all the conditions – and then a smart contract on blockchain starts. We do it through our fintech solutions, but then the blockchain immediately gets this data on the public blockchain, Karayaneva said. Meet Avery Propy is also using its new funding to develop an AI agent to help facilitate deals. The agent, named Avery, responds directly to clients at any time, explaining how Propy works and what the AI does. Avery even has an Instagram account. Avery checks emails and transactions constantly, extracts all the data points, and then feeds it all into a smart contract platform. The agent can also make calls. She is an escrow officer that never sleeps, said Karayaneva, noting that some clients don&#x27;t even realize it&#x27;s not a human. It&#x27;s an omnichannel communication where she can communicate with our buyers, sellers, with REITs, institutional clients, and with vendors, such as ordering mortgage payouts from vendors. The GENIUS Act A major milestone for blockchain technology came last year with the passage of the GENIUS Act, which gave it what Karayaneva calls, legitimacy. It created rules for stablecoins, which are cryptocurrencies tied to the U.S. dollar. It mandated that companies issuing these coins, which are transferred on the blockchain, must actually hold real dollars or safe assets behind them. Real estate developers and REITs started to reach out to Propy, because we&#x27;v",
+      "published_at": 1778169456000,
+      "score": 10,
+      "tags": [
+        "brokerage",
+        "national",
+        "tech-adoption",
         "institutional"
       ],
       "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Grosvenor集团出售9.54亿美元美国资产并退出直接所有权，属大型国际资本配置转向，反映北美商业地产吸引力下降的全球资本信号。",
+      "importance": 3,
+      "selector_reason": "机构资本/PropTech：Propy获$1亿信贷额度部署区块链房产交易，CNBC A级信源，属机构资本支持房地产科技创新。imp=3因机构资本大额投入PropTech。",
       "section": "institutional",
-      "title_zh": "Duke of Westminster 旗下 Grosvenor 拟出售 $954M 美国地产组合",
-      "summary_zh": "North America 去年亏损 $147M，未来 3-5 年退出 direct ownership 转 JV 模式，美资产抛压增加",
-      "impact": "short-neg",
-      "id": "a165d751",
-      "fetched_at": 1778226824013
+      "title_zh": "Propy 获 $100M 授信，推动 real estate closing 上链",
+      "summary_zh": "区块链公司整合 title/escrow 为 AI 驱动端到端平台，real estate 交易数字化仍处早期",
+      "impact": "neutral",
+      "id": "bfff1b86",
+      "fetched_at": 1778227312548
     },
     {
       "source_id": "pere-news",
@@ -451,86 +547,124 @@
         "trend"
       ],
       "region": "national",
-      "title": "Blueprint: Blue Owl’s net lease equity haul; private real estate compensation survey; Ares’ Q1 fundraising",
-      "link": "https://www.perenews.com/blueprint-blue-owls-net-lease-equity-haul-private-real-estate-compensation-survey-ares-q1-fundraising/",
-      "description": "Blue Owl reported gathering $3 billion in equity for its net lease strategy, accounting for three-quarters of its Q1 real estate equity raised; private real estate compensation is rebounding with chief financial officer roles at operational platforms seeing highest growth rate among categories. Elsewhere, Ares Management is on track to achieve a record fundraising year, locking $5 billion of equity and debt commitments for real estate in the first quarter; and more in today’s digest, exclusively for our valued subscribers.",
-      "published_at": 1778083077000,
-      "score": 12,
+      "title": "2910 North Arthur Ashe Boulevard: Richmond former Greyhound bus station set for multifamily transformation",
+      "link": "https://www.perenews.com/2910-north-arthur-ashe-boulevard-richmond-former-greyhound-bus-station-set-for-multifamily-transformation/",
+      "description": "Featured 2910 North Arthur Ashe Boulevard: Richmond former Greyhound bus station set for multifamily transformation The former Greyhound bus station is being transformed into a multifamily community with added retail space. McKenna Leavens - 1 day ago Share A - A + 100% PERE Create an account to continue reading Expert intelligence on the funds, deals and trends shaping global private real estate. CREATE AN ACCOUNT SIGN IN TAGS Retail North America Residential Share this Twitter Linkedin McKenna Leavens",
+      "published_at": 1778115655000,
+      "score": 18,
       "tags": [
-        "mixed-asset",
-        "fundraising",
-        "institutional"
+        "institutional",
+        "deals",
+        "trend",
+        "multifamily"
       ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Blue Owl单季度净租赁策略募资30亿美元、Ares房地产募资50亿美元，均属大型基金巨额募资，反映机构资本对特定赛道的配置意愿。",
+      "heat_signals": [
+        "trend",
+        "trends"
+      ],
+      "importance": 3,
+      "_from_fallback": true,
       "section": "institutional",
-      "extended_window": true,
-      "title_zh": "Blue Owl net lease 募资 $30 亿，Ares Q1 锁定 $50 亿",
-      "summary_zh": "private real estate 募资回暖，CFO 薪酬反弹，institutional capital 向 operational platform 集中",
+      "title_zh": "Richmond 原 Greyhound 车站改造为 multifamily 社区",
+      "summary_zh": "2910 North Arthur Ashe Boulevard 项目含零售空间，adaptive reuse 趋势延续，细节待披露",
       "impact": "long-pos",
-      "id": "e692d4fb",
-      "fetched_at": 1778226824013
+      "id": "39daf6f3",
+      "fetched_at": 1778227312548
     },
     {
-      "source_id": "national-mortgage-news",
-      "source_name": "National Mortgage News",
+      "source_id": "inman",
+      "source_name": "Inman News",
       "source_tier": "A",
-      "source_weight": 7,
+      "source_weight": 8,
       "source_tags": [
-        "rates",
-        "macro"
+        "housing",
+        "brokerage"
       ],
       "region": "national",
-      "title": "Carrington to acquire Valon Mortgage, use fintech's software",
-      "link": "https://www.nationalmortgagenews.com/news/carrington-to-acquire-valon-mortgage-use-fintechs-software",
-      "description": "M A Carrington to acquire Valon Mortgage, use fintech&#x27;s software By Andrew Martinez CloseText About Andrew twitter andrewomartinez mailto andrew.martinez@arizent.com linkedin andrewomartinez Published May 07, 2026, 4:46 p.m. EDT 2 Min Read Facebook Twitter LinkedIn Email Carrington Mortgage Services will acquire Valon Mortgage and adopt the fintech's servicing software to handle its book of Ginnie Mae loans, the firms said Thursday. Processing Content The deal will expand Carrington's servicing portfolio by around 800,000 loans, according to a press release, marking yet another major industry play for servicing. Carrington said it's buying Valon Mortgage in collaboration with an unnamed private equity partner. The announcement was first reported by Housingwire . Valon meanwhile suggested it will no longer service loans following the deal. \"This transaction is structured to let us do what we always intended: go all-in as a technology company,\" said Linda Du, president and co-founder of Valon, in a statement. \"We're not exiting the mortgage industry. We're choosing to power it.\" The fintech's portfolio, composed mostly of loans which Valon subservices, represents approximately $197 billion in unpaid principal balance, a spokesperson for the company confirmed to National Mortgage News. In making the deal, Carrington said it wanted to grow its servicing book, and it lauded the ValonOS software to handle the servicing of complex government loans . \"We've seen what Valon has accomplished in a remarkably short period of time, and we believe they represent the future of Ginnie Mae servicing technology,\" said Andrew Taffet, CEO of The Carrington Companies, in a press release. Making moves Carrington said Valon's artificial intelligence-powered servicing software will lessen manual reconciliation and deliver faster borrower resolution. Valon has raised $290 million in venture capital since it was founded in 2019. Rithm Capital took a minority stake in the company earlier this year, and the Newrez parent said it would implement ValonOS next year . The Southern California-based Carrington is a large multichannel lender, and recently added consumer direct operations with its acquisition of Reliance First Capital . It claimed earlier this year to hold over $200 billion in unpaid principal balance from over 1 million customers. Terms of the Carrington deal for Valon Mortgage were undisclosed. Mortgage giants have an increasing appetite for servicing rights , and the industry's biggest firms have spent billions of dollars in the past year to expand their books. Rocket Cos. paid over $14 billion for Mr. Cooper last year, while United Wholesale Mortgage has recently made multiple bids to compete with CrossCountry Mortgage for Two Harbors . Andrew Martinez Reporter Andrew Martinez joined National Mortgage News in January 2022. He previously worked at Bisnow, covering commercial real estate news in the Boston... Read full bio twitter mailto linkedin",
-      "published_at": 1778186793000,
+      "title": "This Spring Is Bringing More Buyers But Fewer Bidding Wars: Redfin - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBrY1VmbmhuaVVETEZneWt0U0hFY2E3S3RuVmxUZjBPdjdOb3MxemFJRGFsVXlhQ2JQSmRnOXVybGU3bjZLMWlLZmZtNkxSbnZhS19WQXhhcWt3ZHozMUMxWTh4RGF2b1luUVdNTWs0enphcnc?oc=5",
+      "description": "This Spring Is Bringing More Buyers But Fewer Bidding Wars: Redfin &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1778186284000,
+      "score": 12,
+      "tags": [
+        "housing",
+        "national",
+        "trend",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "全国住宅市场动态：Redfin数据显示春季买家增多但竞价战减少，反映全国住宅市场供需再平衡，Inman A级信源。imp=3因全国性市场行为趋势。",
+      "section": "national",
+      "title_zh": "Redfin：今春买家增多但 bidding war 减少",
+      "summary_zh": "春季市场活跃度上升而竞争缓和，买家议价空间改善，价格压力边际降温",
+      "impact": "neutral",
+      "id": "198c3231",
+      "fetched_at": 1778227312548
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Rocket grew market share amid 'wild ride' during Q1, Krishna says - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMVBFVVExRktWWnVtN3Z3dEFtUmFzUjNiY0NSWHhGYWROZmVZLXpGazJuTGk1dmMtNWpzQVdKYUphbXV4dE14aTFmV09TRjNHYUhYWnZuVWw2dnloNmtTRDBnc3k2eUo4N09xMGQ4M2hvVHR0Y2FjYTVLMlg2d01qU0VGSl9pRno0NjNr?oc=5",
+      "description": "Rocket grew market share amid 'wild ride' during Q1, Krishna says &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1778191052000,
+      "score": 12,
+      "tags": [
+        "housing",
+        "national",
+        "earnings",
+        "lender"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "头部企业业绩：Rocket Q1市场份额增长，CEO Krishna称经历'疯狂旅程'，Inman A级信源，反映抵押贷款市场头部企业竞争态势。imp=3因头部抵押贷款平台业绩。",
+      "section": "national",
+      "title_zh": "Rocket Q1 市占率扩张，Krishna 称经历'疯狂之旅'",
+      "summary_zh": "Rocket 在波动市场中抢占份额，具体数字待披露，lender 头部集中趋势持续",
+      "impact": "long-pos",
+      "id": "c65a0f91",
+      "fetched_at": 1778227312548
+    },
+    {
+      "source_id": "logan-mohtashami",
+      "source_name": "Logan Mohtashami (HousingWire)",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "rates",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Mortgage spreads are the only thing keeping rates under 7%",
+      "link": "https://www.housingwire.com/articles/mortgage-spreads-are-the-only-thing-keeping-rates-under-7/",
+      "description": "If mortgage spreads were at the highest levels from 2023-2025 with the 10-year yield at this level, mortgage rates would be over 7%.",
+      "published_at": 1777758030000,
       "score": 11,
       "tags": [
         "housing",
-        "deals",
-        "lender"
+        "national",
+        "rates"
       ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Carrington收购Valon Mortgage并接管80万笔贷款服务权，属抵押贷款服务端重大行业整合，涉及Ginnie Mae贷款组合转移。",
+      "heat_signals": [
+        "mortgage rate"
+      ],
+      "importance": 3,
+      "selector_reason": "抵押贷款利率机制：HousingWire分析师指出抵押利差是压制利率低于7%的唯一因素，B级信源但属关键利率形成机制分析。imp=3因利率市场微观结构重要信号。",
       "section": "national",
-      "title_zh": "Carrington 收购 Valon Mortgage，servicing portfolio 增 80 万笔",
-      "summary_zh": "fintech 技术赋能 Ginnie Mae loan servicing，$197B UPB 规模交易显示 MSR 市场整合加速",
-      "impact": "neutral",
-      "id": "524fbbd1",
-      "fetched_at": 1778226824013
-    },
-    {
-      "source_id": "connect-cre",
-      "source_name": "Connect CRE",
-      "source_tier": "A",
-      "source_weight": 7,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "S3 Raises $1.3B of Capital with Third Credit Fund",
-      "link": "https://www.connectcre.com/stories/s3-raises-1-3b-of-capital-with-third-credit-fund/",
-      "description": "Private construction lender S3 Capital announced the final close of S3 LB RE Credit Fund III with $850 million of discretionary fund commitments and an additional $465 million of co-investment commitments. The fund closed at its hard cap, exceeding its initial $650-million target. The fundraise brings total investable capital to approximately $1.3 billion and supports expected loan ... The post S3 Raises $1.3B of Capital with Third Credit Fund appeared first on Connect CRE .",
-      "published_at": 1778192027000,
-      "score": 11,
-      "tags": [
-        "mixed-asset",
-        "fundraising",
-        "lender"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "S3 Capital第三支信贷基金募资13亿美元超额完成，属大型私募房地产信贷工具关闭，反映建筑贷款市场的机构化趋势。",
-      "section": "national",
-      "title_zh": "S3 Capital 第三支信贷基金募资 $13 亿，超目标一倍",
-      "summary_zh": "construction lender 获 $850M fund + $465M co-investment，private credit 对 real estate 配置需求旺盛",
-      "impact": "long-pos",
-      "id": "997b05a0",
-      "fetched_at": 1778226824013
+      "extended_window": true,
+      "title_zh": "Mortgage spread 成 7% 关口唯一缓冲",
+      "summary_zh": "若 spread 回归 2023-2025 高点，当前 10Y yield 对应 mortgage rate 将突破 7%",
+      "impact": "short-neg",
+      "id": "856f87f3",
+      "fetched_at": 1778227312548
     },
     {
       "source_id": "realtor-news",
@@ -541,177 +675,34 @@
         "housing"
       ],
       "region": "national",
-      "title": "Rising Life Expectancy Is Threatening Social Security and the Future of Homeownership",
-      "link": "https://www.realtor.com/news/trends/social-security-longevity-tax-torpedo-retirement-plans/",
-      "description": "Rising longevity and looming Social Security insolvency are forcing a total rethink of how retirees cover their lifelong living expenses.",
-      "published_at": 1778116620000,
-      "score": 8,
+      "title": "A Property Tax Program Kept 13,000 Detroit Families in Their Homes—Now It Could Expire",
+      "link": "https://www.realtor.com/news/trends/detroit-property-tax-relief-program-expiration/",
+      "description": "Detroit’s Pay As You Stay program helped erase $52 million in tax debt. If it expires, vulnerable homeowners could face foreclosure risk.",
+      "published_at": 1778174244000,
+      "score": 10,
       "tags": [
         "housing",
         "national",
-        "macro"
+        "policy",
+        "regulator"
       ],
       "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "预期寿命上升威胁社保偿付能力与退休住房模式，属长期结构性宏观议题，对住房金融产品设计有深远影响。",
-      "section": "national",
-      "title_zh": "预期寿命上升威胁 Social Security，退休住房模式面临重构",
-      "summary_zh": "长寿风险与社保枯竭迫使 retirees 重新配置住房资产，reverse mortgage 与 aging-in-place 需求或上升",
-      "impact": "neutral",
-      "id": "71783b57",
-      "fetched_at": 1778226824013
-    },
-    {
-      "source_id": "national-mortgage-news",
-      "source_name": "National Mortgage News",
-      "source_tier": "A",
-      "source_weight": 7,
-      "source_tags": [
-        "rates",
-        "macro"
-      ],
-      "region": "national",
-      "title": "Better is deep in the red despite origination, revenue gains",
-      "link": "https://www.nationalmortgagenews.com/news/better-is-deep-in-the-red-despite-origination-revenue-gains",
-      "description": "Earnings Better is deep in the red despite origination, revenue gains By Andrew Martinez CloseText About Andrew twitter andrewomartinez mailto andrew.martinez@arizent.com linkedin andrewomartinez Published May 07, 2026, 11:30 a.m. EDT 2 Min Read Facebook Twitter LinkedIn Email Better Home Finance remains squarely in the red, but executives remain adamant the company will hit a long-promised benchmark this year. Processing Content The lender recorded quarterly and annual growth in revenue and originations but still posted a $70 million net loss for the first quarter, it said Thursday. That mark includes a $20.9 million net loss from discontinued operations regarding its United Kingdom-based bank , Even putting aside that $20.9 million, Better's net loss was still significant following $40 million and $51 million deficits for the quarter- and year-ago periods. While its revenue shot up 52% from the first quarter of last year, its expenses also grew by 27%. Company leaders Thursday reaffirmed their long-stated goal to reach breakeven adjusted EBITDA by the end of this third quarter, and Better shaved its adjusted EBITDA loss to $19 million in the recent period. Founder and CEO Vishal Garg said the EBITDA goal would stand, even if macroeconomic factors don't improve. \"We're going to have to cut costs deeper,\" he said in response to an analyst's question about the goal. \"I think we're pretty committed to that number.\" The lender reported total loan volume of $1.64 billion in the first quarter, up 12% quarterly and 89% annually. Production blossomed with $854 million in refinance volume, and $203 million in home equity line of credit volume, a slight quarterly increase. Demand wavers Garg said the company's goal of $1 billion in originations a month would be deferred, as the Iran conflict has rattled the economy and higher rates have kept more buyers at bay. Better saw its top-of-funnel for pre-approval volume rise from $100 million a day to $200 million a day toward the end of April, although more of those consumers are looking for HELOCs, said Garg. \"We think that's a coil spring for when things die down in the Middle East,\" he said. \"You're going to see some bumper months as we convert all those customers who are effectively on a wait list to lock when rates come back down.\" Better said those higher-margin HELOCs are factored into a slightly higher second quarter earnings guidance for loan volume and revenue, which assumes no improvement in macroeconomic conditions. The company posted revenue of $48 million in the first quarter, up slightly from the end of 2025. The third quarter breakeven adjusted EBITDA target will require revenue around the low-to-mid $70 million range, said Chief Financial Officer Loveen Advani. Green shoots The lender this month announced $25 million in annualized cost reductions, including its pending divestiture of the UK bank. Better's warehouse capacity also expanded from $575 million at the end of the fourth quarter to $850 million in the first quarter. It retains cash and cash equivalents of $136 million. Garg said the macroeconomic backdrop has been a boon for Better's bustling partnership pipeline , as economic factors have had a big impact on unsecured consumer credit. \"We're starting to see a lot more inbound from other fintechs, other large consumer credit companies, to pivot from their traditional unsecured offerings into a secured offering like a HELOC,\" he said. Better's stock opened at $34.16 per share Thursday morning, but fell to $30.98 per share by mid-morning following the earnings call. Andrew Martinez Reporter Andrew Martinez joined National Mortgage News in January 2022. He previously worked at Bisnow, covering commercial real estate news in the Boston... Read full bio twitter mailto linkedin",
-      "published_at": 1778167801000,
-      "score": 14,
-      "tags": [
-        "housing",
-        "earnings",
-        "lender"
-      ],
-      "heat_signals": [
-        "annual"
-      ],
       "importance": 3,
-      "selector_reason": "Better.com虽持续亏损但收入增长52%，属于中型抵押贷款科技公司的常规财报动态，显示行业整合期的盈利困境。",
+      "selector_reason": "联邦/地方住房政策：底特律Pay As You Stay项目帮助1.3万家庭消除$5200万税收债务，面临到期风险，Realtor.com A级信源。imp=3因地方住房稳定政策及脆弱房主保护议题。",
       "section": "national",
-      "title_zh": "Better Q1 净亏 $7000 万，originatioin 与收入双增仍难扭亏",
-      "summary_zh": "revenue 同比增 52% 但 expense 增 27%，CEO 承诺 Q3 实现 adjusted EBITDA breakeven，否则进一步裁员",
+      "title_zh": "Detroit 房产税减免计划到期，13K 家庭面临止赎风险",
+      "summary_zh": "Pay As You Stay 已免除 $52M 欠税，若失效 vulnerable homeowner 将暴露于 foreclosure",
       "impact": "short-neg",
-      "id": "3732a2cf",
-      "fetched_at": 1778226824013
-    },
-    {
-      "source_id": "national-mortgage-news",
-      "source_name": "National Mortgage News",
-      "source_tier": "A",
-      "source_weight": 7,
-      "source_tags": [
-        "rates",
-        "macro"
-      ],
-      "region": "national",
-      "title": "ReAlpha lays off 25% of employees, cites AI",
-      "link": "https://www.nationalmortgagenews.com/news/realpha-lays-off-25-of-employees-cites-ai",
-      "description": "Layoffs ReAlpha lays off 25% of employees, cites AI By Colin McNamara Published May 07, 2026, 4:30 p.m. EDT 2 Min Read Facebook Twitter LinkedIn Email ReAlpha Tech Corp. is conducting layoffs claiming artificial intelligence is reducing the need for some employees. Processing Content The real estate technology company reduced its workforce, which includes full-time employees, consultants, temporary workers and independent contractors, by about 25% and consolidated select vendor relationships. Together, these moves will save the company roughly $2 million over the next 12 months, it said. \"Agentic AI has changed the economics of running a company,\" CEO Mike Logozzo said in a press release Wednesday. \"We believe that work that previously required large teams across marketing, technology, product and design can now be executed by leaner teams leveraging AI agents, and those AI capabilities have been compounding faster every month. We have been adopting AI tools as we would rather get there proactively, on our own terms, than be forced into it reactively.\" The moves were in part designed to extend ReAlpha's AI-powered operating goal of reducing friction internally and for customers. The company expects each member of the smaller teams to direct and oversee agentic AI tools to produce a greater output, the release said. \"This is also more than just an efficiency story,\" Logozzo said. \"We are reshoring select operational functions previously performed outside the United States and reducing our reliance on offshore operations and domestic third-party vendors. The result is a more centralized, more accountable team, one that can deliver consistent results to the homebuyers we serve, and reduce the friction and complexity that we believe have long defined the homebuying process.\" AI-driven layoffs have been a major talking point within and outside of the mortgage industry. In research conducted last year by Arizent, parent company of National Mortgage News, 50% of mortgage companies said talent optimization was their primary goal for technology adoption, while 16% cited headcount reduction. Research conducted by the Federal Reserve Bank of New York found AI adoption ramped up in 2025, but most businesses did not plan on cutting staff as a result. Almost 50% of service businesses expected to adjust to AI by retraining staff, more than the 13% that expected it to cause layoffs. Summit Funding recently said it will eliminate 163 positions across the company. The news broke a day after its merger agreement with CrossCountry Mortgage was announced. ReAlpha made two acquisitions last year. It expanded its presence in home lending with the purchase of mortgage brokerage GTG Financial in February, and then grew its mortgage footprint in December through Instamortgage . \"We believe that these initiatives, combined with our improving gross margin profile and expanding transaction volume, represent a meaningful step toward the positive operating leverage our platform is designed to produce,\" Chief Financial Officer Thomas Kutzman said in the release. \"ReAlpha's strategy of disciplined organic and inorganic growth remains unchanged. We believe that this restructuring will help ensure our cost structure is aligned with the goal of accelerating revenue growth in 2026.\" The company expects pre-tax charges to range from $140,000 to $200,000. The restructuring will be substantially complete by the end of the second quarter, although some action may extend into the third quarter, according to the release. Colin McNamara Reporter Colin McNamara is a reporter for National Mortgage News. He recently graduated with a bachelor's degree in journalism and minor in general business... Read full bio",
-      "published_at": 1778185833000,
-      "score": 13,
-      "tags": [
-        "housing",
-        "tech-adoption",
-        "brokerage"
-      ],
-      "heat_signals": [
-        "fed"
-      ],
-      "importance": 3,
-      "selector_reason": "ReAlpha裁员25%并明确归因于AI替代，是PropTech领域AI冲击劳动力的早期标志性案例，具行业信号意义但公司规模有限。",
-      "section": "national",
-      "title_zh": "ReAlpha 裁员 25%，称 agentic AI 改变运营成本结构",
-      "summary_zh": "AI 替代营销与技术岗位，年省 $200 万，brokerage tech 行业人力成本重构趋势显现",
-      "impact": "neutral",
-      "id": "388f57ef",
-      "fetched_at": 1778226824013
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "2 Brokerages Now Have Half A Million Agents. Here's What That Means For The Rest Of Us - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNY29ZWE9ubHZOVzlHSkpiZlh3R3ByWS1ZeGpFd2lxMllZVFNtdmlkRm14UzJVSzFXM1R0WENJdE9ySE9FQVlNNlVheU01VmNVMGc2MWlDeVUzVDRrdHFHWmw1N2hxQk43bHp2ZGU3UlVOMFctSjhVWXlrV2cwMFY2WmZ4eVpCTWlQeHFKbXhKejRLaXV1QnRKN290Z2wtLXM2RXVkb3ZvZzc2TXVYdFFmd0xsUGxRb2F4OVE?oc=5",
-      "description": "2 Brokerages Now Have Half A Million Agents. Here's What That Means For The Rest Of Us &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778153502000,
-      "score": 12,
-      "tags": [
-        "housing",
-        "brokerage"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "两大经纪商合计代理超50万经纪人，反映行业集中度提升趋势，但属于已知格局的量化确认而非突变。",
-      "section": "national",
-      "title_zh": "两家 brokerage 各拥 50 万 agent，行业集中度加速提升",
-      "summary_zh": "mega-brokerage 规模效应挤压中小对手，commission split 与 lead cost 竞争白热化",
-      "impact": "short-neg",
-      "id": "fdfd96fb",
-      "fetched_at": 1778226824013
-    },
-    {
-      "source_id": "inman",
-      "source_name": "Inman News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "brokerage"
-      ],
-      "region": "national",
-      "title": "Real says REMAX deal could unlock leads, services and $30M in savings - Inman Real Estate News",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPNngyZi0ta1R5OEZwMm82b0U0elN5dE53UURzdlNjSWI2SkFPSGdzMGtwcndQQXZpaVZCcFlLN0JRa2dPblVFeGpFS04zTVZuNTktLXNqc1J4d1dSNFU2aUVGUWNjZXpzeFNCNmlxV2l4WDJKV1o3SU1MZGs5Qzl0STk2US1XWHN0cVE?oc=5",
-      "description": "Real says REMAX deal could unlock leads, services and $30M in savings &nbsp;&nbsp; Inman Real Estate News",
-      "published_at": 1778163469000,
-      "score": 12,
-      "tags": [
-        "housing",
-        "deals",
-        "brokerage"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "Real与REMAX合作声称可节省3000万美元，属中型并购整合动态，对特许经营模式演变有一定观察价值。",
-      "section": "national",
-      "title_zh": "Real 称 REMAX 交易可解锁 leads 与 $3000 万年省",
-      "summary_zh": "merger synergy 预期释放，但整合执行风险待观察，细节待披露",
-      "impact": "neutral",
-      "id": "86b6a801",
-      "fetched_at": 1778226824013
+      "id": "a1b69864",
+      "fetched_at": 1778227312548
     }
   ],
   "errors": [
     {
-      "source": "Houston Agent Magazine",
+      "source": "Realtor.com Research",
       "error": "HTTP 403",
       "attempted_urls": [
-        "https://houstonagentmagazine.com/feed/"
-      ]
-    },
-    {
-      "source": "Phoenix Agent Magazine",
-      "error": "HTTP 403",
-      "attempted_urls": [
-        "https://phoenixagentmagazine.com/feed/"
-      ]
-    },
-    {
-      "source": "Atlanta Agent Magazine",
-      "error": "HTTP 403",
-      "attempted_urls": [
-        "https://atlantaagentmagazine.com/feed/"
-      ]
-    },
-    {
-      "source": "Miami Agent Magazine",
-      "error": "HTTP 403",
-      "attempted_urls": [
-        "https://miamiagentmagazine.com/feed/"
+        "https://www.realtor.com/research/feed/"
       ]
     }
   ],
@@ -721,23 +712,23 @@
     "writer_audit": [
       {
         "stage": "selector",
-        "input": 96,
-        "output": 37
+        "input": 84,
+        "output": 32
       },
       {
         "stage": "tagger",
-        "items": 37
+        "items": 32
       },
       {
         "stage": "dedupe",
-        "before": 37,
-        "after": 32
+        "before": 32,
+        "after": 31
       },
       {
         "stage": "pick",
         "section_counts": {
-          "national": 12,
-          "sunbelt": 1,
+          "national": 9,
+          "sunbelt": 4,
           "cre": 5,
           "institutional": 2
         }
@@ -747,6 +738,6 @@
         "items": 20
       }
     ],
-    "candidate_pool_size": 96
+    "candidate_pool_size": 84
   }
 }

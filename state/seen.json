@@ -1,5 +1,290 @@
 [
   {
+    "url": "https://www.nationalmortgagenews.com/news/trump-signs-bill-to-expedite-tribal-mortgage-lending",
+    "tokens": [
+      "trump",
+      "signs",
+      "bill",
+      "expedite",
+      "tribal",
+      "mortgage",
+      "lending"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/05/06/mortgage-rates-hit-the-highest-level-in-a-month-causing-lower-income-homebuyers-to-drop-out.html",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "highest",
+      "level",
+      "month",
+      "causing",
+      "first",
+      "time",
+      "homebuyers",
+      "drop"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/multifamily/survey-residential-investor-sentiment-plummets-3-year-low-134453",
+    "tokens": [
+      "iran",
+      "helps",
+      "drive",
+      "residential",
+      "investor",
+      "sentiment",
+      "year"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWTdkS3hPT1VZdDJjOHVldkJrMndiSnpqYTdMN1RMQVBidkV4LUtZNV82VGJtYXE2dEtNZkU3SnVIVTNOUUQ0d3hWUWdSVnBKS0FXOHlqZzhPRm44N1NwTlAzT2VDVEtERUZ3QjNPdlFZUV9QNVh3cWZYa1BBZEdYYw?oc=5",
+    "tokens": [
+      "bought",
+      "nexthome",
+      "here",
+      "next",
+      "inman"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQX3ZvSUxEMzE3eXFpd1JXS0VENmVta2hwNjZNUVdRaGFJN0lCTUFzZGh0UGVTOHZlUklkNDVHQWFPYk5mN3hpSDJlcDFmaHItZnI4dU16TDdYRGtHNGRRdmUwZWI3RTEtQ3lRZThSdE1GOUNSaEx3enZoeDFlenZteTk1bS1oaDZYeURNeXRZOEdFR3U2akhMSUhWSkpyUVJ3YnpGYmE5YlNudGZaZk14bQ?oc=5",
+    "tokens": [
+      "compass",
+      "earnings",
+      "scale",
+      "growth",
+      "buying",
+      "anywhere",
+      "inman"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/pagewood-buys-14000-sf-office-retail-building-in-west-houston-plans-redevelopment/",
+    "tokens": [
+      "pagewood",
+      "buys",
+      "000",
+      "office",
+      "retail",
+      "building",
+      "west",
+      "houston",
+      "redevelopment"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/apartment-reit-earnings-multifamily-supply/819237/",
+    "tokens": [
+      "becomes",
+      "first",
+      "reit",
+      "monthly",
+      "dividend"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/crescent-stockbridge-capital-break-ground-on-277-unit-apartment-development-in-west-nashville/",
+    "tokens": [
+      "crescent",
+      "stockbridge",
+      "capital",
+      "break",
+      "ground",
+      "277",
+      "unit",
+      "apartment",
+      "development",
+      "west",
+      "nashville"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSF9idlAzbmF5Z2VNenhUSHZCY1FGUU1xQzBLVDlYRnNxOXVSVXBaMVN5OTB4Z0ZSaFJvU2VrWGZkR0g2bUpQY0UyQXlxY05icG1IbWF5X1F5X0wwbld2R28taHllRHU4ek9ta1pqbXVfcVpLUl9fc2JoMlJSOXdXUVUyRFFIVEZwRVlQVU1n?oc=5",
+    "tokens": [
+      "lance",
+      "lambert",
+      "florida",
+      "homebuilders",
+      "stabilization",
+      "sales",
+      "growth",
+      "126",
+      "traders",
+      "union"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/newmark-brokers-28m-sale-of-office-building-in-herndon-virginia/",
+    "tokens": [
+      "newmark",
+      "brokers",
+      "$28m",
+      "sale",
+      "office",
+      "building",
+      "herndon",
+      "virginia"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/essex-earnings-q1-2026-west-coast/819355/",
+    "tokens": [
+      "essex",
+      "posts",
+      "positive",
+      "strength",
+      "northern",
+      "california"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/shark-tank-kevin-oleary-utah-data-center-box-elder/",
+    "tokens": [
+      "shark",
+      "tank",
+      "star",
+      "kevin",
+      "leary",
+      "defends",
+      "massive",
+      "military",
+      "data",
+      "center",
+      "project",
+      "utah"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/lincoln-breaks-ground-on-office-to-industrial-redevelopment-near-phoenix-sky-harbor-airport/",
+    "tokens": [
+      "lincoln",
+      "breaks",
+      "ground",
+      "office",
+      "industrial",
+      "redevelopment",
+      "near",
+      "phoenix",
+      "harbor",
+      "airport"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.bisnow.com/atlanta/news/office/cousins-sees-a-reacceleration-of-corporate-in-migration-to-sun-belt-134447",
+    "tokens": [
+      "cousins",
+      "piedmont",
+      "tout",
+      "rebounded",
+      "office",
+      "demand",
+      "belt"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/05/07/startup-propy-real-estate-deals-blockchain.html",
+    "tokens": [
+      "startup",
+      "propy",
+      "deploying",
+      "$100",
+      "million",
+      "deals",
+      "blockchain"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.perenews.com/2910-north-arthur-ashe-boulevard-richmond-former-greyhound-bus-station-set-for-multifamily-transformation/",
+    "tokens": [
+      "2910",
+      "north",
+      "arthur",
+      "ashe",
+      "boulevard",
+      "richmond",
+      "former",
+      "greyhound",
+      "station",
+      "multifamily",
+      "transformation"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBrY1VmbmhuaVVETEZneWt0U0hFY2E3S3RuVmxUZjBPdjdOb3MxemFJRGFsVXlhQ2JQSmRnOXVybGU3bjZLMWlLZmZtNkxSbnZhS19WQXhhcWt3ZHozMUMxWTh4RGF2b1luUVdNTWs0enphcnc?oc=5",
+    "tokens": [
+      "spring",
+      "bringing",
+      "buyers",
+      "fewer",
+      "bidding",
+      "wars",
+      "redfin",
+      "inman"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMVBFVVExRktWWnVtN3Z3dEFtUmFzUjNiY0NSWHhGYWROZmVZLXpGazJuTGk1dmMtNWpzQVdKYUphbXV4dE14aTFmV09TRjNHYUhYWnZuVWw2dnloNmtTRDBnc3k2eUo4N09xMGQ4M2hvVHR0Y2FjYTVLMlg2d01qU0VGSl9pRno0NjNr?oc=5",
+    "tokens": [
+      "rocket",
+      "grew",
+      "market",
+      "share",
+      "wild",
+      "ride",
+      "during",
+      "krishna",
+      "inman"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/mortgage-spreads-are-the-only-thing-keeping-rates-under-7/",
+    "tokens": [
+      "mortgage",
+      "spreads",
+      "only",
+      "thing",
+      "keeping",
+      "rates",
+      "under",
+      "7%"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/detroit-property-tax-relief-program-expiration/",
+    "tokens": [
+      "property",
+      "program",
+      "kept",
+      "000",
+      "detroit",
+      "families",
+      "homes",
+      "expire"
+    ],
+    "shown_date": "2026-05-08"
+  },
+  {
     "url": "https://www.cnbc.com/video/2026/05/05/job-openings-and-labor-turnover-comes-in-at-6-point-86-million-new-home-sales-rise-to-682000.html",
     "tokens": [
       "openings",
