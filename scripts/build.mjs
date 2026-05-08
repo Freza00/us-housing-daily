@@ -1196,6 +1196,17 @@ imp=1: 边缘 — 评论而非新闻 / 八卦
 - 至少 6 条 imp=4
 - 至多 5 条 imp ≤ 2
 
+## 主题多样性约束（重要！下游有 5 个 section 配额需要覆盖）
+最终展示有 5 个 section（quota: 全国住宅=5 / Sun Belt 住宅=4 / BTR-SFR=3 / 全国 CRE=5 / 全国机构资本=3）。请确保你选出的 ${target} 条尽可能覆盖以下 5 个主题方向，每个方向至少留出足够候选给下游：
+
+- **全国住宅市场**（mortgage / 利率 / 全国销量库存 / 联邦政策）：选 ≥ 7 条
+- **Sun Belt 住宅**（Texas / Florida / Arizona / Georgia / NC 等的住宅、多户、租赁）：选 ≥ 5 条
+- **BTR / SFR**（build-to-rent / single-family rental / INVH / AMH / Tricon / Pretium 等）：选 ≥ 4 条
+- **全国 CRE**（office / industrial / data-center / hotel / retail / 非 Sun Belt 多户）：选 ≥ 7 条
+- **机构资本**（PE 房地产基金募资 / REIT IPO / Blackstone / KKR / Brookfield 等机构动作）：选 ≥ 4 条
+
+如果某主题方向候选池真的不足（如 BTR 当天 0 条），就尽量选相关性强的；不要把名额全给 national 或 cre 一种主题。
+
 ## 硬性排除（这些必须不入选）
 - celebrity / 名人 / 八卦
 - 单 unit listing / 单豪宅租赁
@@ -1384,7 +1395,8 @@ function classifyByTags(item) {
 }
 
 // Stage 6: 规则化最终挑选 — section 配额 + 德州三城硬约束
-function pickFinal20(items) {
+// rawPool: selector 之前的 candidatePool，用于某 section 不足时兜底（用 legacy classify 找补）
+function pickFinal20(items, rawPool = []) {
   // 配额（与 SECTIONS 对齐）
   const QUOTA = { national: 5, sunbelt: 4, btr: 3, cre: 5, institutional: 3 };
   const TX_REQUIRED = new Set(["sunbelt", "btr", "cre", "institutional"]);
@@ -1403,29 +1415,43 @@ function pickFinal20(items) {
     );
   }
 
-  log(`📦 section pool: ${Object.entries(bySection).map(([s, arr]) => `${s}=${arr.length}`).join(" ")}`);
+  log(`📦 section pool (post-tagger): ${Object.entries(bySection).map(([s, arr]) => `${s}=${arr.length}`).join(" ")}`);
+
+  // 兜底池：把 raw candidatePool 里 selector 没选中的项目，按 legacy classify() 分桶
+  // 这些项没经 tagger 打 tag，但 classify() 能给出粗略 section
+  const selectedLinks = new Set(items.map(it => it.link));
+  const fallbackBySection = { national: [], sunbelt: [], btr: [], cre: [], institutional: [] };
+  for (const it of rawPool) {
+    if (selectedLinks.has(it.link)) continue;
+    const sec = classify(it); // legacy regex-based
+    if (fallbackBySection[sec]) fallbackBySection[sec].push(it);
+  }
+  for (const s of Object.keys(fallbackBySection)) {
+    fallbackBySection[s].sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+  }
+  log(`📦 fallback pool (raw candidates not selected): ${Object.entries(fallbackBySection).map(([s, arr]) => `${s}=${arr.length}`).join(" ")}`);
 
   const result = [];
   const txDiag = [];
 
-  // 第一遍：每个 section 先放德州三城（如果要求且有），再按 imp 顺序填到 quota
+  // 第一遍：每 section 先放德州三城（要求且有的），再按 imp 顺序填到 quota
+  // 不足 quota 时，回 fallbackBySection 用 legacy classify 找补
   for (const [secId, quota] of Object.entries(QUOTA)) {
     const pool = bySection[secId];
     const picked = [];
+    const pickedSet = new Set();
 
-    // 德州三城硬约束（sunbelt/btr/cre/institutional）
+    // 德州三城（sunbelt/btr/cre/institutional 必备）
     if (TX_REQUIRED.has(secId) && pool.length > 0) {
       const txItem = pool.find(it => hitsTexasCity(it));
       if (txItem) {
         picked.push(txItem);
-        txDiag.push(`${secId}:✓`);
-      } else {
-        txDiag.push(`${secId}:✗ no-tx`);
+        pickedSet.add(txItem.link);
+        txDiag.push(`${secId}:✓ taggerPool`);
       }
     }
 
-    // 按 imp 顺序填到 quota
-    const pickedSet = new Set(picked.map(x => x.link));
+    // 主池填充
     for (const it of pool) {
       if (picked.length >= quota) break;
       if (pickedSet.has(it.link)) continue;
@@ -1433,17 +1459,50 @@ function pickFinal20(items) {
       pickedSet.add(it.link);
     }
 
+    // 主池不足 → 回 fallback 池
     if (picked.length < quota) {
-      log(`⚠️  section "${secId}" under quota: ${picked.length}/${quota} (pool=${pool.length})`);
+      const need = quota - picked.length;
+      const fb = fallbackBySection[secId] || [];
+      // 如果还没德州三城，优先从 fallback 找德州的
+      let fbItems = fb;
+      if (TX_REQUIRED.has(secId) && !picked.some(hitsTexasCity)) {
+        const txFb = fb.find(it => hitsTexasCity(it));
+        if (txFb) {
+          picked.push({ ...txFb, importance: 3, _from_fallback: true });
+          pickedSet.add(txFb.link);
+          txDiag.push(`${secId}:✓ fallback`);
+          fbItems = fb.filter(x => x.link !== txFb.link);
+        }
+      }
+      // 剩余位用 fallback 高分填
+      for (const it of fbItems) {
+        if (picked.length >= quota) break;
+        if (pickedSet.has(it.link)) continue;
+        picked.push({ ...it, importance: it.importance ?? 3, _from_fallback: true });
+        pickedSet.add(it.link);
+      }
+      log(`📦 section "${secId}" backfilled ${need - (quota - picked.length)} from raw pool (now ${picked.length}/${quota})`);
     }
 
-    for (const it of picked) result.push(it);
+    // 仍不足 → 真没料，记录但允许 publish
+    if (picked.length < quota) {
+      log(`⚠️  section "${secId}" still under quota after fallback: ${picked.length}/${quota}`);
+    }
+    if (TX_REQUIRED.has(secId) && !picked.some(hitsTexasCity)) {
+      txDiag.push(`${secId}:✗ no-tx`);
+    }
+
+    for (const it of picked) {
+      it.section = secId; // 确保 fallback 项也带 section
+      result.push(it);
+    }
   }
   log(`📦 texas-3-city: ${txDiag.join(" ")}`);
 
-  // 处理 < 20 的兜底：从全池按 imp 拿剩余的填到 20
+  // 总数 < 20 的兜底（极端供给短缺）
   if (result.length < DAILY_LIMIT) {
     const taken = new Set(result.map(x => x.link));
+    // 先在 tagger 池里找
     const overflow = annotated
       .filter(x => !taken.has(x.link))
       .sort((a, b) => (b.importance ?? 3) - (a.importance ?? 3) || (b.score ?? 0) - (a.score ?? 0));
@@ -1451,13 +1510,23 @@ function pickFinal20(items) {
       if (result.length >= DAILY_LIMIT) break;
       result.push(it);
     }
-    log(`📦 backfill to ${DAILY_LIMIT}: filled from cross-section overflow pool`);
+    // 还不足 → raw fallback 池
+    if (result.length < DAILY_LIMIT) {
+      for (const fb of Object.values(fallbackBySection)) {
+        for (const it of fb) {
+          if (result.length >= DAILY_LIMIT) break;
+          if (taken.has(it.link)) continue;
+          result.push({ ...it, section: classify(it), importance: 3, _from_fallback: true });
+          taken.add(it.link);
+        }
+      }
+    }
+    log(`📦 final backfill to ${result.length}/${DAILY_LIMIT}`);
   }
 
-  // 处理 > 20 的兜底（理论上不会发生，因配额合计 = 20）
   if (result.length > DAILY_LIMIT) result.length = DAILY_LIMIT;
 
-  // 设置 extended_window 标记
+  // extended_window 标记
   for (const it of result) {
     if (it._ext_eligible) {
       it.extended_window = true;
@@ -1550,8 +1619,8 @@ async function multiAgentPipeline(candidates, opts) {
   // Stage 5: section classify (rule-based, no LLM call)
   // Done inline in pickFinal20 via classifyByTags
 
-  // Stage 6: final pick (rule-based, no LLM call)
-  const picked = pickFinal20(deduped);
+  // Stage 6: final pick (rule-based, no LLM call) — 把 raw candidates 也传过去做兜底
+  const picked = pickFinal20(deduped, candidates);
   const sectionCount = {};
   for (const it of picked) sectionCount[it.section] = (sectionCount[it.section] || 0) + 1;
   log(`📦 final pick: ${JSON.stringify(sectionCount)} (total ${picked.length})`);
