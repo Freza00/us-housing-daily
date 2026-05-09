@@ -4,13 +4,16 @@ name: Daily News Build
 # 也支持手动触发（push to main, 或 workflow_dispatch UI）
 on:
   schedule:
-    - cron: '57 0 * * *'   # UTC 00:57 = 北京 08:57:00
+    - cron: '57 0 * * *'   # UTC 00:57 = 北京 08:57:00 — 兜底；主调度走 Vercel Cron + repository_dispatch
   workflow_dispatch: {}
+  repository_dispatch:
+    types: [daily-build]   # 由 Vercel Cron 通过 GH dispatches API 触发
   push:
     branches: [main]
     paths:
       - 'config/sources.json'
       - '.github/workflows/daily.yml'
+      - 'scripts/build.mjs'
 
 permissions:
   contents: write   # 需要 commit data/ + state/
