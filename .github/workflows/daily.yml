@@ -1,13 +1,18 @@
 name: Daily News Build
 
-# 每天北京时间 09:00 = UTC 01:00 自动跑一次
-# 也支持手动触发（push to main, 或 workflow_dispatch UI）
+# GitHub Actions schedule 是 best-effort（实测今早迟到 3.5 小时，昨天直接被 skip），
+# 所以排 5 个 cron 点 + 跑前检查"今天 build 过没"，跑过就 fast-skip，没跑就补打。
+# 任意一个 cron 点活下来都能保住当天的发布。
 on:
   schedule:
-    - cron: '57 0 * * *'   # UTC 00:57 = 北京 08:57:00 — 兜底；主调度走 Vercel Cron + repository_dispatch
+    - cron: '57 0 * * *'    # UTC 00:57 = 北京 08:57 — 主时间点
+    - cron: '57 2 * * *'    # UTC 02:57 = 北京 10:57 — 补打 1
+    - cron: '57 4 * * *'    # UTC 04:57 = 北京 12:57 — 补打 2
+    - cron: '57 6 * * *'    # UTC 06:57 = 北京 14:57 — 补打 3
+    - cron: '57 9 * * *'    # UTC 09:57 = 北京 17:57 — 补打 4，最后兜底
   workflow_dispatch: {}
   repository_dispatch:
-    types: [daily-build]   # 由 Vercel Cron 通过 GH dispatches API 触发
+    types: [daily-build]   # 由 Vercel Cron 通过 GH dispatches API 触发（GH_PAT 配好后激活）
   push:
     branches: [main]
     paths:
@@ -28,11 +33,26 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Check if today's build already exists
+        id: dedupe
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          echo "today_bj=${TODAY}" >> "$GITHUB_OUTPUT"
+          if [ -f "data/${TODAY}.json" ]; then
+            echo "already_built=true" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Skipped::data/${TODAY}.json 已存在，跳过 pipeline（同日补打 cron 自动 no-op）"
+          else
+            echo "already_built=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Building::data/${TODAY}.json 不存在，跑 pipeline"
+          fi
+
       - uses: actions/setup-node@v5
+        if: steps.dedupe.outputs.already_built == 'false'
         with:
           node-version: '20'
 
       - name: Run pipeline (fetch + score + enrich + LLM summarize)
+        if: steps.dedupe.outputs.already_built == 'false'
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
@@ -41,6 +61,9 @@ jobs:
         run: node scripts/build.mjs
 
       - name: Commit data files
+        if: steps.dedupe.outputs.already_built == 'false'
+        env:
+          TODAY_BJ: ${{ steps.dedupe.outputs.today_bj }}
         run: |
           git config user.name "Freza00"
           git config user.email "Freza00@users.noreply.github.com"
@@ -48,7 +71,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "no changes to commit"
           else
-            DATE=$(date -u +"%Y-%m-%d")
-            git commit -m "chore: daily build for ${DATE}"
+            git commit -m "chore: daily build for ${TODAY_BJ}"
             git push
           fi
