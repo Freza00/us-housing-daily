@@ -1,15 +1,11 @@
 name: Daily News Build
 
 # GitHub Actions schedule 是 best-effort（实测今早迟到 3.5 小时，昨天直接被 skip），
-# 所以排 5 个 cron 点 + 跑前检查"今天 build 过没"，跑过就 fast-skip，没跑就补打。
-# 任意一个 cron 点活下来都能保住当天的发布。
+# 所以在北京 08:00–12:50 每 10 分钟敲一次 + 跑前 dedupe 检查；任何一次跑通后剩余 cron 全部 fast-skip。
+# 30 次机会全被 GH 跳过的概率近似 0；fast-skip 单次 ~5s 几乎零 Actions 成本。
 on:
   schedule:
-    - cron: '57 0 * * *'    # UTC 00:57 = 北京 08:57 — 主时间点
-    - cron: '57 2 * * *'    # UTC 02:57 = 北京 10:57 — 补打 1
-    - cron: '57 4 * * *'    # UTC 04:57 = 北京 12:57 — 补打 2
-    - cron: '57 6 * * *'    # UTC 06:57 = 北京 14:57 — 补打 3
-    - cron: '57 9 * * *'    # UTC 09:57 = 北京 17:57 — 补打 4，最后兜底
+    - cron: '*/10 0-4 * * *'    # UTC 00:00–04:50 每 10 分钟 = 北京 08:00–12:50 每 10 分钟（30 次/天）
   workflow_dispatch: {}
   repository_dispatch:
     types: [daily-build]   # 由 Vercel Cron 通过 GH dispatches API 触发（GH_PAT 配好后激活）
