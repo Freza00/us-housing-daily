@@ -428,6 +428,12 @@ function dedupe(items) {
 // ============================================================
 // 跨日去重
 // ============================================================
+// shown_date / 文件名 / dates.json 全部按"北京日历日"，不是 UTC 日。
+// 北京 UTC+8 → 北京 0:00 = UTC 16:00（前一天）；如果用 UTC 日期，凌晨 0–8 点跑会标成"前一天"。
+function beijingDateStr(ts) {
+  return new Date(ts + 8 * 3600 * 1000).toISOString().slice(0, 10);
+}
+
 function loadSeen() {
   if (!fs.existsSync(SEEN_FILE)) return [];
   try {
@@ -1604,13 +1610,17 @@ function pickFinal20(items, rawPool = []) {
 
 // Stage 7: Translator — 翻译选定的 20 条
 async function translator(items, opts) {
-  const block = items.map((it, i) =>
-    `[${i + 1}] section=${it.section} imp=${it.importance} tags=[${(it.tags||[]).join(",")}]\n  Title: ${it.title}\n  Body: ${(it.description || "").slice(0, 1500)}`
-  ).join("\n\n");
+  const validImpacts = new Set(["long-pos", "short-pos", "neutral", "short-neg", "long-neg"]);
 
-  const systemPrompt = `你是美国住宅地产中文研究员，给已选定的新闻做中文译标 + 摘要 + 影响方向。所有 t / s 字段用中文（保留行业英文术语）。不选新闻、不打 tag、不分类。`;
+  async function tryBatch(batch) {
+    if (batch.length === 0) return new Map();
+    const block = batch.map((it, i) =>
+      `[${i + 1}] section=${it.section} imp=${it.importance} tags=[${(it.tags||[]).join(",")}]\n  Title: ${it.title}\n  Body: ${(it.description || "").slice(0, 1500)}`
+    ).join("\n\n");
 
-  const userPrompt = `给下方 ${items.length} 条新闻每条产出：
+    const systemPrompt = `你是美国住宅地产中文研究员，给已选定的新闻做中文译标 + 摘要 + 影响方向。所有 t / s 字段用中文（保留行业英文术语）。不选新闻、不打 tag、不分类。`;
+
+    const userPrompt = `给下方 ${batch.length} 条新闻每条产出：
 - t: 中文译标（≤ 30 中文字符），中文语序重组
 - s: 中文摘要（≤ 60 中文字符），必给结论 / 数字 / 立场
 - dir: long-pos / short-pos / neutral / short-neg / long-neg
@@ -1629,7 +1639,7 @@ async function translator(items, opts) {
 ✓ 正文不足时基于 title 推断，可写"细节待披露 / 影响待观察"
 
 ## 输出
-JSON 数组（[ 开头 ] 结尾，无 markdown，无解释，长度严格 = ${items.length}）：
+JSON 数组（[ 开头 ] 结尾，无 markdown，无解释，长度严格 = ${batch.length}）：
 [{"i": <序号>, "t": "<中文标>", "s": "<中文摘要>", "dir": "<方向>"}]
 
 ## 新闻列表
@@ -1637,26 +1647,45 @@ ${block}
 
 直接输出 JSON 数组：`;
 
-  log(`🌐 translator prompt size: ~${Math.round(userPrompt.length / 4)} tokens, items=${items.length}`);
-  const text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 6000 }, "translator");
-  const parsed = safeParseJSON(text, "translator", true);
-  if (!Array.isArray(parsed)) throw new Error(`translator returned non-array`);
+    log(`🌐 translator prompt size: ~${Math.round(userPrompt.length / 4)} tokens, items=${batch.length}`);
+    let text;
+    try {
+      text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 6000 }, "translator");
+    } catch (e) {
+      // 内容风控被拒（high risk / policy / moderation）→ 折半 batch 重试，单条仍被拒就跳过、走 fallback
+      const isRejection = /\b(400|403)\b.*(high risk|content.+polic|moderation|safety|rejected|blocked)/i.test(e.message);
+      if (!isRejection) throw e;
+      if (batch.length === 1) {
+        log(`  ⚠️  translator: 单条被风控拒，跳过 — "${batch[0].title.slice(0, 60)}..."`);
+        return new Map();
+      }
+      const mid = Math.ceil(batch.length / 2);
+      log(`  ⚠️  translator: batch=${batch.length} 被风控拒，折半重试 → ${mid}/${batch.length - mid}`);
+      const [lm, rm] = await Promise.all([tryBatch(batch.slice(0, mid)), tryBatch(batch.slice(mid))]);
+      return new Map([...lm, ...rm]);
+    }
 
-  const validImpacts = new Set(["long-pos", "short-pos", "neutral", "short-neg", "long-neg"]);
-  const transMap = new Map();
-  for (const p of parsed) {
-    const idx = (typeof p.i === "number" ? p.i : parseInt(p.i, 10)) - 1;
-    if (idx < 0 || idx >= items.length) continue;
-    transMap.set(idx, {
-      title_zh: p.t || "",
-      summary_zh: p.s || "（摘要生成失败）",
-      impact: validImpacts.has(p.dir) ? p.dir : "neutral",
-    });
+    const parsed = safeParseJSON(text, "translator", true);
+    if (!Array.isArray(parsed)) throw new Error(`translator returned non-array`);
+
+    const map = new Map();
+    for (const p of parsed) {
+      const idx = (typeof p.i === "number" ? p.i : parseInt(p.i, 10)) - 1;
+      if (idx < 0 || idx >= batch.length) continue;
+      map.set(batch[idx].link, {
+        title_zh: p.t || "",
+        summary_zh: p.s || "（摘要生成失败）",
+        impact: validImpacts.has(p.dir) ? p.dir : "neutral",
+      });
+    }
+    return map;
   }
 
+  const transByLink = await tryBatch(items);
+
   const fetchedAt = Date.now();
-  return items.map((it, idx) => {
-    const tr = transMap.get(idx) || { title_zh: "", summary_zh: "（翻译丢失）", impact: "neutral" };
+  return items.map((it) => {
+    const tr = transByLink.get(it.link) || { title_zh: "", summary_zh: "（翻译丢失：内容被风控拦截）", impact: "neutral" };
     return { ...it, ...tr, id: hashLink(it.link), fetched_at: fetchedAt };
   });
 }
@@ -1767,9 +1796,13 @@ async function main() {
 
   // 3. 跨日去重
   const seenAll = pruneSeen(loadSeen(), now);
-  const fresh24h = filterAlreadySeen(deduped24h, seenAll);
-  const fresh7d = filterAlreadySeen(deduped7d, seenAll);
-  log(`📅 cross-day filter: seen ${seenAll.length} → fresh ${fresh24h.length} (24h) / ${fresh7d.length} (7d)`);
+  // 同北京日内重跑（同一 cron / 多次手动 retry）不应剔除自己刚写入的条目；过午夜后这些条目按常规剔除
+  const todayBJ = beijingDateStr(now);
+  const seenForFilter = seenAll.filter(s => s.shown_date !== todayBJ);
+  const sameDayCount = seenAll.length - seenForFilter.length;
+  const fresh24h = filterAlreadySeen(deduped24h, seenForFilter);
+  const fresh7d = filterAlreadySeen(deduped7d, seenForFilter);
+  log(`📅 cross-day filter: seen ${seenAll.length} → fresh ${fresh24h.length} (24h) / ${fresh7d.length} (7d)${sameDayCount > 0 ? ` (今日 ${sameDayCount} 条不参与剔除)` : ""}`);
 
   // [debug] 池子分布
   const poolDist = (pool, label) => {
@@ -1976,7 +2009,7 @@ async function main() {
   }
 
   // 8. 写出
-  const date = new Date(now).toISOString().slice(0, 10);
+  const date = beijingDateStr(now);
   const payload = {
     date,
     generated_at: now,
