@@ -1,5 +1,268 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/positive-housing-demand-leads-to-inventory-almost-going-negative-yoy/",
+    "tokens": [
+      "positive",
+      "housing",
+      "demand",
+      "leads",
+      "inventory",
+      "almost",
+      "going",
+      "negative"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/listings-inventory-housing-market-update-may-8-2026/",
+    "tokens": [
+      "homebuyers",
+      "sellers",
+      "both",
+      "grow",
+      "cautious",
+      "mortgage",
+      "rates",
+      "tick",
+      "higher"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/bipartisan-policy-center-poll-lower-housing-costs/",
+    "tokens": [
+      "poll",
+      "americans",
+      "want",
+      "congress",
+      "lowering",
+      "housing",
+      "costs"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxONnRDeFlzUmZpeXh4bmUxSEtHWno0U21yQzhTdTB5M1BuT3BHR2NKWUJCRnhWVTJXaFZrc192TlFYRWlWTDdLV1l3NU5DRE1VYjdTaGloTXdVT3dQaGdQcnYzOVhudTFhbEs4MTFhUkhoZjlMS21VVzd5TC1lazhhUGo3UENKMTFXREdaVS1zUUlEbmc?oc=5",
+    "tokens": [
+      "iran",
+      "impact",
+      "housing",
+      "market",
+      "explained",
+      "inman"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/05/05/job-openings-and-labor-turnover-comes-in-at-6-point-86-million-new-home-sales-rise-to-682000.html",
+    "tokens": [
+      "openings",
+      "labor",
+      "turnover",
+      "comes",
+      "million",
+      "home",
+      "sales",
+      "rise",
+      "682",
+      "000"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://houstonagentmagazine.com/2026/05/08/har-affordability-report-q1-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=har-affordability-report-q1-2026",
+    "tokens": [
+      "affordability",
+      "gains",
+      "houston",
+      "42%",
+      "households",
+      "swing",
+      "homeownership"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/short-term-rentals-apartment-management-sentral/819754/",
+    "tokens": [
+      "inside",
+      "sentral",
+      "expansion"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/woodfield-delivers-360-unit-san-marcos-apartments/",
+    "tokens": [
+      "woodfield",
+      "delivers",
+      "360",
+      "unit",
+      "marcos",
+      "apartments"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkZzUmdZdGF6Z1Vld0dpRVlsc2dkaUxveE5yZkh3X2FIQ1F2QS1KTU5lUWF4UnZFeEkyX2FmSHVuTmRrem9vNGM0aFFiWDhyVFU5b1JTSXdWUjlQRVhWNU9QQ3V5QnZyT2lUMU02TlNENm9XRkoyVGs3bmN0cHFnUGJ6dC1kcE9HUGV6YW1nSVZwZXowYXZQZ3pPSQ?oc=5",
+    "tokens": [
+      "nashville",
+      "housing",
+      "market",
+      "balanced",
+      "april",
+      "2026",
+      "wkrn"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/commercial-real-estate/as-chunks-of-southwest-dc-begin-to-sell-pressure-emerges-to-create-a-plan-134488",
+    "tokens": [
+      "concerns",
+      "mount",
+      "feds",
+      "sell",
+      "huge",
+      "buildings",
+      "without",
+      "future"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/05/09/ai-data-center-construction-public-opposition.html",
+    "tokens": [
+      "take",
+      "control",
+      "data",
+      "center",
+      "boom",
+      "built",
+      "your",
+      "home",
+      "future"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/orange-county-multifamily-market-report/",
+    "tokens": [
+      "orange",
+      "county",
+      "multifamily",
+      "market",
+      "april",
+      "2026"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.perenews.com/sixth-streets-alvarado-future-winners-need-to-be-more-than-capital/",
+    "tokens": [
+      "sixth",
+      "street",
+      "alvarado",
+      "future",
+      "winners",
+      "need",
+      "capital"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.perenews.com/the-two-types-of-real-estate-managers-are-becoming-increasingly-alike/",
+    "tokens": [
+      "types",
+      "managers",
+      "becoming",
+      "increasingly",
+      "alike"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/hud-environmental-reviews-multifamily-map/819733/",
+    "tokens": [
+      "trims",
+      "environmental",
+      "reviews",
+      "multifamily",
+      "projects"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.naco.org/resource/house-and-senate-housing-reform-packages-side-side?utm_source=chatgpt.com",
+    "tokens": [
+      "house",
+      "senate",
+      "housing",
+      "reform",
+      "packages",
+      "side",
+      "8211",
+      "naco"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.realtor.com/research/new-home-sales-march-2026/",
+    "tokens": [
+      "home",
+      "sales",
+      "pace",
+      "picks",
+      "price",
+      "plummets",
+      "march"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/nh-hb-1010-multifamily-zoning/",
+    "tokens": [
+      "pushback",
+      "hampshire",
+      "course",
+      "corrects",
+      "housing",
+      "laws"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/05/07/home-sales-stuck-at-same-levels-from-last-year-says-zillow-chief-economist.html",
+    "tokens": [
+      "home",
+      "sales",
+      "stuck",
+      "same",
+      "levels",
+      "last",
+      "year",
+      "zillow",
+      "senior",
+      "economist"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
+    "url": "https://yieldpro.com/2026/05/yardi-matrix-advertised-rents-edge-higher-in-april/",
+    "tokens": [
+      "yardi",
+      "matrix",
+      "advertised",
+      "rents",
+      "edge",
+      "higher",
+      "april",
+      "8211",
+      "yield"
+    ],
+    "shown_date": "2026-05-10"
+  },
+  {
     "url": "https://www.housingwire.com/articles/jobs-data-stabilizes-giving-fed-hawks-more-reason-not-to-cut-rates/",
     "tokens": [
       "jobs",
