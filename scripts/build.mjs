@@ -783,20 +783,15 @@ ${lines.join("\n\n")}
 
 请直接输出 JSON 数组（每条都要严格仿照上面示例的中文风格）：`;
 
-  const r = await fetch(opts.endpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "Authorization": `Bearer ${opts.apiKey}` },
-    body: JSON.stringify({
-      model: opts.model,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: prompt },
-      ],
-      max_tokens: 4000,
-      temperature: 0.3,
-    }),
-  });
-  if (!r.ok) throw new Error(`LLM API ${r.status}: ${(await r.text()).slice(0, 500)}`);
+  const r = await fetchLLMWithRetry(opts.endpoint, {
+    model: opts.model,
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: prompt },
+    ],
+    max_tokens: 4000,
+    temperature: 0.3,
+  }, opts.apiKey, "translator");
   const data = await r.json();
   const text = data.choices?.[0]?.message?.content ?? "";
   const cleaned = text.replace(/```json\s*/g, "").replace(/```\s*$/g, "").trim();
@@ -896,24 +891,52 @@ function buildCandidatesBlock(candidates) {
   }).join("\n\n");
 }
 
-async function callLLM(systemPrompt, userPrompt, opts, label = "llm") {
-  const r = await fetch(opts.endpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "Authorization": `Bearer ${opts.apiKey}` },
-    body: JSON.stringify({
-      model: opts.model,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt },
-      ],
-      max_tokens: opts.maxTokens || 6000,
-      temperature: opts.temperature ?? 0.3,
-    }),
-  });
-  if (!r.ok) {
+// LLM fetch with retry on 5xx / 429 / network errors. Other 4xx throws immediately.
+// 3 attempts, backoff 1s/5s/30s. Returns Response (caller does .json()).
+async function fetchLLMWithRetry(endpoint, body, apiKey, label) {
+  const RETRY_DELAYS = [1000, 5000, 30000];
+  const RETRYABLE_STATUS = new Set([408, 429, 500, 502, 503, 504]);
+  for (let attempt = 0; attempt < 3; attempt++) {
+    let r;
+    try {
+      r = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+        body: JSON.stringify(body),
+      });
+    } catch (e) {
+      if (attempt < 2) {
+        const wait = RETRY_DELAYS[attempt];
+        log(`🔁 ${label} network error (${e.message}), retrying in ${wait}ms (${attempt + 1}/3)`);
+        await new Promise(res => setTimeout(res, wait));
+        continue;
+      }
+      throw e;
+    }
+    if (r.ok) return r;
+    if (RETRYABLE_STATUS.has(r.status) && attempt < 2) {
+      const errPeek = (await r.text()).slice(0, 200);
+      const wait = RETRY_DELAYS[attempt];
+      log(`🔁 ${label} API ${r.status} (${errPeek}), retrying in ${wait}ms (${attempt + 1}/3)`);
+      await new Promise(res => setTimeout(res, wait));
+      continue;
+    }
     const errText = (await r.text()).slice(0, 500);
     throw new Error(`${label} API ${r.status}: ${errText}`);
   }
+  throw new Error(`${label} API: exhausted retries`);
+}
+
+async function callLLM(systemPrompt, userPrompt, opts, label = "llm") {
+  const r = await fetchLLMWithRetry(opts.endpoint, {
+    model: opts.model,
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userPrompt },
+    ],
+    max_tokens: opts.maxTokens || 6000,
+    temperature: opts.temperature ?? 0.3,
+  }, opts.apiKey, label);
   const data = await r.json();
   const text = data.choices?.[0]?.message?.content ?? "";
   return text.replace(/```json\s*/g, "").replace(/```\s*$/g, "").trim();
