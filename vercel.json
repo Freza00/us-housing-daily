@@ -3,6 +3,9 @@
   "buildCommand": "mkdir -p public/data && cp -r data/* public/data/ 2>/dev/null || true",
   "outputDirectory": "public",
   "framework": null,
+  "crons": [
+    { "path": "/api/trigger-daily", "schedule": "57 0 * * *" }
+  ],
   "headers": [
     {
       "source": "/data/(.*)",
