@@ -320,6 +320,72 @@
       "weight": 6,
       "region": "national",
       "filter_required": true
+    },
+    {
+      "id": "houston-bj-cre",
+      "name": "Houston Business Journal — Commercial RE",
+      "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
+      "alternates": ["https://www.bizjournals.com/houston/news/commercial-real-estate/feed"],
+      "tier": "D",
+      "tags": ["houston", "mixed-asset", "deals"],
+      "weight": 7,
+      "region": "texas",
+      "filter_required": true
+    },
+    {
+      "id": "houston-bj-resi",
+      "name": "Houston Business Journal — Residential RE",
+      "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en",
+      "alternates": ["https://www.bizjournals.com/houston/news/residential-real-estate/feed"],
+      "tier": "D",
+      "tags": ["houston", "housing"],
+      "weight": 7,
+      "region": "texas",
+      "filter_required": true
+    },
+    {
+      "id": "dallas-bj-cre",
+      "name": "Dallas Business Journal — Commercial RE",
+      "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
+      "alternates": ["https://www.bizjournals.com/dallas/news/commercial-real-estate/feed"],
+      "tier": "D",
+      "tags": ["dfw", "mixed-asset", "deals"],
+      "weight": 7,
+      "region": "texas",
+      "filter_required": true
+    },
+    {
+      "id": "dallas-bj-resi",
+      "name": "Dallas Business Journal — Residential RE",
+      "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en",
+      "alternates": ["https://www.bizjournals.com/dallas/news/residential-real-estate/feed"],
+      "tier": "D",
+      "tags": ["dfw", "housing"],
+      "weight": 7,
+      "region": "texas",
+      "filter_required": true
+    },
+    {
+      "id": "austin-bj-cre",
+      "name": "Austin Business Journal — Commercial RE",
+      "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
+      "alternates": ["https://www.bizjournals.com/austin/news/commercial-real-estate/feed"],
+      "tier": "D",
+      "tags": ["austin", "mixed-asset", "deals"],
+      "weight": 7,
+      "region": "texas",
+      "filter_required": true
+    },
+    {
+      "id": "austin-bj-resi",
+      "name": "Austin Business Journal — Residential RE",
+      "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en",
+      "alternates": ["https://www.bizjournals.com/austin/news/residential-real-estate/feed"],
+      "tier": "D",
+      "tags": ["austin", "housing"],
+      "weight": 7,
+      "region": "texas",
+      "filter_required": true
     }
   ]
 }
