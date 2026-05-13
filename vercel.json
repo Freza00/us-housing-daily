@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "mkdir -p public/data && cp -r data/* public/data/ 2>/dev/null || true",
+  "buildCommand": "set -eux; ls -la data/; mkdir -p public/data; cp -rv data/* public/data/; ls -la public/data/",
   "outputDirectory": "public",
   "framework": null,
   "crons": [
