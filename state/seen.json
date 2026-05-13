@@ -1,5 +1,268 @@
 [
   {
+    "url": "https://www.realtor.com/research/existing-home-sales-april-2026/",
+    "tokens": [
+      "existing",
+      "home",
+      "sales",
+      "steady",
+      "april"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.redfin.com/news/cpi-april-2026/",
+    "tokens": [
+      "wait",
+      "mode",
+      "inflation",
+      "mortgage",
+      "rates",
+      "track",
+      "prices",
+      "mideast",
+      "talks"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/housing-market-approaching-equilibrium-housecanary",
+    "tokens": [
+      "housing",
+      "market",
+      "approaching",
+      "equilibrium",
+      "housecanary"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/brokerage-consolidation-lead-routing/",
+    "tokens": [
+      "consolidation",
+      "math",
+      "changed",
+      "industry",
+      "hasn",
+      "caught"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.redfin.com/news/buyers-vs-sellers-april-2026/",
+    "tokens": [
+      "america",
+      "housing",
+      "market",
+      "favors",
+      "buyers",
+      "advantage",
+      "finally",
+      "starting",
+      "shrink"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://rebusinessonline.com/greystar-university-of-texas-at-austin-break-ground-on-340-bed-student-housing-project/",
+    "tokens": [
+      "greystar",
+      "university",
+      "texas",
+      "austin",
+      "break",
+      "ground",
+      "340",
+      "student",
+      "housing",
+      "project"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNc09hV3hEcTEyQzNVNGc1WktfdkdoLVg0QzlueWhuakFONzVXV1VKZXktakRONG80NHhZdThKdnQ5TzNxUkYybFNMZktBcEI4TnZSQUxhLXJ3YlltcnVyYWRjM0ttNUNMd2ZFRzNjUDRCN3VER1FjbTlodlBmdlc3VVVCQkcxUlhoMmhPcjBtZktpRTFDSUJnTkpTQWNKYXlxY2RJYzJYa1h5cXhKejYtdnJ4ZTltei1Ta2c?oc=5",
+    "tokens": [
+      "homebuilders",
+      "sunbelt",
+      "housing",
+      "markets",
+      "working",
+      "through",
+      "spec",
+      "overhang",
+      "fast",
+      "company"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/value-add-apartment-transaction-multifamily-investment-strategy/819878/",
+    "tokens": [
+      "platte",
+      "canyon",
+      "capital",
+      "buys",
+      "value",
+      "apartments",
+      "antonio",
+      "area"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOX05rNjhXaXpkMUp4TF9TT0pVbmZUaDlwMlVjY0NQRWx3bjZzN0c5Zm1OMzUwd3M3QnkyTlZzVjh3cG8zbkU3TUVVOFZaakJxVlhGcmY5RVpWenNucU4tNC1kQjV1WXBwbG5xVmxSM2pSTmhYZGp4OFlqQlBtLWFQLTBhdlQ2clNiZHdiQ3FzWmhmLXRnQnpv?oc=5",
+    "tokens": [
+      "raleigh",
+      "condos",
+      "townhomes",
+      "getting",
+      "cheaper",
+      "axios"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/build-to-rent/trump-road-to-housing-btr-forced-sale-134536",
+    "tokens": [
+      "trump",
+      "pushes",
+      "house",
+      "pass",
+      "housing",
+      "bill",
+      "forced",
+      "sale",
+      "provision"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/funding-to-build-or-buy-sfr-hits-market-as-debate-rages",
+    "tokens": [
+      "funding",
+      "build",
+      "hits",
+      "market",
+      "debate",
+      "rages"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/rclco-fund-advisors-teams-with-pension-fund-for-sfr-investments/",
+    "tokens": [
+      "rclco",
+      "fund",
+      "advisors",
+      "teams",
+      "pension",
+      "investments"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/multifamily/apartment-construction-starts-plummet-to-15-year-low-134549",
+    "tokens": [
+      "apartment",
+      "construction",
+      "starts",
+      "plummet",
+      "year"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://therealdeal.com/national/washington-dc/2026/05/12/feds-fast-track-dc-selloff-sparks-concerns-over-road-ahead/",
+    "tokens": [
+      "feds",
+      "fast",
+      "track",
+      "selloff",
+      "sparks",
+      "fears",
+      "fire",
+      "sale",
+      "chaos"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-maturities-cmbs-debt-distress/820012/",
+    "tokens": [
+      "multifamily",
+      "cmbs",
+      "maturities",
+      "jumped",
+      "7.71%",
+      "april",
+      "trepp"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-development/data-centers-boost-otherwise-sagging-construction-backlogs-134546",
+    "tokens": [
+      "data",
+      "centers",
+      "boost",
+      "otherwise",
+      "sagging",
+      "construction",
+      "pipeline"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/05/multifamily-developer-confidence-holds-steady-in-first-quarter/",
+    "tokens": [
+      "multifamily",
+      "developer",
+      "confidence",
+      "holds",
+      "steady",
+      "first",
+      "quarter"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/breit-raises-12b-q1-redemptions-decline-41-percent-134537",
+    "tokens": [
+      "breit",
+      "raises",
+      "$1.2b",
+      "redemptions",
+      "decline",
+      "41%"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/qxo-details-next-stage-of-growth/",
+    "tokens": [
+      "inside",
+      "growth",
+      "$30.2",
+      "billion",
+      "acquisition",
+      "spree"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/reit-liquidation-elme-communities-apartment-sales/820005/",
+    "tokens": [
+      "slumping",
+      "market",
+      "dings",
+      "elme",
+      "shareholder",
+      "payout",
+      "liquidates"
+    ],
+    "shown_date": "2026-05-13"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/90-of-u-s-markets-see-uptick-in-home-value",
     "tokens": [
       "90%",
