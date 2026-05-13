@@ -1,14 +1,17 @@
 name: Daily News Build
 
-# 北京 08:57 是发布主时间点；GH Actions schedule 是 best-effort（实测迟到 3 小时甚至直接 skip），
-# 所以失败/跳过时从 09:07 起每 10 分钟重试到 12:57，跑通后剩余 cron 全部 dedupe-fast-skip (~5s/次)。
+# 北京 08:57 是发布主时间点。三条独立路径同时兜底：
+#   1. GH schedule '57 0 * * *'         主时间点（GH best-effort，可能 skip / 迟到几小时）
+#   2. Vercel Cron → repository_dispatch  同一时刻并发，不同 infra 平行兜底（见 vercel.json）
+#   3. GH schedule 3 次小时级 retry      上面两条都挂时的最后一道防线
+# 任何一路 commit 了 data/<今天>.json 之后，剩余 fire 都会被 dedupe step 5s no-op 掉。
 on:
   schedule:
-    - cron: '57 0 * * *'                  # UTC 00:57 = 北京 08:57 — 主时间点
-    - cron: '7,17,27,37,47,57 1-4 * * *'  # 北京 09:07–12:57 每 10 分钟 — 主时间点失败/跳过才会真正跑
+    - cron: '57 0 * * *'        # UTC 00:57 = 北京 08:57 — 主时间点（和 Vercel Cron 同时）
+    - cron: '27 1,2,3 * * *'    # 北京 09:27 / 10:27 / 11:27 — 主路径都挂时兜底
   workflow_dispatch: {}
   repository_dispatch:
-    types: [daily-build]   # 由 Vercel Cron 通过 GH dispatches API 触发（GH_PAT 配好后激活）
+    types: [daily-build]   # 由 Vercel Cron 通过 GH dispatches API 触发
   push:
     branches: [main]
     paths:
