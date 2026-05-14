@@ -1,5 +1,288 @@
 [
   {
+    "url": "https://www.realtor.com/research/cpi-inflation-april-2026/",
+    "tokens": [
+      "inflation",
+      "contagion",
+      "april",
+      "hits",
+      "3.8%",
+      "energy",
+      "shock",
+      "bleeds",
+      "core"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/senate-confirms-kevin-warsh-as-federal-reserve-chair",
+    "tokens": [
+      "senate",
+      "confirms",
+      "kevin",
+      "warsh",
+      "federal",
+      "reserve",
+      "chair"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1IY09fY0VDN3FEazROZF95VU91cUhLbjNYVmNDT1NuanhXa3YxdmNtVlF6RTFOWnQ5cVoxNjhqeXBkeG9ZSjBUeWw0OGU3ZVNadFJVdk1raGM0dHF2WHZ5M2RFaS00R2thNFducnFOMlVKN0dmZXhiV1U1ck1xdw?oc=5",
+    "tokens": [
+      "existing",
+      "home",
+      "sales",
+      "defy",
+      "consumer",
+      "gloom",
+      "data",
+      "inman"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/construction-development/construction-costs-up-62-in-first-4-months-of-the-year-134557",
+    "tokens": [
+      "construction",
+      "costs",
+      "rise",
+      "6.2%",
+      "through",
+      "april"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/pandemic-eviction-moratorium-lawsuit-darby/820162/",
+    "tokens": [
+      "pandemic",
+      "eviction",
+      "freeze",
+      "lawsuit",
+      "cost",
+      "federal",
+      "government",
+      "$1b"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://houstonagentmagazine.com/2026/05/13/har-monthly-market-update-april-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=har-monthly-market-update-april-2026",
+    "tokens": [
+      "spring",
+      "housing",
+      "market",
+      "energy",
+      "greater",
+      "houston"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://southfloridaagentmagazine.com/2026/05/13/miami-dade-manufactured-home/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=miami-dade-manufactured-home",
+    "tokens": [
+      "first",
+      "manufactured",
+      "home",
+      "community",
+      "miami",
+      "dade",
+      "decades",
+      "begin",
+      "sales"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://rebusinessonline.com/elevate-development-receives-116m-in-financing-for-student-housing-project-near-texas-state-university/",
+    "tokens": [
+      "elevate",
+      "development",
+      "receives",
+      "$116m",
+      "financing",
+      "student",
+      "housing",
+      "project",
+      "near",
+      "texas",
+      "state",
+      "university"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.bisnow.com/austin-san-antonio/news/other/blue-origin-considering-williamson-county-for-project-blue-hub-134535",
+    "tokens": [
+      "jeff",
+      "bezos",
+      "blue",
+      "origin",
+      "mulls",
+      "city",
+      "near",
+      "austin",
+      "house",
+      "next",
+      "venture"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://rebusinessonline.com/madison-capital-group-arranges-21-2m-in-financing-for-detroit-single-family-rental-portfolio/",
+    "tokens": [
+      "madison",
+      "capital",
+      "group",
+      "arranges",
+      "$21.2m",
+      "financing",
+      "detroit",
+      "single",
+      "family",
+      "rental",
+      "portfolio"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaUhEQm9fS3kxMkhsV0NFdEhudmpBWDhBczUzR195b2RCTDBhWjQyakgydU1OVjYxUFpjcXFmbG0tUUFhQUJoOXdiY095Z2VubXFLLWxGLUw0R1N5NURMYTB4cnk3cVZRYndFQllvNjRDSjdLU3FHWnFkYXBZVUxldGQyYWNBRHJOSGttMXVVTzc1M1VZZmExdnpGSTJIUQ?oc=5",
+    "tokens": [
+      "daily",
+      "2026",
+      "rockefeller",
+      "group",
+      "living",
+      "begin",
+      "welcoming",
+      "residents",
+      "list"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/powerhouse-looking-to-add-to-dfw-data-center-portfolio/",
+    "tokens": [
+      "powerhouse",
+      "looking",
+      "data",
+      "center",
+      "portfolio"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/data-center-development/northern-virginia-no-longer-top-target-big-data-center-projects-but-still-winning-other-ways-134556",
+    "tokens": [
+      "texas",
+      "might",
+      "soon",
+      "data",
+      "centers",
+      "investors",
+      "prefer",
+      "northern",
+      "virginia"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/industrial/dhs-inspector-general-opens-probe-into-38b-warehouse-detention-program-134555",
+    "tokens": [
+      "inspector",
+      "opens",
+      "probe",
+      "$38b",
+      "warehouse",
+      "detention",
+      "program"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://rebusinessonline.com/cantex-capital-sells-majority-interest-in-1-3-msf-dallas-fort-worth-industrial-portfolio/",
+    "tokens": [
+      "cantex",
+      "capital",
+      "sells",
+      "majority",
+      "interest",
+      "dallas",
+      "fort",
+      "worth",
+      "industrial",
+      "portfolio"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/commercial-real-estate/class-action-suit-targets-cushman-wakefield-for-failing-to-protect-client-data-134560",
+    "tokens": [
+      "cushman",
+      "wakefield",
+      "class",
+      "action",
+      "security",
+      "breach"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.perenews.com/bnpp-am-alts-amasses-e3bn-for-european-credit-strategy-targeting-value-add-deals/",
+    "tokens": [
+      "bnpp",
+      "alts",
+      "amasses",
+      "european",
+      "credit",
+      "strategy",
+      "targeting",
+      "value",
+      "deals"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/two-harbors-rejects-uwms-hostile-12-50-offer",
+    "tokens": [
+      "harbors",
+      "rejects",
+      "hostile",
+      "$12.50",
+      "offer"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.perenews.com/ohio-sers-seeks-to-reduce-real-estate-exposure-after-missing-benchmarks/",
+    "tokens": [
+      "ohio",
+      "sers",
+      "seeks",
+      "reduce",
+      "exposure",
+      "missing",
+      "benchmarks"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/05/13/mortgage-rates-jump-to-highest-level-since-march.html",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "jump",
+      "highest",
+      "level",
+      "since",
+      "march",
+      "hotter",
+      "inflation"
+    ],
+    "shown_date": "2026-05-14"
+  },
+  {
     "url": "https://www.realtor.com/research/existing-home-sales-april-2026/",
     "tokens": [
       "existing",
