@@ -891,9 +891,11 @@ function buildCandidatesBlock(candidates) {
   }).join("\n\n");
 }
 
-// LLM fetch with retry on 5xx / 429 / network errors. Other 4xx throws immediately.
-// 3 attempts, backoff 1s/5s/30s. Returns Response (caller does .json()).
-// 5xx covers Cloudflare proxy errors 520-524 (gateway timeout, upstream unreachable etc.)
+// LLM fetch with SSE streaming + retry on 5xx / 429 / network errors.
+// Streaming keeps bytes flowing chunk-by-chunk so proxies don't trip
+// gateway timeouts (e.g. Cloudflare 524 fires when a proxy sees no bytes
+// from origin within ~100s). 3 attempts, backoff 1s/5s/30s. Returns the
+// fully assembled assistant text.
 async function fetchLLMWithRetry(endpoint, body, apiKey, label) {
   const RETRY_DELAYS = [1000, 5000, 30000];
   const isRetryable = (s) => s === 408 || s === 429 || (s >= 500 && s < 600);
@@ -903,7 +905,7 @@ async function fetchLLMWithRetry(endpoint, body, apiKey, label) {
       r = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
-        body: JSON.stringify(body),
+        body: JSON.stringify({ ...body, stream: true }),
       });
     } catch (e) {
       if (attempt < 2) {
@@ -914,22 +916,57 @@ async function fetchLLMWithRetry(endpoint, body, apiKey, label) {
       }
       throw e;
     }
-    if (r.ok) return r;
-    if (isRetryable(r.status) && attempt < 2) {
-      const errPeek = (await r.text()).slice(0, 200);
-      const wait = RETRY_DELAYS[attempt];
-      log(`🔁 ${label} API ${r.status} (${errPeek}), retrying in ${wait}ms (${attempt + 1}/3)`);
-      await new Promise(res => setTimeout(res, wait));
-      continue;
+    if (!r.ok) {
+      if (isRetryable(r.status) && attempt < 2) {
+        const errPeek = (await r.text()).slice(0, 200);
+        const wait = RETRY_DELAYS[attempt];
+        log(`🔁 ${label} API ${r.status} (${errPeek}), retrying in ${wait}ms (${attempt + 1}/3)`);
+        await new Promise(res => setTimeout(res, wait));
+        continue;
+      }
+      const errText = (await r.text()).slice(0, 500);
+      throw new Error(`${label} API ${r.status}: ${errText}`);
     }
-    const errText = (await r.text()).slice(0, 500);
-    throw new Error(`${label} API ${r.status}: ${errText}`);
+
+    try {
+      const reader = r.body.getReader();
+      const decoder = new TextDecoder();
+      let buf = "";
+      let out = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buf += decoder.decode(value, { stream: true });
+        const lines = buf.split("\n");
+        buf = lines.pop() || "";
+        for (const ln of lines) {
+          const t = ln.trim();
+          if (!t.startsWith("data:")) continue;
+          const payload = t.slice(5).trim();
+          if (payload === "[DONE]") return out;
+          try {
+            const obj = JSON.parse(payload);
+            const delta = obj.choices?.[0]?.delta?.content ?? "";
+            out += delta;
+          } catch { /* skip keepalive / non-JSON frames */ }
+        }
+      }
+      return out;
+    } catch (e) {
+      if (attempt < 2) {
+        const wait = RETRY_DELAYS[attempt];
+        log(`🔁 ${label} stream interrupted (${e.message}), retrying in ${wait}ms (${attempt + 1}/3)`);
+        await new Promise(res => setTimeout(res, wait));
+        continue;
+      }
+      throw e;
+    }
   }
   throw new Error(`${label} API: exhausted retries`);
 }
 
 async function callLLM(systemPrompt, userPrompt, opts, label = "llm") {
-  const r = await fetchLLMWithRetry(opts.endpoint, {
+  const text = await fetchLLMWithRetry(opts.endpoint, {
     model: opts.model,
     messages: [
       { role: "system", content: systemPrompt },
@@ -938,8 +975,6 @@ async function callLLM(systemPrompt, userPrompt, opts, label = "llm") {
     max_tokens: opts.maxTokens || 6000,
     temperature: opts.temperature ?? 0.3,
   }, opts.apiKey, label);
-  const data = await r.json();
-  const text = data.choices?.[0]?.message?.content ?? "";
   return text.replace(/```json\s*/g, "").replace(/```\s*$/g, "").trim();
 }
 
