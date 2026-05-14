@@ -1,0 +1,76 @@
+name: Daily Build Auto-Retry
+
+# Event-driven 兜底，补 GH schedule `27 1,2,3 * * *` 之外的时间窗。
+# 触发：daily.yml 任何一次 fail -> 等 1h（上游 LLM 524 一般 30-60min 自愈）-> 重新 dispatch。
+# 防爆：data/<今天>.json 存在则 no-op；当天累计 fail >= 5 则停手（避免上游持续挂时烧 quota）。
+
+on:
+  workflow_run:
+    workflows: ["Daily News Build"]
+    types: [completed]
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  retry:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Decide whether to retry
+        id: decide
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+
+          if [ -f "data/${TODAY}.json" ]; then
+            echo "::notice::data/${TODAY}.json already exists - no retry needed"
+            echo "go=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          TODAY_UTC_START=$(date -u +%Y-%m-%dT00:00:00Z)
+          FAILURES=$(gh run list --workflow daily.yml --status failure --limit 50 \
+            --json createdAt \
+            --jq "[.[] | select(.createdAt > \"$TODAY_UTC_START\")] | length")
+          echo "Failures today: $FAILURES (cap = 5)"
+
+          if [ "$FAILURES" -ge 5 ]; then
+            echo "::warning::5+ failures today, stopping auto-retry to save Actions quota; tomorrow 08:57 primary fire will retry"
+            echo "go=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "go=true" >> "$GITHUB_OUTPUT"
+
+      - name: Wait 1h for upstream to recover
+        if: steps.decide.outputs.go == 'true'
+        run: |
+          echo "::notice::Upstream LLM 524 usually self-heals in 30-60min; sleeping 3600s before retry"
+          sleep 3600
+
+      - name: Re-check before dispatching (race-condition guard)
+        if: steps.decide.outputs.go == 'true'
+        id: recheck
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          git pull --ff-only origin main || true
+          if [ -f "data/${TODAY}.json" ]; then
+            echo "::notice::Another fire produced data/${TODAY}.json during sleep, skip re-dispatch"
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Re-dispatch daily build
+        if: steps.decide.outputs.go == 'true' && steps.recheck.outputs.go == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "::notice::Re-dispatching Daily News Build after 1h cooldown"
+          gh workflow run daily.yml
