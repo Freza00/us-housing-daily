@@ -893,9 +893,10 @@ function buildCandidatesBlock(candidates) {
 
 // LLM fetch with retry on 5xx / 429 / network errors. Other 4xx throws immediately.
 // 3 attempts, backoff 1s/5s/30s. Returns Response (caller does .json()).
+// 5xx covers Cloudflare proxy errors 520-524 (gateway timeout, upstream unreachable etc.)
 async function fetchLLMWithRetry(endpoint, body, apiKey, label) {
   const RETRY_DELAYS = [1000, 5000, 30000];
-  const RETRYABLE_STATUS = new Set([408, 429, 500, 502, 503, 504]);
+  const isRetryable = (s) => s === 408 || s === 429 || (s >= 500 && s < 600);
   for (let attempt = 0; attempt < 3; attempt++) {
     let r;
     try {
@@ -914,7 +915,7 @@ async function fetchLLMWithRetry(endpoint, body, apiKey, label) {
       throw e;
     }
     if (r.ok) return r;
-    if (RETRYABLE_STATUS.has(r.status) && attempt < 2) {
+    if (isRetryable(r.status) && attempt < 2) {
       const errPeek = (await r.text()).slice(0, 200);
       const wait = RETRY_DELAYS[attempt];
       log(`🔁 ${label} API ${r.status} (${errPeek}), retrying in ${wait}ms (${attempt + 1}/3)`);
