@@ -1226,9 +1226,11 @@ const SELECTOR_TARGET_MIN = 25;
 const SELECTOR_TARGET_MAX = 40;
 
 function buildSelectorCandidatesBlock(candidates) {
+  // Body slice kept short — selector only needs enough context to judge importance,
+  // and larger prompts push the LLM proxy past its ~2min Cloudflare gateway timeout.
   return candidates.map((it, i) => {
     const ageH = it.published_at ? ((Date.now() - it.published_at) / 3600_000).toFixed(0) : "?";
-    const body = (it.description || "").slice(0, 1000);
+    const body = (it.description || "").slice(0, 400);
     const ext = it._ext_eligible ? " [EXT-7D]" : "";
     return `[${i + 1}] (${it.source_name}, tier=${it.source_tier}, ${ageH}h ago${ext}, region=${it.region})\nTitle: ${it.title}\nBody: ${body}`;
   }).join("\n\n");
