@@ -1,5 +1,294 @@
 [
   {
+    "url": "https://www.realtor.com/news/real-estate-news/kevin-warsh-fed-chair-jerome-powell-interest-rates/",
+    "tokens": [
+      "kevin",
+      "warsh",
+      "confirmed",
+      "chair",
+      "trump",
+      "pressure",
+      "lower",
+      "interest",
+      "rates"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/freddie-mac-30-year-rate-dips-despite-hot-inflation-report",
+    "tokens": [
+      "freddie",
+      "year",
+      "rate",
+      "dips",
+      "despite",
+      "inflation"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9FNmZnQlUycjNpcW9NaXMyS3lBYl9EMEVxMWNCR3FkUE9ld2poWEs3Z1NoaWM0ZkQ2SGRLT3RoRzhFOEhlQ1F3OERxaGI0M1hyWUt2aHNkSUI5c0xpV0ZIdWRySUFpNU9iSTZPYkVqNmJJeHZfMTZQbQ?oc=5",
+    "tokens": [
+      "pending",
+      "home",
+      "sales",
+      "highest",
+      "level",
+      "since",
+      "2022",
+      "redfin",
+      "inman"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/fha-spike-drives-delinquency-spread-to-widest-point-in-years",
+    "tokens": [
+      "spike",
+      "drives",
+      "delinquency",
+      "spread",
+      "widest",
+      "point",
+      "years"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/zillow-redfin-antitrust-lawsuit-juge-reject-dismiss/820288/",
+    "tokens": [
+      "zillow",
+      "redfin",
+      "must",
+      "face",
+      "antitrust",
+      "lawsuit"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVnJ2NXFNaW0xWFpMTDNXQjROZFZIWUNXTTdqNVFYdDJzWHhDdm5lNnJONmxUZWFzV3lZanRRcVNvaDV5bnhZUl8zSDJLank3NmpLc3dXZnVTUmt3aHF4eHU1QUx6cHptTUt3VHBrYkVuVXhnZGxIeFZXcGYwUHJSZzZBMmt0YXJJMzluU3ZCM0tuaGZOeENmMlBRRXpxUmdDaWwwU2J2dnM?oc=5",
+    "tokens": [
+      "group",
+      "hatc",
+      "break",
+      "ground",
+      "348",
+      "affordable",
+      "housing",
+      "units",
+      "austin",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRkVGWHNlZVc5N1QxaG1pblR0eDhuREh0ckZIY2VNSUZzZVJxaU5NQ2x0SXZaMkZlNmxHQWlfSms0dUZXMzFnalJPRWNpRlhLLUFtNVlnUTE3TDlVcDVmaHhHTEptazVTWkVOUnhncW5obXR1ODZzTnhYV3l2Zko4bDhoVVUyX1JpeHctdzVpUkFMTjJOT1g5M1NPZjM0WFlnVVJUMnp2QVdlTExMRXRqanRjR0JDZGl5Y3JJSWVFMzlBR2tGVDRkMjJR0gHeAUFVX3lxTE90MEhjSWRJQkdwNmQ1VURsRkVjWlBBYmVwa1dLNVBYb05SQXNTNlRHcTJqTkFfX0gtd00tbS1yVVVqSFU0V0FBb1FRNkxxXzAyMVFtdVBaYUs4cW9OQ1RyaVpSZS1DUTJpR2M1T2F6NmpRTVBYazJVTnNWXzZ3c2ZqSUdHUzVSdy1QWVZkZEIwTUd3VFB5dVJQenpzTHMyRWFkMmdsNFhpNE8wVmlRU09xeG1GYzYwZHVBWVZaV3dpSERKOE1tbTR4ZU1iRzU1RW91bHpoSG8zM2M4ZVNodw?oc=5",
+    "tokens": [
+      "central",
+      "florida",
+      "housing",
+      "market",
+      "favors",
+      "buyers",
+      "first",
+      "time",
+      "since",
+      "pandemic",
+      "wftv"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZmdqRTZXSjNsbW5ndk5jODIwUWI3Y0h3V25yWWxMRV81Z0dKOEUtR1daVm82bFVCOGpILWhsLXRoT2pWX1gyUzN3WlUtRzh0RDBNd19mZHA1SHh3ZDh1WUdCTFhvMEc5bm50SXNhWHlJQXlaMXYya1lPTDFOakdCOC1FYWxvdnBLXzJTQUF6OFNseFJYNWtncHlHY1N5NHcyNkk0dnN6d3BZQ0o3ckNXSWd2R1FCZzg0b0IzR2ttekVBcS1pSkFCaElZc1VnVTAyU3c?oc=5",
+    "tokens": [
+      "jacksonville",
+      "worst",
+      "large",
+      "housing",
+      "market",
+      "nation",
+      "recent",
+      "study"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/census-fastest-growing-cities-celina-texas-home-prices/",
+    "tokens": [
+      "fastest",
+      "growing",
+      "cities",
+      "nation",
+      "texas",
+      "continues",
+      "shrink"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/build-to-rent/house-cuts-build-to-rent-ban-from-latest-bill-pushes-for-vote-next-week-134575",
+    "tokens": [
+      "house",
+      "cuts",
+      "build",
+      "rent",
+      "latest",
+      "bill",
+      "targets",
+      "vote",
+      "next",
+      "week"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1pbE1rejZlWl95T1BMdTdwMnFjWXBMWFJrcTMzVHFGQWZFX0o3bzg4VUxodm1NbDRxel9tODZwd2syeExjNDh6RGU3UmlVNjlnc21jbU13X3ZvakZyM3U0dnU3Ml8tM1I0ZlplNmxtM2pZTXVFQnB2NWNB?oc=5",
+    "tokens": [
+      "daily",
+      "2026",
+      "four",
+      "corners",
+      "acquires",
+      "157",
+      "homes",
+      "list"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/built-to-rent-investor-ban-road-housing-act-latest/",
+    "tokens": [
+      "build",
+      "rent",
+      "sell",
+      "rule",
+      "stripped",
+      "institutional",
+      "investors",
+      "trump",
+      "pushes",
+      "landmark",
+      "housing",
+      "bill",
+      "pass"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/hillwood-underway-on-two-spec-industrial-buildings-totaling-769858-sf-in-north-fort-worth/",
+    "tokens": [
+      "hillwood",
+      "underway",
+      "spec",
+      "industrial",
+      "buildings",
+      "totaling",
+      "769",
+      "858",
+      "north",
+      "fort",
+      "worth"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/reits-earnings-west-coast-apartments-supply/820266/",
+    "tokens": [
+      "coasts",
+      "shine",
+      "multifamily",
+      "reits"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/14/inspector-general-looking-into-ice-detention-center-deals/",
+    "tokens": [
+      "inspector",
+      "general",
+      "probes",
+      "detention",
+      "center",
+      "deals"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/dermot-secures-355m-refinancing-on-upper-west-side-apartments/",
+    "tokens": [
+      "dermot",
+      "secures",
+      "$355m",
+      "refinancing",
+      "upper",
+      "west",
+      "side",
+      "apartments"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/cushman-wakefield-negotiates-sale-of-publix-anchored-shopping-center-in-central-florida/",
+    "tokens": [
+      "cushman",
+      "038",
+      "wakefield",
+      "negotiates",
+      "sale",
+      "publix",
+      "anchored",
+      "shopping",
+      "center",
+      "central",
+      "florida"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center/blackstones-data-center-reit-raises-175b-in-debut-as-share-prices-fall-134583",
+    "tokens": [
+      "blackstone",
+      "data",
+      "center",
+      "reit",
+      "hits",
+      "$1.75b",
+      "initial",
+      "target",
+      "debut"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://www.perenews.com/heitman-aims-for-2bn-raise-with-debut-self-storage-fund/",
+    "tokens": [
+      "heitman",
+      "aims",
+      "$2b",
+      "raise",
+      "debut",
+      "self",
+      "storage",
+      "fund"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/14/quarterra-lists-3700-unit-portfolio-amid-repositioning/",
+    "tokens": [
+      "quarterra",
+      "seeks",
+      "sell",
+      "700",
+      "unit",
+      "national",
+      "portfolio"
+    ],
+    "shown_date": "2026-05-15"
+  },
+  {
     "url": "https://www.realtor.com/research/cpi-inflation-april-2026/",
     "tokens": [
       "inflation",
