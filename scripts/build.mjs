@@ -783,7 +783,7 @@ ${lines.join("\n\n")}
 
 请直接输出 JSON 数组（每条都要严格仿照上面示例的中文风格）：`;
 
-  const r = await fetchLLMWithRetry(opts.endpoint, {
+  const text = await fetchLLMWithRetry(opts.endpoint, {
     model: opts.model,
     messages: [
       { role: "system", content: systemPrompt },
@@ -792,8 +792,6 @@ ${lines.join("\n\n")}
     max_tokens: 4000,
     temperature: 0.3,
   }, opts.apiKey, "translator");
-  const data = await r.json();
-  const text = data.choices?.[0]?.message?.content ?? "";
   const cleaned = text.replace(/```json\s*/g, "").replace(/```\s*$/g, "").trim();
 
   let parsed;
