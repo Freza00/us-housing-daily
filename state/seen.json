@@ -1,5 +1,278 @@
 [
   {
+    "url": "https://www.realtor.com/research/pending-home-sales-april-2026/",
+    "tokens": [
+      "pending",
+      "home",
+      "sales",
+      "pick",
+      "1.4%",
+      "april",
+      "inventory",
+      "grows"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/house-will-vote-wednesday-on-newest-version-of-housing-bill",
+    "tokens": [
+      "house",
+      "vote",
+      "wednesday",
+      "newest",
+      "version",
+      "housing",
+      "bill"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/mortgage-applications-for-new-homes-reverse-marchs-gains",
+    "tokens": [
+      "mortgage",
+      "demand",
+      "homes",
+      "dives",
+      "latest",
+      "swing"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-starts-apartment-construction-costar/820645/",
+    "tokens": [
+      "multifamily",
+      "project",
+      "starts",
+      "declined",
+      "further",
+      "costar"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.realtor.com/research/down-payment-report-may-2026/",
+    "tokens": [
+      "down",
+      "payments",
+      "fall",
+      "2026",
+      "housing",
+      "market",
+      "sags"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObXRXcG93V3pOaTc1UW1SOVNIRzJhMGMtYXJsYUUxWDl4VkJscXZySFpmclZieElTQTh0eGxWYndDbVNaelRZVHhyYzZ6UnhPUFNSSkJRRTFSNkV1bG5FOFFiUkU5SE56VThESHNRNXgzeXdkZHpweFpCWGZBVVU1bUVfZEZuZTFTeU1JZU5VTmVLSWZOYkFITmxtZnFXYmVUazFz?oc=5",
+    "tokens": [
+      "austin",
+      "multifamily",
+      "market",
+      "forecasted",
+      "gradual",
+      "improvement",
+      "next",
+      "year",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/multifamily/zom-to-pay-323m-for-circumventing-grey-development-group-in-arizona-multifamily-jv-134647",
+    "tokens": [
+      "ordered",
+      "$323m",
+      "circumventing",
+      "partner",
+      "arizona",
+      "multifamily"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://rebusinessonline.com/woodfield-tops-out-325-unit-apartment-community-in-atlanta/",
+    "tokens": [
+      "woodfield",
+      "tops",
+      "325",
+      "unit",
+      "apartment",
+      "community",
+      "atlanta"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQLXU2bzhIcThyWFFOR1BBZXo0MGxOTjJVNDd3dDRSSUFKaWswdmZTa003bEVNc09EMFZQd1FhTjZfdHFaSUZ6Vm96Q09kVHJ0R2h2OGc2MUVZT0poRXNTb0xNNUEycHFFRnNVTTdhUWVON3RPcFdGYnNOdFY1VnhBT3Z6NmgyUGVUakhIa2RZOHd5VTFiX1Nj?oc=5",
+    "tokens": [
+      "mattamy",
+      "homes",
+      "bets",
+      "$6.37m",
+      "avondale",
+      "continued",
+      "housing",
+      "boom",
+      "briefglance"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/retail/huge-retail-lease-costs-drive-west-marine-bankruptcy-plan-store-closures-134641",
+    "tokens": [
+      "huge",
+      "retail",
+      "lease",
+      "costs",
+      "drive",
+      "west",
+      "marine",
+      "seek",
+      "bankruptcy",
+      "protection",
+      "store",
+      "closures"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-capital-markets/blackstone-bets-5b-ai-cloud-jv-google-134646",
+    "tokens": [
+      "blackstone",
+      "bets",
+      "$5b",
+      "cloud",
+      "venture",
+      "google"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/office/tishman-speyers-jacx-nets-loan-modification-after-towers-value-slashed-134628",
+    "tokens": [
+      "value",
+      "tishman",
+      "speyer",
+      "long",
+      "island",
+      "city",
+      "office",
+      "complex",
+      "slashed",
+      "loan",
+      "workout"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://rebusinessonline.com/newmark-arranges-sale-financing-of-1-4-msf-office-campus-in-irving/",
+    "tokens": [
+      "newmark",
+      "arranges",
+      "sale",
+      "financing",
+      "office",
+      "campus",
+      "irving"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-hj-sims-secure-252-1m-in-financing-for-planned-214-unit-seniors-housing-project-in-huntington-beach-california/",
+    "tokens": [
+      "sims",
+      "secure",
+      "$252.1m",
+      "financing",
+      "planned",
+      "214",
+      "unit",
+      "seniors",
+      "housing",
+      "project",
+      "huntington",
+      "beach",
+      "california"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.perenews.com/cpp-expands-direct-playbook-with-first-european-real-estate-co-investment/",
+    "tokens": [
+      "expands",
+      "direct",
+      "playbook",
+      "first",
+      "european",
+      "investment"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/two-harbors-postpones-crosscountry-acquisition-vote",
+    "tokens": [
+      "harbors",
+      "postpones",
+      "crosscountry",
+      "acquisition",
+      "vote"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/quarterra-multifamily-listings-apartment-sales-/820514/",
+    "tokens": [
+      "quarterra",
+      "reportedly",
+      "puts",
+      "700",
+      "units",
+      "market",
+      "costar"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/drb-sumitomo-10-year-growth/",
+    "tokens": [
+      "group",
+      "sumitomo",
+      "forestry",
+      "mark",
+      "year",
+      "growth"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/05/19/mortgage-rates-closing-in-on-7percent.html",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "surge",
+      "highest",
+      "level",
+      "since",
+      "july"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/california-ceqa-exemptions-housing/",
+    "tokens": [
+      "fault",
+      "lines",
+      "surface",
+      "projects",
+      "california",
+      "ceqa",
+      "exemption"
+    ],
+    "shown_date": "2026-05-20"
+  },
+  {
     "url": "https://www.multifamilydive.com/news/hud-scott-turner-defends-proposed-budget-cuts-amid-senate-scrutiny/820528/",
     "tokens": [
       "chief",
