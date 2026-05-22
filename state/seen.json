@@ -1,5 +1,286 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/single-family-starts-april/",
+    "tokens": [
+      "single",
+      "family",
+      "housing",
+      "starts",
+      "fell",
+      "april",
+      "multifamily",
+      "gained",
+      "momentum"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/fed-meeting-minutes-fomc-april-2026/",
+    "tokens": [
+      "frets",
+      "inflation",
+      "kevin",
+      "warsh",
+      "prepares",
+      "take"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-may-21-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "jump",
+      "resume",
+      "upward",
+      "trend"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.redfin.com/news/housing-market-update-pending-home-sales-slip/",
+    "tokens": [
+      "pending",
+      "home",
+      "sales",
+      "slip",
+      "first",
+      "time",
+      "since",
+      "early",
+      "april",
+      "mortgage",
+      "rates",
+      "climb"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/cfpb-regulation-x-gse-refi/",
+    "tokens": [
+      "cfpb",
+      "prioritizes",
+      "streamline",
+      "refis",
+      "comp",
+      "hopes",
+      "fade"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQd29hejNCX1AtRzdzVE5CNnlaNkUyNGN2MDdFNjVudVM5cUNjVVBwbm1oTk52Z3RJUHB4dVVyOWRGUjltVlBPZ1VWbFdKVnRWU0pjMHpGUkJhajV3Wjl3bXFMT3lqODlXRFBQbXNzTnFhYjhfWm9GWW1YbGh5YTdSOGp4MnQ5bzlFWEVNVnluQTVZTXl3Y1E5b1dOeWNtQmt5LWJvTTYtZTJTc09XamdqN3p0RGpIaC0yekd3NmVReEwyUDZmeUNJRWttTFA4T0dCaEE?oc=5",
+    "tokens": [
+      "toll",
+      "brothers",
+      "green",
+      "shoots",
+      "starting",
+      "emerge",
+      "correcting",
+      "austin",
+      "florida",
+      "housing",
+      "markets",
+      "resiclub"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://rebusinessonline.com/jpi-begins-construction-on-277-unit-multifamily-project-in-the-colony-texas/",
+    "tokens": [
+      "begins",
+      "construction",
+      "277",
+      "unit",
+      "multifamily",
+      "project",
+      "colony",
+      "texas"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://houstonagentmagazine.com/2026/05/21/homesusa-new-home-sales-april-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=homesusa-new-home-sales-april-2026",
+    "tokens": [
+      "houston",
+      "home",
+      "sales",
+      "bounce",
+      "back",
+      "april"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://rebusinessonline.com/high-street-camden-advance-plans-for-400-unit-apartment-development-in-durham/",
+    "tokens": [
+      "high",
+      "street",
+      "camden",
+      "advance",
+      "400",
+      "unit",
+      "apartment",
+      "development",
+      "durham"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/21/housing-bill-sails-through-house-of-representatives/",
+    "tokens": [
+      "housing",
+      "bill",
+      "sails",
+      "through",
+      "house",
+      "bipartisan",
+      "support"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUDU0ajQtdG92SXROZmRPMUVNcE82eUo3VDM4YkZCZ0pEYmFCZjlmbjZ0dEZubDZoRkhLdkdBVWt4UkVmc2ZBSTJFTEczTDRZUHJwbUhfXzQwTkJaM2tfajE1WjEtTWtZT09TYXBmYWRGQldFWE10ekZxZW5WdFNUQzNydVc?oc=5",
+    "tokens": [
+      "daily",
+      "2026",
+      "roofstock",
+      "completes",
+      "sale",
+      "unit",
+      "list"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/build-to-rent/revised-housing-bill-clears-house-but-faces-senate-hurdle-134659",
+    "tokens": [
+      "house",
+      "passes",
+      "friendly",
+      "housing",
+      "bill",
+      "senate",
+      "fight",
+      "looms"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://rebusinessonline.com/caprock-partners-breaks-ground-on-250000-sf-industrial-project-in-mckinney-texas/",
+    "tokens": [
+      "caprock",
+      "partners",
+      "breaks",
+      "ground",
+      "250",
+      "000",
+      "industrial",
+      "project",
+      "mckinney",
+      "texas"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/sain-alchemy-abr-secure-321m-refi-for-newly-delivered-plaza-district-offices/",
+    "tokens": [
+      "cain",
+      "alchemy",
+      "secure",
+      "$321m",
+      "refi",
+      "newly",
+      "delivered",
+      "plaza",
+      "district",
+      "offices"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-power/largest-us-grid-operator-accelerates-timeline-powering-new-data-centers-134684",
+    "tokens": [
+      "largest",
+      "grid",
+      "operator",
+      "accelerates",
+      "timeline",
+      "powering",
+      "data",
+      "centers"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-capital-markets/nvidia-record-earnings-ai-cloud-startups-boosting-data-center-demand-134689",
+    "tokens": [
+      "demand",
+      "gone",
+      "parabolic",
+      "nvidia",
+      "earnings",
+      "reveal",
+      "data",
+      "center",
+      "shifts"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/infrastructure/amtrak-picks-halmar-skanska-vornado-8b-penn-station-rebuild-134676",
+    "tokens": [
+      "amtrak",
+      "picks",
+      "halmar",
+      "skanska",
+      "$8b",
+      "penn",
+      "station",
+      "rebuild"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/21/avalonbay-equity-residential-reach-69b-merger/",
+    "tokens": [
+      "avalonbay",
+      "equity",
+      "residential",
+      "agree",
+      "$69b",
+      "apartment",
+      "giant",
+      "merger"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.bisnow.com/london/news/capital-markets/aermont-makes-768m-bet-uk-leisure-property-market-134686",
+    "tokens": [
+      "aermont",
+      "768",
+      "leisure",
+      "property",
+      "market"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
+    "url": "https://www.perenews.com/could-bxdc-be-the-exit-data-center-managers-have-been-waiting-for/",
+    "tokens": [
+      "bxdc",
+      "exit",
+      "data",
+      "center",
+      "managers",
+      "waiting"
+    ],
+    "shown_date": "2026-05-22"
+  },
+  {
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260520a.htm",
     "tokens": [
       "minutes",
