@@ -1,0 +1,808 @@
+{
+  "kind": "monthly",
+  "publish_date": "2026-06-01",
+  "period_start": "2026-05-01",
+  "period_end": "2026-05-31",
+  "period_label": "2026-05",
+  "generated_at": 1780281000000,
+  "themes": [
+    {
+      "title": "住宅供需边际改善，市场正走向再平衡",
+      "item_ids": [
+        "63d5997c",
+        "7b3d040b",
+        "8592ea94",
+        "3a0349bd"
+      ]
+    },
+    {
+      "title": "利率鹰派回归，交易复苏再被融资成本压住",
+      "item_ids": [
+        "5fc427cd",
+        "99755474",
+        "86411a81"
+      ]
+    },
+    {
+      "title": "机构资本继续押注租赁住房细分赛道与规模化",
+      "item_ids": [
+        "affd9a87",
+        "7c03f289",
+        "97333eb6"
+      ]
+    },
+    {
+      "title": "BTR政策风险明显缓释，机构建租逻辑获支撑",
+      "item_ids": [
+        "d60e6612",
+        "2b719a46",
+        "e6eb1ef9"
+      ]
+    },
+    {
+      "title": "CRE资本更挑剔，AI医疗多户获钱、办公纠纷承压",
+      "item_ids": [
+        "0c39babe",
+        "578a53af",
+        "88866b6d",
+        "429b1094",
+        "0cd09c14",
+        "52297fd6",
+        "c0888ffd"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Single-family housing starts fell in April, but multifamily gained momentum",
+      "link": "https://www.housingwire.com/articles/single-family-starts-april/",
+      "description": "Housing starts increased in April compared with a year ago, but a deeper dive into the data reveals that this uptick was driven by a noisier boost in multifamily development activity, while single-family starts declined. According to the U.S. Census Bureau ’s new residential construction data released on Thursday, housing starts, on a seasonally adjusted basis, ticked up 4.6% year-over-year but fell 2.8% from March . Single-family starts were down 2.4% year over year, but strength in the multifamily sector, which saw starts increase by 23.3%, kept new residential construction positive. At a seasonally adjusted annual rate, housing starts were 1,456,000 units, 930,000 of which were single-family homes. “Housing starts pulled back in April following March’s rebound, but the overall report still outpaced consensus expectations and does not suggest a sharp deterioration in construction activity,” First American Deputy Chief Economist Odeta Kushi said in a provided statement. The fall-off in single-family starts and permits, both sequential and year-over-year, is not viewed entirely as a negative, especially in light of homebuilders having to crush their margins to buy sales and work through oversupplies in some of the nation&#8217;s most-active new-home markets. &#8220;We continue viewing reduced SF Starts a positive as excess channel supply still needs to be absorbed, particularly at entry-level price points,&#8221; writes Trevor Allinson, Wolfe Research homebuilding and building products research analyst in an investors note following today&#8217;s Census release. This way, &#8220;pricing can stabilize to begin ticking upward and improving consumer confidence.&#8221; A closer look at regional trends provides additional insight. Regional trends Total housing starts were negative in each region, other than the West, which ticked up 49%. The Midwest (-9.6%), the South (-3.2%) and the Northeast (-3.2%) all experienced declining new residential activity. Single-family housing starts, on a seasonally adjusted annual rate, fell most prominently in the Northeast (-33.3%) and the Midwest (-12.1%). On the other hand, single-family starts were positive in the West (8.3%) and in the South (1.7%). However, this momentary increase in single-family starts in the West and the South won’t necessarily translate into positive momentum for the remainder of the year. The number of single-family permits authorized in April was negative in every region, including the South (-1.9%) and the Midwest (-3.2%), indicating that starts for the foreseeable future could be negative. Kushi argued that the latest Census data “continues to reflect a homebuilding market defined more by caution than confidence”, adding that “single-family construction activity could remain subdued in the months ahead.” The Northeast and Midwest have generally seen much stronger growth in housing starts over the past 18 months, largely because those regions avoided an earlier wave of aggressive homebuilding and still face limited housing supply. On the other hand, many booming Sun Belt markets had to work through excess inventory created by a surge in speculative development in the years following the COVID pandemic. The South and West were challenging regions for single-family starts last year , with yearly declines of 8.4% and 10.7% in 2025, respectively, both higher than the national decline of 7.3%. Meanwhile, housing starts in the Northeast and Midwest were relatively unchanged. A market in correction The number of single-family homes under construction remains well below the post-COVID-era peak. In May 2022, there were 827,000 single-family homes under construction, but that number has steadily declined since, falling to 588,000 in April. Compared with a year ago, there are nearly 7.0% fewer homes under construction. &#8220;Completions of single-family homes have slowed to an annual rate of about 903,000 units, reflecting ongoing challenges in the residential construction secto",
+      "published_at": 1779391971000,
+      "score": 38,
+      "tags": [
+        "housing",
+        "national",
+        "data",
+        "construction",
+        "regulator"
+      ],
+      "heat_signals": [
+        "sun belt",
+        "housing starts",
+        "permits",
+        "trend",
+        "trends",
+        "annual",
+        "year over year",
+        "year-over-year",
+        "housing starts"
+      ],
+      "importance": 5,
+      "selector_reason": "美国人口普查局新屋开工数据显示4月单户开工下滑、多户开工走强，是判断住房供给周期的关键官方数据。由于其具有全国宏观和政策参考意义，评为imp=5。",
+      "section": "national",
+      "title_zh": "4月 single-family starts 下滑，multifamily 托底",
+      "summary_zh": "housing starts YoY +4.6%，multifamily +23.3%抵消SF -2.4%，供给消化偏正面",
+      "impact": "neutral",
+      "id": "63d5997c",
+      "fetched_at": 1779412940639,
+      "source_date": "2026-05-22"
+    },
+    {
+      "source_id": "realtor-research",
+      "source_name": "Realtor.com Research",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "Pending Home Sales Pick Up 1.4% in April as Inventory Grows",
+      "link": "https://www.realtor.com/research/pending-home-sales-april-2026/",
+      "description": "Pending Home Sales Pending Home Sales Pick Up 1.4% in April as Inventory Grows By Anthony Smith May 19, 2026 What did pending home sales look like in April? Pending home sales picked up 1.4% in April as buyers capitalized on a growing selection of for-sale inventory and easing price growth. Contract signings grew 3.2% annually, a clear indication that the market is finding more balance during this spring season. Rates fell through the month after a turbulent start, dropping from a seven-month high of 6.46% to as low as 6.23% before ending around 6.3% , roughly half a percentage point below where they stood a year ago. That year-over-year advantage has preserved some buying power, though ongoing geopolitical uncertainty and economic anxiety have kept a lid on enthusiasm. For-sale inventory improved 4.6% annually in April , though the rate of improvement continued to slow. New listings climbed 1.1% annually and picked up 8.7% month over month as asking prices continued to ease, now down year over year for six consecutive months. The share of active listings with a price reduction actually declined year over year, suggesting sellers are adjusting expectations before listing rather than after. Taken together, the April data reflects a seller cohort willing to engage and doing so with more realistic pricing, a meaningful contrast to last spring&#8217;s standoff. What does this mean for buyers, sellers, and the housing market? Pending home sales, or contract signings between buyers and sellers, mark the first formal step in the homebuying process and typically lead closings by one to two months, making them a useful gauge of near-term activity. The slight uptick in March pending sales translated into modestly positive Existing Home Sales in April . Regionally, the picture was nearly all positive in April. The Northeast led the way with a 6.6% monthly gain, followed by the Midwest (+3.0%), and the West (+0.4%), while the South notched a slight monthly decrease (-0.7%). On an annual basis, the South saw the strongest growth (+4.7%), followed by the West (+4.7%), and the Midwest (+2.7%), while the Northeast saw a slight annual contraction (-0.7%). At the metro level, Boston (+10.3%), Miami (+9.4%), and Oklahoma City (+8.6%) led all major markets in year-over-year pending sales growth. Looking ahead, the market is watching the inflation picture closely. April&#8217;s Consumer Price Index rose 3.8% annually , the highest reading in nearly three years, and core inflation accelerated to 2.8% as elevated energy costs began filtering into other categories. Higher inflation generally puts upward pressure on mortgage rates, which have already started drifting back above 6.3% in early May. Beyond rates, inflation running ahead of wage growth means household budgets are being squeezed, a dynamic that could dampen buyer confidence heading into the traditionally active summer months.",
+      "published_at": 1779200427000,
+      "score": 35,
+      "tags": [
+        "housing",
+        "national",
+        "data",
+        "brokerage"
+      ],
+      "heat_signals": [
+        "inflation",
+        "mortgage rate",
+        "existing home sales",
+        "pending home sales",
+        "annual",
+        "year over year",
+        "year-over-year",
+        "housing market",
+        "pending home sales"
+      ],
+      "importance": 5,
+      "selector_reason": "待售房屋销售4月增长且库存改善，是衡量全国住宅交易活跃度和市场再平衡的核心数据。它覆盖全国销量与库存趋势，属于关键住房市场数据。",
+      "section": "national",
+      "title_zh": "April pending home sales 增1.4%，库存继续扩",
+      "summary_zh": "合同签约MoM增1.4%、YoY增3.2%，库存增4.6%，市场更均衡",
+      "impact": "long-pos",
+      "id": "7b3d040b",
+      "fetched_at": 1779241342170,
+      "source_date": "2026-05-20"
+    },
+    {
+      "source_id": "pere-news",
+      "source_name": "PERE News",
+      "source_tier": "B",
+      "source_weight": 10,
+      "source_tags": [
+        "institutional",
+        "deals",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Kayne Anderson raises record $5.2bn fund for niche real estate",
+      "link": "https://www.perenews.com/kayne-anderson-raises-record-5-2bn-fund-for-niche-real-estate/",
+      "description": "Managers Kayne Anderson raises record $5.2bn fund for niche real estate The Los Angeles-based manager’s over-subscribed seventh flagship opportunistic fund will focus on medical offices as well as senior and student housing. Theresa Agovino - 9 hours ago Share A - A + 100% PERE Create an account to continue reading Expert intelligence on the funds, deals and trends shaping global private real estate. CREATE AN ACCOUNT SIGN IN TAGS North America Opportunistic Alternatives Share this Twitter Linkedin Theresa Agovino",
+      "published_at": 1779471864000,
+      "score": 20,
+      "tags": [
+        "mixed-asset",
+        "national",
+        "fundraising",
+        "institutional"
+      ],
+      "heat_signals": [
+        "trend",
+        "trends"
+      ],
+      "importance": 5,
+      "selector_reason": "Kayne Anderson募集52亿美元机会型地产基金，规模远超5亿美元门槛并覆盖医疗办公、养老和学生住房等机构热门赛道。属于大型机构资本配置事件，具备系统性资金流向意义，因此评为5。",
+      "section": "institutional",
+      "title_zh": "Kayne Anderson 募得 $5.2B 机会型基金",
+      "summary_zh": "第七期旗舰基金超募，聚焦 medical office、senior/student housing",
+      "impact": "long-pos",
+      "id": "affd9a87",
+      "fetched_at": 1779504930267,
+      "source_date": "2026-05-23"
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "ROAD wins House nod, carving BTR out from institutional investor ban",
+      "link": "https://www.housingwire.com/articles/road-wins-house-nod-carving-btr-out-from-institutional-investor-ban/",
+      "description": "The build-to-rent (BTR) industry, which has been under siege from legislative uncertainty since March, just got a modicum of welcome news. On Wednesday, the U.S. House of Representatives passed an amended version of the U.S. Senate ’s 21st Century ROAD to Housing Act by a margin of 396 to 13 that removed the proposed seven-year selloff rule for new build-to-rent communities. The legislation does, however, ban institutional investors that already own 350 or more single-family homes from purchasing additional single-family properties. Still, the House’s bill – which now volleys back to the Senate for reconciliation and another vote – includes significant carve-outs for build-to-rent and renovate-to-rent projects and other exemptions that were not included in the Senate’s version. How the House legislation differs from the Senate’s The House overwhelmingly approved its original version of the legislation, which included no institutional investor ban, on February 9 in a 390-9 vote. The Senate followed on March 12, passing its version 89-10. However, the Senate’s bill included a last-minute provision, Section 901, which has significantly reduced the amount of build-to-rent supply under construction. The controversial provision banned institutional investors from purchasing single-family homes. While it included narrow carve-outs for renovate-to-rent projects, it didn’t provide exemptions for build-to-rent communities. It also mandated that new BTR communities be sold to individual homeowners within seven years of completion. The House unveiled an updated version of the 21st Century ROAD to Housing Act that overhauled that section last week and released the final draft of the bill on Tuesday. Section 1001 of the updated House legislation similarly defines single-family homes as duplexes, as well as traditional detached and attached single-family properties. Manufactured housing isn’t included in the definition. The section further states that “no large institutional investor may purchase, or enter into a contract to directly or indirectly purchase, any single-family home.” To discourage those firms from buying more properties, the legislation would institute a” civil penalty in an amount that is not more than $1,000,000 per violation, or 3 times the purchase price of the property involved, whichever is greater.” However, there are exemptions to this penalty for any single-family property that is: “newly constructed, renovated, or a rental conversion for sale by a large institutional investor and not as a residence rented pending sale.” “pursuant to a build-to-rent program where the large institutional investor purchases, constructs, or constructs and retains a newly constructed single-family home to be managed as a rental property, whether as part of a community made up exclusively of renter-occupied single-family homes or as part of a community made up of single-family homes that are both owner- and renter-occupied.” “pursuant to a renovate-to-rent program” that “makes improvements in an aggregate dollar amount of not less than 15 percent of the purchase price of the single-family home”. part of an eligible homeownership program or an eligible program aimed at converting renters into homeowners. purchased from “another large institutional investor that either owned the single-family home on the date of enactment of this Act or purchased the single-family home in compliance with this section.” “newly constructed, renovated, or a rental conversion that is intended and operated for occupancy as part of a community for households with 1 or more members aged 55.” Additionally, there is an exemption for any purchase of a single-family home that happens as part of changing or reorganizing the ownership structure of homes that an institutional investor already owned or bought before this law took effect. How the bill would incentivize local reform Another major change made by the House was removing the Senate’s Build Act Now provision, whi",
+      "published_at": 1779302897000,
+      "score": 26,
+      "tags": [
+        "btr-sfr",
+        "national",
+        "policy",
+        "institutional"
+      ],
+      "heat_signals": [
+        "build-to-rent",
+        "btr",
+        "occupancy"
+      ],
+      "importance": 5,
+      "selector_reason": "美国众议院通过住房法案修正版，并将BTR从机构投资者禁令中剔除，直接影响全国build-to-rent行业和住房供给政策。属于联邦层面的重大立法进展，评为imp=5。",
+      "section": "btr",
+      "title_zh": "ROAD法案放行BTR豁免",
+      "summary_zh": "House 以396比13通过修正版 ROAD，删去BTR七年出售条款并保留豁免",
+      "impact": "long-pos",
+      "id": "d60e6612",
+      "fetched_at": 1779328081719,
+      "source_date": "2026-05-21"
+    },
+    {
+      "source_id": "trd-national",
+      "source_name": "The Real Deal (National)",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Housing bill sails through House with bipartisan support",
+      "link": "https://therealdeal.com/national/2026/05/21/housing-bill-sails-through-house-of-representatives/",
+      "description": "Congress is a step closer to sending a housing affordability bill to the president’s desk, one that will provide the build-to-rent industry some comfort. On Wednesday, the amended 21st Century ROAD to Housing Act easily passed the House of Representatives, Politico reported . Only 13 lawmakers — all Republicans — voted against the bill, which will be delivered to the Senate next. Critically, the legislation carried the support of the White House. While the Trump administration previously advocated for the original bill to come out of the Senate, it gave the stamp of approval to the House-amended bill on Wednesday. It’s unclear if the Senate will be on board. In a joint statement on Wednesday, Sen. Tim Scott and Sen. Elizabeth Warren said there was “still work to be done” on a final bill. That being said, Warren was directly involved in crafting the House-amended bill, likely a positive sign for how the legislation will stand up in the Senate. While institutional investors will still be limited in their purchasing power for single-family homes, the House-amended bill still removed a critical provision that had the build-to-rent sector up in arms. The House eliminated the controversial provision requiring build-to-rent investors to sell rental homes within seven years, a mandate that has frozen activity and scared away investment in the sector. The definition of a single-family home was also narrowed to exclude manufactured housing and homes renovated to be sold. SIGN UP The amended bill drew the support of the National Association of Home Builders, which said in a statement last week that it “is the time for Congress and the president to work together to bring greater certainty to the housing market and let builders build.” The National Association of Realtors also voiced support for the amended bill after its passage in the House. “This bill reflects the growing bipartisan consensus that the nation needs bold action to expand housing inventory, improve affordability, and create more pathways to homeownership and rental opportunity,” Shannon McGahn, NAR executive vice president and chief advocacy officer, said in a statement. There’s no public timeline on when the Senate could take up the revamped bill and how long it would take to get to Donald Trump’s desk, should it be passed in that chamber. — Holden Walter-Warner Read more Politics National House knocks build-to-rent provision from amended Senate bill",
+      "published_at": 1779386400000,
+      "score": 20,
+      "tags": [
+        "btr-sfr",
+        "national",
+        "policy",
+        "regulator"
+      ],
+      "heat_signals": [
+        "build-to-rent",
+        "housing market"
+      ],
+      "importance": 5,
+      "selector_reason": "美国众议院以两党支持通过住房可负担性法案，且删除了令BTR行业担忧的限制性条款。该事件涉及联邦住房立法进程并影响住宅投资模式，因此评为imp=5。",
+      "section": "btr",
+      "title_zh": "BTR 友好住房法案获众议院通过",
+      "summary_zh": "众议院删除7年强制出售条款，机构买房仍受限但BTR投资压力缓解",
+      "impact": "long-pos",
+      "id": "2b719a46",
+      "fetched_at": 1779412940639,
+      "source_date": "2026-05-22"
+    },
+    {
+      "source_id": "trd-national",
+      "source_name": "The Real Deal (National)",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Scion Group, Ares buy Harrison Street’s $910M student housing portfolio",
+      "link": "https://therealdeal.com/national/2026/05/20/scion-group-and-ares-buy-harrison-streets-student-housing-portfolio/",
+      "description": "A new joint venture is making a nearly billion-dollar bet on student housing. Chicago-based student housing firm Scion Group teamed up with Los Angeles-based Ares Management to buy a 12-property portfolio for $910 million, according to a press release. The 7,578-bed portfolio, traded for $120,000-per bed. Student housing deals are typically quantified by the number of beds traded rather than units, because units often include multiple bedrooms to accommodate roommates and sometimes come semi- or fully furnished. Chicago-based Harrison Street Asset Management was the seller of the portfolio, which spans a dozen college towns. The firm had previously made a big push toward student housing and data centers, closing a $2.5 billion investment fund in late 2024 geared toward acquiring such assets. The student housing properties that Harrison Street sold in the recent deal are near schools including Auburn University, Arizona State University, Ohio State University and Washington State University, among others. SIGN UP The venture marks a new partnership for Scion, which specializes in student housing and Ares, a massive financial manager with $644 billion of assets under management as of March 31, according to the release. The sector has seen steady demand with college enrollment up 1.8 percent nationally in fall 2025 and pre-leasing outpacing last year’s rates, according to data on 200 U.S. universities tracked by Yardi Matrix. But rent growth continued to decelerate at the start of the year. In February, average rents reached $925 per bed, or about 0.4 percent year-over-year. That increase was much smaller than the 3.5 percent growth the sector experienced in February 2025, Yardi found. The properties sold by Harrison Street are: The Copper Beech Harrisonburg Apartments in Harrisonburg, Virginia The 87 at Notre Dame in South Bend, Indiana The Flats on University in Fairfax, Virginia The Grove at Auburn in Auburn, Alabama The Grove at Pullman in Pullman, Washington The Grove at Stephenville in Stephenville, Texas The Lyndon in San Marcos, Texas The Piedmont in Tempe, Arizona The Verge at Grand Forks in Grand Forks, North Dakota The Twin River Commons in Binghamton, New York The Varsity House in Gainsville, Florida The Lark in Columbus, Ohio",
+      "published_at": 1779310194000,
+      "score": 21,
+      "tags": [
+        "multifamily",
+        "national",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [
+        "texas",
+        "year-over-year",
+        "rent growth"
+      ],
+      "importance": 5,
+      "selector_reason": "Scion Group与Ares以9.10亿美元收购学生公寓组合，是全国学生住房领域的超大型机构交易。交易规模接近十亿美元并涉及头部资本平台，评为imp=5。",
+      "section": "institutional",
+      "title_zh": "Scion与Ares买下910M学生公寓",
+      "summary_zh": "Scion Group 联手 Ares 以$910M 收购12处、7,578床 student housing",
+      "impact": "long-pos",
+      "id": "7c03f289",
+      "fetched_at": 1779328081719,
+      "source_date": "2026-05-21"
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "As inflation rises, Fed's Waller ready to drop 'easing bias'",
+      "link": "https://www.nationalmortgagenews.com/news/as-inflation-rises-feds-waller-ready-to-drop-easing-bias",
+      "description": "Federal Reserve Gov. Christopher Waller said in a speech Friday that he favors holding interest rates steady until energy prices fall, but noted that the central bank should be ready to hike rates if inflation gets too far out of hand.",
+      "published_at": 1779465894000,
+      "score": 13,
+      "tags": [
+        "national",
+        "regulator",
+        "rates",
+        "macro"
+      ],
+      "heat_signals": [
+        "fed",
+        "inflation"
+      ],
+      "importance": 5,
+      "selector_reason": "Waller 公开表示若通胀失控央行应准备加息，这是非常直接的货币政策信号。对利率、按揭和地产估值都有系统性影响，属于最高级别信息。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Fed Waller: 取消 easing bias，必要时可再加息",
+      "summary_zh": "Waller称将维持利率不变，若通胀失控仍可能加息",
+      "impact": "short-neg",
+      "id": "5fc427cd",
+      "fetched_at": 1779585416312,
+      "source_date": "2026-05-24"
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "Bond traders bet Fed under Warsh will hike rates this year",
+      "link": "https://www.nationalmortgagenews.com/articles/bond-traders-bet-fed-under-warsh-will-hike-rates-this-year",
+      "description": "The shift gathered pace at the most recent policy meeting in April, when three voters on the Federal Open Market Committee voted against the decision to hold rates steady.",
+      "published_at": 1779500743000,
+      "score": 10,
+      "tags": [
+        "national",
+        "rates",
+        "macro",
+        "regulator"
+      ],
+      "heat_signals": [
+        "fed"
+      ],
+      "importance": 5,
+      "selector_reason": "债券交易员押注 Warsh 领导下美联储年内加息，直接改变长端利率和按揭利率预期。它是影响住宅和商业地产定价的关键宏观金融信号，因此评为 imp=5。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "债市押注 Warsh 年内加息",
+      "summary_zh": "4月 FOMC 已有3票反对按兵不动，年内 hike 预期升温",
+      "impact": "short-neg",
+      "id": "99755474",
+      "fetched_at": 1779676752919,
+      "source_date": "2026-05-25"
+    },
+    {
+      "source_id": "cnbc-realestate",
+      "source_name": "CNBC Realty Check",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "macro"
+      ],
+      "region": "national",
+      "title": "What the AvalonBay, Equity Residential megamerger means for the apartment industry and rents",
+      "link": "https://www.cnbc.com/2026/05/22/avalonbay-equity-residential-apartment-merger.html",
+      "description": "The deal will create one of the largest real estate companies in the U.S., with more than 180,000 rental apartments.",
+      "published_at": 1779454522000,
+      "score": 10,
+      "tags": [
+        "multifamily",
+        "national",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "AvalonBay与Equity Residential合并将形成价值690亿美元、超过18万套公寓的巨型公寓REIT。该并购重塑美国多户REIT和租赁市场格局，属于系统性事件，因此评为5。",
+      "section": "institutional",
+      "title_zh": "AVB-EQR megamerger 重塑公寓格局",
+      "summary_zh": "合并后持有超180,000套出租公寓，规模化或增强定价能力",
+      "impact": "long-pos",
+      "id": "97333eb6",
+      "fetched_at": 1779504930267,
+      "source_date": "2026-05-23"
+    },
+    {
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "BTR ban is gone in the revised ROAD to Housing bill. Here’s what else changed.",
+      "link": "https://www.multifamilydive.com/news/road-to-housing-bill-changes-house-senate/820520/",
+      "description": "An article from BTR ban is gone in the revised ROAD to Housing bill. Here’s what else changed. The House amended the major bipartisan housing legislation with some key differences from the Senate’s version. Published May 18, 2026 Julie Strupp Senior Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Getty Images Listen to the article 5 min This audio is auto-generated. Please let us know if you have feedback . Last week, the U.S House of Representatives released an amended version of the Senate’s 21st Century ROAD to Housing Act that notably removes a provision the housing industry said would effectively eliminate the production of build-to-rent single-family housing. That’s not the only important change between the two versions of the major bipartisan housing legislation, however. The updated bill is set to come up for a House vote this week ahead of the Memorial Day holiday, Politico reported. If the legislation passes, it will move back to the Senate. The White House previously told Multifamily Dive that “there may be serious policy concerns or implementation challenges ” with the House’s version, but did not respond to another request for comment by publication time. Besides the build-to-rent forced sale provision, here is a look at some of the other differences the two chambers will need to iron out. HUD funding changes The House’s latest version of the bill increases Federal Housing Finance Agency-insured multifamily loan limits and indexes them for future gains. “Loan limits have remained static for 12 years and do not reflect market conditions,” the National Association of Homebuilders said in a May 15 analysis of the bill. “Increasing multifamily loan limits and indexing them for future gains aligns with real construction costs and helps stimulate new apartment development .” There are other major differences regarding HUD program funding, Francis Torres, director of the Bipartisan Policy Center’s housing and infrastructure projects, told Multifamily Dive. “The provision on the Rental Assistance Demonstration program permanence included in the Senate bill is out, so for public housing authorities that have serious capital needs, that's a significant omission,” Torres said. Also cut from the House’s version is a measure to permanently fund the agency’s Community Development Block Grant Disaster Recovery program. Currently, Congress appropriates these funds to HUD on a supplemental basis to help cities, counties, tribes and states recover from disasters, especially in low-income areas. “The Senate bill permanently authorized HUD's CDBG disaster recovery program, which is a key funding source for disaster-impacted communities to be able to rebuild after natural disasters, and that's no longer included in the new House version,” Torres said. Permitting updates The latest House version of the bill makes several changes to existing permitting requirements for multifamily projects. Section 207 streamlines National Environmental Policy Act requirements for a variety of HUD-funded activities, including 221(d)(4) loans , which developers and investors can use to build or rehabilitate a multifamily property. Certain housing projects with U.S. Department of Agriculture funding would also be exempt from environmental impact studies or reports. “Federally supported projects often trigger additional review,” according to Torres. “The bill explicitly adds infill projects of residential housing units to a list of categorically excluded activities, meaning they would get no federal environmental review.” Changes to HUD’s HOME Investment Partnerships Program , which provides grants to states and localities to create affordable housing for low-income households, would broaden eligible uses for the funding and also streamline environmental reviews. The bill also directs HUD to offer competitive grants for pilot programs to help it develop guidelines around single-staircase residential buildings. The is",
+      "published_at": 1779133200000,
+      "score": 25,
+      "tags": [
+        "btr-sfr",
+        "national",
+        "policy",
+        "regulator"
+      ],
+      "heat_signals": [
+        "build-to-rent",
+        "btr",
+        "fed"
+      ],
+      "importance": 5,
+      "selector_reason": "ROAD to Housing法案修订并移除BTR禁令，涉及联邦住房立法和机构化租赁住房监管。该法案若推进将影响全国住房供给、融资和BTR行业规则，属于系统性事件。",
+      "section": "btr",
+      "title_zh": "ROAD 法案修订删除 BTR 禁令",
+      "summary_zh": "House 版移除 BTR 强制出售条款，并拟提高 FHFA multifamily loan limits",
+      "impact": "long-pos",
+      "id": "e6eb1ef9",
+      "fetched_at": 1779155383489,
+      "source_date": "2026-05-19"
+    },
+    {
+      "source_id": "houston-agent",
+      "source_name": "Houston Agent Magazine",
+      "source_tier": "D",
+      "source_weight": 6,
+      "source_tags": [
+        "houston",
+        "brokerage"
+      ],
+      "region": "texas",
+      "title": "Housing starts top expectations in April",
+      "link": "https://houstonagentmagazine.com/2026/05/21/housing-starts-april/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=housing-starts-april",
+      "description": "Despite a monthly decline, the rate of new-home construction still came in above consensus estimates. The post Housing starts top expectations in April appeared first on Houston Agent Magazine .",
+      "published_at": 1779379758000,
+      "score": 12,
+      "tags": [
+        "housing",
+        "national",
+        "data",
+        "construction"
+      ],
+      "heat_signals": [
+        "houston",
+        "housing starts",
+        "housing starts"
+      ],
+      "importance": 5,
+      "selector_reason": "住房开工高于预期是全国住宅供给端的核心宏观数据，对新房、建筑商和库存判断都有影响。属于关键住房经济数据，因此评为 imp=5。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "4月 housing starts 超预期",
+      "summary_zh": "新屋开工环比下滑但高于共识，construction 韧性略利好供给",
+      "impact": "long-pos",
+      "id": "8592ea94",
+      "fetched_at": 1779676752919,
+      "source_date": "2026-05-25"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Blackstone Bets $5B On AI Cloud Venture With Google",
+      "link": "https://www.bisnow.com/national/news/data-center-capital-markets/blackstone-bets-5b-ai-cloud-jv-google-134646",
+      "description": "News Blackstone Bets $5B On AI Cloud Venture With Google Data Center Capital Markets View count: National Capital Markets May 19, 2026 | 3:12 p.m. ET Dan Rabb, Data Centers Google and Blackstone are partnering to launch a new AI-focused cloud provider. Unsplash/Pawel Czerwinski The yet-to-be-named AI cloud firm would provide on-demand access to computing power from Google ’s proprietary artificial intelligence chips, known as Tensor Processing Units, The Wall Street Journal first reported Monday. The partnership marks the entry of two of the largest digital infrastructure players into the fast-growing “neocloud” segment dominated by newer firms like CoreWeave . Longtime Google executive Benjamin Treynor Sloss has been appointed CEO of the new venture, which is launching with $5B in equity capital provided by Blackstone . Blackstone will be the majority owner in the partnership, and its investment is expected to be leveraged to deploy roughly $25B toward new computing power, according to the WSJ. The new firm plans to initially deploy 500 megawatts of capacity by the end of 2027, Blackstone announced , with computing power continuing to scale up in the following months. Specific existing and under-development data centers have reportedly been identified as the locations for these deployments. In launching a firm focused on AI-specific cloud services, Google and Blackstone are looking to compete in a neocloud landscape that, while the fastest-growing segment of the cloud market, has been dominated by startups. CoreWeave, now a public company, is by far the sector’s most prominent player. But the neocloud ecosystem has more than 190 smaller operators, according to JLL . Those include fast-growing firms like Crusoe , Nebius, Core Scientific , Nscale and Lambda . These firms have carved out a niche in the cloud ecosystem by offering access to the high-performance chips needed for AI — demand that the major hyperscalers, including Google, haven’t been able to meet on their own. Neoclouds have proven to be competitive with larger cloud providers due to their faster speed to market and better pricing for many customers. Beyond expanding into this new cloud submarket, the new venture will boost Google’s efforts to compete with chipmaking behemoth Nvidia in the market for the processors powering the AI revolution. Although Nvidia’s GPUs dominate the market, Google has made a push in recent months to commercialize its TPUs, which it previously used only in its own data centers. Last fall, Google signed major computing deals with Anthropic and Meta that gave the AI-model makers access to these chips. But Google’s leadership said on the firm’s latest earnings call that it would further accelerate efforts to expand its chip business in the months ahead, particularly to meet growing demand for AI inference computing. For Blackstone, the Google partnership expands the firm’s vast footprint across the digital infrastructure ecosystem. The investment giant calls itself the largest data center operator in the world, with a portfolio established largely through the acquisitions of developer and operator QTS in 2021 and AirTrunk in 2024. Last month, Blackstone centralized its AI and digital infrastructure bets into an entity called Blackstone N1. Prior to the partnership with Google, the division established a $1.5B JV with Anthropic earlier this month. Contact Dan Rabb at dan.rabb@bisnow.com Related Topics: Blackstone , Google , Nvidia , Artificial Intelligence , CoreWeave",
+      "published_at": 1779214630000,
+      "score": 16,
+      "tags": [
+        "data-center",
+        "national",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [
+        "blackstone"
+      ],
+      "importance": 5,
+      "selector_reason": "Blackstone与Google押注50亿美元AI云计算公司，直接关联数据中心、AI基础设施和机构资本配置。金额巨大且由头部机构参与，属于系统性资本与CRE新闻。",
+      "section": "cre",
+      "title_zh": "Blackstone 与 Google 投$5B 做 AI cloud",
+      "summary_zh": "新平台获$5B equity，计划撬动约$25B算力并2027部署500MW",
+      "impact": "long-pos",
+      "id": "0c39babe",
+      "fetched_at": 1779241342170,
+      "cre_subcategory": null,
+      "source_date": "2026-05-20"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "CRE Sales Fall 33%, Reversing Q1 Momentum As Debt Costs Climb",
+      "link": "https://www.bisnow.com/national/news/capital-markets/cre-sales-fall-33-percent-reversing-first-quarter-momentum-debt-costs-climb-134663",
+      "description": "Commercial real estate capital markets hit a speed bump in April, one of the first signs that the macroeconomic climate is weighing on investors after a burst of activity at the start of the year helped brokerages like CBRE post banner results in the...",
+      "published_at": 1779292172000,
+      "score": 12,
+      "tags": [
+        "mixed-asset",
+        "national",
+        "deals",
+        "rates",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "商业地产销售额4月下降33%，显示债务成本重新压制全国CRE资本市场活动。该数据具有全国资本市场风向意义，评为imp=5。",
+      "section": "cre",
+      "title_zh": "CRE销售4月回落33%",
+      "summary_zh": "4月 CRE sales 环比跌33%，债务成本上升压制年初反弹",
+      "impact": "short-neg",
+      "id": "86411a81",
+      "fetched_at": 1779328081719,
+      "cre_subcategory": null,
+      "source_date": "2026-05-21"
+    },
+    {
+      "source_id": "trd-national",
+      "source_name": "The Real Deal (National)",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Starwood lending arm trying to flip Back Bay office",
+      "link": "https://therealdeal.com/national/boston/2026/05/22/starwood-lending-arm-trying-to-flip-back-bay-office/",
+      "description": "Two months after acquiring the property at auction, LNR Partners is looking to flip a Back Bay office building with redevelopment potential. The lending arm of Starwood Property Trust is marketing the Park Square Building at 31 St. James Avenue in the Boston neighborhood, Bisnow reported. The Barry Sternlicht subsidiary tapped Eastdil Secured to help with the process. Marketing materials refer to the 503,000-square-foot property as one “with significant redevelopment potential.” The listing also points to “embedded optionality” and “the ability to execute a strategic repositioning or pursue a ",
+      "published_at": 1779467400000,
+      "score": 14,
+      "tags": [
+        "office",
+        "lender",
+        "deals"
+      ],
+      "heat_signals": [
+        "starwood"
+      ],
+      "importance": 4,
+      "selector_reason": "Starwood 旗下放贷平台在波士顿核心办公楼上寻求翻手退出，涉及机构资金和城市核心资产重估。单笔事件足够大，也反映了 CRE 市场的再定价。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "Starwood 借贷部门想转手 Back Bay 办公楼",
+      "summary_zh": "LNR收购两月后挂牌503,000 SF办公楼，主打 redevelopment potential",
+      "impact": "short-neg",
+      "id": "578a53af",
+      "fetched_at": 1779585416312,
+      "cre_subcategory": "办公",
+      "source_date": "2026-05-24"
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "UT Okays $2.9B MD Anderson Expansion",
+      "link": "https://www.connectcre.com/stories/ut-okays-2-9b-md-anderson-expansion/",
+      "description": "The governing agency that runs the The University of Texas agreed on a spending measure that would allow the MD Anderson Cancer Center to move forward on a $2.9 billion expansion plan. The school will bring in university revenue, financing bonds to supplement the hospital revenues that are also funding the project at the Texas ... The post UT Okays $2.9B MD Anderson Expansion appeared first on Connect CRE .",
+      "published_at": 1779476873000,
+      "score": 12,
+      "tags": [
+        "life-sciences",
+        "texas",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "texas"
+      ],
+      "importance": 4,
+      "selector_reason": "UT批准MD Anderson 29亿美元扩建计划，属于超大规模医疗地产和机构建设投资。单体金额远超2亿美元，对Texas商业地产和医疗设施市场影响显著，因此评为4。",
+      "section": "cre",
+      "title_zh": "UT 批准 MD Anderson $2.9B 扩建",
+      "summary_zh": "Texas 医疗扩建获批，债券与医院收入支持，带动区域需求",
+      "impact": "long-pos",
+      "id": "88866b6d",
+      "fetched_at": 1779504930267,
+      "cre_subcategory": null,
+      "source_date": "2026-05-23"
+    },
+    {
+      "source_id": "trd-national",
+      "source_name": "The Real Deal (National)",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "ZOM’s Arizona debut price tag: $323M in legal penalties",
+      "link": "https://therealdeal.com/national/phoenix/2026/05/22/arizona-jury-finds-zom-living-guilty-of-breach-of-contract/",
+      "description": "A national multifamily developer’s expansion into Arizona will cost it $323 million.&#160; A Maricopa County jury found Orlando-based ZOM Living liable for breaching its agreement with Gray Development Group after allegedly using the local developer’s pipeline, market intel and relationships to launch its first projects in the Grand Canyon State, Bisnow reported.&#160; ZOM was ordered to pay $323 million in damages to the now-defunct developer. Gray accused ZOM of freezing it out after months of extracting proprietary information tied to a planned $1.4 billion development pipeline. ZOM did not",
+      "published_at": 1779465600000,
+      "score": 12,
+      "tags": [
+        "multifamily",
+        "phoenix",
+        "regulation",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "ZOM Living在Arizona扩张相关纠纷中被判承担3.23亿美元法律赔偿，金额达到大型地产事件级别。该案涉及Sun Belt多户开发竞争和开发商扩张风险，因此评为4。",
+      "section": "sunbelt",
+      "title_zh": "ZOM Arizona 首秀遭 $323M 判罚",
+      "summary_zh": "陪审团认定 ZOM 违约使用 Gray 资源，$323M damages 重创扩张",
+      "impact": "short-neg",
+      "id": "429b1094",
+      "fetched_at": 1779504930267,
+      "source_date": "2026-05-23"
+    },
+    {
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "Apartment owners to pay $218M in second batch of RealPage settlements",
+      "link": "https://www.multifamilydive.com/news/realpage-settlement-algorithmic-pricing/820745/",
+      "description": "An article from Dive Brief Apartment owners to pay $218M in second batch of RealPage settlements Fourteen housing companies seek to settle allegations that they conspired to inflate rents via algorithmic pricing software, but admit no wrongdoing. Published May 20, 2026 Julie Strupp Senior Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Getty Images Listen to the article 3 min This audio is auto-generated. Please let us know if you have feedback . Dive Brief: A group of apartment owners and managers has agreed to pay a total of $218 million to resolve a 2023 class-action lawsuit , which alleges that they conspired with rivals to inflate rent prices using RealPage’s algorithmic pricing software, according to documents recently filed in federal court. Eleven defendant landlords have reached 14 class settlements, but they do not admit fault or liability, according to preliminary class-action settlements filed May 14 in the U.S. District Court for the Middle District of Tennessee, Nashville Division. The deal still requires a judge’s approval. This is the second batch of settlement agreements in RealPage Inc. Rental Software Antitrust Litigation , following the first group of 26 settlements worth more than $141.8 million in October 2025, which included a $50 million payout from Greystar. That brings the total settlement amount to date to nearly $360 million. Dive Insight: In late 2022 and early 2023, a slew of class-action lawsuits were filed against RealPage and approximately 50 of the largest apartment owners and operators, alleging that the Richardson, Texas-based software provider enabled landlords to collude to raise rent prices beyond free market levels in violation of antitrust law. In April 2023, those cases were centralized into In Re: RealPage, Inc., Rental Software Antitrust Litigation. Now Equity Residential will pay the largest amount at $56 million, while Camden and Mid-America Apartment Communities will each pay $53 million. The 14 settling defendants, and their 11 settlement terms, are: Settling defendant Amount Camden Property Trust $53 million Cortland Management, LLC $18 million Equity Residential $56 million Highmark Residential, LLC $7.5 million Lincoln Property Co. $12 million Mid-America Apartment Communities, Inc. and Mid America Apartments, L.P. $53 million The Related Companies, L.P. and Related Management Company, L.P $5 million Rose Associates, Inc. $1 million RPM Living, LLC $7.5 million Sares Regis Management Co., L.P. $3 million Trammell Crow Residential Co. and Crow Holdings, LP $2.125 million All defendants also agreed to stop providing RealPage with their nonpublic data to be used as an input in RealPage’s revenue management system’s price recommendations, and to stop using RealPage’s RMS that uses competitors’ non-public data to inform pricing recommendations, according to a May 14 joint declaration in support of the settlements. Multifamily Dive reached out to all settling companies for comment, but they either declined or did not respond by publication time. RealPage, which is also a defendant, has denied any wrongdoing. RealPage previously told Multifamily Dive it does not anticipate needing to make any changes to its revenue management software products under any terms in these settlements for customers to keep using them. In November 2025, the ​U.S. Justice ⁠Department settled with RealPage in a related 2024 lawsuit that claimed the software provider enabled landlords to collude to raise rent prices beyond free market levels. While the agreement includes no financial penalties or admissions of wrongdoing, it did put guardrails around what data RealPage can collect and how it can use it. Click here to sign up to receive multifamily and apartment news like this article in your inbox every weekday. Recommended Reading EQR settles RealPage lawsuit for $56M By Leslie Shaver &#8226; April 17, 2026 Camden settles RealPage lawsuit for $53M By Julie Strupp &#822",
+      "published_at": 1779306720000,
+      "score": 18,
+      "tags": [
+        "multifamily",
+        "national",
+        "regulation",
+        "tech-adoption",
+        "landlord"
+      ],
+      "heat_signals": [
+        "texas",
+        "fed"
+      ],
+      "importance": 4,
+      "selector_reason": "14家公寓业主拟支付2.18亿美元解决RealPage算法租金相关诉讼，涉及多户住宅定价和反垄断风险。金额超过2亿美元且具行业监管示范意义，评为imp=4。",
+      "section": "cre",
+      "title_zh": "RealPage和解再赔2.18亿",
+      "summary_zh": "14家房企再付$218M 了结 RealPage 租金合谋诉讼，累计和解近$360M",
+      "impact": "short-neg",
+      "id": "0cd09c14",
+      "fetched_at": 1779328081719,
+      "cre_subcategory": null,
+      "source_date": "2026-05-21"
+    },
+    {
+      "source_id": "redfin-news",
+      "source_name": "Redfin News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "Home Purchase Cancellations Are No Longer on the Rise As Demand Ticks Up",
+      "link": "https://www.redfin.com/news/contract-cancellations-april-2026/",
+      "description": "Contract cancellations declined slightly in April as homebuyers and sellers gained a clearer sense of the housing market after years of volatility, and as demand picked up. Homebuyers were most likely to back out of deals in Atlanta, San Antonio and other Sun Belt metro areas that are big-time buyer’s markets. Contract cancellations were least [&#8230;] The post Home Purchase Cancellations Are No Longer on the Rise As Demand Ticks Up appeared first on Redfin Real Estate News .",
+      "published_at": 1779366614000,
+      "score": 14,
+      "tags": [
+        "sun-belt",
+        "housing",
+        "data",
+        "trend"
+      ],
+      "heat_signals": [
+        "san antonio",
+        "sun belt",
+        "housing market"
+      ],
+      "importance": 4,
+      "selector_reason": "购房取消率回落，且 Sun Belt 大城市仍是最容易反悔的区域，这对成交和议价很关键。它同时提供全国趋势和 Sun Belt 住宅分化信号，值得保留。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "购房取消率不再上升，需求开始回暖",
+      "summary_zh": "4月合同取消小幅回落，需求回升带动买卖双方更清晰定价",
+      "impact": "long-pos",
+      "id": "3a0349bd",
+      "fetched_at": 1779585416312,
+      "source_date": "2026-05-24"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "ZOM Ordered To Pay $323M For Circumventing Partner In Arizona Multifamily JV",
+      "link": "https://www.bisnow.com/national/news/multifamily/zom-to-pay-323m-for-circumventing-grey-development-group-in-arizona-multifamily-jv-134647",
+      "description": "National multifamily developer ZOM Living made its Arizona debut by stealing projects from another developer, a jury has found. A Maricopa County jury ruled on the side of Gray Development Group, which sued ZOM for breach of contract and implied good...",
+      "published_at": 1779211896000,
+      "score": 12,
+      "tags": [
+        "multifamily",
+        "deals",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "ZOM Living因亚利桑那多户住宅合资纠纷被判赔3.23亿美元，金额巨大且涉及开发商合作风险。该判决对Sun Belt多户开发和合资结构有警示意义。",
+      "section": "sunbelt",
+      "title_zh": "ZOM Arizona JV 纠纷被判赔$323M",
+      "summary_zh": "陪审团认定ZOM绕开合作方夺项目，$323M赔偿压制开发商风险偏好",
+      "impact": "short-neg",
+      "id": "52297fd6",
+      "fetched_at": 1779241342170,
+      "source_date": "2026-05-20"
+    },
+    {
+      "source_id": "multi-housing-news",
+      "source_name": "Multi-Housing News",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "Allen Morris Lands Loan for $250M Southwest Florida Project - Multifamily Housing News",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTlh3Ul94X3BGVE1nSkpTb0psQmFITGVld2lnejhwNWlLSFV5R2JnWXp0bGtxeUVqLVE1QXRIRExDQTQ0NXY3N0RsM1NSYkFRSEZXLTdZTkg2dm5pYjFmOFhwNWF3SG1UZFFBbmltWnpQTXQ0S1M3cENGOGZhX1E4M2NPUExOZmp0MktUbkdHa1BEUFhWZXk4?oc=5",
+      "description": "Allen Morris Lands Loan for $250M Southwest Florida Project &nbsp;&nbsp; Multifamily Housing News",
+      "published_at": 1779093557000,
+      "score": 13,
+      "tags": [
+        "multifamily",
+        "florida",
+        "deals",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "Allen Morris为佛罗里达西南部2.5亿美元项目获得贷款，属于Sun Belt大型多户/住宅开发融资。项目规模超过2亿美元，符合中等重要交易标准。",
+      "section": "sunbelt",
+      "title_zh": "Allen Morris 获 $250M Florida 项目贷款",
+      "summary_zh": "Southwest Florida multifamily 项目融资落地，开发资本可得性改善",
+      "impact": "long-pos",
+      "id": "c0888ffd",
+      "fetched_at": 1779155383489,
+      "source_date": "2026-05-19"
+    }
+  ],
+  "_diagnostics": {
+    "source_dates": [
+      "2026-05-07",
+      "2026-05-08",
+      "2026-05-09",
+      "2026-05-10",
+      "2026-05-11",
+      "2026-05-12",
+      "2026-05-13",
+      "2026-05-14",
+      "2026-05-15",
+      "2026-05-16",
+      "2026-05-17",
+      "2026-05-18",
+      "2026-05-19",
+      "2026-05-20",
+      "2026-05-21",
+      "2026-05-22",
+      "2026-05-23",
+      "2026-05-24",
+      "2026-05-25"
+    ],
+    "total_pool": 380,
+    "post_period_filter": 380,
+    "themes_generated": 5,
+    "load_errors": [
+      "missing daily file: 2026-05-01.json",
+      "missing daily file: 2026-05-02.json",
+      "missing daily file: 2026-05-03.json",
+      "missing daily file: 2026-05-04.json",
+      "missing daily file: 2026-05-05.json",
+      "missing daily file: 2026-05-06.json",
+      "missing daily file: 2026-05-26.json",
+      "missing daily file: 2026-05-27.json",
+      "missing daily file: 2026-05-28.json",
+      "missing daily file: 2026-05-29.json",
+      "missing daily file: 2026-05-30.json",
+      "missing daily file: 2026-05-31.json",
+      "missing daily file: 2026-06-01.json"
+    ]
+  }
+}

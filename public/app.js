@@ -22,9 +22,11 @@ const themesBlock = $('themesBlock');
 
 let currentMode = 'daily'; // 'daily' | 'weekly' | 'monthly'
 
-function digestDataUrl(mode) {
-  if (mode === 'weekly')  return '/data/weekly/latest.json';
-  if (mode === 'monthly') return '/data/monthly/latest.json';
+function digestDataUrl(mode, period) {
+  // `period` is optional: weekly = "YYYY-MM-DD" period_start, monthly = "YYYY-MM" label.
+  // Without period, return /latest.json which always points to the most recent published period.
+  if (mode === 'weekly')  return period ? `/data/weekly/${period}.json`  : '/data/weekly/latest.json';
+  if (mode === 'monthly') return period ? `/data/monthly/${period}.json` : '/data/monthly/latest.json';
   return '/data/latest.json';
 }
 
@@ -82,6 +84,12 @@ const I18N = {
     themes_weekly_title: '本周主线',
     themes_monthly_title: '本月主线',
     window_banner: (h, n) => `周末/假日窗口已自动扩展到 ${h}h。本期含 ${n} 条 24h 外稿件。`,
+    period_label_week: '周',
+    period_label_month: '月',
+    period_month_suffix: '月',
+    period_empty: '暂无历史',
+    monthly_not_yet: '月报暂未发布',
+    monthly_not_yet_hint: '月报在每月首个周一北京 10:30 自动发布，覆盖上一个自然月。',
   },
   en: {
     tagline: 'US Housing Daily — Top 20',
@@ -130,6 +138,12 @@ const I18N = {
     themes_weekly_title: 'Weekly themes',
     themes_monthly_title: 'Monthly themes',
     window_banner: (h, n) => `Window auto-expanded to ${h}h (weekend/holiday). ${n} item(s) outside the canonical 24h window.`,
+    period_label_week: 'Wk',
+    period_label_month: 'Mo',
+    period_month_suffix: '',
+    period_empty: 'No issues yet',
+    monthly_not_yet: 'Monthly digest not yet published',
+    monthly_not_yet_hint: 'The monthly digest publishes on the first Monday of each month at 10:30 Beijing time and covers the prior calendar month.',
   },
 };
 
@@ -143,6 +157,11 @@ let activeTag = sessionStorage.getItem(STORAGE_KEY) || '__all';
 let availableDates = new Set();
 let selectedDate = null;
 let calendarMonth = null;
+// Weekly/monthly period navigation
+let weeklyPeriods = [];     // ["2026-05-18", ...] — ET Mon of each period_start, sorted asc
+let monthlyPeriods = [];    // ["2026-05", ...] — YYYY-MM, sorted asc
+let selectedWeekly = null;  // currently displayed period_start (weekly mode)
+let selectedMonthly = null; // currently displayed YYYY-MM (monthly mode)
 
 // ========== 工具 ==========
 const pad2 = (n) => (n < 10 ? '0' + n : '' + n);
@@ -519,8 +538,9 @@ function applyLoadedData(data) {
       : '—';
   }
 
-  // Show/hide date strip — only meaningful for daily mode
-  datestrip.hidden = currentMode !== 'daily';
+  // Date strip is mode-aware: daily shows 14 days, weekly shows past weeks, monthly shows past months
+  datestrip.hidden = false;
+  renderPeriodStrip(currentMode);
 
   // Adaptive-window banner — daily only, only when window_hours > 24
   if (currentMode === 'daily' && data._diagnostics?.window_hours > 24) {
@@ -580,42 +600,111 @@ async function loadAvailableDates() {
   }
 }
 
-async function loadDigest(url) {
+async function loadDigest(url, period) {
   newsList.replaceChildren(Object.assign(document.createElement('div'), { className: 'loader', textContent: t().loading }));
   try {
     const r = await fetch(url, { cache: 'no-store' });
     if (!r.ok) throw new Error('HTTP ' + r.status);
-    applyLoadedData(await r.json());
+    const data = await r.json();
+    if (data.kind === 'weekly')  selectedWeekly  = data.period_start || period || null;
+    if (data.kind === 'monthly') selectedMonthly = data.period_label || period || null;
+    applyLoadedData(data);
   } catch (e) {
+    const isMissing = /HTTP 404/.test(e.message);
+    const msgKey = isMissing && currentMode === 'monthly' ? 'monthly_not_yet' : 'load_failed';
+    const hintKey = isMissing && currentMode === 'monthly' ? 'monthly_not_yet_hint' : 'load_failed_hint';
     const errDiv = document.createElement('div');
     errDiv.className = 'empty';
-    errDiv.textContent = `${t().load_failed}: ${e.message}`;
+    errDiv.textContent = isMissing ? t()[msgKey] : `${t().load_failed}: ${e.message}`;
     const hintDiv = document.createElement('div');
-    hintDiv.textContent = t().load_failed_hint;
+    hintDiv.textContent = t()[hintKey];
     newsList.replaceChildren(errDiv, hintDiv);
+    renderPeriodStrip(currentMode);
+    themesBlock.hidden = true;
+    windowBanner.hidden = true;
   }
+}
+
+async function loadPeriodList(mode) {
+  if (mode !== 'weekly' && mode !== 'monthly') return;
+  const url = mode === 'weekly' ? '/data/weekly/dates.json' : '/data/monthly/dates.json';
+  try {
+    const r = await fetch(url, { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const arr = await r.json();
+    if (mode === 'weekly')  weeklyPeriods  = Array.isArray(arr) ? arr.slice().sort() : [];
+    if (mode === 'monthly') monthlyPeriods = Array.isArray(arr) ? arr.slice().sort() : [];
+  } catch {
+    if (mode === 'weekly')  weeklyPeriods  = [];
+    if (mode === 'monthly') monthlyPeriods = [];
+  }
+}
+
+// Render the period strip into the datestrip element. Mode-aware:
+//   daily   → 14-day strip (existing renderDateStrip)
+//   weekly  → list of past weeks (each cell = ET Mon period_start, labeled M/D)
+//   monthly → list of past months (each cell = YYYY-MM, labeled `<MM>月`)
+function renderPeriodStrip(mode) {
+  if (mode === 'daily') {
+    renderDateStrip();
+    return;
+  }
+  const periods = mode === 'weekly' ? weeklyPeriods : monthlyPeriods;
+  const selected = mode === 'weekly' ? selectedWeekly : selectedMonthly;
+  // Safely clear via removeChild loop (hook is sensitive to innerHTML=)
+  while (datestrip.firstChild) datestrip.removeChild(datestrip.firstChild);
+  if (periods.length === 0) {
+    const empty = document.createElement('span');
+    empty.className = 'ds-empty';
+    empty.textContent = t().period_empty;
+    datestrip.appendChild(empty);
+    return;
+  }
+  for (const p of periods) {
+    const btn = document.createElement('button');
+    btn.className = 'ds-day ds-has';
+    if (p === selected) btn.classList.add('ds-active');
+    btn.dataset.period = p;
+    const wd = document.createElement('span');
+    wd.className = 'ds-wd';
+    const num = document.createElement('span');
+    num.className = 'ds-num';
+    if (mode === 'weekly') {
+      const [, mm, dd] = p.split('-');
+      wd.textContent = t().period_label_week;
+      num.textContent = `${Number(mm)}/${Number(dd)}`;
+    } else {
+      const [, mm] = p.split('-');
+      wd.textContent = t().period_label_month;
+      num.textContent = `${Number(mm)}${t().period_month_suffix}`;
+    }
+    btn.appendChild(wd);
+    btn.appendChild(num);
+    datestrip.appendChild(btn);
+  }
+  datestrip.scrollLeft = datestrip.scrollWidth;
 }
 
 async function setDigestMode(mode) {
   if (!['daily', 'weekly', 'monthly'].includes(mode)) mode = 'daily';
   currentMode = mode;
-  // Update tab active state
   for (const btn of digestTabs.querySelectorAll('.tab')) {
     const active = btn.dataset.tab === mode;
     btn.classList.toggle('active', active);
     btn.setAttribute('aria-selected', String(active));
   }
-  // Update URL hash
   const hash = mode === 'daily' ? '' : `#${mode}`;
   if (location.hash !== hash) history.replaceState(null, '', location.pathname + hash);
-  // Load data
   if (mode === 'daily') {
     if (availableDates.size === 0) {
-      loadAvailableDates(); // fire-and-forget; safe to overlap with loadNews
+      loadAvailableDates();
     }
     await loadNews();
   } else {
-    await loadDigest(digestDataUrl(mode));
+    // Load period list + latest-period digest in parallel
+    await Promise.all([loadPeriodList(mode), loadDigest(digestDataUrl(mode))]);
+    // Re-render the strip so the active period highlight matches the loaded latest
+    renderPeriodStrip(mode);
   }
 }
 
@@ -640,19 +729,33 @@ refreshBtn.addEventListener('click', async () => {
     await loadAvailableDates();
     await loadNews(selectedDate || undefined);
   } else {
-    await loadDigest(digestDataUrl(currentMode));
+    const selected = currentMode === 'weekly' ? selectedWeekly : selectedMonthly;
+    await Promise.all([
+      loadPeriodList(currentMode),
+      loadDigest(digestDataUrl(currentMode, selected), selected),
+    ]);
+    renderPeriodStrip(currentMode);
   }
 });
 
 datestrip.addEventListener('click', (e) => {
-  const t = e.target.closest('button');
-  if (!t) return;
-  if (t.id === 'dsMore') {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  if (btn.id === 'dsMore') {
     openCalendar();
     return;
   }
-  if (t.classList.contains('ds-day') && t.dataset.date && !t.disabled) {
-    loadNews(t.dataset.date);
+  // Weekly/monthly: data-period click → load that specific digest
+  if (currentMode !== 'daily' && btn.dataset.period) {
+    const p = btn.dataset.period;
+    if (currentMode === 'weekly')  selectedWeekly  = p;
+    if (currentMode === 'monthly') selectedMonthly = p;
+    loadDigest(digestDataUrl(currentMode, p), p);
+    return;
+  }
+  // Daily: existing data-date click
+  if (btn.classList.contains('ds-day') && btn.dataset.date && !btn.disabled) {
+    loadNews(btn.dataset.date);
   }
 });
 

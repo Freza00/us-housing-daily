@@ -402,6 +402,14 @@ dialog::backdrop { background: rgba(0,0,0,.6); }
 }
 /* Children use existing .chip styling — no overrides needed. */
 
+/* Empty state shown inside the datestrip when weekly/monthly has no published periods yet */
+.ds-empty {
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 6px 0;
+  font-style: italic;
+}
+
 /* Adaptive window banner */
 .window-banner {
   max-width: var(--max-width); margin: 8px auto;
