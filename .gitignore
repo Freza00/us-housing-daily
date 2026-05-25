@@ -12,3 +12,6 @@ dist/
 .vercel
 public/data
 data/data
+
+# Claude Code session state + worktrees
+.claude/
