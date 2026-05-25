@@ -26,6 +26,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { selectEffectiveWindow } from "./lib/digest-core.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -62,10 +63,13 @@ function computeWindowBounds(now) {
   upper.setUTCHours(WINDOW_END_UTC_HOUR, WINDOW_END_UTC_MIN, 0, 0);
   // 如果 cron 提前几秒触发或时间偏移导致 now 还没到 00:57，回退一天
   if (now < upper.getTime()) upper.setUTCDate(upper.getUTCDate() - 1);
+  const upperMs = upper.getTime();
   return {
-    upper: upper.getTime(),
-    lower24h: upper.getTime() - 24 * 3600 * 1000,
-    lower7d: upper.getTime() - 7 * 24 * 3600 * 1000,
+    upper: upperMs,
+    lower24h: upperMs - 24 * 3600 * 1000,
+    lower48h: upperMs - 48 * 3600 * 1000,
+    lower72h: upperMs - 72 * 3600 * 1000,
+    lower7d:  upperMs - 7 * 24 * 3600 * 1000,
   };
 }
 
@@ -1825,7 +1829,7 @@ async function main() {
   // 2. 打分 + 时间窗过滤 + 实体级去重
   // 时间窗：绝对边界 [昨天 8:57 北京, 今天 8:57 北京)，跨日不重不漏
   const now = Date.now();
-  const { upper, lower24h, lower7d } = computeWindowBounds(now);
+  const { upper, lower24h, lower48h, lower72h, lower7d } = computeWindowBounds(now);
   log(`⏰ window UTC [${new Date(lower24h).toISOString().slice(0,16)} ~ ${new Date(upper).toISOString().slice(0,16)})`);
   log(`⏰        北京 [${new Date(lower24h + 8*3600*1000).toISOString().slice(0,16).replace('T',' ')} ~ ${new Date(upper + 8*3600*1000).toISOString().slice(0,16).replace('T',' ')})`);
 
@@ -1847,21 +1851,45 @@ async function main() {
     return HOUSING_KW.some(k => t.includes(k));
   }
 
+  // Build candidate pools for all three windows so we can pick adaptively.
   const filtered24h = scored.filter(it => inWindow(it, lower24h) && passesFilterRequired(it));
-  const filtered7d = scored.filter(it => inWindow(it, lower7d) && passesFilterRequired(it));
+  const filtered48h = scored.filter(it => inWindow(it, lower48h) && passesFilterRequired(it));
+  const filtered72h = scored.filter(it => inWindow(it, lower72h) && passesFilterRequired(it));
+  const filtered7d  = scored.filter(it => inWindow(it, lower7d)  && passesFilterRequired(it));
   const deduped24h = dedupe(filtered24h);
-  const deduped7d = dedupe(filtered7d);
-  log(`⏰ 24h-window filter ${filtered24h.length} → dedupe ${deduped24h.length}`);
+  const deduped48h = dedupe(filtered48h);
+  const deduped72h = dedupe(filtered72h);
+  const deduped7d  = dedupe(filtered7d);
 
-  // 3. 跨日去重
+  // 3. 跨日去重 (must happen before window selection — adaptive threshold compares post-dedupe pools)
   const seenAll = pruneSeen(loadSeen(), now);
   // 同北京日内重跑（同一 cron / 多次手动 retry）不应剔除自己刚写入的条目；过午夜后这些条目按常规剔除
   const todayBJ = beijingDateStr(now);
   const seenForFilter = seenAll.filter(s => s.shown_date !== todayBJ);
   const sameDayCount = seenAll.length - seenForFilter.length;
-  const fresh24h = filterAlreadySeen(deduped24h, seenForFilter);
-  const fresh7d = filterAlreadySeen(deduped7d, seenForFilter);
-  log(`📅 cross-day filter: seen ${seenAll.length} → fresh ${fresh24h.length} (24h) / ${fresh7d.length} (7d)${sameDayCount > 0 ? ` (今日 ${sameDayCount} 条不参与剔除)` : ""}`);
+  const candidate24h = filterAlreadySeen(deduped24h, seenForFilter);
+  const candidate48h = filterAlreadySeen(deduped48h, seenForFilter);
+  const candidate72h = filterAlreadySeen(deduped72h, seenForFilter);
+  const fresh7d      = filterAlreadySeen(deduped7d,  seenForFilter);
+
+  // Adaptive window: pick the smallest window whose post-dedupe pool meets the freshness floor.
+  const winSel = selectEffectiveWindow({
+    pool24: candidate24h.length,
+    pool48: candidate48h.length,
+    pool72: candidate72h.length,
+  });
+  const fresh24h = winSel.hours === 24 ? candidate24h
+                 : winSel.hours === 48 ? candidate48h
+                 :                       candidate72h;
+  // Preserve the existing "extended_window" semantic: items older than 24h within the
+  // effective window get flagged (so the per-item ext badge still means "older than the
+  // canonical fresh day"). Items already inside 24h stay unflagged.
+  for (const it of fresh24h) {
+    if (it.published_at && it.published_at < lower24h) it._ext_eligible = true;
+  }
+  log(`⏰ adaptive window: chose ${winSel.hours}h (pool24=${candidate24h.length} pool48=${candidate48h.length} pool72=${candidate72h.length})`);
+  log(`⏰ 24h-window filter ${filtered24h.length} → dedupe ${deduped24h.length}`);
+  log(`📅 cross-day filter: seen ${seenAll.length} → fresh ${fresh24h.length} (eff${winSel.hours}h) / ${fresh7d.length} (7d)${sameDayCount > 0 ? ` (今日 ${sameDayCount} 条不参与剔除)` : ""}`);
 
   // [debug] 池子分布
   const poolDist = (pool, label) => {
@@ -2080,6 +2108,8 @@ async function main() {
     _diagnostics: {
       writer_mode: WRITER_MODE,
       sectionsUnderMin: minDiag?.underMin || [],
+      window_hours: winSel.hours,
+      pool_sizes: winSel.pool_sizes,
       ...(writerAudit ? {
         writer_audit: writerAudit,
         candidate_pool_size: candidatePoolSize,
