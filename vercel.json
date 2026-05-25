@@ -4,7 +4,9 @@
   "outputDirectory": "public",
   "framework": null,
   "crons": [
-    { "path": "/api/trigger-daily", "schedule": "57 0 * * *" }
+    { "path": "/api/trigger-daily",   "schedule": "57 0 * * *" },
+    { "path": "/api/trigger-weekly",  "schedule": "0 2 * * 1" },
+    { "path": "/api/trigger-monthly", "schedule": "30 2 * * 1" }
   ],
   "headers": [
     {
