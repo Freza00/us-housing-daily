@@ -1,6 +1,7 @@
 // Vercel Cron endpoint — dispatches the GitHub Actions monthly-build workflow.
-// Vercel cron 配在 vercel.json，每月一日北京 10:30 (UTC 02:30) 触发；
-// 真实 pipeline 跑在 GH Actions runner (.github/workflows/monthly.yml)。
+// Vercel cron 配在 vercel.json，每周一北京 10:30 (UTC 02:30) 触发；
+// 真实 pipeline 跑在 GH Actions runner (.github/workflows/monthly.yml)，
+// 脚本内部 self-gate 到「当月第一个周一」，其他周一直接 no-op exit 0。
 
 export default async function handler(req, res) {
   if (process.env.CRON_SECRET) {
