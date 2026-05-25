@@ -1830,8 +1830,8 @@ async function main() {
   // 时间窗：绝对边界 [昨天 8:57 北京, 今天 8:57 北京)，跨日不重不漏
   const now = Date.now();
   const { upper, lower24h, lower48h, lower72h, lower7d } = computeWindowBounds(now);
-  log(`⏰ window UTC [${new Date(lower24h).toISOString().slice(0,16)} ~ ${new Date(upper).toISOString().slice(0,16)})`);
-  log(`⏰        北京 [${new Date(lower24h + 8*3600*1000).toISOString().slice(0,16).replace('T',' ')} ~ ${new Date(upper + 8*3600*1000).toISOString().slice(0,16).replace('T',' ')})`);
+  log(`⏰ 24h-bounds UTC [${new Date(lower24h).toISOString().slice(0,16)} ~ ${new Date(upper).toISOString().slice(0,16)})`);
+  log(`⏰           北京 [${new Date(lower24h + 8*3600*1000).toISOString().slice(0,16).replace('T',' ')} ~ ${new Date(upper + 8*3600*1000).toISOString().slice(0,16).replace('T',' ')})`);
 
   const scored = allItems.map(it => scoreItem(it, now));
   const sourcesById = new Map(config.sources.map(s => [s.id, s]));
@@ -1878,15 +1878,15 @@ async function main() {
     pool48: candidate48h.length,
     pool72: candidate72h.length,
   });
-  const fresh24h = winSel.hours === 24 ? candidate24h
+  const fresh24h = (winSel.hours === 24 ? candidate24h
                  : winSel.hours === 48 ? candidate48h
-                 :                       candidate72h;
-  // Preserve the existing "extended_window" semantic: items older than 24h within the
-  // effective window get flagged (so the per-item ext badge still means "older than the
-  // canonical fresh day"). Items already inside 24h stay unflagged.
-  for (const it of fresh24h) {
-    if (it.published_at && it.published_at < lower24h) it._ext_eligible = true;
-  }
+                 :                       candidate72h)
+    // Preserve the existing "extended_window" semantic: items older than 24h within the
+    // effective window get flagged (so the per-item ext badge still means "older than the
+    // canonical fresh day"). Spread-copy to avoid mutating objects shared across the other
+    // candidate pools and fresh7d.
+    .map(it => (it.published_at && it.published_at < lower24h)
+      ? { ...it, _ext_eligible: true } : it);
   log(`⏰ adaptive window: chose ${winSel.hours}h (pool24=${candidate24h.length} pool48=${candidate48h.length} pool72=${candidate72h.length})`);
   log(`⏰ 24h-window filter ${filtered24h.length} → dedupe ${deduped24h.length}`);
   log(`📅 cross-day filter: seen ${seenAll.length} → fresh ${fresh24h.length} (eff${winSel.hours}h) / ${fresh7d.length} (7d)${sameDayCount > 0 ? ` (今日 ${sameDayCount} 条不参与剔除)` : ""}`);
@@ -1897,7 +1897,7 @@ async function main() {
     for (const it of pool) c[classify(it)] = (c[classify(it)] || 0) + 1;
     log(`📊 ${label}: ${SECTIONS.map(s => `${s.id}=${c[s.id]}`).join(" ")}`);
   };
-  poolDist(fresh24h, "fresh24h dist");
+  poolDist(fresh24h, `fresh${winSel.hours}h dist`);
   poolDist(fresh7d, "fresh7d  dist");
 
   // 4. Enrich top-30 (并发 fetch full HTML)
