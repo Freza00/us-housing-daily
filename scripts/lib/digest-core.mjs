@@ -17,14 +17,15 @@ export function selectEffectiveWindow({ pool24, pool48, pool72 }) {
 
 // Mirror of SECTIONS from build.mjs — kept in sync MANUALLY because we don't want
 // digest scripts to import the whole build pipeline. If you change build.mjs SECTIONS
-// (quotas, ids, or perSourceCap), you MUST update this table too. The test
+// (quotas, ids, or maxPerSource), you MUST update this table too. The test
 // "SECTIONS_DAILY: quotas sum to 20" locks the total but not the per-section split.
+// Field names match build.mjs SECTIONS exactly (quota, maxPerSource) — keep them aligned.
 export const SECTIONS_DAILY = [
-  { id: "national",      label_zh: "全国住宅市场", emoji: "🏠", quota: 5, perSourceCap: 2 },
-  { id: "sunbelt",       label_zh: "Sunbelt 住宅", emoji: "🌵", quota: 4, perSourceCap: 2 },
-  { id: "btr",           label_zh: "全国 BTR / SFR", emoji: "🏘", quota: 3, perSourceCap: 2 },
-  { id: "cre",           label_zh: "全国 CRE",     emoji: "🏢", quota: 5, perSourceCap: 2 },
-  { id: "institutional", label_zh: "全国机构资本", emoji: "💰", quota: 3, perSourceCap: 2 },
+  { id: "national",      label_zh: "全国住宅市场", emoji: "🏠", quota: 5, maxPerSource: 2 },
+  { id: "sunbelt",       label_zh: "Sunbelt 住宅", emoji: "🌵", quota: 4, maxPerSource: 2 },
+  { id: "btr",           label_zh: "全国 BTR / SFR", emoji: "🏘", quota: 3, maxPerSource: 2 },
+  { id: "cre",           label_zh: "全国 CRE",     emoji: "🏢", quota: 5, maxPerSource: 2 },
+  { id: "institutional", label_zh: "全国机构资本", emoji: "💰", quota: 3, maxPerSource: 2 },
 ];
 
 // Load a list of daily JSON files, concatenate items, dedupe by link.
@@ -81,7 +82,7 @@ export function reRankWithQuota(items, sections, opts = {}) {
     if ((perSection.get(sec.id) || 0) >= sec.quota) continue;
     const sKey = `${sec.id}:${it.source_id}`;
     const sCount = perSectionSource.get(sKey) || 0;
-    const cap = sec.perSourceCap ?? perSourceCap;
+    const cap = sec.maxPerSource ?? perSourceCap;
     if (sCount >= cap) continue;
     top.push(it);
     perSection.set(sec.id, (perSection.get(sec.id) || 0) + 1);
