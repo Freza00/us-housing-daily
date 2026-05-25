@@ -86,7 +86,7 @@ const I18N = {
     window_banner: (h, n) => `周末/假日窗口已自动扩展到 ${h}h。本期含 ${n} 条 24h 外稿件。`,
     period_label_week: '周',
     period_label_month: '月',
-    period_month_suffix: '月',
+    period_month_suffix: '',
     period_empty: '暂无历史',
     monthly_not_yet: '月报暂未发布',
     monthly_not_yet_hint: '月报在每月首个周一北京 10:30 自动发布，覆盖上一个自然月。',
