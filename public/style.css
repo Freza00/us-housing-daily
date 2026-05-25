@@ -392,3 +392,42 @@ dialog::backdrop { background: rgba(0,0,0,.6); }
   .card-title-zh, .card-summary, .card-meta { padding-left: 0; }
   .card-num { display: none; }
 }
+
+/* Digest tabs */
+.digest-tabs {
+  display: flex; gap: 4px;
+  max-width: var(--max-width); margin: 0 auto;
+  padding: 10px 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+.digest-tabs .tab {
+  background: transparent; border: 1px solid transparent;
+  padding: 6px 14px; border-radius: 6px 6px 0 0;
+  cursor: pointer; font-size: 14px; font-family: inherit;
+  color: var(--text-dim);
+  transition: background .12s, color .12s;
+}
+.digest-tabs .tab:hover { background: var(--bg-hover); color: var(--text); }
+.digest-tabs .tab.active {
+  color: var(--text);
+  border-color: var(--border);
+  border-bottom-color: var(--bg);
+  background: var(--bg); font-weight: 600;
+}
+
+/* Adaptive window banner */
+.window-banner {
+  max-width: var(--max-width); margin: 8px auto;
+  padding: 8px 20px 0;
+  font-size: 13px; color: var(--accent);
+}
+
+/* Themes block */
+.themes-block {
+  max-width: var(--max-width); margin: 8px auto 0;
+  padding: 12px 20px;
+  background: var(--bg-elev); border-left: 3px solid var(--accent-2);
+}
+.themes-block .themes-title { margin: 0 0 8px 0; font-size: 14px; font-weight: 600; color: var(--text); }
+.themes-block .themes-list { margin: 0; padding-left: 20px; }
+.themes-block .themes-list li { margin: 4px 0; font-size: 14px; line-height: 1.5; color: var(--text-dim); }

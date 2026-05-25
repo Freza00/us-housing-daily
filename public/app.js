@@ -16,6 +16,22 @@ const calTitle = $('calTitle');
 const calPrev = $('calPrev');
 const calNext = $('calNext');
 const calClose = $('calClose');
+const digestTabs = $('digestTabs');
+const windowBanner = $('windowBanner');
+const themesBlock = $('themesBlock');
+
+let currentMode = 'daily'; // 'daily' | 'weekly' | 'monthly'
+
+function digestDataUrl(mode) {
+  if (mode === 'weekly')  return '/data/weekly/latest.json';
+  if (mode === 'monthly') return '/data/monthly/latest.json';
+  return '/data/latest.json';
+}
+
+function initialMode() {
+  const h = (location.hash || '').replace('#', '');
+  return ['weekly', 'monthly'].includes(h) ? h : 'daily';
+}
 
 // ========== i18n ==========
 const I18N = {
@@ -60,6 +76,12 @@ const I18N = {
     extended_pill: '扩窗',
     extended_title: '今日 24h 内该分类无新闻 — 此条来自 7 天扩窗回退',
     button_label: 'EN', // 按钮上显示切换到的语言
+    tab_daily: '日报',
+    tab_weekly: '周报',
+    tab_monthly: '月报',
+    themes_weekly_title: '本周主线',
+    themes_monthly_title: '本月主线',
+    window_banner: (h, n) => `周末/假日窗口已自动扩展到 ${h}h。本期含 ${n} 条 24h 外稿件。`,
   },
   en: {
     tagline: 'US Housing Daily — Top 20',
@@ -102,6 +124,12 @@ const I18N = {
     extended_pill: '7d ext',
     extended_title: 'No items today in 24h window — fallback to 7-day extended window',
     button_label: '中',
+    tab_daily: 'Daily',
+    tab_weekly: 'Weekly',
+    tab_monthly: 'Monthly',
+    themes_weekly_title: 'Weekly themes',
+    themes_monthly_title: 'Monthly themes',
+    window_banner: (h, n) => `Window auto-expanded to ${h}h (weekend/holiday). ${n} item(s) outside the canonical 24h window.`,
   },
 };
 
@@ -485,9 +513,44 @@ function applyLoadedData(data) {
   selectedDate = currentData.date || null;
   updatedEl.textContent = formatUpdated(currentData.generated_at);
   const sc = document.getElementById('sourcesCount');
-  if (sc) sc.textContent = `${currentData.sources_ok}/${currentData.sources_attempted}`;
+  if (sc) {
+    sc.textContent = currentData.sources_ok != null
+      ? `${currentData.sources_ok}/${currentData.sources_attempted}`
+      : '—';
+  }
+
+  // Show/hide date strip — only meaningful for daily mode
+  datestrip.hidden = currentMode !== 'daily';
+
+  // Adaptive-window banner — daily only, only when window_hours > 24
+  if (currentMode === 'daily' && data._diagnostics?.window_hours > 24) {
+    const h = data._diagnostics.window_hours;
+    const extCount = (data.items || []).filter(it => it.extended_window).length;
+    windowBanner.textContent = t().window_banner(h, extCount);
+    windowBanner.hidden = false;
+  } else {
+    windowBanner.hidden = true;
+  }
+
+  // Themes block — weekly / monthly only
+  const ul = themesBlock.querySelector('.themes-list');
+  while (ul.firstChild) ul.removeChild(ul.firstChild); // safe clear, no innerHTML
+  if ((currentMode === 'weekly' || currentMode === 'monthly')
+      && Array.isArray(data.themes) && data.themes.length > 0) {
+    for (const theme of data.themes) {
+      const li = document.createElement('li');
+      li.textContent = theme.title; // textContent — XSS-safe even if LLM emits HTML
+      ul.appendChild(li);
+    }
+    themesBlock.querySelector('.themes-title').textContent =
+      currentMode === 'weekly' ? t().themes_weekly_title : t().themes_monthly_title;
+    themesBlock.hidden = false;
+  } else {
+    themesBlock.hidden = true;
+  }
+
   applyFilter();
-  renderDateStrip();
+  if (currentMode === 'daily') renderDateStrip();
 }
 
 async function loadNews(date) {
@@ -517,6 +580,49 @@ async function loadAvailableDates() {
   }
 }
 
+async function loadDigest(url) {
+  newsList.replaceChildren(Object.assign(document.createElement('div'), { className: 'loader', textContent: t().loading }));
+  try {
+    const r = await fetch(url, { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    applyLoadedData(await r.json());
+  } catch (e) {
+    const errDiv = document.createElement('div');
+    errDiv.className = 'empty';
+    errDiv.textContent = `${t().load_failed}: ${e.message}`;
+    const hintDiv = document.createElement('div');
+    hintDiv.textContent = t().load_failed_hint;
+    newsList.replaceChildren(errDiv, hintDiv);
+  }
+}
+
+async function setDigestMode(mode) {
+  if (!['daily', 'weekly', 'monthly'].includes(mode)) mode = 'daily';
+  currentMode = mode;
+  // Update tab active state
+  for (const btn of digestTabs.querySelectorAll('.tab')) {
+    const active = btn.dataset.tab === mode;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', String(active));
+  }
+  // Update URL hash
+  const hash = mode === 'daily' ? '' : `#${mode}`;
+  if (location.hash !== hash) history.replaceState(null, '', location.pathname + hash);
+  // Load data
+  if (mode === 'daily') {
+    await loadNews();
+  } else {
+    await loadDigest(digestDataUrl(mode));
+  }
+}
+
+digestTabs.addEventListener('click', (e) => {
+  const btn = e.target.closest('.tab');
+  if (btn) setDigestMode(btn.dataset.tab);
+});
+
+window.addEventListener('hashchange', () => setDigestMode(initialMode()));
+
 // ========== 事件 ==========
 filterbar.addEventListener('click', (e) => {
   const t = e.target;
@@ -527,8 +633,12 @@ filterbar.addEventListener('click', (e) => {
 });
 
 refreshBtn.addEventListener('click', async () => {
-  await loadAvailableDates();
-  await loadNews(selectedDate || undefined);
+  if (currentMode === 'daily') {
+    await loadAvailableDates();
+    await loadNews(selectedDate || undefined);
+  } else {
+    await loadDigest(digestDataUrl(currentMode));
+  }
 });
 
 datestrip.addEventListener('click', (e) => {
@@ -584,10 +694,26 @@ function applyLanguage() {
   $('sourcesInfo').innerHTML = `${t().sources_label}<span id="sourcesCount">${cnt}</span>${t().sources_unit}`;
   $('calClose').textContent = t().cal_close;
   $('calLegendText').textContent = t().cal_legend_has;
+  // Update digest tab labels
+  for (const btn of digestTabs.querySelectorAll('.tab')) {
+    const key = `tab_${btn.dataset.tab}`;
+    btn.textContent = t()[key] || btn.textContent;
+  }
   if (currentData) {
     updatedEl.textContent = formatUpdated(currentData.generated_at);
     applyFilter();         // 重新渲染卡片 + filter chip 用新语言
-    renderDateStrip();     // 重新渲染 weekday header
+    if (currentMode === 'daily') renderDateStrip(); // 重新渲染 weekday header
+    // Re-render themes title if visible
+    if (!themesBlock.hidden) {
+      themesBlock.querySelector('.themes-title').textContent =
+        currentMode === 'weekly' ? t().themes_weekly_title : t().themes_monthly_title;
+    }
+    // Re-render window banner if visible
+    if (!windowBanner.hidden && currentData._diagnostics?.window_hours > 24) {
+      const h = currentData._diagnostics.window_hours;
+      const extCount = (currentData.items || []).filter(it => it.extended_window).length;
+      windowBanner.textContent = t().window_banner(h, extCount);
+    }
   } else {
     updatedEl.textContent = t().loading;
   }
@@ -606,6 +732,11 @@ langSeg.addEventListener('click', (e) => {
 // ========== 启动 ==========
 (async () => {
   applyLanguage();           // 先按保存的语言设 UI chrome
-  await loadAvailableDates();
-  await loadNews();
+  const startMode = initialMode();
+  currentMode = startMode;
+  if (startMode === 'daily') {
+    // For daily, load dates index first so date strip is populated
+    await loadAvailableDates();
+  }
+  await setDigestMode(startMode);
 })();
