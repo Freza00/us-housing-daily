@@ -393,27 +393,14 @@ dialog::backdrop { background: rgba(0,0,0,.6); }
   .card-num { display: none; }
 }
 
-/* Digest tabs */
+/* Digest mode pills — 日报 / 周报 / 月报, mirrors .filterbar + .chip aesthetic.
+   Sits between datestrip and filterbar so it reads as part of the same nav column. */
 .digest-tabs {
-  display: flex; gap: 4px;
   max-width: var(--max-width); margin: 0 auto;
-  padding: 10px 20px 0;
-  border-bottom: 1px solid var(--border);
+  padding: 6px 20px 0;
+  display: flex; flex-wrap: wrap; gap: 8px;
 }
-.digest-tabs .tab {
-  background: transparent; border: 1px solid transparent;
-  padding: 6px 14px; border-radius: 6px 6px 0 0;
-  cursor: pointer; font-size: 14px; font-family: inherit;
-  color: var(--text-dim);
-  transition: background .12s, color .12s;
-}
-.digest-tabs .tab:hover { background: var(--bg-hover); color: var(--text); }
-.digest-tabs .tab.active {
-  color: var(--text);
-  border-color: var(--border);
-  border-bottom-color: var(--bg);
-  background: var(--bg); font-weight: 600;
-}
+/* Children use existing .chip styling — no overrides needed. */
 
 /* Adaptive window banner */
 .window-banner {

@@ -25,10 +25,14 @@
     </div>
   </header>
 
+  <nav class="datestrip" id="datestrip" aria-label="最近 14 天">
+    <!-- 由 JS 渲染：14 个日期 cell + "更早" 按钮 -->
+  </nav>
+
   <nav class="digest-tabs" id="digestTabs" role="tablist" aria-label="Digest mode">
-    <button data-tab="daily" class="tab active" role="tab" aria-selected="true">日报</button>
-    <button data-tab="weekly" class="tab" role="tab" aria-selected="false">周报</button>
-    <button data-tab="monthly" class="tab" role="tab" aria-selected="false">月报</button>
+    <button data-tab="daily" class="chip tab active" role="tab" aria-selected="true">日报</button>
+    <button data-tab="weekly" class="chip tab" role="tab" aria-selected="false">周报</button>
+    <button data-tab="monthly" class="chip tab" role="tab" aria-selected="false">月报</button>
   </nav>
 
   <div id="windowBanner" class="window-banner" hidden></div>
@@ -36,10 +40,6 @@
     <h2 class="themes-title">本期主线</h2>
     <ul class="themes-list"></ul>
   </section>
-
-  <nav class="datestrip" id="datestrip" aria-label="最近 14 天">
-    <!-- 由 JS 渲染：14 个日期 cell + "更早" 按钮 -->
-  </nav>
 
   <nav class="filterbar" id="filterbar">
     <button class="chip active" data-tag="__all">全部</button>
