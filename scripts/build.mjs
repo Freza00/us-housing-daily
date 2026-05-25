@@ -2125,14 +2125,18 @@ async function main() {
     const indexPath = path.join(ROOT, "public/index.html");
     const tpl = fs.readFileSync(indexPath, "utf8");
     const safeJson = JSON.stringify(payload).replace(/<\/script>/gi, "<\\/script>");
-    const dataTag = `<script id="initial-data" type="application/json">${safeJson}</script>\n  <script src="/app.js"></script>`;
+    // Match <script src="/app.js"> with optional ?v=... query string (cache-bust versioning)
+    const appJsRe = /<script src="\/app\.js(?:\?[^"]*)?"><\/script>/;
+    const appJsMatch = tpl.match(appJsRe);
+    const appJsTag = appJsMatch ? appJsMatch[0] : `<script src="/app.js"></script>`;
+    const dataTag = `<script id="initial-data" type="application/json">${safeJson}</script>\n  ${appJsTag}`;
     const stripped = tpl.replace(/\s*<script id="initial-data"[\s\S]*?<\/script>/, "");
-    const replaced = stripped.replace(/<script src="\/app\.js"><\/script>/, dataTag);
+    const replaced = stripped.replace(appJsRe, dataTag);
     if (replaced !== tpl) {
       fs.writeFileSync(indexPath, replaced);
       log(`💾 prerendered public/index.html with inline initial-data (~${Math.round(safeJson.length / 1024)} KB)`);
     } else {
-      log(`⚠️  prerender skipped — could not find <script src="/app.js"></script> anchor in index.html`);
+      log(`⚠️  prerender skipped — could not find <script src="/app.js"...> anchor in index.html`);
     }
   } catch (e) {
     log(`⚠️  prerender failed (non-fatal): ${e.message}`);
