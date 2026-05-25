@@ -11,7 +11,7 @@
     "build:weekly:dry": "LLM_SKIP=1 node scripts/build-weekly.mjs",
     "build:monthly": "node --env-file=.env scripts/build-monthly.mjs",
     "build:monthly:dry": "LLM_SKIP=1 node scripts/build-monthly.mjs",
-    "test": "node --test 'scripts/test/**/*.test.mjs'",
+    "test": "node --test 'scripts/test/**/*.{test,smoke}.mjs'",
     "dry-run": "node scripts/dry-run.mjs",
     "preview": "cd public && (ln -sf ../data data 2>/dev/null; python3 -m http.server 8080)"
   },
