@@ -610,6 +610,9 @@ async function setDigestMode(mode) {
   if (location.hash !== hash) history.replaceState(null, '', location.pathname + hash);
   // Load data
   if (mode === 'daily') {
+    if (availableDates.size === 0) {
+      loadAvailableDates(); // fire-and-forget; safe to overlap with loadNews
+    }
     await loadNews();
   } else {
     await loadDigest(digestDataUrl(mode));
