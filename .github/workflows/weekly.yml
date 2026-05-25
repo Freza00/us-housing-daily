@@ -1,0 +1,79 @@
+name: Weekly Digest Build
+
+# 每周一北京 10:00 (UTC 02:00) 是发布主时间点。三条独立路径同时兜底：
+#   1. GH schedule '0 2 * * 1'    主时间点
+#   2. Vercel Cron → repository_dispatch  同一时刻并发 (见 vercel.json)
+#   3. GH schedule 3 次小时级 retry
+# 任何一路 commit 了 data/weekly/<period_start>.json 之后，剩余 fire 都被 dedupe step no-op 掉。
+on:
+  schedule:
+    - cron: '0 2 * * 1'        # 北京 10:00 — 主时间点（和 Vercel Cron 同时）
+    - cron: '30 3,4,5 * * 1'   # 北京 11:30 / 12:30 / 13:30 — retry trio
+  workflow_dispatch: {}
+  repository_dispatch:
+    types: [weekly-build]   # 由 Vercel Cron 通过 GH dispatches API 触发
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-weekly.mjs'
+      - 'scripts/lib/digest-core.mjs'
+      - 'scripts/lib/dates.mjs'
+      - '.github/workflows/weekly.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+
+      - name: Compute ET period_start + dedupe check
+        id: period
+        run: |
+          TODAY_BJ=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          echo "today_bj=${TODAY_BJ}" >> "$GITHUB_OUTPUT"
+          # period_start = ET Mon of the week being summarized. Use dates.mjs helper.
+          PERIOD_START=$(node --input-type=module -e \
+            "import('./scripts/lib/dates.mjs').then(m => console.log(m.etWeekBounds(new Date()).periodStart));")
+          echo "period_start=${PERIOD_START}" >> "$GITHUB_OUTPUT"
+          if [ -f "data/weekly/${PERIOD_START}.json" ]; then
+            echo "already_built=true" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Skipped::data/weekly/${PERIOD_START}.json 已存在，跳过 pipeline"
+          else
+            echo "already_built=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Building::data/weekly/${PERIOD_START}.json 不存在，跑 pipeline"
+          fi
+
+      - name: Run weekly pipeline
+        if: steps.period.outputs.already_built == 'false'
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: node scripts/build-weekly.mjs
+
+      - name: Commit
+        if: steps.period.outputs.already_built == 'false'
+        env:
+          TODAY_BJ: ${{ steps.period.outputs.today_bj }}
+          PERIOD_START: ${{ steps.period.outputs.period_start }}
+        run: |
+          git config user.name "Freza00"
+          git config user.email "Freza00@users.noreply.github.com"
+          git add data/weekly/
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "chore: weekly digest for ${PERIOD_START} (built ${TODAY_BJ})"
+            git push
+          fi
