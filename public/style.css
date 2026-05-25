@@ -80,10 +80,16 @@ a { color: inherit; text-decoration: none; }
   color: #fff;
 }
 
-/* 顶部 14 天日期 strip */
-.datestrip {
+/* Topnav row — datestrip (period selector, left) + digest tabs (mode toggle, right), one line */
+.topnav-row {
   max-width: var(--max-width); margin: 0 auto;
   padding: 14px 20px 6px;
+  display: flex; align-items: center; gap: 12px;
+}
+
+/* 顶部 14 天日期 strip — 现在在 .topnav-row 内左侧，flex: 1 + overflow 自滚 */
+.datestrip {
+  flex: 1; min-width: 0;
   display: flex; gap: 4px; flex-wrap: nowrap;
   overflow-x: auto;
   scrollbar-width: thin;
@@ -394,11 +400,10 @@ dialog::backdrop { background: rgba(0,0,0,.6); }
 }
 
 /* Digest mode pills — 日报 / 周报 / 月报, mirrors .filterbar + .chip aesthetic.
-   Sits between datestrip and filterbar so it reads as part of the same nav column. */
+   Sits to the RIGHT of the period strip inside .topnav-row, same line. */
 .digest-tabs {
-  max-width: var(--max-width); margin: 0 auto;
-  padding: 6px 20px 0;
-  display: flex; flex-wrap: wrap; gap: 8px;
+  display: flex; gap: 6px;
+  flex-shrink: 0;
 }
 /* Children use existing .chip styling — no overrides needed. */
 
