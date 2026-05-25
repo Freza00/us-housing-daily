@@ -88,6 +88,7 @@ async function main() {
     period_start: periodStart,
     period_end: periodEnd,
     generated_at: now.getTime(),
+    sections: SECTIONS_DAILY,  // exposed so the frontend renders section-grouped (not flat)
     themes,
     items: top,
     _diagnostics: {

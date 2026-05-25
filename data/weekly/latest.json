@@ -4,6 +4,48 @@
   "period_start": "2026-05-18",
   "period_end": "2026-05-24",
   "generated_at": 1779688330425,
+  "sections": [
+    {
+      "id": "national",
+      "label": "全国住宅市场",
+      "label_zh": "全国住宅市场",
+      "emoji": "🏠",
+      "quota": 5,
+      "maxPerSource": 2
+    },
+    {
+      "id": "sunbelt",
+      "label": "Sunbelt 住宅",
+      "label_zh": "Sunbelt 住宅",
+      "emoji": "🌵",
+      "quota": 4,
+      "maxPerSource": 2
+    },
+    {
+      "id": "btr",
+      "label": "全国 BTR / SFR",
+      "label_zh": "全国 BTR / SFR",
+      "emoji": "🏘",
+      "quota": 3,
+      "maxPerSource": 2
+    },
+    {
+      "id": "cre",
+      "label": "全国 CRE",
+      "label_zh": "全国 CRE",
+      "emoji": "🏢",
+      "quota": 5,
+      "maxPerSource": 2
+    },
+    {
+      "id": "institutional",
+      "label": "全国机构资本",
+      "label_zh": "全国机构资本",
+      "emoji": "💰",
+      "quota": 3,
+      "maxPerSource": 2
+    }
+  ],
   "themes": [
     {
       "title": "住宅基本面边际修复，但独栋供给仍偏弱",

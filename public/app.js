@@ -381,7 +381,8 @@ function renderItems(items) {
   }
   const sections = (currentData && currentData.sections) || [];
   if (sections.length === 0 || activeTag !== '__all') {
-    newsList.innerHTML = items.map((it, i) => renderCard(it, i)).join('');
+    // 1-based numbering — matches the grouped-section path (++globalIdx starting at 1)
+    newsList.innerHTML = items.map((it, i) => renderCard(it, i + 1)).join('');
     return;
   }
   const bySection = new Map(sections.map(s => [s.id, []]));
