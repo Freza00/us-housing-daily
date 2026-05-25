@@ -21,7 +21,7 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "data");
-const OUT_DIR = path.join(DATA_DIR, "weekly");
+const OUT_DIR = process.env.DIGEST_OUT_DIR || path.join(DATA_DIR, "weekly");
 
 const log = (msg) => console.log(`[weekly] ${msg}`);
 
