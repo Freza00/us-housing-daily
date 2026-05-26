@@ -80,10 +80,47 @@ function usEasternDateStr(ts) {
   }).format(new Date(ts));
 }
 
+function beijingDateStr(ts) {
+  return new Date(ts + 8 * 3600 * 1000).toISOString().slice(0, 10);
+}
+
 function addDaysIso(iso, n) {
   const d = new Date(iso + "T12:00:00Z");
   d.setUTCDate(d.getUTCDate() + n);
   return d.toISOString().slice(0, 10);
+}
+
+function dowUtc(iso) {
+  return new Date(iso + "T12:00:00Z").getUTCDay();
+}
+
+function isUsBusinessDay(iso, holidaySet) {
+  const dow = dowUtc(iso);
+  if (dow === 0 || dow === 6) return false;
+  return !holidaySet.has(iso);
+}
+
+/**
+ * Find next BJ digest date that will summarize two full normal US business days.
+ *
+ * BJ-09:00 cron → ET 20:57 prior day → 24h news window straddles US D-1 (bulk)
+ * and US D-2 (tail). A digest "fully recovers" when both of those US dates are
+ * normal business days (no weekend, no federal holiday).
+ *
+ * Returns YYYY-MM-DD or null if not found within 14 days (sanity bound).
+ */
+function nextNormalBjDigestDate(currentBjDate, holidaySet) {
+  let d = new Date(currentBjDate + "T12:00:00Z");
+  for (let i = 1; i <= 14; i++) {
+    d.setUTCDate(d.getUTCDate() + 1);
+    const bjIso = d.toISOString().slice(0, 10);
+    const us1 = addDaysIso(bjIso, -1);
+    const us2 = addDaysIso(bjIso, -2);
+    if (isUsBusinessDay(us1, holidaySet) && isUsBusinessDay(us2, holidaySet)) {
+      return bjIso;
+    }
+  }
+  return null;
 }
 
 /**
@@ -97,13 +134,21 @@ export function usHolidayContext(nowMs, holidays) {
   const yesterday = addDaysIso(today, -1);
   const tomorrow = addDaysIso(today, +1);
   const map = new Map((holidays || []).map(h => [h.date, h.name]));
-  const dow = (iso) => new Date(iso + "T12:00:00Z").getUTCDay();
+  const holidaySet = new Set(map.keys());
+  const isWeekend = [0, 6].includes(dowUtc(today)) || [0, 6].includes(dowUtc(yesterday));
+  const hasHoliday = !!(map.get(today) || map.get(yesterday));
+  // Only project recovery when we have a clear cause (holiday or weekend).
+  // For random slow weekdays we have no basis to promise recovery.
+  const recovery = (isWeekend || hasHoliday)
+    ? nextNormalBjDigestDate(beijingDateStr(nowMs), holidaySet)
+    : null;
   return {
     today_us: today,
     today_us_holiday: map.get(today) || null,
     yesterday_us_holiday: map.get(yesterday) || null,
     tomorrow_us_holiday: map.get(tomorrow) || null,
-    is_us_weekend: [0, 6].includes(dow(today)) || [0, 6].includes(dow(yesterday)),
+    is_us_weekend: isWeekend,
+    expected_recovery_bj_date: recovery,
     source: holidays?.length ? "date.nager.at" : "unavailable",
   };
 }

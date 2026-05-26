@@ -83,9 +83,9 @@ const I18N = {
     tab_monthly: '月报',
     themes_weekly_title: '本周主线',
     themes_monthly_title: '本月主线',
-    window_banner: (h, n) => `今日适逢周末或美国假期，US 房产媒体发稿较少，新闻时效性可能略弱（本期含 ${n} 条来自更早时间窗）。`,
-    window_banner_holiday_today: (name, n) => `今天是美国联邦假期 ${name}，US 房产媒体大面积停发，本期含 ${n} 条来自更早时间窗。`,
-    window_banner_holiday_shoulder: (name, n) => `昨天是美国联邦假期 ${name}，US 房产媒体仍在恢复发稿，本期含 ${n} 条来自更早时间窗。`,
+    window_banner: (h, n, rec) => `今日适逢周末或美国假期，US 房产媒体发稿较少${rec ? `，预计 ${rec} digest 完全恢复` : ''}。本期含 ${n} 条来自更早时间窗。`,
+    window_banner_holiday_today: (name, n, rec) => `今天是美国联邦假期 ${name}，US 房产媒体大面积停发${rec ? `，预计 ${rec} digest 起完全恢复` : ''}。本期含 ${n} 条来自更早时间窗。`,
+    window_banner_holiday_shoulder: (name, n, rec) => `昨天是美国联邦假期 ${name}，US 房产媒体仍在恢复发稿${rec ? `，预计 ${rec} digest 完全归位` : ''}。本期含 ${n} 条来自更早时间窗。`,
     period_label_week: '周',
     period_label_month: '月',
     period_month_suffix: '',
@@ -139,9 +139,9 @@ const I18N = {
     tab_monthly: 'Monthly',
     themes_weekly_title: 'Weekly themes',
     themes_monthly_title: 'Monthly themes',
-    window_banner: (h, n) => `Weekend or US holiday — US real-estate media publishing is sparse, so today's freshness may be reduced (${n} item(s) pulled from a slightly earlier window).`,
-    window_banner_holiday_today: (name, n) => `Today is the US federal holiday ${name} — US real-estate media is largely paused. ${n} item(s) are pulled from an earlier window.`,
-    window_banner_holiday_shoulder: (name, n) => `Yesterday was the US federal holiday ${name} — US real-estate media is still resuming. ${n} item(s) are pulled from an earlier window.`,
+    window_banner: (h, n, rec) => `Weekend or US holiday — US real-estate media publishing is sparse${rec ? `; full digest expected to resume on ${rec}` : ''}. ${n} item(s) are pulled from an earlier window.`,
+    window_banner_holiday_today: (name, n, rec) => `Today is the US federal holiday ${name} — US real-estate media is largely paused${rec ? `; full digest expected to resume on ${rec}` : ''}. ${n} item(s) are pulled from an earlier window.`,
+    window_banner_holiday_shoulder: (name, n, rec) => `Yesterday was the US federal holiday ${name} — US real-estate media is still resuming${rec ? `; full digest expected by ${rec}` : ''}. ${n} item(s) are pulled from an earlier window.`,
     period_label_week: 'Wk',
     period_label_month: 'Mo',
     period_month_suffix: '',
@@ -190,6 +190,17 @@ function timeAgo(ms) {
   if (h < 1) return Math.floor(diff / 60_000) + 'm ago';
   if (h < 24) return h + 'h ago';
   return Math.floor(h / 24) + 'd ago';
+}
+
+// "2026-05-28" → zh "5/28 (周四)" | en "5/28 (Thu)". Null in → null out.
+function formatBjRecoveryDate(iso) {
+  if (!iso) return null;
+  const d = new Date(iso + 'T12:00:00Z');
+  const m = d.getUTCMonth() + 1;
+  const day = d.getUTCDate();
+  const dowZh = ['周日','周一','周二','周三','周四','周五','周六'][d.getUTCDay()];
+  const dowEn = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getUTCDay()];
+  return currentLang === 'en' ? `${m}/${day} (${dowEn})` : `${m}/${day} (${dowZh})`;
 }
 
 function escapeHtml(s) {
@@ -550,18 +561,20 @@ function applyLoadedData(data) {
   // Holiday / sparse-window banner — daily only.
   // Triggers on: explicit US federal holiday today/yesterday OR pool auto-expand.
   // Copy is picked by priority: today's holiday > yesterday's > generic weekend/sparse.
+  // recovery date (BJ digest day that will be fully normal) comes from us-holidays.mjs.
   if (currentMode === 'daily') {
     const diag = data._diagnostics || {};
     const usH = diag.us_holiday || {};
     const extCount = (data.items || []).filter(it => it.extended_window).length;
     const expanded = diag.window_hours > 24;
+    const rec = formatBjRecoveryDate(usH.expected_recovery_bj_date);
     let msg = null;
     if (usH.today_us_holiday) {
-      msg = t().window_banner_holiday_today(usH.today_us_holiday, extCount);
+      msg = t().window_banner_holiday_today(usH.today_us_holiday, extCount, rec);
     } else if (usH.yesterday_us_holiday) {
-      msg = t().window_banner_holiday_shoulder(usH.yesterday_us_holiday, extCount);
+      msg = t().window_banner_holiday_shoulder(usH.yesterday_us_holiday, extCount, rec);
     } else if (expanded) {
-      msg = t().window_banner(diag.window_hours, extCount);
+      msg = t().window_banner(diag.window_hours, extCount, rec);
     }
     if (msg) { windowBanner.textContent = msg; windowBanner.hidden = false; }
     else     { windowBanner.hidden = true; }
