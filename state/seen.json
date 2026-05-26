@@ -11,19 +11,6 @@
     "shown_date": "2026-05-26"
   },
   {
-    "url": "https://www.multifamilydive.com/news/house-pass-amended-road-to-housing-bill/820846/",
-    "tokens": [
-      "house",
-      "overwhelmingly",
-      "passes",
-      "amended",
-      "road",
-      "housing",
-      "bill"
-    ],
-    "shown_date": "2026-05-26"
-  },
-  {
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm",
     "tokens": [
       "kevin",
@@ -43,6 +30,37 @@
       "committee",
       "unanimously",
       "selects"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/house-pass-amended-road-to-housing-bill/820846/",
+    "tokens": [
+      "house",
+      "overwhelmingly",
+      "passes",
+      "amended",
+      "road",
+      "housing",
+      "bill"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTlBRbWpETWtSZ0dDaU9OVlZzMkhXSXJDMFZHZVE0RUV1Skd1eDF5OWNuR3RmVk5XY3RNcWViOWkyV1J2Wm9TZ1dvQ1NFZE9tYWwzQ2dVMVAtV3I1VEFlNnJ1UEx3T0FtalJJdnZZZnoyWFJwVWkyNW1OZnVRZ0lwcEx2VGpyOXdpM0xzYjJFekRDTW1xN1pUMjV3LU1tQk0?oc=5",
+    "tokens": [
+      "major",
+      "housing",
+      "markets",
+      "year",
+      "home",
+      "price",
+      "declines",
+      "219",
+      "posting",
+      "mild",
+      "gains",
+      "resiclub"
     ],
     "shown_date": "2026-05-26"
   },
@@ -67,29 +85,6 @@
     "shown_date": "2026-05-26"
   },
   {
-    "url": "https://www.housingwire.com/articles/hei-loan-classification-states/",
-    "tokens": [
-      "regulations",
-      "expand",
-      "states",
-      "debate",
-      "loan",
-      "classification"
-    ],
-    "shown_date": "2026-05-26"
-  },
-  {
-    "url": "https://phoenixagentmagazine.com/2026/05/20/surprise-most-affordable-us-housing-markets/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=surprise-most-affordable-us-housing-markets",
-    "tokens": [
-      "surprise",
-      "most",
-      "affordable",
-      "housing",
-      "market"
-    ],
-    "shown_date": "2026-05-26"
-  },
-  {
     "url": "https://www.multifamilydive.com/news/irt-apartment-stock-dividend-investors/820624/",
     "tokens": [
       "independence",
@@ -102,17 +97,13 @@
     "shown_date": "2026-05-26"
   },
   {
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNWkF0NzB1ZHpGUUZXSHFDai1CS3ZEWnVTNXRFM2R1eGdiQmwyWlFYTEo2LVp2UjZudnJQTHEwLVhFWkswcjFhZUJ1OVpYWjV5LVdUSExkQWVmcW83VnZ6Z1l0eWlGX0YzNU52RTJfSUJpbzl0OFJfMEdhdmNFQ1NWMzdVWVhxVmhHOTNkOGoyZFZ2TTVIYVdSV191ZUJfTVlmWVNSY08tRHVvV0RrTl9DUFJqaEY2SU03bnpKdVlxT2NNMnVxdjVDYWFqUW0?oc=5",
+    "url": "https://phoenixagentmagazine.com/2026/05/20/surprise-most-affordable-us-housing-markets/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=surprise-most-affordable-us-housing-markets",
     "tokens": [
-      "gulf",
-      "harbors",
+      "surprise",
+      "most",
+      "affordable",
       "housing",
-      "market",
-      "feeling",
-      "effects",
-      "2024",
-      "hurricanes",
-      "tampa"
+      "market"
     ],
     "shown_date": "2026-05-26"
   },
@@ -166,19 +157,6 @@
     "shown_date": "2026-05-26"
   },
   {
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE91aWkwV2NCa1hXVFhSbDljOFZNSnJXOXhzQV9lSFJoakNLbWl5ZGQ1US05V1RHUm45bmxfcmEtQWZPeHNGWWI2Uk1GcC1JckJVVWlFc1BxZDBFdkY1M1psN0dQMFZZRkZCdmRNYm40TUE2NEs1bFpBUXJ0Q2ZBTlE?oc=5",
-    "tokens": [
-      "avalonbay",
-      "merger",
-      "create",
-      "$69b",
-      "giant",
-      "multifamily",
-      "housing"
-    ],
-    "shown_date": "2026-05-26"
-  },
-  {
     "url": "https://www.realtor.com/news/unique-homes/nancy-barbato-frank-sinatra-home-rent-beverly-hills/",
     "tokens": [
       "exclusive",
@@ -207,6 +185,19 @@
       "announce",
       "merger",
       "equals"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE91aWkwV2NCa1hXVFhSbDljOFZNSnJXOXhzQV9lSFJoakNLbWl5ZGQ1US05V1RHUm45bmxfcmEtQWZPeHNGWWI2Uk1GcC1JckJVVWlFc1BxZDBFdkY1M1psN0dQMFZZRkZCdmRNYm40TUE2NEs1bFpBUXJ0Q2ZBTlE?oc=5",
+    "tokens": [
+      "avalonbay",
+      "merger",
+      "create",
+      "$69b",
+      "giant",
+      "multifamily",
+      "housing"
     ],
     "shown_date": "2026-05-26"
   },
@@ -286,6 +277,44 @@
       "home",
       "listings",
       "inman"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/what-happens-to-mortgage-rates-if-the-iran-conflict-is-over/",
+    "tokens": [
+      "happens",
+      "mortgage",
+      "rates",
+      "iran",
+      "conflict"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/hei-loan-classification-states/",
+    "tokens": [
+      "regulations",
+      "expand",
+      "states",
+      "debate",
+      "loan",
+      "classification"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNWkF0NzB1ZHpGUUZXSHFDai1CS3ZEWnVTNXRFM2R1eGdiQmwyWlFYTEo2LVp2UjZudnJQTHEwLVhFWkswcjFhZUJ1OVpYWjV5LVdUSExkQWVmcW83VnZ6Z1l0eWlGX0YzNU52RTJfSUJpbzl0OFJfMEdhdmNFQ1NWMzdVWVhxVmhHOTNkOGoyZFZ2TTVIYVdSV191ZUJfTVlmWVNSY08tRHVvV0RrTl9DUFJqaEY2SU03bnpKdVlxT2NNMnVxdjVDYWFqUW0?oc=5",
+    "tokens": [
+      "gulf",
+      "harbors",
+      "housing",
+      "market",
+      "feeling",
+      "effects",
+      "2024",
+      "hurricanes",
+      "tampa"
     ],
     "shown_date": "2026-05-26"
   },
