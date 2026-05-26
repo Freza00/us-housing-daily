@@ -1,5 +1,295 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/new-federal-funding-a-mixed-bag-for-housing-programs/",
+    "tokens": [
+      "federal",
+      "funding",
+      "mixed",
+      "housing",
+      "programs"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/house-pass-amended-road-to-housing-bill/820846/",
+    "tokens": [
+      "house",
+      "overwhelmingly",
+      "passes",
+      "amended",
+      "road",
+      "housing",
+      "bill"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm",
+    "tokens": [
+      "kevin",
+      "warsh",
+      "takes",
+      "oath",
+      "office",
+      "chairman",
+      "member",
+      "board",
+      "governors",
+      "federal",
+      "reserve",
+      "system",
+      "open",
+      "market",
+      "committee",
+      "unanimously",
+      "selects"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOQ3VuNzBjY0RhbllzVmZhN2pjb0NBOTExT2xwUGtZQ2RwZ0Z4NHZwenJYaXFpd3JTZm9LVFZzRnhyQjJpUVh1RHVYSjBPWlppZ1VSbVhLcE05X002QzlxamNxZzFkalpUalZTZ0k0bjN3aEhlT2xJM2VQb2ZtVmtNeXJQVU5BZHVBTGU3ejlMS25sSnNmVktrc3NqV01Hc2RtZTEtRQ?oc=5",
+    "tokens": [
+      "spring",
+      "housing",
+      "market",
+      "defies",
+      "odds",
+      "contract",
+      "signings",
+      "year",
+      "high",
+      "these",
+      "midwest",
+      "markets",
+      "lead",
+      "realtor"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/hei-loan-classification-states/",
+    "tokens": [
+      "regulations",
+      "expand",
+      "states",
+      "debate",
+      "loan",
+      "classification"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://phoenixagentmagazine.com/2026/05/20/surprise-most-affordable-us-housing-markets/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=surprise-most-affordable-us-housing-markets",
+    "tokens": [
+      "surprise",
+      "most",
+      "affordable",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/irt-apartment-stock-dividend-investors/820624/",
+    "tokens": [
+      "independence",
+      "realty",
+      "trust",
+      "boosts",
+      "dividend",
+      "6%"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNWkF0NzB1ZHpGUUZXSHFDai1CS3ZEWnVTNXRFM2R1eGdiQmwyWlFYTEo2LVp2UjZudnJQTHEwLVhFWkswcjFhZUJ1OVpYWjV5LVdUSExkQWVmcW83VnZ6Z1l0eWlGX0YzNU52RTJfSUJpbzl0OFJfMEdhdmNFQ1NWMzdVWVhxVmhHOTNkOGoyZFZ2TTVIYVdSV191ZUJfTVlmWVNSY08tRHVvV0RrTl9DUFJqaEY2SU03bnpKdVlxT2NNMnVxdjVDYWFqUW0?oc=5",
+    "tokens": [
+      "gulf",
+      "harbors",
+      "housing",
+      "market",
+      "feeling",
+      "effects",
+      "2024",
+      "hurricanes",
+      "tampa"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.dmagazine.com/home-garden/2026/05/hot-property-this-home-is-a-contemporary-take-on-prairie-style-design/",
+    "tokens": [
+      "property",
+      "home",
+      "contemporary",
+      "take",
+      "prairie",
+      "style",
+      "design"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/05/single-family-built-to-rent-slowed-at-start-of-2026/",
+    "tokens": [
+      "single",
+      "family",
+      "built",
+      "rent",
+      "slowed",
+      "start",
+      "2026"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/us-office-market-outlook/",
+    "tokens": [
+      "office",
+      "market",
+      "outlook",
+      "april",
+      "2026"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.bisnow.com/houston/news/commercial-real-estate/partners-industrial-broker-travis-land-dies-at-45-134671",
+    "tokens": [
+      "partners",
+      "industrial",
+      "broker",
+      "travis",
+      "land",
+      "dies"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE91aWkwV2NCa1hXVFhSbDljOFZNSnJXOXhzQV9lSFJoakNLbWl5ZGQ1US05V1RHUm45bmxfcmEtQWZPeHNGWWI2Uk1GcC1JckJVVWlFc1BxZDBFdkY1M1psN0dQMFZZRkZCdmRNYm40TUE2NEs1bFpBUXJ0Q2ZBTlE?oc=5",
+    "tokens": [
+      "avalonbay",
+      "merger",
+      "create",
+      "$69b",
+      "giant",
+      "multifamily",
+      "housing"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.realtor.com/news/unique-homes/nancy-barbato-frank-sinatra-home-rent-beverly-hills/",
+    "tokens": [
+      "exclusive",
+      "nancy",
+      "barbato",
+      "sinatra",
+      "iconic",
+      "beverly",
+      "hills",
+      "time",
+      "capsule",
+      "hits",
+      "rental",
+      "market",
+      "$27.5k",
+      "month"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/reit-merger-avalonbay-equity-residential/820840/",
+    "tokens": [
+      "avalonbay",
+      "equity",
+      "residential",
+      "announce",
+      "merger",
+      "equals"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.perenews.com/cbre-im-platform-level-real-estate-secondaries-enter-the-mainstream/",
+    "tokens": [
+      "cbre",
+      "platform",
+      "level",
+      "secondaries",
+      "enter",
+      "mainstream"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.perenews.com/aussie-superfunds-see-good-relative-value-again-in-real-estate/",
+    "tokens": [
+      "aussie",
+      "superfunds",
+      "good",
+      "relative",
+      "value",
+      "again"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260520a.htm",
+    "tokens": [
+      "federal",
+      "reserve",
+      "board",
+      "requests",
+      "public",
+      "comment",
+      "proposal",
+      "establish",
+      "payment",
+      "account",
+      "legally",
+      "eligible",
+      "financial",
+      "institutions",
+      "specific",
+      "purpose",
+      "clearing",
+      "settling",
+      "payments"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/hud-housing-best-practices-state-local-governments/820916/",
+    "tokens": [
+      "releases",
+      "housing",
+      "regulation",
+      "best",
+      "practices",
+      "state",
+      "local",
+      "governments"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeEF6Y1pfNHJWU3NHUnFIc3lSOXNkaWFBZUdoOWVPVkFhTmFLQVJ3cTdTa2xEai10cnBZZnRldUJjTlpZVEwwVV81eExGVFBPWTVBbU1aVVJoMWlEeHhXZXpxVVFTX1pYWEE1X0lXNVprcTMxQTc0U3VkdWFDbmlBbEduVUViMHdBS0hzd25peHI2a0FMLVh2VHVmdHpURG84elc4czRQX2p2TV9LUU5J?oc=5",
+    "tokens": [
+      "judge",
+      "orders",
+      "mred",
+      "restore",
+      "zillow",
+      "access",
+      "chicagoland",
+      "home",
+      "listings",
+      "inman"
+    ],
+    "shown_date": "2026-05-26"
+  },
+  {
     "url": "https://houstonagentmagazine.com/2026/05/21/housing-starts-april/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=housing-starts-april",
     "tokens": [
       "housing",
