@@ -27,6 +27,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { selectEffectiveWindow } from "./lib/digest-core.mjs";
+import { loadUsHolidays, usHolidayContext } from "./lib/us-holidays.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -2097,6 +2098,17 @@ async function main() {
 
   // 8. 写出
   const date = beijingDateStr(now);
+
+  // US holiday context — pre-fetched + cached in state/us-holidays-YYYY.json.
+  // Failures are absorbed by the loader; if both years return [], usHoliday
+  // will just have all-null flags and the banner stays in pool-driven mode.
+  const usYear = new Date(now).getUTCFullYear();
+  const usHolidaysList = (await Promise.all([
+    loadUsHolidays({ stateDir: STATE_DIR, year: usYear, log }),
+    loadUsHolidays({ stateDir: STATE_DIR, year: usYear + 1, log }),
+  ])).flat();
+  const usHoliday = usHolidayContext(now, usHolidaysList);
+
   const payload = {
     date,
     generated_at: now,
@@ -2110,6 +2122,7 @@ async function main() {
       sectionsUnderMin: minDiag?.underMin || [],
       window_hours: winSel.hours,
       pool_sizes: winSel.pool_sizes,
+      us_holiday: usHoliday,
       ...(writerAudit ? {
         writer_audit: writerAudit,
         candidate_pool_size: candidatePoolSize,

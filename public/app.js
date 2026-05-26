@@ -76,14 +76,16 @@ const I18N = {
     impact: { 'long-pos': '长期利好', 'short-pos': '短期利好', neutral: '中性', 'short-neg': '短期利空', 'long-neg': '长期利空' },
     importance_title: '重要性',
     extended_pill: '扩窗',
-    extended_title: '今日 24h 内该分类无新闻 — 此条来自 7 天扩窗回退',
+    extended_title: '今日 US 房产媒体发稿少（周末或美国假期），此条来自更早的时间窗，以保持栏目完整。',
     button_label: 'EN', // 按钮上显示切换到的语言
     tab_daily: '日报',
     tab_weekly: '周报',
     tab_monthly: '月报',
     themes_weekly_title: '本周主线',
     themes_monthly_title: '本月主线',
-    window_banner: (h, n) => `周末/假日窗口已自动扩展到 ${h}h。本期含 ${n} 条 24h 外稿件。`,
+    window_banner: (h, n) => `今日适逢周末或美国假期，US 房产媒体发稿较少，新闻时效性可能略弱（本期含 ${n} 条来自更早时间窗）。`,
+    window_banner_holiday_today: (name, n) => `今天是美国联邦假期 ${name}，US 房产媒体大面积停发，本期含 ${n} 条来自更早时间窗。`,
+    window_banner_holiday_shoulder: (name, n) => `昨天是美国联邦假期 ${name}，US 房产媒体仍在恢复发稿，本期含 ${n} 条来自更早时间窗。`,
     period_label_week: '周',
     period_label_month: '月',
     period_month_suffix: '',
@@ -130,14 +132,16 @@ const I18N = {
     impact: { 'long-pos': 'Long-term ↑', 'short-pos': 'Short-term ↑', neutral: 'Neutral', 'short-neg': 'Short-term ↓', 'long-neg': 'Long-term ↓' },
     importance_title: 'Importance',
     extended_pill: '7d ext',
-    extended_title: 'No items today in 24h window — fallback to 7-day extended window',
+    extended_title: 'US real-estate media is sparse today (weekend or US holiday) — pulled from an earlier window to keep the section complete.',
     button_label: '中',
     tab_daily: 'Daily',
     tab_weekly: 'Weekly',
     tab_monthly: 'Monthly',
     themes_weekly_title: 'Weekly themes',
     themes_monthly_title: 'Monthly themes',
-    window_banner: (h, n) => `Window auto-expanded to ${h}h (weekend/holiday). ${n} item(s) outside the canonical 24h window.`,
+    window_banner: (h, n) => `Weekend or US holiday — US real-estate media publishing is sparse, so today's freshness may be reduced (${n} item(s) pulled from a slightly earlier window).`,
+    window_banner_holiday_today: (name, n) => `Today is the US federal holiday ${name} — US real-estate media is largely paused. ${n} item(s) are pulled from an earlier window.`,
+    window_banner_holiday_shoulder: (name, n) => `Yesterday was the US federal holiday ${name} — US real-estate media is still resuming. ${n} item(s) are pulled from an earlier window.`,
     period_label_week: 'Wk',
     period_label_month: 'Mo',
     period_month_suffix: '',
@@ -543,12 +547,24 @@ function applyLoadedData(data) {
   datestrip.hidden = false;
   renderPeriodStrip(currentMode);
 
-  // Adaptive-window banner — daily only, only when window_hours > 24
-  if (currentMode === 'daily' && data._diagnostics?.window_hours > 24) {
-    const h = data._diagnostics.window_hours;
+  // Holiday / sparse-window banner — daily only.
+  // Triggers on: explicit US federal holiday today/yesterday OR pool auto-expand.
+  // Copy is picked by priority: today's holiday > yesterday's > generic weekend/sparse.
+  if (currentMode === 'daily') {
+    const diag = data._diagnostics || {};
+    const usH = diag.us_holiday || {};
     const extCount = (data.items || []).filter(it => it.extended_window).length;
-    windowBanner.textContent = t().window_banner(h, extCount);
-    windowBanner.hidden = false;
+    const expanded = diag.window_hours > 24;
+    let msg = null;
+    if (usH.today_us_holiday) {
+      msg = t().window_banner_holiday_today(usH.today_us_holiday, extCount);
+    } else if (usH.yesterday_us_holiday) {
+      msg = t().window_banner_holiday_shoulder(usH.yesterday_us_holiday, extCount);
+    } else if (expanded) {
+      msg = t().window_banner(diag.window_hours, extCount);
+    }
+    if (msg) { windowBanner.textContent = msg; windowBanner.hidden = false; }
+    else     { windowBanner.hidden = true; }
   } else {
     windowBanner.hidden = true;
   }
