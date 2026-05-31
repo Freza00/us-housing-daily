@@ -1,5 +1,279 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/housing-inventory-just-turned-negative-year-over-year/",
+    "tokens": [
+      "housing",
+      "inventory",
+      "turned",
+      "negative",
+      "year"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.realtor.com/research/new-home-sales-april-2026/",
+    "tokens": [
+      "home",
+      "sales",
+      "slow",
+      "april",
+      "strong",
+      "march"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/mortgage-interest-rates-now-may-28-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "6.53%",
+      "despite",
+      "looming",
+      "iran",
+      "peace",
+      "deal",
+      "wait",
+      "global",
+      "markets",
+      "calm",
+      "down"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/rocket-vantagescore-4-rollout/",
+    "tokens": [
+      "rocket",
+      "expands",
+      "vantagescore",
+      "pilot",
+      "agency",
+      "loans"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/housing-industry-ftc-doj-antitrust-guidance/821387/",
+    "tokens": [
+      "housing",
+      "industry",
+      "urges",
+      "provide",
+      "antitrust",
+      "guidance"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/top-10-buyers-markets-summer-market-clock/",
+    "tokens": [
+      "best",
+      "buyer",
+      "markets",
+      "heading",
+      "summer",
+      "here",
+      "home",
+      "shoppers",
+      "hold",
+      "cards"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://rebusinessonline.com/partnership-opens-24-3m-affordable-housing-complex-in-south-austin/",
+    "tokens": [
+      "partnership",
+      "opens",
+      "$24.3m",
+      "affordable",
+      "housing",
+      "complex",
+      "south",
+      "austin"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/tennessee-zillow-listings-realtracs/",
+    "tokens": [
+      "tennessee",
+      "brokers",
+      "brace",
+      "zillow",
+      "listing",
+      "cutoff",
+      "realtracs",
+      "dispute"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://rebusinessonline.com/wood-partners-sells-278-unit-alta-rise-multifamily-community-in-gilbert-arizona/",
+    "tokens": [
+      "wood",
+      "partners",
+      "sells",
+      "278",
+      "unit",
+      "alta",
+      "rise",
+      "multifamily",
+      "community",
+      "gilbert",
+      "arizona"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQQ2xLQzUxZU1jbENaa0FpZUFrV0MxV2Z0d3ZiWGxjUTRJT0t5QmpxaXpQQTY5YTJ0alREdVRVc0Y0dFZTYWk0Y21IWW9wdGZpVTZCVVYtS3l6TG0wMy1Sc1JzNXZqNHVJbk5LN1I4dHZXNXhZQWttU2FsUlhfTnFORElscHItaVF1NC1YVVBB?oc=5",
+    "tokens": [
+      "daily",
+      "2026",
+      "pccp",
+      "acquires",
+      "first",
+      "phase",
+      "unit",
+      "community",
+      "list"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/rent-vs-buy-mortgage/",
+    "tokens": [
+      "rent",
+      "renting",
+      "cheaper",
+      "buying",
+      "home",
+      "8211",
+      "realtor"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://rebusinessonline.com/royomartin-underway-on-115m-manufacturing-expansion-project-in-corrigan-texas/",
+    "tokens": [
+      "royomartin",
+      "underway",
+      "$115m",
+      "manufacturing",
+      "expansion",
+      "project",
+      "corrigan",
+      "texas"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://therealdeal.com/national/phoenix/2026/05/29/aligned-data-centers-moves-ahead-with-phoenix-area-plans/",
+    "tokens": [
+      "aligned",
+      "data",
+      "centers",
+      "plots",
+      "suburban",
+      "complex",
+      "phoenix",
+      "restrictions"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/north-carolina-hbcu-explores-land-sale-as-part-of-bankruptcy-proceeding-134787",
+    "tokens": [
+      "hbcu",
+      "going",
+      "through",
+      "bankruptcy",
+      "looks",
+      "sell",
+      "$200m"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/industrial/report-us-landlords-slowly-gaining-industrial-pricing-power-134781",
+    "tokens": [
+      "industrial",
+      "markets",
+      "tilt",
+      "toward",
+      "landlords",
+      "despite",
+      "global",
+      "softness"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/capital-markets/united-overseas-bank-takes-back-century-old-garment-district-office-building-134788",
+    "tokens": [
+      "united",
+      "overseas",
+      "bank",
+      "takes",
+      "landmark",
+      "midtown",
+      "tower"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/dream-finders-beazer-hostile-takeover/",
+    "tokens": [
+      "beazer",
+      "takeover",
+      "tests",
+      "book",
+      "value",
+      "returns"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9kTTRheVBhU2FpUkYxRzhRbGotb3hDYVVxclpodFpQOVBkMlM1OGtET1N0SFJCcFhWOWJFcmRPcm0tc1JEWDNGVjhKc1JFV3hWWGQ2SjZETFh3S2VDQlA1enhwVkFKM0cxWjV3?oc=5",
+    "tokens": [
+      "costar",
+      "acquire",
+      "home",
+      "data",
+      "platform",
+      "zonda",
+      "$800m",
+      "inman"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://www.perenews.com/platforms-take-the-spotlight-in-real-estates-push-for-operational-alpha/",
+    "tokens": [
+      "platforms",
+      "take",
+      "spotlight",
+      "push",
+      "operational",
+      "alpha"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNMzRWZ0twaldUUi1HY0FhQ3lXMjJXT1FJWnljaEswSXJULU1aUTJHRlB1Umc1Zmh4dG9WRl8yVWRSRTMzSGZ6SVkxZU1Fb0FySzBocjJ4c25WT2JMV0s5bHFHc0JheFVjUG1ZS0pVdXhSdmpEWFVBa1R3ZEgzLVVvRlM1MnplYzdXZ1M0YkhNaVd1VUk?oc=5",
+    "tokens": [
+      "york",
+      "passes",
+      "pied",
+      "terre",
+      "luxury",
+      "homes",
+      "inman"
+    ],
+    "shown_date": "2026-05-31"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/feds-bowman-willing-to-look-through-war-driven-inflation-bump",
     "tokens": [
       "bowman",
@@ -5571,268 +5845,5 @@
       "inman"
     ],
     "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/positive-housing-demand-leads-to-inventory-almost-going-negative-yoy/",
-    "tokens": [
-      "positive",
-      "housing",
-      "demand",
-      "leads",
-      "inventory",
-      "almost",
-      "going",
-      "negative"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/listings-inventory-housing-market-update-may-8-2026/",
-    "tokens": [
-      "homebuyers",
-      "sellers",
-      "both",
-      "grow",
-      "cautious",
-      "mortgage",
-      "rates",
-      "tick",
-      "higher"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/bipartisan-policy-center-poll-lower-housing-costs/",
-    "tokens": [
-      "poll",
-      "americans",
-      "want",
-      "congress",
-      "lowering",
-      "housing",
-      "costs"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxONnRDeFlzUmZpeXh4bmUxSEtHWno0U21yQzhTdTB5M1BuT3BHR2NKWUJCRnhWVTJXaFZrc192TlFYRWlWTDdLV1l3NU5DRE1VYjdTaGloTXdVT3dQaGdQcnYzOVhudTFhbEs4MTFhUkhoZjlMS21VVzd5TC1lazhhUGo3UENKMTFXREdaVS1zUUlEbmc?oc=5",
-    "tokens": [
-      "iran",
-      "impact",
-      "housing",
-      "market",
-      "explained",
-      "inman"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/05/05/job-openings-and-labor-turnover-comes-in-at-6-point-86-million-new-home-sales-rise-to-682000.html",
-    "tokens": [
-      "openings",
-      "labor",
-      "turnover",
-      "comes",
-      "million",
-      "home",
-      "sales",
-      "rise",
-      "682",
-      "000"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/05/08/har-affordability-report-q1-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=har-affordability-report-q1-2026",
-    "tokens": [
-      "affordability",
-      "gains",
-      "houston",
-      "42%",
-      "households",
-      "swing",
-      "homeownership"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/short-term-rentals-apartment-management-sentral/819754/",
-    "tokens": [
-      "inside",
-      "sentral",
-      "expansion"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/woodfield-delivers-360-unit-san-marcos-apartments/",
-    "tokens": [
-      "woodfield",
-      "delivers",
-      "360",
-      "unit",
-      "marcos",
-      "apartments"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSkZzUmdZdGF6Z1Vld0dpRVlsc2dkaUxveE5yZkh3X2FIQ1F2QS1KTU5lUWF4UnZFeEkyX2FmSHVuTmRrem9vNGM0aFFiWDhyVFU5b1JTSXdWUjlQRVhWNU9QQ3V5QnZyT2lUMU02TlNENm9XRkoyVGs3bmN0cHFnUGJ6dC1kcE9HUGV6YW1nSVZwZXowYXZQZ3pPSQ?oc=5",
-    "tokens": [
-      "nashville",
-      "housing",
-      "market",
-      "balanced",
-      "april",
-      "2026",
-      "wkrn"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.bisnow.com/washington-dc/news/commercial-real-estate/as-chunks-of-southwest-dc-begin-to-sell-pressure-emerges-to-create-a-plan-134488",
-    "tokens": [
-      "concerns",
-      "mount",
-      "feds",
-      "sell",
-      "huge",
-      "buildings",
-      "without",
-      "future"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/05/09/ai-data-center-construction-public-opposition.html",
-    "tokens": [
-      "take",
-      "control",
-      "data",
-      "center",
-      "boom",
-      "built",
-      "your",
-      "home",
-      "future"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/orange-county-multifamily-market-report/",
-    "tokens": [
-      "orange",
-      "county",
-      "multifamily",
-      "market",
-      "april",
-      "2026"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.perenews.com/sixth-streets-alvarado-future-winners-need-to-be-more-than-capital/",
-    "tokens": [
-      "sixth",
-      "street",
-      "alvarado",
-      "future",
-      "winners",
-      "need",
-      "capital"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.perenews.com/the-two-types-of-real-estate-managers-are-becoming-increasingly-alike/",
-    "tokens": [
-      "types",
-      "managers",
-      "becoming",
-      "increasingly",
-      "alike"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/hud-environmental-reviews-multifamily-map/819733/",
-    "tokens": [
-      "trims",
-      "environmental",
-      "reviews",
-      "multifamily",
-      "projects"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.naco.org/resource/house-and-senate-housing-reform-packages-side-side?utm_source=chatgpt.com",
-    "tokens": [
-      "house",
-      "senate",
-      "housing",
-      "reform",
-      "packages",
-      "side",
-      "8211",
-      "naco"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.realtor.com/research/new-home-sales-march-2026/",
-    "tokens": [
-      "home",
-      "sales",
-      "pace",
-      "picks",
-      "price",
-      "plummets",
-      "march"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/nh-hb-1010-multifamily-zoning/",
-    "tokens": [
-      "pushback",
-      "hampshire",
-      "course",
-      "corrects",
-      "housing",
-      "laws"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/05/07/home-sales-stuck-at-same-levels-from-last-year-says-zillow-chief-economist.html",
-    "tokens": [
-      "home",
-      "sales",
-      "stuck",
-      "same",
-      "levels",
-      "last",
-      "year",
-      "zillow",
-      "senior",
-      "economist"
-    ],
-    "shown_date": "2026-05-10"
-  },
-  {
-    "url": "https://yieldpro.com/2026/05/yardi-matrix-advertised-rents-edge-higher-in-april/",
-    "tokens": [
-      "yardi",
-      "matrix",
-      "advertised",
-      "rents",
-      "edge",
-      "higher",
-      "april",
-      "8211",
-      "yield"
-    ],
-    "shown_date": "2026-05-10"
   }
 ]
