@@ -1,5 +1,289 @@
 [
   {
+    "url": "https://www.cnbc.com/video/2026/05/28/april-new-home-sales-miss-estimates-down-11-percent-year-over-year.html",
+    "tokens": [
+      "april",
+      "home",
+      "sales",
+      "miss",
+      "estimates",
+      "down",
+      "11%",
+      "year"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdWNIVHlpSEpxRU5PcWthU0dQY3ZBWUFzOXpEQ1U0S0lWb2h3TnpwdEh5b3JjN3VBNzVVcTdIb0FnSFdKYWN5djFhanJkNlNOTEpDdWhVSXRGZ0pqZEt6MFpFSlZxSUIwX0VnRk94WTBBcUY0N0d3VmdZdEJ5c3dOX21OX3l2MGJMejdJ?oc=5",
+    "tokens": [
+      "home",
+      "affordability",
+      "hits",
+      "lows",
+      "buyers",
+      "pull",
+      "back",
+      "inman"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/home-prices-dropping-weekly-update-may-29-2026/",
+    "tokens": [
+      "lower",
+      "asking",
+      "prices",
+      "silver",
+      "lining",
+      "buyers",
+      "otherwise",
+      "cloudy",
+      "market"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPd3hXR19PY2NWdldkR0hURUlUaUdudkd2UDJfNk1XUzVhLUhNZnRtQm9JM3RuVnB3LUZEWGJnY3Mxd1BHc1BpUHpXanVpaklzMXVCMkJoNnVBTzJ3b1JwSWtUVFh5a3J6cmxMMVc2aG51cV9FOWxQT3dLY0JYOHItdzVYRjR1YnJLYUxUb0h5TFVGa1h5aFBNWjJkaE14UE5tWlFneU5qUnJkbkxnaEJCSE1ZcExST2xUUU13dEcxMmI2a0ROVkZB?oc=5",
+    "tokens": [
+      "zillow",
+      "downgrades",
+      "home",
+      "price",
+      "forecast",
+      "across",
+      "400",
+      "plus",
+      "housing",
+      "markets",
+      "data",
+      "fast",
+      "company"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/05/31/zohran-mamdani-reveals-housing-plan/",
+    "tokens": [
+      "inside",
+      "mamdani",
+      "housing",
+      "blueprint"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.bisnow.com/austin-san-antonio/news/affordable-housing/how-a-women-led-firm-is-helping-to-boost-affordable-housing-in-austin-134764",
+    "tokens": [
+      "women",
+      "firm",
+      "helping",
+      "boost",
+      "affordable",
+      "housing",
+      "austin"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://phoenixagentmagazine.com/2026/05/29/housing-scorecard-may-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=housing-scorecard-may-2026",
+    "tokens": [
+      "scorecard",
+      "existing",
+      "home",
+      "sales",
+      "rise",
+      "second",
+      "straight",
+      "month",
+      "phoenix"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/streetmatrix-arizona-utah-expansion/",
+    "tokens": [
+      "streetmatrix",
+      "adds",
+      "arizona",
+      "utah",
+      "housing",
+      "index"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.realtor.com/research/q1-2026-international-demand/",
+    "tokens": [
+      "2026",
+      "international",
+      "demand",
+      "miami",
+      "dominates",
+      "angeles",
+      "fades",
+      "canadian",
+      "buyers",
+      "cautiously",
+      "return",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ2E0emdod0JlTDZvNy1hN1h1cE1vbWV1dGVxS08wYmxRVHdlbzR1bEF3T0k3LVpiaFU5b1FfOWxXZDExR0tocGcxYUZfazh3eEpBYkZ3aktyeGRPQUxGSGdtdDJZQ3h4Q3phZG9wZVVwSWFqM1NpYjlCUkxUbkVGNVpiRHNkQ1lpMy1BVmZoS0g1VXJIdWdj?oc=5",
+    "tokens": [
+      "private",
+      "rented",
+      "sector",
+      "solving",
+      "london",
+      "housing",
+      "crisis",
+      "nrla",
+      "property",
+      "118"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://rebusinessonline.com/lee-associates-q1-2026-report-industrial-and-multifamily-slow-office-recovers-retail-demand-holds/",
+    "tokens": [
+      "038",
+      "associates",
+      "industrial",
+      "multifamily",
+      "slow",
+      "office",
+      "recovers",
+      "retail",
+      "demand",
+      "holds"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.bisnow.com/los-angeles/news/retail/figat7th-brookfield-sale-jh-real-estate-partners-134743",
+    "tokens": [
+      "brookfield",
+      "sells",
+      "figat",
+      "partners"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/carlsbad-lifestyle-center-fetches-91m-in-sale-to-11north/",
+    "tokens": [
+      "carlsbad",
+      "lifestyle",
+      "center",
+      "fetches",
+      "$91m",
+      "sale",
+      "north"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/columbia-property-trust-lands-50k-sf-of-leases-in-bostons-back-bay/",
+    "tokens": [
+      "columbia",
+      "property",
+      "trust",
+      "lands",
+      "leases",
+      "boston",
+      "back"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://rebusinessonline.com/tanger-acquires-town-center-at-levis-commons-near-toledo-for-60m/",
+    "tokens": [
+      "tanger",
+      "acquires",
+      "town",
+      "center",
+      "levis",
+      "commons",
+      "near",
+      "toledo",
+      "$60m"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/berkshire-hathaway-to-acquire-taylor-morrison-home-corporation-8-5-billion/",
+    "tokens": [
+      "berkshire",
+      "hathaway",
+      "taylor",
+      "morrison",
+      "$8.5",
+      "billion",
+      "cash",
+      "deal"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/proptech/real-estate-giants-deals-openai-anthropic-enterprise-ai-partnerships-herald-end-plug-and-play-proptech-134751",
+    "tokens": [
+      "blackstone",
+      "brookfield",
+      "betting",
+      "custom",
+      "proptech",
+      "price"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/elme-communitites-reit-liquidation-capreit/821504/",
+    "tokens": [
+      "elme",
+      "communities",
+      "reaches",
+      "agreement",
+      "sell",
+      "last",
+      "remaining",
+      "asset"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/05/29/nyc-approves-pied-a-terre-tax-the-corcoran-groupas-noble-black-on-the-impact-on-wealthy-homeowners.html",
+    "tokens": [
+      "approves",
+      "pied",
+      "terre",
+      "corcoran",
+      "group",
+      "noble",
+      "black",
+      "impact",
+      "wealthy",
+      "homeowners"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/los-angeles-rezoning-plan-housing-developers-update/",
+    "tokens": [
+      "build",
+      "half",
+      "million",
+      "homes",
+      "drawing",
+      "major",
+      "developer",
+      "interest"
+    ],
+    "shown_date": "2026-06-01"
+  },
+  {
     "url": "https://www.housingwire.com/articles/housing-inventory-just-turned-negative-year-over-year/",
     "tokens": [
       "housing",
@@ -5555,295 +5839,5 @@
       "push"
     ],
     "shown_date": "2026-05-12"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/fed-flags-overheated-markets-as-top-stability-risk",
-    "tokens": [
-      "flags",
-      "overheated",
-      "markets",
-      "stability",
-      "risk"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/fannie-mae-retained-mortgage-portfolio-rates/",
-    "tokens": [
-      "fannie",
-      "mortgage",
-      "holdings",
-      "balloon",
-      "trump",
-      "tries",
-      "hold",
-      "interest",
-      "rates",
-      "down"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/home-equity-decreases-underwater-mortgages-rise/",
-    "tokens": [
-      "homeowner",
-      "equity",
-      "plunges",
-      "year",
-      "underwater",
-      "mortgages",
-      "rise"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQM2Q5Z3FQcFE1YVppWnJmQjNHeE8xZ3RNT0ZUV3c5YjJwWUtMNXZqVHpZU2ZxU1o3S1RZTFhRdTlqcTBUYmRlQW1mVnlYNmZXc0w0X3RDT0k5S1pWekllQkxxUEo4Uk9SWU9iZTdVSGFfZ0M5ZHBhRXo2WXUybEkwSkdJa0dGeWVkVlJMWU9ramV0NDNUc2lxSnAycThWaXJJMzA5WVNEclpBYkFVdnc?oc=5",
-    "tokens": [
-      "housing",
-      "market",
-      "power",
-      "balance",
-      "zillow",
-      "updated",
-      "ratings",
-      "250",
-      "plus",
-      "markets",
-      "fast",
-      "company"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/new-listings-mortgage-housing-market-update-video-may-8-2026/",
-    "tokens": [
-      "spring",
-      "housing",
-      "market",
-      "faces",
-      "crossroads",
-      "make",
-      "break",
-      "trend",
-      "listings"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSF9idlAzbmF5Z2VNenhUSHZCY1FGUU1xQzBLVDlYRnNxOXVSVXBaMVN5OTB4Z0ZSaFJvU2VrWGZkR0g2bUpQY0UyQXlxY05icG1IbWF5X1F5X0wwbld2R28taHllRHU4ek9ta1pqbXVfcVpLUl9fc2JoMlJSOXdXUVUyRFFIVEZwRVlQVU1n?oc=5",
-    "tokens": [
-      "lance",
-      "lambert",
-      "florida",
-      "homebuilders",
-      "stabilization",
-      "sales",
-      "growth",
-      "126",
-      "traders",
-      "union"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNY3h4U1NRdlFlbHlwUWd5dmdqTDBDNmoxMzBqX0RVbjRSTFV0c1RLWDEwT0FSRUdYR09hNGY3YV9Xemx5cC0yMDVLdjN3M2VDdzJiWVVkQXlWa21pTGlzdEcyejFEY2xRWGlwclBQVmF2bHRvUUJmbjkwT21tdG9HbGRKdDhDRjNKYUVIS2NnVlFPVzRaV09NaDRHak1aOTg?oc=5",
-    "tokens": [
-      "time",
-      "look",
-      "current",
-      "metro",
-      "phoenix",
-      "housing",
-      "market",
-      "media"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/essex-earnings-q1-2026-west-coast/819355/",
-    "tokens": [
-      "essex",
-      "posts",
-      "positive",
-      "strength",
-      "northern",
-      "california"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.bisnow.com/dublin/news/retail/invescos-frascati-centre-return-to-market-80m-134495",
-    "tokens": [
-      "invesco",
-      "frascati",
-      "centre",
-      "return",
-      "market"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.perenews.com/2910-north-arthur-ashe-boulevard-richmond-former-greyhound-bus-station-set-for-multifamily-transformation/",
-    "tokens": [
-      "2910",
-      "north",
-      "arthur",
-      "ashe",
-      "boulevard",
-      "richmond",
-      "former",
-      "greyhound",
-      "station",
-      "multifamily",
-      "transformation"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.bisnow.com/philadelphia/news/hotel/world-cup-booking-tax-increase-134502",
-    "tokens": [
-      "performing",
-      "want",
-      "world",
-      "hotel",
-      "demand",
-      "lagging",
-      "philly"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/hotel/braemar-hotels-resorts-largest-shareholder-seeks-new-board-citing-conflicts-of-interest-134500",
-    "tokens": [
-      "braemar",
-      "hotels",
-      "resorts",
-      "largest",
-      "shareholder",
-      "seeks",
-      "board",
-      "citing",
-      "conflicts",
-      "interest"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaVZWVHNyOW9NRllDYkJvVVVwcFkxaTNrSDZJUXJIMUpoM0pSeS00eWM2M1RtbTNfb184NHdfYWlBNmpUVG1lOHhYTUIzRjRPRVkxVmRERDIyd2tveHI3SmFxak44djZXRmRqb001RzZaa0s1WEVLRE1TZXpCRU10cGJvNFJGbngyVmFmRm5mdE5pM0tDMnd1a0xPZVUtNEZyRUNF?oc=5",
-    "tokens": [
-      "world",
-      "holdings",
-      "acquires",
-      "nexthome",
-      "create",
-      "multi",
-      "platform",
-      "model",
-      "inman"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOelhxN3JMeU5WYU1Ya050WWxSTEdCTkZBcm50ZWc5ZHhRb1ZfaUx6M2VTNUVKeVZTVzNsN2J4WEhhbWNWTF96VndjQ0pGVXMtTTEwWlhFZDRuekZkTjRrd0N3SEh3R1RWWlYzVFRsaW5VWndROUJZY3lRUThzcHozQzlNa0gyOU5xUnpwcHJGWlNGQQ?oc=5",
-    "tokens": [
-      "realtor",
-      "touts",
-      "renaissance",
-      "zillow",
-      "alliance",
-      "revenue",
-      "climbs",
-      "inman"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/mobile-home-trailer-park-rent-increase-new-owner/",
-    "tokens": [
-      "mobile",
-      "home",
-      "residents",
-      "rents",
-      "soar",
-      "under",
-      "corporate",
-      "owners"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/ai-boom-san-francisco-california-bidding-wars-suburbs/",
-    "tokens": [
-      "scarred",
-      "driven",
-      "bidding",
-      "wars",
-      "franciscans",
-      "flee",
-      "across",
-      "bridges",
-      "suburbs"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa1hjc3RNdmphWEZzTUtUWkYxYkxmV3FRY21fX2FrUUNtVmdSaElfdkR5VDRSS2c2Zzk5U0txdFl6QmxvSDZBU1FWMnBoTjBkODZFWnc3RVVidUl1cWxraW0zNlFUYmZsUl9qQlJkaU9tdHBscEFjNlpySFg1cTlyR1NRRkk0RDVDU0RJ?oc=5",
-    "tokens": [
-      "peak",
-      "mortgage",
-      "spread",
-      "296",
-      "seen",
-      "june",
-      "2023",
-      "dropping",
-      "201",
-      "lance",
-      "lambert",
-      "notes",
-      "traders",
-      "union"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/ai-agent-land-acquisition/",
-    "tokens": [
-      "agent",
-      "aims",
-      "reshape",
-      "builders",
-      "screen",
-      "sites",
-      "spot",
-      "deal",
-      "risk"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeXdUOVpBWXIxMEs5YTdDbUk0elJ4S0ZYTHpFYnlKTDNfYVFyczc5enhNd09jcVRpMFpmWEdUV041UlFxOTdjOFVEaG5qMHVEa3cwNnRodVJlZnZDVUh1b2R1YmduT202WS1Sc09Cd1RSOWx1eWMwRk1LYU5PUVZUZjFJbWE2c2J1YlZ6WE56enV0cG1aem4zclhOZw?oc=5",
-    "tokens": [
-      "remax",
-      "shrinking",
-      "business",
-      "soon",
-      "problem",
-      "inman"
-    ],
-    "shown_date": "2026-05-11"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9GSzN1UGNJVkVBbUhGelFXdEt2aHBUQ21nVTFWQ3hJQS13QTA5MjJob0FjMzlRaTBxeUdJN3V4YjlnVEk4LTQ3aEgtZ2hudmRsbXNFOWVMM1JnaGNfYVNyVEtjUU14WHJsWWdkejR5enBmYXk1UUhZ?oc=5",
-    "tokens": [
-      "opendoor",
-      "mixed",
-      "comes",
-      "confident",
-      "turnaround",
-      "pitch",
-      "inman"
-    ],
-    "shown_date": "2026-05-11"
   }
 ]
