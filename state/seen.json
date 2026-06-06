@@ -1,5 +1,287 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/fannie-freddie-ipo-trump/",
+    "tokens": [
+      "trump",
+      "fannie",
+      "freddie",
+      "table"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://rebusinessonline.com/bls-u-s-economy-adds-172000-jobs-in-may/",
+    "tokens": [
+      "economy",
+      "adds",
+      "172",
+      "000",
+      "jobs"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/hud-fha-mpr-feedback/",
+    "tokens": [
+      "seeks",
+      "feedback",
+      "minimum",
+      "property",
+      "requirements"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/zillow-tro-mred-extended/",
+    "tokens": [
+      "zillow",
+      "mred",
+      "feed",
+      "remains",
+      "safe",
+      "realtracs",
+      "showdown",
+      "nears",
+      "june",
+      "deadline"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/senate-dems-introduce-bill-to-fully-restore-cfpb-funding",
+    "tokens": [
+      "senate",
+      "dems",
+      "introduce",
+      "bill",
+      "fully",
+      "restore",
+      "cfpb",
+      "funding"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://rebusinessonline.com/berkadia-brokers-sale-of-186-unit-seniors-housing-property-near-houston/",
+    "tokens": [
+      "berkadia",
+      "brokers",
+      "sale",
+      "186",
+      "unit",
+      "seniors",
+      "housing",
+      "property",
+      "near",
+      "houston"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://rebusinessonline.com/rosewood-property-co-begins-leasing-338-unit-apartment-community-in-plano/",
+    "tokens": [
+      "rosewood",
+      "property",
+      "begins",
+      "leasing",
+      "338",
+      "unit",
+      "apartment",
+      "community",
+      "plano"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPakpsTm9KX0JCZ254YWJwSGU1bFItU1JUR0k2cl9fRWxxbE1PZ2dPdjNTSDdCT2lkRm9JMmZOelVsdjVMT3cxOVFIRW9ESmdBSThtQkdxVjBMRkZWQnhSVDYzVzFfbkx4ZVFmQ0JMNHpjYXJXM3NLajlEQWhGc0JGTWF2bXFxMUNZbkdPSDNvcnRiZU1LaVp0TUlWbW1HeEc5TGc?oc=5",
+    "tokens": [
+      "fewer",
+      "atlanta",
+      "home",
+      "listings",
+      "price",
+      "cuts",
+      "sellers",
+      "adjust",
+      "market",
+      "realities",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.realtor.com/advice/hyperlocal/san-antonios-150-million-affordable-housing-bond/",
+    "tokens": [
+      "antonio",
+      "$150",
+      "million",
+      "affordable",
+      "housing",
+      "bond",
+      "created",
+      "preserved",
+      "100",
+      "homes"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.dmagazine.com/sponsored/2026/06/oxenfree-princeton-single-family-rental-living-north-texas/",
+    "tokens": [
+      "inside",
+      "oxenfree",
+      "princeton",
+      "elevated",
+      "single",
+      "family",
+      "rental",
+      "living",
+      "north",
+      "dallas"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://rebusinessonline.com/arvato-usa-signs-269600-sf-industrial-lease-in-denton-texas/",
+    "tokens": [
+      "arvato",
+      "signs",
+      "269",
+      "600",
+      "industrial",
+      "lease",
+      "denton",
+      "texas"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/06/04/despite-headwinds-data-center-construction-hits-record/",
+    "tokens": [
+      "despite",
+      "headwinds",
+      "data",
+      "center",
+      "construction",
+      "hits",
+      "record"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/office/breaking-brookfield-lays-off-dozens-from-dc-office-134894",
+    "tokens": [
+      "brookfield",
+      "cuts",
+      "staff",
+      "looks",
+      "sell",
+      "part",
+      "yards"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-community-relations/data-center-dollars-poised-to-impact-local-elections-where-development-decisions-made-134874",
+    "tokens": [
+      "data",
+      "center",
+      "lobbying",
+      "muscle",
+      "shifts",
+      "statehouses",
+      "local",
+      "battles",
+      "boil"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://rebusinessonline.com/kohan-retail-investment-group-acquires-1-5-msf-office-tower-in-chicago/",
+    "tokens": [
+      "kohan",
+      "retail",
+      "investment",
+      "group",
+      "acquires",
+      "office",
+      "tower",
+      "chicago"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.perenews.com/eqt-sets-6bn-target-for-its-us-next-industrial-fund/",
+    "tokens": [
+      "sets",
+      "$6b",
+      "target",
+      "next",
+      "industrial",
+      "fund"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/brookfield-raises-900m-for-fund-targeting-cre-liquidity-needs-134889",
+    "tokens": [
+      "brookfield",
+      "raises",
+      "$900m",
+      "fund",
+      "targeting",
+      "liquidity",
+      "needs"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYklYcENUaVJKbXpraFZkWEg3d2RuUVZJSVhxc1E1SGFUNkhvaGxNcm9YUFliXy1LeXFxN0M2RDdQaXU0SDlCdWd1ZjZLX0JDTmpsNjBsU1lnYlNQUVhkcW1FQktSVzBHZlMtVzlvdFJlWG5yQ1NIcXVwRkg4OHZwN0YzS3RxZllQNGhYWVA0R2tSaHZ5NVlnRVE1bzhEZw?oc=5",
+    "tokens": [
+      "daily",
+      "june",
+      "2026",
+      "berkshire",
+      "hathaway",
+      "acquire",
+      "taylor",
+      "morrison",
+      "$8.5b",
+      "deal",
+      "list"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/tpg-norges-canadian-pensions-partner-2b-grocery-anchored-bet-134883",
+    "tokens": [
+      "joins",
+      "norges",
+      "canadian",
+      "pensions",
+      "$2b",
+      "grocery",
+      "anchored"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNV1ROWGU0akxFMGl2RDRHRjdJUmRFaGVEZlYzRjZncjNScjM3bFd0QTRyYVNZY0JNUFFGY0d5ZEdCT1dnd3ZnM3ZhdHBlelF2eXM0ZF8tLUhtWXM3M3BJaUFIbW9yVE5XNUNuQ2Y0QUxDWUJXUTdBMjdYcUZ2YmhSU3VYcGNnQ1dDdmRIRDVhdThBY3R0SnNMVzZhSQ?oc=5",
+    "tokens": [
+      "york",
+      "goes",
+      "pocket",
+      "listings",
+      "bill",
+      "heads",
+      "governor",
+      "desk",
+      "inman"
+    ],
+    "shown_date": "2026-06-06"
+  },
+  {
     "url": "https://www.realtor.com/news/trends/federal-reserve-lorie-logan-warns-interest-rate-hike-inflation/",
     "tokens": [
       "official",
@@ -5529,286 +5811,5 @@
       "scoreboard"
     ],
     "shown_date": "2026-05-17"
-  },
-  {
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260515a.htm",
-    "tokens": [
-      "federal",
-      "reserve",
-      "board",
-      "names",
-      "jerome",
-      "powell",
-      "chair",
-      "tempore",
-      "serve",
-      "until",
-      "kevin",
-      "warsh",
-      "sworn"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/inflation-is-rising-but-mortgage-spreads-have-kept-rates-under-7/",
-    "tokens": [
-      "inflation",
-      "rising",
-      "mortgage",
-      "spreads",
-      "kept",
-      "rates",
-      "under",
-      "7%"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/feds-barr-warns-of-tradeoffs-in-shrinking-balance-sheet",
-    "tokens": [
-      "barr",
-      "warns",
-      "tradeoffs",
-      "shrinking",
-      "balance",
-      "sheet"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/fannie-mae-raises-mortgage-rate-forecast-through-2027",
-    "tokens": [
-      "fannie",
-      "raises",
-      "mortgage",
-      "rate",
-      "forecast",
-      "through",
-      "2027"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/05/single-family-permits-continue-to-weaken-in-early-2026/",
-    "tokens": [
-      "single",
-      "family",
-      "permits",
-      "continue",
-      "weaken",
-      "early",
-      "2026"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.bisnow.com/dallas-ft-worth/news/multifamily/absorption-has-been-slow-for-dfws-multifamily-oversupply-but-experts-are-optimistic-for-the-future-134587",
-    "tokens": [
-      "absorption",
-      "slow",
-      "multifamily",
-      "oversupply",
-      "experts",
-      "optimistic",
-      "future"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/05/15/fastest-growing-us-zip-codes-houston-area/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=fastest-growing-us-zip-codes-houston-area",
-    "tokens": [
-      "fastest",
-      "growing",
-      "codes",
-      "houston",
-      "area"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZUo1SFJ6eS1nUGJudXZIQkF4blZhYjVDb2hBVVlBWmJYczladGFlcmlCdEJRa250R0VDeHU1TnoyWEZQSDB2WG9NQm5CVnVmVi03VmtRZC1WNU5KdFNiZjVFSzVNaHh2VkE0b1NiZEF3aGdlQW0tMGtKQUhhMF9vTUprRjh4aXA1cHpLM2EtRjg1Q1g0YjgybUQzYTh1dXltRUtsNEc3enMxaTlIcGVpNE9MV3RTbVNBSWtMaHdlX1JiNmhxMks3YVdhNHZNSDNJWkhDWDBqZVZUYVNL?oc=5",
-    "tokens": [
-      "atlanta",
-      "housing",
-      "market",
-      "shifts",
-      "inventory",
-      "rises",
-      "alive"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYXM1Q01odnBIXzk5OXBUNk9WeGh6cUt4MTVEaXo2THZfaXdjanFTN2NoYWhzZzgyVm8weEZXWUVvbzB5SXk4MjVGOTRYaW1qUUR2MENzRl9zcEpEdExJU2FJTUs3SkJWSXZ4SHNLVFFSSjRtRW1hLWNoYUVUR1g3TmZBOHZYRTYyN0IwTUhEUWNRTl9S?oc=5",
-    "tokens": [
-      "nashville",
-      "housing",
-      "market",
-      "reaching",
-      "balance",
-      "yahoo"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://communityimpact.com/houston/heights-river-oaks-montrose/real-estate/2026/05/12/home-edition-demand-for-single-family-rental-homes-climb-as-homeownership-slows/",
-    "tokens": [
-      "home",
-      "edition",
-      "demand",
-      "single",
-      "family",
-      "rental",
-      "homes",
-      "climb",
-      "homeownership",
-      "slows",
-      "8211",
-      "community",
-      "impact"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/build-to-rent-house-road-to-housing-bill/820391/",
-    "tokens": [
-      "build",
-      "rent",
-      "sale",
-      "mandate",
-      "house",
-      "road",
-      "housing",
-      "bill"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/05/15/house-axes-build-to-rent-provision-from-amended-senate-bill/",
-    "tokens": [
-      "house",
-      "knocks",
-      "build",
-      "rent",
-      "provision",
-      "amended",
-      "senate",
-      "bill"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.bisnow.com/dallas-ft-worth/news/office/vanderbilt-office-hillwood-and-tripost-capital-jv-buys-14m-sf-office-campus-in-dfw-134602",
-    "tokens": [
-      "vanderbilt",
-      "office",
-      "hillwood",
-      "tripost",
-      "capital",
-      "buys",
-      "campus"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/data-center-power/cim-group-launches-permanent-power-company-focused-on-rural-qozs-134599",
-    "tokens": [
-      "group",
-      "launches",
-      "platform",
-      "invest",
-      "rural",
-      "power",
-      "projects"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.bisnow.com/dallas-ft-worth/news/construction-development/celestica-to-build-876m-electronics-manufacturing-campus-for-data-centers-in-alliancetexas-134589",
-    "tokens": [
-      "celestica",
-      "build",
-      "$876m",
-      "electronics",
-      "manufacturing",
-      "campus",
-      "data",
-      "centers",
-      "alliancetexas"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://rebusinessonline.com/outrigger-industrial-sells-1-msf-building-at-generation-park-in-northeast-houston/",
-    "tokens": [
-      "outrigger",
-      "industrial",
-      "sells",
-      "building",
-      "generation",
-      "park",
-      "northeast",
-      "houston"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/new-jersey-bill-vacant-office-to-housing-conversion/",
-    "tokens": [
-      "jersey",
-      "moves",
-      "turn",
-      "dying",
-      "office",
-      "parks",
-      "housing",
-      "bypassing",
-      "local",
-      "tape"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.perenews.com/connecticut-pension-anchors-artemiss-fifth-flagship-fund/",
-    "tokens": [
-      "connecticut",
-      "pension",
-      "anchors",
-      "artemis",
-      "fifth",
-      "flagship",
-      "fund"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.perenews.com/blueprint-digital-realtys-private-push-brookfields-dealmaking-boom-nuveens-korea-debut-and-more/",
-    "tokens": [
-      "blueprint",
-      "digital",
-      "realty",
-      "private",
-      "push",
-      "brookfield",
-      "dealmaking",
-      "boom",
-      "nuveen",
-      "korea",
-      "debut"
-    ],
-    "shown_date": "2026-05-16"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/bgo-gives-up-on-nontraded-industrial-reit-never-drew-buyers-134593",
-    "tokens": [
-      "gives",
-      "nontraded",
-      "industrial",
-      "reit",
-      "never",
-      "drew",
-      "buyers"
-    ],
-    "shown_date": "2026-05-16"
   }
 ]
