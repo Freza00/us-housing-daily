@@ -1,5 +1,284 @@
 [
   {
+    "url": "https://www.redfin.com/news/rising-rates-stall-housing-market-momentum/",
+    "tokens": [
+      "rising",
+      "rates",
+      "stall",
+      "housing",
+      "market",
+      "momentum",
+      "closed",
+      "home",
+      "sales",
+      "highest",
+      "level",
+      "since",
+      "2022"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/06/u-s-labor-market-remains-resilient-in-may/",
+    "tokens": [
+      "labor",
+      "market",
+      "remains",
+      "resilient"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/capital-gains-tax-exclusion-malliotakis-nest-egg-protection-act/",
+    "tokens": [
+      "boomers",
+      "selling",
+      "longtime",
+      "homes",
+      "holiday",
+      "profits",
+      "under",
+      "bill"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/apartment-supply-rent-growth/",
+    "tokens": [
+      "rent",
+      "trends",
+      "sideways",
+      "multifamily",
+      "supply",
+      "stays",
+      "strong"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/06/08/trump-claims-fannie-freddie-are-worth-combined-1t/",
+    "tokens": [
+      "trump",
+      "claims",
+      "fannie",
+      "freddie",
+      "worth",
+      "combined",
+      "$1"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://houstonagentmagazine.com/2026/06/08/har-weekly-activity-snapshot-week-22-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=har-weekly-activity-snapshot-week-22-2026",
+    "tokens": [
+      "housing",
+      "market",
+      "activity",
+      "dampens",
+      "houston"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/miami-dade-county-florida-eminent-domain-fuel-depot-fisher-island/",
+    "tokens": [
+      "miami",
+      "dade",
+      "invokes",
+      "eminent",
+      "domain",
+      "seize",
+      "land",
+      "ultraexclusive",
+      "fisher",
+      "island"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/june-student-housing-deals-multifamily/822291/",
+    "tokens": [
+      "june",
+      "student",
+      "housing",
+      "deals",
+      "near",
+      "texas",
+      "university",
+      "florida"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/06/08/lessons-from-floridas-property-tax-plan/",
+    "tokens": [
+      "housing",
+      "notes",
+      "thoughts",
+      "eliminating",
+      "florida",
+      "property",
+      "taxes"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://pretium.com/first-walker-dunlop-affordable-bridge-capital-transaction-with-pretium-closes/",
+    "tokens": [
+      "first",
+      "walker",
+      "038",
+      "dunlop",
+      "affordable",
+      "bridge",
+      "capital",
+      "transaction",
+      "pretium",
+      "closes"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-negotiates-75000-sf-office-lease-at-apex-at-legacy-in-plano/",
+    "tokens": [
+      "negotiates",
+      "000",
+      "office",
+      "lease",
+      "apex",
+      "legacy",
+      "plano"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/multifamily/oceanfirst-flushing-financial-bank-rent-stabilized-multifamily-new-york-city-134909",
+    "tokens": [
+      "oceanfirst",
+      "purges",
+      "$1.4b",
+      "rent",
+      "stabilized",
+      "multifamily",
+      "loans",
+      "following",
+      "flushing",
+      "financial",
+      "merger"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.bisnow.com/charlotte/news/data-center-community-relations/charlotte-approves-150-day-pause-data-center-development-134903",
+    "tokens": [
+      "charlotte",
+      "approves",
+      "150",
+      "pause",
+      "data",
+      "center",
+      "projects"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/hotel/a-decade-after-opening-spanish-operator-melia-buys-nomad-hotel-for-203m-134915",
+    "tokens": [
+      "spanish",
+      "operator",
+      "meli",
+      "spends",
+      "$203m",
+      "nomad",
+      "hotel"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/walker-dunlop-pretium-close-on-76m-bridge-loan-for-chelsea-apartments/",
+    "tokens": [
+      "walker",
+      "038",
+      "dunlop",
+      "pretium",
+      "close",
+      "$76m",
+      "bridge",
+      "loan",
+      "chelsea",
+      "apartments"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/equity-residential-avalonbay-set-c-suite-team/",
+    "tokens": [
+      "equity",
+      "residential",
+      "avalonbay",
+      "name",
+      "suite",
+      "multifamily",
+      "giant"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/06/08/tpg-leads-acquisition-of-retail-landlord-echo-realty/",
+    "tokens": [
+      "leads",
+      "investor",
+      "acquisition",
+      "retail",
+      "landlord",
+      "echo",
+      "realty"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://rebusinessonline.com/cinnaire-closes-307m-lihtc-equity-fund-for-2259-affordable-housing-units-across-10-states/",
+    "tokens": [
+      "cinnaire",
+      "closes",
+      "$307m",
+      "lihtc",
+      "equity",
+      "fund",
+      "259",
+      "affordable",
+      "housing",
+      "units",
+      "across",
+      "states"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/06/mortgage-applications-retreat-in-may-with-arms-gaining-share/",
+    "tokens": [
+      "mortgage",
+      "applications",
+      "retreat",
+      "arms",
+      "gaining",
+      "share"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/americans-pull-47-billion-in-equity-from-their-homes-in-1q",
+    "tokens": [
+      "americans",
+      "pull",
+      "$47",
+      "billion",
+      "equity",
+      "homes"
+    ],
+    "shown_date": "2026-06-09"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/rate-cuts-further-dimmed-with-positive-employment-report",
     "tokens": [
       "rate",
@@ -5494,292 +5773,5 @@
       "exemption"
     ],
     "shown_date": "2026-05-20"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/hud-scott-turner-defends-proposed-budget-cuts-amid-senate-scrutiny/820528/",
-    "tokens": [
-      "chief",
-      "defends",
-      "proposed",
-      "budget",
-      "cuts",
-      "senate",
-      "scrutiny"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/mba-adjust-forecasts-for-a-2027-federal-rate-hike",
-    "tokens": [
-      "adjust",
-      "forecasts",
-      "2027",
-      "federal",
-      "rate",
-      "hike"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/without-gses-bond-buying-mortgage-rates-could-be-higher",
-    "tokens": [
-      "without",
-      "gses",
-      "bond",
-      "buying",
-      "mortgage",
-      "rates",
-      "higher"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/ginnie-mae-tpp-show-me/",
-    "tokens": [
-      "ginnie",
-      "joseph",
-      "gormley",
-      "sounds",
-      "alarm",
-      "risk",
-      "layered",
-      "portfolios"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.redfin.com/news/housing-market-update-pending-home-sales-jump/",
-    "tokens": [
-      "pending",
-      "home",
-      "sales",
-      "jump",
-      "10%",
-      "year",
-      "highest",
-      "level",
-      "since",
-      "2022"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPa0NDZ09UYlIxVXhsQnN2dXBlV3VhNk5UT1o3OVZwVlVMTDMzTVhLNW5GQXd6TjVfMTE1UXVmVFU1T0o3R21ONnhTcUY4UHh2R2lqRlUxaE9qYVpwUURudG9DdjI3Q3ZnNENsYUVaek1zc0lKYjUtNGxlWUZPVjRqakNOV3phRV82alN4TmZkdXA4MVFlT01EME9lWjVGd0VwcG1v?oc=5",
-    "tokens": [
-      "360",
-      "apartments",
-      "dubbed",
-      "affordable",
-      "heading",
-      "southpark",
-      "meadows",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTlh3Ul94X3BGVE1nSkpTb0psQmFITGVld2lnejhwNWlLSFV5R2JnWXp0bGtxeUVqLVE1QXRIRExDQTQ0NXY3N0RsM1NSYkFRSEZXLTdZTkg2dm5pYjFmOFhwNWF3SG1UZFFBbmltWnpQTXQ0S1M3cENGOGZhX1E4M2NPUExOZmp0MktUbkdHa1BEUFhWZXk4?oc=5",
-    "tokens": [
-      "allen",
-      "morris",
-      "lands",
-      "loan",
-      "$250m",
-      "southwest",
-      "florida",
-      "project",
-      "multifamily",
-      "housing"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNk91aDBKZ1BGdE5xak5lY2dmRzhJRmxyTmcxLTV3MTNjZzZTNnVSMXBUcE5xSDkwVHlxU19MMmY2bVBNSU9ESl9sMjY4NW9MTjhtU0NkTWRSVURQWmczM0Y5am55SFZ2MUZEeHJBZnZBNVdiU3VqR3dqR3ZEQm9sMDRCZjZVaTc2TWg3WklIclM0ZDJkMFhTWjEzcFlZRVdMUXBfQ3VqTXE0QkVrQ3c?oc=5",
-    "tokens": [
-      "phoenix",
-      "housing",
-      "market",
-      "sees",
-      "closings",
-      "contracts",
-      "down",
-      "mixed",
-      "signals",
-      "media"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUWZoQ2RWaWl0TmRDdkE1Y2FTbUlibmR0N0doUGh2M2NiR2VMTnRZb29NZnM4ZkZjM3FzVXZMUVliSlpKUE00Uk9Dd05fajc4emdjYlNWSU9TMVBZV0E1ZDJwZHFaMHBlVmViUlNQX3BMOXp0TDg1b2FVd3VNUDRsMU9ERTBENXc?oc=5",
-    "tokens": [
-      "miami",
-      "single",
-      "family",
-      "home",
-      "prices",
-      "outpace",
-      "condo",
-      "lance",
-      "lambert",
-      "notes",
-      "traders",
-      "union"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/road-to-housing-bill-changes-house-senate/820520/",
-    "tokens": [
-      "gone",
-      "revised",
-      "road",
-      "housing",
-      "bill",
-      "here",
-      "else",
-      "changed"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://rebusinessonline.com/cushman-wakefield-brokers-26-4m-sale-of-build-to-rent-community-in-matteson-illinois/",
-    "tokens": [
-      "cushman",
-      "038",
-      "wakefield",
-      "brokers",
-      "$26.4m",
-      "sale",
-      "build",
-      "rent",
-      "community",
-      "matteson",
-      "illinois"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/marcus-millichap-completes-20-townhome-portfolio-deal-in-wisconsin/",
-    "tokens": [
-      "marcus",
-      "038",
-      "millichap",
-      "completes",
-      "townhome",
-      "portfolio",
-      "deal",
-      "wisconsin"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/u-s-industrial-market-outlook-april-2026/",
-    "tokens": [
-      "industrial",
-      "market",
-      "outlook",
-      "april",
-      "2026"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/multifamily/camden-others-reach-218m-settlement-in-realpage-antitrust-case-134622",
-    "tokens": [
-      "landlords",
-      "agree",
-      "$218m",
-      "settle",
-      "price",
-      "fixing",
-      "claims",
-      "realpage",
-      "antitrust",
-      "case"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/data-center/nextera-dominion-to-merge-to-create-ai-feeding-powerhouse-134621",
-    "tokens": [
-      "nextera",
-      "dominion",
-      "merge",
-      "demand",
-      "data",
-      "center",
-      "power",
-      "spikes"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/harbor-associates-farallon-acquire-yorba-linda-industrial-campus-off-market/",
-    "tokens": [
-      "harbor",
-      "associates",
-      "farallon",
-      "acquire",
-      "yorba",
-      "linda",
-      "industrial",
-      "campus",
-      "market"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://rebusinessonline.com/kcc-underway-on-266788-sf-industrial-build-out-in-hutchins-texas/",
-    "tokens": [
-      "underway",
-      "266",
-      "788",
-      "industrial",
-      "build",
-      "hutchins",
-      "texas"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/05/18/real-estate-private-credit-fundraising-on-the-rise/",
-    "tokens": [
-      "wall",
-      "street",
-      "crowds",
-      "niche",
-      "corner",
-      "private",
-      "credit"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/naftali-and-access-real-estate-close-on-374m-refi-for-phase-i-of-williamsburg-wharf/",
-    "tokens": [
-      "naftali",
-      "access",
-      "close",
-      "$374m",
-      "refi",
-      "phase",
-      "williamsburg",
-      "wharf"
-    ],
-    "shown_date": "2026-05-19"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/tiny-mortgage-reit-set-for-massive-pivot-with-98-asset-industrial-portfolio-134615",
-    "tokens": [
-      "tiny",
-      "mortgage",
-      "reit",
-      "massive",
-      "pivot",
-      "asset",
-      "portfolio"
-    ],
-    "shown_date": "2026-05-19"
   }
 ]
