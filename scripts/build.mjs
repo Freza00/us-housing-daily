@@ -900,9 +900,12 @@ function buildCandidatesBlock(candidates) {
 // from origin within ~100s). 3 attempts, backoff 1s/5s/30s. Returns the
 // fully assembled assistant text.
 async function fetchLLMWithRetry(endpoint, body, apiKey, label) {
-  const RETRY_DELAYS = [1000, 5000, 30000];
+  // 上游中转（ne.aineapi.com）抖动多为秒级自愈的 5xx（do_request_failed / 502 / 503）；
+  // 给足调用内重试预算，多数瞬时故障在此自愈，不用拖到 1h 的 workflow 级重试。
+  const RETRY_DELAYS = [1000, 4000, 12000, 40000];   // 4 次重试，累计退避 ~57s
+  const MAX_ATTEMPTS = RETRY_DELAYS.length + 1;        // 共 5 次尝试
   const isRetryable = (s) => s === 408 || s === 429 || (s >= 500 && s < 600);
-  for (let attempt = 0; attempt < 3; attempt++) {
+  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
     let r;
     try {
       r = await fetch(endpoint, {
@@ -911,19 +914,19 @@ async function fetchLLMWithRetry(endpoint, body, apiKey, label) {
         body: JSON.stringify({ ...body, stream: true }),
       });
     } catch (e) {
-      if (attempt < 2) {
+      if (attempt < MAX_ATTEMPTS - 1) {
         const wait = RETRY_DELAYS[attempt];
-        log(`🔁 ${label} network error (${e.message}), retrying in ${wait}ms (${attempt + 1}/3)`);
+        log(`🔁 ${label} network error (${e.message}), retrying in ${wait}ms (${attempt + 1}/${MAX_ATTEMPTS})`);
         await new Promise(res => setTimeout(res, wait));
         continue;
       }
       throw e;
     }
     if (!r.ok) {
-      if (isRetryable(r.status) && attempt < 2) {
+      if (isRetryable(r.status) && attempt < MAX_ATTEMPTS - 1) {
         const errPeek = (await r.text()).slice(0, 200);
         const wait = RETRY_DELAYS[attempt];
-        log(`🔁 ${label} API ${r.status} (${errPeek}), retrying in ${wait}ms (${attempt + 1}/3)`);
+        log(`🔁 ${label} API ${r.status} (${errPeek}), retrying in ${wait}ms (${attempt + 1}/${MAX_ATTEMPTS})`);
         await new Promise(res => setTimeout(res, wait));
         continue;
       }
@@ -956,9 +959,9 @@ async function fetchLLMWithRetry(endpoint, body, apiKey, label) {
       }
       return out;
     } catch (e) {
-      if (attempt < 2) {
+      if (attempt < MAX_ATTEMPTS - 1) {
         const wait = RETRY_DELAYS[attempt];
-        log(`🔁 ${label} stream interrupted (${e.message}), retrying in ${wait}ms (${attempt + 1}/3)`);
+        log(`🔁 ${label} stream interrupted (${e.message}), retrying in ${wait}ms (${attempt + 1}/${MAX_ATTEMPTS})`);
         await new Promise(res => setTimeout(res, wait));
         continue;
       }
@@ -1445,7 +1448,15 @@ ${block}
 直接输出 JSON 对象：`;
 
   log(`🔍 dedupe prompt size: ~${Math.round(userPrompt.length / 4)} tokens, items=${items.length}`);
-  const text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 2000 }, "dedupe");
+  // dedupe 非关键路径：上游挂到此步时与其 FATAL 整个 build，不如跳过去重直接发
+  // （宁可偶有重复，也别因为去重一步丢掉整天的报）。
+  let text;
+  try {
+    text = await callLLM(systemPrompt, userPrompt, { ...opts, maxTokens: 2000 }, "dedupe");
+  } catch (e) {
+    log(`⚠️  dedupe LLM call failed, skipping LLM dedupe (publishing un-deduped): ${e.message}`);
+    return items;
+  }
   let parsed;
   try { parsed = safeParseJSON(text, "dedupe", false); } catch (e) {
     log(`⚠️  dedupe parse failed, skipping LLM dedupe: ${e.message}`);
