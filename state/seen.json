@@ -1,5 +1,284 @@
 [
   {
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxONklJXzdIQVpxLXRJUjg5cW0yWUR0c3BHZGJ3bWtCc21Hc1dZdjktY294Q3ZLR1A2SDNlVEhubGRpUElob2RvRi1ENVVGRS1HdW9BSXJXanZLcl95RDZ4VG1hWkRjbFpBeTdOeGp2TkZVRi1BbXFMUldvU29Ob2RtRW00VVhadXBXdTNCT2F2OXZnVzA?oc=5",
+    "tokens": [
+      "housing",
+      "market",
+      "inventory",
+      "shifting",
+      "across",
+      "every",
+      "state",
+      "fast",
+      "company"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPaUxwN19KNS10d0YzQjJHV2NHV1pVS1pWdV9MdWFXYnFMZ1drLWt4VDlsRXZFbXYzTXNzZ182ajFpTzVnYzVoSXRzN3FPdFA3RkVSTF9EdU1iWjEzMkZfcGRNUHllRWtTajI3R2NTTHEtQTNqVXNHZ3FVZC1FODVNejhjNlBFZ0NjMC1FSVFabGExLXIxNnFxQzBzQXZVYmZwUVc3UzFlUQ?oc=5",
+    "tokens": [
+      "full",
+      "results",
+      "turbohome",
+      "resiclub",
+      "housing",
+      "sentiment",
+      "survey"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/06/10/hud-secretary-scott-turner-weve-been-intentional-about-tearing-down-the-regulatory-environment.html",
+    "tokens": [
+      "secretary",
+      "scott",
+      "turner",
+      "intentional",
+      "tearing",
+      "down",
+      "regulatory",
+      "environment"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/hud-manufactured-housing-definition-chassis-rule-change/",
+    "tokens": [
+      "trump",
+      "administration",
+      "moves",
+      "make",
+      "prefab",
+      "homes",
+      "easier",
+      "build",
+      "factories"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/google-idx-licensing-questions/",
+    "tokens": [
+      "google",
+      "listing",
+      "raise",
+      "questions",
+      "licensing"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.redfin.com/news/spacex-ipo-housing-wealth/",
+    "tokens": [
+      "spacex",
+      "employees",
+      "antonio",
+      "homes",
+      "windfall"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOR2tHRE9OS3JzY2EwYV9oZ2VsWFRGaEZYbUF5SEsxZmxTaFNIT0swUzZMajVJalJpV1hvVk9JMkhZZHRodG03b29QT1pnVEt2UEJyNUJzbXpFWUhYbnRtd202bzUtRE1vTkh3ek02a2NUcjFzc0x2VnhnUy05eTRhTG9TMVdMY1praFJ5ZW05NXl4N3c?oc=5",
+    "tokens": [
+      "exclusive",
+      "quarterra",
+      "sells",
+      "upscale",
+      "asset",
+      "phoenix",
+      "area",
+      "multifamily",
+      "housing"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/creation-completes-137000-sf-industrial-project-in-haltom-city-texas/",
+    "tokens": [
+      "creation",
+      "completes",
+      "137",
+      "000",
+      "industrial",
+      "project",
+      "haltom",
+      "city",
+      "texas"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/cushman-wakefield-arranges-83-8m-in-acquisition-financing-for-11-building-industrial-portfolio-in-metro-atlanta/",
+    "tokens": [
+      "cushman",
+      "038",
+      "wakefield",
+      "arranges",
+      "$83.8m",
+      "acquisition",
+      "financing",
+      "building",
+      "industrial",
+      "portfolio",
+      "metro",
+      "atlanta"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/mmcc-arranges-85m-in-construction-financing-for-beverly-hills-mixed-use-project/",
+    "tokens": [
+      "mmcc",
+      "arranges",
+      "$85m",
+      "construction",
+      "financing",
+      "beverly",
+      "hills",
+      "mixed",
+      "project"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/winchester-partners-completes-283-unit-mixed-income-apartment-project-in-new-haven-connecticut/",
+    "tokens": [
+      "winchester",
+      "partners",
+      "completes",
+      "283",
+      "unit",
+      "mixed",
+      "income",
+      "apartment",
+      "project",
+      "haven",
+      "connecticut"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/bcip-acquires-32-6-acres-on-floridas-space-coast-plans-grocery-anchored-mixed-use-development/",
+    "tokens": [
+      "bcip",
+      "acquires",
+      "acres",
+      "florida",
+      "space",
+      "coast",
+      "grocery",
+      "anchored",
+      "mixed",
+      "development"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYVJUUEtyNzB4NV9ONFVFbnNhWEhuN01SLTluLXRSVUVJNjNiWTBMMk1vNTVLU1p1ajhFR3UtdEJib3RfRUVKc1dSUkEtd3A5YWtaRHFjRWJFMXY0em5YV1lQS2ZYZk1iTmdaSFowckJYVXNTNG41ZWJjNmRKUlZMTE1KSTQ1cDlrWXU3YmFLRDlscmJFMVE?oc=5",
+    "tokens": [
+      "scion",
+      "acquire",
+      "student",
+      "quarters",
+      "$1.5b",
+      "operating",
+      "platform",
+      "multifamily",
+      "housing"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/california-financier-arrested-for-100-million-bank-fraud",
+    "tokens": [
+      "california",
+      "financier",
+      "arrested",
+      "$100",
+      "million",
+      "bank",
+      "fraud"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/transwestern-enters-philadelphia-market-with-acquisition-of-ssh-real-estate/",
+    "tokens": [
+      "transwestern",
+      "enters",
+      "philadelphia",
+      "market",
+      "acquisition"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/securitized-market-stepping-up-preparations-for-new-scores",
+    "tokens": [
+      "securitized",
+      "market",
+      "stepping",
+      "preparations",
+      "scores"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/frank-cassidy-fha-director-interview-june-2026/",
+    "tokens": [
+      "exclusive",
+      "outgoing",
+      "director",
+      "slashing",
+      "tape",
+      "solving",
+      "housing",
+      "crisis",
+      "subsidies"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/compass-private-listings-exclusive-washington-law/",
+    "tokens": [
+      "compass",
+      "washington",
+      "state",
+      "private",
+      "listings",
+      "doesn",
+      "forbid",
+      "exclusives"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/frank-cassidy-hud-fha-multifamily/822835/",
+    "tokens": [
+      "frank",
+      "cassidy",
+      "multifamily",
+      "friendly"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/louisville-housing-market-inventory-prices-may-2026/",
+    "tokens": [
+      "louisville",
+      "sees",
+      "33%",
+      "surge",
+      "homes",
+      "market",
+      "sellers",
+      "flood",
+      "back"
+    ],
+    "shown_date": "2026-06-15"
+  },
+  {
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZkV6UHBqSlJOY3pBLXAxdWp0N2VvVTNmSkFXanRXaWIyZnpUd1EwMTZRZUhqZWdFQzR3ZWdhQVFSN0htamMxMVNpc2Z1dmdRRmhkZ2dpYUUxRmNTQkJPdlpjWmxjYVdVRWJzYkRmMU5QME4xeVgxU0Y2TTRRQ2ZQMElNUkJ4X1U?oc=5",
     "tokens": [
       "median",
@@ -5540,272 +5819,5 @@
       "tampa"
     ],
     "shown_date": "2026-05-26"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/05/21/housing-starts-april/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=housing-starts-april",
-    "tokens": [
-      "housing",
-      "starts",
-      "expectations",
-      "april"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/kevin-warsh-sworn-in-as-federal-reserve-chair",
-    "tokens": [
-      "kevin",
-      "warsh",
-      "sworn",
-      "federal",
-      "reserve",
-      "chair"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/bond-traders-bet-fed-under-warsh-will-hike-rates-this-year",
-    "tokens": [
-      "bond",
-      "traders",
-      "under",
-      "warsh",
-      "hike",
-      "rates",
-      "year"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/housing-demand-stays-firm-pushing-inventory-close-to-negative-yoy/",
-    "tokens": [
-      "housing",
-      "demand",
-      "stays",
-      "firm",
-      "pushing",
-      "inventory",
-      "close",
-      "negative"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/05/19/average-30-year-fixed-mortgage-rate-rises-to-6-point-75-percent.html",
-    "tokens": [
-      "average",
-      "year",
-      "fixed",
-      "mortgage",
-      "rate",
-      "rises",
-      "6.75%"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPY1dYYV9hdlZ0SFgwbjJCQ2pRRWdSS3lBOUowd3lZdW5nYkF4MnFHckhfYUNLWXV0WG1YSFhWRG9ITEtOVjhCOHNsQi1nQzZFN1paLUU2UlNFRUZ1ZGF4X0RJaXJnQXBhVzRYSExKZFg4U2RkS3puN2c4VDMtWTV2TGhMQTFSVXFOVkJNOXNVUmRxc1VLZUlYTlhIaVFqUGdUZHZHcGN5UDNpYkZxb1loNQ?oc=5",
-    "tokens": [
-      "nashville",
-      "housing",
-      "market",
-      "poised",
-      "summer",
-      "rebound",
-      "opinion",
-      "tennessean"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQekNyWVg3NFo2QlpCZ0pRMUwzd0t2UldnbDJ6bjdBc0VRQS1jbC1oOFhDRFl5ZDduRTFSdU1TOEN0ZjU2cEVXbHM2YkVCZ3lNbkZJX24xRFpNTnctYTNKN1VCYl84dVZQcUpCNjZCOW5WTzg3OW1lTm1Ldmd1ZW9sbUV0V0FzYmZqa05BYlh0NWNxcXJLTTNEeUFrT0U5czFpeG05MEFR?oc=5",
-    "tokens": [
-      "austin",
-      "firm",
-      "acquires",
-      "large",
-      "downtown",
-      "office",
-      "building",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQa2E0QXptVmZVQU1tQ3RqRF9SN0lmX0EzZmRQbEhUOFhEYWV3UUZzWEsxNmZ0UWxkTDNYQU9Gc3VUdzB6dXRraTJ4ejJnaHJSaHZYRkl3VVVlSzBwQ3R5UVVvZmdXZ1VIN2RvNkZfdnhkSVZxX01JOEJQZ1ZjRGQyVkZWYWpUU0J6WG9nRzhjMDlPTGM?oc=5",
-    "tokens": [
-      "milwaukee",
-      "office",
-      "multifamily",
-      "project",
-      "lands",
-      "$114m",
-      "loan",
-      "housing"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.bisnow.com/san-francisco/news/investment/sf-developer-emerges-buyer-historic-federal-reserve-building-134656",
-    "tokens": [
-      "presidio",
-      "lined",
-      "debt",
-      "francisco",
-      "building"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/multifamily/dei-pushback-impact-investment-outperforms-134677",
-    "tokens": [
-      "impact",
-      "funds",
-      "lose",
-      "steam",
-      "investors",
-      "study",
-      "buildings",
-      "perform",
-      "better"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/all-western-houseamerica-expansion/",
-    "tokens": [
-      "houseamerica",
-      "financial",
-      "joins",
-      "western",
-      "mortgage"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/zillow-injunction-mred-idx-vow/",
-    "tokens": [
-      "everything",
-      "need",
-      "know",
-      "zillow",
-      "listing",
-      "mred",
-      "compass"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/california-mba-backs-100-million-southern-california-rebuild-fund/",
-    "tokens": [
-      "california",
-      "backs",
-      "$100m",
-      "fund",
-      "governor",
-      "budget",
-      "proposal",
-      "wildfire",
-      "rebuilding"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNME14YWNxYVdVZ1hfSFBPMVEzZ003ZzF1bFF3QXhjTFppbExTZW9TRS1BMy1JbG9nZE9zZUl4S2VqMjlaRlJZRHJCUVJ4SUdlUGtFYVJwM1pzTGNkcDQ5R0tqdndfRjY2aWJsUDljclpfc3Zsb29VQXFJNTloU1VBc2VQVFZTR0daR1FJUGx2Z3BoeG9NdWNmaUF1NTBVaHQ5S2V6djZkb2NxaGhZdWN2c2g3X0hzZw?oc=5",
-    "tokens": [
-      "northeast",
-      "midwest",
-      "housing",
-      "markets",
-      "tightest",
-      "heading",
-      "summer",
-      "2026",
-      "fast",
-      "company"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNUm4yRzdoNC1IZE5NNk5wbFllOVJsWWQ3TlZ3bUZOLTFuMG85MGJPSVQ5ZVdaVy1SN3NYR2ZxdWstOHd1LTVZTTVadzNJRXpFM3ZnWmsxcWVTM3FLeG96VDBkRG95Qk11R196S0syMjdIeElQRUVxM2h4WmhISThIQzA3RTB1bEk?oc=5",
-    "tokens": [
-      "year",
-      "mortgage",
-      "rate",
-      "drops",
-      "percent",
-      "lance",
-      "lambert",
-      "notes",
-      "traders",
-      "union"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.realtor.com/research/video-economic-and-housing-market-update-may-22-2026/",
-    "tokens": [
-      "video",
-      "2026",
-      "economic",
-      "housing",
-      "market",
-      "update"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/05/19/nar-pending-home-sales-april/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=nar-pending-home-sales-april",
-    "tokens": [
-      "pending",
-      "home",
-      "sales",
-      "gain",
-      "ground",
-      "april"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.realtor.com/research/2026-affordability-report-nar/",
-    "tokens": [
-      "housing",
-      "mismatch",
-      "look",
-      "alignment",
-      "sale",
-      "listings",
-      "incomes"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://www.realtor.com/advice/finance/mortgage-payment-calculator-afford-may-21/",
-    "tokens": [
-      "mortgage",
-      "calculator",
-      "here",
-      "need",
-      "$415k",
-      "home",
-      "6.51%",
-      "rate"
-    ],
-    "shown_date": "2026-05-25"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/05/21/ellimans-weak-q1-casts-doubt-on-its-turnaround/",
-    "tokens": [
-      "elliman",
-      "weak",
-      "first",
-      "quarter",
-      "performance",
-      "casts",
-      "doubt",
-      "turnaround"
-    ],
-    "shown_date": "2026-05-25"
   }
 ]
