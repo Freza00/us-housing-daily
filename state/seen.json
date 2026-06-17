@@ -1,5 +1,281 @@
 [
   {
+    "url": "https://www.cnbc.com/2026/06/16/housing-bill-limiting-investors-congress.html",
+    "tokens": [
+      "bill",
+      "limiting",
+      "investors",
+      "buying",
+      "homes",
+      "speed",
+      "through",
+      "congress"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/2026-homebuilder-outlook-shifts-to-deteriorating-fitch",
+    "tokens": [
+      "2026",
+      "homebuilder",
+      "outlook",
+      "shifts",
+      "deteriorating",
+      "fitch"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-starts-may-new-construction/823065/",
+    "tokens": [
+      "multifamily",
+      "starts",
+      "plummet"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.realtor.com/research/may-2026-rent/",
+    "tokens": [
+      "2026",
+      "rental",
+      "loved",
+      "locals",
+      "discovered",
+      "outsiders",
+      "rents",
+      "falling"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/fhfa-requests-power-to-pursue-fraud-more-directly",
+    "tokens": [
+      "fhfa",
+      "requests",
+      "power",
+      "pursue",
+      "fraud",
+      "directly"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/las-vegas-nevada-loyal-tenants-rent-report-may-2026/",
+    "tokens": [
+      "vegas",
+      "renters",
+      "want",
+      "leave",
+      "reluctant"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://rebusinessonline.com/muss-development-amesbury-acquire-270-unit-apartment-community-in-lake-charles-louisiana/",
+    "tokens": [
+      "muss",
+      "development",
+      "amesbury",
+      "acquire",
+      "270",
+      "unit",
+      "apartment",
+      "community",
+      "lake",
+      "charles",
+      "louisiana"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWnJjaUc2Vm5vRm9BTTk4RGdnb0VjUXVaMEdyQVdLeUs0aVFZakZsakVMUzhpTFhOZ2VUR25iT3RCQVJjQ1YtLTBrbC1EUW1ZdFRSWHAyR0MycUkybUt3czRQNXNzRF9VZE9HVjQwVGEzM2l0d0xCeEJYaGtETEpwVlN2dEQ0c0ZpRFhCRFdWUG1IbkFScFN4M05WNkZqcUhETmxR?oc=5",
+    "tokens": [
+      "long",
+      "planned",
+      "housing",
+      "project",
+      "near",
+      "jarrell",
+      "moves",
+      "forward",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.redfin.com/news/most-expensive-home-sales-may-2026/",
+    "tokens": [
+      "florida",
+      "dominates",
+      "most",
+      "expensive",
+      "home",
+      "sales",
+      "$75",
+      "million",
+      "boca",
+      "raton",
+      "deal"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.bisnow.com/london/news/capital-markets/uk-pension-fund-to-buy-450m-blackstone-resi-portfolio-135036",
+    "tokens": [
+      "pension",
+      "fund",
+      "450",
+      "blackstone",
+      "resi",
+      "portfolio"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.bisnow.com/london/news/build-to-rent/uks-btr-sector-mass-scale-canadian-market-quadreal-135035",
+    "tokens": [
+      "taken",
+      "control",
+      "destiny",
+      "quadreal",
+      "unveils",
+      "growth"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNi1FS1BzQmhqNDBPZ3VCUGR1eW5teDdSRUhTZUpuXzRrQUpVRmZNS0FKdTl2TnZlaVNua2NGV1NIVXNwaENzeW5seHRBOWk4em5rWER1dnVKbjB4ZHVIYWxYTFd0d2JYaG1ybWtoMi1aZ250YkY5TnJHR0JQSDlkYWx4UU5QV2xmazhIa2p3bFhRQ1NmeEJWSzZTcw?oc=5",
+    "tokens": [
+      "daily",
+      "june",
+      "2026",
+      "capital",
+      "partners",
+      "secures",
+      "financing",
+      "199",
+      "unit",
+      "list"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.bisnow.com/dallas-ft-worth/news/deal-sheet/databank-closes-145b-financing-2-deals-dfw-deal-sheet-135026",
+    "tokens": [
+      "databank",
+      "closes",
+      "$1.45b",
+      "financing",
+      "deals",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.bisnow.com/chicago/news/office/sidley-austin-set-to-anchor-new-related-midwest-skyscraper-135044",
+    "tokens": [
+      "sidley",
+      "austin",
+      "anchor",
+      "related",
+      "midwest",
+      "office",
+      "tower"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/dtlas-bank-of-america-plaza-trades-for-210m-in-receivership-sale/",
+    "tokens": [
+      "dtla",
+      "bank",
+      "america",
+      "plaza",
+      "trades",
+      "$210m",
+      "receivership",
+      "sale"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/commercial-real-estate/costar-5-major-brokerages-hit-with-class-action-lawsuit-alleging-price-fixing-conspiracy-135043",
+    "tokens": [
+      "costar",
+      "major",
+      "brokerages",
+      "class",
+      "action",
+      "lawsuit",
+      "alleging",
+      "price",
+      "fixing",
+      "conspiracy"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-sustainability-operations/citing-national-security-trump-doj-backs-musk-memphis-data-center-facing-naacp-suit-135047",
+    "tokens": [
+      "urges",
+      "court",
+      "drop",
+      "suit",
+      "against",
+      "elon",
+      "musk",
+      "colossus",
+      "data",
+      "center"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.perenews.com/blueprint-urban-partners-regeneration-windfall-an-esr-departure-affinius-1bn-data-center-fund-and-more/",
+    "tokens": [
+      "blueprint",
+      "urban",
+      "partners",
+      "regeneration",
+      "windfall",
+      "departure",
+      "affinius",
+      "$1b",
+      "data",
+      "center",
+      "fund"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/06/16/apollo-lending-reit-closing-its-doors-dissolving/",
+    "tokens": [
+      "apollo",
+      "lending",
+      "reit",
+      "dissolve",
+      "$9b",
+      "offload"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/fund-managers-prepare-opportunity-zone-2-try-convince-investors-this-time-will-be-better-135032",
+    "tokens": [
+      "different",
+      "cycle",
+      "fund",
+      "managers",
+      "convince",
+      "investors",
+      "better"
+    ],
+    "shown_date": "2026-06-17"
+  },
+  {
     "url": "https://www.housingwire.com/articles/tepid-spring-selling-strong-headwinds-buffet-builder-confidence/",
     "tokens": [
       "tepid",
@@ -5507,274 +5783,5 @@
       "august"
     ],
     "shown_date": "2026-05-28"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/gap-between-inflation-and-home-price-growth-widens-in-march",
-    "tokens": [
-      "between",
-      "inflation",
-      "home",
-      "price",
-      "growth",
-      "widens",
-      "march"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260526a.htm",
-    "tokens": [
-      "minutes",
-      "board",
-      "discount",
-      "rate",
-      "meeting",
-      "april",
-      "2026"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/05/first-quarter-2026-multifamily-construction-data/",
-    "tokens": [
-      "first",
-      "quarter",
-      "2026",
-      "multifamily",
-      "construction",
-      "data"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/medicaid-long-term-care-home-equity-cap/",
-    "tokens": [
-      "home",
-      "equity",
-      "tied",
-      "medicaid",
-      "eligibility",
-      "change"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.bisnow.com/new-york/news/multifamily/mamdani-unveils-sweeping-housing-plan-eyes-more-property-takeovers-134725",
-    "tokens": [
-      "mamdani",
-      "rolls",
-      "$22b",
-      "housing",
-      "boosting",
-      "development",
-      "upping",
-      "enforcement"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://rebusinessonline.com/related-breaks-ground-on-200m-multifamily-project-along-st-johns-river-in-jacksonville/",
-    "tokens": [
-      "related",
-      "breaks",
-      "ground",
-      "$200m",
-      "multifamily",
-      "project",
-      "along",
-      "johns",
-      "river",
-      "jacksonville"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/eastwood-peachtree-acquisition-atlanta/",
-    "tokens": [
-      "eastwood",
-      "homes",
-      "lands",
-      "peachtree",
-      "building",
-      "group",
-      "atlanta"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/chattanooga-pilot-program-affordable-housing-tax-break/",
-    "tokens": [
-      "chattanooga",
-      "boosted",
-      "affordable",
-      "housing",
-      "without",
-      "direct",
-      "subsidies"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/luxury-buyers-colombia-homes-south-florida-safety-net/",
-    "tokens": [
-      "luxury",
-      "buyers",
-      "colombia",
-      "snapping",
-      "south",
-      "florida",
-      "homes",
-      "search",
-      "safety"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.bisnow.com/london/news/build-to-rent/canary-wharf-15b-btr-bet-pays-off-134722",
-    "tokens": [
-      "canary",
-      "wharf",
-      "pays"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.bisnow.com/dallas-ft-worth/news/industrial/advanced-process-solutions-to-build-40m-plant-to-supply-north-texas-semiconductor-industry-134707",
-    "tokens": [
-      "advanced",
-      "process",
-      "solutions",
-      "build",
-      "$40m",
-      "plant",
-      "supply",
-      "north",
-      "texas",
-      "semiconductor",
-      "industry"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.bisnow.com/washington-dc/news/data-center/landowners-urge-virginia-high-court-to-pass-on-digital-gateway-fight-134716",
-    "tokens": [
-      "landowners",
-      "urge",
-      "virginia",
-      "court",
-      "pass",
-      "blackstone",
-      "digital",
-      "gateway",
-      "fight"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://rebusinessonline.com/missner-group-acquires-843531-sf-industrial-portfolio-in-indiana/",
-    "tokens": [
-      "missner",
-      "group",
-      "acquires",
-      "843",
-      "531",
-      "industrial",
-      "portfolio",
-      "indiana"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://rebusinessonline.com/pnk-group-begins-construction-on-1-msf-industrial-facility-in-griffin-georgia/",
-    "tokens": [
-      "group",
-      "begins",
-      "construction",
-      "industrial",
-      "facility",
-      "griffin",
-      "georgia"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://rebusinessonline.com/metcalf-completes-construction-of-475880-sf-industrial-facility-in-reno-nevada/",
-    "tokens": [
-      "metcalf",
-      "completes",
-      "construction",
-      "475",
-      "880",
-      "industrial",
-      "facility",
-      "reno",
-      "nevada"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/05/26/jpmorgan-pulls-plug-on-1-4b-real-estate-fund-after-losses/",
-    "tokens": [
-      "jpmorgan",
-      "pulls",
-      "plug",
-      "$1.4b",
-      "fund",
-      "years",
-      "losses"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/05/26/kayne-anderson-crushes-goal-with-5b-real-estate-fundraise/",
-    "tokens": [
-      "kayne",
-      "anderson",
-      "crushes",
-      "goal",
-      "$5b",
-      "fundraise"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.perenews.com/starwoods-private-reit-redemption-woes-are-one-big-exception/",
-    "tokens": [
-      "starwood",
-      "private",
-      "reit",
-      "redemption",
-      "woes",
-      "exception"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/scion-ares-management-student-housing-buy/821123/",
-    "tokens": [
-      "scion",
-      "group",
-      "ares",
-      "management",
-      "corp",
-      "partner",
-      "$910m",
-      "student",
-      "housing"
-    ],
-    "shown_date": "2026-05-27"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/05/26/slate-grocery-reit-eyes-firms-future-after-takeover-bid/",
-    "tokens": [
-      "slate",
-      "grocery",
-      "reit",
-      "evaluates",
-      "future",
-      "takeover",
-      "offer"
-    ],
-    "shown_date": "2026-05-27"
   }
 ]
