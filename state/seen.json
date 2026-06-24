@@ -1,5 +1,282 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/road-housing-act-trump/",
+    "tokens": [
+      "congress",
+      "passes",
+      "century",
+      "road",
+      "housing",
+      "sends",
+      "bill",
+      "trump"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.realtor.com/research/federal-reserve-june-2026-meeting/",
+    "tokens": [
+      "warsh",
+      "first",
+      "meeting",
+      "rates",
+      "hold",
+      "voice",
+      "changes"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.redfin.com/news/home-price-index-may-2026/",
+    "tokens": [
+      "home",
+      "price",
+      "growth",
+      "accelerated",
+      "fueled",
+      "april",
+      "brief",
+      "mortgage",
+      "rate",
+      "reprieve"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/mortgage-rates-fed-hike-odds/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "move",
+      "near",
+      "6.8%",
+      "potential",
+      "hike",
+      "grows"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/housing-demand-decline-2026/",
+    "tokens": [
+      "builders",
+      "planned",
+      "undersupply",
+      "demand",
+      "swing",
+      "factor"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://rebusinessonline.com/berkadia-arranges-124-6m-loan-for-refinancing-of-irving-mixed-use-property/",
+    "tokens": [
+      "berkadia",
+      "arranges",
+      "$124.6m",
+      "loan",
+      "refinancing",
+      "irving",
+      "mixed",
+      "property"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.realtor.com/advice/hyperlocal/atlanta-rents-are-going-down/",
+    "tokens": [
+      "atlanta",
+      "rents",
+      "going",
+      "down"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVWRpalF0azQ4aWo2RnB3OVQ3SmNQRGxMaXFzOVRCc3R0NVM1bXVLMUlQQ0dvc09hN2VnaEN5bXZ4dkRjYkVwaGtKaF81NV9xU19jVVpmUks4cnlmTzNoUk5HQUszLU1JeWIzMU5yTkJXdHB3S1hpZWU5dWktbXlzTURNVkZEZzBqVmFTSkgzR2Q5b3VnTGJ5Qi15MG5XSFBFbnFkYUlSX3BGZw?oc=5",
+    "tokens": [
+      "metro",
+      "atlanta",
+      "home",
+      "sales",
+      "likely",
+      "recover",
+      "2026",
+      "analyst",
+      "warns",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbExSYnhXMTgyX1JjZG9HcklCVTFTaWpWUkdGbmVPcmplREFXYW1NLXRTa1FzWk5yNHloczduVGMxV0lZOHQxeTNXUS1TbDRpbDhscGxzakYwaDhSbEdXQThxbjRvOFAtTE5qMVdJREs5UlZ0eER3YUpTWXFxbmZ6MUxzX0VMTmdDNFFXMmJkVUlyS19BYUlMUi1laG1ndFNIR0hnYlpvcDBYSUozVzh5emFR?oc=5",
+    "tokens": [
+      "nashville",
+      "homes",
+      "selling",
+      "faster",
+      "last",
+      "year",
+      "market",
+      "gains",
+      "momentum",
+      "wsmv"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNd3cxSjU2dG5UWVA4LWpyTnptWWM1ZFY1R3VWbXdzU0JROExQTTUtSmpVSE5pSEs1TEZEOGNLMU9lVnR6WjFjZFhMS2ZjdnpoeUh2Z0otQl83SlZOVGVPNzZGbTR2c3daOWkyY2Q0Rkp0UkNYOHZ5UEppSElfSldZQ0FidXlPblI2ZTI2RFVRSDdnbnNTQ1VQWUZubl85U0swejM4ZVBWVzk?oc=5",
+    "tokens": [
+      "hillwood",
+      "hits",
+      "million",
+      "square",
+      "feet",
+      "fort",
+      "worth",
+      "construction",
+      "pipeline",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/06/23/office-properties-income-trust-emerges-from-bankruptcy/",
+    "tokens": [
+      "office",
+      "properties",
+      "income",
+      "trust",
+      "emerges",
+      "bankruptcy"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.bisnow.com/nashville/news/mixed-use/kkr-stadium-district-development-sec-school-arctos-university-tennessee-135123",
+    "tokens": [
+      "backed",
+      "stadium",
+      "district",
+      "development",
+      "venture",
+      "launches",
+      "$288m",
+      "project",
+      "school"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/walker-dunlop-arranges-375m-loan-for-jersey-city-mixed-use/",
+    "tokens": [
+      "walker",
+      "038",
+      "dunlop",
+      "arranges",
+      "$375m",
+      "loan",
+      "jersey",
+      "city",
+      "mixed"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-development/virginia-keeping-data-center-tax-breaks-adding-tax-energy-use-135137",
+    "tokens": [
+      "virginia",
+      "budget",
+      "keeps",
+      "data",
+      "center",
+      "breaks",
+      "adds",
+      "$600m",
+      "energy",
+      "levy"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.dmagazine.com/business-economy/2026/06/arcosa-acquired-by-crh/",
+    "tokens": [
+      "dallas",
+      "based",
+      "arcosa",
+      "acquired",
+      "rival",
+      "$8.5",
+      "billion"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.perenews.com/psp-reports-1-5bn-real-estate-loss-amid-shift-toward-infra/",
+    "tokens": [
+      "$1.5b",
+      "loss",
+      "shift",
+      "toward",
+      "infra"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/crescent-heights-skyline-oc-lands-210m-financing/",
+    "tokens": [
+      "crescent",
+      "heights",
+      "skyline",
+      "lands",
+      "$210m",
+      "financing"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/hud-fha-14-changes/",
+    "tokens": [
+      "adopts",
+      "changes",
+      "policies",
+      "aiming",
+      "lower",
+      "costs",
+      "ease",
+      "credit",
+      "access"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://therealdeal.com/national/boston/2026/06/23/rent-control-measure-slashed-from-massachusetts-ballot/",
+    "tokens": [
+      "rent",
+      "control",
+      "measure",
+      "slashed",
+      "massachusetts",
+      "ballot"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/cbre-tapped-find-buyer-for-more-than-half-of-reits-grocery-anchored-assets-135125",
+    "tokens": [
+      "retail",
+      "reit",
+      "taps",
+      "cbre",
+      "sell",
+      "half",
+      "assets"
+    ],
+    "shown_date": "2026-06-24"
+  },
+  {
     "url": "https://eyeonhousing.org/2026/06/a-laconic-statement-hawkish-hold-and-new-plans-from-the-fed/",
     "tokens": [
       "laconic",
@@ -5557,274 +5834,5 @@
       "costs"
     ],
     "shown_date": "2026-06-04"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/trump-homeless-services-funding-hud-nofo-2026/",
-    "tokens": [
-      "trump",
-      "administration",
-      "dramatically",
-      "overhauls",
-      "federal",
-      "funding",
-      "homeless",
-      "services"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/onity-foa-reverse-msr-sale/",
-    "tokens": [
-      "onity",
-      "wins",
-      "approval",
-      "revised",
-      "reverse",
-      "sale"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/fed-warned-on-shrinking-balance-sheet-in-lookback-at-powell-era",
-    "tokens": [
-      "warned",
-      "shrinking",
-      "balance",
-      "sheet",
-      "lookback",
-      "powell"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/construction-development/the-white-house-slashes-tariffs-on-construction-equipment-to-15-134834",
-    "tokens": [
-      "white",
-      "house",
-      "slashes",
-      "tariffs",
-      "construction",
-      "equipment",
-      "15%"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/connecticut-private-listings-ban-ned-lamont/",
-    "tokens": [
-      "connecticut",
-      "becomes",
-      "latest",
-      "state",
-      "restrict",
-      "private",
-      "listings"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/florida-property-tax-cut-ballot-2026/",
-    "tokens": [
-      "florida",
-      "lawmakers",
-      "passed",
-      "massive",
-      "property",
-      "break",
-      "comes",
-      "hard",
-      "part"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/renters-demand-steady-spring-multifamily/821534/",
-    "tokens": [
-      "renters",
-      "remain",
-      "cautious",
-      "demand",
-      "holds",
-      "steady"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/charleston-south-carolina-affordable-housing-project-3500/821786/",
-    "tokens": [
-      "charleston",
-      "south",
-      "carolina",
-      "setting",
-      "stage",
-      "thousands",
-      "affordable",
-      "homes",
-      "2032"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://rebusinessonline.com/audubon-underway-on-redevelopment-of-446-unit-apartment-complex-in-baton-rouge/",
-    "tokens": [
-      "audubon",
-      "underway",
-      "redevelopment",
-      "446",
-      "unit",
-      "apartment",
-      "complex",
-      "baton",
-      "rouge"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://rebusinessonline.com/dallas-mavericks-agree-to-buy-104-acres-at-former-valley-view-mall-for-new-arena-entertainment-complex/",
-    "tokens": [
-      "dallas",
-      "mavericks",
-      "agree",
-      "104",
-      "acres",
-      "former",
-      "valley",
-      "view",
-      "mall",
-      "arena",
-      "entertainment",
-      "complex"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/rxr-hudson-realty-capital-launch-bridge-to-hud-loan-program/",
-    "tokens": [
-      "hudson",
-      "realty",
-      "capital",
-      "launch",
-      "bridge",
-      "loan",
-      "program"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://rebusinessonline.com/avison-young-arranges-404m-agency-permanent-loan-for-manhattan-apartment-building/",
-    "tokens": [
-      "avison",
-      "young",
-      "arranges",
-      "$404m",
-      "agency",
-      "permanent",
-      "loan",
-      "manhattan",
-      "apartment",
-      "building"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://rebusinessonline.com/cresa-negotiates-249640-sf-data-center-lease-in-carlstadt-new-jersey/",
-    "tokens": [
-      "cresa",
-      "negotiates",
-      "249",
-      "640",
-      "data",
-      "center",
-      "lease",
-      "carlstadt",
-      "jersey"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/report-puget-sound-ai-leasing-on-pace-for-record-year/",
-    "tokens": [
-      "puget",
-      "sound",
-      "leasing",
-      "pace",
-      "record",
-      "year"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.perenews.com/bridge-raises-1-4bn-us-logistics-fund-with-international-backing/",
-    "tokens": [
-      "bridge",
-      "raises",
-      "$1.4b",
-      "logistics",
-      "fund",
-      "international",
-      "backing"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/01/berkshire-hathaway-buying-builder-taylor-morrison-for-6-8b/",
-    "tokens": [
-      "berkshire",
-      "hathaway",
-      "pays",
-      "$6.8b",
-      "homebuilder",
-      "taylor",
-      "morrison"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.bisnow.com/london/news/build-to-rent/greystar-completes-27b-fundraise-target-compelling-value-add-resi-sector-134818",
-    "tokens": [
-      "greystar",
-      "completes",
-      "fundraise",
-      "target",
-      "compelling",
-      "value",
-      "resi",
-      "sector"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.perenews.com/bdt-msd-backs-launch-of-us-light-industrial-platform/",
-    "tokens": [
-      "038",
-      "backs",
-      "launch",
-      "light",
-      "industrial",
-      "platform"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/centerspace-shares-slump-after-reit-ends-strategic-review-with-leaner-portfolio-134822",
-    "tokens": [
-      "centerspace",
-      "ends",
-      "strategic",
-      "review",
-      "portfolio",
-      "20%"
-    ],
-    "shown_date": "2026-06-03"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/va-finalizes-new-distressed-borrower-assistance",
-    "tokens": [
-      "finalizes",
-      "distressed",
-      "borrower",
-      "assistance"
-    ],
-    "shown_date": "2026-06-03"
   }
 ]
