@@ -1,5 +1,293 @@
 [
   {
+    "url": "https://www.nationalmortgagenews.com/news/key-inflation-metric-flashes-red-at-4-1",
+    "tokens": [
+      "inflation",
+      "metric",
+      "flashes",
+      "4.1%"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/mba-papi-rises-may/",
+    "tokens": [
+      "mortgage",
+      "payments",
+      "rise",
+      "2.2%",
+      "rates",
+      "loan",
+      "sizes",
+      "grow"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/young-homebuyers-priced-out-most-us-metros-pew-2026/",
+    "tokens": [
+      "young",
+      "buyers",
+      "priced",
+      "most",
+      "metros",
+      "data"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.realtor.com/research/new-home-sales-may-2026/",
+    "tokens": [
+      "home",
+      "sales",
+      "fall",
+      "mortgage",
+      "rates",
+      "consumer",
+      "confidence",
+      "take",
+      "toll"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/cea-nominee-pressed-on-inflation-tariffs-during-senate-hearing",
+    "tokens": [
+      "nominee",
+      "pressed",
+      "inflation",
+      "tariffs",
+      "during",
+      "senate",
+      "hearing"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/metros-most-housing-units-since-2020-urban-institute-top-10/823808/",
+    "tokens": [
+      "these",
+      "metro",
+      "areas",
+      "added",
+      "most",
+      "housing",
+      "units",
+      "since",
+      "2020"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/multifamily/rent-guidelines-board-rent-freeze-mamdani-135196",
+    "tokens": [
+      "rent",
+      "freeze",
+      "approved",
+      "stabilized",
+      "leases",
+      "delivering",
+      "mamdani",
+      "pledge"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/multifamily/liquidating-reit-pulls-payout-estimate-after-property-sale-falls-through-135177",
+    "tokens": [
+      "reit",
+      "liquidation",
+      "upended",
+      "$280m",
+      "sale",
+      "falls",
+      "through"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/elme-communities-reit-liquidation-canceled-sale/823812/",
+    "tokens": [
+      "elme",
+      "communities",
+      "selloff",
+      "hits",
+      "snag"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOU0ZlTUtwYzJ4QS1lZHQ4ajMwUG5lV3c4WFNzWDI4dHZmVm9UMkFwbkVvQ3hTcmdidjA0UXFraHFQdVJOSllEdmFEYzc5NTJpNVU1cnF4QVp0bmUycUR3cTBHWFBsRElfY3JhN0ZaQkhzcGpVeHMxV205Rll1dkFoeTRIUXFYbnRIakk0?oc=5",
+    "tokens": [
+      "daily",
+      "june",
+      "2026",
+      "mandrake",
+      "capital",
+      "achieves",
+      "stabilization",
+      "155",
+      "home",
+      "georgia",
+      "list"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/commercial-real-estate/federal-reform-board-says-selling-sw-corridor-piecemeal-wont-work-135184",
+    "tokens": [
+      "federal",
+      "board",
+      "critiques",
+      "piecemeal",
+      "approach",
+      "selling",
+      "buildings"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/additional-washington-federal-properties-identified-for-potential-sale/",
+    "tokens": [
+      "additional",
+      "washington",
+      "federal",
+      "properties",
+      "identified",
+      "potential",
+      "sale"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/connect-midwest-multifamily-trends-2026-navigating-capital-flow-deal-dynamics/",
+    "tokens": [
+      "connect",
+      "midwest",
+      "multifamily",
+      "trends",
+      "2026",
+      "navigating",
+      "capital",
+      "flow",
+      "038",
+      "deal",
+      "dynamics"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://rebusinessonline.com/marcus-millichap-brokers-sale-of-13611-sf-retail-strip-center-in-san-marcos-texas/",
+    "tokens": [
+      "marcus",
+      "038",
+      "millichap",
+      "brokers",
+      "sale",
+      "611",
+      "retail",
+      "strip",
+      "center",
+      "marcos",
+      "texas"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://rebusinessonline.com/marcus-millichap-why-midwest-stability-continues-to-attract-commercial-real-estate-investors/",
+    "tokens": [
+      "midwest",
+      "stability",
+      "continues",
+      "attract",
+      "commercial",
+      "investors"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260624a.htm",
+    "tokens": [
+      "federal",
+      "reserve",
+      "board",
+      "annual",
+      "bank",
+      "stress",
+      "test",
+      "confirms",
+      "large",
+      "banks",
+      "well",
+      "positioned",
+      "weather",
+      "severe",
+      "recession",
+      "able",
+      "continue",
+      "lend",
+      "households",
+      "businesses"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/fdic-proposes-slim-resolution-plans-lower-insurance-fees",
+    "tokens": [
+      "fdic",
+      "proposes",
+      "slim",
+      "resolution",
+      "lower",
+      "insurance",
+      "fees"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/bowman-changes-coming-soon-to-fed-supervision-and-regulation",
+    "tokens": [
+      "bowman",
+      "changes",
+      "coming",
+      "soon",
+      "supervision",
+      "regulation"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/06/24/tri-pointe-homes-ceo-the-need-for-affordable-housing-is-not-going-to-be-fixed-at-the-federal-level.html",
+    "tokens": [
+      "pointe",
+      "homes",
+      "need",
+      "affordable",
+      "housing",
+      "going",
+      "fixed",
+      "federal",
+      "level"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/mortgage-interest-rates-now-june-25-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "rise",
+      "6.49%",
+      "despite",
+      "iran",
+      "deal",
+      "buyers",
+      "face",
+      "normal"
+    ],
+    "shown_date": "2026-06-26"
+  },
+  {
     "url": "https://www.housingwire.com/articles/new-home-sales-may-2026-affordability-pressures/",
     "tokens": [
       "home",
@@ -5571,285 +5859,5 @@
       "inman"
     ],
     "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/federal-reserve-lorie-logan-warns-interest-rate-hike-inflation/",
-    "tokens": [
-      "official",
-      "warns",
-      "interest",
-      "rate",
-      "hike",
-      "inflation",
-      "doesn",
-      "cool"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/residential/after-feds-pass-10b-compass-and-anywhere-merger-faces-state-antitrust-probe-134869",
-    "tokens": [
-      "$10b",
-      "compass",
-      "anywhere",
-      "merger",
-      "faces",
-      "state",
-      "antitrust",
-      "probe"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/06/03/sellers-delisting-homes-redfin.html",
-    "tokens": [
-      "sellers",
-      "pulling",
-      "homes",
-      "market",
-      "fastest",
-      "pace",
-      "since",
-      "2020"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-june-4-2026/",
-    "tokens": [
-      "relief",
-      "mortgage",
-      "rates",
-      "summer",
-      "homebuying",
-      "season",
-      "kicks"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.realtor.com/research/weekly-housing-trends-view-data-week-may-30-2026/",
-    "tokens": [
-      "weekly",
-      "housing",
-      "trends",
-      "market",
-      "update",
-      "week",
-      "ending",
-      "2026"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPLWFHZW5JVk4wQVkyM2tTc216Y2UxTjVyamhrdGNLOGlKbVNXRGFzR1prN3JwNVFZWFVaS1NHMGR1d1lleWVOUk9mYmdQME1rY3RGTGQ3dW9UNFFLb28xcTRqUG9PMWNOb0JKYk5Ma2p0ZmFscEZuMWtCdnQ2TlF5N2lTTjhzdTdJY0ZpZWtWS3psNW1mWEZXdWhZbzh2ZWM?oc=5",
-    "tokens": [
-      "charlotte",
-      "rapid",
-      "growth",
-      "intensifies",
-      "housing",
-      "affordability",
-      "crunch",
-      "queen",
-      "city"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUmJyalFzRUl5aEJsSkRUbVVxVGx3cUdPVzB2WUhnR0l1NGl6THJWLVpmTlJOS2FhRWFOQUNHVFBwUm9FWkpDSElNcHVjZDRSVGdvQkxFNzNBUXUtSHZ4OUF6YkJLdzNKc2pVNDFJTFh3OGtJdG5ReDdzbXZJUHo1Z3Fqb2tiQWo2d1B5UjhuMmtFQXZtSU11X3JhYzhILTk2?oc=5",
-    "tokens": [
-      "copperas",
-      "cove",
-      "burgeoning",
-      "housing",
-      "stock",
-      "adds",
-      "390",
-      "unit",
-      "project",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://atlantaagentmagazine.com/2026/06/04/kolter-urban-fourteen-park/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=kolter-urban-fourteen-park",
-    "tokens": [
-      "kolter",
-      "urban",
-      "begin",
-      "first",
-      "midtown",
-      "condo",
-      "tower",
-      "fourteen",
-      "park"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/06/04/first-america-homes-expands-into-dfw/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=first-america-homes-expands-into-dfw",
-    "tokens": [
-      "first",
-      "america",
-      "homes",
-      "expands",
-      "market"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.builderonline.com/data-analysis/a-rental-market-reset-btr-is-at-a-crossroads-while-multifamily-nears-a-bottom",
-    "tokens": [
-      "rental",
-      "market",
-      "reset",
-      "crossroads",
-      "multifamily",
-      "nears",
-      "bottom",
-      "8211",
-      "builder",
-      "online"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.noradarealestate.com/blog/best-us-cities-to-buy-investment-properties-in-2026/",
-    "tokens": [
-      "best",
-      "cities",
-      "investment",
-      "properties",
-      "2026",
-      "8211",
-      "norada",
-      "investments"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://thehill.com/opinion/finance/5900058-hud-restores-continuum-care-focus/",
-    "tokens": [
-      "housing",
-      "first",
-      "became",
-      "only",
-      "8211",
-      "hill"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.bisnow.com/houston/news/data-center-power/ercot-approves-rules-for-data-center-developers-power-demand-134877",
-    "tokens": [
-      "texas",
-      "grid",
-      "operator",
-      "approves",
-      "rules",
-      "processes",
-      "data",
-      "centers"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.perenews.com/brookfield-jv-buys-canadian-industrial-portfolio-for-c1bn/",
-    "tokens": [
-      "brookfield",
-      "forms",
-      "$1b",
-      "industrial",
-      "pension",
-      "owned",
-      "developer"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.bisnow.com/south-florida/news/office/politics-leasing-construction-palm-beach-134868",
-    "tokens": [
-      "rich",
-      "politics",
-      "boosting",
-      "south",
-      "florida",
-      "office",
-      "construction",
-      "pipeline"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.bisnow.com/new-york/news/retail/ulta-beauty-times-square-new-store-lease-134871",
-    "tokens": [
-      "ulta",
-      "open",
-      "$400m",
-      "story",
-      "times",
-      "square",
-      "flagship"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/multifamily/short-term-multifamily-delinquencies-are-on-the-rise-134840",
-    "tokens": [
-      "multifamily",
-      "cmbs",
-      "loan",
-      "distress",
-      "keeps",
-      "rising"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNTdXaFg0ZzNockc3WEFQajNnRTNKcFJBRTlxYTYxajFkMkpLS25YWFA5YlNHOTh4eEt1TTZrWFBacDlkdFJqNU4weGlNSGlfMUlrUlJhLUdvTFFoQ0paOHB6MTZfZmhvRmtpeTNCRnJpR0I1UFBuLW1weWVSeHQ1MU5tNUVIR29Gd3N6eFdoZm5mQ29fMWtkeVg1MnVaTG5jWjNqSEdTTlYwX00?oc=5",
-    "tokens": [
-      "warren",
-      "buffett",
-      "berkshire",
-      "hathaway",
-      "bold",
-      "housing",
-      "market",
-      "wager",
-      "acquiring",
-      "taylor",
-      "morrison",
-      "becoming",
-      "america",
-      "largest",
-      "builder",
-      "fast",
-      "company"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/goldman-sachs-to-launch-tokenized-real-estate-fund-with-apex-archax-134867",
-    "tokens": [
-      "goldman",
-      "sachs",
-      "launch",
-      "tokenized",
-      "fund",
-      "apex",
-      "archax"
-    ],
-    "shown_date": "2026-06-05"
-  },
-  {
-    "url": "https://www.perenews.com/the-residential-underwriting-reset/",
-    "tokens": [
-      "residential",
-      "underwriting",
-      "reset"
-    ],
-    "shown_date": "2026-06-05"
   }
 ]
