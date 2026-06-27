@@ -1,5 +1,278 @@
 [
   {
+    "url": "https://www.realtor.com/news/real-estate-news/weekly-housing-market-update-june-26-2026/",
+    "tokens": [
+      "congress",
+      "aims",
+      "lower",
+      "housing",
+      "costs",
+      "bill",
+      "homebuyers",
+      "need",
+      "know"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-june-25-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "hold",
+      "near",
+      "6.5%",
+      "sixth",
+      "straight",
+      "week",
+      "here",
+      "ceasefire",
+      "alone",
+      "bring",
+      "down"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/delinquencies-rose-in-may-but-dont-panic-ice-says",
+    "tokens": [
+      "delinquencies",
+      "rose",
+      "panic"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/06/affordability-concerns-push-new-home-sales-lower-in-may/",
+    "tokens": [
+      "affordability",
+      "concerns",
+      "push",
+      "home",
+      "sales",
+      "lower"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/hr-6047-va-irrrl-fee/",
+    "tokens": [
+      "loan",
+      "hike",
+      "proposal",
+      "advances",
+      "congress",
+      "drawing",
+      "industry",
+      "pushback"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://rebusinessonline.com/mmcc-arranges-54m-hud-insured-loan-for-refinancing-of-metro-houston-apartment-community/",
+    "tokens": [
+      "mmcc",
+      "arranges",
+      "$54m",
+      "insured",
+      "loan",
+      "refinancing",
+      "metro",
+      "houston",
+      "apartment",
+      "community"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://rebusinessonline.com/waterton-purchases-358-unit-apartment-community-in-south-florida-for-80-5m/",
+    "tokens": [
+      "waterton",
+      "purchases",
+      "358",
+      "unit",
+      "apartment",
+      "community",
+      "south",
+      "florida",
+      "$80.5m"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://houstonagentmagazine.com/2026/06/26/remax-may-sales/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=remax-may-sales",
+    "tokens": [
+      "remax",
+      "houston",
+      "home",
+      "sales",
+      "gain",
+      "ground"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://phoenixagentmagazine.com/2026/06/26/broadstone-seventh-street/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=broadstone-seventh-street",
+    "tokens": [
+      "broadstone",
+      "seventh",
+      "street",
+      "sells",
+      "reported",
+      "$81.4m"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://atlantaagentmagazine.com/2026/06/26/crescent-communities-harmon/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=crescent-communities-harmon",
+    "tokens": [
+      "crescent",
+      "communities",
+      "opens",
+      "first",
+      "harmon",
+      "community",
+      "atlanta"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://phoenixagentmagazine.com/2026/06/25/nexmetro-avilla-foothills-btr-surprise/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=nexmetro-avilla-foothills-btr-surprise",
+    "tokens": [
+      "nexmetro",
+      "open",
+      "avilla",
+      "foothills",
+      "community",
+      "surprise"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://www.aol.com/10-best-places-build-rent-130243345.html?sub4=The+Punchlist&#038;ref=thelevel.co&#038;utm_campaign=you-can-t-build-safely-if-your-crew-s-not-okay&#038;utm_medium=referral&#038;utm_source=www.thelevel.co",
+    "tokens": [
+      "best",
+      "places",
+      "build",
+      "rent",
+      "construction",
+      "prices",
+      "might",
+      "affected",
+      "8211"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/lee-associates-closes-suburban-chicago-industrial-leases/",
+    "tokens": [
+      "038",
+      "associates",
+      "closes",
+      "suburban",
+      "chicago",
+      "industrial",
+      "leases"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/06/26/dc-elects-democratic-socialist-mayor-as-real-estate-worries/",
+    "tokens": [
+      "industry",
+      "braces",
+      "democratic",
+      "socialist",
+      "mayor"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-development/congress-pushes-to-make-data-center-developers-pay-for-energy-upgrades-135198",
+    "tokens": [
+      "lawmakers",
+      "push",
+      "make",
+      "data",
+      "center",
+      "developers",
+      "grid",
+      "upgrades"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://rebusinessonline.com/berkadia-arranges-100-4m-refinancing-for-office-campus-in-palm-beach-gardens-florida/",
+    "tokens": [
+      "berkadia",
+      "arranges",
+      "$100.4m",
+      "refinancing",
+      "office",
+      "campus",
+      "palm",
+      "beach",
+      "gardens",
+      "florida"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://rebusinessonline.com/cushman-wakefield-arranges-80m-loan-for-refinancing-of-northern-new-jersey-office-campus/",
+    "tokens": [
+      "cushman",
+      "038",
+      "wakefield",
+      "arranges",
+      "$80m",
+      "loan",
+      "refinancing",
+      "northern",
+      "jersey",
+      "office",
+      "campus"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://www.perenews.com/tpg-angelo-gordon-adopts-top-down-approach-for-latest-flagship-fund/",
+    "tokens": [
+      "angelo",
+      "gordon",
+      "adopts",
+      "down",
+      "approach",
+      "latest",
+      "flagship",
+      "fund"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://www.perenews.com/prologis-launches-16-6bn-hostile-bid-for-rival-uk-reit-segro/",
+    "tokens": [
+      "prologis",
+      "launches",
+      "$16.6b",
+      "hostile",
+      "rival",
+      "reit",
+      "segro"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/uwm-upgraded-by-kbw-despite-mounting-leverage-concerns",
+    "tokens": [
+      "upgraded",
+      "despite",
+      "mounting",
+      "leverage",
+      "concerns"
+    ],
+    "shown_date": "2026-06-27"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/key-inflation-metric-flashes-red-at-4-1",
     "tokens": [
       "inflation",
@@ -5577,287 +5850,5 @@
       "sales"
     ],
     "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/fannie-freddie-ipo-trump/",
-    "tokens": [
-      "trump",
-      "fannie",
-      "freddie",
-      "table"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://rebusinessonline.com/bls-u-s-economy-adds-172000-jobs-in-may/",
-    "tokens": [
-      "economy",
-      "adds",
-      "172",
-      "000",
-      "jobs"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/hud-fha-mpr-feedback/",
-    "tokens": [
-      "seeks",
-      "feedback",
-      "minimum",
-      "property",
-      "requirements"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/zillow-tro-mred-extended/",
-    "tokens": [
-      "zillow",
-      "mred",
-      "feed",
-      "remains",
-      "safe",
-      "realtracs",
-      "showdown",
-      "nears",
-      "june",
-      "deadline"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/senate-dems-introduce-bill-to-fully-restore-cfpb-funding",
-    "tokens": [
-      "senate",
-      "dems",
-      "introduce",
-      "bill",
-      "fully",
-      "restore",
-      "cfpb",
-      "funding"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://rebusinessonline.com/berkadia-brokers-sale-of-186-unit-seniors-housing-property-near-houston/",
-    "tokens": [
-      "berkadia",
-      "brokers",
-      "sale",
-      "186",
-      "unit",
-      "seniors",
-      "housing",
-      "property",
-      "near",
-      "houston"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://rebusinessonline.com/rosewood-property-co-begins-leasing-338-unit-apartment-community-in-plano/",
-    "tokens": [
-      "rosewood",
-      "property",
-      "begins",
-      "leasing",
-      "338",
-      "unit",
-      "apartment",
-      "community",
-      "plano"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPakpsTm9KX0JCZ254YWJwSGU1bFItU1JUR0k2cl9fRWxxbE1PZ2dPdjNTSDdCT2lkRm9JMmZOelVsdjVMT3cxOVFIRW9ESmdBSThtQkdxVjBMRkZWQnhSVDYzVzFfbkx4ZVFmQ0JMNHpjYXJXM3NLajlEQWhGc0JGTWF2bXFxMUNZbkdPSDNvcnRiZU1LaVp0TUlWbW1HeEc5TGc?oc=5",
-    "tokens": [
-      "fewer",
-      "atlanta",
-      "home",
-      "listings",
-      "price",
-      "cuts",
-      "sellers",
-      "adjust",
-      "market",
-      "realities",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.realtor.com/advice/hyperlocal/san-antonios-150-million-affordable-housing-bond/",
-    "tokens": [
-      "antonio",
-      "$150",
-      "million",
-      "affordable",
-      "housing",
-      "bond",
-      "created",
-      "preserved",
-      "100",
-      "homes"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.dmagazine.com/sponsored/2026/06/oxenfree-princeton-single-family-rental-living-north-texas/",
-    "tokens": [
-      "inside",
-      "oxenfree",
-      "princeton",
-      "elevated",
-      "single",
-      "family",
-      "rental",
-      "living",
-      "north",
-      "dallas"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://rebusinessonline.com/arvato-usa-signs-269600-sf-industrial-lease-in-denton-texas/",
-    "tokens": [
-      "arvato",
-      "signs",
-      "269",
-      "600",
-      "industrial",
-      "lease",
-      "denton",
-      "texas"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/04/despite-headwinds-data-center-construction-hits-record/",
-    "tokens": [
-      "despite",
-      "headwinds",
-      "data",
-      "center",
-      "construction",
-      "hits",
-      "record"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.bisnow.com/washington-dc/news/office/breaking-brookfield-lays-off-dozens-from-dc-office-134894",
-    "tokens": [
-      "brookfield",
-      "cuts",
-      "staff",
-      "looks",
-      "sell",
-      "part",
-      "yards"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/data-center-community-relations/data-center-dollars-poised-to-impact-local-elections-where-development-decisions-made-134874",
-    "tokens": [
-      "data",
-      "center",
-      "lobbying",
-      "muscle",
-      "shifts",
-      "statehouses",
-      "local",
-      "battles",
-      "boil"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://rebusinessonline.com/kohan-retail-investment-group-acquires-1-5-msf-office-tower-in-chicago/",
-    "tokens": [
-      "kohan",
-      "retail",
-      "investment",
-      "group",
-      "acquires",
-      "office",
-      "tower",
-      "chicago"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.perenews.com/eqt-sets-6bn-target-for-its-us-next-industrial-fund/",
-    "tokens": [
-      "sets",
-      "$6b",
-      "target",
-      "next",
-      "industrial",
-      "fund"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/brookfield-raises-900m-for-fund-targeting-cre-liquidity-needs-134889",
-    "tokens": [
-      "brookfield",
-      "raises",
-      "$900m",
-      "fund",
-      "targeting",
-      "liquidity",
-      "needs"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYklYcENUaVJKbXpraFZkWEg3d2RuUVZJSVhxc1E1SGFUNkhvaGxNcm9YUFliXy1LeXFxN0M2RDdQaXU0SDlCdWd1ZjZLX0JDTmpsNjBsU1lnYlNQUVhkcW1FQktSVzBHZlMtVzlvdFJlWG5yQ1NIcXVwRkg4OHZwN0YzS3RxZllQNGhYWVA0R2tSaHZ5NVlnRVE1bzhEZw?oc=5",
-    "tokens": [
-      "daily",
-      "june",
-      "2026",
-      "berkshire",
-      "hathaway",
-      "acquire",
-      "taylor",
-      "morrison",
-      "$8.5b",
-      "deal",
-      "list"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/tpg-norges-canadian-pensions-partner-2b-grocery-anchored-bet-134883",
-    "tokens": [
-      "joins",
-      "norges",
-      "canadian",
-      "pensions",
-      "$2b",
-      "grocery",
-      "anchored"
-    ],
-    "shown_date": "2026-06-06"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNV1ROWGU0akxFMGl2RDRHRjdJUmRFaGVEZlYzRjZncjNScjM3bFd0QTRyYVNZY0JNUFFGY0d5ZEdCT1dnd3ZnM3ZhdHBlelF2eXM0ZF8tLUhtWXM3M3BJaUFIbW9yVE5XNUNuQ2Y0QUxDWUJXUTdBMjdYcUZ2YmhSU3VYcGNnQ1dDdmRIRDVhdThBY3R0SnNMVzZhSQ?oc=5",
-    "tokens": [
-      "york",
-      "goes",
-      "pocket",
-      "listings",
-      "bill",
-      "heads",
-      "governor",
-      "desk",
-      "inman"
-    ],
-    "shown_date": "2026-06-06"
   }
 ]
