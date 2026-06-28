@@ -1,5 +1,284 @@
 [
   {
+    "url": "https://eyeonhousing.org/2026/06/pce-inflation-hits-3-years-high-in-may/",
+    "tokens": [
+      "inflation",
+      "hits",
+      "years",
+      "high"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.redfin.com/news/survey-americans-support-housing-policy/",
+    "tokens": [
+      "americans",
+      "across",
+      "party",
+      "lines",
+      "back",
+      "policies",
+      "improve",
+      "housing",
+      "affordability",
+      "redfin",
+      "survey"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/articles/new-bill-calls-for-gses-to-buy-and-securitize-construction-loans",
+    "tokens": [
+      "bill",
+      "calls",
+      "gses",
+      "securitize",
+      "construction",
+      "loans"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/bipartisan-housing-affordability-bill-trump-signature/",
+    "tokens": [
+      "washington",
+      "awaits",
+      "next",
+      "move",
+      "stalled",
+      "bipartisan",
+      "housing",
+      "bill"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQYndabVBMYmZvbzNBZjl0S1dOb0xJUGlwWkhjTmJqS1VxNWk0SFRucEZzbG54WmtlNEhVc1c1WTA2OWNIV016LWg1Zk9kSFJWX0c5WTZMblAtekZ0cWRuMTZmVzJXdTh0ZWxuRmtFcjhHbk5fZkI1MUExQkVyb1V2bjVCUHVDQ3dpNzZmMUY4RmRwQ2F1dHVsSkJINmJ6a0Roa1hPamdrOXdjdnJwV1Q1MGFxbkxYX1hFbGdkcVVHelY1VVhHZXN4eXhn?oc=5",
+    "tokens": [
+      "zillow",
+      "downgrades",
+      "home",
+      "price",
+      "forecast",
+      "here",
+      "outlook",
+      "400",
+      "plus",
+      "housing",
+      "markets",
+      "fast",
+      "company"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPT2hpUm5jUXgtQ3FUbVJwcWpnRE9fby1aM2tlT0ItZjNLb093MGRGZXN0Qk1YQkdPU3YtS0tOUVBtVDR1QkY4dWhTS0phMllRMkE1ekZFdVBRbmNNX0pkNHhfcENVWFRUR1N2bl92UWgyalRUb0ZHYmNGelNMRlh0UzJRUWZQa1V3OVpZd2JMME84MmpPeWZMU0gtLXMxQkxrb0E?oc=5",
+    "tokens": [
+      "compass",
+      "adds",
+      "$1",
+      "billion",
+      "north",
+      "texas",
+      "home",
+      "sales",
+      "residential",
+      "brokerage",
+      "list",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVFNtbE4ycmpYUXJzYkpsNy1LZWxXWUxFMGtNWDRXNVJOMU9qOWpEZzZGcmlwc2d5V0RNcmQ5MlpCcmN3Wm9zNUFDN3YzU2c3YjFEUUJGX1MxMjVZNzNHQkwxN1lmU3A2VGxjVGxTbU1hbWlzNG9RelI4ZU9PdUhBNFAzNVlZS0FmYzlvVnR6OGY5amlPYjd5X0FNU1llbzhQRF9tN2N0OHd2SEJiMXFsc0RnMkRQMHc1OXAzWTBjbw?oc=5",
+    "tokens": [
+      "residential",
+      "companies",
+      "houston",
+      "2026",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://houstonagentmagazine.com/2026/06/24/har-rental-report-may-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=har-rental-report-may-2026",
+    "tokens": [
+      "rental",
+      "market",
+      "strong"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOazBDYXhZdjFxQjlTTXphcEtSRWtaRG5uel9rVXliZ0lOVHhDa0lISzZGYXZvaWN0V0F2U0N5OENibWZ6WHBWUW5MbHVSSXFaNzJIMlZKQkVyNUhGcUFfb1QwaE43OXFKVGN3Ym9DekZPQmJDRmt0UzBMRlFESU51YV93clkxV2xfZ2llcl90V245RDk5VFJicEpob1g?oc=5",
+    "tokens": [
+      "atlanta",
+      "housing",
+      "market",
+      "sees",
+      "silver",
+      "lining",
+      "first"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.globest.com/2026/06/23/single-family-rent-growth-settles-into-slower-gear-as-regional-divide-widens/",
+    "tokens": [
+      "single",
+      "family",
+      "rent",
+      "growth",
+      "settles",
+      "slower",
+      "gear",
+      "regional",
+      "divide",
+      "widens",
+      "8211",
+      "globest"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.clarkhill.com/news-events/news/the-changing-legal-landscape-of-leasing-fees-coined-junk-fees/",
+    "tokens": [
+      "changing",
+      "legal",
+      "landscape",
+      "leasing",
+      "fees",
+      "coined",
+      "junk",
+      "8211",
+      "clark",
+      "hill"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.multihousingnews.com/single-family-rental-index-2/",
+    "tokens": [
+      "2026",
+      "single",
+      "family",
+      "rental",
+      "index",
+      "8211",
+      "multi",
+      "housing"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://rebusinessonline.com/marcus-millichap-brokers-sale-of-46822-sf-retail-center-in-irving/",
+    "tokens": [
+      "marcus",
+      "038",
+      "millichap",
+      "brokers",
+      "sale",
+      "822",
+      "retail",
+      "center",
+      "irving"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://therealdeal.com/national/washington-dc/2026/06/26/gsa-considering-backtracking-on-federal-building-sale/",
+    "tokens": [
+      "hits",
+      "another",
+      "hurdle",
+      "push",
+      "shrink",
+      "federal"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://rebusinessonline.com/keybank-provides-56m-in-construction-financing-for-ohio-affordable-seniors-housing-project/",
+    "tokens": [
+      "keybank",
+      "provides",
+      "$56m",
+      "construction",
+      "financing",
+      "ohio",
+      "affordable",
+      "seniors",
+      "housing",
+      "project"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/22-property-nj-workforce-portfolio-refinanced-for-38m/",
+    "tokens": [
+      "property",
+      "workforce",
+      "portfolio",
+      "refinanced",
+      "$38m"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/new-construction-san-diego-apartments-score-53m-bridge-loan/",
+    "tokens": [
+      "construction",
+      "diego",
+      "apartments",
+      "score",
+      "$53m",
+      "bridge",
+      "loan"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-negotiates-sale-of-669-unit-self-storage-portfolio-in-arlington/",
+    "tokens": [
+      "negotiates",
+      "sale",
+      "669",
+      "unit",
+      "self",
+      "storage",
+      "portfolio",
+      "arlington"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.perenews.com/longpoint-holds-close-for-debut-european-fund/",
+    "tokens": [
+      "longpoint",
+      "holds",
+      "close",
+      "debut",
+      "european",
+      "fund"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/veris-reit-privatization-apartment-sales/823913/",
+    "tokens": [
+      "veris",
+      "residential",
+      "boosted",
+      "apartment",
+      "sales",
+      "34%",
+      "msci"
+    ],
+    "shown_date": "2026-06-28"
+  },
+  {
     "url": "https://www.realtor.com/news/real-estate-news/weekly-housing-market-update-june-26-2026/",
     "tokens": [
       "congress",
@@ -5579,276 +5858,5 @@
       "highs"
     ],
     "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/trump-says-us-still-weighing-share-sale-for-fannie-freddie",
-    "tokens": [
-      "trump",
-      "weighing",
-      "share",
-      "sale",
-      "fannie",
-      "freddie"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/jobs-report-unemployment-rate-may-2026/",
-    "tokens": [
-      "growth",
-      "surges",
-      "past",
-      "expectations",
-      "bolstering",
-      "odds",
-      "rate",
-      "hike"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZHhYSzV0aGNUQXBkd0dmU0FNM0FDUUtPWnV3UEJnQ09xWno5UU1XcjFzNUxSeFctb0p1NzEwVENtLVR6ZzJFTUpvNVc4UkZwZnRVdzU1NXBZaGJFRVFWdVpMQUZZdlVMTy1CakVXRkFabU1KMWw0eWpmYTk2WHJUeXZZUjIxMnNYbE9HcGhtaHdhc2s?oc=5",
-    "tokens": [
-      "dallas",
-      "president",
-      "warns",
-      "rate",
-      "hike",
-      "needed",
-      "year",
-      "inman"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/malliotakis-nest-egg-protection-act-capital-gains-exclusion-senior-homeowners/",
-    "tokens": [
-      "nest",
-      "protection",
-      "raise",
-      "capital",
-      "gains",
-      "exclusion",
-      "senior",
-      "home",
-      "sellers"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/apm-synergy-one-merger/",
-    "tokens": [
-      "synergy",
-      "merge",
-      "steve",
-      "majerus",
-      "named",
-      "president"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/dallas-apartment-owners-operator-lawsuit-gas-explosion/822038/",
-    "tokens": [
-      "dallas",
-      "apartment",
-      "owners",
-      "operator",
-      "others",
-      "sued",
-      "deadly",
-      "explosion"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbUdpUVBCbm9tdGJEalVwcjZrWEZqekhNOTZCMDR4Rml5RnJ3VXR0VW1YSzN4TE1VNnZVb29sV0QydjI4Q0pWWUtWYmpUTEhLQjY3aXZkUTMyc2htOGFCVGpwZVVNRGFHQlRTNmZFVEtqc21NcU9XVlBZWS1GR1JkUmJETEZTd1JmeXJrUFB4Ri1DVjdGV1RDQVNhdUFPRkZfWVcyT1hFSGo?oc=5",
-    "tokens": [
-      "atlanta",
-      "housing",
-      "market",
-      "tightens",
-      "price",
-      "cuts",
-      "rise"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWjk0ZFNTaWxvVHFFZTZHNmxnMUlyS09oZDBSWU1iYThLMXJzSThzTXBEZGphZ0NPbUZneFRIb2FhOFNZOExlTlUxMTJJMTZvRm9KMnVwTTZocWlQVFRiYWxDZlhFWWlMOG8yZElvX0poNmw1bkRMZWZqUi1xMGxTVEpfQ01INzEtOUs3SFJCLUZWWEhkV2NoQ2pjcU5jV1FfTk9XZmFfbmlic00weGh3?oc=5",
-    "tokens": [
-      "vegas",
-      "housing",
-      "market",
-      "cools",
-      "prices",
-      "speed",
-      "slip"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcFc4ajJ5N3NacUZTbTQxY1ZLb0JXd0hHTmY1Q2U1YXBMVUl3b01rLW1vS2VHMkJVYko5QWtSNFlhYnkxNnBEN3owUWx0NUlGRk9Sc1A3Y3F3d1pyUjVLRTFZel92REtadnA2ektkc2lzSm02T0xyRnJiaFpjZC1MTFZwT3N5OTBIcWpFMEdxSVJ3MFZfQTFGREc1MEx2VzkyV2xiUzNROTM5NTZUVDdrV3RCVTZzQTZWMkZtMG8zNjdRYWxnSTVUYg?oc=5",
-    "tokens": [
-      "money",
-      "matters",
-      "continues",
-      "movement",
-      "housing",
-      "market",
-      "sees",
-      "shift",
-      "wkmg"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.bisnow.com/chicago/news/commercial-real-estate/bears-leave-illinois-for-indiana-134890",
-    "tokens": [
-      "chicago",
-      "bears",
-      "move",
-      "stadium",
-      "indiana"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/report-strong-demand-remains-for-infrastructure-manufacturing-data-center-construction/",
-    "tokens": [
-      "strong",
-      "demand",
-      "remains",
-      "infrastructure",
-      "manufacturing",
-      "data",
-      "center",
-      "construction"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/may-rent-yardi-realpage-apartment/822174/",
-    "tokens": [
-      "rents",
-      "small",
-      "seasonal",
-      "gain",
-      "muted",
-      "renter",
-      "demand"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/tod-trends-renters-apartment-owners/821934/",
-    "tokens": [
-      "transit",
-      "oriented",
-      "development",
-      "booming",
-      "here",
-      "housing",
-      "pros",
-      "make",
-      "most"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/rent-concessions-multifamily-outlook-trends/821777/",
-    "tokens": [
-      "rent",
-      "concessions",
-      "rising",
-      "falling",
-      "complicated"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.perenews.com/psp-la-caisse-and-nbim-back-2bn-us-retail-deal/",
-    "tokens": [
-      "nbim",
-      "canadian",
-      "pensions",
-      "back",
-      "$2b",
-      "retail",
-      "deal"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPX25JQjdqNERQcUlYMGZmYjYwWk5KQ3N6WHFoY25xVU5WZy1SLTJ4N3JKU2dDa25uWExCN2EwSlo2ZjdtQmVJeFlGR296LWFWaEVlR2F5SnphZTE2M0c3bkZSY08xbG9ySFg5U21rSHVadk9YOXo1c0x4NTM3WENTdnRVNlZzdElZNXVBdm1UcFo5TEFLcWU2OVUyMjRVdmMzcnhzNENEV3U3NHNQLVB6VTFyOXVFeHNWM1Nhai0tMHBsTWllem9v?oc=5",
-    "tokens": [
-      "warren",
-      "buffett",
-      "berkshire",
-      "hathaway",
-      "places",
-      "bold",
-      "housing",
-      "market",
-      "wager",
-      "acquiring",
-      "taylor",
-      "morrison",
-      "resiclub"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.perenews.com/digital-realty-ceo-andy-power-private-fundraising-is-critical-to-the-success-of-our-company/",
-    "tokens": [
-      "digital",
-      "realty",
-      "andy",
-      "power",
-      "private",
-      "fundraising",
-      "critical",
-      "success",
-      "company"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/06/04/higher-mortgage-rates-push-application-denial-rates-up.html",
-    "tokens": [
-      "higher",
-      "mortgage",
-      "rates",
-      "keep",
-      "buyers",
-      "sidelines",
-      "application",
-      "denials",
-      "rise"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/uwm-offers-two-harbors-tweaks-amid-falling-stock",
-    "tokens": [
-      "offers",
-      "harbors",
-      "tweaks",
-      "falling",
-      "stock"
-    ],
-    "shown_date": "2026-06-07"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/centerspace-reit-sales-portfolio-rebalanci/821783/",
-    "tokens": [
-      "centerspace",
-      "completes",
-      "strategic",
-      "review",
-      "$240m",
-      "sales"
-    ],
-    "shown_date": "2026-06-07"
   }
 ]
