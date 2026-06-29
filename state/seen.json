@@ -1,5 +1,266 @@
 [
   {
+    "url": "https://therealdeal.com/national/2026/06/28/housing-bill-sits-in-limbo/",
+    "tokens": [
+      "america",
+      "biggest",
+      "housing",
+      "push",
+      "decades",
+      "sits",
+      "political",
+      "limbo"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/06/24/may-new-home-sales.html",
+    "tokens": [
+      "home",
+      "sales",
+      "decline"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/clash-of-titans-gsib-proposal-pits-megabank-against-megabank",
+    "tokens": [
+      "clash",
+      "titans",
+      "gsib",
+      "proposal",
+      "pits",
+      "megabank",
+      "against"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOajBpNGNJY1hjanZadjF3d1F2Tl9FM1B5U2l6WjZQZGRTd0tMejlEZElmWEoyYWZrVFh2Y0c3T2pjenJxR3lKaHNmUC1pUnFPY29oSjRFYlhuMXpWc09za2VDZTZuOUExc1E5R2dhSGlsel9rWU1hVXNHa1dZR3pZRy1PMWNfN3RKNlhUdmxPNlZWcC0x?oc=5",
+    "tokens": [
+      "supreme",
+      "court",
+      "unanimously",
+      "upholds",
+      "foreclosure",
+      "status",
+      "inman"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/va-loan-appraisal-rules-fees/",
+    "tokens": [
+      "updates",
+      "appraisal",
+      "rules",
+      "adjusts",
+      "fees",
+      "regions"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUXZVcmplXzdxYkF5MEx3TFJGX3YxMkh6V3k1M3l1WmR3MVB5cGdRVV9EaG96cFRSbWJKSjFHLTAwV2pXTmpRcXBYWmZ3NldiQkFIZXZhb1ZJZy1uRldUTkxpTHNZTmdscC1NVXpldTg4aVpqN2poUnJ1YWdoLTVONWkxbjZlSDhmcTFYdk1yOGo4QU1RRXhndjgzUlBKcXhNcDlLbmNn?oc=5",
+    "tokens": [
+      "charlotte",
+      "area",
+      "home",
+      "inventory",
+      "reaches",
+      "highest",
+      "level",
+      "nearly",
+      "years",
+      "despite",
+      "drop",
+      "listings",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/larry-abbo-prime-group-villa-portofino-zombie-hoa/",
+    "tokens": [
+      "florida",
+      "developer",
+      "accused",
+      "running",
+      "zombie",
+      "years"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://therealdeal.com/national/philadelphia/2026/06/26/emergency-declaration-pushes-philly-affordable-project-ahead/",
+    "tokens": [
+      "emergency",
+      "declaration",
+      "pushes",
+      "philly",
+      "affordable",
+      "project",
+      "forward"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/florida-buyers-sue-compass-fee/",
+    "tokens": [
+      "florida",
+      "homebuyers",
+      "compass",
+      "$475",
+      "transaction"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://bipartisanpolicy.org/issue-brief/inside-the-deal-whats-in-the-final-21st-century-road-to-housing-act/",
+    "tokens": [
+      "inside",
+      "deal",
+      "final",
+      "century",
+      "road",
+      "housing",
+      "8211",
+      "bipartisan",
+      "policy",
+      "center"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/multifamily/starwoods-plans-for-k-street-conversion-in-dc-135191",
+    "tokens": [
+      "starwood",
+      "quietly",
+      "reveals",
+      "conversion",
+      "downtown"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/alston-bird-relocates-nyc-offices-to-51w52-in-170k-sf-lease/",
+    "tokens": [
+      "alston",
+      "038",
+      "bird",
+      "relocates",
+      "offices",
+      "170",
+      "lease"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-brokers-sale-of-826687-sf-industrial-portfolio-in-suburban-indianapolis/",
+    "tokens": [
+      "brokers",
+      "sale",
+      "826",
+      "687",
+      "industrial",
+      "portfolio",
+      "suburban",
+      "indianapolis"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.bisnow.com/dallas-ft-worth/news/office/hillwood-urban-considering-sale-or-refi-of-trophy-office-building-on-yall-street-135206",
+    "tokens": [
+      "hillwood",
+      "urban",
+      "considering",
+      "sale",
+      "refi",
+      "trophy",
+      "office",
+      "building",
+      "street"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/apartments-pet-friendly-apartmentalize-dog-restrictions/823543/",
+    "tokens": [
+      "unleash",
+      "profits",
+      "pets"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.perenews.com/real-estate-managers-help-bank-of-england-shine-a-light-on-private-markets/",
+    "tokens": [
+      "managers",
+      "help",
+      "bank",
+      "england",
+      "shine",
+      "light",
+      "private",
+      "markets"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.realtor.com/research/investor-report-june-2026/",
+    "tokens": [
+      "investor",
+      "buying",
+      "activity",
+      "continues",
+      "grow",
+      "2025",
+      "sales",
+      "dwindle"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/retail/caseys-branching-into-new-markets-400-store-expansion-135201",
+    "tokens": [
+      "casey",
+      "growing",
+      "markets",
+      "400",
+      "store",
+      "expansion"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/06/property-tax-revenue-leads-state-and-local-tax-growth-in-q1-2026/",
+    "tokens": [
+      "property",
+      "revenue",
+      "leads",
+      "state",
+      "local",
+      "growth",
+      "2026"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/nonbank-servicers-face-new-compliance-demands-in-rhode-island",
+    "tokens": [
+      "nonbank",
+      "servicers",
+      "face",
+      "compliance",
+      "demands",
+      "rhode",
+      "island"
+    ],
+    "shown_date": "2026-06-29"
+  },
+  {
     "url": "https://eyeonhousing.org/2026/06/pce-inflation-hits-3-years-high-in-may/",
     "tokens": [
       "inflation",
@@ -5589,274 +5850,5 @@
       "homes"
     ],
     "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/rate-cuts-further-dimmed-with-positive-employment-report",
-    "tokens": [
-      "rate",
-      "cuts",
-      "further",
-      "dimmed",
-      "positive",
-      "employment"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTUNuSkRtbGd3dm9fY1o1Qmo1NHZlX0lpRkNaRWQ2ZDZWRmp4YW1mbEdVT1N0ZWFhcUdWb0RQMmpkY3hQQ0hvOU93UHRwelF1ZHVnWHNaRFV6NHVIdC1MTnk0UklPdk9XRVlnSHMwVzlFQUtWUDV2QnpQSTdPQy1peVFILVMtUzVYSk9CeHlwWXM1bW5odkpCRG1wbzI?oc=5",
-    "tokens": [
-      "york",
-      "attorney",
-      "general",
-      "opens",
-      "antitrust",
-      "inquiry",
-      "compass",
-      "inman"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/us-multifamily-rents-rise-amid-cautionary-signs/",
-    "tokens": [
-      "multifamily",
-      "rents",
-      "rise",
-      "cautionary",
-      "signs",
-      "yardi",
-      "matrix"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/fha-commissioner-frank-cassidy-resigns-from-post",
-    "tokens": [
-      "commissioner",
-      "frank",
-      "cassidy",
-      "resigns",
-      "post"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBrMW1URW9MSk1SZmZwUkpLLU9sUTB0OG9ZSHhPWXV3US1kb1JfUXlQcms1eWowSHZBR1p3Y3lIVWNTV19IMWFyVVloUFAwdUxzc3UycGxpWEM5OHNndHBXOXZXc29EMGVrdFRlOUlETmtIYVJFRFREeThqcnZRNDA?oc=5",
-    "tokens": [
-      "connecticut",
-      "joins",
-      "wave",
-      "states",
-      "restricting",
-      "private",
-      "listings",
-      "inman"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQlBaalhmQmM4a0JSUjVMVjI5cllOaFlfZGJNZGo1TE5JZ1pNVFF1MEhxcGdTeGo3bkRzZmNXVlVsYzBRZjE1MGgyc2RaQXMyNVVKVWdRWklRQk1kNmZpemRyV1lRM1gyNUtUdV9GRmFKeUJ2c0VTMXQxZVVmTURzaWltNXpoYk9NOFZKWW5UanFVdw?oc=5",
-    "tokens": [
-      "first",
-      "coast",
-      "agents",
-      "navigate",
-      "cooling",
-      "housing",
-      "market",
-      "jacksonville",
-      "business",
-      "journal",
-      "journals"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://phoenixagentmagazine.com/2026/06/03/realtor-com-monthly-housing-trends-report-may-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=realtor-com-monthly-housing-trends-report-may-2026",
-    "tokens": [
-      "realtor",
-      "buyers",
-      "rewarding",
-      "sellers",
-      "adjusted",
-      "listing",
-      "price",
-      "expectations"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/desantis-new-tax-plan-mosquito-crisis-florida-homeowners/",
-    "tokens": [
-      "desantis",
-      "unleash",
-      "massive",
-      "mosquito",
-      "crisis",
-      "florida",
-      "homeowners"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNUFZLdEswamxXYUZEY3E4bnJ1bDNZdGMydk5DNVcweC01dXFPSnRISTV1SmpjLTcwT3h3VnpoaUUxOG1jOGdMRkhZRnJUWXNReHNqZmRGS2lGSUJncWdSeV9ld1pFRV9NS0FZZGMwSTdxNmpuZzQzNHR4Y190V1JvX1VFbHlHeG9YR2lyS2dEWXpLT1ZGclBsTnVpYVBJQTJtQmFJU1RvWm5fNU56RVRXVDluQVptQUkwRmZZaFZPQVkySGpsYWxqcE9lQ2VaaWVWTW9Hd3V2enQxQ2ZacVltRw?oc=5",
-    "tokens": [
-      "vegas",
-      "housing",
-      "market",
-      "offers",
-      "clear",
-      "lessons",
-      "against",
-      "rent",
-      "control"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://rebusinessonline.com/creative-action-to-open-25000-sf-headquarters-in-austins-mueller-district/",
-    "tokens": [
-      "creative",
-      "action",
-      "open",
-      "000",
-      "headquarters",
-      "austin",
-      "mueller",
-      "district"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/07/ai-impact-on-real-estate/",
-    "tokens": [
-      "creating",
-      "challenges",
-      "opportunities",
-      "questions",
-      "industry",
-      "future"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/hotel/hotel-performance-surges-after-memorial-day-weekend-slump-134886",
-    "tokens": [
-      "hotel",
-      "performance",
-      "surges",
-      "memorial",
-      "weekend",
-      "slump"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/05/nyc-builders-pivot-to-redevelopments-amid-high-costs/",
-    "tokens": [
-      "data",
-      "drop",
-      "pricey",
-      "world",
-      "builders",
-      "pivot",
-      "redevelopments"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/olmstead-vertex-acquire-repositioned-1916-vintage-midtown-offices/",
-    "tokens": [
-      "olmstead",
-      "vertex",
-      "acquire",
-      "repositioned",
-      "1916",
-      "vintage",
-      "midtown",
-      "offices"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPTThYa0x2T2JCOHdzLXd6V0JSM29jZ19WeTE3b0QtUnh4YXkxMjQ5c3BOY2xWcFFQM2haeWRtSVN4bXM5NVV4MTFVcG9TSC1jcFo1R3QxaEc4emJEOTB5NjRfcUxzZm4tV0ViR1VmalRINzhISmU0UWdaSjVaaFVZd1JsR0dCeXZlOHJDbEluZ0ZHcG5ad2ZISVE4V0o?oc=5",
-    "tokens": [
-      "berkshire",
-      "hathaway",
-      "acquire",
-      "builder",
-      "taylor",
-      "morrison",
-      "$8.5b",
-      "inman"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.perenews.com/oregon-state-treasury-considers-trimming-re-allocation/",
-    "tokens": [
-      "oregon",
-      "state",
-      "treasury",
-      "considers",
-      "trimming",
-      "allocation"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.perenews.com/in-fundraising-smaller-managers-will-have-a-harder-time-bouncing-back/",
-    "tokens": [
-      "fundraising",
-      "smaller",
-      "managers",
-      "harder",
-      "time",
-      "bouncing",
-      "back"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQSHl5WVo4dG4xdlkyd0dzN0tXdlRBdGFqRThtbFNCc20xbXVlMEIwSFRIR2pfTXp2Q3ZXWFJjRHl2NDkxanFGdGMxeGs1eEwta0RBbzZZTUlGYWpxMFVPNjI0RGdFSHF4UzBCT3k2RGdTQWNhcEdudlJqNEVsLTZpWGxWTnhqTVJFMzcxVk9kWmtjaFNqUExXTC1TeEpmR2c5Zl9GYU51Y0F0Rjl2WURIOTVfNA?oc=5",
-    "tokens": [
-      "zillow",
-      "compass",
-      "mlss",
-      "battle",
-      "buyers",
-      "agents",
-      "caught",
-      "crossfire",
-      "inman"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/weekly-economist-video-housing-market-june-5-2026/",
-    "tokens": [
-      "buyers",
-      "sellers",
-      "find",
-      "rhythm",
-      "steadying",
-      "market"
-    ],
-    "shown_date": "2026-06-08"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/housing-demand-positive-as-mortgage-rates-near-2026-highs/",
-    "tokens": [
-      "housing",
-      "demand",
-      "stays",
-      "positive",
-      "mortgage",
-      "rates",
-      "near",
-      "2026",
-      "highs"
-    ],
-    "shown_date": "2026-06-08"
   }
 ]
