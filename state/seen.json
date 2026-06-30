@@ -1,5 +1,264 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/code-changes-regulatory-costs/",
+    "tokens": [
+      "road",
+      "26.4%",
+      "regulatory",
+      "cost",
+      "stack",
+      "homes"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/supreme-court-allows-cook-to-remain-at-federal-reserve",
+    "tokens": [
+      "supreme",
+      "court",
+      "allows",
+      "cook",
+      "remain",
+      "federal",
+      "reserve"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/cfpb-mortgage-rfi-lo-comp/",
+    "tokens": [
+      "cfpb",
+      "facing",
+      "staffing",
+      "constraints",
+      "moves",
+      "expand",
+      "mortgage",
+      "credit"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/fannies-portfolio-dips-but-duration-gap-widens",
+    "tokens": [
+      "fannie",
+      "portfolio",
+      "dips",
+      "duration",
+      "widens"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/ai-boom-could-cause-the-next-economic-crash-bis-warns",
+    "tokens": [
+      "boom",
+      "cause",
+      "next",
+      "economic",
+      "crash",
+      "warns"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://rebusinessonline.com/sueba-usa-completes-353-unit-apartment-community-in-katy-texas/",
+    "tokens": [
+      "sueba",
+      "completes",
+      "353",
+      "unit",
+      "apartment",
+      "community",
+      "katy",
+      "texas"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/desantis-live-local-4-official/",
+    "tokens": [
+      "desantis",
+      "signs",
+      "live",
+      "local",
+      "housing",
+      "reform",
+      "florida"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.perenews.com/greystar-eyes-up-to-3bn-for-12th-us-flagship-fund/",
+    "tokens": [
+      "greystar",
+      "eyes",
+      "$3b",
+      "flagship",
+      "fund"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/06/29/welltowers-821m-ceo-payday-sparks-backlash-despite-big-run/",
+    "tokens": [
+      "welltower",
+      "$821m",
+      "payday",
+      "sparks",
+      "backlash",
+      "despite",
+      "blockbuster"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/midwestern-markets-emerge-as-hotspots-for-rental-momentum/",
+    "tokens": [
+      "midwestern",
+      "markets",
+      "emerge",
+      "hotspots",
+      "rental",
+      "momentum"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://rebusinessonline.com/nexmetro-opens-108-unit-avilla-foothills-btr-project-in-metro-phoenix/",
+    "tokens": [
+      "nexmetro",
+      "opens",
+      "108",
+      "unit",
+      "avilla",
+      "foothills",
+      "build",
+      "rent",
+      "project",
+      "metro",
+      "phoenix"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.bisnow.com/london/news/build-to-rent/to-be-great-btr-needs-to-be-mid-greystar-says-135203",
+    "tokens": [
+      "great",
+      "needs",
+      "greystar"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://rebusinessonline.com/cp-group-brings-occupancy-at-central-florida-office-campus-to-93-percent/",
+    "tokens": [
+      "group",
+      "brings",
+      "occupancy",
+      "central",
+      "florida",
+      "office",
+      "campus",
+      "percent"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/irg-prep-funds-to-redevelop-ohio-industrial-site/",
+    "tokens": [
+      "prep",
+      "funds",
+      "redevelop",
+      "ohio",
+      "industrial",
+      "site"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://rebusinessonline.com/real-capital-solutions-acquires-101-marietta-office-tower-in-downtown-atlanta-for-49-5m/",
+    "tokens": [
+      "capital",
+      "solutions",
+      "acquires",
+      "101",
+      "marietta",
+      "office",
+      "tower",
+      "downtown",
+      "atlanta",
+      "$49.5m"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/feds-to-loan-17-5-billion-for-10-new-nuclear-reactors-as-data-center-energy-demand-booms/",
+    "tokens": [
+      "trump",
+      "administration",
+      "finance",
+      "nuclear",
+      "plants",
+      "data",
+      "centers",
+      "demand",
+      "energy"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/crown-heights-office-flex-property-garners-bridge-loan-for-refi/",
+    "tokens": [
+      "crown",
+      "heights",
+      "office",
+      "flex",
+      "property",
+      "garners",
+      "bridge",
+      "loan",
+      "refi"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.perenews.com/bcis-private-real-estate-portfolio-declines-for-third-straight-year/",
+    "tokens": [
+      "private",
+      "portfolio",
+      "declines",
+      "third",
+      "straight",
+      "year"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/qxo-acquisition-topbuild-approval/",
+    "tokens": [
+      "stockholders",
+      "approve",
+      "$17",
+      "billion",
+      "topbuild",
+      "acquisition"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/06/29/uk-private-equity-firm-acquiring-kayne-anderson-real-estate/",
+    "tokens": [
+      "private",
+      "equity",
+      "firm",
+      "acquiring",
+      "kayne",
+      "anderson"
+    ],
+    "shown_date": "2026-06-30"
+  },
+  {
     "url": "https://therealdeal.com/national/2026/06/28/housing-bill-sits-in-limbo/",
     "tokens": [
       "america",
@@ -5571,284 +5830,5 @@
       "scale"
     ],
     "shown_date": "2026-06-10"
-  },
-  {
-    "url": "https://www.redfin.com/news/rising-rates-stall-housing-market-momentum/",
-    "tokens": [
-      "rising",
-      "rates",
-      "stall",
-      "housing",
-      "market",
-      "momentum",
-      "closed",
-      "home",
-      "sales",
-      "highest",
-      "level",
-      "since",
-      "2022"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/06/u-s-labor-market-remains-resilient-in-may/",
-    "tokens": [
-      "labor",
-      "market",
-      "remains",
-      "resilient"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/capital-gains-tax-exclusion-malliotakis-nest-egg-protection-act/",
-    "tokens": [
-      "boomers",
-      "selling",
-      "longtime",
-      "homes",
-      "holiday",
-      "profits",
-      "under",
-      "bill"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/apartment-supply-rent-growth/",
-    "tokens": [
-      "rent",
-      "trends",
-      "sideways",
-      "multifamily",
-      "supply",
-      "stays",
-      "strong"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/08/trump-claims-fannie-freddie-are-worth-combined-1t/",
-    "tokens": [
-      "trump",
-      "claims",
-      "fannie",
-      "freddie",
-      "worth",
-      "combined",
-      "$1"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/06/08/har-weekly-activity-snapshot-week-22-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=har-weekly-activity-snapshot-week-22-2026",
-    "tokens": [
-      "housing",
-      "market",
-      "activity",
-      "dampens",
-      "houston"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/miami-dade-county-florida-eminent-domain-fuel-depot-fisher-island/",
-    "tokens": [
-      "miami",
-      "dade",
-      "invokes",
-      "eminent",
-      "domain",
-      "seize",
-      "land",
-      "ultraexclusive",
-      "fisher",
-      "island"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/june-student-housing-deals-multifamily/822291/",
-    "tokens": [
-      "june",
-      "student",
-      "housing",
-      "deals",
-      "near",
-      "texas",
-      "university",
-      "florida"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/08/lessons-from-floridas-property-tax-plan/",
-    "tokens": [
-      "housing",
-      "notes",
-      "thoughts",
-      "eliminating",
-      "florida",
-      "property",
-      "taxes"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://pretium.com/first-walker-dunlop-affordable-bridge-capital-transaction-with-pretium-closes/",
-    "tokens": [
-      "first",
-      "walker",
-      "038",
-      "dunlop",
-      "affordable",
-      "bridge",
-      "capital",
-      "transaction",
-      "pretium",
-      "closes"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/jll-negotiates-75000-sf-office-lease-at-apex-at-legacy-in-plano/",
-    "tokens": [
-      "negotiates",
-      "000",
-      "office",
-      "lease",
-      "apex",
-      "legacy",
-      "plano"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.bisnow.com/new-york/news/multifamily/oceanfirst-flushing-financial-bank-rent-stabilized-multifamily-new-york-city-134909",
-    "tokens": [
-      "oceanfirst",
-      "purges",
-      "$1.4b",
-      "rent",
-      "stabilized",
-      "multifamily",
-      "loans",
-      "following",
-      "flushing",
-      "financial",
-      "merger"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.bisnow.com/charlotte/news/data-center-community-relations/charlotte-approves-150-day-pause-data-center-development-134903",
-    "tokens": [
-      "charlotte",
-      "approves",
-      "150",
-      "pause",
-      "data",
-      "center",
-      "projects"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.bisnow.com/new-york/news/hotel/a-decade-after-opening-spanish-operator-melia-buys-nomad-hotel-for-203m-134915",
-    "tokens": [
-      "spanish",
-      "operator",
-      "meli",
-      "spends",
-      "$203m",
-      "nomad",
-      "hotel"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/walker-dunlop-pretium-close-on-76m-bridge-loan-for-chelsea-apartments/",
-    "tokens": [
-      "walker",
-      "038",
-      "dunlop",
-      "pretium",
-      "close",
-      "$76m",
-      "bridge",
-      "loan",
-      "chelsea",
-      "apartments"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/equity-residential-avalonbay-set-c-suite-team/",
-    "tokens": [
-      "equity",
-      "residential",
-      "avalonbay",
-      "name",
-      "suite",
-      "multifamily",
-      "giant"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/08/tpg-leads-acquisition-of-retail-landlord-echo-realty/",
-    "tokens": [
-      "leads",
-      "investor",
-      "acquisition",
-      "retail",
-      "landlord",
-      "echo",
-      "realty"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/cinnaire-closes-307m-lihtc-equity-fund-for-2259-affordable-housing-units-across-10-states/",
-    "tokens": [
-      "cinnaire",
-      "closes",
-      "$307m",
-      "lihtc",
-      "equity",
-      "fund",
-      "259",
-      "affordable",
-      "housing",
-      "units",
-      "across",
-      "states"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/06/mortgage-applications-retreat-in-may-with-arms-gaining-share/",
-    "tokens": [
-      "mortgage",
-      "applications",
-      "retreat",
-      "arms",
-      "gaining",
-      "share"
-    ],
-    "shown_date": "2026-06-09"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/americans-pull-47-billion-in-equity-from-their-homes-in-1q",
-    "tokens": [
-      "americans",
-      "pull",
-      "$47",
-      "billion",
-      "equity",
-      "homes"
-    ],
-    "shown_date": "2026-06-09"
   }
 ]
