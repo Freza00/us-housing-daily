@@ -1,5 +1,278 @@
 [
   {
+    "url": "https://eyeonhousing.org/2026/07/u-s-economy-adds-57000-jobs-in-june/",
+    "tokens": [
+      "economy",
+      "adds",
+      "000",
+      "jobs",
+      "june"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/trump-interview-housing-bill-signing/",
+    "tokens": [
+      "trump",
+      "landmark",
+      "housing",
+      "bill",
+      "fine",
+      "hints",
+      "veto"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/mortgage-interest-rates-now-july-2-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "post",
+      "biggest",
+      "drop",
+      "months",
+      "independence",
+      "boost",
+      "buyers"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/zillow-injunction-hearing-testimony/",
+    "tokens": [
+      "reffkin",
+      "takes",
+      "stand",
+      "mred",
+      "zillow",
+      "threatened",
+      "litigation",
+      "listing",
+      "policy",
+      "dispute"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/save-phase-out-mortgage-affordability/",
+    "tokens": [
+      "student",
+      "loan",
+      "phase",
+      "tighten",
+      "mortgage",
+      "affordability"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQQlBNUHdzSldTY0hMNlpzQ1lfaU1ydUpWc3dVR0hUYkNxZ0U3UGtLZzlmaGJDR2tXeEhvOWh5TU9uOWpXazlfRU9aQUZRUi1FTzBqTmZCVnkxNVR4YmNHcU9mb0xlNm9FOVZSSmxMRUtkVDBCMzNUN2FWMjZvQm80Nzl4b3ZIcTRQWUlyc3hOZjQ?oc=5",
+    "tokens": [
+      "buys",
+      "development",
+      "site",
+      "393",
+      "unit",
+      "dallas",
+      "project",
+      "multifamily",
+      "housing"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/sandow-lakes-texas-master-planned-randy-kendrick-hadid/",
+    "tokens": [
+      "yolanda",
+      "hadid",
+      "fianc",
+      "building",
+      "huge",
+      "master",
+      "planned",
+      "community",
+      "site",
+      "industrial",
+      "ghost",
+      "town",
+      "texas"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/07/03/the-data-drop-can-neglected-nyc-buildings-still-turn-a-profit/",
+    "tokens": [
+      "data",
+      "drop",
+      "profitability",
+      "rent",
+      "stabilized",
+      "buildings"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.bisnow.com/atlanta/news/office/us-government-seeks-to-downsize-epas-atlanta-office-lease-by-45-135282",
+    "tokens": [
+      "government",
+      "seeks",
+      "downsize",
+      "atlanta",
+      "office",
+      "45%"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/07/02/brookfield-london-wall-street-data-center-expansion.html",
+    "tokens": [
+      "brookfield",
+      "wants",
+      "build",
+      "data",
+      "centers",
+      "london",
+      "answer",
+      "wall",
+      "street"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/self-storage-market-outlook/",
+    "tokens": [
+      "self",
+      "storage",
+      "market",
+      "outlook",
+      "june",
+      "2026"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.bisnow.com/chicago/news/office/stripe-more-than-doubles-office-footprint-chicago-lease-expansion-135267",
+    "tokens": [
+      "stripe",
+      "doubles",
+      "chicago",
+      "office",
+      "footprint"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.perenews.com/aware-super-makes-debut-commitment-to-student-housing/",
+    "tokens": [
+      "aware",
+      "super",
+      "debut",
+      "commitment",
+      "student",
+      "housing"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.perenews.com/centuria-secures-japanese-investor-backing-for-single-asset-sydney-office-fund/",
+    "tokens": [
+      "centuria",
+      "secures",
+      "japanese",
+      "investor",
+      "backing",
+      "single",
+      "asset",
+      "sydney",
+      "office",
+      "fund"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.perenews.com/introducing-peres-inaugural-placement-agent-ranking/",
+    "tokens": [
+      "introducing",
+      "pere",
+      "inaugural",
+      "placement",
+      "agent",
+      "ranking"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/better-mortgage-spreads-are-still-keeping-home-sales-positive/",
+    "tokens": [
+      "better",
+      "mortgage",
+      "spreads",
+      "keeping",
+      "home",
+      "sales",
+      "positive"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/07/mortgage-rates-increased-in-june-as-markets-weigh-inflation-and-fed-policy/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "increased",
+      "june",
+      "markets",
+      "weigh",
+      "inflation",
+      "policy"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTDNQT2c1eHE0TEIzTmVMZnNMcHdob2xCMG1oV3ptNUxRYXZJcXlFdml2RDl5MUdvbEQ3NmxZZGpJN2xqQXR1WkVQSDRCUlV6OElBazM1WVA3QXBTMEdPVEFrbl84VkZiaEFHR193WUdsR3o5STMzeVR5bjNRR3ZYalE3SURpekU5a3VXaHhHRE1BR0VJVWNoMFI1SnMzaFNqM3RYNTZ3OA?oc=5",
+    "tokens": [
+      "these",
+      "housing",
+      "markets",
+      "most",
+      "underwater",
+      "homeowners",
+      "fast",
+      "company"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQekhRbG1TdVFKbkR0dWVjb0JzaWw1V01kR3BwT21zTThpMC1NZlhQdjV1cHdIa1FFeTRsTVVOWXFwUFU1QXd1TWM1RVVZYUt1T0ZpVjF4bVVtRk5pYnVrUnJRNzdBTzZRTDJyclYzTVBPTHFtSXJaejhfTEFqMV9sZkJuSzZOVEhNZ2ZvaDFQQnZiSGtZNmhQY0s4WHVsU3hDeERabkt6LVlRd2NZeGNTVmVHRQ?oc=5",
+    "tokens": [
+      "states",
+      "most",
+      "least",
+      "housing",
+      "market",
+      "inventory",
+      "heading",
+      "spring",
+      "2026",
+      "fast",
+      "company"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/car-payment-homebuying-power-mortgage/",
+    "tokens": [
+      "average",
+      "payment",
+      "shrinking",
+      "homebuyers",
+      "budgets",
+      "$135,000"
+    ],
+    "shown_date": "2026-07-05"
+  },
+  {
     "url": "https://www.realtor.com/research/june-2026-employment-report/",
     "tokens": [
       "june",
@@ -5540,291 +5813,5 @@
       "back"
     ],
     "shown_date": "2026-06-15"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZkV6UHBqSlJOY3pBLXAxdWp0N2VvVTNmSkFXanRXaWIyZnpUd1EwMTZRZUhqZWdFQzR3ZWdhQVFSN0htamMxMVNpc2Z1dmdRRmhkZ2dpYUUxRmNTQkJPdlpjWmxjYVdVRWJzYkRmMU5QME4xeVgxU0Y2TTRRQ2ZQMElNUkJ4X1U?oc=5",
-    "tokens": [
-      "median",
-      "home",
-      "price",
-      "tops",
-      "$400k",
-      "time",
-      "buyer",
-      "demand",
-      "falls",
-      "inman"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQakZDVjM0ejZRRXlISHY4U2VnaDkzeURpakFVVkRqX08xcVd1Tk5DX1JfaXo3a0xwd3FUNENpaHp2eWd3bnNfREMxbml4dTNRb2NhQWhhTWN2eENmRndvVHN1MEdKUEdqU3N2d19xSXdjMmhsSDhramtJUlZwT0JmU2M5TG4xWjRDVXpJRGo1Zw?oc=5",
-    "tokens": [
-      "existing",
-      "home",
-      "sales",
-      "highest",
-      "level",
-      "since",
-      "december",
-      "inman"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm",
-    "tokens": [
-      "federal",
-      "reserve",
-      "board",
-      "announces",
-      "final",
-      "rule",
-      "establishes",
-      "data",
-      "standards",
-      "certain",
-      "information",
-      "collections"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/lennar-q2-2026-land-light/",
-    "tokens": [
-      "lennar",
-      "2026",
-      "results",
-      "test",
-      "land",
-      "light",
-      "model"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZHJEc1E3TnZSa2JmTGFQRjhZUUdWNEVIc0Q1NHpmSjFINHZ2d3JraVhSczZNZElJRzJhaWM3VzVLQkZmOWNlV1B4VGVGRng3VDVFY05UVjBvZC1DTy1vSkRrN3N3aTlXV2FLaS10d3cyeHhtSHptRFRXdkFUVEZyajAzTUQ0bzBtMUFGb0ZGN2pDMUlvRDdDUWNPemtRbDlJTEJkUlpXbTh6T0RKVG9VZ2F1cjdxRmpURkE?oc=5",
-    "tokens": [
-      "economists",
-      "homebuyers",
-      "sellers",
-      "hoping",
-      "swift",
-      "return",
-      "5.00%",
-      "mortgage",
-      "rates",
-      "resiclub"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/south-florida-office-vacancy-rates/",
-    "tokens": [
-      "wall",
-      "street",
-      "south",
-      "effect",
-      "packed",
-      "offices",
-      "fueling",
-      "miami",
-      "million",
-      "dollar",
-      "home",
-      "deals"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/brownsville-texas-housing-market-spacex-ipo/",
-    "tokens": [
-      "spacex",
-      "trigger",
-      "massive",
-      "south",
-      "texas",
-      "housing",
-      "boom",
-      "employees",
-      "engineers",
-      "cafeteria",
-      "workers",
-      "cash"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/why-halfback-retirees-are-leaving-florida-latest-trend/",
-    "tokens": [
-      "rise",
-      "halfbacks",
-      "retirees",
-      "moved",
-      "florida",
-      "fleeing"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQkJHVGNuR3ZtQ2kxR0tuTEN5aUs4UEsyNnFTdkVJSE41UG9ZZk1ZeWdscDRNQ19UMmpCNVFDaWx1WE1ybFlsb3hDVXZhZ0pzUENIb2FqZE9WSHpOb3Zudmlfako5bllKUnBUenU5Y0hIQWo3TE81aGNvMkJEVkp0QV9HSXNZZjZvYWptYkJ1c1JxVDBENkxxaHZsVTdZaUNFc3pwWTY1QU5pdw?oc=5",
-    "tokens": [
-      "university",
-      "thomas",
-      "breaks",
-      "ground",
-      "$45m",
-      "residence",
-      "hall",
-      "double",
-      "housing",
-      "capacity",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/cmbs-delinquency-special-servicing-trepp/822828/",
-    "tokens": [
-      "multifamily",
-      "cmbs",
-      "servicing",
-      "delinquency",
-      "rates",
-      "fell",
-      "trepp"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/vornado-closes-on-49-stake-in-fisher-brothers-park-avenue-plaza/",
-    "tokens": [
-      "vornado",
-      "closes",
-      "49%",
-      "stake",
-      "fisher",
-      "brothers",
-      "park",
-      "avenue",
-      "plaza"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://therealdeal.com/national/seattle/2026/06/12/seattle-area-apartments-sell-to-spokane-tribe-of-indians/",
-    "tokens": [
-      "native",
-      "american",
-      "tribe",
-      "grows",
-      "seattle",
-      "area",
-      "holdings",
-      "$53m",
-      "apartment"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.bisnow.com/san-francisco/news/office/oakland-office-reset-deepens-landlords-await-spillover-ai-san-francisco-bay-134985",
-    "tokens": [
-      "francisco",
-      "surge",
-      "lifts",
-      "leasing",
-      "oakland",
-      "scrambles",
-      "prep",
-      "space",
-      "spillover"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/sentinel-real-estate-acquires-luxury-apartment-community-in-potomac/",
-    "tokens": [
-      "sentinel",
-      "acquires",
-      "luxury",
-      "apartment",
-      "community",
-      "potomac"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/hotel/monty-bennett-out-as-chairman-at-braemar-which-is-going-independent-135006",
-    "tokens": [
-      "monty",
-      "bennett",
-      "collect",
-      "$480m",
-      "breakup",
-      "luxury",
-      "hotel",
-      "reit",
-      "goes",
-      "independent"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/blackstone-said-to-be-targeting-takeout-of-canadian-reit-134989",
-    "tokens": [
-      "blackstone",
-      "talks",
-      "reit"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.perenews.com/investors-are-writing-real-estate-checks-just-not-necessarily-to-funds/",
-    "tokens": [
-      "investors",
-      "writing",
-      "checks",
-      "necessarily",
-      "funds"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5pQlRyZ095cGgwbFoyYVB0OU1DSDVIajhzZ1dxN3VMYkg2QW1qNUtUcEl6YTNZaGowNU5qNFpaTl9wVmlwdGsxaExBR0NjSkxueFlnbkE4dnhMbXhKOWtvZTRBRHJfenpVS240TXNkYWhkcHlLUW45NGhB?oc=5",
-    "tokens": [
-      "fannie",
-      "approved",
-      "bitcoin",
-      "backed",
-      "home",
-      "loan",
-      "first",
-      "time",
-      "inman"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/hud-to-change-chassis-requirements-on-manufactured-homes",
-    "tokens": [
-      "update",
-      "manufactured",
-      "home",
-      "definition",
-      "requirements"
-    ],
-    "shown_date": "2026-06-14"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/housing-demand-inventory-2026pending-sales-rose-to-75856-vs-72039-in-2025-as-inventory-turned-negative-year-over-year-with-mortgage-rates-near-6-58/",
-    "tokens": [
-      "housing",
-      "demand",
-      "inventory",
-      "down",
-      "2026"
-    ],
-    "shown_date": "2026-06-14"
   }
 ]
