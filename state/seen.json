@@ -1,5 +1,289 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/mortgage-rates-rise-fed-hawkish/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "rise",
+      "past",
+      "6.75%",
+      "inflation",
+      "uncertainty",
+      "persists"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/road-to-housing-act-poll-support/",
+    "tokens": [
+      "survey",
+      "nearly",
+      "nine",
+      "voters",
+      "support",
+      "road",
+      "limbo"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/illegal-immigration-joe-biden-home-prices-study/",
+    "tokens": [
+      "illegal",
+      "immigration",
+      "under",
+      "biden",
+      "drove",
+      "home",
+      "prices",
+      "6.6%",
+      "higher",
+      "study",
+      "finds"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/with-updated-fico-model-figure-lending-floats-321-1-million-on-helocs",
+    "tokens": [
+      "updated",
+      "fico",
+      "model",
+      "figure",
+      "lending",
+      "floats",
+      "$321.1",
+      "million",
+      "helocs"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://houstonagentmagazine.com/2026/07/07/cotality-may-home-price-growth/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=cotality-may-home-price-growth",
+    "tokens": [
+      "cotality",
+      "home",
+      "price",
+      "growth",
+      "reverses",
+      "slow",
+      "down",
+      "picks",
+      "steam"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/nrp-group-breaks-ground-on-348-unit-affordable-housing-project-in-south-austin/",
+    "tokens": [
+      "group",
+      "breaks",
+      "ground",
+      "348",
+      "unit",
+      "affordable",
+      "housing",
+      "project",
+      "south",
+      "austin"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/north-carolina-parking-reform-law/",
+    "tokens": [
+      "north",
+      "carolina",
+      "kicks",
+      "parking",
+      "rules",
+      "curb",
+      "statewide",
+      "reform"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/best-markets-renters-apartments-arizona-wallethub-2026/",
+    "tokens": [
+      "belt",
+      "state",
+      "markets",
+      "renters",
+      "here"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/ipa-arranges-sale-of-250-unit-alta-firewheel-apartments-in-garland-texas/",
+    "tokens": [
+      "arranges",
+      "sale",
+      "250",
+      "unit",
+      "alta",
+      "firewheel",
+      "apartments",
+      "garland",
+      "texas"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNOGZjS1VLc21JeW1qd3hrNFl4VlJXWU1URkRLR1Z6NHM4cHF4cmNUX0d2Y3VZSTR3UTFBNlJoNHktYzBsaUQ2cXowaVg2RENTUWZvRmE5Y1VseTZ5NkY5YXRkUjBBNW1MdGF2Szc2bWhPelVXR0hJWEdaS0JtTGVDNg?oc=5",
+    "tokens": [
+      "daily",
+      "july",
+      "2026",
+      "acquires",
+      "101",
+      "home",
+      "florida",
+      "list"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/industrial/tesla-toyota-texas-expansion-135326",
+    "tokens": [
+      "tesla",
+      "toyota",
+      "central",
+      "texas",
+      "major",
+      "industrial",
+      "expansions"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-capital-markets/nscale-secures-900m-for-data-center-expansion-135327",
+    "tokens": [
+      "nscale",
+      "secures",
+      "$900m",
+      "data",
+      "center",
+      "expansion"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/data-center/prince-william-county-board-rejects-plan-for-1940-acre-data-center-hub-135319",
+    "tokens": [
+      "prince",
+      "william",
+      "county",
+      "board",
+      "rejects",
+      "940",
+      "acre",
+      "data",
+      "center"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/newmark-arranges-515m-refinancing-of-midtown-manhattan-office-building/",
+    "tokens": [
+      "newmark",
+      "arranges",
+      "$515m",
+      "refinancing",
+      "midtown",
+      "manhattan",
+      "office",
+      "building"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/auto-parts-distributor-signs-42m-lease-for-industrial-facility-in-chino-california/",
+    "tokens": [
+      "auto",
+      "parts",
+      "distributor",
+      "signs",
+      "full",
+      "building",
+      "industrial",
+      "lease",
+      "chino",
+      "california"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.bisnow.com/london/news/industrial/blockbuster-deals-on-table-as-industrial-logistics-sector-heats-up-135320",
+    "tokens": [
+      "blackstone",
+      "eyes",
+      "indurent",
+      "exit",
+      "logistics",
+      "heats"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/retail/norges-dives-deeper-into-us-retail-assets-with-500m-dollar-investment-135322",
+    "tokens": [
+      "norges",
+      "dives",
+      "deeper",
+      "retail",
+      "assets",
+      "$500m",
+      "investment"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.perenews.com/ohio-teachers-to-focus-on-income-producing-assets-as-it-repositions-portfolio/",
+    "tokens": [
+      "ohio",
+      "teachers",
+      "focus",
+      "income",
+      "producing",
+      "assets",
+      "repositions",
+      "portfolio"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/foreclosures-climb-2019-levels-defaults-discount-report-july-2026/",
+    "tokens": [
+      "foreclosures",
+      "year",
+      "high",
+      "pandemic",
+      "relief",
+      "ends",
+      "here",
+      "default",
+      "discounts",
+      "easiest"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/capital-markets/lp-retreat-fuels-new-york-citys-joint-venture-boom-135309",
+    "tokens": [
+      "joint",
+      "efforts",
+      "dearth",
+      "equity",
+      "investors",
+      "pushes",
+      "biggest",
+      "players",
+      "team"
+    ],
+    "shown_date": "2026-07-08"
+  },
+  {
     "url": "https://www.realtor.com/news/real-estate-news/fed-interest-rates-christopher-waller-speech-forward-guidance/",
     "tokens": [
       "refuses",
@@ -5502,281 +5786,5 @@
       "crosshairs"
     ],
     "shown_date": "2026-06-18"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/06/16/housing-bill-limiting-investors-congress.html",
-    "tokens": [
-      "bill",
-      "limiting",
-      "investors",
-      "buying",
-      "homes",
-      "speed",
-      "through",
-      "congress"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/2026-homebuilder-outlook-shifts-to-deteriorating-fitch",
-    "tokens": [
-      "2026",
-      "homebuilder",
-      "outlook",
-      "shifts",
-      "deteriorating",
-      "fitch"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/multifamily-starts-may-new-construction/823065/",
-    "tokens": [
-      "multifamily",
-      "starts",
-      "plummet"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.realtor.com/research/may-2026-rent/",
-    "tokens": [
-      "2026",
-      "rental",
-      "loved",
-      "locals",
-      "discovered",
-      "outsiders",
-      "rents",
-      "falling"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/fhfa-requests-power-to-pursue-fraud-more-directly",
-    "tokens": [
-      "fhfa",
-      "requests",
-      "power",
-      "pursue",
-      "fraud",
-      "directly"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/las-vegas-nevada-loyal-tenants-rent-report-may-2026/",
-    "tokens": [
-      "vegas",
-      "renters",
-      "want",
-      "leave",
-      "reluctant"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://rebusinessonline.com/muss-development-amesbury-acquire-270-unit-apartment-community-in-lake-charles-louisiana/",
-    "tokens": [
-      "muss",
-      "development",
-      "amesbury",
-      "acquire",
-      "270",
-      "unit",
-      "apartment",
-      "community",
-      "lake",
-      "charles",
-      "louisiana"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWnJjaUc2Vm5vRm9BTTk4RGdnb0VjUXVaMEdyQVdLeUs0aVFZakZsakVMUzhpTFhOZ2VUR25iT3RCQVJjQ1YtLTBrbC1EUW1ZdFRSWHAyR0MycUkybUt3czRQNXNzRF9VZE9HVjQwVGEzM2l0d0xCeEJYaGtETEpwVlN2dEQ0c0ZpRFhCRFdWUG1IbkFScFN4M05WNkZqcUhETmxR?oc=5",
-    "tokens": [
-      "long",
-      "planned",
-      "housing",
-      "project",
-      "near",
-      "jarrell",
-      "moves",
-      "forward",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.redfin.com/news/most-expensive-home-sales-may-2026/",
-    "tokens": [
-      "florida",
-      "dominates",
-      "most",
-      "expensive",
-      "home",
-      "sales",
-      "$75",
-      "million",
-      "boca",
-      "raton",
-      "deal"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.bisnow.com/london/news/capital-markets/uk-pension-fund-to-buy-450m-blackstone-resi-portfolio-135036",
-    "tokens": [
-      "pension",
-      "fund",
-      "450",
-      "blackstone",
-      "resi",
-      "portfolio"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.bisnow.com/london/news/build-to-rent/uks-btr-sector-mass-scale-canadian-market-quadreal-135035",
-    "tokens": [
-      "taken",
-      "control",
-      "destiny",
-      "quadreal",
-      "unveils",
-      "growth"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNi1FS1BzQmhqNDBPZ3VCUGR1eW5teDdSRUhTZUpuXzRrQUpVRmZNS0FKdTl2TnZlaVNua2NGV1NIVXNwaENzeW5seHRBOWk4em5rWER1dnVKbjB4ZHVIYWxYTFd0d2JYaG1ybWtoMi1aZ250YkY5TnJHR0JQSDlkYWx4UU5QV2xmazhIa2p3bFhRQ1NmeEJWSzZTcw?oc=5",
-    "tokens": [
-      "daily",
-      "june",
-      "2026",
-      "capital",
-      "partners",
-      "secures",
-      "financing",
-      "199",
-      "unit",
-      "list"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.bisnow.com/dallas-ft-worth/news/deal-sheet/databank-closes-145b-financing-2-deals-dfw-deal-sheet-135026",
-    "tokens": [
-      "databank",
-      "closes",
-      "$1.45b",
-      "financing",
-      "deals",
-      "deal",
-      "sheet"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.bisnow.com/chicago/news/office/sidley-austin-set-to-anchor-new-related-midwest-skyscraper-135044",
-    "tokens": [
-      "sidley",
-      "austin",
-      "anchor",
-      "related",
-      "midwest",
-      "office",
-      "tower"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/dtlas-bank-of-america-plaza-trades-for-210m-in-receivership-sale/",
-    "tokens": [
-      "dtla",
-      "bank",
-      "america",
-      "plaza",
-      "trades",
-      "$210m",
-      "receivership",
-      "sale"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/commercial-real-estate/costar-5-major-brokerages-hit-with-class-action-lawsuit-alleging-price-fixing-conspiracy-135043",
-    "tokens": [
-      "costar",
-      "major",
-      "brokerages",
-      "class",
-      "action",
-      "lawsuit",
-      "alleging",
-      "price",
-      "fixing",
-      "conspiracy"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/data-center-sustainability-operations/citing-national-security-trump-doj-backs-musk-memphis-data-center-facing-naacp-suit-135047",
-    "tokens": [
-      "urges",
-      "court",
-      "drop",
-      "suit",
-      "against",
-      "elon",
-      "musk",
-      "colossus",
-      "data",
-      "center"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.perenews.com/blueprint-urban-partners-regeneration-windfall-an-esr-departure-affinius-1bn-data-center-fund-and-more/",
-    "tokens": [
-      "blueprint",
-      "urban",
-      "partners",
-      "regeneration",
-      "windfall",
-      "departure",
-      "affinius",
-      "$1b",
-      "data",
-      "center",
-      "fund"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/16/apollo-lending-reit-closing-its-doors-dissolving/",
-    "tokens": [
-      "apollo",
-      "lending",
-      "reit",
-      "dissolve",
-      "$9b",
-      "offload"
-    ],
-    "shown_date": "2026-06-17"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/fund-managers-prepare-opportunity-zone-2-try-convince-investors-this-time-will-be-better-135032",
-    "tokens": [
-      "different",
-      "cycle",
-      "fund",
-      "managers",
-      "convince",
-      "investors",
-      "better"
-    ],
-    "shown_date": "2026-06-17"
   }
 ]
