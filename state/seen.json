@@ -1,5 +1,284 @@
 [
   {
+    "url": "https://www.cnbc.com/video/2026/07/11/how-the-new-housing-reform-aims-to-make-homes-more-affordable.html",
+    "tokens": [
+      "largest",
+      "housing",
+      "bill",
+      "decades",
+      "became",
+      "here",
+      "americans",
+      "impact"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.realtor.com/research/existing-home-sales-june-2026/",
+    "tokens": [
+      "existing",
+      "home",
+      "sales",
+      "slip",
+      "june",
+      "notch",
+      "straight",
+      "annual",
+      "gain"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/iran-conflict-lifts-mortgage-rates-but-housing-demand-stays-positive/",
+    "tokens": [
+      "iran",
+      "conflict",
+      "lifts",
+      "mortgage",
+      "rates",
+      "housing",
+      "demand",
+      "stays",
+      "positive"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/housing-lawsuits-multifamily-legal-actions/824829/",
+    "tokens": [
+      "major",
+      "housing",
+      "related",
+      "legal",
+      "actions",
+      "summer"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260709a.htm",
+    "tokens": [
+      "federal",
+      "reserve",
+      "announces",
+      "leadership",
+      "objectives",
+      "task",
+      "forces",
+      "advance",
+      "conduct",
+      "monetary",
+      "policy"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://rebusinessonline.com/raven-capital-completes-33-story-multifamily-high-rise-in-houstons-museum-district/",
+    "tokens": [
+      "raven",
+      "capital",
+      "completes",
+      "story",
+      "multifamily",
+      "high",
+      "rise",
+      "houston",
+      "museum",
+      "district"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-arranges-111m-construction-loan-for-multifamily-development-in-miamis-edgewater-district/",
+    "tokens": [
+      "arranges",
+      "$111m",
+      "construction",
+      "loan",
+      "multifamily",
+      "development",
+      "miami",
+      "edgewater",
+      "district"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOX1pkcEEtWjdqQmxxX0ctTW02RkJqdHRXT2J0QjlhRnRiTHN2Y1RDU3NPcUZlUFRFVVR1OHJxR3NCN2NDblFpTjFjWlplWWhudUVybWpJUmZtZk1hU2UyUmFxR0wyQ2hlUWJOWUN4US1GbVAzZ3o3NExNRGtyRW1KVzBtUEVCLUwwaWNMcFlwM0s2LTJHekNRaHUzMmduSjZvb0M2TGp3?oc=5",
+    "tokens": [
+      "group",
+      "hatc",
+      "partner",
+      "affordable",
+      "multifamily",
+      "project",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObVZVVWFlYlhKNU1kZ1BhcFZhUS1peGhFN0JEcWVCWHZrelYzWDRlRldieEtFbUlUeUxNS3pIWk9OWUoxZTJnV2tiVDgtX3MwSFpHMGI4NnUtUDMtelBLSkJNVk5pSmJEM2p1Wl80Ykdvb0Nzc2xTdmhKMVNHMV80T1BMQV8ta3I4RjJ4blpCb1RyUy02SkNTWmdSa0ZCQWM?oc=5",
+    "tokens": [
+      "investment",
+      "company",
+      "workforce",
+      "housing",
+      "taylor",
+      "beyond",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.credaily.com/briefs/weak-june-jobs-report-tests-rental-housing-outlook/",
+    "tokens": [
+      "weak",
+      "june",
+      "jobs",
+      "tests",
+      "rental",
+      "housing",
+      "outlook",
+      "8211",
+      "daily"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.bisnow.com/london/news/office/stanhope-and-norges-go-hunting-as-sovereign-fund-pivots-strategy-135361",
+    "tokens": [
+      "stanhope",
+      "norges",
+      "hunting",
+      "sovereign",
+      "fund",
+      "pivots",
+      "strategy"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/survey-cre-capital-markets-likely-to-continue-riding-out-macroeconomic-storm-135373",
+    "tokens": [
+      "survey",
+      "neutral",
+      "normal",
+      "investors"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://rebusinessonline.com/goodman-real-estate-sells-two-apartment-communities-near-seattle-for-172m/",
+    "tokens": [
+      "goodman",
+      "sells",
+      "apartment",
+      "communities",
+      "near",
+      "seattle",
+      "$172m"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.bisnow.com/denver/news/industrial/industrial-market-holds-steady-but-denvers-population-slowdown-raises-concerns-135384",
+    "tokens": [
+      "denver",
+      "population",
+      "slowdown",
+      "hurdle",
+      "otherwise",
+      "stable",
+      "industrial",
+      "market"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://therealdeal.com/national/philadelphia/2026/07/10/there-are-no-offices-being-built-in-philadelphia/",
+    "tokens": [
+      "there",
+      "offices",
+      "being",
+      "built",
+      "philadelphia"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOX0tHQllKUE1wTnU1RDkyUzlFSXRoRkp4Rmp6UmdmZmlaSzRyNWdaMGc1bnhJUXN2TEdiSDhXZEUyZjMydGxFQkFxX2pmOV84bTBwcld5dExORDhTeUN4WkJmRGFBYXdkalNJdmc2WWtjQ1FBUmFHN0ZqNk4xTXZLamMyS1lucmtoZ3VXdnVBVWZHTE9aUDFCWURrbzN2U0tmYmJB?oc=5",
+    "tokens": [
+      "warren",
+      "buffett",
+      "heir",
+      "another",
+      "housing",
+      "market",
+      "fast",
+      "company"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.perenews.com/australias-rest-eyes-us-property-in-private-markets-ramp-up/",
+    "tokens": [
+      "australia",
+      "rest",
+      "eyes",
+      "property",
+      "private",
+      "markets",
+      "ramp"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://www.perenews.com/blueprint-gpif-appoints-real-estate-chief-our-first-ever-capital-advisory-ranking-reits-private-funds-push-and-more/",
+    "tokens": [
+      "blueprint",
+      "gpif",
+      "appoints",
+      "chief",
+      "first",
+      "ever",
+      "capital",
+      "advisory",
+      "ranking",
+      "reits",
+      "private",
+      "funds",
+      "push"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/07/mortgage-activity-flat-in-june-arm-share-decreases/",
+    "tokens": [
+      "mortgage",
+      "activity",
+      "flat",
+      "june",
+      "share",
+      "decreases"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQN1cxNzJWeGc0RUJJdHhpVkV6SkdTbGFIbVZDLTNoMm9rSGJfN3h6VTZIT29hZDQyb1FGT0s0NE9SaWF1Z0JGZUM0dWdSdXRtVVlpaUREa3Z2YkhCYWprWmhibHhMZ0hqNWxiLTV3YjQxaGUtdjBxMk51eklka09TSy0wcFZOOW1aUUYxaVZGZkdpODduT1E?oc=5",
+    "tokens": [
+      "lawrence",
+      "home",
+      "sales",
+      "stuck",
+      "near",
+      "year",
+      "inman"
+    ],
+    "shown_date": "2026-07-12"
+  },
+  {
     "url": "https://www.realtor.com/news/trends/existing-home-sales-nar-june-2026/",
     "tokens": [
       "homes",
@@ -5474,298 +5753,5 @@
       "idaho"
     ],
     "shown_date": "2026-06-22"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/06/17/pending-home-sales-rose-in-may.html",
-    "tokens": [
-      "pending",
-      "home",
-      "sales",
-      "post",
-      "surprisingly",
-      "large",
-      "gain"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/06/gains-for-household-real-estate-assets/",
-    "tokens": [
-      "gains",
-      "household",
-      "assets"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/federal-reserve-june-rate-decision-fed-chair-kevin-warsh-135049",
-    "tokens": [
-      "holds",
-      "rates",
-      "steady",
-      "kevin",
-      "warsh",
-      "first",
-      "meeting",
-      "chair"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/affordable-housing-market-report/",
-    "tokens": [
-      "affordable",
-      "housing",
-      "market",
-      "8211",
-      "june",
-      "2026"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPTU45akhMVkRZRUQxQWNLNGdteFVrNlJGVktPN3R6cmJWMWpYTFdYdExGOEN5WUdXWDJ0OG1qZlozMzBuZUUwc0JYOXNDMWZ1Z2dGMkh0ZG51TVFXMnpVMndiRjVFT2ZlRkVNc1BPaW5ramt3UmZLTEtuX1cyOVEtd1hwZ2R1YVdncmRFSGNPMFV1Zw?oc=5",
-    "tokens": [
-      "major",
-      "housing",
-      "markets",
-      "falling",
-      "home",
-      "prices",
-      "fast",
-      "company"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/naples-florida-ultimate-quiet-luxury-capital/",
-    "tokens": [
-      "paradise",
-      "coast",
-      "enclave",
-      "steps",
-      "spotlight",
-      "florida",
-      "ultimate",
-      "quiet",
-      "luxury",
-      "capital"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://rebusinessonline.com/kolter-multifamily-begins-construction-on-386-unit-apartment-community-in-delray-beach-florida/",
-    "tokens": [
-      "kolter",
-      "multifamily",
-      "begins",
-      "construction",
-      "386",
-      "unit",
-      "apartment",
-      "community",
-      "delray",
-      "beach",
-      "florida"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/06/17/nar-pending-home-sales-may/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=nar-pending-home-sales-may",
-    "tokens": [
-      "pending",
-      "home",
-      "sales",
-      "surge",
-      "despite",
-      "high",
-      "borrowing",
-      "costs"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/las-vegas-stack-auto-lofts-car-condo-luxury/",
-    "tokens": [
-      "$1.6",
-      "million",
-      "condo",
-      "your",
-      "only",
-      "vegas"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://rebusinessonline.com/walmart-to-open-175995-sf-store-at-santa-rita-ranch-in-liberty-hill-texas/",
-    "tokens": [
-      "walmart",
-      "open",
-      "175",
-      "995",
-      "store",
-      "santa",
-      "rita",
-      "ranch",
-      "liberty",
-      "hill",
-      "texas"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://rebusinessonline.com/mrc-provides-480m-in-financing-for-office-to-residential-conversion-project-in-midtown-manhattan/",
-    "tokens": [
-      "provides",
-      "$480m",
-      "financing",
-      "office",
-      "residential",
-      "conversion",
-      "project",
-      "midtown",
-      "manhattan"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://rebusinessonline.com/marcus-millichap-brokers-sale-of-1087-unit-self-storage-portfolio-in-elgin-texas/",
-    "tokens": [
-      "marcus",
-      "038",
-      "millichap",
-      "brokers",
-      "sale",
-      "087",
-      "unit",
-      "self",
-      "storage",
-      "portfolio",
-      "elgin",
-      "texas"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://rebusinessonline.com/skanska-breaks-ground-on-134m-academic-project-at-texas-am-university-in-college-station/",
-    "tokens": [
-      "skanska",
-      "breaks",
-      "ground",
-      "$134m",
-      "academic",
-      "project",
-      "texas",
-      "038",
-      "university",
-      "college",
-      "station"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/nyc-dot-modernizes-willets-point-offices-and-yard-with-121m-redevelopment/",
-    "tokens": [
-      "modernizes",
-      "willets",
-      "point",
-      "offices",
-      "yard",
-      "$121m",
-      "redevelopment"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.perenews.com/core-real-estate-stands-to-benefit-from-rising-infrastructure-risk/",
-    "tokens": [
-      "core",
-      "stands",
-      "benefit",
-      "rising",
-      "infrastructure",
-      "risk"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.perenews.com/partners-groups-asia-real-estate-boss-to-step-down/",
-    "tokens": [
-      "partners",
-      "group",
-      "asia",
-      "boss",
-      "step",
-      "down"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZ1U1eERKdGhTNjgwNkgtbWtBcjJKQTByNDI2U3NOYXVxNHh6Z0IxREFBZ1FQMXk2eklSODlIb3llZjVYVmVqMmZ0MlNGNk9SRjhhcjVGWlpUWjM2RDQ5ei1GbFNEcmZiZGlqbWR6T2t3RTdEYU44RTl6SVB2aWNCLVF2ZXhwMFdlaG5QQTZzakpFZ2k4NkMzZk9TZldSLVBJZUtPakFJWm5uOEFaZElwSGhnaDFSLXdNdFNZTkw3S3ZTbHAydXZ2QndBaG4xUEg2WEZzZ2xaaHNoa0dabkNBUU9SdXE?oc=5",
-    "tokens": [
-      "housing",
-      "market",
-      "affordability",
-      "stretched",
-      "$23b",
-      "builder",
-      "shelling",
-      "$55k",
-      "incentives",
-      "home",
-      "fast",
-      "company"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/06/18/mortgage-rates-jump-post-fed-heres-what-you-need-to-know.html",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "jump",
-      "post",
-      "here",
-      "need",
-      "know"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260618a.htm",
-    "tokens": [
-      "federal",
-      "reserve",
-      "board",
-      "requests",
-      "comment",
-      "proposal",
-      "require",
-      "certain",
-      "payment",
-      "stablecoin",
-      "issuers",
-      "maintain",
-      "effective",
-      "customer",
-      "identification",
-      "program"
-    ],
-    "shown_date": "2026-06-21"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/06/19/home-equity-borrow.html",
-    "tokens": [
-      "homeowners",
-      "tapped",
-      "$47",
-      "billion",
-      "equity",
-      "first",
-      "quarter",
-      "consider",
-      "borrow"
-    ],
-    "shown_date": "2026-06-21"
   }
 ]
