@@ -1,5 +1,284 @@
 [
   {
+    "url": "https://www.realtor.com/research/cpi-inflation-june-2026/",
+    "tokens": [
+      "june",
+      "2026",
+      "soft",
+      "inflation",
+      "beats",
+      "expectations",
+      "likely",
+      "remain",
+      "pause",
+      "vigilant",
+      "july"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260714a.htm",
+    "tokens": [
+      "minutes",
+      "board",
+      "discount",
+      "rate",
+      "meetings",
+      "june",
+      "2026"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.realtor.com/research/june-2026-rent/",
+    "tokens": [
+      "june",
+      "2026",
+      "rental",
+      "median",
+      "asking",
+      "rents",
+      "continue",
+      "decline"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/compass-ethics-complaints-zillow/",
+    "tokens": [
+      "compass",
+      "files",
+      "ethics",
+      "complaints",
+      "against",
+      "zillow",
+      "states"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/what-fhfas-counterparty-suspension-change-may-mean",
+    "tokens": [
+      "fhfa",
+      "counterparty",
+      "suspension",
+      "change",
+      "mean"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.bisnow.com/charlotte/news/other/lincoln-property-buys-charlotte-developer-135418",
+    "tokens": [
+      "lincoln",
+      "property",
+      "buys",
+      "charlotte",
+      "developer",
+      "boost",
+      "deals"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.redfin.com/news/buyers-vs-sellers-june-2026/",
+    "tokens": [
+      "home",
+      "sellers",
+      "outnumber",
+      "buyers",
+      "miami",
+      "nashville",
+      "texas",
+      "nation",
+      "strongest",
+      "buyer",
+      "markets"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQXBxSWJpS2xTdWdqLUR2R00wYkR4WE5PdWNYWXhFQ2MzeVVfZlRkd28zaDFUbHN6bFNSVDVGME9leW01NWs4bEVtNVN0UWF1QnoxUmttS2ZIRVJhTkk0MnVvM19uY3pXNDVKUFktRVZEdWotZmZlTi1RUmdYTXNVM1NqYW1MV3kzUDZPQU9nWEdVVE9NOXdqdlhHNVZ5bEh5R0E?oc=5",
+    "tokens": [
+      "pending",
+      "metro",
+      "atlanta",
+      "home",
+      "sales",
+      "drop",
+      "buyers",
+      "remain",
+      "stymied",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/joint-venture-buys-two-student-housing-communities-totaling-1128-beds-near-texas-am-university/",
+    "tokens": [
+      "joint",
+      "venture",
+      "buys",
+      "student",
+      "housing",
+      "communities",
+      "totaling",
+      "128",
+      "beds",
+      "near",
+      "texas",
+      "038",
+      "university"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/07/13/wall-street-landlords-find-wiggle-room-in-new-us-housing-law/",
+    "tokens": [
+      "wall",
+      "street",
+      "landlords",
+      "find",
+      "wiggle",
+      "room",
+      "housing"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQT3NZeGYzUHE3OXQ3ODQtekx2SzJQMFNrWnBtUUZab3YxcmFLSDE5Sk84RGMtZHotdEh5Q19ZRjNodkhyX2RENXdIUjFJT0lReUh1SDlnSFQtVVgyQlFiMVN2UEM3TGx6RUhjRlBWSi1kc0Z2OEpHNFoyUnA1Q3Z4QWNn?oc=5",
+    "tokens": [
+      "daily",
+      "july",
+      "2026",
+      "berkadia",
+      "arranges",
+      "sale",
+      "$112.5m",
+      "list"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.bisnow.com/atlanta/news/build-to-rent/federal-housing-law-atlanta-investors-build-to-rent-135402",
+    "tokens": [
+      "housing",
+      "send",
+      "institutional",
+      "investors",
+      "flocking",
+      "build",
+      "rent"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/liteon-to-invest-919m-in-metro-dallas-manufacturing-campus-create-600-jobs/",
+    "tokens": [
+      "liteon",
+      "invest",
+      "$919m",
+      "metro",
+      "dallas",
+      "manufacturing",
+      "campus",
+      "create",
+      "600",
+      "jobs"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/finance/columbia-property-trust-restructure-debt-135415",
+    "tokens": [
+      "columbia",
+      "property",
+      "trust",
+      "modifies",
+      "$1.8b",
+      "loan",
+      "multiple",
+      "defaults"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/brookfield-in-talks-for-stake-in-hudson-square-properties/",
+    "tokens": [
+      "brookfield",
+      "talks",
+      "stake",
+      "hudson",
+      "square",
+      "properties"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/07/14/greystar-accused-of-violating-fair-housing-laws/",
+    "tokens": [
+      "greystar",
+      "accused",
+      "violating",
+      "fair",
+      "housing",
+      "laws"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-capital-markets/databank-edgecore-courting-buyers-potential-sales-135412",
+    "tokens": [
+      "data",
+      "center",
+      "firms",
+      "databank",
+      "edgecore",
+      "reportedly",
+      "courting",
+      "buyers"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.perenews.com/la-caisses-horstmann-were-not-shying-away-from-the-us/",
+    "tokens": [
+      "caisse",
+      "horstmann",
+      "shying",
+      "away"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.perenews.com/2019-23-vintage-funds-have-distributed-50-or-less-of-capital/",
+    "tokens": [
+      "2019",
+      "vintage",
+      "funds",
+      "distributed",
+      "50%",
+      "less",
+      "capital"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-merger-and-acquisition-apartment-investment/825219/",
+    "tokens": [
+      "milhaus",
+      "residential",
+      "merge",
+      "creating",
+      "$2.5b",
+      "multifamily",
+      "development",
+      "pipeline"
+    ],
+    "shown_date": "2026-07-15"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/feds-waller-concerned-about-rising-inflation",
     "tokens": [
       "waller",
@@ -5434,282 +5713,5 @@
       "experts"
     ],
     "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/road-housing-act-trump/",
-    "tokens": [
-      "congress",
-      "passes",
-      "century",
-      "road",
-      "housing",
-      "sends",
-      "bill",
-      "trump"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.realtor.com/research/federal-reserve-june-2026-meeting/",
-    "tokens": [
-      "warsh",
-      "first",
-      "meeting",
-      "rates",
-      "hold",
-      "voice",
-      "changes"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.redfin.com/news/home-price-index-may-2026/",
-    "tokens": [
-      "home",
-      "price",
-      "growth",
-      "accelerated",
-      "fueled",
-      "april",
-      "brief",
-      "mortgage",
-      "rate",
-      "reprieve"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/mortgage-rates-fed-hike-odds/",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "move",
-      "near",
-      "6.8%",
-      "potential",
-      "hike",
-      "grows"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/housing-demand-decline-2026/",
-    "tokens": [
-      "builders",
-      "planned",
-      "undersupply",
-      "demand",
-      "swing",
-      "factor"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://rebusinessonline.com/berkadia-arranges-124-6m-loan-for-refinancing-of-irving-mixed-use-property/",
-    "tokens": [
-      "berkadia",
-      "arranges",
-      "$124.6m",
-      "loan",
-      "refinancing",
-      "irving",
-      "mixed",
-      "property"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.realtor.com/advice/hyperlocal/atlanta-rents-are-going-down/",
-    "tokens": [
-      "atlanta",
-      "rents",
-      "going",
-      "down"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVWRpalF0azQ4aWo2RnB3OVQ3SmNQRGxMaXFzOVRCc3R0NVM1bXVLMUlQQ0dvc09hN2VnaEN5bXZ4dkRjYkVwaGtKaF81NV9xU19jVVpmUks4cnlmTzNoUk5HQUszLU1JeWIzMU5yTkJXdHB3S1hpZWU5dWktbXlzTURNVkZEZzBqVmFTSkgzR2Q5b3VnTGJ5Qi15MG5XSFBFbnFkYUlSX3BGZw?oc=5",
-    "tokens": [
-      "metro",
-      "atlanta",
-      "home",
-      "sales",
-      "likely",
-      "recover",
-      "2026",
-      "analyst",
-      "warns",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbExSYnhXMTgyX1JjZG9HcklCVTFTaWpWUkdGbmVPcmplREFXYW1NLXRTa1FzWk5yNHloczduVGMxV0lZOHQxeTNXUS1TbDRpbDhscGxzakYwaDhSbEdXQThxbjRvOFAtTE5qMVdJREs5UlZ0eER3YUpTWXFxbmZ6MUxzX0VMTmdDNFFXMmJkVUlyS19BYUlMUi1laG1ndFNIR0hnYlpvcDBYSUozVzh5emFR?oc=5",
-    "tokens": [
-      "nashville",
-      "homes",
-      "selling",
-      "faster",
-      "last",
-      "year",
-      "market",
-      "gains",
-      "momentum",
-      "wsmv"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNd3cxSjU2dG5UWVA4LWpyTnptWWM1ZFY1R3VWbXdzU0JROExQTTUtSmpVSE5pSEs1TEZEOGNLMU9lVnR6WjFjZFhMS2ZjdnpoeUh2Z0otQl83SlZOVGVPNzZGbTR2c3daOWkyY2Q0Rkp0UkNYOHZ5UEppSElfSldZQ0FidXlPblI2ZTI2RFVRSDdnbnNTQ1VQWUZubl85U0swejM4ZVBWVzk?oc=5",
-    "tokens": [
-      "hillwood",
-      "hits",
-      "million",
-      "square",
-      "feet",
-      "fort",
-      "worth",
-      "construction",
-      "pipeline",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/23/office-properties-income-trust-emerges-from-bankruptcy/",
-    "tokens": [
-      "office",
-      "properties",
-      "income",
-      "trust",
-      "emerges",
-      "bankruptcy"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.bisnow.com/nashville/news/mixed-use/kkr-stadium-district-development-sec-school-arctos-university-tennessee-135123",
-    "tokens": [
-      "backed",
-      "stadium",
-      "district",
-      "development",
-      "venture",
-      "launches",
-      "$288m",
-      "project",
-      "school"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/walker-dunlop-arranges-375m-loan-for-jersey-city-mixed-use/",
-    "tokens": [
-      "walker",
-      "038",
-      "dunlop",
-      "arranges",
-      "$375m",
-      "loan",
-      "jersey",
-      "city",
-      "mixed"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/data-center-development/virginia-keeping-data-center-tax-breaks-adding-tax-energy-use-135137",
-    "tokens": [
-      "virginia",
-      "budget",
-      "keeps",
-      "data",
-      "center",
-      "breaks",
-      "adds",
-      "$600m",
-      "energy",
-      "levy"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.dmagazine.com/business-economy/2026/06/arcosa-acquired-by-crh/",
-    "tokens": [
-      "dallas",
-      "based",
-      "arcosa",
-      "acquired",
-      "rival",
-      "$8.5",
-      "billion"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.perenews.com/psp-reports-1-5bn-real-estate-loss-amid-shift-toward-infra/",
-    "tokens": [
-      "$1.5b",
-      "loss",
-      "shift",
-      "toward",
-      "infra"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/crescent-heights-skyline-oc-lands-210m-financing/",
-    "tokens": [
-      "crescent",
-      "heights",
-      "skyline",
-      "lands",
-      "$210m",
-      "financing"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/hud-fha-14-changes/",
-    "tokens": [
-      "adopts",
-      "changes",
-      "policies",
-      "aiming",
-      "lower",
-      "costs",
-      "ease",
-      "credit",
-      "access"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://therealdeal.com/national/boston/2026/06/23/rent-control-measure-slashed-from-massachusetts-ballot/",
-    "tokens": [
-      "rent",
-      "control",
-      "measure",
-      "slashed",
-      "massachusetts",
-      "ballot"
-    ],
-    "shown_date": "2026-06-24"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/cbre-tapped-find-buyer-for-more-than-half-of-reits-grocery-anchored-assets-135125",
-    "tokens": [
-      "retail",
-      "reit",
-      "taps",
-      "cbre",
-      "sell",
-      "half",
-      "assets"
-    ],
-    "shown_date": "2026-06-24"
   }
 ]
