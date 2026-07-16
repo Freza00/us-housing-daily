@@ -1,5 +1,289 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/economic-activity-expands-but-consumers-feel-the-squeeze/",
+    "tokens": [
+      "economic",
+      "activity",
+      "expands",
+      "consumers",
+      "feel",
+      "squeeze"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.redfin.com/news/cpi-july-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "fall",
+      "cooler",
+      "expected",
+      "inflation",
+      "lowers",
+      "odds",
+      "july",
+      "rate",
+      "hike"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/07/10/housing-bill-to-become-law-without-trumps-support/",
+    "tokens": [
+      "federal",
+      "housing",
+      "bill",
+      "become",
+      "without",
+      "trump",
+      "support"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/budget-for-6-3-rates-through-2027-fannie-mae-warns",
+    "tokens": [
+      "budget",
+      "6.3%",
+      "rates",
+      "through",
+      "2027",
+      "fannie",
+      "warns"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/vought-cfpb-reform-testimony/",
+    "tokens": [
+      "vought",
+      "defends",
+      "cfpb",
+      "cuts",
+      "calls",
+      "congressional",
+      "reforms"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQc3A1aHo1bGZrckhqZjY0R1pXcV9fYmx4WWdrZXN0YjBteHRMNXl1dXFZRmU1UWY5Vy1LWk9iWWRNQVI4UTFDUC1nQUVRZUxiamJUWm5Fc2tTRU1ueWotbmI2QjJVa3lLeTJYLVktOGJaamFLeE5nb2N4b0pYMDRRTWt3eUZVZFRnc3BHdDhVaGMyUll2?oc=5",
+    "tokens": [
+      "data",
+      "suggests",
+      "austin",
+      "housing",
+      "market",
+      "fairly",
+      "balanced",
+      "welcome",
+      "change",
+      "drastic",
+      "downs",
+      "recently",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/making-condos-safer-loans/",
+    "tokens": [
+      "condo",
+      "safety",
+      "repairs",
+      "bill",
+      "returns",
+      "bipartisan",
+      "florida",
+      "support"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://rebusinessonline.com/cushman-wakefield-arranges-95-7m-in-financing-for-metro-houston-dallas-affordable-housing-portfolio/",
+    "tokens": [
+      "cushman",
+      "038",
+      "wakefield",
+      "arranges",
+      "$95.7m",
+      "financing",
+      "metro",
+      "houston",
+      "dallas",
+      "affordable",
+      "housing",
+      "portfolio"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-arranges-76-8m-construction-loan-for-multifamily-development-in-jacksonville-beach/",
+    "tokens": [
+      "arranges",
+      "$76.8m",
+      "construction",
+      "loan",
+      "multifamily",
+      "development",
+      "jacksonville",
+      "beach"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOODZ6d3F2SWk2ZWU2S0ZlcEtXdXBuRmp1QkNldkM4UHJ1RTVfSXFORk0zSXRfakNuUW5DWjJHV3dLa2ZZamt6X3lvSktIMmhoRmlENG5TLXdqYm52WGZFdy1Oamx3NFNabWpwOGlZM2hmQW5qWUl4Yy1LanZNOUZCS2F3aWRJRVhQc1NPZEhZLVNLT3dFS3dUcmRWeGw5WGxTSmRyMUdB?oc=5",
+    "tokens": [
+      "progress",
+      "residential",
+      "scores",
+      "$385m",
+      "refi",
+      "housing",
+      "takes",
+      "effect",
+      "hoodline"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/build-to-rent/investor-launches-100m-btr-fund-to-capitalize-on-opportunity-from-housing-bill-135405",
+    "tokens": [
+      "investor",
+      "launching",
+      "$100m",
+      "fund",
+      "capitalize",
+      "opportunity",
+      "housing",
+      "bill"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/road-housing-act-btr-impacts/",
+    "tokens": [
+      "road",
+      "ahead",
+      "build",
+      "rent"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-merger-and-aqusition-lincoln-spectrum/825340/",
+    "tokens": [
+      "lincoln",
+      "property",
+      "acquires",
+      "spectrum"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/ziegler-arranges-304m-tax-exempt-bond-for-groton-senior-living-expansion/",
+    "tokens": [
+      "ziegler",
+      "arranges",
+      "$304m",
+      "exempt",
+      "bond",
+      "groton",
+      "senior",
+      "living",
+      "expansion"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/cox-castle-advises-on-ipx-powers-4-95b-darden-project/",
+    "tokens": [
+      "castle",
+      "advises",
+      "power",
+      "$4.95b",
+      "darden",
+      "project"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-power/largest-us-grid-operator-power-costs-soar-60-percent-ai-data-center-demand-135432",
+    "tokens": [
+      "largest",
+      "grid",
+      "operator",
+      "sees",
+      "power",
+      "costs",
+      "soar",
+      "60%",
+      "data",
+      "center",
+      "development"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/data-center-development/kathy-hochul-new-york-data-center-moratorium-executive-order-135406",
+    "tokens": [
+      "governor",
+      "signs",
+      "first",
+      "statewide",
+      "data",
+      "center",
+      "moratorium",
+      "halting",
+      "$10b",
+      "development"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/the-banks-powering-private-credits-cre-lending-boom-revealed-135409",
+    "tokens": [
+      "revealed",
+      "banks",
+      "powering",
+      "private",
+      "credit",
+      "lending",
+      "boom"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/realpage-acquire-cherre-real-estate-data-ai/823637/",
+    "tokens": [
+      "realpage",
+      "buys",
+      "focused",
+      "data",
+      "firm",
+      "cherre"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/07/15/mortgage-rates-rise-to-highest-level-in-nearly-a-year.html",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "rise",
+      "highest",
+      "level",
+      "nearly",
+      "year",
+      "causing",
+      "homebuyers",
+      "pause"
+    ],
+    "shown_date": "2026-07-16"
+  },
+  {
     "url": "https://www.realtor.com/research/cpi-inflation-june-2026/",
     "tokens": [
       "june",
@@ -5432,286 +5716,5 @@
       "normal"
     ],
     "shown_date": "2026-06-26"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/new-home-sales-may-2026-affordability-pressures/",
-    "tokens": [
-      "home",
-      "sales",
-      "fall",
-      "rate",
-      "shock",
-      "inflation",
-      "squeeze",
-      "buyers"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/duty-to-serve-chattel-loans-fhfa/",
-    "tokens": [
-      "fhfa",
-      "pushes",
-      "gses",
-      "embrace",
-      "chattel",
-      "loans",
-      "duty",
-      "serve",
-      "proposal"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/trump-abruptly-refuses-to-sign-major-bipartisan-housing-bill/823685/",
-    "tokens": [
-      "trump",
-      "abruptly",
-      "refuses",
-      "sign",
-      "major",
-      "bipartisan",
-      "housing",
-      "bill"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/may-2026-new-home-sales-fall/",
-    "tokens": [
-      "housing",
-      "construction"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.realtor.com/advice/weather/tornado-alley-eastern-states-home-insurance/",
-    "tokens": [
-      "tornado",
-      "alley",
-      "shifting",
-      "east",
-      "these",
-      "housing",
-      "markets",
-      "unprepared",
-      "face",
-      "biggest",
-      "risks"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/surfside-collapse-still-squeezing-condo-mortgage-access",
-    "tokens": [
-      "surfside",
-      "collapse",
-      "squeezing",
-      "condo",
-      "mortgage",
-      "access"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://rebusinessonline.com/michigan-strategic-fund-approves-270-7m-plan-for-redevelopment-of-former-lakeside-mall/",
-    "tokens": [
-      "michigan",
-      "strategic",
-      "fund",
-      "approves",
-      "$270.7m",
-      "redevelopment",
-      "former",
-      "lakeside",
-      "mall"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/06/24/mba-mortgage-applications-june-24/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=mba-mortgage-applications-june-24",
-    "tokens": [
-      "mortgage",
-      "applications",
-      "tick",
-      "higher",
-      "despite",
-      "hawkish",
-      "tone"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWDhVZTF1cjZhc05KT1pMUFNLZWxGOVNtVjhsdlNrZlBPRFh0aUxYUFRRYVBqb2JlRmVfX2c0cUVYQTlaYjdHX3AtSmVucFBUU1RJUjJKTHAtVUk1Mkw3bzNEVzh1Skt1cjZBQzlzUnRJSFMwUnRUcjRDdVpMT3laOUhLLW54bmcwRTBDTS15ckM?oc=5",
-    "tokens": [
-      "exclusive",
-      "goldman",
-      "sachs",
-      "pays",
-      "$81m",
-      "phoenix",
-      "property",
-      "multifamily",
-      "housing"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/us-office-market-outlook/",
-    "tokens": [
-      "office",
-      "market",
-      "outlook",
-      "june",
-      "2026"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/documents-easing-of-us-self-storage-rent-decline/",
-    "tokens": [
-      "yardi",
-      "matrix",
-      "documents",
-      "easing",
-      "self",
-      "storage",
-      "rent",
-      "decline"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.bisnow.com/dallas-ft-worth/news/industrial/defense-technology-startup-targets-fort-worth-site-next-manufacturing-facility-135152",
-    "tokens": [
-      "defense",
-      "technology",
-      "startup",
-      "targets",
-      "fort",
-      "worth",
-      "site",
-      "next",
-      "manufacturing",
-      "facility"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.bisnow.com/south-florida/news/multifamily/investigators-say-condo-deadly-surfside-collapse-had-been-failing-for-almost-a-month-135153",
-    "tokens": [
-      "years",
-      "deadly",
-      "surfside",
-      "collapse",
-      "investigators",
-      "building",
-      "failure",
-      "began",
-      "weeks",
-      "prior"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/student-housing-rents-edge-up-as-preleasing-proceeds/",
-    "tokens": [
-      "student",
-      "housing",
-      "rents",
-      "edge",
-      "preleasing",
-      "proceeds",
-      "yardi",
-      "matrix"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.perenews.com/la-fire-and-police-urged-to-get-money-to-work-in-current-market-cycle/",
-    "tokens": [
-      "fire",
-      "police",
-      "urged",
-      "money",
-      "work",
-      "current",
-      "market",
-      "cycle"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/pulte-says-title-waiver-pilot-expanding-new-study-warns-of-risk",
-    "tokens": [
-      "pulte",
-      "title",
-      "waiver",
-      "pilot",
-      "expanding",
-      "study",
-      "warns",
-      "risk"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/06/24/supreme-court-limits-equity-claims-in-tax-foreclosure-case/",
-    "tokens": [
-      "supreme",
-      "court",
-      "limits",
-      "home",
-      "equity",
-      "claims",
-      "foreclosure",
-      "case"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.redfin.com/news/climate-migration-real-estate-2026/",
-    "tokens": [
-      "flood",
-      "prone",
-      "parts",
-      "america",
-      "losing",
-      "residents",
-      "nearly",
-      "twice",
-      "last",
-      "year",
-      "rate"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/hud-trims-fha-red-tape-groups-want-mip-cut-next",
-    "tokens": [
-      "trims",
-      "tape",
-      "groups",
-      "want",
-      "next"
-    ],
-    "shown_date": "2026-06-25"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/spcx-401k-retirement-portfolio-homebuying-power/",
-    "tokens": [
-      "spacex",
-      "heading",
-      "your",
-      "401",
-      "adding",
-      "potential",
-      "homeownership",
-      "power",
-      "retirement",
-      "account",
-      "experts"
-    ],
-    "shown_date": "2026-06-25"
   }
 ]
