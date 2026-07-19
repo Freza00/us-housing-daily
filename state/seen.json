@@ -1,5 +1,273 @@
 [
   {
+    "url": "https://therealdeal.com/national/2026/07/17/21st-century-road-to-housing-act-is-now-law/",
+    "tokens": [
+      "housing",
+      "notes",
+      "road",
+      "nowhere",
+      "century"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/june-starts-permits-cycle-lows/",
+    "tokens": [
+      "housing",
+      "permits",
+      "near",
+      "cycle",
+      "lows",
+      "starts",
+      "beat",
+      "estimates"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/07/inflation-cooled-in-june-as-gas-prices-eased/",
+    "tokens": [
+      "inflation",
+      "cooled",
+      "june",
+      "prices",
+      "eased"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9BZlFNWFBaMkhYbmtTY0ZHcktyNHYxTzRLSGtDMEt0dUdjZEJFQTcyS1gtLWZ4c3dfcFFORzFNMkVfTDBpY0t4enJjblc3ZTJPRWdHUy1kRHgwQlBqZC10ZmJiVUhXWFVm?oc=5",
+    "tokens": [
+      "pending",
+      "sales",
+      "slide",
+      "5.4%",
+      "june",
+      "under",
+      "pressure",
+      "high",
+      "rates",
+      "inman"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/07/16/housing-market-mortgages-homebuilding.html",
+    "tokens": [
+      "here",
+      "housing",
+      "market",
+      "hurting",
+      "summer"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5XcE04Q0dMLTBNaGtQbEhKM3gxOTEzc3BzR3h4Y1dBUC1IUG5wU3FNWkxxZF9pSkRnbTA3OHk1eTNDSTBNVzJSVEJNcWszRTl3cUJnOU1QeWZQbkJrV3pMeg?oc=5",
+    "tokens": [
+      "phoenix",
+      "housing",
+      "market",
+      "shifted",
+      "here",
+      "tayek",
+      "bqoxq",
+      "mshale"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQamtxWXdnYnVEQ2RPYTlfeXhVRHRpWWpqd0lpbUwwdEM5Y3I5dUVUaUh4Q3BQemViWXhkTFpReUd6ajZiNS1YZ0RGRlpVWFdGcmtuZHcxUGZhMjB4bndjZWJqNEVyUzJNS20tYW9QNWZvaks2VlFxazRmSE82dTU5amQ4Z0FSOWJPZjlZQ2Fkd3RFclZDRnNVbnBOMWNkdnd5SC1CWTNKRHByWmUwUlRR?oc=5",
+    "tokens": [
+      "money",
+      "monday",
+      "buyers",
+      "know",
+      "charlotte",
+      "housing",
+      "market",
+      "wccb"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOV002a09jX3drUzUzeS12NllYd0JZT0tUQTI2QTRpdnBuMUZqNk02R3VPNm8yQmM3Mk9kYWRQWlhDMS04SmcxbzJudWVtUm9wT3cwcE9aNnVWRWJsLWVVcnNUazRRN0NfNVgxRDNoS2R1TldNaHFBaFJCbFdZRU1oSDJsaTIxZWkyVkxDSVRYcGlsRWN0YlE?oc=5",
+    "tokens": [
+      "germantown",
+      "arlington",
+      "among",
+      "metro",
+      "hottest",
+      "2026",
+      "housing",
+      "markets",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMU9wbHNCcF9PZ0pqQnRNNmZWUlhGOEl0eDVCMnRvVVlUMkh4VU1LdUI1ejBSM2RZb3ZBVm5KZXZjTXRYdm1qbjd6Zm1ackZjdy13RG9rWXVVMDYzR1pHQ0wtclhXeG5BTlBSMjVObnpMSUNlejBydEQ0Z3pHR0hXekR5SU9FSVFRbGkzZkpSampzZ3hrZlVkMTJNeUdYNWNFNnhRdG53?oc=5",
+    "tokens": [
+      "federal",
+      "ease",
+      "private",
+      "equity",
+      "grip",
+      "atlanta",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSDZPQlVjNzY0UHp2Zjd0Nld5NzFQVnBkeE8wb0M2TmdPN1kyaEJGSHBMNUxTNmFVeGdQMFVKN0tRNlFud2dIV3JOc2llTlpJV2RIV2lIRTBLVS1SM1lWLXQ1ak5jZl80SXFmdlRuUWo0ZTVFMUJ6VllSZ1VwcUZMM1ZtdVd3eEN2QWtRdThTRm4xQ0tVVXRoTW5RblREakpoS2M5WWFoZw?oc=5",
+    "tokens": [
+      "dallas",
+      "fort",
+      "worth",
+      "reign",
+      "relo",
+      "destination",
+      "strain",
+      "market",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://www.bisnow.com/san-francisco/news/multifamily/upzoning-unlocks-development-opportunities-across-sf-peninsula-135461",
+    "tokens": [
+      "silicon",
+      "valley",
+      "cities",
+      "spike",
+      "office",
+      "demolitions"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/stephen-ross-west-palm-beach-experience-center-shorecrest-cityplace/",
+    "tokens": [
+      "billionaire",
+      "stephen",
+      "ross",
+      "unveils",
+      "$10",
+      "billion",
+      "vision",
+      "wall",
+      "street",
+      "south"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://therealdeal.com/national/seattle/2026/07/16/bkm-capital-partners-buys-seattle-area-industrial-properties/",
+    "tokens": [
+      "drops",
+      "$86m",
+      "industrial",
+      "buildings",
+      "seattle",
+      "area"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/report-seattle-retail-vacancy-remains-near-historic-lows/",
+    "tokens": [
+      "seattle",
+      "retail",
+      "vacancy",
+      "remains",
+      "near",
+      "historic",
+      "lows"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/how-one-company-with-decades-of-secondaries-experience-is-attacking-todays-market-135454",
+    "tokens": [
+      "firm",
+      "leaning",
+      "growing",
+      "secondaries",
+      "market"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/greystone-real-estate-capital-closes-on-second-affordable-housing-fund/",
+    "tokens": [
+      "greystone",
+      "capital",
+      "closes",
+      "second",
+      "affordable",
+      "housing",
+      "fund"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/mortgage-interest-rates-now-july-16-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "jump",
+      "highest",
+      "level",
+      "nearly",
+      "year",
+      "iran",
+      "reignites"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/07/builder-sentiment-stays-weak-as-affordability-concerns-persist/",
+    "tokens": [
+      "builder",
+      "sentiment",
+      "stays",
+      "weak",
+      "affordability",
+      "concerns",
+      "persist"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/07/15/zillow-legal-fights-ramp-up-with-compass-ftc-and-mls/",
+    "tokens": [
+      "zillow",
+      "legal",
+      "fights",
+      "ramp",
+      "compass",
+      "chicago"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/record-high-home-prices-improved-affordability-income-growth-mortgage-rates/",
+    "tokens": [
+      "affordability",
+      "improving",
+      "surprising",
+      "twist",
+      "home",
+      "prices",
+      "record",
+      "highs"
+    ],
+    "shown_date": "2026-07-19"
+  },
+  {
     "url": "https://www.realtor.com/news/real-estate-news/fed-officials-kevin-warsh-inflation-speeches-july-2026/",
     "tokens": [
       "officials",
@@ -5435,284 +5703,5 @@
       "island"
     ],
     "shown_date": "2026-06-29"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/06/pce-inflation-hits-3-years-high-in-may/",
-    "tokens": [
-      "inflation",
-      "hits",
-      "years",
-      "high"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.redfin.com/news/survey-americans-support-housing-policy/",
-    "tokens": [
-      "americans",
-      "across",
-      "party",
-      "lines",
-      "back",
-      "policies",
-      "improve",
-      "housing",
-      "affordability",
-      "redfin",
-      "survey"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/new-bill-calls-for-gses-to-buy-and-securitize-construction-loans",
-    "tokens": [
-      "bill",
-      "calls",
-      "gses",
-      "securitize",
-      "construction",
-      "loans"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/bipartisan-housing-affordability-bill-trump-signature/",
-    "tokens": [
-      "washington",
-      "awaits",
-      "next",
-      "move",
-      "stalled",
-      "bipartisan",
-      "housing",
-      "bill"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQYndabVBMYmZvbzNBZjl0S1dOb0xJUGlwWkhjTmJqS1VxNWk0SFRucEZzbG54WmtlNEhVc1c1WTA2OWNIV016LWg1Zk9kSFJWX0c5WTZMblAtekZ0cWRuMTZmVzJXdTh0ZWxuRmtFcjhHbk5fZkI1MUExQkVyb1V2bjVCUHVDQ3dpNzZmMUY4RmRwQ2F1dHVsSkJINmJ6a0Roa1hPamdrOXdjdnJwV1Q1MGFxbkxYX1hFbGdkcVVHelY1VVhHZXN4eXhn?oc=5",
-    "tokens": [
-      "zillow",
-      "downgrades",
-      "home",
-      "price",
-      "forecast",
-      "here",
-      "outlook",
-      "400",
-      "plus",
-      "housing",
-      "markets",
-      "fast",
-      "company"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPT2hpUm5jUXgtQ3FUbVJwcWpnRE9fby1aM2tlT0ItZjNLb093MGRGZXN0Qk1YQkdPU3YtS0tOUVBtVDR1QkY4dWhTS0phMllRMkE1ekZFdVBRbmNNX0pkNHhfcENVWFRUR1N2bl92UWgyalRUb0ZHYmNGelNMRlh0UzJRUWZQa1V3OVpZd2JMME84MmpPeWZMU0gtLXMxQkxrb0E?oc=5",
-    "tokens": [
-      "compass",
-      "adds",
-      "$1",
-      "billion",
-      "north",
-      "texas",
-      "home",
-      "sales",
-      "residential",
-      "brokerage",
-      "list",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVFNtbE4ycmpYUXJzYkpsNy1LZWxXWUxFMGtNWDRXNVJOMU9qOWpEZzZGcmlwc2d5V0RNcmQ5MlpCcmN3Wm9zNUFDN3YzU2c3YjFEUUJGX1MxMjVZNzNHQkwxN1lmU3A2VGxjVGxTbU1hbWlzNG9RelI4ZU9PdUhBNFAzNVlZS0FmYzlvVnR6OGY5amlPYjd5X0FNU1llbzhQRF9tN2N0OHd2SEJiMXFsc0RnMkRQMHc1OXAzWTBjbw?oc=5",
-    "tokens": [
-      "residential",
-      "companies",
-      "houston",
-      "2026",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/06/24/har-rental-report-may-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=har-rental-report-may-2026",
-    "tokens": [
-      "rental",
-      "market",
-      "strong"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOazBDYXhZdjFxQjlTTXphcEtSRWtaRG5uel9rVXliZ0lOVHhDa0lISzZGYXZvaWN0V0F2U0N5OENibWZ6WHBWUW5MbHVSSXFaNzJIMlZKQkVyNUhGcUFfb1QwaE43OXFKVGN3Ym9DekZPQmJDRmt0UzBMRlFESU51YV93clkxV2xfZ2llcl90V245RDk5VFJicEpob1g?oc=5",
-    "tokens": [
-      "atlanta",
-      "housing",
-      "market",
-      "sees",
-      "silver",
-      "lining",
-      "first"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.globest.com/2026/06/23/single-family-rent-growth-settles-into-slower-gear-as-regional-divide-widens/",
-    "tokens": [
-      "single",
-      "family",
-      "rent",
-      "growth",
-      "settles",
-      "slower",
-      "gear",
-      "regional",
-      "divide",
-      "widens",
-      "8211",
-      "globest"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.clarkhill.com/news-events/news/the-changing-legal-landscape-of-leasing-fees-coined-junk-fees/",
-    "tokens": [
-      "changing",
-      "legal",
-      "landscape",
-      "leasing",
-      "fees",
-      "coined",
-      "junk",
-      "8211",
-      "clark",
-      "hill"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.multihousingnews.com/single-family-rental-index-2/",
-    "tokens": [
-      "2026",
-      "single",
-      "family",
-      "rental",
-      "index",
-      "8211",
-      "multi",
-      "housing"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://rebusinessonline.com/marcus-millichap-brokers-sale-of-46822-sf-retail-center-in-irving/",
-    "tokens": [
-      "marcus",
-      "038",
-      "millichap",
-      "brokers",
-      "sale",
-      "822",
-      "retail",
-      "center",
-      "irving"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://therealdeal.com/national/washington-dc/2026/06/26/gsa-considering-backtracking-on-federal-building-sale/",
-    "tokens": [
-      "hits",
-      "another",
-      "hurdle",
-      "push",
-      "shrink",
-      "federal"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://rebusinessonline.com/keybank-provides-56m-in-construction-financing-for-ohio-affordable-seniors-housing-project/",
-    "tokens": [
-      "keybank",
-      "provides",
-      "$56m",
-      "construction",
-      "financing",
-      "ohio",
-      "affordable",
-      "seniors",
-      "housing",
-      "project"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/22-property-nj-workforce-portfolio-refinanced-for-38m/",
-    "tokens": [
-      "property",
-      "workforce",
-      "portfolio",
-      "refinanced",
-      "$38m"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/new-construction-san-diego-apartments-score-53m-bridge-loan/",
-    "tokens": [
-      "construction",
-      "diego",
-      "apartments",
-      "score",
-      "$53m",
-      "bridge",
-      "loan"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://rebusinessonline.com/jll-negotiates-sale-of-669-unit-self-storage-portfolio-in-arlington/",
-    "tokens": [
-      "negotiates",
-      "sale",
-      "669",
-      "unit",
-      "self",
-      "storage",
-      "portfolio",
-      "arlington"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.perenews.com/longpoint-holds-close-for-debut-european-fund/",
-    "tokens": [
-      "longpoint",
-      "holds",
-      "close",
-      "debut",
-      "european",
-      "fund"
-    ],
-    "shown_date": "2026-06-28"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/veris-reit-privatization-apartment-sales/823913/",
-    "tokens": [
-      "veris",
-      "residential",
-      "boosted",
-      "apartment",
-      "sales",
-      "34%",
-      "msci"
-    ],
-    "shown_date": "2026-06-28"
   }
 ]
