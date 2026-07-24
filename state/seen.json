@@ -1,5 +1,277 @@
 [
   {
+    "url": "https://www.realtor.com/research/climate-risk-2026/",
+    "tokens": [
+      "2026",
+      "realtor",
+      "housing",
+      "climate",
+      "risk"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/price-gains-accelerate-despite-6-5-rates",
+    "tokens": [
+      "price",
+      "gains",
+      "accelerate",
+      "despite",
+      "6.5%",
+      "rates"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-july-23-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "rise",
+      "6.58%",
+      "iran",
+      "tensions",
+      "resurface"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1hTzRkR2ZKSHB6MmEtdUl1bmx2TTZULXhjUzcwb0lWQ1RKR0VWTUJSNHdGaEZPRFlwel9ibS14andNZTMxTC1CRDZxWXhuLVp6OUljN0JrTHYxYU9sZzFLYmR0by1ZN3ZMOW9ZdU1NRXU4ejQzMFlVbnJoX2Vvbjg?oc=5",
+    "tokens": [
+      "pending",
+      "home",
+      "sales",
+      "month",
+      "rates",
+      "climb",
+      "inman"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOOUtFZ3l5Q2FEcW8tLUVhZ2dEbGx5azFSekRCTjZXYUFhQUN0dkVpRlFmVk1tQS1xNzVSNW14azBKTkdteWhidzdZWVlfUmNUVW5UR0VwX1hBbXp4ZnNJY09pZnZGalVmajd0VlRKMmpsTUdxSk04bFo4M0k1S3UxSkN6VU5VMWxNM3RpenBSVUI3Q21CcThDMENpSGZyUQ?oc=5",
+    "tokens": [
+      "major",
+      "housing",
+      "markets",
+      "year",
+      "home",
+      "price",
+      "declines",
+      "232",
+      "posting",
+      "mild",
+      "gains",
+      "resiclub"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMUNZQV9jOXRLM3ZLQ0RTTDVQdjJVMTQ1RXZHUVM5LWJibDdld1l5QWFIWUNTUjBSVmh1SHlubDU3WE1WRExRLXBFaUFhbXdsOGZTbGFLQVkyMk1ZUDdFdVpOXzdnSU9RLXRobnk1a2ZSVEdfdEZFTmlzZDg5TVRsQ29KWGhadWZPVjkyenB1R0Q3RDlIZHFoLURhUkFLSlZzZFFQQQ?oc=5",
+    "tokens": [
+      "here",
+      "metro",
+      "phoenix",
+      "ranks",
+      "among",
+      "buyer",
+      "friendly",
+      "housing",
+      "markets",
+      "media"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxONWM5MVpGTEszcVJTUEJHUTZ2QWNUcE1iN2FUVUdmSEJVQTdKaVR2ZHdxUXYzZmVodmpzRmpYbVRIem1RT01jcVpJRUJGVHRiOXhTbzkyMFMwUUNNbGo3d0hucS1JOXp5a3VYX3NlUHFHOHhkWGpSQVFvUTh6c243NDVGQUc3dWlYY283OUZlelRQR1BwWDQ5a0pSNUZJTGtVRmFFRWZZWFRmNjdoOVZ0andmb3hndTh2RHZsS0tLR3NsT1lmbWlRNlNfV0dZR2xJbE96SWo5VXFUZi1OVGw0dkxRZkhxT0lGT3hHb2JlYV9MSG1RZWh3?oc=5",
+    "tokens": [
+      "jacksonville",
+      "rejected",
+      "$10m",
+      "housing",
+      "fund",
+      "years",
+      "city",
+      "trying",
+      "again",
+      "here",
+      "programs"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://rebusinessonline.com/dwight-capital-provides-66m-hud-insured-construction-loan-for-abilene-multifamily-project/",
+    "tokens": [
+      "dwight",
+      "capital",
+      "provides",
+      "$66m",
+      "insured",
+      "construction",
+      "loan",
+      "abilene",
+      "multifamily",
+      "project"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQSmc3LWlUbk12UmFfVXd6YVYxVjc1RE40NjRhbXdPZlN3M254eDJhSTRRclhydVljbHRRS1YwSnlMUGE4ZDhGbDJJZWZKS2lHLWlTam9hbDlPY0R4cGduZkc0RzZTYWpEd21EeFNiRDdieTlmX05ZMEpLMGlSRV81bHZXUDlaSFJCRzBISV9uVnZ0MXBTV080SjhUeFVoeHZZ?oc=5",
+    "tokens": [
+      "copperas",
+      "cove",
+      "denies",
+      "long",
+      "awaited",
+      "housing",
+      "project",
+      "bring",
+      "200",
+      "homes",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/housing-law-build-to-rent-investors/825969/",
+    "tokens": [
+      "housing",
+      "means",
+      "build",
+      "rent",
+      "investors"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE10LUoyMDRQUU1YSkJ6V3NTS2p4emRQcldNbFZSa2dCNVFYVm9JWVVLcXg0REtMM1lwSVh5VE1YcXN0dFNiaG9uT0lBTHNOWDV0dzJ1bjFSMmg0aVhMVElIQm1MT2tQLUNmZi1FdGF6NjI4clpmY1paNTRqQQ?oc=5",
+    "tokens": [
+      "vinebrook",
+      "dumping",
+      "oldest",
+      "homes",
+      "quietly",
+      "buying",
+      "inman"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVzJZMmVlT1lZckhIRk00SDktVGNQTGNmOU9fT1Z2MGxGMFdoNWpjV2hXdEtFUUd5dmVDT1dqRllVR1hGUzZ5T0lhMHNwOFhNckFNOGtoQ0FwS3N3cmFJUGFlMDlieTNHZ2FpZGRNcEY4Z0hEcklRbXNGeVJsYjdHWlp3N24tcWRfT1dJZmZn?oc=5",
+    "tokens": [
+      "daily",
+      "july",
+      "2026",
+      "cedar",
+      "begins",
+      "construction",
+      "133",
+      "home",
+      "list"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-reit-mergers-earnings-report/826090/",
+    "tokens": [
+      "avalonbay",
+      "equity",
+      "residential",
+      "beat",
+      "estimates"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-capital-markets/googles-205b-ai-capex-plan-sparks-wall-street-turmoil-135543",
+    "tokens": [
+      "google",
+      "$205b",
+      "spending",
+      "sparked",
+      "wall",
+      "street",
+      "turmoil"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/landlords-sue-over-rent-freeze-on-new-york-city-stabilized-units/",
+    "tokens": [
+      "landlords",
+      "rent",
+      "freeze",
+      "york",
+      "city",
+      "stabilized",
+      "units"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/manhattan-investment-sales-tally-reaches-10b-in-h1-2026/",
+    "tokens": [
+      "manhattan",
+      "investment",
+      "sales",
+      "tally",
+      "reaches",
+      "$10b",
+      "2026"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://rebusinessonline.com/kansas-city-chiefs-release-renderings-for-new-3b-stadium-set-to-open-in-2031/",
+    "tokens": [
+      "kansas",
+      "city",
+      "chiefs",
+      "release",
+      "renderings",
+      "$3b",
+      "stadium",
+      "open",
+      "2031"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/energy/brookfield-acquiring-leading-north-american-battery-storage-platform-in-3b-deal-135539",
+    "tokens": [
+      "brookfield",
+      "acquiring",
+      "battery",
+      "storage",
+      "platform",
+      "$7b",
+      "deal"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/industrial/uk-industrial-giant-signals-acceptance-of-fourth-prologis-offer-135540",
+    "tokens": [
+      "prologis",
+      "segro",
+      "industrial",
+      "largest",
+      "mergers",
+      "ever"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
+    "url": "https://therealdeal.com/national/2026/07/23/kkr-real-estate-lending-arm-up-for-potential-sale/",
+    "tokens": [
+      "considers",
+      "offloading",
+      "lending"
+    ],
+    "shown_date": "2026-07-24"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/as-the-fed-rethinks-its-balance-sheet-all-eyes-are-on-liabilities",
     "tokens": [
       "rethinks",
@@ -5424,276 +5696,5 @@
       "strongest"
     ],
     "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/u-s-added-57-000-jobs-in-june-fed-outlook-muddied",
-    "tokens": [
-      "added",
-      "000",
-      "jobs",
-      "june",
-      "outlook",
-      "muddied"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE10dkRSV0N4YzFRQi1HcG9LT2pZRmduajg1dV9yLUYtSXZnUlM2MUt5UW9ta2JvMnA5YXh5OUkycGdhY1NUWFV3UzJGTVR5dzhhVC13TmI5Y0JGc2hDQ0RHRUJaUUJiV0ZrOW5vYmUzNEQwUQ?oc=5",
-    "tokens": [
-      "case",
-      "shiller",
-      "home",
-      "values",
-      "fall",
-      "terms",
-      "straight",
-      "month",
-      "inman"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/mortgage-rates-slip-to-lowest-point-since-mid-may",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "slip",
-      "lowest",
-      "point",
-      "since"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/07/residential-construction-spending-increases-in-may-due-to-remodeling/",
-    "tokens": [
-      "residential",
-      "construction",
-      "spending",
-      "increases",
-      "remodeling"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/road-act-multifamily-costs/",
-    "tokens": [
-      "road",
-      "change",
-      "pencils",
-      "multifamily",
-      "rentals"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/07/02/realtor-com-june-median-list-price/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=realtor-com-june-median-list-price",
-    "tokens": [
-      "realtor",
-      "houston",
-      "listings",
-      "rise",
-      "june",
-      "sellers",
-      "recalibrate"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/florida-property-tax-eliminate-ballot-housing-market-impact/",
-    "tokens": [
-      "year",
-      "deadline",
-      "loom",
-      "florida",
-      "sway",
-      "state",
-      "buyers"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdU9HYlMzMWgwcFFNeG5haFBMV21rV3BQWi1VM0N1RF90aW4yWlM0SHdXTHNocDhFWEhJdFlqc3RQQVBTZjZ4QTFXRjFLWnoxZ2VVZmFFZVoyMXJORnF3TGl6QWJxTmI2OEt2Rmx6dU9ZOTR3UzlOeE9JeG1aeTBlUWdRTjhWZmllWDZLWXVDR1pqV0loYUNvTUtlUTAtdjFYbGV4a05UNFNuM05uSzNhNUNJR1pSMFhm?oc=5",
-    "tokens": [
-      "vegas",
-      "housing",
-      "market",
-      "gains",
-      "momentum",
-      "inventory",
-      "signals",
-      "potential",
-      "shift",
-      "sellers",
-      "national",
-      "review"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQd21yVnNmbm1WZ1RRZjRFWU1QTXpUVFdGN1J2SDZ1RjF5UWtlNmluT3RIRjdNeWpydjVORnFpc0hwazNDd0l0MUFJR2hmQ0FLU0ZXdzBGT25kdFJVRE1KbjVfUldhTWZ3Sm82WEhnaWpydTdwVDU3RTVaN3NUMGlySEpFUFJmbmR6SzJNNU1nX2tMU1JTb3Aw?oc=5",
-    "tokens": [
-      "jacksonville",
-      "shortage",
-      "homes",
-      "middle",
-      "income",
-      "earners",
-      "realtor"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOaVNZMVZPMnBWbXJJUnEyUkZnUmtIOHVNNFdVVXAxT3BmMkhSV1ZldzFRSjhNLVRUQVoyaTBEUmhRTkZqSXh0aHNTZmFQS1B1RzBiV3MzTmdUOTZuRmVJMVJTeS13MW4tT3ZhWWV6S2xaUVNQQm43RTQ1UFprMzBRMlF2WVMwdHJ6LVJIOFNLYThvWFpjc0NoMGN2OWJuQ2hTU1k4N2ZQbXktXzhjeG5oeTc3QmsxX0x4bUdxVTVva1g5anM?oc=5",
-    "tokens": [
-      "smart",
-      "home",
-      "bundle",
-      "invitation",
-      "homes",
-      "tenants",
-      "integrated",
-      "maintenance",
-      "convenience"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/home-prices-values-case-shiller-index-april-2026/",
-    "tokens": [
-      "home",
-      "value",
-      "growth",
-      "flatlines",
-      "northeast",
-      "midwest",
-      "outperform",
-      "8211",
-      "realtor"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.lexology.com/library/detail.aspx?g=cd3a795e-63b5-4222-afbf-e867b75a8be8&#038;__cf_chl_f_tk=1R_.HvnwDEQda9uLQRPOyCNXURDi2.ThjHeVVqNlMVQ-1782851186-1.0.1.1-0xYQHwAdlb0eeiy.FTRJzX.5kzlZXpygB65vpJify5Y",
-    "tokens": [
-      "century",
-      "road",
-      "housing",
-      "build",
-      "rent",
-      "provisions",
-      "update",
-      "8211",
-      "lexology"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.dmagazine.com/commercial-real-estate/2026/07/deal-ticker-hillwood-breaks-ground-on-1-2-million-square-foot-alliancetexas-project/",
-    "tokens": [
-      "deal",
-      "ticker",
-      "hillwood",
-      "breaks",
-      "ground",
-      "million",
-      "square",
-      "foot",
-      "alliancetexas",
-      "project"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/rithm-capital-lands-515m-financing-for-midtown-office-tower/",
-    "tokens": [
-      "rithm",
-      "capital",
-      "lands",
-      "$515m",
-      "financing",
-      "midtown",
-      "office",
-      "tower"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/kroger-to-buy-grocer-giant-eagle-in-1-6b-deal/",
-    "tokens": [
-      "kroger",
-      "grocer",
-      "giant",
-      "eagle",
-      "$1.6b",
-      "deal"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/greenberg-gibbons-closes-on-frederick-brickworks-property-plans-450m-mixed-use-development/",
-    "tokens": [
-      "greenberg",
-      "gibbons",
-      "closes",
-      "frederick",
-      "brickworks",
-      "property",
-      "$450m",
-      "mixed",
-      "development"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://rebusinessonline.com/jackson-health-completes-400m-emergency-room-expansion-in-miami/",
-    "tokens": [
-      "jackson",
-      "health",
-      "completes",
-      "$400m",
-      "emergency",
-      "room",
-      "expansion",
-      "miami"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/starwood-opportunistic-diversified-fund-value-add/824401/",
-    "tokens": [
-      "starwood",
-      "raises",
-      "$10.2b",
-      "opportunistic",
-      "fund"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/industrial/centerbridge-closes-on-3b-family-owned-cre-firm-for-750m-135279",
-    "tokens": [
-      "centerbridge",
-      "pays",
-      "$750m",
-      "stake",
-      "family",
-      "owned",
-      "development",
-      "firm"
-    ],
-    "shown_date": "2026-07-03"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/dws-group-nontraded-reit-misses-redemption-requests-by-more-than-30-percent-135281",
-    "tokens": [
-      "group",
-      "reit",
-      "misses",
-      "redemption",
-      "requests",
-      "30%"
-    ],
-    "shown_date": "2026-07-03"
   }
 ]
