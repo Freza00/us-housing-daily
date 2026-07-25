@@ -1,5 +1,283 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/high-prices-hesitant-demand-weigh-on-june-new-home-sales/",
+    "tokens": [
+      "high",
+      "prices",
+      "hesitant",
+      "demand",
+      "weigh",
+      "june",
+      "home",
+      "sales"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/mortgage-defaults-june-fha/",
+    "tokens": [
+      "mortgage",
+      "defaults",
+      "level",
+      "june",
+      "down",
+      "15%"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.realtor.com/research/2026-q1-outstanding-mortgage-data/",
+    "tokens": [
+      "slow",
+      "unlock",
+      "continues",
+      "22.1%",
+      "outstanding",
+      "mortgages",
+      "rate",
+      "6%",
+      "higher"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQbHBLNC0yVlRORzZzMWRWaWZsY2xzczA2eVZOZnZUZnZkUFlBQV9lY01WSGNvOUxXQWZzTmlFMnZBYTJxLVE1WWVidHJlUTEzQUhSbjVna1d0WExpZWpRdm1Fdi0wVTlrZExtOG5vbGw4em44QkgyTjhsUTVlOFFObVN1TjJvVU5OMHIwM3p2RGdXemJnMWdQTVNjdWVvSEU?oc=5",
+    "tokens": [
+      "californians",
+      "vote",
+      "$11.25b",
+      "affordable",
+      "housing",
+      "bond",
+      "fall",
+      "inman"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/07/24/treasury-yields-fed-mortgage-rates.html",
+    "tokens": [
+      "bond",
+      "investors",
+      "pushing",
+      "your",
+      "interest",
+      "rates"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNnZrVjFuTnlxOUlwdnZlYm5RekRYeEJWNzFvbjlGQTJuWEtkcFRRUk9BWUhMLWVqVGpCMVdGS0NwY1UzUXVBeUVHVEJRMXFRbTlIczNSOWlTVGpiYTZFUHgtbkdkRFFBYWg2SExKTHdHR0V1ZC13SW0tV0hseTByNHowYUlSekZJdEZqQkpYUk11SHBOeGZFRVctTmMxbVJRZjRfNw?oc=5",
+    "tokens": [
+      "frisco",
+      "based",
+      "developer",
+      "eyeing",
+      "306",
+      "unit",
+      "tech",
+      "ridge",
+      "apartment",
+      "project",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNejk0aDk0NF9QY1FLU0lMa0JlOE5LTzhITmRYTzZ2Tk9PTGF4UUJxSU9FWDFBeUpEOHV4bndkR1JwcnloMmYyYVNxWjNaaGtxZFEtQ25KR0JsUWI5dTJreVdRNXFROE1pODRndFRCYzQwRHdYVjZoYW9vSEY0S2N6WHdzLVE5REd6LU5pT0xIZXp1OVFzNjRBOFM4QWNlcVVBeEJiZEFWaklETmZm?oc=5",
+    "tokens": [
+      "middle",
+      "tennessee",
+      "homes",
+      "reach",
+      "tennessean"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://rebusinessonline.com/thompson-thrift-to-begin-construction-on-300-unit-luxury-multifamily-community-near-savannah/",
+    "tokens": [
+      "thompson",
+      "thrift",
+      "begin",
+      "construction",
+      "300",
+      "unit",
+      "luxury",
+      "multifamily",
+      "community",
+      "near",
+      "savannah"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQd1VDcWtfS3FFWllVRkd4ZWxyU2xNay03d051Q1BuV1A0cWZJcEN6b3hWQ3Z1X1NKZ29RbWgtR1RqR3VHYXd2MHlYck8wWWFnRVpOdEFOYlBQVTFkdWNRdDgzcDVXVGdiNFZuOEZYNVdoNEx5anpXSjNwOEFuTXZJRFVVRWczNFhWdDJZYzV3S252N2JUQzlyMkVaUFZVTVNEb3pNQ2F0dmtYcmE5VG1FTjI2TFhUb1piajl5T3IyeVhwUVJmWEE?oc=5",
+    "tokens": [
+      "summit",
+      "hear",
+      "ceos",
+      "laseter",
+      "trilogy",
+      "parkland",
+      "center",
+      "park",
+      "chapman",
+      "construction",
+      "list"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://rebusinessonline.com/mag-capital-partners-sells-1-4-msf-midwest-industrial-portfolio-for-89m/",
+    "tokens": [
+      "capital",
+      "partners",
+      "sells",
+      "midwest",
+      "industrial",
+      "portfolio",
+      "$89m"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/more-than-80-countries-hit-with-new-tariffs-over-forced-labor-after-old-regime-expires-135553",
+    "tokens": [
+      "countries",
+      "tariffs",
+      "further",
+      "clouding",
+      "pricing"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/jpmorgan-sells-49-stake-in-fisher-brothers-605-third-ave/",
+    "tokens": [
+      "jpmorgan",
+      "sells",
+      "49%",
+      "stake",
+      "fisher",
+      "brothers",
+      "605",
+      "third"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/office/sl-green-one-vanderbilt-earnings-cash-flow-marc-holliday-135549",
+    "tokens": [
+      "green",
+      "cashing",
+      "surging",
+      "manhattan",
+      "office",
+      "market"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/greystone-provides-92m-in-fannie-mae-loans-to-metropolitan-realty/",
+    "tokens": [
+      "greystone",
+      "provides",
+      "$92m",
+      "fannie",
+      "loans",
+      "metropolitan",
+      "realty"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/berkshire-taylor-morrison-acquisition/",
+    "tokens": [
+      "berkshire",
+      "completes",
+      "taylor",
+      "morrison",
+      "deal",
+      "valued",
+      "$8.5b",
+      "enterprise",
+      "value"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/industrial/european-giants-argan-wdp-are-the-latest-logistics-firms-to-join-forces-135554",
+    "tokens": [
+      "industrial",
+      "consolidation",
+      "continues",
+      "european",
+      "giants",
+      "agreeing",
+      "$15b",
+      "merger"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/national-equity-fund-acquisition-affordable-housing-lihtc/826164/",
+    "tokens": [
+      "national",
+      "equity",
+      "fund",
+      "acquires",
+      "properties",
+      "value",
+      "$200",
+      "million",
+      "louis"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/multifamily/bayview-springmont-to-acquire-majority-stake-in-multifamily-mortgage-banking-company-135537",
+    "tokens": [
+      "mortgage",
+      "banker",
+      "acquired",
+      "bayview",
+      "morgan",
+      "family"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/congress-judiciary-subcommittee-investigation-compass-mred-antitrust/",
+    "tokens": [
+      "congress",
+      "probes",
+      "private",
+      "listings",
+      "deal",
+      "between",
+      "compass",
+      "chicago",
+      "multiple",
+      "listing",
+      "service",
+      "read",
+      "letter"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/why-homebuilders-arent-building-more-homes/",
+    "tokens": [
+      "homebuilders",
+      "aren",
+      "building",
+      "homes"
+    ],
+    "shown_date": "2026-07-25"
+  },
+  {
     "url": "https://www.realtor.com/research/climate-risk-2026/",
     "tokens": [
       "2026",
@@ -5419,282 +5697,5 @@
       "$135,000"
     ],
     "shown_date": "2026-07-05"
-  },
-  {
-    "url": "https://www.realtor.com/research/june-2026-employment-report/",
-    "tokens": [
-      "june",
-      "jobs",
-      "falls",
-      "short",
-      "expect",
-      "housing",
-      "market",
-      "hold",
-      "steady"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/trump-says-housing-bill-is-fine-but-still-holds-off-on-signing",
-    "tokens": [
-      "trump",
-      "housing",
-      "bill",
-      "fine",
-      "holds",
-      "signing"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/01/states-defeat-trump-in-hud-homelessness-funds-case/",
-    "tokens": [
-      "states",
-      "defeat",
-      "trump",
-      "administration",
-      "homelessness",
-      "funds",
-      "case"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYlJvMnY1SFFYOVdTYXVGc2ZfS1diZnZreTRNeG9NTmhVSDctcDJ5MUtXOEF5YmU1dUl5aFNyMFp3bXpKOElLRDN2MGNwSXZzT09LTUl6cEw1d0paWHpINDhlQ1dabEFsUlFVSnB0Q253M2loV3B5cEM2ZU9PUy01TEVGZGIxNmY3UHNV?oc=5",
-    "tokens": [
-      "asking",
-      "prices",
-      "post",
-      "record",
-      "annual",
-      "drop",
-      "pending",
-      "sales",
-      "climb",
-      "inman"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/freddie-mac-tightens-condo-and-manufactured-home-loan-rules",
-    "tokens": [
-      "freddie",
-      "tightens",
-      "condo",
-      "manufactured",
-      "home",
-      "loan",
-      "rules"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/dallas-new-york-city-affordable-housing-gap-474-years/",
-    "tokens": [
-      "rents",
-      "falling",
-      "city",
-      "relief",
-      "474",
-      "years",
-      "away"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://phoenixagentmagazine.com/2026/06/30/case-shiller-april/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=case-shiller-april",
-    "tokens": [
-      "case",
-      "shiller",
-      "phoenix",
-      "home",
-      "price",
-      "growth",
-      "slows",
-      "april"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://phoenixagentmagazine.com/2026/07/02/realtor-com-june-median-list-price/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=realtor-com-june-median-list-price",
-    "tokens": [
-      "listings",
-      "surge",
-      "phoenix",
-      "median",
-      "list",
-      "price",
-      "dips"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMzczaF9UdW9GR2dyeGJJN2xMQVE2TUdoUndGallBQmp1dTdidGlxdUd5dVZya0huWFBZNW9yMGdWeGprSEhrN1VRbFI0ZmlUSUV2LUJQYnpzR0U0X3VPRnBtczFIaGRFcWozU2VHWW5FY1N2ZnZJczQ3b2VDa2RjdHVTSjdOa1F6Yzl2aEV1Tkl5MEVpdlMwcVNBanVDRkM5d2FGV2tneWcydGVUQ3lfVW5HWQ?oc=5",
-    "tokens": [
-      "phoenix",
-      "luxury",
-      "housing",
-      "market",
-      "raises",
-      "$1",
-      "million",
-      "buys",
-      "less",
-      "ever",
-      "media"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://rebusinessonline.com/foundry-commercial-to-undertake-office-to-industrial-conversion-in-dallas/",
-    "tokens": [
-      "foundry",
-      "commercial",
-      "undertake",
-      "office",
-      "industrial",
-      "conversion",
-      "dallas"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.bisnow.com/washington-dc/news/data-center-development/blackstones-qts-abandons-digital-gateway-project-ends-lawsuit-135295",
-    "tokens": [
-      "blackstone",
-      "abandons",
-      "digital",
-      "gateway",
-      "project",
-      "ends",
-      "legal",
-      "fight"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.bisnow.com/boston/news/multifamily/we-dodged-a-bullet-multifamily-investment-activity-thaws-after-rent-control-ruling-135270",
-    "tokens": [
-      "dodged",
-      "bullet",
-      "mass",
-      "multifamily",
-      "market",
-      "starts",
-      "thaw",
-      "rent",
-      "control",
-      "ruling"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.bisnow.com/new-york/news/office/best-first-half-for-manhattan-office-market-since-2002-has-landlords-back-in-control-135275",
-    "tokens": [
-      "best",
-      "first",
-      "half",
-      "offices",
-      "since",
-      "2002",
-      "puts",
-      "landlords",
-      "back",
-      "control"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/retail/kroger-to-acquire-giant-eagle-for-165b-135262",
-    "tokens": [
-      "kroger",
-      "agrees",
-      "acquire",
-      "giant",
-      "eagle",
-      "$1.65b"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.perenews.com/starwood-eyes-attractive-entry-point-after-10-2bn-close-for-fund-xiii/",
-    "tokens": [
-      "starwood",
-      "eyes",
-      "attractive",
-      "entry",
-      "point",
-      "$10.2b",
-      "close",
-      "fund",
-      "xiii"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/two-harbors-shareholders-finally-approve-crosscountry-deal",
-    "tokens": [
-      "harbors",
-      "shareholders",
-      "finally",
-      "approve",
-      "crosscountry",
-      "deal"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.bisnow.com/london/news/construction-development/silvertown-launchpad-for-lendlease-and-the-crown-estate-24b-joint-venture-135257",
-    "tokens": [
-      "silvertown",
-      "launchpad",
-      "lendlease",
-      "crown",
-      "joint",
-      "venture"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/immigration-affordable-housing-crisis-harvard-jchs/824253/",
-    "tokens": [
-      "changing",
-      "immigration",
-      "landscape",
-      "impacting",
-      "housing",
-      "crisis"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.redfin.com/news/housing-market-update-payments-rise-prices-record-high/",
-    "tokens": [
-      "monthly",
-      "payments",
-      "tick",
-      "first",
-      "time",
-      "months",
-      "home",
-      "prices",
-      "record",
-      "high"
-    ],
-    "shown_date": "2026-07-04"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/07/02/canary-wharf-group-ceo-says-office-lease-demand-is-strongest-yet.html",
-    "tokens": [
-      "canary",
-      "wharf",
-      "group",
-      "office",
-      "lease",
-      "demand",
-      "strongest"
-    ],
-    "shown_date": "2026-07-04"
   }
 ]
