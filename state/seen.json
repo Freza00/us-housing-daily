@@ -1,5 +1,279 @@
 [
   {
+    "url": "https://www.realtor.com/advice/finance/mortgage-payment-calculator-afford-july-23/",
+    "tokens": [
+      "mortgage",
+      "calculator",
+      "here",
+      "need",
+      "$430k",
+      "home",
+      "6.58%",
+      "rate"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/07/24/june-home-sales.html",
+    "tokens": [
+      "june",
+      "home",
+      "sales",
+      "exceed",
+      "expectations"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/07/24/our-housing-market-is-balanced-says-zelman-associates-ivy-zelman.html",
+    "tokens": [
+      "housing",
+      "market",
+      "balanced",
+      "zelman",
+      "associates"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeDVhSVgwdGF4RktoZ0dvazdPT1V3alJqTndDMzlURWEtWHptVW92dklBazVOeU4tZXROWTNnYTN0b0lKQ3RaU3BKREhVS2xOQmpFUnhxdTBWZVAwOU1wSjNmdUdkTGZ3NkRFa2hkMDNXR2lRZmI5MGN0bkpBMDZrU3FaMkVFdmI3bDVQVGMwS2NWbUgx?oc=5",
+    "tokens": [
+      "compass",
+      "zillow",
+      "pitch",
+      "competing",
+      "data",
+      "private",
+      "listing",
+      "outcomes",
+      "inman"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE85eHc0cmNuUXRub3h2Y0V4S2hzaEdyOFBMRFk1UkVxbV9lMzJxV3FxMzY2RVVnYUpUbUtGUWhESFlXNklKeUx5ZDU4elhQUkFzajNZd2F4SGEyeTVmWVNVY01GNW5QV3QxWEoyaEpQd2NDSm1aU1E?oc=5",
+    "tokens": [
+      "update",
+      "touts",
+      "housing",
+      "tuccori",
+      "settlement",
+      "inman"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOSU1JVFp5OGoyS3FqdmtpLUxEWlZGUllFc0lqZEl5Zzg4eDNWLXAyYXprYWt0TmtDWDFkQ0p1YlVyR3V3VGlJNmZ2RHdaUFJ0UEF5TElrWGIwLUR3WTExb3duR056ZURNc1NXRzBWUWdQNF9LS1NFOWpfMEwxR0Z4X3Fia0J3bU96bXlMdEZjMldES1hPYkhiNlJJb2RVVS1lRFMxTld3MWVpcWhuR3F0YXVZSE9RTDF3ZkNweDlOTWxmRzEybXc?oc=5",
+    "tokens": [
+      "housing",
+      "market",
+      "cools",
+      "june",
+      "atlanta",
+      "alive"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-negotiates-sale-of-441620-sf-retail-power-center-in-cedar-park-texas/",
+    "tokens": [
+      "negotiates",
+      "sale",
+      "441",
+      "620",
+      "retail",
+      "power",
+      "center",
+      "cedar",
+      "park",
+      "texas"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/breakthrough-properties-tishman-speyer-provide-90m-mezz-loan-for-life-science-campus/",
+    "tokens": [
+      "breakthrough",
+      "properties",
+      "tishman",
+      "speyer",
+      "provide",
+      "$90m",
+      "mezz",
+      "loan",
+      "life",
+      "science",
+      "campus"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://rebusinessonline.com/merritt-properties-acquires-11-building-industrial-park-in-jacksonville/",
+    "tokens": [
+      "merritt",
+      "properties",
+      "acquires",
+      "building",
+      "industrial",
+      "park",
+      "jacksonville"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://rebusinessonline.com/mt-realty-capital-provides-141-4m-loan-for-refinancing-of-manhattan-apartment-building/",
+    "tokens": [
+      "038",
+      "realty",
+      "capital",
+      "provides",
+      "$141.4m",
+      "loan",
+      "refinancing",
+      "manhattan",
+      "apartment",
+      "building"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/seattle-multifamily-market-report/",
+    "tokens": [
+      "seattle",
+      "multifamily",
+      "market",
+      "july",
+      "2026"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/energy/the-nations-battery-energy-storage-boom-brings-investment-opportunities-to-cre-135536",
+    "tokens": [
+      "battery",
+      "storage",
+      "supercharged",
+      "asset",
+      "class"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9jZmIwX1lVaS1BUEdyQ3B4RXp0dHNoR1BqLUlOVmVOaHBLdTJYLVowV3FrbWR1ZEpQMjlZeFE3YXhLbWZrXzNUTDc1NHVrQll5S25MNlJpR2hmQkdBUUlNV2U1aTI2MjRkNXNSMWRTelI?oc=5",
+    "tokens": [
+      "high",
+      "priced",
+      "transaction",
+      "deserts",
+      "investors",
+      "place",
+      "bets",
+      "inman"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://rebusinessonline.com/joint-venture-acquires-555-unit-self-storage-facility-in-syosset-new-york/",
+    "tokens": [
+      "joint",
+      "venture",
+      "acquires",
+      "555",
+      "unit",
+      "self",
+      "storage",
+      "facility",
+      "syosset",
+      "york"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/deed-theft-remains-a-growing-threat-for-seniors-black-homeowners/",
+    "tokens": [
+      "deed",
+      "theft",
+      "remains",
+      "growing",
+      "threat",
+      "seniors",
+      "black",
+      "homeowners"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/rent-collections-impact-on-us-affordable-housing/",
+    "tokens": [
+      "yardi",
+      "matrix",
+      "documents",
+      "rent",
+      "collection",
+      "impact",
+      "affordable",
+      "housing"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/deal-sheet/the-dc-deal-sheet-135557",
+    "tokens": [
+      "hines",
+      "nabs",
+      "prince",
+      "william",
+      "housing",
+      "sites",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRmVFUWdIdjNDeHRNdHlVNC1pQW9EazNrSHVRZDgyTHJtRkVTLURyR1ZEbl92YWE1c3JlaG41VHlOUUZ4TjNzdkxDeGxFQkpORTJianZGajVQYVI4cTV3WmxsZDg3OUdBQlZsUUJOSTFKSFhhT2pGbUp4bkJQeTBVRV9Yd0NpdG9WMzEzaktldUl0TVlIUzZkZVhNTlZnelJKOGtiMW5B?oc=5",
+    "tokens": [
+      "fort",
+      "worth",
+      "office",
+      "market",
+      "gains",
+      "momentum",
+      "rising",
+      "rents",
+      "cause",
+      "sticker",
+      "shock",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/waterstone-mortgage-volume-profits-up-quarter-to-quarter",
+    "tokens": [
+      "waterstone",
+      "mortgage",
+      "volume",
+      "profits",
+      "quarter"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/primelending-tempers-mortgage-expectations-after-q2-loss",
+    "tokens": [
+      "primelending",
+      "cuts",
+      "$10m",
+      "fixed",
+      "costs",
+      "margins",
+      "squeeze"
+    ],
+    "shown_date": "2026-07-27"
+  },
+  {
     "url": "https://www.housingwire.com/articles/home-sales-are-positive-but-higher-rates-slowing-demand/",
     "tokens": [
       "home",
@@ -5431,263 +5705,5 @@
       "deal"
     ],
     "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/05/zillow-mred-compass-face-off/",
-    "tokens": [
-      "courtroom",
-      "showdown",
-      "chicago",
-      "reshape",
-      "residential"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-july-2-2026/",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "drop",
-      "week",
-      "6.43%"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/mismo-mortgage-insurance-guide-vantagescore-4-fico-10t/",
-    "tokens": [
-      "mismo",
-      "updates",
-      "mortgage",
-      "insurance",
-      "data",
-      "guide",
-      "vantagescore",
-      "fico"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://houstonagentmagazine.com/2026/07/01/mba-mortgage-applications-7-1/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=mba-mortgage-applications-7-1",
-    "tokens": [
-      "purchase",
-      "applications",
-      "boost",
-      "mortgage",
-      "activity"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/manhattan-luxury-market-booms-mamdani-compass-q2-2026/",
-    "tokens": [
-      "manhattan",
-      "luxury",
-      "market",
-      "booms",
-      "despite",
-      "mayor",
-      "mamdani",
-      "second",
-      "homes"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWnU1czRPQVR4ZkRyb0JIMms1VGNWZzBrZ0FIQ1lPU1hJTG9mMXhZeF94YzZLcXNTcFp3NEtzSE9VNG5DR2dDQzB3R3I4LWQtWkZQVFh4WkU4NVVNYi1iR2VOaGRpR3A4bVh6UGNVREtObkRvNV9tZGtFaHdyVWJPNGpKZGRpekQ5RlVGQUZ0R2NXd0VsaXNuUWtTNnhrU05Ick1CSVJEWkVadnlnZEFuSWlRS3c5bkk?oc=5",
-    "tokens": [
-      "gaining",
-      "ground",
-      "housing",
-      "market",
-      "getting",
-      "better",
-      "july",
-      "2026",
-      "atlanta",
-      "first"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.bisnow.com/houston/news/office/cheaper-if-we-dont-have-a-building-demolition-sees-strong-demand-in-houston-135248",
-    "tokens": [
-      "cheaper",
-      "building",
-      "demolition",
-      "demand",
-      "houston"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/korman-communities-flexible-renting/824210/",
-    "tokens": [
-      "renting",
-      "choice",
-      "really",
-      "taking",
-      "world",
-      "korman",
-      "communities",
-      "exec"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/inland-real-estate-offloads-lakewood-apartment-community-for-71-5m/",
-    "tokens": [
-      "inland",
-      "group",
-      "offloads",
-      "lakewood",
-      "apartment",
-      "community",
-      "$71.5m"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/what-apartment-operators-can-learn-from-katrina-about-disaster-preparedness/824124/",
-    "tokens": [
-      "apartment",
-      "operators",
-      "learn",
-      "katrina",
-      "disaster",
-      "preparedness"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/maintenance-staffing-multifamily-labor-challenge/824117/",
-    "tokens": [
-      "maintenance",
-      "staffing",
-      "remains",
-      "multifamily",
-      "biggest",
-      "labor",
-      "challenge"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/zillow-investor-lawsuit-redfin-partnership/824014/",
-    "tokens": [
-      "zillow",
-      "faces",
-      "another",
-      "lawsuit",
-      "redfin",
-      "deal"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.realtor.com/advice/hyperlocal/hartford-ct-home-shortage-middle-class-report/",
-    "tokens": [
-      "hartford",
-      "shortage",
-      "homes",
-      "middle",
-      "income",
-      "earners"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/why-roofs-are-failing-faster-and-claims-are-rising",
-    "tokens": [
-      "roofs",
-      "failing",
-      "faster",
-      "claims",
-      "rising"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/cleveland-local-government-modular-housing-backing/",
-    "tokens": [
-      "government",
-      "backed",
-      "modular",
-      "housing",
-      "trend",
-      "arrives",
-      "cleveland"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.realtor.com/research/federal-policy-homeownership-2026/",
-    "tokens": [
-      "laws",
-      "unlock",
-      "doors",
-      "federal",
-      "policy",
-      "enabled",
-      "homeownership",
-      "250",
-      "years"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/america-250-future-us-homeownership/",
-    "tokens": [
-      "america",
-      "250",
-      "turning",
-      "point",
-      "american",
-      "homeownership"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260701a.htm",
-    "tokens": [
-      "federal",
-      "reserve",
-      "issues",
-      "initial",
-      "findings",
-      "2025",
-      "triennial",
-      "payments",
-      "study"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/northmarq-secures-fannie-mae-dus-financing-for-national-city-apartments/",
-    "tokens": [
-      "northmarq",
-      "secures",
-      "fannie",
-      "financing",
-      "national",
-      "city",
-      "apartments"
-    ],
-    "shown_date": "2026-07-06"
-  },
-  {
-    "url": "https://www.washingtonpost.com/opinions/2026/06/29/institutional-investors-arent-causing-high-home-prices/",
-    "tokens": [
-      "fall",
-      "herring",
-      "america",
-      "housing",
-      "crisis",
-      "8211",
-      "washington",
-      "post"
-    ],
-    "shown_date": "2026-07-06"
   }
 ]
