@@ -1,5 +1,268 @@
 [
   {
+    "url": "https://www.realtor.com/research/new-home-sales-june-2026/",
+    "tokens": [
+      "home",
+      "sales",
+      "rebound",
+      "june",
+      "fall",
+      "short",
+      "year"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.redfin.com/news/mortgage-rates-uncertain-second-warsh-fed-meeting/",
+    "tokens": [
+      "expect",
+      "mortgage",
+      "rate",
+      "volatility",
+      "uncertainty",
+      "heading",
+      "warsh",
+      "meeting",
+      "chair"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/07/state-level-employment-situation-june-2026/",
+    "tokens": [
+      "state",
+      "level",
+      "employment",
+      "situation",
+      "june",
+      "2026"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/second-lien-issuance-expected-to-reach-41-billion-this-year",
+    "tokens": [
+      "second",
+      "lien",
+      "issuance",
+      "expected",
+      "reach",
+      "$41",
+      "billion",
+      "year"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/fhfa-seeks-to-remove-regulatory-requirements-for-fhlbanks",
+    "tokens": [
+      "fhfa",
+      "seeks",
+      "remove",
+      "regulatory",
+      "requirements",
+      "fhlbanks"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://rebusinessonline.com/berkadia-brokers-sale-of-180-unit-apartment-complex-in-northwest-houston/",
+    "tokens": [
+      "berkadia",
+      "brokers",
+      "sale",
+      "180",
+      "unit",
+      "apartment",
+      "complex",
+      "northwest",
+      "houston"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.redfin.com/news/nashville-buyers-market-june-2026/",
+    "tokens": [
+      "nashville",
+      "sellers",
+      "need",
+      "pack",
+      "patience",
+      "housing",
+      "market",
+      "strongly",
+      "favors",
+      "buyers"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/tampa-multifamily-market-report/",
+    "tokens": [
+      "tampa",
+      "multifamily",
+      "market",
+      "july",
+      "2026"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/affiliated-closes-financing-on-mixed-income-fort-lauderdale-apartment-venture/",
+    "tokens": [
+      "affiliated",
+      "closes",
+      "financing",
+      "mixed",
+      "income",
+      "fort",
+      "lauderdale",
+      "apartment",
+      "venture"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/michigan-governor-whitmer-investor-ban-single-family-homes/",
+    "tokens": [
+      "michigan",
+      "blocks",
+      "large",
+      "corporate",
+      "homebuyers"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.bisnow.com/los-angeles/news/industrial/rexford-takes-500m-loss-plans-up-to-2b-in-dispositions-this-year-135577",
+    "tokens": [
+      "rexford",
+      "planning",
+      "$2b",
+      "dispositions",
+      "year"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/data-center-capital-markets/neoclouds-rewriting-rules-data-center-financing-135570",
+    "tokens": [
+      "wework",
+      "booming",
+      "startups",
+      "concern",
+      "data",
+      "center",
+      "execs"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/hotel-prices-slide-9-percent-june-135568",
+    "tokens": [
+      "hotels",
+      "sinking",
+      "offices",
+      "winning",
+      "increasingly",
+      "divided"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://rebusinessonline.com/go-industrial-willmeng-construction-break-ground-on-1-1-msf-spec-industrial-building-in-tolleson-arizona/",
+    "tokens": [
+      "industrial",
+      "willmeng",
+      "construction",
+      "break",
+      "ground",
+      "spec",
+      "building",
+      "tolleson",
+      "arizona"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/adaptive-reuse/222-broadway-wrey-gfp-conversion-stop-work-order-135579",
+    "tokens": [
+      "stops",
+      "construction",
+      "another",
+      "office",
+      "residential",
+      "conversion",
+      "inspectors",
+      "descend",
+      "sites"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/apartment-prices-multifamily-sales-veris-residential/826271/",
+    "tokens": [
+      "apartment",
+      "sales",
+      "ticked",
+      "slightly",
+      "$36.7b",
+      "msci"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/elme-communitities-reit-liquidation-fpa-multifamily/826272/",
+    "tokens": [
+      "elme",
+      "reaches",
+      "deal",
+      "sell",
+      "last",
+      "property",
+      "$250m"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/opportunity-zones/more-than-half-of-states-are-done-taking-public-input-for-new-oz-maps-135507",
+    "tokens": [
+      "want",
+      "weigh",
+      "next",
+      "opportunity",
+      "zone",
+      "maps",
+      "late"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/07/share-of-apartments-built-in-buildings-with-50-units-moves-higher-in-2025/",
+    "tokens": [
+      "share",
+      "apartments",
+      "built",
+      "buildings",
+      "units",
+      "moves",
+      "higher",
+      "2025"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/red-tape-reform-housing-bill-new-home-construction/",
+    "tokens": [
+      "tape",
+      "reform",
+      "housing",
+      "bill",
+      "success"
+    ],
+    "shown_date": "2026-07-28"
+  },
+  {
     "url": "https://www.realtor.com/advice/finance/mortgage-payment-calculator-afford-july-23/",
     "tokens": [
       "mortgage",
@@ -5443,267 +5706,5 @@
       "team"
     ],
     "shown_date": "2026-07-08"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/fed-interest-rates-christopher-waller-speech-forward-guidance/",
-    "tokens": [
-      "refuses",
-      "give",
-      "homebuyers",
-      "road",
-      "interest",
-      "rates"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/gse-capital-rule-revamp-plan-coming-soon-investor-predicts",
-    "tokens": [
-      "capital",
-      "rule",
-      "revamp",
-      "coming",
-      "soon",
-      "investor",
-      "predicts"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://rebusinessonline.com/bls-u-s-economy-adds-57000-jobs-in-june-falling-short-of-expectations/",
-    "tokens": [
-      "economy",
-      "adds",
-      "000",
-      "jobs",
-      "june",
-      "falling",
-      "short",
-      "expectations"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/private-residential-construction-spending-increases-again",
-    "tokens": [
-      "remodeling",
-      "boosts",
-      "private",
-      "residential",
-      "construction",
-      "spending"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/san-diego-sb79-map-widens/",
-    "tokens": [
-      "diego",
-      "transit",
-      "housing",
-      "density",
-      "settles"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/cmbs-servicing-loans-acquisition-strategy/824499/",
-    "tokens": [
-      "texas",
-      "alabama",
-      "south",
-      "carolina",
-      "york",
-      "properties",
-      "servicing",
-      "late",
-      "june"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/raleigh-multifamily-market-report/",
-    "tokens": [
-      "raleigh",
-      "multifamily",
-      "market",
-      "june",
-      "2026"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://atlantaagentmagazine.com/2026/07/06/housing-scorecard-7-26/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=housing-scorecard-7-26",
-    "tokens": [
-      "atlanta",
-      "housing",
-      "scorecard",
-      "existing",
-      "home",
-      "sales",
-      "days",
-      "market",
-      "rise"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://phoenixagentmagazine.com/2026/07/06/housing-scorecard-7-26/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=housing-scorecard-7-26",
-    "tokens": [
-      "phoenix",
-      "home",
-      "sales",
-      "rise",
-      "third",
-      "month"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeVRpX1MxSXpKVG1ybldKaFJwYXlyeldlcC1hbjJpUmJnNjJNU2JYNm9FQnQyZmF6ZmV2elNfVXlWMFNpWmNJU1J1SENnV2pqckZ1Z0VEMC03ZHdERi1FdGJlS1hvRk80QzFFQlZRR3BfVVJsOWxDSnpkMThpN1ZsLVJfeGZuNXhpVGU0eU1UUG51bFRsc2FaSEV3MXNRTVpKQ0tYMVBacGhHTVByOTB0Vm1CVWdTcDBwV1E?oc=5",
-    "tokens": [
-      "quiet",
-      "housing",
-      "market",
-      "pullback",
-      "wall",
-      "street",
-      "firms",
-      "selling",
-      "jumps",
-      "408%",
-      "fast",
-      "company"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.sec.gov/Archives/edgar/data/1687229/000119312526296211/0001193125-26-296211-index.htm",
-    "tokens": [
-      "invh",
-      "invitation",
-      "homes",
-      "current"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/06/28/some-renters-say-homeownership-isnt-part-of-their-american-dream.html",
-    "tokens": [
-      "buying",
-      "home",
-      "american",
-      "dream",
-      "renters",
-      "happier",
-      "without",
-      "hassle",
-      "8211",
-      "cnbc"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/industrial/corecivic-ice-buys-california-city-otay-mesa-detention-centers-135300",
-    "tokens": [
-      "pays",
-      "corecivic",
-      "$1.5b",
-      "detention",
-      "facilities"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/shorenstein-portman-agree-to-terms-on-nashville-office-sale/",
-    "tokens": [
-      "shorenstein",
-      "portman",
-      "agree",
-      "terms",
-      "nashville",
-      "office",
-      "sale"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/auto-parts-distributor-leases-522267-sf-with-invesco-in-chino/",
-    "tokens": [
-      "auto",
-      "parts",
-      "distributor",
-      "leases",
-      "522",
-      "267",
-      "invesco",
-      "chino"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/ariel-closes-sale-of-upper-west-side-section-8-apartments/",
-    "tokens": [
-      "ariel",
-      "closes",
-      "sale",
-      "upper",
-      "west",
-      "side",
-      "section",
-      "apartments"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://rebusinessonline.com/partnership-to-develop-131000-sf-office-building-in-boca-raton-florida/",
-    "tokens": [
-      "partnership",
-      "develop",
-      "131",
-      "000",
-      "office",
-      "building",
-      "boca",
-      "raton",
-      "florida"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/06/brookfield-backed-data-center-firm-goes-public/",
-    "tokens": [
-      "brookfield",
-      "backed",
-      "data",
-      "center",
-      "firm",
-      "public"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/06/ishbia-loses-bid-for-two-harbors-as-crosscountry-seals-deal/",
-    "tokens": [
-      "ishbia",
-      "loses",
-      "harbors",
-      "crosscountry",
-      "seals",
-      "servicing",
-      "deal"
-    ],
-    "shown_date": "2026-07-07"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/06/centerbridge-makes-good-on-merritt-properties-deal/",
-    "tokens": [
-      "centerbridge",
-      "good",
-      "merritt",
-      "properties",
-      "deal"
-    ],
-    "shown_date": "2026-07-07"
   }
 ]
