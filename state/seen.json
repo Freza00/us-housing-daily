@@ -1,5 +1,278 @@
 [
   {
+    "url": "https://www.realtor.com/research/case-shiller-home-prices-may-2026/",
+    "tokens": [
+      "case",
+      "shiller",
+      "home",
+      "price",
+      "index",
+      "prices",
+      "rise",
+      "underlying",
+      "momentum",
+      "continues",
+      "cool"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcU1IRzdwRGNmdDlyTEdtWUw1cWZLY1NaRGFfZHB6aUg0a2pReTY5cnhqUjU5QWdrSGwwLWxGdE5yWGs2YzFxMHNGSXowWnd4OFAtbTVYcUlVTWIzRlZTUjR1U1BHQ2FrQXlPUWY0OHNGZmd5TlNzWTZXYTlPam5rU2pDM3NwdXBpZWc?oc=5",
+    "tokens": [
+      "fannie",
+      "posts",
+      "$4b",
+      "profit",
+      "purchase",
+      "mortgage",
+      "activity",
+      "rises",
+      "inman"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+    "tokens": [
+      "federal",
+      "reserve",
+      "issues",
+      "fomc",
+      "statement"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/foreign-buyers-spend-billions-less-housing-market-nar-july-2026-report/",
+    "tokens": [
+      "foreign",
+      "buyers",
+      "spend",
+      "billions",
+      "less",
+      "last",
+      "year",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/multifamily/mamdani-admin-picks-slate-hudson-cos-to-develop-massive-queens-housing-project-135615",
+    "tokens": [
+      "slate",
+      "hudson",
+      "picked",
+      "develop",
+      "massive",
+      "queens",
+      "housing",
+      "project"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://rebusinessonline.com/streetlights-residential-underway-on-22-story-apartment-building-in-plano/",
+    "tokens": [
+      "streetlights",
+      "residential",
+      "underway",
+      "story",
+      "apartment",
+      "building",
+      "plano"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHBLckl3bC1BVzBldFRXVGlyTEFCNC1feGVIZ1RFSmxSMUs4NkxpV1dwdDZKWGhrdmM4R2JBelVoeFBKeGVMaHpFbDlHVFg4VUhhOU9RcU5MOFlBOVZiTVU2NFlLNmtFWHJjMW9WSUZyeldjWmgyUE0ydTc5bmhCUnRWSWxGeHNMUVI3dExOTjlJYmJLX1hlN0xJd0E?oc=5",
+    "tokens": [
+      "vegas",
+      "home",
+      "prices",
+      "post",
+      "largest",
+      "drop",
+      "nation",
+      "marketwatch"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWHZOTXcwMms1NW1oZ3kySDBydHVMQlVEejA0TkI2V3FyZGlfVlQ3U2RIRFFOMXNnU09lTEU3YVZBY3ZVVi00aEZmc29iVzRaX2pYZDA2Mk1JOGljMVRpRGpBbHdBLWpjVHZuOVktNTU1Qm5DZkNpcldiWkcybDk5SGtweW5Yb1htTzRFUVZxaHN4MVBfdWdlZnNac2hJWFN3NjdiMXZVaHRaUQ?oc=5",
+    "tokens": [
+      "ahead",
+      "property",
+      "vote",
+      "florida",
+      "housing",
+      "market",
+      "dusting",
+      "rest",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://rebusinessonline.com/radnor-madrone-to-break-ground-on-793-bed-student-housing-development-in-atlanta/",
+    "tokens": [
+      "radnor",
+      "madrone",
+      "break",
+      "ground",
+      "793",
+      "student",
+      "housing",
+      "development",
+      "atlanta"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.sec.gov/Archives/edgar/data/1687229/000168722926000041/0001687229-26-000041-index.htm",
+    "tokens": [
+      "invh",
+      "invitation",
+      "homes",
+      "current"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQenRoTU0yRDFYamEyVjF6T2NvMU9NS1ZoU1pRcVNfMjdGNmFucGU1cFpucWFQazFKaVl4eUU4ajNOR0h0SF9XbFJIWU1PUXZBOEFWZDN0NF9JRHpyQ09MdVdBZGo4MVkyMENUTDEwdHNKbnhLa0drV1RtV1VVOEsta1FXQVpudzdCRFM2SXpWMA?oc=5",
+    "tokens": [
+      "portfolio",
+      "held",
+      "cash",
+      "flow",
+      "despite",
+      "lack",
+      "deals",
+      "lance",
+      "lambert",
+      "notes",
+      "traders",
+      "union"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.bisnow.com/austin-san-antonio/news/multifamily/ryan-cos-secures-building-permit-moving-austins-sixth-street-redevelopment-forward-135584",
+    "tokens": [
+      "ryan",
+      "secures",
+      "permit",
+      "austin",
+      "sixth",
+      "street",
+      "redevelopment"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/udr-earnings-q2-2026-guidance/826532/",
+    "tokens": [
+      "raises",
+      "guidance",
+      "slowing",
+      "supply",
+      "employment",
+      "growth"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/commercial-real-estate/cbre-posts-16-revenue-growth-in-q2-as-data-center-business-shines-135611",
+    "tokens": [
+      "cbre",
+      "posts",
+      "16%",
+      "revenue",
+      "growth",
+      "data",
+      "center",
+      "business",
+      "shines"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.bisnow.com/new-york/news/office/bxp-closes-12b-construction-loan-for-343-madison-nears-deal-with-equity-partner-135614",
+    "tokens": [
+      "343",
+      "madison",
+      "lands",
+      "$1.2b",
+      "loan",
+      "nears",
+      "deal",
+      "equity",
+      "partner"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/commercial-real-estate/american-rearming-turning-into-commercial-real-estate-boom-135609",
+    "tokens": [
+      "america",
+      "machine",
+      "growing",
+      "sparking",
+      "defense",
+      "boom"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/two-harbors-ends-run-as-a-profitable-company",
+    "tokens": [
+      "harbors",
+      "ends",
+      "profitable",
+      "company"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.bisnow.com/national/news/capital-markets/newmark-posts-record-q2-revenue-holds-guidance-flat-135613",
+    "tokens": [
+      "newmark",
+      "posts",
+      "record",
+      "revenue",
+      "holds",
+      "guidance",
+      "flat"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.bisnow.com/washington-dc/news/office/bxp-shrinking-dc-portfolio-as-it-closes-in-on-next-big-office-development-135612",
+    "tokens": [
+      "closes",
+      "next",
+      "office",
+      "development",
+      "shrinks",
+      "assets"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/pennymac-q2-income-falls/",
+    "tokens": [
+      "pennymac",
+      "profit",
+      "drops",
+      "rates",
+      "bite",
+      "layoffs",
+      "follow"
+    ],
+    "shown_date": "2026-07-30"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/warsh-and-peace-iran-tensions-bond-market-complicate-fed-outlook",
     "tokens": [
       "warsh",
@@ -5419,277 +5692,5 @@
       "arizona"
     ],
     "shown_date": "2026-07-10"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/fed-meeting-minutes-divided-warsh-june-2026/",
-    "tokens": [
-      "officials",
-      "deeply",
-      "divided",
-      "future",
-      "direction",
-      "interest",
-      "rates"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.realtor.com/research/2026-national-housing-forecast-midyear-update/",
-    "tokens": [
-      "realtor",
-      "2026",
-      "housing",
-      "forecast",
-      "midyear",
-      "update",
-      "sales",
-      "edge",
-      "modestly",
-      "higher",
-      "affordability",
-      "improves"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/cfpb-mortgage-trid-disclosures/",
-    "tokens": [
-      "cfpb",
-      "seeks",
-      "input",
-      "mortgage",
-      "disclosures",
-      "trid",
-      "rules"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9TVWYyTWJxZE1HN096Ukt0UC1xTHppQ1J4WXZLbTltYy1WZVB0T1hENTlYUjRlWkZaSl9GMFNnRnU0X2dNSVZjSndsZ0FKTEdOVDFqSzNBZi1fdDJZRnFiLUhtejBkejlYbS1adkNLamN5a21iYWdn?oc=5",
-    "tokens": [
-      "home",
-      "price",
-      "growth",
-      "cools",
-      "further",
-      "falling",
-      "behind",
-      "inflation",
-      "inman"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/08/ftc-challenge-to-zillow-redfin-partnership-headed-to-trial/",
-    "tokens": [
-      "challenge",
-      "zillow",
-      "redfin",
-      "partnership",
-      "headed",
-      "trial"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/texas-securitized-multifamily-loans-aprtment-distress/824724/",
-    "tokens": [
-      "texas",
-      "apartment",
-      "owners",
-      "face",
-      "uphill",
-      "battles"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/woodfield-to-begin-construction-on-285-unit-apartment-community-in-charleston/",
-    "tokens": [
-      "woodfield",
-      "begin",
-      "construction",
-      "285",
-      "unit",
-      "apartment",
-      "community",
-      "charleston"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://therealdeal.com/national/atlanta/2026/07/08/georgia-bans-mv-realty-for-deceptive-business-practices/",
-    "tokens": [
-      "georgia",
-      "bans",
-      "firm",
-      "accused",
-      "deceptive",
-      "business",
-      "practices"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/mg-properties-buys-458-unit-apartment-community-in-richardson-texas/",
-    "tokens": [
-      "properties",
-      "buys",
-      "458",
-      "unit",
-      "apartment",
-      "community",
-      "richardson",
-      "texas"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBOS1NuLUtGVVNyUlFoMzlPUVVHYi0tUkl4LUgxOHBiMlRUUG1kU3JIWTNjMC1aa0gtai1YTXNWRkNRckUtc0ktRHFaRlN5eXhxTXZ0UDZxQ3JwUE00bDVsZ0pTSmgwZi03cm9nODVOYw?oc=5",
-    "tokens": [
-      "summit",
-      "panelists",
-      "announced",
-      "list"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/realterm-acquires-24-acre-industrial-outdoor-storage-facility-in-hutchins-texas/",
-    "tokens": [
-      "realterm",
-      "acquires",
-      "acre",
-      "industrial",
-      "outdoor",
-      "storage",
-      "facility",
-      "hutchins",
-      "texas"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/data-center-development/north-carolina-data-center-canceled-as-county-debates-moratorium-135338",
-    "tokens": [
-      "$20b",
-      "north",
-      "carolina",
-      "data",
-      "center",
-      "canceled",
-      "moratorium",
-      "debate"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.bisnow.com/boston/news/mixed-use/brookfield-jv-buys-site-for-6500-unit-project-in-boston-suburbs-135331",
-    "tokens": [
-      "brookfield",
-      "buys",
-      "site",
-      "500",
-      "unit",
-      "project",
-      "boston",
-      "suburbs"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/willow-bridge-settlement-realpage-lawsuit/824731/",
-    "tokens": [
-      "willow",
-      "bridge",
-      "agrees",
-      "settle",
-      "realpage",
-      "price",
-      "fixing",
-      "case"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/kennedy-wilson-jamison-partnership-affordable-housing-la/824670/",
-    "tokens": [
-      "kennedy",
-      "wilson",
-      "jamison",
-      "partner",
-      "affordable",
-      "units"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/08/norges-asana-join-forces-on-500m-retail-acquisition-spree/",
-    "tokens": [
-      "norges",
-      "asana",
-      "join",
-      "forces",
-      "$500m",
-      "retail",
-      "acquisition",
-      "spree"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/merritt-properties-receives-750m-investment-announces-leadership-changes/",
-    "tokens": [
-      "merritt",
-      "properties",
-      "receives",
-      "$750m",
-      "investment",
-      "announces",
-      "leadership",
-      "changes"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/32-beazer-standstill-terms/",
-    "tokens": [
-      "$32",
-      "beazer",
-      "fight",
-      "standstill",
-      "terms"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.bisnow.com/new-york/news/sustainability-climate/rooftops-could-create-a-new-revenue-stream-for-struggling-rent-stabilized-landlords-135339",
-    "tokens": [
-      "$200m",
-      "solar",
-      "project",
-      "offers",
-      "rent",
-      "stabilized",
-      "landlords",
-      "rooftop",
-      "repair",
-      "lifeline"
-    ],
-    "shown_date": "2026-07-09"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/bank-uses-a-twist-on-credit-linked-notes-for-capital-relief",
-    "tokens": [
-      "bank",
-      "uses",
-      "twist",
-      "credit",
-      "linked",
-      "notes",
-      "capital",
-      "relief"
-    ],
-    "shown_date": "2026-07-09"
   }
 ]
