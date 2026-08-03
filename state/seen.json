@@ -1,5 +1,276 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/10-year-yield-fed-hawks/",
+    "tokens": [
+      "hawks",
+      "path",
+      "sending",
+      "mortgage",
+      "rates",
+      "higher"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/07/housings-share-of-gdp-moves-lower-in-the-second-quarter/",
+    "tokens": [
+      "housing",
+      "share",
+      "moves",
+      "lower",
+      "second",
+      "quarter"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/mortgage-interest-rates-now-july-30-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "jump",
+      "6.66%",
+      "eyes",
+      "fall",
+      "rate",
+      "hikes"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/listing-access-standards-mred-zillow-compass/",
+    "tokens": [
+      "decides",
+      "listings",
+      "zillow",
+      "compass"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/tuccori-opt-in-amicus-brief/",
+    "tokens": [
+      "retired",
+      "judges",
+      "challenge",
+      "tuccori",
+      "commission",
+      "suit",
+      "settlements"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQS0p0aHNXVW5mWmJ0UC1oTkRPQzFFcFdlNGJYYVB2bFJtTzBfYVZFZGZDSVJsMlEtQ3J5TnRsVElqVU1MbTNWLUdiVkZINUVSMzBKSTJ1MDlMUllycC05dm40RS1iMUhYRW5BM3JGSnI3NlNNTGFDT3lUVW10UTY2QmI4UkZpV2lQVTgzdXlmamtJWm52bTNZOS12eXNSckc3dS1LQXVtcw?oc=5",
+    "tokens": [
+      "endeavor",
+      "apartments",
+      "former",
+      "campus",
+      "bizjournals"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/green-brick-partners-q2-2026-earnings/",
+    "tokens": [
+      "green",
+      "brick",
+      "seizes",
+      "margin",
+      "edge",
+      "land",
+      "product",
+      "outlier"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdmJoTkRsVEpSVmhwSVNyekxtN2lvUmIyaktlSUpOSHBtQjFERlZ2QTRYM0M5bGd0RXN3NzI1WEpWbW1HVi0tNVhDS1h4cXZ4cnFUZEZyZXBjWldmNUF0NGE5QmNnSmJQUUFYbGhQdk5pSlpDd2JEVlZkLWlWaGh3WEZ2dGtPaWFLTjY2aTZVMktlTU1DZ0IxbmdRSHZTbFJn?oc=5",
+    "tokens": [
+      "charlotte",
+      "slower",
+      "housing",
+      "market",
+      "forcing",
+      "agents",
+      "mortgage",
+      "brokers",
+      "rethink",
+      "careers",
+      "bizjournals"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://rebusinessonline.com/affiliated-development-receives-74m-loan-for-mixed-income-multifamily-development-in-fort-lauderdale/",
+    "tokens": [
+      "affiliated",
+      "development",
+      "receives",
+      "$74m",
+      "loan",
+      "mixed",
+      "income",
+      "multifamily",
+      "fort",
+      "lauderdale"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.bisnow.com/news/houston/deal-sheet/the-wideman-co-buys-downtown-tower-from-brookfield-the-houston-deal-sheet-135649",
+    "tokens": [
+      "wideman",
+      "buys",
+      "downtown",
+      "tower",
+      "brookfield",
+      "houston",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/07/30/jll-ceo-office-market-in-the-u-s-showing-very-solid-growth.html",
+    "tokens": [
+      "office",
+      "market",
+      "showing",
+      "solid",
+      "growth"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/self-storage-advertised-rates-trail-2025-levels/",
+    "tokens": [
+      "self",
+      "storage",
+      "advertised",
+      "rates",
+      "trail",
+      "2025",
+      "levels",
+      "yardi",
+      "matrix"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://rebusinessonline.com/hanover-tig-complete-213425-sf-spec-industrial-project-in-south-houston/",
+    "tokens": [
+      "hanover",
+      "complete",
+      "213",
+      "425",
+      "spec",
+      "industrial",
+      "project",
+      "south",
+      "houston"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-brokers-sale-of-113823-sf-shopping-center-in-north-dallas/",
+    "tokens": [
+      "brokers",
+      "sale",
+      "113",
+      "823",
+      "shopping",
+      "center",
+      "north",
+      "dallas"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/ice-mortgage-tech-557m-q2/",
+    "tokens": [
+      "posts",
+      "strongest",
+      "quarter",
+      "mortgage",
+      "tech",
+      "since",
+      "2022"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/commercial-real-estate/uk-bank-froze-avison-young-assets-over-unpaid-taxes-135648",
+    "tokens": [
+      "avison",
+      "young",
+      "assets",
+      "frozen",
+      "bank",
+      "unpaid",
+      "taxes"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/colliers-facilitates-sale-of-360-unit-indiana-multifamily-property/",
+    "tokens": [
+      "colliers",
+      "facilitates",
+      "sale",
+      "360",
+      "unit",
+      "indiana",
+      "multifamily",
+      "property"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/trump-admin-revamp-of-anti-redlining-law-targets-activist-groups",
+    "tokens": [
+      "trump",
+      "admin",
+      "revamp",
+      "anti",
+      "redlining",
+      "targets",
+      "activist",
+      "groups"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.redfin.com/news/second-home-mortgages-increased-in-2025/",
+    "tokens": [
+      "vacation",
+      "home",
+      "mortgages",
+      "tick",
+      "first",
+      "time",
+      "since",
+      "pandemic",
+      "boom"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/07/28/pultegroup-ceo-ryan-marshall-its-a-pretty-good-housing-market-right-now.html",
+    "tokens": [
+      "pultegroup",
+      "ryan",
+      "marshall",
+      "pretty",
+      "good",
+      "housing",
+      "market",
+      "right"
+    ],
+    "shown_date": "2026-08-03"
+  },
+  {
     "url": "https://www.multifamilydive.com/news/fed-holds-benchmark-rate-steady-vote-three-dissents/826539/",
     "tokens": [
       "holds",
@@ -5164,258 +5435,5 @@
       "suspensions"
     ],
     "shown_date": "2026-07-14"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/21st-century-road-to-housing-act-becomes-law-trump/",
-    "tokens": [
-      "trump",
-      "didn",
-      "sign",
-      "century",
-      "road",
-      "housing"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/07/existing-home-sales-slowed-in-june/",
-    "tokens": [
-      "existing",
-      "home",
-      "sales",
-      "slowed",
-      "june"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/07/07/rates-prices-are-top-concerns-for-home-buyers-cnbc-survey.html",
-    "tokens": [
-      "rates",
-      "prices",
-      "concerns",
-      "home",
-      "buyers",
-      "cnbc",
-      "survey"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/takeaways-nlihc-national-renter-survey/824621/",
-    "tokens": [
-      "takeaways",
-      "nlihc",
-      "national",
-      "renter",
-      "survey"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/07/07/cnbc-housing-market-survey-balanced-market.html",
-    "tokens": [
-      "agents",
-      "seeing",
-      "balanced",
-      "market",
-      "cnbc",
-      "housing",
-      "survey",
-      "finds"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://rebusinessonline.com/berkadia-secures-85-4m-refinancing-of-two-orlando-multifamily-communities/",
-    "tokens": [
-      "berkadia",
-      "secures",
-      "$85.4m",
-      "refinancing",
-      "metro",
-      "orlando",
-      "multifamily",
-      "communities"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMXpSbFl2MFVhVnhxLVVqbWFfWl9PVG5DOVhjSFNLZVpzQjU4MVJnMlUzTUtVN3pkalJSaVlSbVhzcWFRcDVWZU9kTTIwSFBFOUY5b01RU3hjSWV5UWM0YS1YTVR5OFMxMXpTc3RxSjdYR19VTFdicEVZRUE4ZTFheEhrTHd2NlpQbGZBYUIwc0tQejAtcm1sY3BRRUxRa1BaZ2piUldPeGFZQVVoWFUwUlpKbFppSFhpNll5Mzc3LWdDQ3c?oc=5",
-    "tokens": [
-      "warnock",
-      "private",
-      "equity",
-      "firms",
-      "buying",
-      "single",
-      "family",
-      "homes",
-      "becomes",
-      "federal"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMEtUT1VzZEpEb0VpUXJYUFhFS2JMWE9BS3BKRVlkSmdLMmp6aldrTkhMRlRmdjgxbWh6eDNCa2VHVWtTRzFOQzhMUWhwaXhmdG5DS2NfOWdBc21ubWZpOFRFVGx0ZUluUW9sX0lRRGl0MjhUb1VOZWJISjJhOU1WRlUxY2VrYlI1ejJpcGNn?oc=5",
-    "tokens": [
-      "checking",
-      "housing",
-      "market",
-      "west",
-      "nashville",
-      "wkrn"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.realtor.com/news/first-person/texas-home-cob-sand-and-straw-construction/",
-    "tokens": [
-      "built",
-      "texas",
-      "home",
-      "sand",
-      "straw",
-      "rarely",
-      "need",
-      "conditioning"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/businesses-filing-for-bankruptcy-are-on-the-rise-and-their-real-estate-is-first-up-to-bat-135382",
-    "tokens": [
-      "bankruptcies",
-      "rising",
-      "putting",
-      "negotiation"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/data-center-development/they-may-prefer-texas-but-data-center-developers-arent-giving-up-on-california-135385",
-    "tokens": [
-      "prefer",
-      "texas",
-      "data",
-      "center",
-      "developers",
-      "aren",
-      "giving",
-      "california"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.bisnow.com/chicago/news/multifamily/chicagos-older-apartments-are-running-out-of-room-to-raise-rent-135389",
-    "tokens": [
-      "chicago",
-      "older",
-      "apartments",
-      "running",
-      "room",
-      "raise",
-      "rent"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/dc-office-market-shows-renewed-momentum/",
-    "tokens": [
-      "office",
-      "market",
-      "renewed",
-      "momentum"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/data-centers-emerge-as-real-estates-newest-pricing-wildcard/",
-    "tokens": [
-      "data",
-      "centers",
-      "emerge",
-      "newest",
-      "pricing",
-      "wildcard"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://rebusinessonline.com/gelt-venture-partners-buys-117-unit-drexler-townhomes-in-lehi-utah/",
-    "tokens": [
-      "gelt",
-      "venture",
-      "partners",
-      "buys",
-      "117",
-      "unit",
-      "drexler",
-      "townhomes",
-      "lehi",
-      "utah"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://rebusinessonline.com/four-mile-midloch-acquire-apartment-community-in-louisville-for-38-3m/",
-    "tokens": [
-      "four",
-      "mile",
-      "midloch",
-      "acquire",
-      "apartment",
-      "community",
-      "louisville",
-      "$38.3m"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://rebusinessonline.com/mmcc-arranges-25-8m-in-financing-for-omaha-multifamily-property/",
-    "tokens": [
-      "mmcc",
-      "arranges",
-      "$25.8m",
-      "financing",
-      "omaha",
-      "multifamily",
-      "property"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/basels-looser-securitization-rules-have-some-snags-for-mbs",
-    "tokens": [
-      "basel",
-      "looser",
-      "securitization",
-      "rules",
-      "snags"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/mba-findings-add-pressure-on-tri-merge-status-quo",
-    "tokens": [
-      "findings",
-      "pressure",
-      "merge",
-      "status"
-    ],
-    "shown_date": "2026-07-13"
-  },
-  {
-    "url": "https://www.realtor.com/research/foreclosures-july-2026/",
-    "tokens": [
-      "foreclosures",
-      "ticking",
-      "here",
-      "happens",
-      "next",
-      "market",
-      "sale"
-    ],
-    "shown_date": "2026-07-13"
   }
 ]
