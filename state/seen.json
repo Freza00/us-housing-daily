@@ -1,5 +1,285 @@
 [
   {
+    "url": "https://www.realtor.com/news/trends/jobs-report-unemployment-rate-july-2026/",
+    "tokens": [
+      "economy",
+      "lost",
+      "000",
+      "jobs",
+      "shocking",
+      "july",
+      "reducing",
+      "odds",
+      "rate",
+      "hike"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/donald-trump-federal-reserve-lisa-cook/",
+    "tokens": [
+      "trump",
+      "restarts",
+      "fire",
+      "lisa",
+      "cook",
+      "scotus",
+      "ruling"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/08/06/homeowners-insurance-costs-soar-naic-report.html",
+    "tokens": [
+      "homeowners",
+      "paying",
+      "insurance",
+      "keeping",
+      "coverage",
+      "getting",
+      "harder"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/fitch-uwm-rating-b-plus/",
+    "tokens": [
+      "downgraded",
+      "fitch",
+      "loss",
+      "oaktree",
+      "deal"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/pulte-threatens-build-to-order-companies-with-gse-price-curb",
+    "tokens": [
+      "pulte",
+      "threatens",
+      "build",
+      "order",
+      "companies",
+      "price",
+      "curb"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-rents-july-yardi/827341/",
+    "tokens": [
+      "multifamily",
+      "rents",
+      "grow",
+      "july",
+      "buoyed",
+      "belt",
+      "yardi"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/franklin-street-negotiates-sale-of-138-unit-multifamily-property-in-southwest-fort-worth/",
+    "tokens": [
+      "franklin",
+      "street",
+      "negotiates",
+      "sale",
+      "138",
+      "unit",
+      "multifamily",
+      "property",
+      "southwest",
+      "fort",
+      "worth"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/buckeye-az-city-council-tony-youngker-housing/",
+    "tokens": [
+      "city",
+      "council",
+      "member",
+      "accused",
+      "blocking",
+      "housing",
+      "demanding",
+      "$5",
+      "million",
+      "small",
+      "strip",
+      "land"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdzBYV3VkRGplOHgybldGNWVLZzc3RFg0R0pTbG1TeGhlX3dPRVdYelpwR3BjaEx3NE42My1RR25xR2pOcF9lbTNLanM4M1IzVzRoT3gyYjl1NFVRTlBXVXRTSlRiYm5YVVRpZUk3ZzM3eTROSkZKS3FtZFFHM2NFRlZLT1MyN0hRTEVaMW9YZUdWUnpMbEVrT3lwZjY5ZzUtemRnYTdjaDgyUQ?oc=5",
+    "tokens": [
+      "houston",
+      "master",
+      "planned",
+      "communities",
+      "again",
+      "lead",
+      "nation",
+      "sales",
+      "despite",
+      "challenged",
+      "housing",
+      "market",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/houston/deal-sheet/chicago-developer-enters-houston-to-build-industrial-the-houston-deal-sheet",
+    "tokens": [
+      "developer",
+      "replace",
+      "coworking",
+      "space",
+      "industrial",
+      "houston",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/atlanta/data-center/microsoft-seeks-to-undo-local-tax-incentives-for-data-center-projects-in-georgia",
+    "tokens": [
+      "microsoft",
+      "moves",
+      "undo",
+      "local",
+      "breaks",
+      "atlanta",
+      "data",
+      "center",
+      "projects"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/new-york/office/comcast-consolidates-to-141k-sf-in-times-square-skyscraper",
+    "tokens": [
+      "comcast",
+      "consolidates",
+      "140",
+      "times",
+      "square"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/san-francisco/office/amazon-renews-300k-sf-lease-on-at-525-market-street",
+    "tokens": [
+      "amazon",
+      "renews",
+      "300",
+      "office",
+      "lease",
+      "downtown",
+      "francisco"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/dallas-ft-worth/industrial/ramrock-real-estate-to-redevelop-fort-worth-s-ridgmar-mall-into-logistics-campus",
+    "tokens": [
+      "ramrock",
+      "redevelop",
+      "fort",
+      "worth",
+      "039",
+      "ridgmar",
+      "mall",
+      "logistics",
+      "campus"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/dream-finders-finally-buys-beazer-cites-mortgage-benefits",
+    "tokens": [
+      "dream",
+      "finders",
+      "finally",
+      "buys",
+      "beazer",
+      "cites",
+      "mortgage",
+      "benefits"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/automated-factory-builder-hadrian-raises-1-37b-in-series-d-round/",
+    "tokens": [
+      "automated",
+      "factory",
+      "builder",
+      "hadrian",
+      "raises",
+      "$1.37b",
+      "series",
+      "round"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/articles/berkshire-goes-all-in-on-housing-bet-with-taylor-morrison-deal",
+    "tokens": [
+      "berkshire",
+      "goes",
+      "housing",
+      "taylor",
+      "morrison",
+      "deal"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/batton-1-remax-keller-settlement/",
+    "tokens": [
+      "remax",
+      "keller",
+      "williams",
+      "final",
+      "approval",
+      "batton",
+      "settlement"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/achieve-aaa-heloc-securitization/",
+    "tokens": [
+      "achieve",
+      "closes",
+      "$261.5",
+      "million",
+      "heloc",
+      "securitization"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/off-mls-antitrust-scrutiny/",
+    "tokens": [
+      "debate",
+      "moves",
+      "washington",
+      "agents",
+      "need",
+      "clear",
+      "script"
+    ],
+    "shown_date": "2026-08-08"
+  },
+  {
     "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-august-06-2026/",
     "tokens": [
       "mortgage",
@@ -5172,293 +5452,5 @@
       "highs"
     ],
     "shown_date": "2026-07-19"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/fed-officials-kevin-warsh-inflation-speeches-july-2026/",
-    "tokens": [
-      "officials",
-      "signal",
-      "inflation",
-      "crackdown",
-      "ahead",
-      "next",
-      "interest",
-      "rate",
-      "meeting"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/how-road-aims-to-boost-housing-supply-and-cut-red-tape/",
-    "tokens": [
-      "road",
-      "aims",
-      "boost",
-      "housing",
-      "supply",
-      "tape"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/june-housing-starts-jump-19-fueled-by-strong-multifamily-gains/",
-    "tokens": [
-      "june",
-      "housing",
-      "starts",
-      "jump",
-      "19%",
-      "fueled",
-      "strong",
-      "multifamily",
-      "gains"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/rocket-cos-strikes-new-deal-for-jpmorgan-chase-financing",
-    "tokens": [
-      "rocket",
-      "strikes",
-      "deal",
-      "jpmorgan",
-      "chase",
-      "financing"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/pending-home-sales-fall-june-2026-housing-update/",
-    "tokens": [
-      "pending",
-      "home",
-      "sales",
-      "plunge",
-      "5.4%",
-      "june",
-      "prices",
-      "surge",
-      "record",
-      "high"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://rebusinessonline.com/eastham-capital-sells-200-unit-apartment-complex-in-humble-texas/",
-    "tokens": [
-      "eastham",
-      "capital",
-      "sells",
-      "200",
-      "unit",
-      "apartment",
-      "complex",
-      "humble",
-      "texas"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://rebusinessonline.com/partnership-to-develop-265-unit-multifamily-project-in-uptown-dallas/",
-    "tokens": [
-      "partnership",
-      "develop",
-      "265",
-      "unit",
-      "multifamily",
-      "project",
-      "uptown",
-      "dallas"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/list/10-best-housing-markets-for-first-time-home-buyers",
-    "tokens": [
-      "best",
-      "housing",
-      "markets",
-      "first",
-      "time",
-      "home",
-      "buyers"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTTlabzROX0k3VTRZTGE2MlR2dHVDMDNGeVRFdFhkV0dqS3RFWmFmc1d0OTdkV3hIQjNOYWExV0Nnbi13dzV4ZlJLWHFrSlhINno2WktfVGp5NUtwSzRHQktEVzlWMHpWLVdaaFd1S1p2RWxUOVNRLTBrUTNHVzFNV1J5aUZvX3RJdkRvbE5LNTFaMzJaZ3VYcmZudG8xMDQ3ZUxid215VDQ?oc=5",
-    "tokens": [
-      "raphael",
-      "warnock",
-      "gets",
-      "passed",
-      "limiting",
-      "private",
-      "equity",
-      "purchase",
-      "excess",
-      "single",
-      "family",
-      "homes",
-      "black",
-      "enterprise"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.seyfarth.com/news-insights/the-21st-century-road-to-housing-act-a-federal-framework-for-build-to-rent.html",
-    "tokens": [
-      "century",
-      "road",
-      "housing",
-      "federal",
-      "framework",
-      "build",
-      "rent",
-      "8211",
-      "seyfarth"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.globest.com/2026/07/14/singlefamily-rents-post-first-sustained-decline-since-pandemic/",
-    "tokens": [
-      "single",
-      "family",
-      "rents",
-      "post",
-      "first",
-      "sustained",
-      "decline",
-      "since",
-      "pandemic",
-      "8211",
-      "globest"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.bisnow.com/houston/news/retail/houstons-competitive-retail-market-brings-quick-vacancy-backfills-in-most-cases-135470",
-    "tokens": [
-      "houston",
-      "competitive",
-      "retail",
-      "market",
-      "brings",
-      "quick",
-      "backfills",
-      "most",
-      "cases"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/retail/verizon-cuts-500-staff-sells-274-retail-locations-135464",
-    "tokens": [
-      "verizon",
-      "sell",
-      "274",
-      "retail",
-      "locations",
-      "500",
-      "office",
-      "workers"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.bisnow.com/los-angeles/news/industrial/manhattan-beach-studios-being-shopped-as-possible-defense-tech-site-135465",
-    "tokens": [
-      "manhattan",
-      "beach",
-      "studios",
-      "shopped",
-      "possible",
-      "defense",
-      "tech",
-      "site"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/industrial/speculative-industrial-construction-is-back-with-prologis-targeting-dozens-of-markets-135458",
-    "tokens": [
-      "industrial",
-      "rebound",
-      "fuels",
-      "wave",
-      "speculative",
-      "projects"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/realpage-willow-bridge-class-action-algorithmic-pricing-philadelphia/825440/",
-    "tokens": [
-      "realpage",
-      "willow",
-      "bridge",
-      "face",
-      "class",
-      "action",
-      "lawsuit",
-      "philadelphia"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/data-center-capital-markets/csquare-misses-ipo-target-investor-appetite-data-center-infrastructure-wanes-135466",
-    "tokens": [
-      "brookfield",
-      "csquare",
-      "misses",
-      "target",
-      "data",
-      "center",
-      "cost",
-      "skepticism",
-      "rises"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/capital-markets/balbec-launches-flagship-fund-with-930m-first-close-135468",
-    "tokens": [
-      "balbec",
-      "raises",
-      "$930m",
-      "fund",
-      "target",
-      "commercial",
-      "residential",
-      "debt"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA1YlkyZ0FZV3ZfaXJZOTRfM3Y1Qkw3eWpuV0lJN2NCRlY4OFVYZEJ0ak1FeURpcHdLZ1NFWVFnOU9RN0Z1aUNvclRuenFmRVNiVWZBTTFBVmEwNFR1RUx2MjBuWGctZk9hX2c?oc=5",
-    "tokens": [
-      "realpage",
-      "acquires",
-      "cherre",
-      "build",
-      "data",
-      "foundation",
-      "inman"
-    ],
-    "shown_date": "2026-07-18"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/07/17/homebuyer-affordability.html",
-    "tokens": [
-      "homebuyer",
-      "affordability",
-      "slipped",
-      "fifth",
-      "straight",
-      "month",
-      "index"
-    ],
-    "shown_date": "2026-07-18"
   }
 ]
