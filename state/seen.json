@@ -1,5 +1,295 @@
 [
   {
+    "url": "https://www.redfin.com/news/weak-july-jobs-report-could-delay-fed-rate-hike/",
+    "tokens": [
+      "weak",
+      "july",
+      "jobs",
+      "delay",
+      "rate",
+      "hike",
+      "giving",
+      "homebuyers",
+      "mortgage",
+      "relief"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/mortgage-spreads-keeping-housing-demand-intact-for-now/",
+    "tokens": [
+      "mortgage",
+      "spreads",
+      "keeping",
+      "housing",
+      "demand",
+      "intact"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQ1E5QVhoRng5NnVob1o4N2RZRGtYLXlVdnJqMHpwRDY2QWE0ODZ6YmUteGt0N0tNVl9BYmpQTy11NnZGV2RKTGtzdU82Y0thbnMydk9ucmg2TVRoejFhWXdjYjhMZ1prTnQ1UGcwV0o2OGxRNmpoYWJ5X2xaeXNOUmIzUW5sT0p3b0xaaExILWNfNHdJbDdvWXlvcDV6eks5amFac3h4akdFYkZKWVpDT0hqaEJHeFlmQlE?oc=5",
+    "tokens": [
+      "monthly",
+      "housing",
+      "market",
+      "inventory",
+      "dynamics",
+      "800",
+      "metros",
+      "000",
+      "counties",
+      "zips",
+      "resiclub"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/municipal-zoning-public-benefits-land-use-new-jersey/827342/",
+    "tokens": [
+      "public",
+      "benefits",
+      "land",
+      "outweigh",
+      "local",
+      "zoning",
+      "jersey",
+      "supreme",
+      "court"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/single-staircase-reform-michigan-whitmer/827120/",
+    "tokens": [
+      "single",
+      "staircase",
+      "reforms",
+      "boost",
+      "middle",
+      "scale",
+      "housing",
+      "michigan"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://rebusinessonline.com/adolfson-peterson-completes-renovation-of-residence-hall-at-university-of-texas-san-antonio/",
+    "tokens": [
+      "adolfson",
+      "038",
+      "peterson",
+      "completes",
+      "renovation",
+      "residence",
+      "hall",
+      "university",
+      "texas",
+      "antonio"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.bisnow.com/news/los-angeles/deal-sheet/usa-properties-fund-irvine-co-break-ground-on-338-tustin-apartments",
+    "tokens": [
+      "properties",
+      "fund",
+      "irvine",
+      "break",
+      "ground",
+      "338",
+      "tustin",
+      "apartments",
+      "angeles",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.bisnow.com/news/south-florida/construction-development/jeffrey-soffer-fontainebleau-aventura-lawsuit-turnberry-isle",
+    "tokens": [
+      "jeffrey",
+      "soffer",
+      "aventura",
+      "sued",
+      "condo",
+      "owners",
+      "pushing",
+      "yacht",
+      "club",
+      "project"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/shopoff-secures-approval-for-buena-park-residential-development/",
+    "tokens": [
+      "shopoff",
+      "secures",
+      "approval",
+      "buena",
+      "park",
+      "residential",
+      "development"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://rebusinessonline.com/northmarq-arranges-sale-of-190-unit-multifamily-property-in-jeffersonville-indiana/",
+    "tokens": [
+      "northmarq",
+      "arranges",
+      "sale",
+      "190",
+      "unit",
+      "multifamily",
+      "property",
+      "jeffersonville",
+      "indiana"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/data-center-capital-markets/wall-street-anxiety-pushes-meta-into-the-neocloud-business",
+    "tokens": [
+      "wall",
+      "street",
+      "anxiety",
+      "pushes",
+      "meta",
+      "neocloud",
+      "business"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-arranges-recapitalization-of-downtown-pittsburgh-mixed-use-property/",
+    "tokens": [
+      "arranges",
+      "recapitalization",
+      "downtown",
+      "pittsburgh",
+      "mixed",
+      "property"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.bisnow.com/news/los-angeles/office/innocean-el-segundo-jll-hackman-capital-888-douglas",
+    "tokens": [
+      "global",
+      "agency",
+      "innocean",
+      "leases",
+      "101",
+      "hackman",
+      "segundo",
+      "campus"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/selldorf-architects-signs-long-term-renewal-at-860-broadway/",
+    "tokens": [
+      "selldorf",
+      "architects",
+      "signs",
+      "long",
+      "term",
+      "renewal",
+      "860",
+      "broadway"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/ellington-financial-nears-servicer-acquisition-agreement",
+    "tokens": [
+      "ellington",
+      "financial",
+      "nears",
+      "servicer",
+      "acquisition",
+      "agreement"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://rebusinessonline.com/american-house-winterpast-capital-acquire-192-unit-seniors-housing-community-in-kansas-city/",
+    "tokens": [
+      "american",
+      "house",
+      "winterpast",
+      "capital",
+      "acquire",
+      "192",
+      "unit",
+      "seniors",
+      "housing",
+      "community",
+      "kansas",
+      "city"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZ25vN0xIZk9ic2tzdlpDSVVnVGVjWDY3dzVpZjVaYmtzWGJSVzJaZkNyOEdIQXJEVXZKVC0yMHFRN1R4emQtMzU2cDVKdGxiUzR1T0hvRXZsX01rMWNZWDRnekxVNUpSV21yU1prZ0w3VC13UTVMRWJfQkJ1bDhvWGZmV21NVXduaEFtdExJNlk2aFR1U0d3?oc=5",
+    "tokens": [
+      "zillow",
+      "lays",
+      "500",
+      "employees",
+      "part",
+      "cost",
+      "cutting",
+      "inman"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.realtor.com/advice/hyperlocal/new-mexico-housing-crisis-young-adults-to-live-at-home-with-parents-longer/",
+    "tokens": [
+      "mexico",
+      "young",
+      "adults",
+      "abandoning",
+      "rental",
+      "market",
+      "live",
+      "home",
+      "longer"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdHRLME5Scm5DbFRKQmVhT0hBZ0drQ0JNalJoM0hieVMwTDFkMXBkb1hKdVc0RE1FbDB2X0NDVnlYZFlkV3YyeHJBT3dmTGRLYWcwN25VTGtrS0gtMGgzODV0UGY1ckRLb2ZITEx5UEtMZEFPcENBajJ5SVZQZ2RWUWpWZDNFUWRycFNRdW1CbGFybjQ?oc=5",
+    "tokens": [
+      "spokane",
+      "agents",
+      "jump",
+      "action",
+      "wildfires",
+      "devastate",
+      "housing",
+      "inman"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/maddd-equities-scoops-up-vacant-west-farms-industrial/",
+    "tokens": [
+      "maddd",
+      "equities",
+      "scoops",
+      "vacant",
+      "west",
+      "farms",
+      "industrial"
+    ],
+    "shown_date": "2026-08-10"
+  },
+  {
     "url": "https://www.realtor.com/research/july-2026-employment-report/",
     "tokens": [
       "messy",
@@ -5206,270 +5496,5 @@
       "letter"
     ],
     "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/housing-starts-surge-on-rebound-in-multifamily-construction",
-    "tokens": [
-      "housing",
-      "starts",
-      "surge",
-      "rebound",
-      "multifamily",
-      "construction"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/what-the-road-to-housing-act-can-and-cant-do-for-affordability/",
-    "tokens": [
-      "road",
-      "housing",
-      "affordability"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZmt3QzMxQ2tySGl5YWxoQ0s5NkM5NVh2dnh6bjlfQjlVNjh4dzZBMHdYMWUwWTZZb3Z0cWZiVTJjbjBXUmEzZTRMc09mT3N3SWp6TmVWZF9rTDh5VUZjV3h0ZUJuWUlnc1ZjMkEySVlQaHJ0U19CMEh4M09SdVpaczA1MVdQX2dsRGIyWTFOLUV1cGMwX2pmUGJKaw?oc=5",
-    "tokens": [
-      "inflation",
-      "cooled",
-      "june",
-      "does",
-      "mean",
-      "mortgage",
-      "rates",
-      "inman"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/california-ab1903-condo-defects/",
-    "tokens": [
-      "california",
-      "condo",
-      "defect",
-      "liability",
-      "bill",
-      "deck",
-      "recess"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/should-lenders-prepare-for-mortgage-rates-moving-even-higher",
-    "tokens": [
-      "lenders",
-      "prepare",
-      "mortgage",
-      "rates",
-      "moving",
-      "higher"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdjY2aDN1b3Fvbm9iV0tzQ2JrT3NWYWRTQU9kYlY4bmlFOGNYME5ZS0FNZ3NLQ0h3bEJhZG4ybW0tdHMzX3lmRXdOa0daWUJzSTQxNXNJZVl0N25JSGFVaXh1S3hwY0hsUXhXY2wyanlFd0FJdTFRQ2p5bDUweXhjVzgxcnpPNmRXNG8td2ZuLTlnQjVwckRvNXRXWVBFbmI0M1FOLVR2dWM4RDhrN1ltWEQ4MFU?oc=5",
-    "tokens": [
-      "orlando",
-      "homebuyers",
-      "face",
-      "higher",
-      "mortgage",
-      "rates",
-      "during",
-      "summer",
-      "market",
-      "spectrum"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/escambia-county-florida-crime-affordable-beach-homes/",
-    "tokens": [
-      "florida",
-      "crime",
-      "vortex",
-      "ties",
-      "bundy",
-      "become",
-      "state",
-      "most",
-      "affordable",
-      "beach",
-      "escapes"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNaGU5VTl0c3BxV3dxWFpYRDBtZ3J3Tnk5STZmbWV1YmFrZFByNExrVTc3amM3UjY0c25Hbzd1OHRoekh0S0U1SERWZ1owa3BYSlM4SGY5U0dpM2JKbF9oSnBtdDgzcl9YTTAtZ1ZMRDd5T3hLeHE5Z1hJR0FUSmFlSFdKYVJIMVg3bTNxc2RlaDNocnMzaGQ5cHQzSjgtTGFGWTMyU2xXSjQ?oc=5",
-    "tokens": [
-      "warnock",
-      "dickens",
-      "tout",
-      "bipartisan",
-      "federal",
-      "housing",
-      "affordability",
-      "concerns",
-      "wabe"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://rebusinessonline.com/lee-associates-negotiates-94993-sf-industrial-lease-in-southlake-texas/",
-    "tokens": [
-      "038",
-      "associates",
-      "negotiates",
-      "993",
-      "industrial",
-      "lease",
-      "southlake",
-      "texas"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/trepp-crediq-apartment-distress-/825333/",
-    "tokens": [
-      "apartment",
-      "cmbs",
-      "distress",
-      "showed",
-      "mixed",
-      "signals",
-      "june",
-      "trepp"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/manhattan-building-conversion-type-contributed-engineer/825289/",
-    "tokens": [
-      "project",
-      "type",
-      "likely",
-      "contributed",
-      "structural",
-      "failure",
-      "asce",
-      "engineer"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/colliers-arranges-sale-of-302k-sf-industrial-building-in-kentucky/",
-    "tokens": [
-      "colliers",
-      "arranges",
-      "sale",
-      "302",
-      "industrial",
-      "building",
-      "kentucky"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/nicholas-associates-tapped-as-contractor-for-ground-up-multifamily-development-in-madison/",
-    "tokens": [
-      "nicholas",
-      "038",
-      "associates",
-      "tapped",
-      "contractor",
-      "ground",
-      "multifamily",
-      "development",
-      "madison"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/destressed-apartment-acquisitions-value-add-workforce-housing/825575/",
-    "tokens": [
-      "morgan",
-      "properties",
-      "evaluating",
-      "acquisition",
-      "opportunities"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/07/19/housing-costs-election-young-voters-cnbc-survey-finds.html",
-    "tokens": [
-      "housing",
-      "costs",
-      "political",
-      "issue",
-      "young",
-      "voters",
-      "cnbc",
-      "survey",
-      "finds"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTFEyclg2M3RsM0R1Rnozd1B2YlUtNHAzVmliUndVODJVdkE5ZU9IUng1NFFsMzFYZlNMMWJma2oyX1ZOdGp3UnhoQ1hhSVZrSHdMeHdHLWppdmxqVjctVmFGbjAzeVR3Qk5pU0ctQ3pldzNybTZ0UGZYMVBfLUd1a3U2MzJPOG1uVy1aVVBSN0NjNkV6Rmc?oc=5",
-    "tokens": [
-      "compass",
-      "pursues",
-      "zillow",
-      "complaints",
-      "across",
-      "states",
-      "inman"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQLTNMRFludi1EWkI0Z0xIOWNBLTM5NllJUm9UQ1NSS282SFduZDhEQzM0YWxMN0JQS0ppcW1QaEJ0UGlrMnV5MG1hQUFqWWpTVGFqa29yS3N5SG8wRGVnQjRrQ3IyT25qaGxrNnZmMGs3ZUFtRG5PN3lNaXJLUktPYUtDSi00M0lDMXN1RTByVmpOc0dMU3gxNQ?oc=5",
-    "tokens": [
-      "transunion",
-      "adds",
-      "alternative",
-      "credit",
-      "data",
-      "mortgage",
-      "inman"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/shellpoint-respa-servicing-suit/",
-    "tokens": [
-      "newrez",
-      "servicing",
-      "sued",
-      "jersey",
-      "alleged",
-      "respa",
-      "violations"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/uhm-acquires-ameritrust-assets/",
-    "tokens": [
-      "acquires",
-      "ameritrust",
-      "assets",
-      "expands",
-      "footprint"
-    ],
-    "shown_date": "2026-07-20"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/short-sales-yield-9-more-than-foreclosures-now",
-    "tokens": [
-      "short",
-      "sales",
-      "yield",
-      "9%",
-      "foreclosures"
-    ],
-    "shown_date": "2026-07-20"
   }
 ]
