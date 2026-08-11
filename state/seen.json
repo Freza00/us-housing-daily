@@ -1,5 +1,280 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/uwm-securities-probe-q2-loss/",
+    "tokens": [
+      "faces",
+      "firm",
+      "fraud",
+      "probe",
+      "analyst",
+      "stock",
+      "price",
+      "cuts",
+      "loss",
+      "oaktree",
+      "deal"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.redfin.com/news/mortgage-rate-could-move-from-inflation-data-august-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "move",
+      "week",
+      "inflation",
+      "data",
+      "tests",
+      "path"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/bls-u-s-economy-unexpectedly-loses-23000-jobs-in-july/",
+    "tokens": [
+      "economy",
+      "unexpectedly",
+      "loses",
+      "000",
+      "jobs",
+      "july"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/fed-will-move-but-economists-debate-when-and-how",
+    "tokens": [
+      "move",
+      "economists",
+      "debate"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/housing-local-governments-hud-road-to-housing-legislation/827493/",
+    "tokens": [
+      "local",
+      "governments",
+      "full",
+      "benefits",
+      "road",
+      "housing",
+      "take",
+      "years",
+      "analysis"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/newmark-arranges-52m-loan-for-refinancing-of-metro-houston-multifamily-property/",
+    "tokens": [
+      "newmark",
+      "arranges",
+      "$52m",
+      "loan",
+      "refinancing",
+      "metro",
+      "houston",
+      "multifamily",
+      "property"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/apartment-reit-q2-earnings-reports/827436/",
+    "tokens": [
+      "apartment",
+      "reits",
+      "belt",
+      "momentum",
+      "latest",
+      "earnings"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZmh1RDZwODM5NnQ0UzJWaEs5LW1MakJNQ1hLbWdxQ052bFBFVU5UQXNuM2U4bVFycXpKckh2cFlVTHhGVkhWUUdrbUF6cGxnTDE5NGh3LVJaeTlpV1E0NFJyNkU5YVpJTmdNSzdWT0tvYzNMNXVoRnZ2bzg2NHptVTJvQ0VyNkF2T3hn?oc=5",
+    "tokens": [
+      "sellers",
+      "home",
+      "prices",
+      "housing",
+      "market",
+      "cools",
+      "media"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/fairfield-residential-completes-340-unit-multifamily-project-in-houstons-montrose-district/",
+    "tokens": [
+      "fairfield",
+      "residential",
+      "completes",
+      "340",
+      "unit",
+      "multifamily",
+      "project",
+      "houston",
+      "montrose",
+      "district"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/berkadia-arranges-19-1m-in-acquisition-financing-for-build-to-rent-community-in-st-cloud-florida/",
+    "tokens": [
+      "berkadia",
+      "arranges",
+      "$19.1m",
+      "acquisition",
+      "financing",
+      "build",
+      "rent",
+      "community",
+      "cloud",
+      "florida"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORHZUbmtrOG9XYlNac2d1V3FRUWNNUU9wWmYyb0wzUC14d0lwTHJRVXFhMHZ4WlkzQzA2a2NjbDZfVllYQmU4VG9wOFRBZ0J0anUwMUJvSWpiMGNaN0p3S2VsRTJYSXlNTXIyZmZlUE1NdE1OUWdWd2hjTXZTSWhTMzZoUndiSW1MazBZRk9Ec2czRmJrd2Fv?oc=5",
+    "tokens": [
+      "invitation",
+      "homes",
+      "elevates",
+      "leaders",
+      "investments",
+      "resident",
+      "experience",
+      "stocktitan"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/commercial-real-estate/worldwide-plaza-foreclosure-receivership-sl-green-rxr-extell-cmbs",
+    "tokens": [
+      "green",
+      "booted",
+      "worldwide",
+      "plaza",
+      "manager",
+      "foreclosure",
+      "battle"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/eldridge-capital-provides-278m-loan-for-refinancing-of-midtown-atlanta-office-tower/",
+    "tokens": [
+      "eldridge",
+      "capital",
+      "provides",
+      "$278m",
+      "loan",
+      "refinancing",
+      "midtown",
+      "atlanta",
+      "office",
+      "tower"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.bisnow.com/news/chicago/economic-development/ballys-pauses-construction-on-portion-of-casino-project-amid-city-squabble",
+    "tokens": [
+      "bally",
+      "039",
+      "pauses",
+      "construction",
+      "portion",
+      "casino",
+      "project",
+      "city",
+      "squabble"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/hotel/ryman-hospitality-grande-lakes-orlando-elliot-trinity-investments",
+    "tokens": [
+      "ryman",
+      "hospitality",
+      "$1.4b",
+      "orlando",
+      "resort",
+      "complex"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/talonvest-closes-refi-for-two-hotel-sunnyvale-campus/",
+    "tokens": [
+      "talonvest",
+      "closes",
+      "refi",
+      "hotel",
+      "sunnyvale",
+      "campus"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.bisnow.com/news/chicago/development/related-midwest-developer-still-building-big-in-chicago",
+    "tokens": [
+      "related",
+      "midwest",
+      "betting",
+      "chicago",
+      "others",
+      "hold",
+      "back"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/ccm-500m-senior-unsecured-notes-fitch/",
+    "tokens": [
+      "issue",
+      "$500m",
+      "senior",
+      "notes",
+      "harbors",
+      "deal",
+      "nears",
+      "closing"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.bisnow.com/news/washington-dc/washington-dc-legal/64be9f54-02c7-4510-bb51-790691d59490",
+    "tokens": [
+      "smith",
+      "loss",
+      "improbable",
+      "$356m",
+      "wardman",
+      "tower",
+      "ruling"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/capital-gains-tax-exclusion-more-homes-on-the-market-act/",
+    "tokens": [
+      "bill",
+      "double",
+      "capital",
+      "gains",
+      "exclusion",
+      "picks",
+      "momentum",
+      "congress"
+    ],
+    "shown_date": "2026-08-11"
+  },
+  {
     "url": "https://www.redfin.com/news/weak-july-jobs-report-could-delay-fed-rate-hike/",
     "tokens": [
       "weak",
@@ -5232,269 +5507,5 @@
       "reit"
     ],
     "shown_date": "2026-07-22"
-  },
-  {
-    "url": "https://www.realtor.com/research/new-home-construction-june-2026/",
-    "tokens": [
-      "construction",
-      "permitting",
-      "slows",
-      "june",
-      "completions",
-      "pick"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNS1lNbEY3MTliQlYxTmloOVZHY0ZwZFV3a25EWWQ1MHMyS194RDNvYVZCSzdKUERPTUlpQnJoWVFpNm9zTXdGOWFnUFZvSjNQRDJkN09sQW12ekk4ajNHWnp2X1NQUHpQWWhVSVVlb2dzWnZ0a0hEaFBhTWtic2ViWVBYNDNWOUZ4NnZVR1ZudWV2WWp3cDdYTUdlSHRsYnZLbG8tQmNGQzlyNms0aFpmVTRR?oc=5",
-    "tokens": [
-      "century",
-      "road",
-      "housing",
-      "here",
-      "actual",
-      "institutional",
-      "homebuilding",
-      "impact",
-      "resiclub"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPWU9SemhwaDE5ZXNsTDVTeWZNTnp5Y0p5bEVpOXVIemdTWkI4X28tckNDYzlwMlhZYWt6QUdqN2t2NjhQVnZMVzB1NEpoME5wN3BXWHJyRWJ3bXNQU2FjSHlHWFh2T3pfMkVIUVprVGVKRTdnSEtFWG85a2h4Nnd6MzU2ZVdxaHBuUnE3bDhyN1hOUWJjQkhsTHNkVjJhNU0?oc=5",
-    "tokens": [
-      "major",
-      "housing",
-      "markets",
-      "home",
-      "prices",
-      "falling",
-      "fast",
-      "company"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/starter-home-inventory-down-300000-from-2019/",
-    "tokens": [
-      "starter",
-      "home",
-      "inventory",
-      "trails",
-      "2019",
-      "300",
-      "000",
-      "listings",
-      "data"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/greystar-section-8-violation-lawsuits-hri/825675/",
-    "tokens": [
-      "greystar",
-      "faces",
-      "114",
-      "section",
-      "violation",
-      "claims",
-      "states"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://rebusinessonline.com/jll-arranges-40-9m-acquisition-loan-for-irving-apartment-complex/",
-    "tokens": [
-      "arranges",
-      "$40.9m",
-      "acquisition",
-      "loan",
-      "irving",
-      "apartment",
-      "complex"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRl81cnhoRllYNmQ5MkY2VlBOZGRyNXNERGFBNVEwNmlQcEJzeEVYYkpIOU1BUW00S2N0SXBHV3RQRk1Ob253OGFsVkxLZGtlNDl0SjYxb3hRamZaVkZseEQ3cXBUMURWSmVhUXNRcC1Pc1d4bkUxQ0VkbDJhS1I1eTFfMXUyamh6bDVMczFKMzE4SU52UHVGLUljQXlGSzQ?oc=5",
-    "tokens": [
-      "looking",
-      "starter",
-      "home",
-      "south",
-      "inman"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPN2UzY3JINHA3ekVXRTR2bU9oM25fZEpCSUZVYTVfakJyWkhtZHVkeXUyQTA0eHNObkdQUGxLcThUNEM4UHNqbTdEMHFoUXlSTnF0bW9zc3VVUjZfM2Z6M05Eajk1MktlS1RqUVpDdUZyRWtlbVRfZm5tWFlfa25hc1JMMnZiQ2dVazBUVDJOWVo4TnZYb2RGMTB3WmJMMnE5dlAxUmR3alVuY2haNFFVTF9lWWRtS2pBX3c?oc=5",
-    "tokens": [
-      "prices",
-      "record",
-      "high",
-      "gains",
-      "nashville",
-      "home",
-      "sales",
-      "here",
-      "know",
-      "wsmv"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/raleigh-developer-to-start-work-on-269-unit-rental-community/",
-    "tokens": [
-      "raleigh",
-      "developer",
-      "start",
-      "work",
-      "269",
-      "unit",
-      "rental",
-      "community"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://rebusinessonline.com/provident-industrial-buys-1-5-msf-industrial-park-in-hutchins-texas/",
-    "tokens": [
-      "provident",
-      "industrial",
-      "buys",
-      "park",
-      "hutchins",
-      "texas"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/healthcare/brookfield-healthpeak-form-21b-medical-office-portfolio-jv-135482",
-    "tokens": [
-      "brookfield",
-      "healthpeak",
-      "form",
-      "$2.1b",
-      "medical",
-      "office",
-      "joint",
-      "venture"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/20/verizon-offloading-hundreds-of-stores-second-recent-cut/",
-    "tokens": [
-      "verizon",
-      "offloading",
-      "hundreds",
-      "retail",
-      "locations"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/data-centers-energy-cost-electric-bills-congressional-help/",
-    "tokens": [
-      "data",
-      "centers",
-      "driving",
-      "electric",
-      "bills",
-      "draw",
-      "congressional",
-      "attention"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://rebusinessonline.com/wellpointe-to-develop-2b-affordable-seniors-housing-campus-in-los-angeles/",
-    "tokens": [
-      "wellpointe",
-      "develop",
-      "$2b",
-      "affordable",
-      "seniors",
-      "housing",
-      "campus",
-      "angeles"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/20/brookfield-cpp-strike-5-2b-deal-for-lxp-industrial-trust/",
-    "tokens": [
-      "brookfield",
-      "strike",
-      "$5.2b",
-      "deal",
-      "take",
-      "industrial",
-      "trust",
-      "private"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://therealdeal.com/national/2026/07/20/balbec-raises-more-than-900m-for-flagship-fund/",
-    "tokens": [
-      "balbec",
-      "raises",
-      "$900m",
-      "flagship",
-      "fund"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/industrial/segro-rejects-third-takeover-bid-from-prologis-seeking-even-sweeter-offer-135481",
-    "tokens": [
-      "prologis",
-      "$18b",
-      "third",
-      "segro",
-      "rejected"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQWZNU0ZGMWR2UzhrVG5uWF9hLUJCZTlma1lMcTNXVGJHNU1FZVZaaUhKVWgxQVgwODNaMW5oT0I5enpBZnI3V2NiVTVGUFRvdUV5S1IyTDZtMFRDNG9BNFR0b1NxS3VSS0NkS3FQUG5GRmlPSDBoNTdLUkt2YkRUOTVLYmFuYlVm?oc=5",
-    "tokens": [
-      "prefab",
-      "home",
-      "startup",
-      "boxabl",
-      "goes",
-      "public",
-      "$3.5b",
-      "spac",
-      "merger",
-      "inman"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/how-high-can-mortgage-rates-go-with-iran-conflict-2-0/",
-    "tokens": [
-      "high",
-      "mortgage",
-      "rates",
-      "iran",
-      "conflict"
-    ],
-    "shown_date": "2026-07-21"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/ad-mortgage-condo-policy-fhfa/",
-    "tokens": [
-      "mortgage",
-      "flags",
-      "condo",
-      "reserve",
-      "rules",
-      "fhfa",
-      "letter"
-    ],
-    "shown_date": "2026-07-21"
   }
 ]
