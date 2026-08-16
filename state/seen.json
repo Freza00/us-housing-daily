@@ -1,5 +1,282 @@
 [
   {
+    "url": "https://eyeonhousing.org/2026/08/homeownership-rate-edges-down-to-65/",
+    "tokens": [
+      "homeownership",
+      "rate",
+      "edges",
+      "down",
+      "65%"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/08/mortgage-applications-fall-across-loan-types-in-july/",
+    "tokens": [
+      "mortgage",
+      "applications",
+      "fall",
+      "across",
+      "loan",
+      "types",
+      "july"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/08/14/housing-investors-say-this-is-their-worst-market-in-at-least-3-years.html",
+    "tokens": [
+      "housing",
+      "investors",
+      "worst",
+      "market",
+      "least",
+      "years"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/inventory-edges-higher-mid-august/",
+    "tokens": [
+      "inventory",
+      "edges",
+      "slightly",
+      "higher",
+      "year",
+      "rates",
+      "rise"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/near-term-multifamily-completions-increase/",
+    "tokens": [
+      "near",
+      "term",
+      "multifamily",
+      "completions",
+      "increase",
+      "yardi",
+      "matrix",
+      "forecast"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNODVYZkYxZHdPU2NDUUhHbjdDTnZvWGpUcGxOa0ZyNnVXNWFlZUo4Ym8tRTFGS0F0OFhKRmdHSFB1MVkzU1VzZDRmWWk0SW1iRnFfckxVR29MMUg0aGJHYVZCdTQxQ0I4dWlBR3lmaWFlRlQwaTAzNDE4ampKcV9YZUdzaDNlQkFWNm1rZ3Z1dTZNYVB4MHN5S1EtWENGeHowc3lVNjVzMGRrcEllVTU1RnNodGtPS1U?oc=5",
+    "tokens": [
+      "nashville",
+      "housing",
+      "market",
+      "shifts",
+      "buyers",
+      "favor",
+      "affordability",
+      "remains",
+      "hurdle",
+      "channel"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/hottest-markets-for-investor-homebuyers-2026/",
+    "tokens": [
+      "alabama",
+      "magic",
+      "city",
+      "emerges",
+      "hottest",
+      "market",
+      "investor",
+      "homebuyers"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.dmagazine.com/arts-entertainment/2026/08/sunrise-academy-dont-miss-the-field-trip-album-interview/",
+    "tokens": [
+      "sunrise",
+      "academy",
+      "infectious",
+      "indie",
+      "home",
+      "east",
+      "dallas"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hZ3RMR1psRElhemwzVmFINm1XbHJpenNHUUFFVFlEX1B4TldVSHNqaktPQUZlUzJ4NHE4RU01dGZleExEeU45TWpPVzFTODVXbEdSckxfdzN6azQ?oc=5",
+    "tokens": [
+      "really",
+      "going",
+      "phoenix",
+      "housing",
+      "market",
+      "update",
+      "rick",
+      "morty",
+      "jnxod",
+      "mshale"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.globest.com/2026/08/07/housing-costs-are-reshaping-the-path-to-economic-mobility/",
+    "tokens": [
+      "housing",
+      "costs",
+      "reshaping",
+      "path",
+      "economic",
+      "mobility",
+      "8211",
+      "globest"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/cbre-arranges-debt-on-advanced-manufacturing-campus-in-san-joses-golden-triangle/",
+    "tokens": [
+      "cbre",
+      "arranges",
+      "debt",
+      "advanced",
+      "manufacturing",
+      "campus",
+      "jose",
+      "golden",
+      "triangle"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://rebusinessonline.com/corecentric-solutions-signs-286622-sf-industrial-lease-in-west-chicago/",
+    "tokens": [
+      "corecentric",
+      "solutions",
+      "signs",
+      "286",
+      "622",
+      "industrial",
+      "lease",
+      "west",
+      "chicago"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.realtor.com/research/august-2026-data-centers/",
+    "tokens": [
+      "data",
+      "centers",
+      "american",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.bisnow.com/news/chicago/senior-housing/illinois-senior-population-growth-developers-face-financing-puzzle",
+    "tokens": [
+      "illinois",
+      "039",
+      "senior",
+      "population",
+      "grow",
+      "40%",
+      "developers",
+      "facing",
+      "financing",
+      "puzzle"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://rebusinessonline.com/walker-dunlop-secures-33-2m-agency-acquisition-loan-for-los-angeles-multifamily-community/",
+    "tokens": [
+      "walker",
+      "038",
+      "dunlop",
+      "provides",
+      "$33.2m",
+      "agency",
+      "acquisition",
+      "loan",
+      "angeles",
+      "multifamily",
+      "community"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/sustainability-climate/moody-s-more-heat-and-less-water-leave-insurance-models-with-half-the-picture",
+    "tokens": [
+      "moody",
+      "039",
+      "warns",
+      "rising",
+      "heat",
+      "water",
+      "scarcity",
+      "poised",
+      "reshape",
+      "asset",
+      "values"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeXRDc09jNW1JQzlkbGpxUWtnSC1FS3V6dHN0OUlmUFpmUmhqU3pSdEV5bzBRb0ZmY0hTNjB1bEhUNzMzVDJManFHR2FBR1VlbTVaTWVxQW9SZzl5SWQzMldGR1JPOGUwcGdDc3N6S0RsVDVyTlZvZlNQa25QQm5WWXRMRW9yZEk?oc=5",
+    "tokens": [
+      "remax",
+      "securityholders",
+      "approve",
+      "acquisition",
+      "inman"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.bisnow.com/news/washington-dc/deal-sheet/student-housing-investor-buys-foggy-bottom-residences-dc-deal-sheet",
+    "tokens": [
+      "student",
+      "housing",
+      "investor",
+      "buys",
+      "foggy",
+      "bottom",
+      "residences",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/pied-a-terre-lawsuit-moot/",
+    "tokens": [
+      "appeals",
+      "court",
+      "reboots",
+      "pied",
+      "terre",
+      "rollout",
+      "pause"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/08/cost-of-credit-for-builders-up-since-the-end-of-2025/",
+    "tokens": [
+      "cost",
+      "credit",
+      "builders",
+      "since",
+      "2025"
+    ],
+    "shown_date": "2026-08-16"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/markets-eye-fed-hold-after-retail-sales-consumer-confidence-fall",
     "tokens": [
       "markets",
@@ -5275,270 +5552,5 @@
       "squeeze"
     ],
     "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/home-sales-are-positive-but-higher-rates-slowing-demand/",
-    "tokens": [
-      "home",
-      "sales",
-      "positive",
-      "higher",
-      "rates",
-      "slowing",
-      "demand"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/new-home-sales-rise-for-first-time-in-three-months",
-    "tokens": [
-      "home",
-      "sales",
-      "rise",
-      "first",
-      "time",
-      "three",
-      "months"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/homeowners-monthly-mortgage-payments-july-2026-report/",
-    "tokens": [
-      "mortgage",
-      "rate",
-      "lock",
-      "persists",
-      "ultralow",
-      "holders",
-      "showing",
-      "little",
-      "sign",
-      "budging"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQQlprRG9UTUFsRjJTZTRuRW9GOFZFNi1Uck1ZbzhwSGxGUUJlYnh3V29QSW5hbVg1NmZwVTNMOVAwX1k0cXVlX3FaZk1xSzhIeFlJOGQxTTJIcTdsOFJZX3UtS29jdTBULUI2YVY0V0p5Z2NhaEh0TlFaZGJCTmM5QndBamhoQUp2cWhMVjd3UQ?oc=5",
-    "tokens": [
-      "house",
-      "antitrust",
-      "panel",
-      "seeks",
-      "answers",
-      "compass",
-      "mred",
-      "private",
-      "listing",
-      "partnership",
-      "inman"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSzdpR3ZyaUkzMUJ3SjFVM0xBRWl1UHl3X3NLRDh3UFdUeExwS2dPX0pPaV9NRkdTYzNVR3dpWXNTR0pHX1dYU3d4SGdRM3hybkk1OU9vZ01hUmNJeDR6dGU5RnpYanRwVXJzNWtKd1pIY1Q5b1VPMk15Rmg0MERQMlNaemZ1QmhzTXlXbGs2aTYxTHNrbjhwbXJXRDJQVGxnYVBRUw?oc=5",
-    "tokens": [
-      "century",
-      "road",
-      "housing",
-      "exciting",
-      "start",
-      "inman"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/miami-realtors-rworld-expands-into-treasure-coast-with-new-merger/",
-    "tokens": [
-      "miami",
-      "realtors",
-      "rworld",
-      "expands",
-      "treasure",
-      "coast",
-      "merger"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.bisnow.com/south-florida/news/capital-markets/broward-condo-complex-deemed-unsafe-for-residents-sells-for-20m-135551",
-    "tokens": [
-      "integra",
-      "acquires",
-      "evacuated",
-      "broward",
-      "condo",
-      "complex",
-      "court",
-      "ordered",
-      "auction"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/citrus-grove-naples-fl-golf-course/",
-    "tokens": [
-      "standoff",
-      "citrus",
-      "grove",
-      "florida",
-      "homeowners",
-      "fuming",
-      "golf",
-      "course",
-      "neighborhood"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://rebusinessonline.com/national-property-holdings-unveils-plans-for-1-1-msf-industrial-park-in-katy-texas/",
-    "tokens": [
-      "national",
-      "property",
-      "holdings",
-      "unveils",
-      "industrial",
-      "park",
-      "katy",
-      "texas"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.bisnow.com/boston/news/life-sciences/biomed-loses-south-end-lab-office-property-to-lender-135556",
-    "tokens": [
-      "biomed",
-      "hands",
-      "boston",
-      "office",
-      "property",
-      "lender"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.bisnow.com/phoenix/news/office/phoenix-office-market-thrives-vacancy-continues-decline-135517",
-    "tokens": [
-      "phoenix",
-      "office",
-      "vacancy",
-      "continues",
-      "decline",
-      "despite",
-      "sluggish",
-      "leasing"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/hotel/us-hotel-projections-overshoot-the-mark-despite-record-world-cup-attendance-135545",
-    "tokens": [
-      "world",
-      "filled",
-      "stadiums",
-      "hotel",
-      "rooms",
-      "different",
-      "story"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/bozzuto-utility-billing-lawsuit-dc-class-action/826168/",
-    "tokens": [
-      "bozzuto",
-      "utility",
-      "billing",
-      "lawsuit",
-      "broadened",
-      "class",
-      "action"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/multifamily-investment-strategy-merge-aquisition/825679/",
-    "tokens": [
-      "major",
-      "multifamily",
-      "announced",
-      "year"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/milhaus-avalonbay-equity-residential-multifamily-merger-and-aqusition/825824/",
-    "tokens": [
-      "beyond",
-      "rent",
-      "recent",
-      "mergers",
-      "ascendance",
-      "operating",
-      "platform"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5JX1U3TW9hTjVNdHQxamtXWXhtNTVBY3FDY1FPbEdkVUlCTWFaRzhlclVjMjNQU2xwRzNKMFk0QXY3RnpMRzdIWjU1U2RfOGpxaDM5OUkzZmFMVU1rNkM4YngtTXpEeFdFNjRjQ3BKbUt2Qk5fbDBpTUxWNA?oc=5",
-    "tokens": [
-      "boxabl",
-      "goes",
-      "public",
-      "papasan",
-      "steps",
-      "back",
-      "inman"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/home-equity-surge-offsets-slumping-mortgage-volume",
-    "tokens": [
-      "home",
-      "equity",
-      "surge",
-      "offsets",
-      "slumping",
-      "mortgage",
-      "volume"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/large-drop-in-new-defaults-may-signal-reprieve-for-servicers",
-    "tokens": [
-      "large",
-      "drop",
-      "defaults",
-      "signal",
-      "reprieve",
-      "servicers"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/nvr-q2-2026-earnings/",
-    "tokens": [
-      "land",
-      "light",
-      "design",
-      "2026",
-      "reveals",
-      "strategy",
-      "limits"
-    ],
-    "shown_date": "2026-07-26"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/07/acquisitions-increasing-among-home-builders/",
-    "tokens": [
-      "acquisitions",
-      "increasing",
-      "among",
-      "home",
-      "builders"
-    ],
-    "shown_date": "2026-07-26"
   }
 ]
