@@ -1,5 +1,270 @@
 [
   {
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUk1KMGxnRF9FMVg5SDE1RmY3QmYxNmY0dTRxMUtiWlczUEtYNFljQUI4OG5MSkxsS1I0V2FTUldpM0dwTDFLLXJWQnBMVnI1QWpfbDhPd2hFSFlvdVcxVHNpbGxRN2lWdWNFaG91S0h3bXZoMUh4d0hrX184eUtsNjU3N21WanN2WTliYlZ1VFpiWHNMd19RSHlrUTR6SUIxS3FkdHpVMFotVHZxNC12N3JiYnV3YTI3OEFLUXBta2Q?oc=5",
+    "tokens": [
+      "data",
+      "look",
+      "fannie",
+      "freddie",
+      "push",
+      "mortgage",
+      "backed",
+      "securities",
+      "drive",
+      "spreads",
+      "lower",
+      "resiclub"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-august-13-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "fall",
+      "basis",
+      "points",
+      "remain",
+      "elevated",
+      "range"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/mortgage-insurers-report-another-strong-quarter-of-profits",
+    "tokens": [
+      "mortgage",
+      "insurers",
+      "another",
+      "strong",
+      "quarter",
+      "profits"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/nrmla-cfpb-reverse-mortgage/",
+    "tokens": [
+      "nrmla",
+      "asks",
+      "cfpb",
+      "reverse",
+      "mortgage",
+      "disclosure",
+      "framework"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9fakxiU3BfajV3SUZiejFWSnVuRWNWb3prejQ2bXQtUVQ5dkkyazJCb3QxYUtQWU9DcEZ5T0N1SXQ1NGZuTXhjZUU0NkhfWFRfVzlsNXFwOVRkQnY3TVdNcjhJM0ttQTBYQ1AxLTBoeWhEWHJiYXZ4Tm1B?oc=5",
+    "tokens": [
+      "elizabeth",
+      "warren",
+      "demands",
+      "info",
+      "compass",
+      "mred",
+      "inman"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/hillpointe-enters-kentucky-apartment-developments/827943/",
+    "tokens": [
+      "hillpointe",
+      "enters",
+      "kentucky",
+      "developments"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://rebusinessonline.com/lee-associates-brokers-sale-of-25000-sf-industrial-flex-building-in-northeast-dallas/",
+    "tokens": [
+      "038",
+      "associates",
+      "brokers",
+      "sale",
+      "000",
+      "industrial",
+      "flex",
+      "building",
+      "northeast",
+      "dallas"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/developer-proposes-600-mixed-income-apartments-in-bronxs-soundview-neighborhood/",
+    "tokens": [
+      "developer",
+      "proposes",
+      "600",
+      "mixed",
+      "income",
+      "apartments",
+      "bronx",
+      "soundview",
+      "neighborhood"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.bisnow.com/news/denver/deal-sheet/cu-denver-purchases-independence-plaza-the-denver-deal-sheet",
+    "tokens": [
+      "denver",
+      "purchases",
+      "independence",
+      "plaza",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/midwestern-multifamily-property-management-mergers-and-aquisitions/827476/",
+    "tokens": [
+      "outside",
+      "equity",
+      "looking",
+      "midwestern",
+      "apartments"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/ai-native-hanover-park-leases-full-floor-at-387-park-ave-south/",
+    "tokens": [
+      "native",
+      "hanover",
+      "park",
+      "leases",
+      "full",
+      "floor",
+      "387",
+      "south"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/radian-place-title-sale/",
+    "tokens": [
+      "radian",
+      "sells",
+      "services",
+      "title",
+      "sale",
+      "place"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE93RGNkcHhldXBzN3Q4VFI5TkRnb0FIWFB1dDBlNGNOWU1QOTF0SE9xbW1MeGN6RDBjZ3p6OWliTHZlU1BrdlZfWW1QOEtvbW9vSklJZzZua1djR0t0bkhMUVNOSmhVc2RVaGJoaWJVYnhLMzBrUUE?oc=5",
+    "tokens": [
+      "pied",
+      "terre",
+      "rollout",
+      "hits",
+      "legal",
+      "snags",
+      "extends",
+      "deadline",
+      "inman"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/lgi-inventory-strategy-q2/",
+    "tokens": [
+      "homes",
+      "trying",
+      "remove",
+      "reasons",
+      "buyers",
+      "keep",
+      "waiting"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/summer-heat-sets-in-across-northeast-housing-markets/",
+    "tokens": [
+      "summer",
+      "heat",
+      "sets",
+      "across",
+      "northeast",
+      "housing",
+      "markets"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/articles/uwms-stock-slide-puts-phoenix-suns-owners-wealth-in-focus",
+    "tokens": [
+      "stock",
+      "slide",
+      "puts",
+      "phoenix",
+      "suns",
+      "owner",
+      "wealth",
+      "focus"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/wyoming-mlss-nar-settlement-data/",
+    "tokens": [
+      "wyoming",
+      "mlss",
+      "object",
+      "settlement",
+      "data",
+      "sharing",
+      "notice"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBaQVN4emVWUmczZDVlLXFySWRmZ1RFM0VqN3o1WjB2ZEdVajBsLTgyWmI1MGJVZW5PRDVpdG15dTBEVWZjSVBGcmt3c1lpMTh1R3g5ekk3ekNHMzZLN1VjcU5CRzJHd3ZiMUxHd191QjNpblBNbzVnd3VRT0ZQQQ?oc=5",
+    "tokens": [
+      "home",
+      "flippers",
+      "most",
+      "money",
+      "2026",
+      "inman"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/academy-mortgage-agrees-to-825k-fine-for-2023-data-breach",
+    "tokens": [
+      "california",
+      "penalizes",
+      "academy",
+      "mortgage",
+      "2023",
+      "data",
+      "breach"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/wealthfront-takes-its-low-rate-mortgage-push-into-california",
+    "tokens": [
+      "wealthfront",
+      "takes",
+      "rate",
+      "mortgage",
+      "push",
+      "california"
+    ],
+    "shown_date": "2026-08-17"
+  },
+  {
     "url": "https://eyeonhousing.org/2026/08/homeownership-rate-edges-down-to-65/",
     "tokens": [
       "homeownership",
@@ -5278,279 +5543,5 @@
       "success"
     ],
     "shown_date": "2026-07-28"
-  },
-  {
-    "url": "https://www.realtor.com/advice/finance/mortgage-payment-calculator-afford-july-23/",
-    "tokens": [
-      "mortgage",
-      "calculator",
-      "here",
-      "need",
-      "$430k",
-      "home",
-      "6.58%",
-      "rate"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/07/24/june-home-sales.html",
-    "tokens": [
-      "june",
-      "home",
-      "sales",
-      "exceed",
-      "expectations"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/07/24/our-housing-market-is-balanced-says-zelman-associates-ivy-zelman.html",
-    "tokens": [
-      "housing",
-      "market",
-      "balanced",
-      "zelman",
-      "associates"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeDVhSVgwdGF4RktoZ0dvazdPT1V3alJqTndDMzlURWEtWHptVW92dklBazVOeU4tZXROWTNnYTN0b0lKQ3RaU3BKREhVS2xOQmpFUnhxdTBWZVAwOU1wSjNmdUdkTGZ3NkRFa2hkMDNXR2lRZmI5MGN0bkpBMDZrU3FaMkVFdmI3bDVQVGMwS2NWbUgx?oc=5",
-    "tokens": [
-      "compass",
-      "zillow",
-      "pitch",
-      "competing",
-      "data",
-      "private",
-      "listing",
-      "outcomes",
-      "inman"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE85eHc0cmNuUXRub3h2Y0V4S2hzaEdyOFBMRFk1UkVxbV9lMzJxV3FxMzY2RVVnYUpUbUtGUWhESFlXNklKeUx5ZDU4elhQUkFzajNZd2F4SGEyeTVmWVNVY01GNW5QV3QxWEoyaEpQd2NDSm1aU1E?oc=5",
-    "tokens": [
-      "update",
-      "touts",
-      "housing",
-      "tuccori",
-      "settlement",
-      "inman"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOSU1JVFp5OGoyS3FqdmtpLUxEWlZGUllFc0lqZEl5Zzg4eDNWLXAyYXprYWt0TmtDWDFkQ0p1YlVyR3V3VGlJNmZ2RHdaUFJ0UEF5TElrWGIwLUR3WTExb3duR056ZURNc1NXRzBWUWdQNF9LS1NFOWpfMEwxR0Z4X3Fia0J3bU96bXlMdEZjMldES1hPYkhiNlJJb2RVVS1lRFMxTld3MWVpcWhuR3F0YXVZSE9RTDF3ZkNweDlOTWxmRzEybXc?oc=5",
-    "tokens": [
-      "housing",
-      "market",
-      "cools",
-      "june",
-      "atlanta",
-      "alive"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://rebusinessonline.com/jll-negotiates-sale-of-441620-sf-retail-power-center-in-cedar-park-texas/",
-    "tokens": [
-      "negotiates",
-      "sale",
-      "441",
-      "620",
-      "retail",
-      "power",
-      "center",
-      "cedar",
-      "park",
-      "texas"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/breakthrough-properties-tishman-speyer-provide-90m-mezz-loan-for-life-science-campus/",
-    "tokens": [
-      "breakthrough",
-      "properties",
-      "tishman",
-      "speyer",
-      "provide",
-      "$90m",
-      "mezz",
-      "loan",
-      "life",
-      "science",
-      "campus"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://rebusinessonline.com/merritt-properties-acquires-11-building-industrial-park-in-jacksonville/",
-    "tokens": [
-      "merritt",
-      "properties",
-      "acquires",
-      "building",
-      "industrial",
-      "park",
-      "jacksonville"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://rebusinessonline.com/mt-realty-capital-provides-141-4m-loan-for-refinancing-of-manhattan-apartment-building/",
-    "tokens": [
-      "038",
-      "realty",
-      "capital",
-      "provides",
-      "$141.4m",
-      "loan",
-      "refinancing",
-      "manhattan",
-      "apartment",
-      "building"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/seattle-multifamily-market-report/",
-    "tokens": [
-      "seattle",
-      "multifamily",
-      "market",
-      "july",
-      "2026"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.bisnow.com/national/news/energy/the-nations-battery-energy-storage-boom-brings-investment-opportunities-to-cre-135536",
-    "tokens": [
-      "battery",
-      "storage",
-      "supercharged",
-      "asset",
-      "class"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9jZmIwX1lVaS1BUEdyQ3B4RXp0dHNoR1BqLUlOVmVOaHBLdTJYLVowV3FrbWR1ZEpQMjlZeFE3YXhLbWZrXzNUTDc1NHVrQll5S25MNlJpR2hmQkdBUUlNV2U1aTI2MjRkNXNSMWRTelI?oc=5",
-    "tokens": [
-      "high",
-      "priced",
-      "transaction",
-      "deserts",
-      "investors",
-      "place",
-      "bets",
-      "inman"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://rebusinessonline.com/joint-venture-acquires-555-unit-self-storage-facility-in-syosset-new-york/",
-    "tokens": [
-      "joint",
-      "venture",
-      "acquires",
-      "555",
-      "unit",
-      "self",
-      "storage",
-      "facility",
-      "syosset",
-      "york"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/deed-theft-remains-a-growing-threat-for-seniors-black-homeowners/",
-    "tokens": [
-      "deed",
-      "theft",
-      "remains",
-      "growing",
-      "threat",
-      "seniors",
-      "black",
-      "homeowners"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/rent-collections-impact-on-us-affordable-housing/",
-    "tokens": [
-      "yardi",
-      "matrix",
-      "documents",
-      "rent",
-      "collection",
-      "impact",
-      "affordable",
-      "housing"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.bisnow.com/washington-dc/news/deal-sheet/the-dc-deal-sheet-135557",
-    "tokens": [
-      "hines",
-      "nabs",
-      "prince",
-      "william",
-      "housing",
-      "sites",
-      "deal",
-      "sheet"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRmVFUWdIdjNDeHRNdHlVNC1pQW9EazNrSHVRZDgyTHJtRkVTLURyR1ZEbl92YWE1c3JlaG41VHlOUUZ4TjNzdkxDeGxFQkpORTJianZGajVQYVI4cTV3WmxsZDg3OUdBQlZsUUJOSTFKSFhhT2pGbUp4bkJQeTBVRV9Yd0NpdG9WMzEzaktldUl0TVlIUzZkZVhNTlZnelJKOGtiMW5B?oc=5",
-    "tokens": [
-      "fort",
-      "worth",
-      "office",
-      "market",
-      "gains",
-      "momentum",
-      "rising",
-      "rents",
-      "cause",
-      "sticker",
-      "shock",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/waterstone-mortgage-volume-profits-up-quarter-to-quarter",
-    "tokens": [
-      "waterstone",
-      "mortgage",
-      "volume",
-      "profits",
-      "quarter"
-    ],
-    "shown_date": "2026-07-27"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/primelending-tempers-mortgage-expectations-after-q2-loss",
-    "tokens": [
-      "primelending",
-      "cuts",
-      "$10m",
-      "fixed",
-      "costs",
-      "margins",
-      "squeeze"
-    ],
-    "shown_date": "2026-07-27"
   }
 ]
