@@ -1,5 +1,293 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/what-can-the-government-do-to-lower-mortgage-rates/",
+    "tokens": [
+      "government",
+      "lower",
+      "mortgage",
+      "rates"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/mortgage-rates-today-bond-market-august-20-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "fall",
+      "slightly",
+      "6.65%",
+      "despite",
+      "bond",
+      "market",
+      "turmoil",
+      "growing",
+      "concerns",
+      "federal",
+      "debt"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/08/state-level-employment-situation-july-2026/",
+    "tokens": [
+      "state",
+      "level",
+      "employment",
+      "situation",
+      "july",
+      "2026"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/08/18/30-year-fixed-mortgage-rate-inches-up-to-6-point-75-percent.html",
+    "tokens": [
+      "year",
+      "fixed",
+      "mortgage",
+      "rate",
+      "inches",
+      "6.75%"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/shift-to-purchases-higher-rates-squeeze-2026-refi-volume",
+    "tokens": [
+      "shift",
+      "purchases",
+      "higher",
+      "rates",
+      "squeeze",
+      "2026",
+      "refi",
+      "volume"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://rebusinessonline.com/cbre-arranges-loan-for-refinancing-of-181-unit-apartment-complex-in-san-antonio/",
+    "tokens": [
+      "cbre",
+      "arranges",
+      "loan",
+      "refinancing",
+      "181",
+      "unit",
+      "apartment",
+      "complex",
+      "antonio"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://rebusinessonline.com/associated-bank-provides-50-1m-construction-loan-for-multifamily-project-in-flower-mound-texas/",
+    "tokens": [
+      "associated",
+      "bank",
+      "provides",
+      "$50.1m",
+      "construction",
+      "loan",
+      "multifamily",
+      "project",
+      "flower",
+      "mound",
+      "texas"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://rebusinessonline.com/portman-908-group-deliver-674-bed-student-housing-community-near-florida-state-university/",
+    "tokens": [
+      "portman",
+      "908",
+      "group",
+      "deliver",
+      "674",
+      "student",
+      "housing",
+      "community",
+      "near",
+      "florida",
+      "state",
+      "university"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPb0NZVElXRUd5dGJrejIxTjV4LUljRkJHcHlSYkRac1k3bEl6VWNBalpUM3l1Y2YyWC1IR1dQaWRHVFYwNTNDYzRpUzZSTFo1cWZ3QWhxSFdMZUQ0ZDlHemNmdVY4TVBXWmYtQlJ3WXItc0lNWnJjNWV4dk4wVk93Rmk2TURDbWtvTW0yVkplb1g3UHFNVUhWQ3Vtc2Q5N3dCajdrRFdVeUtKclljNFJSTV9HVmxKUQ?oc=5",
+    "tokens": [
+      "$20",
+      "million",
+      "fund",
+      "aims",
+      "unlock",
+      "$80",
+      "affordable",
+      "housing",
+      "florida",
+      "times",
+      "union"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPb2U0anotcXY1S0NhMDVVdWl3ZWlZM3FZVHhTRHNZM1hkVWNOXzRxb0xpc05IRVc1NVF2dFRrbXUtNHpham9hX25NdDAxYWVVelpmRzAxejFiZGFjT2hjMXF5MTRMMnhoelo0b3BGdUE2SFNudVdtRmFROThPVDVpaENQU1RoZnRUQngwdG8yRkNtMG5pd2ZNblpsclFYWEhWRXNpWXFIR3ZJb2Jw?oc=5",
+    "tokens": [
+      "american",
+      "homes",
+      "rent",
+      "affordability",
+      "pressures",
+      "support",
+      "rental",
+      "demand",
+      "seeking",
+      "alpha"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://www.reuters.com/world/us/us-single-family-housing-starts-slide-july-2026-08-18/",
+    "tokens": [
+      "housing",
+      "market",
+      "remains",
+      "under",
+      "pressure",
+      "july",
+      "8211",
+      "reuters"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/grocery-anchored-queens-retail-secures-32m-financng/",
+    "tokens": [
+      "grocery",
+      "anchored",
+      "queens",
+      "retail",
+      "secures",
+      "$32m",
+      "financing"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/ai-supplier-building-275m-el-paso-area-factory/",
+    "tokens": [
+      "supplier",
+      "building",
+      "$275m",
+      "paso",
+      "area",
+      "factory"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://rebusinessonline.com/cushman-wakefield-arranges-250m-refinancing-for-506-unit-multifamily-property-in-seattle/",
+    "tokens": [
+      "cushman",
+      "038",
+      "wakefield",
+      "arranges",
+      "$250m",
+      "refinancing",
+      "506",
+      "unit",
+      "multifamily",
+      "property",
+      "seattle"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://rebusinessonline.com/cushman-wakefield-arranges-131m-sale-of-apartment-building-in-west-orange-new-jersey/",
+    "tokens": [
+      "cushman",
+      "038",
+      "wakefield",
+      "arranges",
+      "$131m",
+      "sale",
+      "apartment",
+      "building",
+      "west",
+      "orange",
+      "jersey"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/gantry-arranges-recapitalization-for-norcal-industrial-portfolio/",
+    "tokens": [
+      "gantry",
+      "arranges",
+      "recapitalization",
+      "norcal",
+      "industrial",
+      "portfolio"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUF90LWs5ZVN3cHg4SjFLXzVNSjdYRHRyQjZ5TFNpZ20tTXRlY1RYcDhvZEl0RFZ2aERFWXhTVDd5NlZiZ29FYXV5SE9udUpQUlI4MVJwanNGWnJHVU5BYXptaGYzN0FUaFJGUFFocEJlVmpqc3ZUcUNnVkVrNEZRenU1bE9tLVNjVW8wb1JhSU1MeV9fN2FZ?oc=5",
+    "tokens": [
+      "lincoln",
+      "property",
+      "acquires",
+      "$450m",
+      "mixed",
+      "asset",
+      "portfolio",
+      "multi",
+      "housing"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/brixton-capital-launches-multifamily-investment-management-platform/",
+    "tokens": [
+      "brixton",
+      "capital",
+      "launches",
+      "multifamily",
+      "investment",
+      "management",
+      "platform"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://rebusinessonline.com/redico-one-orchard-launch-medical-outpatient-investment-platform-inframed/",
+    "tokens": [
+      "redico",
+      "orchard",
+      "launch",
+      "medical",
+      "outpatient",
+      "investment",
+      "platform",
+      "inframed"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/gse-foreclosure-aid-slides-5th-month-as-delinquencies-creep-up",
+    "tokens": [
+      "foreclosure",
+      "slides",
+      "month",
+      "delinquencies",
+      "creep"
+    ],
+    "shown_date": "2026-08-23"
+  },
+  {
     "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-august-20-2026/",
     "tokens": [
       "mortgage",
@@ -5019,271 +5307,5 @@
       "right"
     ],
     "shown_date": "2026-08-03"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/fed-holds-benchmark-rate-steady-vote-three-dissents/826539/",
-    "tokens": [
-      "holds",
-      "benchmark",
-      "rate",
-      "steady",
-      "vote",
-      "three",
-      "dissents"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/cra-proposal-asset-thresholds/",
-    "tokens": [
-      "regulators",
-      "move",
-      "narrow",
-      "drawing",
-      "fire",
-      "advocates"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/seattle-environmental-review-appeals-housing-reform/826744/",
-    "tokens": [
-      "seattle",
-      "pares",
-      "back",
-      "environmental",
-      "review",
-      "appeals",
-      "effort",
-      "ramp",
-      "housing",
-      "development"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/08/01/condo-buyers-mortgage-rules-fannie-mae-freddie-mac.html",
-    "tokens": [
-      "buying",
-      "condo",
-      "mortgage",
-      "soon",
-      "complicated",
-      "here"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/the-housing-market-defies-expectations-even-with-higher-rates/",
-    "tokens": [
-      "housing",
-      "market",
-      "defies",
-      "expectations",
-      "higher",
-      "rates"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://rebusinessonline.com/ipa-negotiates-sale-of-306-unit-apartment-community-in-red-oak-texas/",
-    "tokens": [
-      "negotiates",
-      "sale",
-      "306",
-      "unit",
-      "apartment",
-      "community",
-      "texas"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/colorado-river-plan-water-cutbacks-arizona-california-nevada/",
-    "tokens": [
-      "colorado",
-      "river",
-      "spell",
-      "water",
-      "cutbacks",
-      "arizona",
-      "california",
-      "nevada"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/florida-condo-buildings-deemed-uninhabitable-inspections-report/",
-    "tokens": [
-      "500",
-      "florida",
-      "condos",
-      "structural",
-      "damage",
-      "evacuated",
-      "state",
-      "finds"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/core-spaces-student-housing-construction-athens-georgia/826739/",
-    "tokens": [
-      "core",
-      "spaces",
-      "starts",
-      "656",
-      "student",
-      "housing",
-      "project",
-      "georgia"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://fortune.com/2026/07/30/how-high-rent-gen-z-housing-bill-congress/",
-    "tokens": [
-      "washington",
-      "wall",
-      "street",
-      "landlords",
-      "backfire",
-      "renters",
-      "8211",
-      "fortune"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://rebusinessonline.com/stonemont-pccp-purchase-38-building-industrial-portfolio-for-1b/",
-    "tokens": [
-      "stonemont",
-      "pccp",
-      "purchase",
-      "building",
-      "industrial",
-      "portfolio",
-      "$1b"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/data-center-capital-markets/wall-street-impatient-big-tech-road-map-to-returns-on-data-center-spending-135654",
-    "tokens": [
-      "wall",
-      "street",
-      "impatient",
-      "tech",
-      "returns",
-      "data",
-      "center",
-      "spending"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://rebusinessonline.com/skender-begins-conversion-of-chicago-office-tower-into-320-apartment-units/",
-    "tokens": [
-      "skender",
-      "begins",
-      "conversion",
-      "chicago",
-      "office",
-      "tower",
-      "320",
-      "apartment",
-      "units"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://rebusinessonline.com/cabot-properties-sells-2-5-msf-industrial-portfolio-in-chicago-minneapolis-markets/",
-    "tokens": [
-      "cabot",
-      "properties",
-      "sells",
-      "industrial",
-      "portfolio",
-      "chicago",
-      "minneapolis",
-      "markets"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.bisnow.com/news/south-florida/office/boston-firm-with-ties-to-sfl-businesses-airlines-offers-88m-for-former-spirit-hq-135650",
-    "tokens": [
-      "hedge",
-      "fund",
-      "bids",
-      "$88m",
-      "spirit",
-      "airlines",
-      "039",
-      "former"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/equity-residential-avalonbay-combined-vivmark-residential/826741/",
-    "tokens": [
-      "equity",
-      "residential",
-      "avalonbay",
-      "announce",
-      "name",
-      "combined",
-      "firm",
-      "vivmark"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/first-project-under-nys-housing-acceleration-fund-closes-on-financing/",
-    "tokens": [
-      "first",
-      "project",
-      "under",
-      "housing",
-      "acceleration",
-      "fund",
-      "closes",
-      "financing"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1GWWpCTmxEYUVaUVB5ZXg0WTB4TUw3bFNDVmF5SGdYNDRTSzZFM0pOLTFFUGJLaEx5Y2JweDVhNjB4ZnVnQ1hWdGVaMnFjbGRVbnQ1X1ZnaFZybWNvSHAxb0hFU1pWV012MllWbkE1MA?oc=5",
-    "tokens": [
-      "realty",
-      "confirms",
-      "inman",
-      "connect",
-      "diego"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/how-much-are-the-gses-retained-portfolios-growing",
-    "tokens": [
-      "gses",
-      "retained",
-      "portfolios",
-      "growing"
-    ],
-    "shown_date": "2026-08-02"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/loan-modifications-rose-ahead-of-policy-transition-fhfa",
-    "tokens": [
-      "loan",
-      "modifications",
-      "rose",
-      "ahead",
-      "policy",
-      "transition",
-      "fhfa"
-    ],
-    "shown_date": "2026-08-02"
   }
 ]
