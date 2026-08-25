@@ -1,5 +1,287 @@
 [
   {
+    "url": "https://www.bisnow.com/news/national/construction-development/trump-canadian-tariffs-construction-materials-prices",
+    "tokens": [
+      "trump",
+      "039",
+      "canadian",
+      "tariffs",
+      "spike",
+      "additional",
+      "materials",
+      "costs"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/jpmorgan-citi-banks-housing-investment/",
+    "tokens": [
+      "banks",
+      "pouring",
+      "billions",
+      "reviving",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/escrow-interest-homeowner-money-monday/",
+    "tokens": [
+      "escrow",
+      "rules",
+      "eliminate",
+      "interest",
+      "payments",
+      "homeowners",
+      "stand",
+      "lose",
+      "your",
+      "state",
+      "suing",
+      "save",
+      "money"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/zillow-redfin-ftc-lawsuit-settlement/828630/",
+    "tokens": [
+      "zillow",
+      "redfin",
+      "reach",
+      "settlement",
+      "rental",
+      "listing",
+      "partnership"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/unlock-hea-minnesota-ag/",
+    "tokens": [
+      "unlock",
+      "reaches",
+      "deal",
+      "minnesota",
+      "home",
+      "equity",
+      "agreements",
+      "labeled",
+      "illegal"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.redfin.com/news/texas-buyers-markets-ranking-july-2026/",
+    "tokens": [
+      "texas",
+      "homebuyers",
+      "firmly",
+      "control",
+      "here",
+      "lonestar",
+      "state",
+      "buyer",
+      "markets",
+      "ranked"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/floridas-space-coast-housing-market-enters-a-new-normal/",
+    "tokens": [
+      "florida",
+      "space",
+      "coast",
+      "housing",
+      "market",
+      "enters",
+      "normal"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.bisnow.com/news/houston/multifamily/alliance-building-houston-area-complex-amid-declining-multifamily-construction-pipeline",
+    "tokens": [
+      "alliance",
+      "building",
+      "houston",
+      "area",
+      "complex",
+      "declining",
+      "multifamily",
+      "construction"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.bisnow.com/news/south-florida/deal-sheet/two-south-florida-senior-living-facilities-sell-for-172m-the-south-florida-deal-sheet",
+    "tokens": [
+      "senior",
+      "housing",
+      "facilities",
+      "sell",
+      "$172m",
+      "south",
+      "florida",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/single-family-built-to-rent-construction-nahb-q2-2026/",
+    "tokens": [
+      "construction",
+      "rental",
+      "homes",
+      "plunges",
+      "congressional",
+      "fight",
+      "restrictions",
+      "sector"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://rebusinessonline.com/stark-enterprises-to-develop-164-unit-build-to-rent-community-in-grimes-iowa/",
+    "tokens": [
+      "stark",
+      "enterprises",
+      "develop",
+      "164",
+      "unit",
+      "build",
+      "rent",
+      "community",
+      "grimes",
+      "iowa"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/us-office-market-outlook/",
+    "tokens": [
+      "office",
+      "market",
+      "outlook",
+      "august",
+      "2026"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://rebusinessonline.com/amazon-to-invest-6b-to-build-new-data-center-campus-in-shreveport-louisiana/",
+    "tokens": [
+      "amazon",
+      "invest",
+      "$6b",
+      "build",
+      "data",
+      "center",
+      "campus",
+      "shreveport",
+      "louisiana"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.bisnow.com/news/san-francisco/life-sciences/revolution-medicines-nearing-700k-sf-lease-redwood-city",
+    "tokens": [
+      "revolution",
+      "medicines",
+      "nearing",
+      "agreement",
+      "700",
+      "lease",
+      "redwood",
+      "city"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/newmark-arranges-277m-loan-for-urby-rockpoint-jv-on-jersey-city-apartments/",
+    "tokens": [
+      "newmark",
+      "arranges",
+      "$277m",
+      "loan",
+      "urby",
+      "rockpoint",
+      "jersey",
+      "city",
+      "apartments"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://rebusinessonline.com/genentech-to-invest-750m-in-manufacturing-facility-in-hillsboro-oregon/",
+    "tokens": [
+      "genentech",
+      "invest",
+      "$750m",
+      "manufacturing",
+      "facility",
+      "hillsboro",
+      "oregon"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.bisnow.com/news/new-york/capital-markets/bankruptcy-to-400m-buying-spree-michael-shah-authors-rapid-comeback",
+    "tokens": [
+      "bankruptcy",
+      "$400m",
+      "buying",
+      "spree",
+      "michael",
+      "shah",
+      "039",
+      "rapid",
+      "comeback"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/real-remax-group-reax-trading/",
+    "tokens": [
+      "remax",
+      "group",
+      "closes",
+      "merger",
+      "reax",
+      "begins",
+      "trading"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/loandepot-warned-by-nyse-for-low-stock-price",
+    "tokens": [
+      "loandepot",
+      "warned",
+      "nyse",
+      "stock",
+      "price"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/us-self-storage-recovery-trends-in-q2-2026/",
+    "tokens": [
+      "yardi",
+      "matrix",
+      "documents",
+      "self",
+      "storage",
+      "recovery",
+      "trends",
+      "2026"
+    ],
+    "shown_date": "2026-08-25"
+  },
+  {
     "url": "https://www.housingwire.com/articles/does-housing-have-an-ai-problem/",
     "tokens": [
       "does",
@@ -5011,287 +5293,5 @@
       "margins"
     ],
     "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/chase-mortgage-purchase-expansion/",
-    "tokens": [
-      "jpmorgan",
-      "chase",
-      "plots",
-      "$750b",
-      "housing",
-      "push",
-      "fund",
-      "affordable",
-      "units"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.realtor.com/research/federal-reserve-july-2026-meeting/",
-    "tokens": [
-      "fomc",
-      "holds",
-      "rates",
-      "steady",
-      "opposition",
-      "rate",
-      "hold",
-      "grows"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.realtor.com/research/july-2026-data/",
-    "tokens": [
-      "july",
-      "2026",
-      "monthly",
-      "housing",
-      "trends",
-      "list",
-      "prices",
-      "fall",
-      "homes",
-      "sell",
-      "faster"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/algorithmic-rent-pricing-lawsuit-tracker/826178/",
-    "tokens": [
-      "tracking",
-      "algorithmic",
-      "rent",
-      "pricing",
-      "lawsuits"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/beckwitt-joins-dfh-beazer/",
-    "tokens": [
-      "dream",
-      "finders",
-      "adds",
-      "rick",
-      "beckwitt",
-      "beazer",
-      "heats"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://rebusinessonline.com/newmark-arranges-recapitalization-of-1546-unit-seniors-housing-portfolio-in-dallas-houston/",
-    "tokens": [
-      "newmark",
-      "arranges",
-      "recapitalization",
-      "546",
-      "unit",
-      "seniors",
-      "housing",
-      "portfolio",
-      "dallas",
-      "houston"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNVEczXzJtNmhFZFRZZlVaY2NkTG9DcmtXZzVWRkF6b09URHhjM1p3S1VXY21XSFFOWnNwUE5LOVRheWhCQzFxNWJuRXlGUGFKd0syWHdUVG51X2xOZk5kekdHbFo0SjExQTdXeHJsM1BFNExWeUMzVlFKTTB2RnNwbTdDNHBraks1Z2EyMkQwZWloVjk0YlcwS3JBUDlsUk96ZWI4ZmJFQW4?oc=5",
-    "tokens": [
-      "owner",
-      "developer",
-      "austin",
-      "multifamily",
-      "project",
-      "files",
-      "chapter",
-      "bankruptcy",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/texas-governor-threatens-to-strip-funding-from-cities-blocking-housing-development/",
-    "tokens": [
-      "texas",
-      "governor",
-      "threatens",
-      "strip",
-      "funding",
-      "cities",
-      "blocking",
-      "housing",
-      "development"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://rebusinessonline.com/marcus-wood-partners-to-develop-280-unit-apartment-community-in-apex-north-carolina/",
-    "tokens": [
-      "marcus",
-      "wood",
-      "partners",
-      "develop",
-      "280",
-      "unit",
-      "apartment",
-      "community",
-      "apex",
-      "north",
-      "carolina"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.dmagazine.com/sponsored/2026/08/why-renters-are-choosing-oxenfree-rowlett/",
-    "tokens": [
-      "rowlett",
-      "rise",
-      "drawing",
-      "renters",
-      "east",
-      "dallas"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://rebusinessonline.com/jll-negotiates-sale-of-767520-sf-industrial-building-in-brookshire-texas/",
-    "tokens": [
-      "negotiates",
-      "sale",
-      "767",
-      "520",
-      "industrial",
-      "building",
-      "brookshire",
-      "texas"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.bisnow.com/news/new-york/affordable-housing/cmbs-investors-face-80m-in-losses-from-3-500-unit-rent-stabilized-portfolio",
-    "tokens": [
-      "rent",
-      "freeze",
-      "heightens",
-      "loss",
-      "risk",
-      "$506m",
-      "cmbs",
-      "loan"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/hpd-selects-development-team-for-hunters-point-south-parcel/",
-    "tokens": [
-      "selects",
-      "development",
-      "team",
-      "hunter",
-      "point",
-      "south",
-      "parcel"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/west-coast-apartment-rents-technology-jobs/826876/",
-    "tokens": [
-      "west",
-      "coast",
-      "portfolio",
-      "helps",
-      "essex",
-      "beat",
-      "expectations"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.bisnow.com/news/washington-dc/office/blackstone-data-center-arm-takes-hq-lease-at-reston-station",
-    "tokens": [
-      "blackstone",
-      "data",
-      "center",
-      "takes",
-      "lease",
-      "reston",
-      "station"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/capital-markets/first-draft-live-betting-on-distress-with-mavik-capital-founder-vik-uppal",
-    "tokens": [
-      "first",
-      "draft",
-      "live",
-      "mavik",
-      "capital",
-      "039",
-      "uppal",
-      "betting",
-      "distress"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/two-harbors-crosscountry-deal-delayed-due-to-one-approval",
-    "tokens": [
-      "harbors",
-      "crosscountry",
-      "deal",
-      "delayed",
-      "approval"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://rebusinessonline.com/savills-completes-1-1b-acquisition-of-eastdil-secured/",
-    "tokens": [
-      "savills",
-      "completes",
-      "$1.1b",
-      "acquisition",
-      "eastdil",
-      "secured"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.redfin.com/news/mortgage-rates-rise-post-july-fed-meeting-july-jobs-report-looming/",
-    "tokens": [
-      "expect",
-      "mortgage",
-      "rate",
-      "volatility",
-      "prices",
-      "drop",
-      "hopes",
-      "iran",
-      "peace",
-      "talks",
-      "ahead",
-      "week",
-      "jobs"
-    ],
-    "shown_date": "2026-08-04"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/bfc-saa-canopy-land-269m-financing-for-syracuse-redevelopment/",
-    "tokens": [
-      "canopy",
-      "land",
-      "$269m",
-      "financing",
-      "syracuse",
-      "redevelopment"
-    ],
-    "shown_date": "2026-08-04"
   }
 ]
