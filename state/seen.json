@@ -1,5 +1,279 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/new-home-demand-swoons-even-as-sales-prices-hit-a-5-year-low/",
+    "tokens": [
+      "home",
+      "demand",
+      "swoons",
+      "sales",
+      "prices",
+      "year"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/regulators-rescind-biden-era-special-purpose-credit-program-guidance/",
+    "tokens": [
+      "federal",
+      "agencies",
+      "scrap",
+      "biden",
+      "spcp",
+      "guidance"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-new-supply-deliveries-bottom-2027/828744/",
+    "tokens": [
+      "multifamily",
+      "supply",
+      "bottom",
+      "2027"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/new-home-sales-slipped-again-why-builders-are-still-holding-back/",
+    "tokens": [
+      "home",
+      "sales",
+      "slipped",
+      "again",
+      "builders",
+      "holding",
+      "back"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.realtor.com/research/new-home-sales-july-2026/",
+    "tokens": [
+      "home",
+      "sales",
+      "rebound",
+      "june",
+      "fall",
+      "short",
+      "year"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://rebusinessonline.com/april-housing-underway-on-24m-renovation-of-metro-houston-affordable-housing-property/",
+    "tokens": [
+      "april",
+      "housing",
+      "underway",
+      "$24m",
+      "renovation",
+      "metro",
+      "houston",
+      "affordable",
+      "property"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://rebusinessonline.com/urban-story-ventures-hill-partners-to-develop-350m-mixed-use-district-at-the-bend-in-chattanooga/",
+    "tokens": [
+      "urban",
+      "story",
+      "ventures",
+      "hill",
+      "partners",
+      "develop",
+      "$350m",
+      "mixed",
+      "district",
+      "bend",
+      "chattanooga"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://rebusinessonline.com/frp-woodfield-begin-vertical-construction-on-mixed-use-development-in-southwest-florida/",
+    "tokens": [
+      "woodfield",
+      "begin",
+      "vertical",
+      "construction",
+      "mixed",
+      "development",
+      "southwest",
+      "florida"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdnlYUEFPTzNPTTlNNnByd2JTbnBuR1hIaTAxWENvT01JZU1VcTVnbHJPNnRmX28yaUZmXzhzdFZQc1U0ZlZWY1Z3OWoyNVE5M0NwWjhkZEZ0dEh0SHpyZHVqM1RNdU90RW5KZkVUb2lMbVRMTWtES1VLVjRocFllYjRndXBaVHZUTnFVMjFnVENCZFHSAZgBQVVfeXFMT1dRLVdxTUlKcXprTjRNSl9SeEhpbGRfLTc5R09kSVZhb01EbUpOSnY5WHlVU1pGLWJXTWNxTGlycVRWamh4M0phLUhkdFd1cGVLMHdTaFhfVDdxUmpJdF9PZWlQdnh4STQ5cmQ3VTFKR3ctbS1vTWZwMHVCNHo1Mzc0S1FLN0RxVXBYbjBPalI0TjVYMC1fUzk?oc=5",
+    "tokens": [
+      "raleigh",
+      "housing",
+      "grows",
+      "advocates",
+      "focus",
+      "affordability"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://rebusinessonline.com/sword-industrial-partners-acquires-1-msf-portfolio-in-tulsa/",
+    "tokens": [
+      "sword",
+      "industrial",
+      "partners",
+      "acquires",
+      "portfolio",
+      "tulsa"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/data-center-capital-markets/ai-cloud-firm-nebius-raises-5-75b-for-new-data-centers",
+    "tokens": [
+      "cloud",
+      "firm",
+      "nebius",
+      "raises",
+      "$5.75b",
+      "debt",
+      "fuel",
+      "data",
+      "center",
+      "expansion"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.bisnow.com/news/chicago/office/tishman-speyer-lining-up-340m-refinancing-of-2-4m-sf-chicago-office-complex",
+    "tokens": [
+      "tishman",
+      "speyer",
+      "lining",
+      "$340m",
+      "refi",
+      "chicago",
+      "office",
+      "complex"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/two-merritt-7-office-properties-set-for-residential-conversion/",
+    "tokens": [
+      "merritt",
+      "office",
+      "properties",
+      "residential",
+      "conversion"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://rebusinessonline.com/elevation-land-co-crow-holdings-capital-complete-phase-i-of-otay-business-park-in-california/",
+    "tokens": [
+      "elevation",
+      "land",
+      "crow",
+      "holdings",
+      "capital",
+      "complete",
+      "phase",
+      "otay",
+      "business",
+      "park",
+      "california"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/capital-markets/nuveen-c-pace-fund-secures-over-1b",
+    "tokens": [
+      "nuveen",
+      "039",
+      "pace",
+      "fund",
+      "secures",
+      "$1b",
+      "biggest",
+      "raise"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/08/25/cre-investor-competition-sees-strongest-growth-in-a-year.html",
+    "tokens": [
+      "investor",
+      "competition",
+      "commercial",
+      "sees",
+      "strongest",
+      "growth",
+      "year"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://rebusinessonline.com/newmark-arranges-277m-construction-loan-for-jersey-city-apartment-tower/",
+    "tokens": [
+      "newmark",
+      "arranges",
+      "$277m",
+      "construction",
+      "loan",
+      "jersey",
+      "city",
+      "apartment",
+      "tower"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQblNTcVBDWXlRRnFMR25qdE5uQ0JpekNxa1d0UUozMWhOeUo4V3FUYWxockxHcVdKOXFkOG9EYTk0S01YVkwwLTZ1VDNJdEZwdVgwZC1BMHE0MTVlVzZHb08zeGVLZlQ5NzJOVEJ4Q2xKS3I1RTdKbUtJaVd0UUFlMzVvQzJwVXVBdEo1QmNIUjhhMVJ0ajNBTThyZTBSMEhk?oc=5",
+    "tokens": [
+      "home",
+      "sales",
+      "retreat",
+      "july",
+      "affordability",
+      "pressures",
+      "inman"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1rTFpaVEtZVmRUREU3RWRWa2Z4MlpIaEFXUlJ2T3lWN2JQSVM5ZmdXX2NDQ3dIYlBzTzNERmxidlpfeVF5akJ3Qzd5dGhWM0s0c1NBUWxYb2staVNnWjVONldFWWY?oc=5",
+    "tokens": [
+      "home",
+      "prices",
+      "grow",
+      "2.1%",
+      "slowest",
+      "pace",
+      "decade",
+      "inman"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
+    "url": "https://www.realtor.com/research/q2-2026-cross-market-demand/",
+    "tokens": [
+      "2026",
+      "cross",
+      "market",
+      "demand",
+      "home",
+      "shoppers",
+      "look",
+      "beyond",
+      "backyards",
+      "affordability",
+      "shapes"
+    ],
+    "shown_date": "2026-08-26"
+  },
+  {
     "url": "https://www.bisnow.com/news/national/construction-development/trump-canadian-tariffs-construction-materials-prices",
     "tokens": [
       "trump",
@@ -5005,293 +5279,5 @@
       "rise"
     ],
     "shown_date": "2026-08-06"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/home-prices-rising-nar-q2-2026/",
-    "tokens": [
-      "home",
-      "prices",
-      "upswing",
-      "cities",
-      "here",
-      "rising",
-      "fastest"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/jpmorgan-housing-financing-initiative-mortgages-construction/",
-    "tokens": [
-      "jpmorgan",
-      "pour",
-      "$750",
-      "billion",
-      "housing",
-      "next",
-      "decade",
-      "here",
-      "means",
-      "homebuyers"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/compass-q2-2026-revenue-anywhere/",
-    "tokens": [
-      "anywhere",
-      "acquisition",
-      "powers",
-      "compass",
-      "record",
-      "revenue",
-      "stronger",
-      "profits"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxONklJXzdIQVpxLXRJUjg5cW0yWUR0c3BHZGJ3bWtCc21Hc1dZdjktY294Q3ZLR1A2SDNlVEhubGRpUElob2RvRi1ENVVGRS1HdW9BSXJXanZLcl95RDZ4VG1hWkRjbFpBeTdOeGp2TkZVRi1BbXFMUldvU29Ob2RtRW00VVhadXBXdTNCT2F2OXZnVzA?oc=5",
-    "tokens": [
-      "housing",
-      "market",
-      "inventory",
-      "shifting",
-      "across",
-      "every",
-      "state",
-      "fast",
-      "company"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/new-condo-mortgage-rules-could-mean-more-delays-and-denials/",
-    "tokens": [
-      "fannie",
-      "freddie",
-      "condo",
-      "mortgage",
-      "rules",
-      "mean",
-      "delays",
-      "denials",
-      "experts"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://rebusinessonline.com/geringer-capital-sells-267-unit-apartment-community-in-mesa-arizona/",
-    "tokens": [
-      "geringer",
-      "capital",
-      "sells",
-      "267",
-      "unit",
-      "apartment",
-      "community",
-      "mesa",
-      "arizona"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/maa-q2-earnings-sun-belt-recovery-rent/826960/",
-    "tokens": [
-      "expects",
-      "belt",
-      "recovery",
-      "boost",
-      "late",
-      "summer",
-      "rents"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/core-plus-fund-multifamily-investment/826967/",
-    "tokens": [
-      "tishman",
-      "speyer",
-      "buys",
-      "296",
-      "unit",
-      "property",
-      "charlotte",
-      "north",
-      "carolina"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://rebusinessonline.com/richman-group-obtains-three-loans-for-luxury-apartment-communities-in-florida-totaling-225m/",
-    "tokens": [
-      "richman",
-      "group",
-      "obtains",
-      "three",
-      "loans",
-      "luxury",
-      "apartment",
-      "communities",
-      "florida",
-      "totaling",
-      "$225m"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTmRzRjdsZW5pWWlaRG55c0laM1dOOUhhRTdudlR0Sl9aWTI0UlZtMlJCNWZzMDFpWGt4cG5oTHZKY0RySG1rYzhVNUZTakRpcHZWeV9McHdrek9OZy1lUXFqajlIdFhoY213UC1JaGJCNUd5VHVEeUtibnZRb1pOa2dTS0NnNU9kSjh0YW15ajZxbG9QLUdWUlRhaHgxbDliN2VYdQ?oc=5",
-    "tokens": [
-      "communities",
-      "builds",
-      "third",
-      "houston",
-      "area",
-      "rental",
-      "neighborhood",
-      "cypress",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/life-sciences/alexandria-real-estate-equities-q2-earnings-report",
-    "tokens": [
-      "alexandria",
-      "039",
-      "$73m",
-      "quarterly",
-      "loss",
-      "highlights",
-      "deepening",
-      "life",
-      "sciences",
-      "slump"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.bisnow.com/news/washington-dc/data-center-development/the-world-s-largest-data-center-hub-pursues-a-development-pause-is-it-even-legal-",
-    "tokens": [
-      "world",
-      "039",
-      "largest",
-      "data",
-      "center",
-      "pursues",
-      "development",
-      "pause",
-      "legal"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/homebuilders-accuse-data-centers-of-snapping-up-prime-land-at-impossible-prices/",
-    "tokens": [
-      "homebuilders",
-      "accuse",
-      "data",
-      "centers",
-      "snapping",
-      "prime",
-      "land",
-      "impossible",
-      "prices"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.bisnow.com/news/washington-dc/office/prp-buys-downtown-office-building-from-tishman-speyer",
-    "tokens": [
-      "buys",
-      "downtown",
-      "office",
-      "building",
-      "tishman",
-      "speyer"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.bisnow.com/news/chicago/deal-sheet/the-chicago-deal-sheet-august-4-2026",
-    "tokens": [
-      "tower",
-      "owner",
-      "mulls",
-      "conversion",
-      "chicago",
-      "deal",
-      "sheet"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.bisnow.com/news/london/capital-markets/orchard-street-green-fund",
-    "tokens": [
-      "orchard",
-      "street",
-      "targets",
-      "investment",
-      "drive",
-      "cutting",
-      "carbon",
-      "attracts",
-      "capital"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/zions-closes-basis-buy-expanding-agency-multifamily",
-    "tokens": [
-      "zions",
-      "closes",
-      "basis",
-      "expanding",
-      "agency",
-      "multifamily"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/mi-homes-earnings-q2-2026/",
-    "tokens": [
-      "homes",
-      "doubles",
-      "down",
-      "specs",
-      "other",
-      "builders",
-      "pull",
-      "back"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/proprietary-reverse-loans-overtake-hecms-for-54-market-share",
-    "tokens": [
-      "proprietary",
-      "reverse",
-      "loans",
-      "overtake",
-      "hecms",
-      "54%",
-      "market",
-      "share"
-    ],
-    "shown_date": "2026-08-05"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/loandepot-narrows-q2-net-loss-as-home-equity-lifts-margins/",
-    "tokens": [
-      "loandepot",
-      "narrows",
-      "loss",
-      "home",
-      "equity",
-      "lifts",
-      "margins"
-    ],
-    "shown_date": "2026-08-05"
   }
 ]
