@@ -1,5 +1,268 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/economic-activity-edges-higher-amid-mixed-consumer-signals/",
+    "tokens": [
+      "economic",
+      "activity",
+      "edges",
+      "higher",
+      "mixed",
+      "consumer",
+      "signals"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-september-3-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "climb",
+      "6.71%",
+      "high",
+      "2026"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/09/private-residential-construction-spending-continues-to-weaken/",
+    "tokens": [
+      "private",
+      "residential",
+      "construction",
+      "spending",
+      "continues",
+      "weaken"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/feds-waller-underlying-inflation-might-be-lower-than-we-think",
+    "tokens": [
+      "waller",
+      "underlying",
+      "inflation",
+      "might",
+      "lower",
+      "think"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/gse-changes-boxabl-pact-spur-mortgage-lending-opportunities",
+    "tokens": [
+      "changes",
+      "boxabl",
+      "pact",
+      "spur",
+      "mortgage",
+      "lending",
+      "opportunities"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.bisnow.com/news/atlanta/deal-sheet/passco-sells-buckhead-apartment-complex-the-atlanta-deal-sheet",
+    "tokens": [
+      "passco",
+      "sells",
+      "buckhead",
+      "apartment",
+      "complex",
+      "atlanta",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://rebusinessonline.com/newmark-arranges-215-8m-refinancing-for-waypoint-multifamily-portfolio-in-florida/",
+    "tokens": [
+      "newmark",
+      "arranges",
+      "$215.8m",
+      "refinancing",
+      "waypoint",
+      "multifamily",
+      "portfolio",
+      "florida"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMjdOc2s5dlVWWjVlSi1lb2JxRjM5aVI0ZTV0VUlFb0ZUWlhqV0p3YzNOcVJvbzMwemFLd19ZVjRwbFNVY2JNWDFXZ3hqWko1SHZQMUFEcmhNcDZuSkJjd0JUdWhla1BjSlhNYm9zZGVoRUlCTkRZeVhDenI3ZkVwR3g2UDZEUjA2MjNqZ1h6SGg?oc=5",
+    "tokens": [
+      "phoenix",
+      "housing",
+      "prices",
+      "fall",
+      "buyers",
+      "gain",
+      "leverage",
+      "media"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRG9IMFJtVHpTc1BKMGlaOEpCdFZBdFhtMzd0eHpudnhkOFJwNS1hVjl6YnZmdC1BRkpaZk5yckZhczRwNVktbEtUZVFnRlFzdE9IbTlqNkNLQ2Y5UVdTaFdGY3JtSHAxZ2lCeDUzQkJSX3BoRDdmN3JNSDZPX3FsWXFkQ2NDRHJBRWktaVpZTFVsT0IyME1na240dw?oc=5",
+    "tokens": [
+      "atlanta",
+      "regional",
+      "commission",
+      "unveils",
+      "roadmap",
+      "adding",
+      "affordable",
+      "housing",
+      "wabe"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/cotality-mega-investors-retreated-pre-road-act",
+    "tokens": [
+      "cotality",
+      "mega",
+      "investors",
+      "retreated",
+      "road"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/office/office-sales-show-31-year-over-year-growth",
+    "tokens": [
+      "office",
+      "sales",
+      "31%",
+      "year",
+      "growth"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.bisnow.com/news/south-florida/industrial/county-overturns-mayors-veto-on-2-7m-sf-headquarters-outside-urban-development-boundary",
+    "tokens": [
+      "miami",
+      "dade",
+      "overturns",
+      "mayor",
+      "039",
+      "veto",
+      "kelly",
+      "tractor",
+      "beyond",
+      "urban",
+      "development",
+      "boundary"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/joint-venture-picks-up-50-building-silicon-valley-rd-portfolio/",
+    "tokens": [
+      "joint",
+      "venture",
+      "picks",
+      "building",
+      "silicon",
+      "valley",
+      "038",
+      "portfolio"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.bisnow.com/news/dallas-ft-worth/office/y-all-street-continues-to-power-trophy-office-momentum-in-uptown-dallas",
+    "tokens": [
+      "039",
+      "street",
+      "powers",
+      "trophy",
+      "office",
+      "momentum",
+      "uptown",
+      "dallas"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/retail/rapid-retail-charger-rollout-headlining-the-great-american-ev-buildout-",
+    "tokens": [
+      "retailers",
+      "charging",
+      "ahead",
+      "stations",
+      "despite",
+      "policy",
+      "pullback"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/apartment-cap-rates-multifamily-sales/829320/",
+    "tokens": [
+      "apartment",
+      "rates",
+      "inched",
+      "5.6%",
+      "july",
+      "msci"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/mark-hanf-pacific-private-money-fraud-arrested/",
+    "tokens": [
+      "california",
+      "investment",
+      "fund",
+      "charged",
+      "$100",
+      "million",
+      "ponzi",
+      "scheme"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/homebuilder-deals-sellers-pricing-2026/",
+    "tokens": [
+      "homebuilder",
+      "sellers",
+      "face",
+      "tougher",
+      "prices",
+      "038",
+      "appetite",
+      "slows"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.bisnow.com/news/boston/affordable-housing/massachusetts-housing-projects-receive-278m-public-funding",
+    "tokens": [
+      "massachusetts",
+      "housing",
+      "projects",
+      "receive",
+      "$278m",
+      "public",
+      "funding"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
+    "url": "https://www.redfin.com/news/housing-market-update-new-listings-4-year-high/",
+    "tokens": [
+      "homebuyers",
+      "fresh",
+      "options",
+      "years"
+    ],
+    "shown_date": "2026-09-04"
+  },
+  {
     "url": "https://www.realtor.com/news/trends/high-mortgage-rates-pending-sales-august-2026-housing-report/",
     "tokens": [
       "mortgage",
@@ -4403,284 +4666,5 @@
       "signal"
     ],
     "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.realtor.com/research/cpi-inflation-july-2026/",
-    "tokens": [
-      "july",
-      "2026",
-      "slows",
-      "3.4%",
-      "mortgage",
-      "rates",
-      "high"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/wholesale-inflation-cools-as-war-driven-energy-shock-fades",
-    "tokens": [
-      "wholesale",
-      "inflation",
-      "cools",
-      "driven",
-      "energy",
-      "shock",
-      "fades"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/08/13/mortgage-escrow-account-interest-lawsuit-bank-rules.html",
-    "tokens": [
-      "federal",
-      "rules",
-      "mortgage",
-      "escrow",
-      "interest",
-      "homeowners",
-      "states",
-      "suing",
-      "block"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.redfin.com/news/housing-market-update-flicker-of-life-august/",
-    "tokens": [
-      "pending",
-      "home",
-      "sales",
-      "listings",
-      "flickers",
-      "life",
-      "start",
-      "august"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/higher-delinquency-rates-point-to-elevated-consumer-stress",
-    "tokens": [
-      "late",
-      "stage",
-      "delinquency",
-      "trend",
-      "suggests",
-      "higher",
-      "consumer",
-      "stress"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVE1sOElTNEJuLTVHUkI0VkhCWkdyb3AzSWRKa1RoQjFoei1PaWRGeFNyamtiTkNjRkhhYWE0RVNIaWxYVTFBUjhtNVdNTTFxN0hPWjBIM1RGZ0d5eDJQWW41azFXV1F0YzlqVXF0U0VZR0V2MHo2aHV4aGYxUWkyU3A2UFJ5b0I4ZWFQZm80QQ?oc=5",
-    "tokens": [
-      "nashville",
-      "housing",
-      "market",
-      "shifts",
-      "toward",
-      "buyers",
-      "channel"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUjVwZEs1eXFFaUlOSjByUTRlQ2hZa3FrdjhwMnBHYmgxc1AzNUpLU01zaXR3YUtJRGFOSER3QnBaNHBZMEJfamRFalJwRUhmeE5ZdURTSV8wQktwcDlINlpIR3hXT3hCMi1MVEEwTUJJTmNlakdWS3RnYkRvbWVqOWVuc05JNXd3X1JXQmMxTWQtU3A3ZHZNcnNROEVxd1NDM18tUEhkR3BFcEFSWHk2UUpwZDg?oc=5",
-    "tokens": [
-      "yardi",
-      "raises",
-      "year",
-      "multifamily",
-      "supply",
-      "forecast",
-      "2027",
-      "trough",
-      "takes",
-      "shape",
-      "globest"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.redfin.com/news/nashville-hottest-neighborhoods-2026/",
-    "tokens": [
-      "nashville",
-      "hottest",
-      "neighborhoods",
-      "2026",
-      "inglewood",
-      "brings",
-      "heat",
-      "cool",
-      "summer",
-      "market"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUHVyaWRQWVBBWXhyeTRCTzhRWFBvOXlNV2xHUGVZYTJxbG5nM3ZUZnNnV1hFbl8zbnBwQnBHTkdWYVdkNUxzYlo4LXo2MGVfaTVIbDhndW5kWHdHczlFN00zUmZuNUpjYkY5UlhaNXhZOS01bVIyenhLR3NtQVRzYnRxeks?oc=5",
-    "tokens": [
-      "group",
-      "commences",
-      "312",
-      "unit",
-      "florida",
-      "community",
-      "multifamily",
-      "housing"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.wbur.org/onpoint/2026/08/07/congress-private-equity-housing-crisis",
-    "tokens": [
-      "congress",
-      "stop",
-      "wall",
-      "street",
-      "buying",
-      "your",
-      "neighborhood",
-      "8211",
-      "wbur"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://pretium.com/pretium-co-president-stephen-scherr-on-the-rent-roll-podcast-with-jay-parsons/",
-    "tokens": [
-      "pretium",
-      "president",
-      "stephen",
-      "scherr",
-      "rent",
-      "roll",
-      "podcast",
-      "parsons"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.bisnow.com/news/dallas-ft-worth/industrial/dfw-s-industrial-market-set-leasing-records-during-q2",
-    "tokens": [
-      "039",
-      "industrial",
-      "market",
-      "leasing",
-      "records",
-      "during"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/industrial/ice-to-sell-three-el-paso-warehouses-after-detention-center-conversion-plan-dissolves",
-    "tokens": [
-      "sell",
-      "texas",
-      "warehouses",
-      "detention",
-      "center",
-      "conversion",
-      "dissolves"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://rebusinessonline.com/logistics-plus-signs-744452-sf-industrial-lease-in-wilmer-texas/",
-    "tokens": [
-      "logistics",
-      "plus",
-      "signs",
-      "744",
-      "452",
-      "industrial",
-      "lease",
-      "wilmer",
-      "texas"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://rebusinessonline.com/prysmian-to-invest-1b-for-expansion-of-cable-manufacturing-facility-in-metro-charlotte/",
-    "tokens": [
-      "prysmian",
-      "invest",
-      "$1b",
-      "expansion",
-      "cable",
-      "manufacturing",
-      "facility",
-      "metro",
-      "charlotte"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/seattle-ban-rental-junk-fees/827816/",
-    "tokens": [
-      "seattle",
-      "bans",
-      "rental",
-      "junk",
-      "fees"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://rebusinessonline.com/sixth-street-riller-capital-purchase-pier-house-resort-in-key-west-for-190m/",
-    "tokens": [
-      "sixth",
-      "street",
-      "riller",
-      "capital",
-      "purchase",
-      "pier",
-      "house",
-      "resort",
-      "west",
-      "$190m"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/reit-merger-vivmark-equity-residential-avalonbay/827775/",
-    "tokens": [
-      "avalonbay",
-      "equity",
-      "residential",
-      "merger",
-      "approved",
-      "shareholders"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/dream-finders-beazer-governance-2/",
-    "tokens": [
-      "dream",
-      "finders",
-      "beazer",
-      "acquisition",
-      "sets",
-      "industry",
-      "scale"
-    ],
-    "shown_date": "2026-08-14"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/housing-fuels-surge-in-mortgage-muni-bond-securitizations",
-    "tokens": [
-      "housing",
-      "crisis",
-      "fuels",
-      "surge",
-      "mortgage",
-      "muni",
-      "bond",
-      "deals"
-    ],
-    "shown_date": "2026-08-14"
   }
 ]
