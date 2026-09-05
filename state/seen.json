@@ -1,5 +1,269 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/august-payrolls-fed-focus/",
+    "tokens": [
+      "august",
+      "payrolls",
+      "rise",
+      "162",
+      "000",
+      "rate",
+      "hike",
+      "odds",
+      "focus"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.redfin.com/news/new-listings-hit-a-4-year-high-a-silver-lining-for-todays-buyers/",
+    "tokens": [
+      "listings",
+      "year",
+      "high",
+      "silver",
+      "lining",
+      "today",
+      "buyers"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/fair-housing-construction-accessibility-complaints-now-have-a-deadline-hud/829714/",
+    "tokens": [
+      "fair",
+      "housing",
+      "construction",
+      "accessibility",
+      "complaints",
+      "deadline"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/fhfa-bi-merge-credit-report-vantagescore-pulte/",
+    "tokens": [
+      "pulte",
+      "fhfa",
+      "weighing",
+      "merge",
+      "single",
+      "credit"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/landlords-compensation-covid-eviction-freeze-lawsuit-darby/829711/",
+    "tokens": [
+      "600",
+      "landlords",
+      "slated",
+      "compensation",
+      "covid",
+      "eviction",
+      "freeze",
+      "losses"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQUTVrS0tkVG1Dd1FnZURJTVY5dnJKQ2tEQ2labDNRR0p3SzJwTEUyTUIyZ0RMVG5nbFZSRHdwdnVhcC04SWF3aUxQdmtuTTY4LXNLNUtrbEFpams1WnJDVjdpcndIcXdWb19nSWpBcGJHOVJpb1RXSjdmM21ac1ZFdXpKdUVVSUg5ZmRTZ1pLZ2hGWndnWTRQVEZxaXlScmpkdlRn?oc=5",
+    "tokens": [
+      "austin",
+      "targets",
+      "lakeline",
+      "station",
+      "area",
+      "housing",
+      "economic",
+      "development",
+      "push",
+      "bizjournals"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/south-florida/multifamily/live-local-act-projects-struggle-to-get-fannie-freddie-hud-on-board",
+    "tokens": [
+      "live",
+      "local",
+      "projects",
+      "struggle",
+      "fannie",
+      "freddie",
+      "board"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://trerc.tamu.edu/blog/rising-property-tax-bills-why-growth-is-not-to-blame/",
+    "tokens": [
+      "rising",
+      "property",
+      "bills",
+      "growth",
+      "blame"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-arranges-78-7m-loan-for-refinancing-of-east-dallas-apartment-community/",
+    "tokens": [
+      "arranges",
+      "$78.7m",
+      "loan",
+      "refinancing",
+      "east",
+      "dallas",
+      "apartment",
+      "community"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/how-road-act-rental-limits-create-lender-opportunities",
+    "tokens": [
+      "road",
+      "rental",
+      "limits",
+      "create",
+      "lender",
+      "opportunities",
+      "8211",
+      "national",
+      "mortgage"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/cotality-investors-single-family/",
+    "tokens": [
+      "investor",
+      "share",
+      "slips",
+      "27%",
+      "single",
+      "family",
+      "purchases",
+      "cotality"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://rebusinessonline.com/hmf-americana-acquires-land-from-harris-teeter-in-metro-charlotte-plans-build-to-rent-development/",
+    "tokens": [
+      "americana",
+      "acquires",
+      "land",
+      "harris",
+      "teeter",
+      "metro",
+      "charlotte",
+      "build",
+      "rent",
+      "development"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/u-s-industrial-market-outlook-august-2026/",
+    "tokens": [
+      "industrial",
+      "market",
+      "outlook",
+      "august",
+      "2026"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/global-holdings-lands-382m-refi-for-midtown-tower/",
+    "tokens": [
+      "global",
+      "holdings",
+      "lands",
+      "$382m",
+      "refi",
+      "midtown",
+      "tower"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/los-angeles/multifamily/mbk-sells-anaheim-apartments-to-ta-realty",
+    "tokens": [
+      "sells",
+      "anaheim",
+      "apartments",
+      "realty",
+      "$147m"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/boston/life-sciences/why-divcowest-is-still-advancing-a-new-19-story-lab-development-in-somerville",
+    "tokens": [
+      "divcowest",
+      "advancing",
+      "story",
+      "development",
+      "somerville"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/los-angeles/development/anaheim-angels-stan-kroenke-land-deal",
+    "tokens": [
+      "angels",
+      "sale",
+      "stan",
+      "kroenke",
+      "reopens",
+      "land",
+      "deal",
+      "possibilities",
+      "city",
+      "anaheim"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/data-center/blue-owl-capital-data-center-reit",
+    "tokens": [
+      "blue",
+      "reportedly",
+      "planning",
+      "data",
+      "center",
+      "reit"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/mortgage-rates-today-bond-selloff-september-3-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "surge",
+      "2026",
+      "high",
+      "6.71%",
+      "global",
+      "bond",
+      "selloff"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
+    "url": "https://www.realtor.com/advice/hyperlocal/st-louis-rents-are-going-down/",
+    "tokens": [
+      "louis",
+      "rents",
+      "going",
+      "down"
+    ],
+    "shown_date": "2026-09-05"
+  },
+  {
     "url": "https://www.housingwire.com/articles/economic-activity-edges-higher-amid-mixed-consumer-signals/",
     "tokens": [
       "economic",
@@ -4382,289 +4646,5 @@
       "2025"
     ],
     "shown_date": "2026-08-16"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/markets-eye-fed-hold-after-retail-sales-consumer-confidence-fall",
-    "tokens": [
-      "markets",
-      "hold",
-      "retail",
-      "sales",
-      "consumer",
-      "confidence",
-      "fall"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.redfin.com/news/mortgage-rates-steady-inflation-report/",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "hold",
-      "steady",
-      "expected",
-      "inflation",
-      "dimming",
-      "odds",
-      "september",
-      "rate",
-      "hike"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/08/single-family-permitting-declines-through-june-as-multifamily-activity-remains-stronger/",
-    "tokens": [
-      "single",
-      "family",
-      "permitting",
-      "declines",
-      "through",
-      "june",
-      "contrast",
-      "multifamily"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/cfpb-will-no-longer-publish-consumer-complaint-narratives",
-    "tokens": [
-      "cfpb",
-      "longer",
-      "publish",
-      "consumer",
-      "complaint",
-      "narratives"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/real-remax-shareholder-approval/",
-    "tokens": [
-      "shareholders",
-      "approve",
-      "remax",
-      "acquisition",
-      "closing",
-      "nears"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQclJzT1Z0bm9vdmNDNjVCWmtmc0VfYjJXUC1FVTN3LUdFcnV0dVp6dHJhai03NUxUOGNkb2FGUWl0M2ZHU1V4dllKdG1RYm80RGFwRVEyZFVrTTlTYTdTWFJuYjNsTzdIWGo2VnF0MHp0VEpxUXVjWElQeUNldnJpNXV5dEo5Q01CTXZHSjRwbXRQaEtiQVNwclk4ckxocTJYeEFnMzBmSVc0S1NqMEg4WVctUFlKT3F6?oc=5",
-    "tokens": [
-      "austin",
-      "atlanta",
-      "denver",
-      "boast",
-      "significantly",
-      "oversupplied",
-      "inventory",
-      "philly",
-      "homebuilders",
-      "struggle",
-      "find",
-      "lots",
-      "resiclub"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://rebusinessonline.com/trademark-completes-321-unit-vickery-apartments-in-downtown-fort-worth/",
-    "tokens": [
-      "trademark",
-      "completes",
-      "321",
-      "unit",
-      "vickery",
-      "apartments",
-      "downtown",
-      "fort",
-      "worth"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://rebusinessonline.com/nrp-group-breaks-ground-on-312-unit-luxury-apartment-community-in-port-st-lucie-florida/",
-    "tokens": [
-      "group",
-      "breaks",
-      "ground",
-      "312",
-      "unit",
-      "luxury",
-      "apartment",
-      "community",
-      "port",
-      "lucie",
-      "florida"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPLWRqcmxKd001WXVyTW45OWNpWnV1UmtvbTBtMm1uOVZkWVI1akdYVkplQmkwZk9vbW5LWEZ1OUlrSElzYXFNNmZOS3lLQU9HMXl1WG1JaHZVYks5cC1NRFNnODFsMmNlcFFzV2kwTWdGZDl3Z2YwU0RoeGVCaXFYa204MDNRZzhfS3RxcDFCSjdCbjZUelZzVzRyemxsSXlTcGJ6OEV3aTk1VEF3MDhQN1ZqSUdCR2VrdUVaclhMMGw2UzBGOFAtZXZ3OUVrVENrTGR3OXNRMmdNQzc1V25FQzc3cW9BeUxlLUpoRg?oc=5",
-    "tokens": [
-      "charlotte",
-      "county",
-      "housing",
-      "market",
-      "begins",
-      "shifting",
-      "toward",
-      "sellers",
-      "gulfshore",
-      "business"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.bisnow.com/news/dallas-ft-worth/industrial/fort-worth-approves-incentive-deal-for-drone-developer-mach-industries",
-    "tokens": [
-      "fort",
-      "worth",
-      "approves",
-      "incentive",
-      "deal",
-      "drone",
-      "developer",
-      "mach",
-      "industries"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/winthrop-center-residences-secure-new-englands-largest-c-pace-financing/",
-    "tokens": [
-      "winthrop",
-      "center",
-      "residences",
-      "secure",
-      "england",
-      "largest",
-      "pace",
-      "financing"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://rebusinessonline.com/affinius-capital-provides-89m-acquisition-loan-for-midtown-manhattan-office-building/",
-    "tokens": [
-      "affinius",
-      "capital",
-      "provides",
-      "$89m",
-      "acquisition",
-      "loan",
-      "midtown",
-      "manhattan",
-      "office",
-      "building"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://rebusinessonline.com/jll-arranges-sale-of-717475-sf-industrial-portfolio-in-chicago-market/",
-    "tokens": [
-      "arranges",
-      "sale",
-      "717",
-      "475",
-      "industrial",
-      "portfolio",
-      "chicago",
-      "market"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://rebusinessonline.com/big-shopping-centers-usa-red-development-sell-mixed-use-destination-in-northern-nevada-for-103m/",
-    "tokens": [
-      "shopping",
-      "centers",
-      "development",
-      "sell",
-      "mixed",
-      "northern",
-      "nevada",
-      "$103m"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/multifamily/swi-group-brookfield-joint-venture-varia-us",
-    "tokens": [
-      "brookfield",
-      "form",
-      "$694m",
-      "multifamily",
-      "venture",
-      "$500m",
-      "sales"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/spires-latest-effort-will-sell-413-7-million-in-rmbs",
-    "tokens": [
-      "spire",
-      "latest",
-      "effort",
-      "sell",
-      "$413.7",
-      "million",
-      "rmbs"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/structured-finance-multifamily-investment-strategy-preferred-equity/827947/",
-    "tokens": [
-      "truamerica",
-      "moving",
-      "structured",
-      "finance"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4tVHBkNXBUSE1MT0EtZ3pGbUduOW45Ry1JNFdaekJiWHNFRG9tNXFFdXRXdXNhTjN2SUZub0JJX3dHM3dFQUlsY0RWbVRSaER2TDJkeWx3cWxodFg0dHR2ZUxEbG91V0dXaUFDUXZBREZPM2ZQaHVWczJR?oc=5",
-    "tokens": [
-      "sellers",
-      "outnumber",
-      "buyers",
-      "51%",
-      "nearing",
-      "december",
-      "record",
-      "inman"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/construction-development/construction-prices-backlog-data-centers",
-    "tokens": [
-      "contractors",
-      "feel",
-      "squeeze",
-      "prices",
-      "rise",
-      "7.4%",
-      "backlog",
-      "shrinks"
-    ],
-    "shown_date": "2026-08-15"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/why-2026-foreclosure-gains-are-not-a-housing-crash-signal/",
-    "tokens": [
-      "2026",
-      "foreclosure",
-      "gains",
-      "housing",
-      "crash",
-      "signal"
-    ],
-    "shown_date": "2026-08-15"
   }
 ]
