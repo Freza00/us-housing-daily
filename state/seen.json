@@ -1,5 +1,269 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/will-mortgage-rates-rise-to-8-or-drop-to-6/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "rise",
+      "8%",
+      "drop",
+      "6%"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/home-buyers-hold-the-clear-upper-hand-in-todays-market",
+    "tokens": [
+      "home",
+      "buyers",
+      "hold",
+      "clear",
+      "upper",
+      "hand",
+      "today",
+      "market"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/09/state-level-employment-situation-august-2026/",
+    "tokens": [
+      "state",
+      "level",
+      "employment",
+      "situation",
+      "august",
+      "2026"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/nil-era-brings-new-wealth-and-new-buyers-to-college-housing-markets/",
+    "tokens": [
+      "brings",
+      "wealth",
+      "buyers",
+      "college",
+      "housing",
+      "markets"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/09/17/pultegroup-ceo-ryan-marshall-rising-mortgage-rates-not-an-unovercomable-headwind.html",
+    "tokens": [
+      "pultegroup",
+      "ryan",
+      "marshall",
+      "rising",
+      "mortgage",
+      "rates",
+      "unovercomable",
+      "headwind"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.realtor.com/news/unique-homes/elvis-presley-superfan-buys-graceland-inspired-house/",
+    "tokens": [
+      "superfan",
+      "snaps",
+      "graceland",
+      "inspired",
+      "home",
+      "memphis",
+      "$150k",
+      "bought",
+      "every",
+      "elvis"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://rebusinessonline.com/lee-associates-negotiates-14100-sf-industrial-lease-in-richardson-texas/",
+    "tokens": [
+      "038",
+      "associates",
+      "negotiates",
+      "100",
+      "industrial",
+      "lease",
+      "richardson",
+      "texas"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.bisnow.com/news/denver/retail/scheels-open-300k-sf-store-littleton-denver-deal-sheet",
+    "tokens": [
+      "scheels",
+      "open",
+      "300",
+      "store",
+      "littleton",
+      "denver",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/nominate-a-leading-attorney-for-connect-cres-2026-lawyers-in-real-estate-awards/",
+    "tokens": [
+      "nominate",
+      "leading",
+      "attorney",
+      "connect",
+      "2026",
+      "lawyers",
+      "awards"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.bisnow.com/news/san-francisco/industrial/galvanize-acquires-302k-sf-industrial-portfolio-milpitas",
+    "tokens": [
+      "galvanize",
+      "pays",
+      "$94m",
+      "milpitas",
+      "industrial",
+      "portfolio"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.bisnow.com/news/new-york/office/office-lease-flexibility-tishman-speyer-silverstein-kpmg",
+    "tokens": [
+      "office",
+      "owners",
+      "pulling",
+      "back",
+      "flexible",
+      "leases",
+      "clouds",
+      "future",
+      "work"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.realtor.com/research/weekly-housing-trends-view-data-week-september-12-2026/",
+    "tokens": [
+      "weekly",
+      "housing",
+      "trends",
+      "market",
+      "update",
+      "week",
+      "ending",
+      "september",
+      "2026"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.realtor.com/research/pending-home-sales-august-2026/",
+    "tokens": [
+      "pending",
+      "home",
+      "sales",
+      "hold",
+      "steady",
+      "rates",
+      "weigh",
+      "buyers"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.realtor.com/research/provincetown-luxury-housing-market-spotlight/",
+    "tokens": [
+      "luxury",
+      "market",
+      "snapshot",
+      "provincetown"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/09/18/next-move-for-housing-trade.html",
+    "tokens": [
+      "next",
+      "move",
+      "housing",
+      "trade"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.realtor.com/news/unique-homes/modern-farmhouse-architectural-style-history/",
+    "tokens": [
+      "modern",
+      "farmhouse",
+      "went",
+      "trendy",
+      "hgtv",
+      "buzzword",
+      "inexpensive",
+      "housing",
+      "solution"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/mortgage-rates-near-7-but-expected-to-ease-by-december",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "near",
+      "7%",
+      "expected",
+      "ease",
+      "december"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/09/17/brown-harris-stevens-bess-freedman-the-feds-rate-hike-made-a-complicated-housing-market-more-complicated.html",
+    "tokens": [
+      "brown",
+      "harris",
+      "stevens",
+      "bess",
+      "freedman",
+      "rate",
+      "hike",
+      "complicated",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/the-fed-rate-hike-cycle-has-started-whats-next/",
+    "tokens": [
+      "rate",
+      "hike",
+      "cycle",
+      "started",
+      "next"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/is-a-new-fed-rate-hike-cycle-good-for-mortgage-rates/",
+    "tokens": [
+      "rate",
+      "hike",
+      "cycle",
+      "good",
+      "mortgage",
+      "rates"
+    ],
+    "shown_date": "2026-09-21"
+  },
+  {
     "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-september-17-2026/",
     "tokens": [
       "mortgage",
@@ -4118,276 +4382,5 @@
       "demand"
     ],
     "shown_date": "2026-09-02"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/fed-kevin-warsh-jackson-hole-speech-interest-rates/",
-    "tokens": [
-      "chairman",
-      "kevin",
-      "warsh",
-      "leaves",
-      "door",
-      "open",
-      "september",
-      "rate",
-      "hike",
-      "jackson",
-      "hole",
-      "speech"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/the-wsj-is-wrong-about-fha-loans-and-nonbanks-and-they-know-it/",
-    "tokens": [
-      "wrong",
-      "loans",
-      "nonbanks",
-      "know"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPeU5hZUE1RUZSUU5Ma3dUWUtzaXBHNDgzSTBYcFN5Tng0YU9OSjdPWWpWZlFPbEQxMW0xV1R1ZHZrSExUbldkNVFUM0NzbGFqVnpFeVMzTVNFNjRXenhHcEptM21oY3hkWU9WSXF0UjU3S2Rmck9xM1F5NjN6TjNUSVB3WGFzUU51d1lURWlqaWdUU3JEcGxoaVRlOGVqUWUwOUNneDFldENmaWhHbXA3REVWdkk2WnhreGJ4VA?oc=5",
-    "tokens": [
-      "lennar",
-      "average",
-      "sales",
-      "price",
-      "down",
-      "24%",
-      "because",
-      "smaller",
-      "builds",
-      "resiclub"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/08/small-decline-for-single-family-home-size/",
-    "tokens": [
-      "small",
-      "decline",
-      "single",
-      "family",
-      "home",
-      "size"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/08/cost-of-materials-rises-especially-for-smaller-builders/",
-    "tokens": [
-      "cost",
-      "materials",
-      "rises",
-      "especially",
-      "smaller",
-      "builders"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVGR4VzNZRlZWa1Ntb2l3UWpwMDhQVlY0dm9tRXRQQlMzc2pHX2pDNE1mZnlCb05kVHNqUFlVcV9tNzg4N1I5Y2Rvc0pMRGtOR2RBdXlsdUl3dVVlQzVTYnhuOVp0OTdqc1lLcHVrdjU2VEFoODdBM1pvR2ZlalFRQk5MbGtkekc1WWR3c3dmNWUwaVYyeXZyX3c3SnFGamVKMlNaSnphYW9RU3hMRWZPUFpXbGh0NWJrUm1ZRFlhMF8?oc=5",
-    "tokens": [
-      "taylor",
-      "morrison",
-      "sees",
-      "room",
-      "grow",
-      "jacksonville",
-      "housing",
-      "market",
-      "shifts",
-      "daily",
-      "record"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMjQtbVhlSFp1ZjdJcWpPTEZuc1p6U0p6RnVJRFpmaHFFaWJBdXRSZGNGZFhzVFpLQzU1SHAwYk12RXRNdzZUSGZldk1LZVEtTEZFcEdfSHBXNXpfZHZEN2s0bVFEVWRjeFRPbnlTRGR5QlN3WFJnMlVjSm9MQkNud1RHaGhVMllCMVQ3OGdjeEhDTTBzRDY2ZDRraDBkUDR5d1N3ZWFkdzNYb2N6NG5BV3pfQ292ei1kZ2NFWk1kMGUyVjJYYmhqLU82OVBSY2RaS3Z5M3pjbHRHMndsUnlGaEFZSS1ZYjFsNWJGcw?oc=5",
-    "tokens": [
-      "amendment",
-      "reshape",
-      "charlotte",
-      "county",
-      "housing",
-      "market",
-      "gulfshore",
-      "business"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb3NHbVc0VFdxaUhSb21DMGhyckUzQS1NVFozMmo4Y2RaZGZBWXhYRFZWZm1wTF93OXlocUJMYUEtLWF6Nlozc0JrelRyaE50OHM0TlB2dlNmb3dXdlZtOHFCb29yZVp3eEV2TnhSNV90b0hBTWVHZXY4MDZCOWNTclEtZEY4OWZqQjdPZHA2bVlNWWNWbXBkdlBvQ3l4LVlwd2xGNFNraWZhaExaSEE?oc=5",
-    "tokens": [
-      "georgia",
-      "growth",
-      "means",
-      "housing",
-      "market",
-      "finchannel"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/miami-hoa-fraud-scam-juan-awais-arrest/",
-    "tokens": [
-      "miami",
-      "sheriff",
-      "brazen",
-      "criminal",
-      "ring",
-      "scammed",
-      "hoas",
-      "$5.8",
-      "million"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.bisnow.com/news/new-york/life-sciences/empty-harlem-labs-nyc-life-sciences-ambitions-in-doubt",
-    "tokens": [
-      "pain",
-      "039",
-      "biotech",
-      "market",
-      "hitting",
-      "harlem",
-      "hardest"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/quarterly-forecast-projects-self-storage-supply-downturn/",
-    "tokens": [
-      "yardi",
-      "matrix",
-      "quarterly",
-      "forecast",
-      "projects",
-      "self",
-      "storage",
-      "supply",
-      "downturn"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.bisnow.com/news/washington-dc/deal-sheet/vieron-capital-bxp-sumner-square-the-d-c-deal-sheet",
-    "tokens": [
-      "buyer",
-      "039",
-      "sumner",
-      "square",
-      "revealed",
-      "deal",
-      "sheet"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/core-spaces-new-student-housing-developments/828870/",
-    "tokens": [
-      "core",
-      "spaces",
-      "opens",
-      "000",
-      "student",
-      "beds",
-      "developments"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://rebusinessonline.com/frontrunner-bus-group-signs-88000-sf-industrial-lease-in-billerica-massachusetts/",
-    "tokens": [
-      "frontrunner",
-      "group",
-      "signs",
-      "000",
-      "industrial",
-      "lease",
-      "billerica",
-      "massachusetts"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPaTJ4RWtGYUpsSTVGREpveUU2MENPZW5WVFdWNUNaUzdIcWRackpaYWxXdHJKYTdIekRTUGM3NGQxMHRIVHZPanBpSHF4bV9iTzZNVlpuWFNmdzJmMzRhQ0RfWmhic0paTllzd3dUTnV4MFNia0d0aFRhRVFQWFRNU0o5N2RvLTdrak5JLS0xN3Y5NWFJWGhBR0lUdzZCTlFfVXc?oc=5",
-    "tokens": [
-      "completes",
-      "remax",
-      "takeover",
-      "form",
-      "180",
-      "agent",
-      "giant",
-      "inman"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/apartment-cmbs-distress-special-servicing/828748/",
-    "tokens": [
-      "multifamily",
-      "distress",
-      "york",
-      "spotlight"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://rebusinessonline.com/rockpoint-holland-partner-group-to-develop-311-unit-multifamily-project-in-san-jose-california/",
-    "tokens": [
-      "rockpoint",
-      "holland",
-      "partner",
-      "group",
-      "develop",
-      "311",
-      "unit",
-      "multifamily",
-      "project",
-      "jose",
-      "california"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/hud-loans-bonaventure-multifamily-investment-strategy/829060/",
-    "tokens": [
-      "inside",
-      "bonaventure",
-      "long",
-      "term",
-      "ownership",
-      "strategy"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.redfin.com/news/san-diego-days-on-market-down-year-over-year/",
-    "tokens": [
-      "diego",
-      "homes",
-      "selling",
-      "days",
-      "faster",
-      "last",
-      "year"
-    ],
-    "shown_date": "2026-08-31"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/08/25/cash-is-no-longer-king-in-home-sales.html",
-    "tokens": [
-      "cash",
-      "longer",
-      "king",
-      "home",
-      "sales"
-    ],
-    "shown_date": "2026-08-31"
   }
 ]
