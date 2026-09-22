@@ -1,5 +1,277 @@
 [
   {
+    "url": "https://eyeonhousing.org/2026/09/with-inflation-uptick-fed-hikes-and-signals-more-to-come/",
+    "tokens": [
+      "inflation",
+      "uptick",
+      "hikes",
+      "signals",
+      "come"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-starts-apartment-construction-august/830679/",
+    "tokens": [
+      "multifamily",
+      "starts",
+      "plummeted",
+      "nearly",
+      "16%",
+      "august"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/fannie-mba-cut-2026-forecasts-plan-for-6-8-rates",
+    "tokens": [
+      "fannie",
+      "2026",
+      "forecasts",
+      "6.8%",
+      "rates"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/09/17/august-pending-home-sales-rises-0-point-3-percent.html",
+    "tokens": [
+      "pending",
+      "home",
+      "sales",
+      "rises",
+      "0.3%",
+      "august"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.realtor.com/research/metro-report-cards-2026/",
+    "tokens": [
+      "metro",
+      "cards",
+      "bottom",
+      "class",
+      "homebuilding",
+      "affordability"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://rebusinessonline.com/oht-partners-breaks-ground-on-360-unit-multifamily-project-in-west-houston-2/",
+    "tokens": [
+      "partners",
+      "breaks",
+      "ground",
+      "360",
+      "unit",
+      "multifamily",
+      "project",
+      "west",
+      "houston"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/mesa-arizona-hoa-foreclose-toby-newton-update/",
+    "tokens": [
+      "arizona",
+      "turns",
+      "foreclosure",
+      "$475k",
+      "home",
+      "owner",
+      "$977",
+      "debt",
+      "national",
+      "backlash"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1nRmRNUTd6X1BYUnhQWG9VSjQ5cERtaHRVMEpJVjFLclNleXRSMlpDZTFNWXNJSi1vZVp6TXJNN1hHRzduZW9iU3VWNEhNZHJ6allISWZoN0VFVWxzbU5NLXY4QlBHWDNhVDJ6cQ?oc=5",
+    "tokens": [
+      "gamls",
+      "atlanta",
+      "housing",
+      "market",
+      "continues",
+      "shift",
+      "pending",
+      "sales",
+      "fall",
+      "fifth",
+      "month",
+      "atlantaagentmagazine"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOX2JRTngyNGY0aW8zQzFZbHl5eTBrRFVSbkVxVWQwTUZpRlNJeE1McVJzdExqQTdZVkVoU014SFU3OTF5bllpenZIaEpWcDNhNnR3U0p0UjF0aHdMSmxOa1hSclBsejBZNVJKOTBjaHdaOVNBdk1pR2RKRjBuNzdOWGxxVlpfNmlYZ1JVd3NsNFdyeEJxbU1HN2tOTDBDOE5seXNR?oc=5",
+    "tokens": [
+      "apartments",
+      "appear",
+      "neighbor",
+      "samsung",
+      "longtime",
+      "austin",
+      "factory",
+      "bizjournals"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/industrial/breit-lines-up-1-7b-cmbs-loan-for-19m-sf-industrial-portfolio",
+    "tokens": [
+      "breit",
+      "lines",
+      "$1.7b",
+      "cmbs",
+      "loan",
+      "industrial",
+      "portfolio"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.bisnow.com/news/south-florida/construction-development/citadel-construction-collapse-stop-work-order-miami",
+    "tokens": [
+      "citadel",
+      "headquarters",
+      "project",
+      "under",
+      "stop",
+      "work",
+      "order",
+      "following",
+      "collapse"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.bisnow.com/news/houston/construction-development/eli-lilly-breaks-ground-record-breaking-manufacturing-facility-generation-park",
+    "tokens": [
+      "lilly",
+      "starts",
+      "building",
+      "record",
+      "$6.5b",
+      "houston",
+      "manufacturing",
+      "facility"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/office/paramount-warner-bros-antitrust-lawsuit-settlement-rob-bonta",
+    "tokens": [
+      "paramount",
+      "warner",
+      "bros",
+      "settlement",
+      "preserves",
+      "commitments",
+      "first",
+      "years"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.bisnow.com/news/new-york/capital-markets/cuny-maddd-equities-bronx-post-office-201m",
+    "tokens": [
+      "cuny",
+      "buys",
+      "historic",
+      "bronx",
+      "post",
+      "office",
+      "$201m"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/nuveen-green-capital-closes-new-hampshires-first-c-pace-financing/",
+    "tokens": [
+      "nuveen",
+      "green",
+      "capital",
+      "closes",
+      "hampshire",
+      "first",
+      "pace",
+      "financing"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/hoag-hospital-opens-1b-expansion-in-irvine/",
+    "tokens": [
+      "hoag",
+      "hospital",
+      "opens",
+      "$1b",
+      "expansion",
+      "irvine"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/wentworth-tech-breaks-ground-on-residence-tower-for-first-year-students/",
+    "tokens": [
+      "wentworth",
+      "tech",
+      "breaks",
+      "ground",
+      "residence",
+      "tower",
+      "first",
+      "year",
+      "students"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.bisnow.com/news/san-francisco/industrial/warespace-expands-western-region-footprint-south-san-francisco-industrial-acquisition",
+    "tokens": [
+      "warespace",
+      "expands",
+      "microbay",
+      "flex",
+      "industrial",
+      "concept",
+      "south",
+      "francisco",
+      "acquisition"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/walker-dunlop-arranges-86m-refi-for-flushing-affordable-quartet/",
+    "tokens": [
+      "walker",
+      "038",
+      "dunlop",
+      "arranges",
+      "$86m",
+      "refi",
+      "flushing",
+      "affordable",
+      "quartet"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
+    "url": "https://www.bisnow.com/news/boston/life-sciences/flexible-lab-provider-closing-boston-location",
+    "tokens": [
+      "flexible",
+      "provider",
+      "closing",
+      "boston",
+      "location"
+    ],
+    "shown_date": "2026-09-22"
+  },
+  {
     "url": "https://www.housingwire.com/articles/will-mortgage-rates-rise-to-8-or-drop-to-6/",
     "tokens": [
       "mortgage",
