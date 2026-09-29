@@ -1,5 +1,277 @@
 [
   {
+    "url": "https://www.nationalmortgagenews.com/news/hassett-not-a-lot-of-room-to-go-up-from-here-for-fed-rate",
+    "tokens": [
+      "hassett",
+      "rate",
+      "room",
+      "here"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/articles/data-this-week-seen-bolstering-case-for-october-rate-hike",
+    "tokens": [
+      "data",
+      "week",
+      "seen",
+      "bolstering",
+      "case",
+      "october",
+      "rate",
+      "hike"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.redfin.com/news/mortgage-rates-rise-economic-concerns/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "jump",
+      "markets",
+      "price",
+      "rate",
+      "hikes"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/another-judge-rejects-trumps-attempt-to-halt-cfpb-funding",
+    "tokens": [
+      "another",
+      "judge",
+      "rejects",
+      "trump",
+      "attempt",
+      "halt",
+      "cfpb",
+      "funding"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/09/24/new-home-sales.html",
+    "tokens": [
+      "august",
+      "home",
+      "sales",
+      "beat",
+      "estimates"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://rebusinessonline.com/marcus-millichap-brokers-sale-of-214-unit-apartment-complex-in-killeen-texas/",
+    "tokens": [
+      "marcus",
+      "038",
+      "millichap",
+      "brokers",
+      "sale",
+      "214",
+      "unit",
+      "apartment",
+      "complex",
+      "killeen",
+      "texas"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTTlhMlN5Q1A2Vk84aU9KZXI2aG92MnQ3anJINFRMVVlPSG9hT1JWTHRYWXFQVmw2UDZIeEoxTWVJMjNlUHlwSG5jbnlrS1FuaVVyRnNmMm5LN1ZNdkItT2hLbG9rZGZPS3BKTWh6eTJlZ2xQSDVCNEtteVBYaHZjbmNWeXFQTFh0Q1NQc3F0NW0?oc=5",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "7%",
+      "deepening",
+      "housing",
+      "market",
+      "freeze",
+      "atlanta",
+      "voice"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://rebusinessonline.com/onyxeast-opens-23-unit-build-to-rent-community-in-columbus-ohio/",
+    "tokens": [
+      "onyx",
+      "east",
+      "opens",
+      "unit",
+      "build",
+      "rent",
+      "community",
+      "columbus",
+      "ohio"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.bisnow.com/news/dallas-ft-worth/office/morgan-stanley-to-invest-684m-in-new-regional-hub-in-dallas",
+    "tokens": [
+      "morgan",
+      "stanley",
+      "invest",
+      "$684m",
+      "regional",
+      "dallas"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/investor-duo-obtains-270m-refi-on-387k-sf-culver-city-office-property/",
+    "tokens": [
+      "investor",
+      "obtains",
+      "$270m",
+      "refi",
+      "387",
+      "culver",
+      "city",
+      "office",
+      "property"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://rebusinessonline.com/newmark-arranges-310m-construction-loan-for-jersey-city-multifamily-project/",
+    "tokens": [
+      "newmark",
+      "arranges",
+      "$310m",
+      "construction",
+      "loan",
+      "jersey",
+      "city",
+      "multifamily",
+      "project"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.bisnow.com/news/dallas-ft-worth/deal-sheet/scannell-properties-sells-more-than-1m-sf-of-dfw-distribution-facilities-the-dfw-deal-sheet",
+    "tokens": [
+      "scannell",
+      "properties",
+      "sells",
+      "distribution",
+      "facilities",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/hotel/hotel-rates-reach-record-numbers-signaling-broad-industry-recovery",
+    "tokens": [
+      "hotel",
+      "industry",
+      "sees",
+      "record",
+      "high",
+      "increases",
+      "revpar"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/thompson-thrift-multifamily-fundraising-development-equity/831541/",
+    "tokens": [
+      "thompson",
+      "thrift",
+      "launches",
+      "$230m",
+      "partnership",
+      "develop",
+      "projects"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/cross-2026-nqm11-raises-735-3-million-in-rmbs",
+    "tokens": [
+      "cross",
+      "2026",
+      "raises",
+      "$735.3",
+      "million",
+      "rmbs"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/uwm-ishbia-vantagescore-4-mortgages/",
+    "tokens": [
+      "ishbia",
+      "backs",
+      "vantagescore",
+      "underwriting",
+      "results",
+      "charts"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.bisnow.com/news/san-francisco/deal-sheet/basin-street-adds-to-north-bay-cre-portfolio",
+    "tokens": [
+      "basin",
+      "street",
+      "adds",
+      "113",
+      "north",
+      "portfolio",
+      "francisco",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.bisnow.com/news/new-york/industrial/robotaxi-firms-quietly-growing-real-estate-footprint-even-where-they-re-not-yet-legal",
+    "tokens": [
+      "robotaxi",
+      "firms",
+      "quietly",
+      "growing",
+      "footprint",
+      "039",
+      "legal"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.bisnow.com/news/boston/office/historic-boston-office-building-proposed-for-residential-conversion",
+    "tokens": [
+      "downtown",
+      "office",
+      "building",
+      "proposed",
+      "155",
+      "unit",
+      "residential",
+      "conversion"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
+    "url": "https://www.bisnow.com/news/phoenix/data-center/glendale-arizona-recommends-rezoning-for-controversial-data-center-project",
+    "tokens": [
+      "maricopa",
+      "county",
+      "data",
+      "center",
+      "project",
+      "moves",
+      "toward",
+      "approval",
+      "despite",
+      "pushback"
+    ],
+    "shown_date": "2026-09-29"
+  },
+  {
     "url": "https://www.housingwire.com/articles/mortgage-rates-have-gone-wild-so-whats-next-for-housing/",
     "tokens": [
       "mortgage",
