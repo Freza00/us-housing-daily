@@ -1,5 +1,271 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/home-prices-up-1-9-annually-in-july-energy-fuel-costs-loom/",
+    "tokens": [
+      "home",
+      "prices",
+      "1.9%",
+      "annually",
+      "july",
+      "energy",
+      "fuel",
+      "costs",
+      "loom"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/fhfa-gses-one-grid/",
+    "tokens": [
+      "fhfa",
+      "fannie",
+      "freddie",
+      "llpa",
+      "grid",
+      "fico",
+      "vantagescore"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbEFtaHY1TlpNWnFsUnc0VEhFelJvOENUVWVOWm92dkdwX3UxZmRtNDQxM1Fjb3ZKVkg1X3kyVkl1QVZiTGpIdDhCX2JJczJJdno2eTZFQTJUd28wakxfeURkNlR0SDJtYjJjdUZBaXJ4S2lMNXpaWFFMQ3dPYnRXR2g1aVdwcXRjaUtKUDJn?oc=5",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "race",
+      "past",
+      "7.5%",
+      "borrowing",
+      "costs",
+      "surge",
+      "inman"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/the-choice-market-arrives-as-sellers-face-growing-price-pressure/",
+    "tokens": [
+      "choice",
+      "market",
+      "arrives",
+      "sellers",
+      "face",
+      "growing",
+      "price",
+      "pressure"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/09/29/homeowners-are-sitting-on-record-equity-and-not-using-it.html",
+    "tokens": [
+      "homeowners",
+      "sitting",
+      "record",
+      "equity",
+      "using"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://rebusinessonline.com/37th-parallel-acquires-222-unit-apartment-complex-in-sachse-texas/",
+    "tokens": [
+      "parallel",
+      "acquires",
+      "222",
+      "unit",
+      "apartment",
+      "complex",
+      "sachse",
+      "texas"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/homebuilding-affordability-miami-florida-2026-report-card/",
+    "tokens": [
+      "miami",
+      "flunking",
+      "homebuilding",
+      "affordability",
+      "rest",
+      "florida",
+      "booms"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-arranges-sale-of-270-unit-apartment-community-near-myrtle-beach/",
+    "tokens": [
+      "arranges",
+      "sale",
+      "270",
+      "unit",
+      "apartment",
+      "community",
+      "near",
+      "myrtle",
+      "beach"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/valera-homes-launches-greater-houston/",
+    "tokens": [
+      "valera",
+      "homes",
+      "debuts",
+      "houston",
+      "focus",
+      "attainable",
+      "housing"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://rebusinessonline.com/partnership-to-develop-225000-sf-office-project-in-allen-texas/",
+    "tokens": [
+      "partnership",
+      "develop",
+      "225",
+      "000",
+      "office",
+      "project",
+      "allen",
+      "texas"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/data-center-development/report-justifying-data-center-spending-will-require-trillions-in-new-ai-revenue",
+    "tokens": [
+      "bain",
+      "data",
+      "center",
+      "spree",
+      "039",
+      "payoff",
+      "hinges",
+      "$4.2",
+      "revenue",
+      "doesn",
+      "exist"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.bisnow.com/news/boston/multifamily/with-costs-becoming-too-high-boston-multifamily-developers-are-turning-away-from-urban-high-rise-development",
+    "tokens": [
+      "boston",
+      "039",
+      "high",
+      "rise",
+      "multifamily",
+      "developers",
+      "expect",
+      "return",
+      "soon"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/articles/man-group-5-5-yields-risk-cracking-ai-capex-us-consumer",
+    "tokens": [
+      "group",
+      "5.5%",
+      "yields",
+      "risk",
+      "cracking",
+      "capex",
+      "consumer"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.bisnow.com/news/san-francisco/office/hudson-pacific-divests-additional-bay-area-assets",
+    "tokens": [
+      "hudson",
+      "pacific",
+      "sells",
+      "francisco",
+      "office",
+      "buildings"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/insurers-chase-non-qm-ny-life-deal-signals-new-capital",
+    "tokens": [
+      "insurers",
+      "chase",
+      "life",
+      "deal",
+      "signals",
+      "capital"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/nyc-pied-a-terre-tax-ruling-notices-canceled/",
+    "tokens": [
+      "must",
+      "scrap",
+      "000",
+      "pied",
+      "terre",
+      "notices",
+      "court",
+      "ordered"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/gses-rocket-give-lenders-new-reasons-to-adopt-vantagescore",
+    "tokens": [
+      "gses",
+      "rocket",
+      "give",
+      "lenders",
+      "reasons",
+      "adopt",
+      "vantagescore"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/09/consumer-confidence-fell-in-september/",
+    "tokens": [
+      "consumer",
+      "confidence",
+      "fell",
+      "september"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/new-homes-cheaper-resale-market/",
+    "tokens": [
+      "homes",
+      "cost",
+      "less",
+      "resales",
+      "markets"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/builder-buydowns-new-home-sales/",
+    "tokens": [
+      "home",
+      "sales",
+      "month",
+      "high",
+      "stuck",
+      "years"
+    ],
+    "shown_date": "2026-09-30"
+  },
+  {
     "url": "https://www.nationalmortgagenews.com/news/hassett-not-a-lot-of-room-to-go-up-from-here-for-fed-rate",
     "tokens": [
       "hassett",
@@ -4695,275 +4961,5 @@
       "agree"
     ],
     "shown_date": "2026-09-10"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/commodity-inflation-is-hot-but-fed-is-still-focused-on-core-inflation/",
-    "tokens": [
-      "commodity",
-      "inflation",
-      "focused",
-      "core"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.realtor.com/research/august-2026-employment-report/",
-    "tokens": [
-      "august",
-      "jobs",
-      "payrolls",
-      "jump",
-      "162",
-      "000",
-      "hike",
-      "odds",
-      "barely",
-      "move"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/dr-horton-2027-plan-closings/",
-    "tokens": [
-      "horton",
-      "2027",
-      "budget",
-      "tells",
-      "rivals",
-      "pricing",
-      "pressure"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/trump-posts-new-support-for-gses-lower-mortgage-rates",
-    "tokens": [
-      "trump",
-      "posts",
-      "support",
-      "gses",
-      "lower",
-      "mortgage",
-      "rates"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/optimal-blue-mortgage-lock-volume/",
-    "tokens": [
-      "mortgage",
-      "rate",
-      "locks",
-      "fell",
-      "9%",
-      "august",
-      "optimal",
-      "blue"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/nrp-group-breaks-ground-on-336-unit-affordable-housing-project-in-southeast-austin/",
-    "tokens": [
-      "group",
-      "breaks",
-      "ground",
-      "336",
-      "unit",
-      "affordable",
-      "housing",
-      "project",
-      "southeast",
-      "austin"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/texas-property-taxes-wealthy-homeowners/",
-    "tokens": [
-      "texas",
-      "property",
-      "system",
-      "favor",
-      "rich",
-      "twice",
-      "situation",
-      "shifts",
-      "burden"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/evergreen-development-acquires-11-7-acres-in-mesa-arizona-plans-mixed-use-project/",
-    "tokens": [
-      "evergreen",
-      "development",
-      "acquires",
-      "acres",
-      "mesa",
-      "arizona",
-      "mixed",
-      "project"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQU2w3Sll5S21fTUxyZ2g3WTBxSTZJcUdQS3Q2cnBKeXpyTkRUcjRha0RhZ1RjcFZfTEZMak85NzVzY2xGREMxQW1aTmFHSnE0V3pfNDVPM0o5d0pxNzFmbnhkWGI5Q2hkdjRhMXVTUjdqOVRoVHFwQWdtQ2poYVRqanY0TW1qd1JTdGdWNGEtOGlDTnE2akZRbmhtRkxhN1hoR0FoeDAzblhmVF9xeU5kcDlR?oc=5",
-    "tokens": [
-      "inventory",
-      "price",
-      "cuts",
-      "orlando",
-      "best",
-      "homes",
-      "moving",
-      "fast",
-      "housingwire"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/federal-data-center-tax-senator-wyden-energy-costs/",
-    "tokens": [
-      "democratic",
-      "senator",
-      "proposes",
-      "federal",
-      "data",
-      "centers",
-      "offset",
-      "power",
-      "costs"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/colliers-arranges-sale-of-1-5-msf-industrial-portfolio-in-indianapolis/",
-    "tokens": [
-      "colliers",
-      "arranges",
-      "sale",
-      "industrial",
-      "portfolio",
-      "indianapolis"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/healthcare-realty-acquires-greenwich-outpatient-campus/",
-    "tokens": [
-      "healthcare",
-      "realty",
-      "acquires",
-      "greenwich",
-      "outpatient",
-      "campus"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/synergy-completes-repositioning-refinancing-of-downtown-boston-tower/",
-    "tokens": [
-      "synergy",
-      "completes",
-      "repositioning",
-      "refinancing",
-      "downtown",
-      "boston",
-      "tower"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/data-centers-midterm-election-democrats-republicans-trump/",
-    "tokens": [
-      "data",
-      "centers",
-      "emerge",
-      "midterms",
-      "flashpoint",
-      "trump",
-      "declares",
-      "reign"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/industrial/how-prologis-conquered-the-world",
-    "tokens": [
-      "prologis",
-      "conquered",
-      "world"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.bisnow.com/news/netherlands/investment/bouwinvest-expands-international-real-estate-platform-as-repricing-continues",
-    "tokens": [
-      "bouwinvest",
-      "expands",
-      "international",
-      "platform",
-      "repricing",
-      "continues"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/everbank-financial-wafd-enter-into-3-9b-reverse-merger-transaction/",
-    "tokens": [
-      "everbank",
-      "financial",
-      "wafd",
-      "enter",
-      "$3.9b",
-      "reverse",
-      "merger",
-      "transaction"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://rebusinessonline.com/affinius-capital-provides-310m-construction-loan-for-jersey-city-multifamily-project/",
-    "tokens": [
-      "affinius",
-      "capital",
-      "provides",
-      "$310m",
-      "construction",
-      "loan",
-      "jersey",
-      "city",
-      "multifamily",
-      "project"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/multifamily-rents-august-lease-ups-yardi/829832/",
-    "tokens": [
-      "multifamily",
-      "rents",
-      "slightly",
-      "august",
-      "dampened",
-      "high",
-      "lease",
-      "yardi"
-    ],
-    "shown_date": "2026-09-09"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/construction-costs-multifamily-development-equity/829822/",
-    "tokens": [
-      "crow",
-      "holdings",
-      "sees",
-      "green",
-      "shoots",
-      "rental",
-      "market"
-    ],
-    "shown_date": "2026-09-09"
   }
 ]
