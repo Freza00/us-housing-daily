@@ -1,5 +1,280 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/even-a-missed-jobs-report-and-the-fed-talking-dovish-arent-keeping-yields-lower/",
+    "tokens": [
+      "missed",
+      "jobs",
+      "talking",
+      "dovish",
+      "aren",
+      "keeping",
+      "yields",
+      "lower"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/mls-antitrust-policy-changes/",
+    "tokens": [
+      "lawfare",
+      "norm",
+      "leaders",
+      "brace",
+      "legal",
+      "battles"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/homebuyers-gain-upper-hand-inventory-surge-report-september-2026/",
+    "tokens": [
+      "homebuyers",
+      "gain",
+      "upper",
+      "hand",
+      "active",
+      "listings",
+      "surge",
+      "biggest",
+      "increases",
+      "these",
+      "cities"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/pennymac-uwm-loandepot-lag-in-rmbs-issuance-as-rocket-grabs-share",
+    "tokens": [
+      "pennymac",
+      "loandepot",
+      "rmbs",
+      "issuance",
+      "rocket",
+      "grabs",
+      "share"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/new-hud-usda-agreement-will-streamline-environmental-rules",
+    "tokens": [
+      "usda",
+      "agreement",
+      "streamline",
+      "environmental",
+      "rules"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/four-seasons-lake-austin-luxury-residential-development/",
+    "tokens": [
+      "four",
+      "seasons",
+      "targets",
+      "lake",
+      "austin",
+      "first",
+      "residential",
+      "complex",
+      "defying",
+      "market",
+      "softness"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://trerc.tamu.edu/blog/dont-get-in-hot-water-new-disclosure-document-from-trec/",
+    "tokens": [
+      "water",
+      "disclosure",
+      "document",
+      "trec"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.realtor.com/news/celebrity-real-estate/jelly-roll-bunnie-xo-sell-tennessee-home-finalizing-divorce/",
+    "tokens": [
+      "jelly",
+      "roll",
+      "bunnie",
+      "sell",
+      "$7",
+      "million",
+      "tennessee",
+      "home",
+      "months",
+      "handed",
+      "property",
+      "divorce"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/finance/insurance-industry-lending-to-cre-takes-on-more-risks-as-market-reprices",
+    "tokens": [
+      "life",
+      "insurers",
+      "writing",
+      "riskier",
+      "loans",
+      "setting",
+      "alarm",
+      "bells"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/data-center-development/lawmakers-are-canceling-data-center-tax-breaks-developers-are-learning-to-adapt-",
+    "tokens": [
+      "lawmakers",
+      "canceling",
+      "data",
+      "center",
+      "breaks",
+      "developers",
+      "learning",
+      "adapt"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/olnick-organization-refinances-harlem-apartments-for-171m/",
+    "tokens": [
+      "olnick",
+      "organization",
+      "refinances",
+      "harlem",
+      "apartments",
+      "$171m"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/atlanta/data-center/south-fulton-mayor-embraces-data-centers-after-end-of-moratorium",
+    "tokens": [
+      "south",
+      "fulton",
+      "mayor",
+      "embraces",
+      "data",
+      "centers",
+      "moratorium"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/los-angeles/deal-sheet/oc-senior-living-complexes-get-276m-refinance-the-los-angeles-deal-sheet",
+    "tokens": [
+      "walt",
+      "disney",
+      "pays",
+      "$115m",
+      "former",
+      "yamaha",
+      "campus",
+      "angeles",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/capital-markets/stockdale-found-a-gap-in-the-credit-market-then-it-seized-an-opportunity",
+    "tokens": [
+      "stockdale",
+      "found",
+      "debt",
+      "market",
+      "seized",
+      "opportunity"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/lg-taurus-apartment-project-concord/831917/",
+    "tokens": [
+      "invests",
+      "inaugural",
+      "housing",
+      "construction",
+      "project"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-arranges-equity-placement-for-217-unit-multifamily-development-in-bluffdale-utah/",
+    "tokens": [
+      "arranges",
+      "equity",
+      "placement",
+      "217",
+      "unit",
+      "multifamily",
+      "development",
+      "bluffdale",
+      "utah"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5IZnZ1X0I0RFNwNjNsLXhydnRkMHFrYTdTNXo4Rm00WWE1cDJhVlZkei1RZHJmSFVsZE1lT0NXM2tvbkMxTEUyeEhoU21nMDFIcnplQzJpb1hwLXFxajllamNra1lNS0ZJSWRNZnlsSXhNd1lH?oc=5",
+    "tokens": [
+      "judge",
+      "orders",
+      "redo",
+      "pied",
+      "terre",
+      "rollout",
+      "faces",
+      "suits",
+      "inman"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/lender-payrolls-near-or-below-similar-past-rate-cycles",
+    "tokens": [
+      "lender",
+      "payrolls",
+      "near",
+      "below",
+      "similar",
+      "past",
+      "rate",
+      "cycles"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/10/private-residential-construction-spending-posts-broad-based-gains-in-august/",
+    "tokens": [
+      "private",
+      "residential",
+      "construction",
+      "spending",
+      "posts",
+      "broad",
+      "based",
+      "gains",
+      "august"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/twin-cities-multifamily-market-report/",
+    "tokens": [
+      "twin",
+      "cities",
+      "multifamily",
+      "market",
+      "september",
+      "2026"
+    ],
+    "shown_date": "2026-10-05"
+  },
+  {
     "url": "https://rebusinessonline.com/bls-u-s-economy-adds-29000-jobs-in-september-falling-short-of-expectations/",
     "tokens": [
       "economy",
@@ -4706,296 +4981,5 @@
       "projects"
     ],
     "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/modest-cpi-reading-gives-fed-no-clear-direction-on-rates",
-    "tokens": [
-      "modest",
-      "reading",
-      "gives",
-      "clear",
-      "direction",
-      "rates"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/mortgage-rates-top-7-as-oil-hits-100-and-yields-climb/",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "7%",
-      "hits",
-      "$100",
-      "yields",
-      "climb"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE44YmxkZHctUFNlZXZWdUZfamxpR0N4RUtyVGRmNFQtdlFjQlUwUy1JajE2YTRZSTYzXzg0MTZCTVpYWHdIVXlfSDd3U2M5d3htQk1LVTZ5Z0VUSU1yREMzRW96ajltZzBENEN3YmZjOUQtcWhuWlpDZzhrcGo?oc=5",
-    "tokens": [
-      "praises",
-      "fhfa",
-      "move",
-      "vantagescore",
-      "credit",
-      "scoring",
-      "inman"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/metropolis-greenland-chinese-developer-ghost-condo-los-angeles/",
-    "tokens": [
-      "ghost",
-      "condos",
-      "chinese",
-      "state",
-      "backed",
-      "company",
-      "holding",
-      "hundreds",
-      "empty",
-      "units"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/park-street-urban-infill-scale/",
-    "tokens": [
-      "park",
-      "street",
-      "homes",
-      "expands",
-      "urban",
-      "infill",
-      "homebuilding",
-      "model"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5yMW5HY2kzZEJXSEdROVVGUURic0lpNWxBNUlXQWZpXzQzZ1dvZm1UalV5LXR6QkZ5Rm0wZXVKU2Rqa2tsMVlqMGlCQVVhSjFBZzdmVzdtaDhBNXdzbllEc3E2SQ?oc=5",
-    "tokens": [
-      "texas",
-      "agreement",
-      "lawsuit",
-      "ends",
-      "favor",
-      "inman"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9sQWFFVUotbkZpSkg4UkVWbzYxNGFINW1vaW5YQmp5ckdjSHp5YXBsVFRwd2pla1pPbV9DUFdwVVZ4M0NIZUNLb05nQkdsSGFSdkU4TDhpdno3dHhsNnBZZWdBTDFqOTZ5N25xSFJpUDAwUQ?oc=5",
-    "tokens": [
-      "orlando",
-      "housing",
-      "market",
-      "buyer",
-      "opportunity",
-      "florida",
-      "home",
-      "prices",
-      "face",
-      "pressure",
-      "grihik"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNOHE3WlpzZ2QzbTFwMzhwS29HVFhNNmlkU1BVS3VydHFCZHhHdUZVZnNwQ1NFLU43alh5NC1oYi1CRDExeHJ0dzVsTmdKel9Md2hsTzZpelhqWTU4RDVXMm9FLUJ2TG1yMG9sdnlLWVZNcEw5SWZsUVlPeGkyS3hmZWpLSlFPZW9TakHSAYoBQVVfeXFMTmJqeWlLdnBMRENtdGZNU3hvb3h6Ry16blVtMjFyalY2dTRjQ2hnM012NDRoMkpEalYtRHJNcWdFYl9mUFBVR0VJQUU0VlFYQWswQWZOVmVWVUNER1pMWjhBRF83b0xJN2c5clJtYnhsOERHal9seUR6X0dlekg5UmFYSlpMZkFVYkh3?oc=5",
-    "tokens": [
-      "condo",
-      "tower",
-      "harbinger",
-      "things",
-      "come",
-      "downtown",
-      "raleigh",
-      "observer"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYW5IY25zdjhsUHlaNXhfSk1Gd09nSC1ITkh1UXc5ZXNhVXFVdV9BXzZ0Q3lhQURqOElqbEJmVTlrS2tyTWRwYkhyMll4SlFIdzJlZXkwWEF1b0FmZFpWOG1NSW1YcDBQNXZlUEY4ekVtb2VhdkpTLTByU3FuUm9aRTdpTnN5OG9pV1VuYkhFdEF0M1VvUjNvSG9PZ2h1OExkazFrY3F3?oc=5",
-    "tokens": [
-      "architect",
-      "karl",
-      "kamrath",
-      "midcentury",
-      "family",
-      "home",
-      "lands",
-      "among",
-      "houston",
-      "most",
-      "expensive",
-      "sales",
-      "photos",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/office/oxford-properties-u-s-investment-head-on-why-it-s-buying-office-again-and-where",
-    "tokens": [
-      "oxford",
-      "properties",
-      "039",
-      "investment",
-      "head",
-      "buying",
-      "office",
-      "again"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://rebusinessonline.com/fengate-mavrek-break-ground-on-25-story-apartment-tower-in-chicagos-west-loop/",
-    "tokens": [
-      "fengate",
-      "mavrek",
-      "break",
-      "ground",
-      "story",
-      "apartment",
-      "tower",
-      "chicago",
-      "west",
-      "loop"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://rebusinessonline.com/joint-venture-delivers-686400-sf-speculative-industrial-park-in-buford-georgia/",
-    "tokens": [
-      "joint",
-      "venture",
-      "delivers",
-      "686",
-      "400",
-      "speculative",
-      "industrial",
-      "park",
-      "buford",
-      "georgia"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://www.bisnow.com/news/los-angeles/industrial/lineage-suing-solar-contractor-altus-power-boyle-heights-warehouse-fire",
-    "tokens": [
-      "lineage",
-      "suing",
-      "solar",
-      "company",
-      "altus",
-      "power",
-      "boyle",
-      "heights",
-      "warehouse",
-      "fire"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://rebusinessonline.com/gantry-arranges-48-3m-in-financing-for-multifamily-property-in-maple-grove-minnesota/",
-    "tokens": [
-      "gantry",
-      "arranges",
-      "$48.3m",
-      "financing",
-      "multifamily",
-      "property",
-      "maple",
-      "grove",
-      "minnesota"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/data-center-capital-markets/surging-ipo-pipeline-data-centers-return-wall-street",
-    "tokens": [
-      "data",
-      "center",
-      "wave",
-      "reveals",
-      "variety",
-      "strategies",
-      "booming",
-      "sector"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/capital-markets/canadian-cre-investors-shrug-off-trade-war-spend-9b-on-u-s-assets",
-    "tokens": [
-      "canadian",
-      "investors",
-      "shrug",
-      "trade",
-      "spend",
-      "$9b",
-      "assets"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbHdNVl9vZ1BNWENWaE4zbUVFejdQRWFnWk5NdzFjM3Npd3V4ZTh5MnQ1RXpuWUV0TVdSblQtUjltU0VlQjRsUmo4T2txbFNiZlhaVS1HRWFuQzFoa3Z3bjJuMFlrWHRCQVNGWjNsYUJycl9QRFVNVmVYM3NhM2k2SFRDaw?oc=5",
-    "tokens": [
-      "waterton",
-      "closes",
-      "482",
-      "unit",
-      "inland",
-      "empire",
-      "deal",
-      "multifamily",
-      "housing"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/zillow-shareholder-lawsuit-redfin-deal/",
-    "tokens": [
-      "zillow",
-      "faces",
-      "shareholder",
-      "lawsuit",
-      "redfin",
-      "deal"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZktkVVgtR0pKS3AtLUgxallCR015QmtpemhRbXZXTjN4TUZTUW1qQ2dwVTV1WjV3SjQyRFhzaWh0VHF6VlVYODU0ZjVpWlkxU3Y0WlVXYlllbnR3UmJFRHgxSlpfODR3clNwcUZtaGxUYnU3ZXo3UmxpLWhldUlCRXdraUktcWJYQ01aQw?oc=5",
-    "tokens": [
-      "home",
-      "sales",
-      "shaped",
-      "housing",
-      "market",
-      "split",
-      "august",
-      "inman"
-    ],
-    "shown_date": "2026-09-14"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNalRWeUtnUGl1dWFPV3NJSTZhTlRlaEJCNzdsYVU5NF9vclN5RG9QQU5uRVhpazBTTDFkZXlKeDdtRkFrdXFpTkxzcG16WGdPcnlOYnJQaFZEdzVSM3J1UWoxd1AxMFhldFZoTS1MR0RUZ280V2ZObkJOZTNTV1piNzR4Q0NnMGo1T080RnZORQ?oc=5",
-    "tokens": [
-      "zillow",
-      "homebuyers",
-      "drop",
-      "anchor",
-      "mortgage",
-      "rates",
-      "rise",
-      "inman"
-    ],
-    "shown_date": "2026-09-14"
   }
 ]
