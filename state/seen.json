@@ -1,5 +1,276 @@
 [
   {
+    "url": "https://www.redfin.com/news/weekly-economic-take-october-5/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "tick",
+      "odds",
+      "rate",
+      "hike",
+      "decline"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.realtor.com/research/generational-housing-succession-2026/",
+    "tokens": [
+      "2026",
+      "realtor",
+      "generational",
+      "housing",
+      "succession"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/affordable-housing-fast-track-plan-targets-low-production-nyc-neighborhoo/832134/",
+    "tokens": [
+      "affordable",
+      "housing",
+      "fast",
+      "track",
+      "targets",
+      "production",
+      "neighborhoods"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/lawmakers-float-a-housing-2-0-push-to-build-faster-and-cheaper/",
+    "tokens": [
+      "lawmakers",
+      "float",
+      "housing",
+      "push",
+      "build",
+      "faster",
+      "cheaper"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/wells-fargo-servicer-ratings-downgraded-on-portfolio-shift",
+    "tokens": [
+      "wells",
+      "fargo",
+      "servicer",
+      "ratings",
+      "downgraded",
+      "portfolio",
+      "shift"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://rebusinessonline.com/mmg-real-estate-advisors-arranges-sale-of-192-unit-apartment-complex-in-bryan-texas/",
+    "tokens": [
+      "advisors",
+      "arranges",
+      "sale",
+      "192",
+      "unit",
+      "apartment",
+      "complex",
+      "bryan",
+      "texas"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZmtGNEF6T0JqQ1BISy02cGVZaktKQXRzS1RsUGJXYWtaZFkwYmd0VENRY3M2elNlUnNPcTR0ZlVsT2JJalRJS05mOWNuOE1HV2NpZ1RIMUlBQTFZS0owME50TVdiNENLQ0lVU1lRWHhVa2lMNGxka2ZvejRab0xCb2g5SjZPUXktOUliTjhIOHB3YXIyZWNrX3hocFlYejVpSkFBeFphUFhEZ1otTDRlRUdhTDNDNFVPV3pnMS1ONXlia3J1ZFA1bTZGZw?oc=5",
+    "tokens": [
+      "vegas",
+      "area",
+      "home",
+      "listings",
+      "000",
+      "first",
+      "time",
+      "decade",
+      "review",
+      "journal"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://rebusinessonline.com/walker-dunlop-provides-75m-refinancing-of-23-story-multifamily-tower-in-metro-tampa/",
+    "tokens": [
+      "walker",
+      "038",
+      "dunlop",
+      "provides",
+      "$75m",
+      "refinancing",
+      "story",
+      "multifamily",
+      "tower",
+      "metro",
+      "tampa"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://rebusinessonline.com/ptm-partners-obtains-125m-construction-loan-for-phase-ii-of-high-rise-project-in-st-petersburg-florida/",
+    "tokens": [
+      "partners",
+      "obtains",
+      "$125m",
+      "construction",
+      "loan",
+      "phase",
+      "high",
+      "rise",
+      "project",
+      "petersburg",
+      "florida"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.yardimatrix.com/blog/u-s-industrial-market-outlook-september-2026/",
+    "tokens": [
+      "industrial",
+      "market",
+      "outlook",
+      "september",
+      "2026"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.bisnow.com/news/los-angeles/industrial/with-a-lease-to-la28-and-a-sale-to-amazon-former-forever-21-hq-is-no-longer-vacant",
+    "tokens": [
+      "amazon",
+      "olympics",
+      "organizer",
+      "take",
+      "acre",
+      "site",
+      "formerly",
+      "home",
+      "forever"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.bisnow.com/news/austin-san-antonio/data-center/taylor-deciding-annexation-zoning-data-center-campus-powerhouse",
+    "tokens": [
+      "austin",
+      "suburb",
+      "decide",
+      "annexation",
+      "zoning",
+      "data",
+      "center",
+      "campus"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.bisnow.com/news/netherlands/industrial/delin-secures-227m-euro-refinance-logistic-fund-the-netherlands",
+    "tokens": [
+      "delin",
+      "secures",
+      "227",
+      "loan",
+      "refinance",
+      "dutch",
+      "logistics",
+      "fund"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/10/05/interest-rates-are-triggering-real-estate-repricing-marcus-millichap-ceo-hessam-nadji.html",
+    "tokens": [
+      "interest",
+      "rates",
+      "triggering",
+      "repricing",
+      "marcus",
+      "millichap",
+      "hessam",
+      "nadji"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/capital-markets/real-estate-fundraising-shrinks-targets-get-smaller",
+    "tokens": [
+      "fundraising",
+      "shrinks",
+      "targets",
+      "smaller"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9BSHZacTdJU1EybVZUVVg1QjlZUjFKVEJuOV9EQnFxWG1Wb0tiQ0hGWERpbXhhdGtIb0pkQkh3ejQydzlzWE9MTHgzM2YwRTlZcFpGTURNdXRFeWdJdFpWWGVqTUdDUlo3VUU0Q2hvWHdwYWM?oc=5",
+    "tokens": [
+      "investors",
+      "return",
+      "market",
+      "homebuyers",
+      "back",
+      "inman"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/valon-raises-150-million-series-d/",
+    "tokens": [
+      "valon",
+      "raises",
+      "$150m",
+      "series",
+      "$2.3b",
+      "valuation"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://rebusinessonline.com/walker-dunlop-arranges-170-5m-loan-for-refinancing-of-harlem-apartment-community/",
+    "tokens": [
+      "walker",
+      "038",
+      "dunlop",
+      "arranges",
+      "$170.5m",
+      "loan",
+      "refinancing",
+      "harlem",
+      "apartment",
+      "community"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.bisnow.com/news/charlotte/hotel/high-costs-pose-barriers-for-ground-up-hotel-development-in-charlotte",
+    "tokens": [
+      "high",
+      "costs",
+      "pose",
+      "barriers",
+      "ground",
+      "hotel",
+      "development",
+      "charlotte"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/10/05/we-will-probably-have-a-softer-housing-market-by-year-end-says-exp-ceo.html",
+    "tokens": [
+      "probably",
+      "softer",
+      "housing",
+      "market",
+      "year"
+    ],
+    "shown_date": "2026-10-06"
+  },
+  {
     "url": "https://www.housingwire.com/articles/even-a-missed-jobs-report-and-the-fed-talking-dovish-arent-keeping-yields-lower/",
     "tokens": [
       "missed",
@@ -4700,286 +4971,5 @@
       "building"
     ],
     "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/us-10-year-breaches-5-as-inflation-supply-worries-mount",
-    "tokens": [
-      "year",
-      "breaches",
-      "5%",
-      "inflation",
-      "supply",
-      "worries",
-      "mount"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.redfin.com/news/inflation-uncertain-fed-mortgage-rates/",
-    "tokens": [
-      "latest",
-      "inflation",
-      "points",
-      "uncertain",
-      "path",
-      "ahead",
-      "mortgage",
-      "rates"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/09/14/fed-rate-hike-anticipated-what-it-means-for-your-money.html",
-    "tokens": [
-      "likely",
-      "raise",
-      "interest",
-      "rates",
-      "inflation",
-      "persists",
-      "means",
-      "consumers"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/09/14/30-year-fixed-mortgage-rate-hits-highest-level-since-january-2025.html",
-    "tokens": [
-      "year",
-      "fixed",
-      "mortgage",
-      "rate",
-      "hits",
-      "highest",
-      "level",
-      "since",
-      "january",
-      "2025"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/09/value-of-household-real-estate-assets-approaches-50-trillion/",
-    "tokens": [
-      "value",
-      "household",
-      "assets",
-      "approaches",
-      "$50",
-      "trillion"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.bisnow.com/news/dallas-ft-worth/deal-sheet/machine-investment-group-buys-490-unit-multifamily-property-in-north-dallas-the-dfw-deal-sheet",
-    "tokens": [
-      "machine",
-      "investment",
-      "group",
-      "buys",
-      "490",
-      "unit",
-      "multifamily",
-      "property",
-      "north",
-      "dallas",
-      "deal",
-      "sheet"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/mesa-arizona-hoa-foreclosure-unpaid-fees/",
-    "tokens": [
-      "arizona",
-      "forecloses",
-      "ailing",
-      "couple",
-      "home",
-      "$977",
-      "unpaid",
-      "fees"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOC1mMjFnX2dCaV9HTHJONzI3SHZRV280OXd0UmRieXVIWUYteTVibUhRR3hHWnZQWV9WZkktZTE4ZFc2WWpKWVVRTWNqYjR4UV81TVhPVW1lODJCRW9JaEh6SEpmenljOGg3UHYzVFRXeVNEaVRQQkk3dG5taThDNmJyWGw0Ulh4aURzNndyT0hBdEl2SnhUZFJn?oc=5",
-    "tokens": [
-      "austin",
-      "hottest",
-      "housing",
-      "markets",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOaFlYV3FkYUxUV182ODlSSGctNHFiSDRZbUcxRXlLb0dlLW1vUER4NjJ0ZGhGUDVkSk1QbF9yWUNvTzRhRmp5TGNSWUxHZVdDTEhGdmdqbEpjekIwUkZRWFdEYkdIRVc1Z041WXdhQ1BrdFc5MmRCUlhYZjJoeGJvNlh0UjdyOE9JOWJGQVJyeEtkOGxxUDNvbnVwRmQ3S3ZyTHc?oc=5",
-    "tokens": [
-      "austin",
-      "rise",
-      "fall",
-      "housing",
-      "darling",
-      "status",
-      "comes",
-      "next",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.bisnow.com/news/los-angeles/retail/stockdale-capital-partners-hamilton-lane-acquire-chino-hills-shopping-center",
-    "tokens": [
-      "stockdale",
-      "capital",
-      "partners",
-      "hamilton",
-      "lane",
-      "acquire",
-      "chino",
-      "hills",
-      "shopping",
-      "center",
-      "$157m"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.bisnow.com/news/los-angeles/data-center/southern-california-emerging-data-centers-fallback-market",
-    "tokens": [
-      "california",
-      "emerging",
-      "data",
-      "center",
-      "fallback",
-      "market",
-      "nationwide",
-      "opposition"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/ballys-secures-560m-financing-for-bronx-casino-project/",
-    "tokens": [
-      "bally",
-      "secures",
-      "$560m",
-      "financing",
-      "bronx",
-      "casino",
-      "project"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/wall-streets-data-center-boom-is-reshaping-the-real-estate-bond-market",
-    "tokens": [
-      "wall",
-      "street",
-      "data",
-      "center",
-      "boom",
-      "reshaping",
-      "bond",
-      "market"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/commercial-real-estate/trump-s-dei-crackdown-creates-new-risks-for-landlords-that-lease-to-the-government",
-    "tokens": [
-      "trump",
-      "039",
-      "crackdown",
-      "creating",
-      "risks",
-      "landlords",
-      "lease",
-      "government"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/maa-jbg-dc-realpage-lawsuit-settlement/830341/",
-    "tokens": [
-      "$9.3m",
-      "total",
-      "settle",
-      "realpage",
-      "case"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.bisnow.com/news/philadelphia/multifamily/class-c-philly-apartment-sales-surge-owners-squeezed",
-    "tokens": [
-      "sales",
-      "lower",
-      "apartments",
-      "surge",
-      "philly",
-      "landlords",
-      "face",
-      "financial",
-      "issues"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://rebusinessonline.com/taylor-morrison-sells-424-unit-west-end-district-multifamily-property-in-beaverton-oregon/",
-    "tokens": [
-      "taylor",
-      "morrison",
-      "sells",
-      "424",
-      "unit",
-      "west",
-      "district",
-      "multifamily",
-      "property",
-      "beaverton",
-      "oregon"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNWVR0OWxnTnJTc3VTb3BKWWVfdjVZakRNdFJyVjhHdDR1WUtYRGRtZ2ZMSnVrQTI4UGFfTkstZV9zdmgwMUh3SWk2MXZHRTRXOUxjX2QxMWt3bjBGOFFwem5ScjBVNXNjcUxDU3d0NHlFX0FoZDdVeGdjV1RQU2pfSnZaT3RrVW9MYmxvVFE3VXNLNklrQkt3?oc=5",
-    "tokens": [
-      "airbnb",
-      "unveils",
-      "$250m",
-      "accelerator",
-      "housing",
-      "supply",
-      "inman"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/non-qm-issuance-estimates-boosted-due-to-investor-demand",
-    "tokens": [
-      "issuance",
-      "estimates",
-      "boosted",
-      "investor",
-      "demand"
-    ],
-    "shown_date": "2026-09-15"
-  },
-  {
-    "url": "https://www.bisnow.com/news/boston/multifamily/wu-proposes-100m-tax-break-to-jumpstart-stalled-development-projects",
-    "tokens": [
-      "proposes",
-      "breaks",
-      "jump",
-      "start",
-      "stalled",
-      "housing",
-      "projects"
-    ],
-    "shown_date": "2026-09-15"
   }
 ]
