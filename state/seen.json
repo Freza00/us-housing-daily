@@ -1,5 +1,284 @@
 [
   {
+    "url": "https://www.realtor.com/news/real-estate-news/fed-meeting-minutes-interest-rate-september-2026/",
+    "tokens": [
+      "policymakers",
+      "think",
+      "another",
+      "interest",
+      "rate",
+      "hike",
+      "likely",
+      "year",
+      "minutes"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/13-million-high-risk-homes-fema-flood-zones-el-nino/",
+    "tokens": [
+      "million",
+      "high",
+      "risk",
+      "homes",
+      "outside",
+      "fema",
+      "flood",
+      "zones",
+      "looms"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/hud-investigation-wells-fargo-race/",
+    "tokens": [
+      "opens",
+      "probe",
+      "wells",
+      "fargo",
+      "race",
+      "based",
+      "mortgage",
+      "programs"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.realtor.com/research/small-mortgages-2026/",
+    "tokens": [
+      "small",
+      "mortgages",
+      "disappearing",
+      "congress",
+      "trying",
+      "save"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.cnbc.com/video/2026/10/07/mortgage-rates-on-the-move.html",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "move"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/hines-acquires-99-west-paces-apartments-in-atlanta-for-240m/",
+    "tokens": [
+      "hines",
+      "acquires",
+      "west",
+      "paces",
+      "apartments",
+      "atlanta",
+      "$240m"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/northmarq-provides-68-8m-agency-loan-for-refinancing-of-texas-multifamily-portfolio/",
+    "tokens": [
+      "northmarq",
+      "provides",
+      "$68.8m",
+      "agency",
+      "loan",
+      "refinancing",
+      "texas",
+      "multifamily",
+      "portfolio"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/nitya-capital-refinances-432-unit-apartment-community-in-south-dallas/",
+    "tokens": [
+      "nitya",
+      "capital",
+      "refinances",
+      "432",
+      "unit",
+      "apartment",
+      "community",
+      "south",
+      "dallas"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/2025-multifamily-cmbs-loan-distress-special-servicing/832292/",
+    "tokens": [
+      "recent",
+      "multifamily",
+      "loans",
+      "missouri",
+      "tennessee",
+      "head",
+      "servicing"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQRzJfVXd5Y28xUFR0MmJ0WTNxbW5Pdm84aFR0UkdNRlRabDZCZ3pYU0J2RFhEcFNMTDJ1M2RXVUFXenpJRTBHb2NDTGlrVFhZX0R6a3pmaE5laEs3VEljUktOc2E3S0VkdEJpQUxjRGxMZFdHb0xHUnVCaUJTdHBpazlLR054R0x1VV96NTB3Xzl3ZVNVdWNGODVVZ1JETHZSOUNmNXFBc0xhZFZSMnljMFdWQ3JuVnd4TTlYSmdwME9FM0k5Q1h3bldEMkFybUlWTDg5UWpXQms?oc=5",
+    "tokens": [
+      "invitation",
+      "homes",
+      "announces",
+      "dates",
+      "third",
+      "quarter",
+      "2026",
+      "earnings",
+      "release",
+      "webcast",
+      "business",
+      "wire"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/phoenix/industrial/logistics-property-co-buys-land-sonoran-logistics-park-southwest-valley",
+    "tokens": [
+      "logistics",
+      "company",
+      "buys",
+      "land",
+      "phoenix",
+      "industrial",
+      "park"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://rebusinessonline.com/agora-realty-breaks-ground-on-375m-final-phase-of-mixed-use-entertainment-project-in-north-las-vegas/",
+    "tokens": [
+      "agora",
+      "realty",
+      "breaks",
+      "ground",
+      "$375m",
+      "final",
+      "phase",
+      "mixed",
+      "entertainment",
+      "project",
+      "north",
+      "vegas"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/philadelphia/deal-sheet/neshaminy-mall-redevelopment-plans",
+    "tokens": [
+      "neshaminy",
+      "mall",
+      "redevelopment",
+      "revealed",
+      "philadelphia",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/presidio-bay-bridges-capital-plan-revamp-of-historic-san-francisco-fed-building/",
+    "tokens": [
+      "presidio",
+      "bridges",
+      "capital",
+      "reposition",
+      "historic",
+      "francisco",
+      "building"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/washington-dc/data-center-community-relations/loudoun-county-lawmakers-back-off-stripping-15-data-center-alley-projects-approval",
+    "tokens": [
+      "lawmakers",
+      "punt",
+      "stripping",
+      "approvals",
+      "projects",
+      "data",
+      "center",
+      "alley"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/dallas-ft-worth/mixed-use/hines-spends-170-5m-on-mixed-use-portfolio-in-dallas-bishop-arts-district",
+    "tokens": [
+      "hines",
+      "spends",
+      "$170.5m",
+      "mixed",
+      "portfolio",
+      "dallas",
+      "039",
+      "bishop",
+      "arts",
+      "district"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/commercial-real-estate/delaware-statutory-trust-equity-fundraising-jumps-27-percent",
+    "tokens": [
+      "delaware",
+      "statutory",
+      "trust",
+      "fundraising",
+      "jumps",
+      "27%",
+      "2025"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/baltimore-vacant-housing-fund/",
+    "tokens": [
+      "$100",
+      "million",
+      "baltimore",
+      "fund",
+      "targets",
+      "vacant",
+      "housing",
+      "pipeline"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/california-housing-laws-newsom/832393/",
+    "tokens": [
+      "diverse",
+      "housing",
+      "types",
+      "result",
+      "laws",
+      "california"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/10/07/mortgage-rates-sit-at-nearly-3-year-high-and-demand-continues-to-shrink.html",
+    "tokens": [
+      "refinance",
+      "demand",
+      "half",
+      "year",
+      "mortgage",
+      "rates",
+      "rise",
+      "again"
+    ],
+    "shown_date": "2026-10-08"
+  },
+  {
     "url": "https://www.housingwire.com/articles/mortgage-rates-lenders-pressure/",
     "tokens": [
       "mortgage",
