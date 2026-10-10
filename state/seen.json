@@ -1,5 +1,293 @@
 [
   {
+    "url": "https://www.multifamilydive.com/news/hud-manufactured-housing-plan-aims-to-spur-production/832633/",
+    "tokens": [
+      "manufactured",
+      "housing",
+      "aims",
+      "spur",
+      "production"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-october-8-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "jump",
+      "seventh",
+      "straight",
+      "week",
+      "7.40%",
+      "highest",
+      "rate",
+      "months"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+    "tokens": [
+      "federal",
+      "reserve",
+      "board",
+      "releases",
+      "results",
+      "2025",
+      "survey",
+      "consumer",
+      "finances",
+      "provides",
+      "public",
+      "policymakers",
+      "detailed",
+      "insights",
+      "economic",
+      "condition",
+      "american",
+      "families"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/nyc-fast-track-rezonings/",
+    "tokens": [
+      "policy",
+      "rebalances",
+      "zoning",
+      "powers",
+      "city",
+      "districts"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/ashton-woods-q1-2027-earnings/",
+    "tokens": [
+      "ashton",
+      "woods",
+      "leans",
+      "discipline",
+      "orders",
+      "margins",
+      "slide"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNX0p6UVBzeDN1Wm14VGVwcExyTlhSM0dWMmhKaXQzYVBfT3paNWRpYktTVWlUU3hCdmRTbjZ5T3ZNaGJQZFBBM3h4VlRudmJWZlpzU0tmdlpObEFMa09mZFo3Qll3NUVLTVNtYVVNRzNORGJFVTlLX3VxcUpQVlMzOGYwRlo2SXRKekJ4ZFVjTGJwS0VrbXdjNFhlUW5JSDE2cmlHWWdhemJmcTg?oc=5",
+    "tokens": [
+      "houston",
+      "mortgage",
+      "delinquencies",
+      "rise",
+      "inflation",
+      "depletes",
+      "savings",
+      "borrowers",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPY0gwYzBJQlVCRlludFVHZVNOOG1fRXhlYWNxUDdnWjJMb0hxbGNYQ0hERmlybUFXRzRXYVhCY1ctUHdWa20xQ2xNMFdOZTBsRnVyZzRnbkdjczl5cTZsZUlVSlplMFVib05VUkRtaGVBV3pram5sSmtKNEkwLVhkaEdRVkdCZnNGY1FxNHlkSkNxVllzSlI5QThpcjB0eW1OTHBoajAxbWdTbjBpaUZtVV94ZG9uSEJjdnQ0a2ZHSElGNnd2R0xDQWZIOVVJdEdZSlh5UXpmU2Q3ZXM?oc=5",
+    "tokens": [
+      "september",
+      "rising",
+      "mortgage",
+      "rates",
+      "further",
+      "chilled",
+      "already",
+      "frozen",
+      "phoenix",
+      "area",
+      "housing",
+      "market",
+      "data",
+      "arizona"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/merchants-capital-secures-98m-for-va-affordable-development/",
+    "tokens": [
+      "merchants",
+      "capital",
+      "secures",
+      "$98m",
+      "affordable",
+      "development"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWG9NVmdGN2d3Q3BXc2RnMmxRTlhpMnJJWmx2Z0JRc2RXaVk0dEpjdk1tRGJhWG41Y2VpR180QWs5cTU4NUEtSTZlbmNKRGlWcDkzZC16T2l5blhnamFZeUVpNmZDektlemFJWDR4NmVGTkF5TUtxdnpKdV9VZkxXejdaQjB4UHo0cERhcDd5blFrbVEtc290ZE5tM3hEWnZhR1FNM21QQk9yUWhBaFlUYzF6d2U?oc=5",
+    "tokens": [
+      "greater",
+      "nashville",
+      "home",
+      "sales",
+      "split",
+      "sharply",
+      "price",
+      "range",
+      "tennessean"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://natlawreview.com/article/pe-ownership-single-family-rentals-legislative-landscape-part-1",
+    "tokens": [
+      "ownership",
+      "single",
+      "family",
+      "rentals",
+      "legislative",
+      "landscape",
+      "part",
+      "8211",
+      "national",
+      "review"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/rad-program-road-act/",
+    "tokens": [
+      "road",
+      "housing",
+      "latest",
+      "milestone",
+      "history",
+      "american",
+      "public",
+      "8211",
+      "housingwire"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/10/06/housing-affordability-election.html",
+    "tokens": [
+      "young",
+      "voters",
+      "struggle",
+      "afford",
+      "housing",
+      "expect",
+      "help",
+      "political",
+      "candidates",
+      "8211",
+      "cnbc"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.bisnow.com/news/houston/office/3-houston-office-properties-vacant-to-nearly-full-change-hands",
+    "tokens": [
+      "houston",
+      "office",
+      "properties",
+      "vacant",
+      "nearly",
+      "full",
+      "change",
+      "hands"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/10/09/ai-data-centers-investing.html",
+    "tokens": [
+      "wall",
+      "street",
+      "pitching",
+      "data",
+      "centers",
+      "major",
+      "risks",
+      "piling"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.bisnow.com/news/boston/office/law-firms-drive-boston-office-rents-to-record-highs",
+    "tokens": [
+      "firms",
+      "drive",
+      "boston",
+      "office",
+      "rents",
+      "record",
+      "highs"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/seward-kissel-extends-170k-sf-lease-with-rudin-for-11-years/",
+    "tokens": [
+      "seward",
+      "038",
+      "kissel",
+      "extends",
+      "170",
+      "lease",
+      "rudin",
+      "years"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/dermody-announces-two-new-leases-at-the-logistics-campus-in-glenview/",
+    "tokens": [
+      "dermody",
+      "announces",
+      "leases",
+      "logistics",
+      "campus",
+      "glenview"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.bisnow.com/news/london/capital-markets/how-us-giant-realty-income-bought-uk-ireland-europe-retail-parks",
+    "tokens": [
+      "giant",
+      "realty",
+      "income",
+      "bought",
+      "europe"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/omp-acquires-fully-leased-la-mirada-industrial-from-brookfield/",
+    "tokens": [
+      "acquires",
+      "fully",
+      "leased",
+      "mirada",
+      "industrial",
+      "brookfield"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
+    "url": "https://www.realtor.com/research/september-2026-hottest-housing-markets/",
+    "tokens": [
+      "september",
+      "2026",
+      "hottest",
+      "housing",
+      "markets"
+    ],
+    "shown_date": "2026-10-10"
+  },
+  {
     "url": "https://www.realtor.com/news/trends/mortgage-rates-fed-hikes-today-october-8-2026/",
     "tokens": [
       "mortgage",
@@ -5512,289 +5800,5 @@
       "nahb"
     ],
     "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNb2RYdWxBdVlzeDFTTGFkR2JLYnEwbElnaXhMMGlWNjFMaVlnRFA5WldqdEhYVDlBX0dZbTZ2WUdjLWZRcElHS09pYVNkaHVjWVlPM2ZxblhjQUpOYjVQazFUeGxjT0VhZ0oxS2JZQ1piZHZmLWFiUnM4SkFqSmRxWGtsUEpDaDNtMVZr?oc=5",
-    "tokens": [
-      "7%",
-      "normal",
-      "federal",
-      "reserve",
-      "announces",
-      "quarter",
-      "point",
-      "rate",
-      "hike",
-      "inman"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.realtor.com/research/changes-in-value-of-household-real-estate-q2-2026/",
-    "tokens": [
-      "household",
-      "value",
-      "equity",
-      "climbed",
-      "record",
-      "high",
-      "2026"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/lennar-q3-2026-earnings/",
-    "tokens": [
-      "lennar",
-      "defends",
-      "flow",
-      "land",
-      "banking",
-      "strategy",
-      "risks",
-      "build"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/09/single-family-starts-rebound-but-market-challenges-persist/",
-    "tokens": [
-      "single",
-      "family",
-      "starts",
-      "rebound",
-      "market",
-      "challenges",
-      "persist"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.redfin.com/news/home-seller-concessions-august-2026/",
-    "tokens": [
-      "nearly",
-      "half",
-      "homebuyers",
-      "concessions",
-      "sellers",
-      "most",
-      "markets",
-      "buyers",
-      "favor"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://trerc.tamu.edu/blog/not-all-decades-are-created-equal-rethinking-the-texas-land-market-time-series/",
-    "tokens": [
-      "decades",
-      "created",
-      "equal",
-      "rethinking",
-      "texas",
-      "land",
-      "market",
-      "time",
-      "series"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://rebusinessonline.com/capstone-breaks-ground-on-256-unit-multifamily-development-in-centerton-arkansas/",
-    "tokens": [
-      "capstone",
-      "breaks",
-      "ground",
-      "256",
-      "unit",
-      "multifamily",
-      "development",
-      "centerton",
-      "arkansas"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZC1JZ1R0ZTF1cjBkRi1WRzd5ZG1BdE5kZGMybmc2VXVVTDVEakNvS2JWQ2FXRVFiMm5WWHFIV0ZvRElUNHFzcUZBcUc0Ri1hNG1iQ25oWUxqUXRFQ2JtWlhRWDVhUTBSSVZ5eWZ4N2JjaFhuUkVwUW50cmtLUThxcGYyWER2Q2JPcV83amdMeEJHRndKOGtGalRfaElqcXFFVEJ1VEJ5S1k?oc=5",
-    "tokens": [
-      "first",
-      "rate",
-      "hike",
-      "since",
-      "2023",
-      "means",
-      "nashville",
-      "housing",
-      "market",
-      "wztv"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5vVXZxYVoyNWhiUzRQcTJvR3FFMkF5Z2Q0VWNMeWtxRmh3TkJaSVdFZGdQTmhickhCaXFwMll5WU1iUm94R281VTU5TXhmcHh0S19nbGhOMW5rM05wWW1ReEl30gFnQVVfeXFMUDBsSlVveTV2ZXdYYkFGWjg5bHN4RHkxcHM4MFdBZTFDZVk0c19MSU9uNTd3ckxZMTQ0TE85bjY0UFM0WGdLTFdoS0pkV0JFYS1rUFlZdUtYSnVud29jXzlNcTg3TWg4OA?oc=5",
-    "tokens": [
-      "shrinkflation",
-      "hits",
-      "housing",
-      "market"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/single-family-rents-july-2026-cotality/",
-    "tokens": [
-      "single",
-      "family",
-      "rents",
-      "rise",
-      "1.8%",
-      "year",
-      "july",
-      "8211",
-      "housingwire"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.reuters.com/business/high-mortgage-rates-keep-us-housing-market-revival-elusive-2026-09-15/",
-    "tokens": [
-      "high",
-      "mortgage",
-      "rates",
-      "keep",
-      "housing",
-      "market",
-      "revival",
-      "elusive",
-      "8211",
-      "reuters"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.forbes.com/councils/forbesbusinesscouncil/2026/09/18/renting-vs-owning-why-housing-leaders-should-focus-on-location-instead/",
-    "tokens": [
-      "renting",
-      "owning",
-      "housing",
-      "leaders",
-      "focus",
-      "location",
-      "instead",
-      "8211",
-      "forbes"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.bisnow.com/news/atlanta/office/state-farm-southeast-regional-hub-on-the-market-central-perimeter",
-    "tokens": [
-      "state",
-      "farm",
-      "039",
-      "suburban",
-      "atlanta",
-      "sale"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/data-center-power/data-center-energy-bill-stalls-ai-building-boom-becomes-midterms-flashpoint",
-    "tokens": [
-      "data",
-      "center",
-      "energy",
-      "bill",
-      "stalls",
-      "congress",
-      "opponents",
-      "lacked",
-      "039",
-      "teeth"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.bisnow.com/news/south-florida/office/napster-infinite-fort-lauderdale-studio",
-    "tokens": [
-      "digital",
-      "media",
-      "firm",
-      "pivots",
-      "abandons",
-      "$160m",
-      "fort",
-      "lauderdale",
-      "studio",
-      "project"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.bisnow.com/news/san-francisco/mixed-use/build-inc-served-notice-default-india-basin-project",
-    "tokens": [
-      "build",
-      "served",
-      "notice",
-      "default",
-      "india",
-      "basin",
-      "project"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/roche-genentech-cut-ribbon-on-allston-innovation-center/",
-    "tokens": [
-      "roche",
-      "genentech",
-      "ribbon",
-      "allston",
-      "innovation",
-      "center"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/zillow-mred-arbitration-injunction/",
-    "tokens": [
-      "zillow",
-      "mred",
-      "antitrust",
-      "battle",
-      "shifts",
-      "courtroom",
-      "arbitration"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/sb79-upzoning-san-diego/",
-    "tokens": [
-      "sidewalk",
-      "gaps",
-      "train",
-      "counts",
-      "ignite",
-      "california",
-      "zoning",
-      "lawsuits"
-    ],
-    "shown_date": "2026-09-19"
-  },
-  {
-    "url": "https://rebusinessonline.com/avison-young-arranges-115m-in-agency-financing-for-queens-apartment-building/",
-    "tokens": [
-      "avison",
-      "young",
-      "arranges",
-      "$115m",
-      "agency",
-      "financing",
-      "queens",
-      "apartment",
-      "building"
-    ],
-    "shown_date": "2026-09-19"
   }
 ]
