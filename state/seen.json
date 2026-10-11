@@ -1,5 +1,272 @@
 [
   {
+    "url": "https://www.nationalmortgagenews.com/news/feds-waller-says-more-interest-rate-hikes-likely-on-the-way",
+    "tokens": [
+      "waller",
+      "interest",
+      "rate",
+      "hikes",
+      "likely"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/10/09/fed-lisa-cook-trump.html",
+    "tokens": [
+      "trump",
+      "appoints",
+      "committee",
+      "investigate",
+      "statements",
+      "lisa",
+      "cook"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/global-bond-markets-crisis-treasury-yields-mortgage-rates/",
+    "tokens": [
+      "global",
+      "bond",
+      "markets",
+      "meltdown",
+      "here",
+      "homebuyers",
+      "attention"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/have-mortgage-rates-peaked-or-will-we-see-even-more-chaos/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "peaked",
+      "chaos"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.nbcnews.com/business/real-estate/high-mortgage-rates-home-sellers-struggle-rcna600259",
+    "tokens": [
+      "high",
+      "mortgage",
+      "rates",
+      "strand",
+      "home",
+      "sellers",
+      "buyer",
+      "demand",
+      "plummets",
+      "8211"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/capital-markets/hurricane-isaias-projected-impact-florida-alabama-mississippi-multifamily-properties",
+    "tokens": [
+      "hurricane",
+      "isaias",
+      "puts",
+      "$40b",
+      "multifamily",
+      "property",
+      "path"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/private-credit-issues-could-lead-to-more-apartment-distress-gaias-fishman/832422/",
+    "tokens": [
+      "private",
+      "credit",
+      "issues",
+      "lead",
+      "apartment",
+      "distress",
+      "gaia",
+      "fishman"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/middle-income-renters-falling-behind-rent/",
+    "tokens": [
+      "rents",
+      "falling",
+      "middle",
+      "income",
+      "renters",
+      "behind"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-arranges-100m-financing-for-two-new-multifamily-properties-in-north-florida/",
+    "tokens": [
+      "arranges",
+      "$100m",
+      "financing",
+      "multifamily",
+      "properties",
+      "north",
+      "florida"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.fastcompany.com/91614167/housing-market-investors-84-say-rising-home-insurance-premiums-impacted-their-cash-flow-in-2026",
+    "tokens": [
+      "84%",
+      "investors",
+      "rising",
+      "home",
+      "insurance",
+      "premiums",
+      "impacted",
+      "cash",
+      "flow",
+      "2026",
+      "8211",
+      "fast",
+      "company"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/kenilworth-nj-data-center-protest-coreweave-video/",
+    "tokens": [
+      "video",
+      "jersey",
+      "residents",
+      "protest",
+      "$1.8b",
+      "data",
+      "center",
+      "neighborhood"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/equus-capital-partners-acquires-300075-sf-industrial-development-in-shrewsbury-massachusetts/",
+    "tokens": [
+      "equus",
+      "capital",
+      "partners",
+      "acquires",
+      "300",
+      "075",
+      "industrial",
+      "development",
+      "shrewsbury",
+      "massachusetts"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/cnsreit-acquires-303000-sf-shopping-center-in-phoenix/",
+    "tokens": [
+      "cnsreit",
+      "acquires",
+      "303",
+      "000",
+      "shopping",
+      "center",
+      "phoenix"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/jemal-real-estate-divcowest-plan-office-to-residential-conversion-in-d-c-s-west-end/",
+    "tokens": [
+      "jemal",
+      "divcowest",
+      "office",
+      "residential",
+      "conversion",
+      "west"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.bisnow.com/news/south-florida/hotel/steve-ross-jeffrey-soffer-scrap-miami-airport-hotel-project-after-faa-pushback",
+    "tokens": [
+      "stephen",
+      "ross",
+      "jeffrey",
+      "soffer",
+      "scrap",
+      "miami",
+      "airport",
+      "hotel",
+      "project"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://rebusinessonline.com/lansing-melbourne-recapitalizes-156-unit-multifamily-property-in-nashua-new-hampshire/",
+    "tokens": [
+      "lansing",
+      "melbourne",
+      "recapitalizes",
+      "156",
+      "unit",
+      "multifamily",
+      "property",
+      "nashua",
+      "hampshire"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTEZpVTZ2ckdnRTFHMncwRTdWdHJ0czdSb0VVaVVWbmdEUDE1RndXQk1vT1pKbGhtX1NvQnpkVEtxcjViSVFXcnNIX3U4Ty0yU211bzVwdjlEOTl6TEJrTmg2OXlFOWJVTGFGeEtNWG9WRDY5eUt5Qy1aZGJpb1NsWFdINXNhS0FVM0M5Zg?oc=5",
+    "tokens": [
+      "capodagli",
+      "property",
+      "receives",
+      "$68m",
+      "development",
+      "multi",
+      "housing"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/place-rivals-mortgage-fintechs-with-ardley-acquisition",
+    "tokens": [
+      "place",
+      "rivals",
+      "mortgage",
+      "fintechs",
+      "ardley",
+      "acquisition"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/mortgage-rates-keep-spiking-but-could-ease-by-year-end",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "keep",
+      "spiking",
+      "ease",
+      "year"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/10/arm-share-increased-as-mortgage-rates-spiked/",
+    "tokens": [
+      "share",
+      "increased",
+      "mortgage",
+      "rates",
+      "spiked"
+    ],
+    "shown_date": "2026-10-11"
+  },
+  {
     "url": "https://www.multifamilydive.com/news/hud-manufactured-housing-plan-aims-to-spur-production/832633/",
     "tokens": [
       "manufactured",
@@ -5544,261 +5811,5 @@
       "rates"
     ],
     "shown_date": "2026-09-21"
-  },
-  {
-    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-september-17-2026/",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "jump",
-      "6.95%",
-      "highest",
-      "since",
-      "january",
-      "2025"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
-    "tokens": [
-      "federal",
-      "reserve",
-      "issues",
-      "fomc",
-      "statement"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.realtor.com/research/new-home-construction-august-2026/",
-    "tokens": [
-      "permits",
-      "hold",
-      "steady",
-      "starts",
-      "completions",
-      "fall",
-      "august"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/trump-backs-warsh-faults-hostile-fed-board-for-rate-hike",
-    "tokens": [
-      "trump",
-      "backs",
-      "warsh",
-      "faults",
-      "hostile",
-      "board",
-      "rate",
-      "hike"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/ninth-circuit-denies-rehearing-realtorcom-leads/",
-    "tokens": [
-      "realtor",
-      "lead",
-      "dispute",
-      "heads",
-      "closed",
-      "door",
-      "arbitration",
-      "appeal",
-      "fails"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/florida-home-sellers-cutting-prices-adds-to-pressure-on-lennar",
-    "tokens": [
-      "florida",
-      "home",
-      "sellers",
-      "prices",
-      "pressure",
-      "lennar"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPd01fcDBWc3FPa0ZkWENNVFZUaGJrbXdsejZkTkkxQkVENmE5OFdKV1Ewc2pQQVAtX1Z2NWcxMHZSQTNMTFc1NVJvZkxrS1dvRkpFZ2JOc3JJdFFMT1dpUDVnN0dTdEZrQkhrMmVZTVVrUk5pYnNSUzJGZWNjeVVWTHR0b3dHQ1RXcFpXQ01vSVVTLTc0UkpZLU8tMzVaOWY1TlpDOFE0dw?oc=5",
-    "tokens": [
-      "dallas",
-      "residential",
-      "agencies",
-      "bizjournals"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQM0xOTFZVejJNZkJScHFaOXlvVzZkREpTRGUzWVFtaFowemFaUnZJM3JlMnhXcnh2SXdGRUluX1otTjV0VS1BZG1qelA2Nnc2X191Ny1rbVFmMEl1bzBmNUE2UC1QZFVRZ3B2ZEY0cHllU2lURTJTQmVtOHBZSFhkTEtXMG1QYVlwcGo1VXA4YjFXSjdsLWdTTzR1U18tSUtWdFJJQVN3aWg2bzc5TEprcU1LWjVyTDl6TU5kN2U0elBxWG8?oc=5",
-    "tokens": [
-      "bofa",
-      "global",
-      "conference",
-      "2026",
-      "growth",
-      "gets",
-      "clearer",
-      "investing"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMnlKQmNrMEllOWpYamQ5akZYRVVNMUhvSm53Nzc3VXliLWdTcXlvMEdvT1haZWVNMEtDM0VZVnMzZVBBVTdCUmtzb0E0MnhKUUp1QkRUa2ZXcDMxcFREZmNSblNobWpOYXlROERNRjYzZjdQWExWSHVIRGkwVUEwMERGY2l6SGt4eGdtUmFB?oc=5",
-    "tokens": [
-      "investors",
-      "turning",
-      "housing",
-      "trend",
-      "bizjournals"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE1JME1oeTl0RzBQOU5kU2J3YWJ5NmdmcXdNS3hfT3dxekdfdVEyYTNqV0l1NTVORDZMNDdCTVln?oc=5",
-    "tokens": [
-      "list"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://rebusinessonline.com/warespace-opens-174500-sf-industrial-facility-in-plano/",
-    "tokens": [
-      "warespace",
-      "opens",
-      "174",
-      "500",
-      "industrial",
-      "facility",
-      "plano"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://rebusinessonline.com/manova-partners-acquires-1-msf-logistics-facility-in-spartanburg-south-carolina/",
-    "tokens": [
-      "manova",
-      "partners",
-      "acquires",
-      "logistics",
-      "facility",
-      "spartanburg",
-      "south",
-      "carolina"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://rebusinessonline.com/jll-arranges-154-1m-in-financing-for-six-property-retail-portfolio-spanning-three-states/",
-    "tokens": [
-      "arranges",
-      "$154.1m",
-      "financing",
-      "property",
-      "retail",
-      "portfolio",
-      "spanning",
-      "three",
-      "states"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.bisnow.com/news/denver/commercial-real-estate/denver-s-ball-arena-to-undergo-135m-renovation",
-    "tokens": [
-      "kroenke",
-      "announces",
-      "$135m",
-      "renovation",
-      "denver",
-      "039",
-      "ball",
-      "arena"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.bisnow.com/news/atlanta/deal-sheet/tennessee-university-opening-medical-school-in-chamblee-the-atlanta-deal-sheet",
-    "tokens": [
-      "tennessee",
-      "university",
-      "campus",
-      "chamblee",
-      "atlanta",
-      "deal",
-      "sheet"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/downtown-brooklyn-development-site-fetches-84m/",
-    "tokens": [
-      "downtown",
-      "brooklyn",
-      "development",
-      "site",
-      "fetches",
-      "$84m"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/galvanize-real-estate-makes-california-debut-with-milpitas-industrial-portfolio/",
-    "tokens": [
-      "galvanize",
-      "california",
-      "debut",
-      "milpitas",
-      "industrial",
-      "portfolio"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/09/15/mortgage-credit-scores-vantagescore-fico-homebuyers.html",
-    "tokens": [
-      "mortgage",
-      "credit",
-      "scores",
-      "evolving",
-      "homebuyers",
-      "need",
-      "know"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/senior-housing-construction-demand-trillion-dollars-forecast/",
-    "tokens": [
-      "america",
-      "need",
-      "$1",
-      "trillion",
-      "senior",
-      "housing",
-      "2040",
-      "projections"
-    ],
-    "shown_date": "2026-09-20"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/09/builder-sentiment-falls-on-higher-interest-rates-and-costs/",
-    "tokens": [
-      "builder",
-      "sentiment",
-      "falls",
-      "higher",
-      "interest",
-      "rates",
-      "costs",
-      "8211",
-      "nahb"
-    ],
-    "shown_date": "2026-09-20"
   }
 ]
