@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-11",
-  "generated_at": 1791681471730,
+  "date": "2026-10-12",
+  "generated_at": 1791767871244,
   "sources_attempted": 40,
   "sources_ok": 36,
   "sections": [
@@ -56,103 +56,43 @@
   ],
   "items": [
     {
-      "source_id": "national-mortgage-news",
-      "source_name": "National Mortgage News",
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
       "source_tier": "A",
-      "source_weight": 7,
+      "source_weight": 9,
       "source_tags": [
+        "housing",
         "rates",
-        "macro"
+        "policy"
       ],
       "region": "national",
-      "title": "Fed's Waller says more interest rate hikes likely on the way",
-      "link": "https://www.nationalmortgagenews.com/news/feds-waller-says-more-interest-rate-hikes-likely-on-the-way",
-      "description": "Federal Reserve Gov. Christopher Waller said he expects the Federal Open Market Committee to raise short-term interest rates if inflation does not show signs of easing.",
-      "published_at": 1791448200000,
-      "score": 14,
-      "tags": [
-        "national",
-        "rates",
-        "macro",
-        "regulator"
-      ],
-      "heat_signals": [
-        "fed",
-        "rate hike",
-        "inflation"
-      ],
-      "importance": 5,
-      "selector_reason": "美联储官员表示若通胀不降可能继续加息，可能改变短端利率和住房融资环境。美联储政策路径具有系统性影响，符合最高重要性级别。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "Waller称通胀不降，Fed或继续加息",
-      "summary_zh": "Fed官员预计通胀若不缓解，FOMC将上调短期利率，住房融资承压",
-      "impact": "short-neg",
-      "id": "a32874e1",
-      "fetched_at": 1791681722304
-    },
-    {
-      "source_id": "cnbc-realestate",
-      "source_name": "CNBC Realty Check",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "macro"
-      ],
-      "region": "national",
-      "title": "Trump appoints committee to investigate statements by the Fed's Lisa Cook",
-      "link": "https://www.cnbc.com/2026/10/09/fed-lisa-cook-trump.html",
-      "description": "Trump tried to fire Cook, a nominee of former President Joe Biden, but the Supreme Court blocked his first attempt.",
-      "published_at": 1791568584000,
-      "score": 10,
-      "tags": [
-        "national",
-        "regulation",
-        "regulator"
-      ],
-      "heat_signals": [
-        "fed"
-      ],
-      "importance": 5,
-      "selector_reason": "总统推动调查美联储理事Lisa Cook，直接涉及央行独立性、金融治理和未来货币政策可信度。该事件可能影响利率预期和金融市场，属于系统性政策新闻。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "Trump设委员会调查Fed官员Cook",
-      "summary_zh": "Trump重启对Lisa Cook的调查，最高法院曾阻止其免职，Fed独立性承压",
-      "impact": "short-neg",
-      "id": "4d9160ba",
-      "fetched_at": 1791681722304
-    },
-    {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "housing"
-      ],
-      "region": "national",
-      "title": "Global Bond Markets Are in Meltdown—Here’s Why U.S. Homebuyers Should Pay Attention",
-      "link": "https://www.realtor.com/news/trends/global-bond-markets-crisis-treasury-yields-mortgage-rates/",
-      "description": "For the past month, global bond markets have been in the grips of a historic sell-off triggered by a tangle of complex economic issues.",
-      "published_at": 1791536400000,
-      "score": 8,
+      "title": "MBA forecast: Mortgage volume to dip below $2T in 2027 as 7% rates linger",
+      "link": "https://www.housingwire.com/articles/mba-originations-forecast-2027-rates/",
+      "description": "Mortgage originations are expected to continue slowing and finish below $2 trillion in 2027 amid rates that are expected to be remain above 7%, according to a new forecast from the Mortgage Bankers Association ( MBA ). “We&#8217;re going to come down from this spike in rates ,” Mike Fratantoni, chief economist and senior vice president for research and business development at the MBA, said on stage during the MBA’s 2026 Annual Convention and Expo in Chicago on Sunday. “The unfortunate news is, I don&#8217;t think we&#8217;re going to come down that far.” The MBA’s baseline forecast projects 30-year mortgage rates will stay above 7% through 2027, after reaching 7.5% last week. At this level, total single-family mortgage origination volume is expected to decrease 5% to $1.99 trillion in 2027, down from the $2.1 trillion projected for 2026. According to Fratantoni, part of the pressure stems from global volatility, which increases perceived repayment risk. That risk is priced directly as a wider spread between the 30-year mortgage rate and the 10-year Treasury yield. “After years of trying to bring that spread down, we were 300 basis points in 2023. We were (as low as) 200 this year. We&#8217;re back up to 220 or so, and I just don&#8217;t think investors are going to quickly forget this level of volatility that we&#8217;ve just lived through,” Fratantoni said. “I think they&#8217;re going to keep pricing in that mortgage-to-Treasury spread a little bit wider than what we previously had in the forecast.” The MBA forecasts that the 10-year Treasury yield will average 5.1% in the fourth quarter and remain near 5% through 2027. The broader macroeconomic driver for higher rates is inflation proving more persistent than anticipated. Last year, concern centered on tariffs lifting prices across multiple sectors, but this year, the focus has shifted to energy price shocks, Fratantoni added. “Given this environment where inflation is well above the Fed&#8217;s target, we think it&#8217;s going to be years before they get there,” Fratantoni said. “Where the job market, for all its challenges, is holding up pretty well, we think the Fed is going to be in a position where they have to hike a couple more times. ” MBA economists expect a 25-basis-point hike in December followed by another in the first quarter of 2027, pushing the target federal funds rate above the rate of inflation. According to Fratantoni, substantial uncertainties surround the forecast. Geopolitical or financial market shocks could further dampen consumer confidence and trigger an abrupt economic slowdown, keeping recession risks elevated. Also, if tensions in the Middle East intensify, oil prices could spike further given depleted reserves, fueling additional inflation. Refi justification to stay low By loan type, the MBA expects purchase originations to edge up 0.8% to $1.42 trillion in 2027, while refinance originations are estimated to fall by 17% to $571 billion. Total loan count is projected at 5 million, down from 5.3 million in 2026. “All in all, you have about 20% of loans outstanding above 6% and about half that are below 4%,” Joel Kan, vice president and deputy chief economist at the MBA, said on stage. “With rates in the 7% to 7.5% range, it’s just very difficult for anyone to really find that justification to refi.” Kan also noted that the rate lock-in effect continues to discourage homeowners with sub-4% or sub-5% mortgages from moving . “Once we hit the 7% range, you can see purchase activity dropping off a little bit more significantly. Now we&#8217;re running at about 9% below where you were in January,” Kan said. The MBA expects the adjustable-rate mortgage (ARM) share to hover around 9% as fixed rates linger in the 7s. Activity is expected to stay subdued despite easing home price appreciation. National home price indices show annual growth moderating into the 2% range, suggesting housing inventory constraints are less acute than in recent years. “We expe",
+      "published_at": 1791760924000,
+      "score": 27,
       "tags": [
         "housing",
         "national",
         "rates",
-        "macro"
+        "trend",
+        "lender"
       ],
-      "heat_signals": [],
+      "heat_signals": [
+        "fed",
+        "inflation",
+        "mortgage rate",
+        "forecast",
+        "annual"
+      ],
       "importance": 5,
-      "selector_reason": "全球债券市场持续抛售会通过国债收益率、按揭利率和资本成本传导至美国住宅与商业地产。其潜在影响覆盖金融市场和房地产融资体系，属于系统性宏观风险。",
+      "selector_reason": "MBA预计2027年美国抵押贷款发放量将跌破2万亿美元，且高利率持续时间可能超出市场预期。该预测直接影响住房交易、购房需求和按揭金融体系，属于全国性宏观信号。",
       "section": "national",
-      "extended_window": true,
-      "title_zh": "全球债市崩跌，推高美国购房成本",
-      "summary_zh": "全球债券遭遇历史性抛售，Treasury收益率与mortgage rate或继续上行",
+      "title_zh": "MBA：7% mortgage rate 压低2027放贷量",
+      "summary_zh": "MBA预计2027 origination 降至$1.99T，30Y mortgage rate 维持7%以上",
       "impact": "short-neg",
-      "id": "c0a52677",
-      "fetched_at": 1791681722304
+      "id": "93cb17d3",
+      "fetched_at": 1791768195443
     },
     {
       "source_id": "housingwire",
@@ -165,72 +105,268 @@
         "policy"
       ],
       "region": "national",
-      "title": "Have mortgage rates peaked, or will we see even more chaos?",
-      "link": "https://www.housingwire.com/articles/have-mortgage-rates-peaked-or-will-we-see-even-more-chaos/",
-      "description": "In this week&#8217;s epic battle over mortgage rates, we&#8217;re straight out of the movie Gladiator when he says, &#8220;Hold the line, stay with me.&#8221; For the 10-year yield, the key 5.35% level held last week, preventing further escalation of rates in October. No matter how crazy the news has been over the last week, we held the line. The question is: have mortgage rates peaked for 2026, or will this unresolved conflict drive rates toward 8% or higher? 10-year yield and mortgage rates In the 2026 HousingWire forecast , I anticipated the following ranges: Mortgage rates between 5.75% and 6.75% The 10-year yield fluctuating between 3.80% and 4.60% Since the first MOU deal between Iran and the U.S. fell apart in July, the bond market has been extremely volatile. When President Trump said in September that there would be no deal until after the midterms, it pushed the bond market further, pushing the 10-year yield to a critical technical point not seen in a long time. Despite significant bad news last week, the 10-year yield held its ground. I discussed this with Editor in Chief Sarah Wheeler on this episode of the HousingWire Daily podcast, emphasizing how October can set the housing baseline for the next 15 months. For now, that critical level has held as we await the second full week of October. The coming weeks will be crucial as President Trump announced that he has no intention of attacking Iran before the midterms; however, it remains uncertain what may happen after. The conflict, along with rising inflation data and a low unemployment rate, has made it difficult for bond yields to fall. And things could get much worse, as many variables are still up in the air. One of my other concerns about what’s going on right now is that we have a lot of other players involved. Syria, Turkey and Pakistan are coming to the aid of Saudi Arabia against the Houthis, who are attacking now — and the escalation between Ukraine and Russia has gone into another stage. I totally regret saying in the first week of this year that I felt this year might be like the TV show 24 — that has proven to be too accurate! In the upcoming week, we will get the CPI data and Fed members speaking, so buckle up. We don’t know what will happen, but the key is for the 10-year yield to not close above 5.35% and have follow-through bond selling, because that might create even more chaos in the bond market and take the term premium value of bonds much higher, which means higher mortgage rates. Mortgage spreads Mortgage spreads are now front and center and the most important housing story. If spreads worsen, the housing market could get much worse, affecting not only existing home sales but also housing starts for years to come. For now, spreads, although they have worsened since the lows of 2026, have not accelerated to levels we saw in 2023, 2024 or even the low levels of 2025. Historically, mortgage spreads have ranged from 1.60% to 1.80%. Last week, spreads rose to 2.12%, up from 1.98% the week before. Let’s compare last week’s mortgage rates to where they would have been over the last three years, given the 10-year yield’s current level: If we had the worst mortgage spread levels of 2023, mortgage rates would be 8.47% today, not 7.48%. If we had the worst levels of 2024, mortgage rates would be 8.09% today. If we had the worst levels of 2025, mortgage rates would be 7.90% today. Housing inventory Housing inventory growth has been very tame this year, with some weeks down year over year. However, as always, when rates rise, especially above 7%, inventory can grow faster. Inventory growth has been slower than in previous years, mostly because we are closer to normal, unlike the past few years when we were working from the lowest levels ever recorded. Last week, we saw a slight decline in inventory; it’s late in the year and the seasonal decline in active listings should happen soon. Also, year-over-year comps make growth easier to show, as mortgage rates we",
-      "published_at": 1791669523000,
-      "score": 40,
+      "title": "Senior housing wealth tops $15 trillion for the first time",
+      "link": "https://www.housingwire.com/articles/senior-housing-wealth-tops-15-trillion-for-the-first-time/",
+      "description": "Housing wealth among homeowners ages 62 and older rose to a record $15.34 trillion in the second quarter of 2026, surpassing $15 trillion for the first time, according to the latest quarterly Reverse Mortgage Market Index (RMMI) published by the National Reverse Mortgage Lenders Association ( NRMLA ) and RiskSpan . Since 2000, the index has tracked trends in senior home values and home equity accumulation, serving as a benchmark for understanding the financial position and borrowing potential of older homeowners. The second-quarter increase was driven by an estimated $430 billion, or 2.5%, rise in senior home values, partially offset by a $30 billion, or 1.2%, increase in mortgage debt held by seniors. “This latest RMMI milestone underscores the extraordinary financial resource that home equity represents for today’s older homeowners,” Steve Irwin , president of NRMLA, said in a statement. “Even as borrowing costs remain elevated, senior homeowners continue to build substantial housing wealth, giving them greater financial flexibility as they navigate retirement . The challenge and opportunity for our industry is to ensure that older homeowners understand how this wealth can be responsibly incorporated into their broader financial plans to help support their long-term financial security.” The milestone comes as borrowing costs, including mortgage rates , remain elevated. These are among the factors that have limited the use of home equity products, including reverse mortgages , in recent years. A growing stock of senior housing wealth represents a significant pool of potential lending activity at a time when many older homeowners are navigating retirement with limited income sources, NRMLA added. This article was generated using HousingWire Automation and reviewed by a HousingWire editor before publication. Related More: Home Equity NRMLA Retirement Reverse Mortgage Daily",
+      "published_at": 1791573146000,
+      "score": 18,
       "tags": [
         "housing",
         "national",
-        "rates",
-        "trend"
-      ],
-      "heat_signals": [
-        "fed",
-        "inflation",
-        "mortgage rate",
-        "existing home sales",
-        "housing starts",
-        "forecast",
-        "year over year",
-        "year-over-year",
-        "housing market",
-        "housing starts"
-      ],
-      "importance": 4,
-      "selector_reason": "Mortgage利率是否见顶直接影响购房需求、再融资和住宅市场流动性。文章聚焦10年期国债收益率与未来利率路径，属于全国市场的重要前瞻信号。",
-      "section": "national",
-      "title_zh": "Mortgage rate或见顶，也可能冲向8%",
-      "summary_zh": "10年期收益率守住5.35%关键位，但地缘风险仍可能推动mortgage rate升至8%",
-      "impact": "neutral",
-      "id": "568407aa",
-      "fetched_at": 1791681722304
-    },
-    {
-      "source_id": "nrhc",
-      "source_name": "National Rental Home Council (NRHC)",
-      "source_tier": "E",
-      "source_weight": 9,
-      "source_tags": [
-        "btr-sfr",
-        "institutional"
-      ],
-      "region": "national",
-      "title": "High mortgage rates strand home sellers as buyer demand plummets &#8211; NBC News",
-      "link": "https://www.nbcnews.com/business/real-estate/high-mortgage-rates-home-sellers-struggle-rcna600259",
-      "description": "FOR SUBSCRIBERS Real Estate High mortgage rates strand home sellers as buyer demand plummets Homebuyers finally have the upper hand in the housing market, where soaring borrowing costs have cut into demand — but not supply. Listen to this article 00:00 00:00 A house for sale in the Capitol Hill neighborhood in Washington, D.C. Al Drago / Getty Images file Share Add NBC News to Google Oct. 6, 2026, 1:07 PM EDT By Alexandra Meier Soaring mortgage rates and stubbornly high real estate prices across the country this year are putting home purchases on hold for millions of would-be buyers . But home sellers are feeling the pain just as acutely. For Subscribers FOR SUBSCRIBERS USWNT’s chastening 2-0 loss to Spain is a wake-up call ahead of the 2027 Women’s World Cup FOR SUBSCRIBERS Police found her roommate dismembered. Then they connected her to another years-old mystery. FOR SUBSCRIBERS The perplexing case of a CIA officer who duped his fellow spies FOR SUBSCRIBERS Ukraine rattled as Trump eases Russia oil sanctions, says Zelenskyy should be replaced FOR SUBSCRIBERS One year on, Gaza ceasefire exists ‘in name only,’ aid groups say amid near-daily Israeli strikes FOR SUBSCRIBERS Man City players have a huge cloud over them as they chase a title FOR SUBSCRIBERS Pentagon’s plan to livestream an execution resurrects America’s darkest history, critics say FOR SUBSCRIBERS Frustrated by a slowing economy, young Chinese turn to Mao Zedong for guidance FOR SUBSCRIBERS Democratic congressional candidates run anti-data center ads in states the party controls FOR SUBSCRIBERS Nonprofit collecting funds for Trump’s ballroom rakes in $320 million FOR SUBSCRIBERS Trump administration’s deal with Nevada fuels data center fight in governor’s race FOR SUBSCRIBERS The legal questions behind plans to livestream an execution FOR SUBSCRIBERS Phone a friend: Republicans lean on Cabinet members as they break with Trump FOR SUBSCRIBERS Centrist think tank warns 2028 Democrats against swinging too far left on immigration FOR SUBSCRIBERS Russia’s secrecy after a mysterious plague lab death raises global alarm Slide 1 of 1 For Subscribers FOR SUBSCRIBERS USWNT’s chastening 2-0 loss to Spain is a wake-up call ahead of the 2027 Women’s World Cup FOR SUBSCRIBERS Police found her roommate dismembered. Then they connected her to another years-old mystery. FOR SUBSCRIBERS The perplexing case of a CIA officer who duped his fellow spies FOR SUBSCRIBERS Ukraine rattled as Trump eases Russia oil sanctions, says Zelenskyy should be replaced FOR SUBSCRIBERS One year on, Gaza ceasefire exists ‘in name only,’ aid groups say amid near-daily Israeli strikes FOR SUBSCRIBERS Man City players have a huge cloud over them as they chase a title FOR SUBSCRIBERS Pentagon’s plan to livestream an execution resurrects America’s darkest history, critics say FOR SUBSCRIBERS Frustrated by a slowing economy, young Chinese turn to Mao Zedong for guidance FOR SUBSCRIBERS Democratic congressional candidates run anti-data center ads in states the party controls FOR SUBSCRIBERS Nonprofit collecting funds for Trump’s ballroom rakes in $320 million FOR SUBSCRIBERS Trump administration’s deal with Nevada fuels data center fight in governor’s race FOR SUBSCRIBERS The legal questions behind plans to livestream an execution FOR SUBSCRIBERS Phone a friend: Republicans lean on Cabinet members as they break with Trump FOR SUBSCRIBERS Centrist think tank warns 2028 Democrats against swinging too far left on immigration FOR SUBSCRIBERS Russia’s secrecy after a mysterious plague lab death raises global alarm Slide 1 of 1 Just a moment. We are getting your experience ready.",
-      "published_at": 1791565195000,
-      "score": 16,
-      "tags": [
-        "housing",
-        "national",
-        "rates",
-        "trend"
+        "data",
+        "lender"
       ],
       "heat_signals": [
         "mortgage rate",
-        "housing market"
+        "trend",
+        "trends"
       ],
-      "importance": 4,
-      "selector_reason": "高按揭利率导致买方需求下降而卖方供给未同步收缩，触及全国住宅市场的核心矛盾。该报道反映交易量、库存和议价权的广泛变化，重要性高于单一市场新闻。",
+      "importance": 5,
+      "selector_reason": "美国62岁以上房主住房财富首次突破15万亿美元，显示老年群体持有的房产权益达到历史新高。该数据涉及全国住房财富、消费能力和反向抵押贷款市场，具有系统性影响。",
       "section": "national",
       "extended_window": true,
-      "title_zh": "高mortgage rate困住卖家，买方需求暴跌",
-      "summary_zh": "借贷成本与房价高企令购房暂停，需求下降但供给未增，卖方议价能力转弱",
+      "title_zh": "62岁以上房主 housing wealth 首破$15T",
+      "summary_zh": "Q2 senior housing wealth 达$15.34T，home equity 成退休金融资源",
+      "impact": "long-pos",
+      "id": "4144cc6b",
+      "fetched_at": 1791768195443
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "Trump establishes committee to investigate Fed's Cook",
+      "link": "https://www.nationalmortgagenews.com/news/trump-establishes-committee-to-investigate-feds-cook",
+      "description": "Federal Reserve Trump establishes committee to investigate Fed&#x27;s Cook By John Heltman CloseText About John twitter JohnHeltman mailto john.heltman@arizent.com linkedin john-heltman-84b6b4a Published October 09, 2026, 12:40 p.m. EDT | Updated October 11, 2026, 9:16 a.m. EDT 4 Min Read Facebook Twitter LinkedIn Email President Donald Trump at the White House on Oct. 7. Bloomberg News Key insight: President Trump established a three-person committee to investigate whether Federal Reserve Gov. Lisa Cook \"made false statements in connection with one or more mortgage instruments.\" The committee will then report to the president as to whether there is \"cause\" for her removal. Expert quote: \"As President, it is my job to ensure the laws are faithfully executed, including by firing subordinates who cannot be trusted to tell the truth and follow the law.\" President Donald Trump Friday morning announced the formation of a three-member committee to investigate whether Federal Reserve Gov. Lisa Cook made false statements related to a mortgage application and whether such statements establish cause for her removal from office. Processing Content In a memorandum dated Oct. 7 posted on the White House website Friday, Trump said the committee would be made up of three members: National Economic Council Chair and Assistant to the President on Economic Policy Kevin Hassett, Equal Employment Opportunity Commission Chair Andrea Lucas and Office of Government Ethics acting director Keith Sonderling, all Trump appointees. Those members may \"consult with appropriate personnel from executive departments and agencies\" as part of its inquiry, the memorandum states. \"As President, it is my job to ensure the laws are faithfully executed, including by firing subordinates who cannot be trusted to tell the truth and follow the law,\" Trump said in the memorandum. The panel will also oversee a hearing at the White House to consider evidence against Cook on Nov. 5. The hearing is to last no longer than 4 hours, the memorandum says, and Cook \"may present argument, written evidence, and written witness statements regarding the evidence and allegations\" as part of that hearing and may present a \"written position statement\" so long as it is received three days before the hearing. Attorneys Abbe Lowell and Norm Eisen, who represent Cook, said in a statement that the president's actions indicate he has already made up his mind about her guilt and whether her actions are cause for her termination, making the committee and the appearance of objectivity ring hollow. \"In light of the President's repeated statements that he has already decided to fire Governor Cook — regardless of the facts and evidence — we have grave doubts that this 'hearing' is a legitimate one that would conform to the law,\" Lowell and Eisen said. \"But if it is anything close to objective, the conclusion will be that Governor Cook did not commit mortgage fraud, leaving no cause to remove her from the Federal Reserve Board. We have engaged with the White House to evaluate whether the process proposed has a possibility of being a genuine one and not simply a box checking exercise. Governor Cook welcomes the opportunity to present the facts so she can clear her name and demonstrate there is no legal basis to fire her.\" The memorandum appears to compel Cook to testify, saying she \"shall appear at the hearing and be examined\" by the panel, Justice Department officials and her own counsel. Cook will be provided by the committee with \"the evidence it is considering\" and may question Cook about that evidence. The hearing will be closed to the public but \"shall be transcribed.\" The establishment of the committee comes after the Supreme Court in June found that the president's prior effort to remove Cook from the Fed Board in August 2025 violated Cook's due process rights, noting that the prior effort — informing Cook that she was thereby removed for cause by a social media post — did not afford her an op",
+      "published_at": 1791564003000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "national",
+        "regulation",
+        "regulator"
+      ],
+      "heat_signals": [
+        "fed"
+      ],
+      "importance": 5,
+      "selector_reason": "总统推动调查美联储理事Lisa Cook，涉及央行治理和联邦金融政策独立性。该事件可能影响利率预期、按揭市场和金融市场稳定，属于系统性政策风险。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Trump 设委员会调查 Fed 的 Cook",
+      "summary_zh": "委员会查 Cook mortgage 申报是否虚假，可能构成免职理由",
+      "impact": "neutral",
+      "id": "8407fcb2",
+      "fetched_at": 1791768195443
+    },
+    {
+      "source_id": "yardi-matrix",
+      "source_name": "Yardi Matrix Blog",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "U.S. Multifamily Sector Closes Q3 With Gains in Rent and Occupancy",
+      "link": "https://www.yardimatrix.com/blog/us-multifamily-sector-closes-q3-with-gains-in-rent-and-occupancy/",
+      "description": "Market heads into fourth quarter on firmer footing as challenges loom SANTA BARBARA, Calif., Oct. 7, 2026 – Weathering a $1 month-over-month decrease in the average advertised rent, the U.S. multifamily sector emerged from September with its first Q3 increase in four years, according to new data released by Yardi® Matrix. The market’s 0.3% quarterly [&#8230;] The post U.S. Multifamily Sector Closes Q3 With Gains in Rent and Occupancy appeared first on Yardi Matrix Blog .",
+      "published_at": 1791374400000,
+      "score": 12,
+      "tags": [
+        "multifamily",
+        "national",
+        "data",
+        "trend"
+      ],
+      "heat_signals": [
+        "occupancy"
+      ],
+      "importance": 4,
+      "selector_reason": "Yardi数据显示，美国多户住宅市场第三季度租金和入住率有所改善，市场在进入第四季度时趋于稳健。该报告覆盖全国公寓市场，是判断租赁需求、运营表现和投资环境的重要行业数据。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "美国 multifamily Q3 rent 与入住率回升",
+      "summary_zh": "Yardi称Q3 rent 环比增0.3%，为四年来首次Q3上涨",
+      "impact": "long-pos",
+      "id": "df700cf3",
+      "fetched_at": 1791768195443
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Why immigration enforcement is colliding with the housing shortage",
+      "link": "https://www.housingwire.com/articles/immigration-enforcement-homebuilding-delays/",
+      "description": "People do not buy housing units. They buy homes. They buy a place to raise their children, care for aging parents, build friendships, establish roots, and become part of a neighborhood. They make financial commitments, plan moves, enroll their children in schools, and plan their futures, expecting the home they purchased will be ready when promised. Homebuilders do not manufacture abstract units either. They acquire land, invest capital, secure approvals, develop neighborhoods, and coordinate dozens of skilled trades to deliver homes to people who need them. They take considerable financial risks, often backed by personal guarantees, to make those homes possible. Right now, that entire undertaking is in danger of unraveling in communities across America. A regional homebuilding CEO called me this week with an urgent warning. Immigration enforcement actions, he said, have severely disrupted construction trade crews, and builders in some markets are approaching a point where they may no longer be able to complete homes on schedule. The CEO, who asked to remain anonymous because of the sensitivity of the issue, described markets where jobsite raids and the resulting disruption have reduced available crews by an estimated 60% to 80%. Framing, roofing, foundation work, drywall, painting, and other essential construction activities are being affected. &#8220;In one of my friend&#8217;s markets, he says he normally gets to draw on five different framing crews to frame his new homes,&#8221; the CEO told me. &#8220;Now, that&#8217;s down to just two crews.&#8221; Think about what that means. A builder with homes under construction cannot simply replace the framing crew with another that doesn&#8217;t exist. The foundation may be ready. The lumber may be delivered. The customer may have a closing date. The construction loan keeps compounding interest. But the home cannot move forward, and the business is hamstrung. A crisis that weak demand cannot solve Some will argue that slower home sales should ease the labor problem. Fewer buyers mean fewer homes to build, and therefore less need for construction workers. That reasoning misses a critical distinction. A builder can slow new starts tomorrow. The builder cannot simply walk away from homes already sold, financed and under construction today. Our colleague Tyler Williams documented the growing danger in September. Builders in affected markets reported that foundations were waiting weeks for framing crews, construction schedules were slipping by a month or more, and customers were facing delayed closings. Some also reported sharply higher labor costs as available crews became scarce. For a privately held builder, a delayed closing can be far more than an inconvenience or a few nights of tossing and turning. The company needs the proceeds from completed homes to repay construction loans, pay trade partners, cover overhead, and finance its next projects. When delays multiply, a profitable business can quickly become one that cannot meet its obligations. This is not a theoretical concern, a “why I lose sleep at night” quip at a conference. It is the warning we are hearing from builders who have spent years building successful businesses and whose livelihoods, employees, and customers now depend on work being completed. The latest financial evidence makes the timing especially troubling. Wolfe Research&#8217;s October 9 survey of private homebuilders found that September net orders fell 19.5% from August, and 77% of respondents reported worsening demand. Closing gross margins declined 90 basis points, and 62% of respondents reported experiencing or expecting near-term labor constraints. Wolfe&#8217;s separate field research in Atlanta found exceptionally weak customer traffic and sales activity, with builders reducing starts and increasing incentives to attract buyers. Notably, its Atlanta contacts did not report labor constraints at the communities visited, underscoring that the effects of ",
+      "published_at": 1791578225000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "national",
+        "policy",
+        "homebuilder"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "移民执法与住房短缺之间的冲突，可能影响建筑劳动力、住房交付和部分地区的供应能力。该议题连接联邦政策、住房供给和房地产开发成本，影响范围明显超出单一市场。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "移民执法冲击 housing construction",
+      "summary_zh": "部分市场施工队减少60%-80%，交付延误加剧 housing shortage",
       "impact": "short-neg",
-      "id": "f07a92dd",
-      "fetched_at": 1791681722304
+      "id": "f6abb9f6",
+      "fetched_at": 1791768195443
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "JLL Arranges Loan for Refinancing of 300-Unit Apartment Community in Northwest Dallas",
+      "link": "https://rebusinessonline.com/jll-arranges-loan-for-refinancing-of-300-unit-apartment-community-in-northwest-dallas/",
+      "description": "DALLAS — JLL has arranged a loan of an undisclosed amount for Standard at Royal Lane, a 300-unit apartment community in northwest Dallas. The newly constructed property sits on a 12.4-acre site and offers one-, two-, three- and four-bedroom units, with some apartments being subject to income restrictions. Amenities include two pools, dual fitness centers, a business centers and a theater room. Kyle Spencer, Dan Kearns, Christian Johnston and Aidan Flanagan of JLL arranged the loan through TPG Real Estate Credit on behalf of the owner, LDG Development. The post JLL Arranges Loan for Refinancing",
+      "published_at": 1791563953000,
+      "score": 8,
+      "tags": [
+        "multifamily",
+        "dfw",
+        "deals",
+        "lender"
+      ],
+      "heat_signals": [
+        "dallas"
+      ],
+      "importance": 3,
+      "selector_reason": "JLL为达拉斯西北部一处300户公寓社区安排再融资，项目包含部分收入限制住房。该案例覆盖达拉斯Sun Belt租赁市场和大体量公寓资产融资，具有区域市场参考价值。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "JLL 安排 Dallas 300户公寓 refi",
+      "summary_zh": "Standard at Royal Lane 获TPG Real Estate Credit贷款，金额未披露",
+      "impact": "neutral",
+      "id": "0ebe6806",
+      "fetched_at": 1791768195443
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "Charlotte Housing Market Cools: Sales and Listings Drop Amid Economic Adjustments - k1047.com",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdWxmamVMSi1ueU52UTJER0d2Z2N3Y1BwVHpQeWgyeU40eHJHTFU0MGdyT0x2cjlHYkNNcF9JUnpaY2xPUzBYUkd0QlNwa2FueHR4N2JzMDhITTFGY3VyQzBzS21zajV0ci04Wkc4Wms1Z1p3NGRFdk9IM2pRenNlRU9kdGZITjZjVURKME8ybUlncENnc1gxSEZ1YUZQYjFuX2N2YWNvYmcxVmg2WUUw?oc=5",
+      "description": "Charlotte Housing Market Cools: Sales and Listings Drop Amid Economic Adjustments &nbsp;&nbsp; k1047.com",
+      "published_at": 1791246833000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "carolinas",
+        "data",
+        "trend"
+      ],
+      "heat_signals": [
+        "housing market"
+      ],
+      "importance": 3,
+      "selector_reason": "夏洛特住宅市场出现销售量和挂牌量同步下降，显示该Sun Belt核心城市正在降温。该区域市场变化可为观察就业、利率和库存调整对南部住宅市场的影响提供信号。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "Charlotte housing market 降温",
+      "summary_zh": "销售与挂牌同步下滑，经济调整压制买卖双方活跃度",
+      "impact": "short-neg",
+      "id": "3260a0a5",
+      "fetched_at": 1791768195443
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "Phoenix housing market freeze: City-by-city breakdown for September - ABC15 Arizona",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPTTJtSmRSbjg5SUpod0VDWE1uNWlrNHFLMEIwZG02bTU4ejJJNTY1UzhsZWgxMVZucVhRZkxBZGhwLTFWVEdaN3Zhc3N2cEt1WUxYNE1Bd3hFOHJYWHZ0eEpfTUVvc0E0eE9ySlU4MktYVkc2ZHZURTlLWGg1SE51VWNYNGJObWNnTVpZNVoxcDRXTjhkNVZfbjc3aGlMM2QwSWIwdS1VTG1vbk4yU3UyRg?oc=5",
+      "description": "Phoenix housing market freeze: City-by-city breakdown for September &nbsp;&nbsp; ABC15 Arizona",
+      "published_at": 1791502404000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "phoenix",
+        "data",
+        "trend"
+      ],
+      "heat_signals": [
+        "housing market"
+      ],
+      "importance": 3,
+      "selector_reason": "凤凰城住宅市场出现冻结迹象，并提供截至9月的分区域市场变化。凤凰城是Sun Belt的重要住宅市场，该趋势对库存、价格和开发商定价具有参考价值。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "Phoenix housing market 陷入冻结",
+      "summary_zh": "9月各城市交易偏冷，供需观望延续，价格影响待观察",
+      "impact": "short-neg",
+      "id": "3760e9f5",
+      "fetched_at": 1791768195443
+    },
+    {
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "5 apartment projects that recently broke ground",
+      "link": "https://www.multifamilydive.com/news/apartment-projects-break-ground/832522/",
+      "description": "New multifamily developments aimed at a range of income levels are coming to the Sun Belt and beyond.",
+      "published_at": 1791487320000,
+      "score": 10,
+      "tags": [
+        "multifamily",
+        "sun-belt",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "sun belt"
+      ],
+      "importance": 3,
+      "selector_reason": "近期多个面向不同收入群体的公寓项目在Sun Belt及其他地区开工。新开工情况能够反映多户住宅供给、开发融资和未来租赁市场竞争的变化。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "5个 apartment 项目新近开工",
+      "summary_zh": "Sun Belt 等地新增 multifamily 供应，覆盖多收入层级",
+      "impact": "long-pos",
+      "id": "2b952ea5",
+      "fetched_at": 1791768195443
     },
     {
       "source_id": "bisnow",
@@ -242,246 +378,152 @@
         "deals"
       ],
       "region": "national",
-      "title": "Hurricane Isaias Puts More Than $40B In Multifamily Property In Its Path",
-      "link": "https://www.bisnow.com/news/national/capital-markets/hurricane-isaias-projected-impact-florida-alabama-mississippi-multifamily-properties",
-      "description": "Isaias is set to hit the Gulf Coast, projected to impact almost $72B in commercial properties in Alabama, Florida and Mississippi.",
-      "published_at": 1791566382000,
-      "score": 10,
+      "title": "Meet The Early Movers In America&#039;s $3T Push For Manufacturing Construction",
+      "link": "https://www.bisnow.com/news/national/industrial/meet-early-movers-in-americas-3-trillion-dollar-push-for-manufacturing-construction",
+      "description": "Meet The Early Movers In America&#039;s $3T Push For Manufacturing Construction October 11, 2026 | 6:30 pm ET Matt Wasielewski, National Manufacturing facilities have broken ground in a burst over the last two years, helped along by incentive programs that span presidencies, with President Donald Trump ’s latest rounds of tax breaks passed through the One Big Beautiful Bill Act specifically aimed at unleashing their development. Unsplash/Wenzy Wong There are roughly two dozen facilities under construction across the country totaling around $500B in committed capital, with a deep pipeline of projects behind them, according to Avison Young . The brokerage is tracking 124 projects that have been proposed or announced, amounting to $3.4T in potential investment. Avison Young’s lead industrial researcher, Peter Kroner, said he expects the pace of groundbreakings will accelerate through the end of the year. “We fully anticipate another hockey stick that&#039;s going to dwarf this starting to happen at the end of the year,” Kroner said, describing a steep upward shift in momentum on a line chart that is shaped like the sports equipment. “We&#039;ve peaked in terms of that trough of uncertainty for 18 months, and there&#039;s a lot of excitement from manufacturers to take advantage of what&#039;s in this bill.” Some of what is breaking ground today is leveraging benefits from former President Joe Biden ’s CHIPS and Science Act, but Trump’s One Big Beautiful Bill Act and the ongoing trade war have also driven firms to bring manufacturing stateside. Biden’s other policy package, the Inflation Reduction Act , has largely been sidelined by the administration that inherited it, but the CHIPS Act has continued to ride the wave of monumental demand for digital infrastructure amid the mass deployment of artificial intelligence , said Craig Van Pelt, who leads research at Cresa . “The CHIPS Act is a huge deal, one of the biggest financial packages we&#039;ve ever done in the United States, but there&#039;s a long way to go from permitting and site preparation to active construction and production,” he said. Republicans’ One Big Beautiful Bill Act added a raft of new incentives to build new factories, not just for chip fabricators but for the broader manufacturing sector. Tech dominates the largest projects leveraging the tax incentives today, but pharmaceutical and automotive production round out the top projects that have broken ground. Aerospace is also quickly growing, although at a smaller scale, as drone technology is rapidly developed and as the business of going to space is increasingly privatized by the government and given to companies like SpaceX and Blue Origin . Most of the projects being built today aren’t the types of operations that involve hundreds of blue-collar workers on production floors. Instead, they rely on advanced robotics to maintain precise production lines, Van Pelt said. “A lot of the stuff that&#039;s coming back is not traditional manufacturing, but it is more technically advanced manufacturing , which takes a different kind of worker,” he said. “We&#039;re not going to get a bunch of steel workers back here.” Here is a look at the biggest projects now underway, according to Avison Young. TSMC A chip wafer like what will be produced by TSMC in Arizona TSMC In Arizona Location: Phoenix Project Investment: $100B TSMC, the world’s largest chipmaker, began construction in April 2025 on a third chip fabrication site to complement two existing facilities in Phoenix. The groundbreaking followed a March 2025 announcement expanding the planned facility from a $65B plant to a $165B megasite . This July, TSMC announced plans to invest another $100B in the state, raising its total commitment in Arizona to $265B. Micron Expands In New York Location: Clay, New York Project Investment: $100B Micron Technology is building a $100B manufacturing plant in central New York that is slated to be the largest semiconductor facility in t",
+      "published_at": 1791757802000,
+      "score": 16,
       "tags": [
-        "multifamily",
-        "sun-belt"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "飓风预计影响阿拉巴马、佛罗里达和密西西比约720亿美元商业地产，可能带来保险、运营和资产损失风险。潜在影响覆盖大额区域资产，重要性高于普通灾害报道。",
-      "section": "sunbelt",
-      "extended_window": true,
-      "title_zh": "飓风Isaias或冲击$40B multifamily资产",
-      "summary_zh": "Isaias将登陆Gulf Coast，Alabama、Florida和Mississippi近$72B商业地产面临风险",
-      "impact": "short-neg",
-      "id": "81b1a193",
-      "fetched_at": 1791681722304
-    },
-    {
-      "source_id": "multifamily-dive",
-      "source_name": "Multifamily Dive",
-      "source_tier": "A",
-      "source_weight": 9,
-      "source_tags": [
-        "multifamily"
-      ],
-      "region": "national",
-      "title": "Private credit issues could lead to more apartment distress: Gaia’s Fishman",
-      "link": "https://www.multifamilydive.com/news/private-credit-issues-could-lead-to-more-apartment-distress-gaias-fishman/832422/",
-      "description": "The co-founder and CEO of Gaia Real Estate sees more troubled properties hitting the market next year as he looks for signs of improvement in the Sun Belt.",
-      "published_at": 1791401881000,
-      "score": 10,
-      "tags": [
-        "multifamily",
-        "sun-belt",
-        "distress",
-        "trend",
-        "institutional"
+        "industrial",
+        "national",
+        "construction",
+        "developer"
       ],
       "heat_signals": [
-        "sun belt"
+        "inflation"
       ],
       "importance": 4,
-      "selector_reason": "私人信贷压力可能推动更多公寓资产陷入困境，尤其影响此前快速扩张的Sun Belt多户市场。该判断涉及资本结构、资产价格和潜在 distressed supply，行业影响较大。",
-      "section": "sunbelt",
-      "extended_window": true,
-      "title_zh": "Private credit风险或引发更多公寓困境",
-      "summary_zh": "Gaia预计明年更多问题公寓上市，Sun Belt市场复苏信号仍不明确",
-      "impact": "short-neg",
-      "id": "207bdec2",
-      "fetched_at": 1791681722304
+      "selector_reason": "美国制造业建设在税收激励推动下迎来大规模扩张，潜在投资规模达到3万亿美元。制造业地产和工业建设的长期扩张会显著影响全国工业地产、就业和区域资本配置。",
+      "section": "cre",
+      "title_zh": "美国制造业 construction 迎$3T周期",
+      "summary_zh": "约$500B项目在建、$3.4T pipeline 待启动，industrial 需求受益",
+      "impact": "long-pos",
+      "id": "95cbe8e9",
+      "fetched_at": 1791768195443,
+      "cre_subcategory": null
     },
     {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
       "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "housing"
-      ],
-      "region": "national",
-      "title": "Rents Are Falling. So Why Are More Middle-Income Renters Falling Behind?",
-      "link": "https://www.realtor.com/news/trends/middle-income-renters-falling-behind-rent/",
-      "description": "New data show rent-payment problems rising up the income ladder as high housing costs collide with a softer labor market.",
-      "published_at": 1791568900000,
-      "score": 8,
-      "tags": [
-        "multifamily",
-        "national",
-        "data",
-        "trend"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "租金下降背景下，中等收入租户拖欠租金增加，说明就业和住房成本压力正在向更广泛收入阶层扩散。该信号同时关联租赁住宅现金流和家庭财务健康，影响面较大。",
-      "section": "sunbelt",
-      "extended_window": true,
-      "title_zh": "租金虽降，中等收入租客却更易拖欠",
-      "summary_zh": "租金支付问题向中等收入阶层扩散，高住房成本叠加就业市场走弱",
-      "impact": "short-neg",
-      "id": "714a495e",
-      "fetched_at": 1791681722304
-    },
-    {
-      "source_id": "rebusiness-online",
-      "source_name": "REBusiness Online",
-      "source_tier": "A",
-      "source_weight": 6,
+      "source_weight": 7,
       "source_tags": [
         "mixed-asset",
         "deals"
       ],
       "region": "national",
-      "title": "JLL Arranges $100M Financing for Two New Multifamily Properties in North Florida",
-      "link": "https://rebusinessonline.com/jll-arranges-100m-financing-for-two-new-multifamily-properties-in-north-florida/",
-      "description": "JACKSONVILLE AND ST. AUGUSTINE, FLA. —&#160;JLL Capital Markets has arranged $100 million in bridge financing for two multifamily properties in North Florida: The Pointe at Davis Creek, a 288-unit, garden-style community located at 12175 Philips Highway in Jacksonville, and The Bradley St. Augustine, a 250-unit, garden-style community located at 350 Bay Laurel Drive in St. Augustine. Matthew Lawton, Travis Anderson, Melissa Quinn, Gregg Shapiro, Dan Kearns, Kelsey Bawcombe, Streeter Simmons and Rob Rothaug of JLL secured floating-rate construction take-out financing through TPG Real Estate Cre",
-      "published_at": 1791553762000,
-      "score": 8,
+      "title": "Landmark Delivers Tallest Student Housing Property in Philadelphia's University City",
+      "link": "https://www.connectcre.com/stories/landmark-delivers-tallest-student-housing-property-in-philadelphias-university-city/",
+      "description": "Landmark Properties has delivered The Mark Philadelphia, a 909-bed student housing community in the University City neighborhood. Rising 34 stories, The Mark is the tallest student housing property in the University City submarket and is Landmark’s second ground-up development in Philadelphia, following The Standard at Philadelphia, which opened in 2023. The property at 3615-35 Chestnut ... The post Landmark Delivers Tallest Student Housing Property in Philadelphia's University City appeared first on Connect CRE .",
+      "published_at": 1791761937000,
+      "score": 13,
       "tags": [
         "multifamily",
-        "florida",
-        "deals",
-        "lender"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "JLL为佛罗里达两处共538套多户物业安排1亿美元过桥融资，直接反映Sun Belt租赁住宅的资本流动。单笔融资达到重要中型交易规模，具有区域和机构市场意义。",
-      "section": "sunbelt",
-      "extended_window": true,
-      "title_zh": "JLL为North Florida两处公寓融资$100M",
-      "summary_zh": "JLL完成$100M bridge financing，覆盖Jacksonville和St. Augustine共538套公寓",
-      "impact": "long-pos",
-      "id": "5739e646",
-      "fetched_at": 1791681722304
-    },
-    {
-      "source_id": "nrhc",
-      "source_name": "National Rental Home Council (NRHC)",
-      "source_tier": "E",
-      "source_weight": 9,
-      "source_tags": [
-        "btr-sfr",
-        "institutional"
-      ],
-      "region": "national",
-      "title": "84% of investors say rising home insurance premiums impacted their cash flow in 2026 &#8211; Fast Company",
-      "link": "https://www.fastcompany.com/91614167/housing-market-investors-84-say-rising-home-insurance-premiums-impacted-their-cash-flow-in-2026",
-      "description": "",
-      "published_at": 1791565117000,
-      "score": 11,
-      "tags": [
-        "btr-sfr",
-        "institutional"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "_from_fallback": true,
-      "section": "btr",
-      "extended_window": true,
-      "title_zh": "84%投资者称保险涨价侵蚀BTR现金流",
-      "summary_zh": "调查显示84%投资者受2026年home insurance涨价影响，BTR现金流明显承压",
-      "impact": "short-neg",
-      "id": "277e6c6b",
-      "fetched_at": 1791681722304
-    },
-    {
-      "source_id": "realtor-news",
-      "source_name": "Realtor.com News",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "housing"
-      ],
-      "region": "national",
-      "title": "VIDEO: New Jersey Residents Protest $1.8B Data Center in Their Neighborhood",
-      "link": "https://www.realtor.com/news/trends/kenilworth-nj-data-center-protest-coreweave-video/",
-      "description": "Residents of Kenilworth, NJ are taking to the streets to rally against the construction of a massive new data center.",
-      "published_at": 1791651660000,
-      "score": 10,
-      "tags": [
-        "data-center",
         "construction",
         "developer"
       ],
       "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "新泽西居民反对18亿美元数据中心项目，涉及大规模数据中心资本开支、社区影响和电力基础设施。项目金额和行业代表性都较高，属于重要全国CRE信号。",
+      "importance": 3,
+      "selector_reason": "Landmark Properties在费城交付909床学生公寓项目，并成为University City最高的学生住宅建筑。该项目体现学生住房开发和城市核心区大型租赁资产供给的持续推进。",
       "section": "cre",
-      "title_zh": "New Jersey居民抗议$1.8B数据中心",
-      "summary_zh": "Kenilworth居民反对邻里建设大型data center，项目审批与施工面临阻力",
-      "impact": "short-neg",
-      "id": "dd3ba02d",
-      "fetched_at": 1791681722304,
-      "cre_subcategory": "数据中心"
+      "title_zh": "Landmark 交付 Philadelphia 学生公寓",
+      "summary_zh": "The Mark Philadelphia 909床、34层，为University City最高学生住房",
+      "impact": "long-pos",
+      "id": "93ebbb2f",
+      "fetched_at": 1791768195443,
+      "cre_subcategory": null
     },
     {
-      "source_id": "rebusiness-online",
-      "source_name": "REBusiness Online",
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
       "source_tier": "A",
-      "source_weight": 6,
+      "source_weight": 8,
       "source_tags": [
         "mixed-asset",
         "deals"
       ],
       "region": "national",
-      "title": "Equus Capital Partners Acquires 300,075 SF Industrial Development in Shrewsbury, Massachusetts",
-      "link": "https://rebusinessonline.com/equus-capital-partners-acquires-300075-sf-industrial-development-in-shrewsbury-massachusetts/",
-      "description": "SHREWSBURY, MASS. — Philadelphia-based investment firm Equus Capital Partners has acquired Centech Park North, a 300,075-square-foot industrial development in Shrewsbury, located just outside of Worcester. Developed by NorthBridge Partners and completed in 2023, Centech Park North comprises two buildings totaling 195,975 and 103,500 square feet. The buildings feature clear heights of 36 feet and a combined 64 dock-high doors and four drive-in doors. The park was fully leased at the time of sale to tenants in industries such as life sciences, advanced manufacturing and commercial services. The ",
-      "published_at": 1791562870000,
-      "score": 8,
+      "title": "Deutsche Hypo Finances Zadelhoff&#039;s Amsterdam Offices With €75M Loan",
+      "link": "https://www.bisnow.com/news/netherlands/office/deutsche-hypo-finances-amsterdam-zadelhoff-office-portfolio-with-euro75m-loan",
+      "description": "The 10-year loan will be used to finance five properties across Amsterdam, including the Havengebouw, a protected heritage monument building in the city center.",
+      "published_at": 1791567541000,
+      "score": 9,
       "tags": [
-        "industrial",
+        "office",
         "deals",
-        "institutional"
+        "lender"
       ],
       "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "机构投资者收购30万平方英尺工业开发项目，体现物流和工业地产资产仍有机构资本承接。资产规模较大，但交易金额未披露，因此评为行业中等重要。",
+      "importance": 3,
+      "selector_reason": "Deutsche Hypo为阿姆斯特丹五处办公物业提供7500万欧元、期限10年的融资。该交易反映办公地产在高利率环境下仍可获得长期债务资本，对全国CRE融资环境具有可比参考价值。",
       "section": "cre",
       "extended_window": true,
-      "title_zh": "Equus收购Shrewsbury 300,075 SF工业园",
-      "summary_zh": "Equus收购已全租赁的Centech Park North，面积300,075 SF，租户涵盖生命科学等行业",
-      "impact": "long-pos",
-      "id": "99d4e61d",
-      "fetched_at": 1791681722304,
-      "cre_subcategory": "工业"
+      "title_zh": "Deutsche Hypo 提供€75M Amsterdam office贷款",
+      "summary_zh": "10年期贷款覆盖5处 Amsterdam office，含市中心历史保护建筑",
+      "impact": "neutral",
+      "id": "e72b788d",
+      "fetched_at": 1791768195443,
+      "cre_subcategory": null
     },
     {
-      "source_id": "rebusiness-online",
-      "source_name": "REBusiness Online",
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
       "source_tier": "A",
-      "source_weight": 6,
+      "source_weight": 7,
       "source_tags": [
         "mixed-asset",
         "deals"
       ],
       "region": "national",
-      "title": "CNSREIT Acquires 303,000 SF Shopping Center in Phoenix",
-      "link": "https://rebusinessonline.com/cnsreit-acquires-303000-sf-shopping-center-in-phoenix/",
-      "description": "PHOENIX —&#160;Cohen &#38; Steers Income Opportunities REIT (CNSREIT) has acquired Grand Canyon Crossing, a 303,000-square-foot shopping center located in Phoenix. Walmart Supercenter anchors the property, which was 99 percent leased at the time of sale. Additional tenants include Harbor Freight Tools, Wendy’s, YouFit Health Club, Sally Beauty Supply, Nationwide Vision Center, Denny’s, Starbucks Coffee, Sonic, Jamba and Quick Quack Car Wash. The retail center was built on 33 acres in 2005. CNSREIT acquired Grand Canyon Crossing through a joint venture with the Sterling Organization. Further de",
-      "published_at": 1791557489000,
+      "title": "Flexday Opens Flexible Office Space in Chicago’s Loop",
+      "link": "https://www.connectcre.com/stories/flexday-opens-flexible-office-space-in-chicagos-loop/",
+      "description": "JLL announced that Flexday, a national provider of flexible office solutions, has launched four fractional office suites at PNC Centre at One North Franklin in the heart of Chicago's Loop. The suites total more than 25,000 square feet and are designed to accommodate teams of 10 to 70 with flexible, on-demand, and recurring terms, giving ... The post Flexday Opens Flexible Office Space in Chicago’s Loop appeared first on Connect CRE .",
+      "published_at": 1791581803000,
       "score": 8,
       "tags": [
-        "retail",
-        "phoenix",
-        "deals",
-        "institutional"
+        "office"
       ],
       "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Cohen & Steers旗下REIT收购凤凰城30.3万平方英尺、99%出租率的购物中心，体现机构资本在零售资产中的配置。交易规模和REIT参与使其达到中等行业重要性。",
+      "importance": 3,
+      "selector_reason": "Flexday在芝加哥Loop推出总计超过2.5万平方英尺的灵活办公套间，面向小型和中型团队提供按需租赁。该扩张反映办公市场对灵活空间和短租产品的持续需求。",
       "section": "cre",
       "extended_window": true,
-      "title_zh": "CNSREIT收购Phoenix购物中心",
-      "summary_zh": "CNSREIT收购303,000 SF Grand Canyon Crossing，Walmart主导且出租率达99%",
-      "impact": "long-pos",
-      "id": "0657f36d",
-      "fetched_at": 1791681722304,
+      "title_zh": "Flexday 进驻 Chicago Loop 灵活 office",
+      "summary_zh": "PNC Centre 新增逾25K SF fractional office，服务10至70人团队",
+      "impact": "neutral",
+      "id": "507ac872",
+      "fetched_at": 1791768195443,
+      "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Apartment Property in Downtown Wenatchee Changes Hands",
+      "link": "https://www.connectcre.com/stories/apartment-property-in-downtown-wenatche-changes-hands/",
+      "description": "Tamarack, a 23-unit apartment community at 211 N. Delaware Avenue in Wenatchee, Washington, has sold for $3.25 million. Kidder Mathews Vice President Max Frame of the Simon &#124; Anderson Multifamily Team represented the seller, Dan Dahl. The 21,400-square-foot garden-style community is located steps from downtown Wenatchee and offers investors a value-add opportunity in a highly ... The post Apartment Property in Downtown Wenatchee Changes Hands appeared first on Connect CRE .",
+      "published_at": 1791581099000,
+      "score": 8,
+      "tags": [
+        "multifamily",
+        "deals"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "华盛顿州Wenatchee一处23户公寓社区以325万美元成交，买方将其视为增值型租赁资产。虽然规模较小，但该交易反映区域多户住宅投资者对小型租赁物业的定价和收购活动。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "Wenatchee 市中心公寓以$3.25M易手",
+      "summary_zh": "23户Tamarack成交，21.4K SF garden-style资产具 value-add 空间",
+      "impact": "neutral",
+      "id": "c7e8b3b4",
+      "fetched_at": 1791768195443,
       "cre_subcategory": null
     },
     {
@@ -494,227 +536,190 @@
         "deals"
       ],
       "region": "national",
-      "title": "Jemal Real Estate, DivcoWest Plan Office-to-Residential Conversion in D.C.’s West End",
-      "link": "https://rebusinessonline.com/jemal-real-estate-divcowest-plan-office-to-residential-conversion-in-d-c-s-west-end/",
-      "description": "WASHINGTON, D.C. —&#160;Jemal Real Estate Strategies and DivcoWest have formed a joint venture to complete an office-to-residential conversion project in Washington, D.C.’s West End district. Madison Realty Capital provided a $40 million loan to fund the acquisition and predevelopment costs.&#160;&#160;&#160; Upon completion of the project, the existing 342,000-square-foot office building located at 1255 23rd St. NW will feature approximately 323 apartments, as well as up to 36 affordable units. Roughly 22,000 square feet of ground-floor retail space will remain in place. Additional project de",
-      "published_at": 1791552909000,
-      "score": 8,
+      "title": "Cushman &#038; Wakefield Brokers $89M Sale of Two-Property Seniors Housing Portfolio in Mid-Atlantic",
+      "link": "https://rebusinessonline.com/cushman-wakefield-brokers-89m-sale-of-two-property-seniors-housing-portfolio-in-mid-atlantic/",
+      "description": "GREAT FALLS, VA. AND QUEENSTOWN, MD. — Cushman &#38; Wakefield has brokered the $89 million sale of two assisted living and memory care facilities in Virginia and Maryland. The portfolio includes The Residence at Colvin Run, a 62-unit community built in 2022 and located at 1131 Walker Road in Great Falls, and Queenstown Landing, a 68-unit community built in 2021 and located at 120 Shoreway Drive in Queenstown. The facilities were 94 percent occupied at the time of sale. Joshua Jandris, Brett Gardner, Robert Bracci and Evan Jakobsze of Cushman &#38; Wakefield represented the sellers — Buvermo I",
+      "published_at": 1791553625000,
+      "score": 7,
       "tags": [
-        "office",
-        "deals",
-        "construction",
-        "developer"
-      ],
-      "heat_signals": [],
-      "importance": 4,
-      "selector_reason": "Jemal与DivcoWest计划将华盛顿特区34.2万平方英尺办公楼改建为住宅，并获得4000万美元贷款。大型办公转住宅项目反映办公资产重定位和城市住房供给政策的重要趋势。",
-      "section": "cre",
-      "extended_window": true,
-      "title_zh": "D.C. West End办公楼将改建323套公寓",
-      "summary_zh": "Jemal与DivcoWest获$40M贷款，计划将342,000 SF办公楼改建为约323套住宅",
-      "impact": "long-pos",
-      "id": "fca7240f",
-      "fetched_at": 1791681722304,
-      "cre_subcategory": "办公"
-    },
-    {
-      "source_id": "bisnow",
-      "source_name": "Bisnow",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Stephen Ross, Jeffrey Soffer Scrap Plans For Miami Airport Hotel Project",
-      "link": "https://www.bisnow.com/news/south-florida/hotel/steve-ross-jeffrey-soffer-scrap-miami-airport-hotel-project-after-faa-pushback",
-      "description": "The developers had gone back and forth with the FAA, but to no avail. Now, the county is trying to speed up the process to get new proposals for the site.",
-      "published_at": 1791568591000,
-      "score": 10,
-      "tags": [
-        "hotel",
-        "florida",
-        "construction",
-        "developer"
-      ],
-      "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "迈阿密机场酒店项目因FAA问题被开发方放弃，涉及大型城市开发、航空监管和土地再利用。项目取消具有区域影响，但缺少足以改变全国市场的规模。",
-      "section": "cre",
-      "extended_window": true,
-      "title_zh": "Stephen Ross等取消Miami机场酒店计划",
-      "summary_zh": "开发商因FAA审批无果放弃项目，Miami-Dade County拟加快征集新方案",
-      "impact": "short-neg",
-      "id": "9efd509a",
-      "fetched_at": 1791681722304,
-      "cre_subcategory": "酒店"
-    },
-    {
-      "source_id": "rebusiness-online",
-      "source_name": "REBusiness Online",
-      "source_tier": "A",
-      "source_weight": 6,
-      "source_tags": [
-        "mixed-asset",
-        "deals"
-      ],
-      "region": "national",
-      "title": "Lansing Melbourne Recapitalizes 156-Unit Multifamily Property in Nashua, New Hampshire",
-      "link": "https://rebusinessonline.com/lansing-melbourne-recapitalizes-156-unit-multifamily-property-in-nashua-new-hampshire/",
-      "description": "NASHUA, N.H. —Lansing Melbourne Group, a North Carolina-based owner-operator, has recapitalized The Flats on High Street, a 156-unit multifamily property in the southern New Hampshire city of Nashua, via an equity investment from a subsidiary of Dallas-based Leon Capital Group. The amount was not disclosed, but Leon Capital provided the funds in conjunction with another equity investment in a student housing property in Binghamton. Combined, the two equity investments roughly $19 million. The Flats on High Street is located in the city’s downtown area and offers studio, one- and two-bedroom fl",
-      "published_at": 1791561841000,
-      "score": 9,
-      "tags": [
-        "multifamily",
+        "senior-housing",
         "deals",
         "institutional"
       ],
-      "heat_signals": [
-        "dallas"
-      ],
+      "heat_signals": [],
       "importance": 3,
-      "selector_reason": "156套多户物业通过机构股权投资完成资本重组，反映中型公寓资产在当前融资环境下寻求资本支持。交易具有融资市场参考价值，但金额未披露。",
+      "selector_reason": "Cushman & Wakefield促成两处中大西洋地区老年住房和记忆护理设施以8900万美元出售。该组合交易涉及人口老龄化相关的医疗和住宅地产资产，具有全国CRE投资参考意义。",
       "section": "institutional",
       "extended_window": true,
-      "title_zh": "Lansing Melbourne为Nashua公寓引入资本",
-      "summary_zh": "156套The Flats完成recap，Leon Capital参与两项股权投资合计约$19M",
+      "title_zh": "Cushman 促成$89M senior housing 组合出售",
+      "summary_zh": "VA与MD两处 assisted living 资产94%入住，交易额$89M",
       "impact": "long-pos",
-      "id": "d5e1eae2",
-      "fetched_at": 1791681722304
+      "id": "86531b03",
+      "fetched_at": 1791768195443
     },
     {
-      "source_id": "multi-housing-news",
-      "source_name": "Multi-Housing News",
-      "source_tier": "A",
+      "source_id": "nrhc",
+      "source_name": "National Rental Home Council (NRHC)",
+      "source_tier": "E",
       "source_weight": 9,
       "source_tags": [
-        "multifamily"
+        "btr-sfr",
+        "institutional"
       ],
       "region": "national",
-      "title": "Capodagli Property Receives $68M for NJ Development - Multi-Housing News",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTEZpVTZ2ckdnRTFHMncwRTdWdHJ0czdSb0VVaVVWbmdEUDE1RndXQk1vT1pKbGhtX1NvQnpkVEtxcjViSVFXcnNIX3U4Ty0yU211bzVwdjlEOTl6TEJrTmg2OXlFOWJVTGFGeEtNWG9WRDY5eUt5Qy1aZGJpb1NsWFdINXNhS0FVM0M5Zg?oc=5",
-      "description": "Capodagli Property Receives $68M for NJ Development &nbsp;&nbsp; Multi-Housing News",
-      "published_at": 1791208472000,
-      "score": 9,
+      "title": "Property tax delinquency reaches highest level since 2017 &#8211; HousingWire",
+      "link": "https://www.housingwire.com/articles/property-tax-delinquency-reaches-highest-level-since-2017/",
+      "description": "The national property tax delinquency rate has risen to 5.2% so far in 2026, up from 4.2% in 2025, according to Cotality&#8217;s 2026 Property Tax Delinquency Report. The report analyzes mortgages where homeowners pay property taxes directly to their local taxing authority, drawing on approximately 15 million tax reporting events across 8 million non-escrowed mortgages. While 2026 year-to-date rate is the highest since 2017, it remains below the long-term average of 5.4% and partly reflects seasonal patterns, Cotality said. &#8220;Property tax delinquency has moved from the lowest level in our data to the highest since 2017 in a matter of months,&#8221; said Sean Graham, senior vice president of servicing and payment solutions at Cotality. &#8220;Property taxes are one of the largest costs of homeownership, and a rise of this size tells us more households are finding those bills harder to manage.&#8221; Mississippi reports most delinquencies for 13th time in 14 years Mississippi had the highest delinquency rate in 2025 at 15.1%, nearly three times the national rate, and has ranked highest in 13 of the 14 years since 2012. Kansas (9.6%), New Jersey (9.5%), Louisiana (9.0%) and Massachusetts (8.9%) complete the top five. North Dakota recorded the lowest rate at 1.4%, followed by Wisconsin (1.5%), Wyoming (1.6%), Illinois (2.1%) and Minnesota (2.3%). The report found that state unemployment rates had no meaningful relationship with property tax delinquency. Delinquency was more closely linked to HOA liens and to mortgages more than 90 days past due. &#8220;The gap between states is wide, and it&#8217;s remarkably consistent,&#8221; said Graham. &#8220;States with high delinquency one year almost always have high delinquency the next, which suggests local factors, such as tax levels, collection processes and the wider costs of homeownership all play a major role in whether homeowners stay current.&#8221; Louisiana sees sharpest rise, New Mexico improves Louisiana recorded the largest increase in delinquencies in 2025, with its rate rising from 5.8% to 9.0% over the year. Alabama (5.2% to 7.1%) and Kansas (8.1% to 9.6%) also saw significant increases. New Mexico saw the largest decline, with its rate falling from 9.4% to 5.4%. Washington, D.C. (9.5% to 6.0%) and Arizona (9.2% to 7.2%) also improved. &#8220;While the overall ranking of states rarely changes, some states emerge as outliers,&#8221; said Graham. &#8220;Louisiana&#8217;s jump of more than three percentage points is the kind of shift lenders and local governments should be tracking closely.&#8221; States that sell lien certificates to investors to recover unpaid taxes averaged a delinquency rate of 6.1%, compared with 4.5% in states where counties sell the property itself. In tax lien states, the home is only sold if the owner fails to repay the lien within a set redemption period. &#8220;Our data shows that how a state collects unpaid taxes makes a measurable difference,&#8221; said Graham. &#8220;In tax lien states, homeowners typically have more time before they risk losing their home. That sounds like a benefit, but in practice, delinquency rates there are higher.&#8221; This article was generated using HousingWire Automation and reviewed by a HousingWire editor before publication. Related More: Cotality Homeownership Property Tax",
+      "published_at": 1791565101000,
+      "score": 10,
       "tags": [
-        "multifamily",
-        "construction",
-        "deals",
-        "developer"
+        "housing",
+        "national",
+        "data",
+        "distress",
+        "lender"
       ],
       "heat_signals": [],
       "importance": 4,
-      "selector_reason": "新泽西多户开发项目获得6800万美元融资，反映区域租赁住宅建设仍能获得较大规模资本。单笔金额达到中型项目级别，具有一定机构融资信号价值。",
-      "section": "institutional",
+      "selector_reason": "全国房产税拖欠率升至5.2%，为2017年以来最高水平，且覆盖约800万笔非托管税款贷款。该数据显示房主现金流压力正在扩大，对住宅信贷、止赎和地方财政均有影响。",
+      "section": "national",
       "extended_window": true,
-      "title_zh": "Capodagli Property获$68M开发融资",
-      "summary_zh": "Capodagli Property获得$68M资金推进New Jersey开发，项目建设获得支持",
-      "impact": "long-pos",
-      "id": "23468b9b",
-      "fetched_at": 1791681722304
+      "title_zh": "property tax delinquency 升至2017来高位",
+      "summary_zh": "2026拖欠率升至5.2%，高于2025的4.2%，家庭成本压力加大",
+      "impact": "short-neg",
+      "id": "030d0fe3",
+      "fetched_at": 1791768195443
     },
     {
-      "source_id": "national-mortgage-news",
-      "source_name": "National Mortgage News",
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
       "source_tier": "A",
-      "source_weight": 7,
+      "source_weight": 6,
       "source_tags": [
-        "rates",
-        "macro"
+        "housing"
       ],
       "region": "national",
-      "title": "Place rivals mortgage fintechs with Ardley acquisition",
-      "link": "https://www.nationalmortgagenews.com/news/place-rivals-mortgage-fintechs-with-ardley-acquisition",
-      "description": "The move brings yet another real estate platform under the company's wing, which claims to have 20% of the nation's homeowners in its ecosystem.",
-      "published_at": 1791554400000,
+      "title": "Saving America’s Aging Homes: Inside the Bipartisan Push for HUD Repair Grants",
+      "link": "https://www.realtor.com/news/trends/americas-aging-homes-housing-shortage-repair-costs/",
+      "description": "Older homes are carrying more of the housing market’s affordability burden, even as repair and maintenance costs climb.",
+      "published_at": 1791579589000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "national",
+        "policy",
+        "regulator"
+      ],
+      "heat_signals": [
+        "housing market"
+      ],
+      "importance": 4,
+      "selector_reason": "两党正在推动针对老旧住房维修的HUD补助政策，以缓解维修成本上升和可负担住房供给压力。该政策若落地将影响全国存量住房质量、低收入家庭负担和联邦住房支出。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "两党推动 HUD 老旧住房维修补助",
+      "summary_zh": "老房承担 affordability 需求，但维修成本上升，补助可缓解存量压力",
+      "impact": "long-pos",
+      "id": "519896d8",
+      "fetched_at": 1791768195443
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Insurance sticker shock nudges longtime homeowners to list - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBsekF5alNZdDdHcURkUTQ1WnU4eGFlc0h5b0RZdWRmTG5qaHE2aXlEcGR0R3RYTjlYRWYzV0toOF9DelhZMG5CSnA2S3AzMkpPNFhhYjlsTGd6YVhKaWFFeTllVmZyVDNvWVcySVdvWE5GMUJ2TEE?oc=5",
+      "description": "Insurance sticker shock nudges longtime homeowners to list &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1791557433000,
       "score": 9,
       "tags": [
         "housing",
         "national",
-        "deals",
+        "trend"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "保险成本冲击正在促使部分长期持有住房的业主挂牌出售。保险费用上升可能改变高风险地区的住房供给、交易流动性和房屋持有成本，是全国住宅市场的重要结构性压力。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "保险费飙升促老房主挂牌",
+      "summary_zh": "insurance sticker shock 推动长期房主出售，或增加存量但压制持有意愿",
+      "impact": "neutral",
+      "id": "96a7bb13",
+      "fetched_at": 1791768195443
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Appeals court rejects broker’s bid to revive antitrust suit against NAR - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbDEwRXJ2VjViSmIzMjljSi15cXA3cEs2Nnk4U1hqaWxWZ0Q5TUM3QTlDZExFTHl5LUJvNFU5V1k2am1scXVNQzVPMmdWazNKRy1KREMxT2xmWmY3dDV1MEFCdHdOMmRjTU9BTDVGX09iemJjZFRwaWNpQWlLeGNJVkFDU2RGRFN6bTVKNUZzVjVKaEpXMWc?oc=5",
+      "description": "Appeals court rejects broker’s bid to revive antitrust suit against NAR &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1791481205000,
+      "score": 8,
+      "tags": [
+        "housing",
+        "national",
+        "regulation",
         "brokerage"
       ],
       "heat_signals": [],
-      "importance": 3,
-      "selector_reason": "Place通过收购Ardley继续整合按揭金融科技平台，并声称覆盖全国约五分之一房主生态。并购体现平台集中化趋势，但交易细节不足以评为大型并购。",
-      "section": "institutional",
+      "importance": 4,
+      "selector_reason": "上诉法院驳回经纪人恢复对NAR反垄断诉讼的请求，为经纪佣金和行业规则争议提供了新的司法进展。该裁决可能影响全国经纪业务模式、佣金安排和行业竞争格局。",
+      "section": "national",
       "extended_window": true,
-      "title_zh": "Place收购Ardley，扩张mortgage fintech版图",
-      "summary_zh": "收购将Ardley纳入Place平台，其生态覆盖约20%美国房主，竞争力提升",
-      "impact": "long-pos",
-      "id": "31819572",
-      "fetched_at": 1791681722304
+      "title_zh": "上诉法院驳回经纪人重启 NAR 反垄断案",
+      "summary_zh": "法院拒绝恢复对 NAR 的 antitrust suit，brokerage 法务压力暂缓",
+      "impact": "neutral",
+      "id": "1572f504",
+      "fetched_at": 1791768195443
     },
     {
-      "source_id": "national-mortgage-news",
-      "source_name": "National Mortgage News",
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
       "source_tier": "A",
-      "source_weight": 7,
+      "source_weight": 6,
       "source_tags": [
-        "rates",
-        "macro"
+        "housing"
       ],
       "region": "national",
-      "title": "Mortgage rates keep spiking, but could ease by year-end",
-      "link": "https://www.nationalmortgagenews.com/news/mortgage-rates-keep-spiking-but-could-ease-by-year-end",
-      "description": "The 30-year fixed rate mortgage increased 12 basis points this week, following a 25 basis point gain seven days prior, as Treasury yields stay elevated.",
-      "published_at": 1791478562000,
-      "score": 15,
+      "title": "Price Cuts Are the Best Concession To Motivate First-Time Buyers, Survey Finds",
+      "link": "https://www.realtor.com/news/trends/price-cuts-seller-concession-motivate-first-time-buyers-neighbors-bank/",
+      "description": "Trends Follow Us On Google Price Cuts Are the Best Concession To Motivate First-Time Buyers, Survey Finds By Anna D&#x27;Amico October 11, 2026 Realtor.com/Getty Images First-time homebuyers are gaining confidence in their ability to make the correct decisions in a challenging market. However, one major factor still needs to change before many prospective buyers will take the leap: Sellers need to bring home prices down. In a survey of people who are searching for their first home or purchased one within the past year, Neighbors Bank found that first-time buyers are making informed decisions, negotiating and walking away from deals when necessary, and making concessions to find a home they can afford. When it comes to strategies to woo these buyers, 40% of survey respondents said a price reduction is the seller concession that would most boost their confidence to move forward with a purchase. In September, the national median list price for the United States was $419,250, according to Realtor.com® data . This price was down 1.4% from last September, marking an 11th consecutive month of year-over-year declines. While listing prices are slowly coming down, buyers are still looking to sellers to sweeten the pot. Neighbors Bank found that 86% of first-time buyers feel comfortable making an offer below a home’s asking price, and 57% have walked away from a home because they felt they had the negotiating power to do so. After years of navigating a challenging market, many buyers are gaining the confidence to ask for the deal they want. Buyers are also realizing that a price cut is not the only way to save in the long term. Many buyers, up to 83%, would accept a mortgage interest rate buydown from a seller or builder. Buyers also expect sellers to make repairs before closing and assist with closing costs to reduce the amount of cash the buyer needs upfront. Mortgage rates remain a major obstacle, with 70% of respondents saying that current rates make every option feel out of reach. However, Neighbors Bank maintains that there are many more factors to take into consideration beyond the mortgage rates in the headlines. Credit history, loan type, down payment, and available seller concessions all have an impact on what a buyer’s actual mortgage rate will be. Plus, waiting specifically for mortgage rates to drop comes with some risk. Home prices can rise in the meantime, or the market can be flooded with eager buyers when the rates come down. More than a quarter of first-time buyers are aware of this risk and say that their biggest concern is waiting to buy only to see prices rise again, according to Neighbors Bank. Loading... Forty percent of first-time buyers said a price reduction is the seller concession that would most boost their confidence to move forward. (Stock image) Getty Images Because home prices, mortgage rates, available housing inventory, and other factors are constantly changing, timing the market perfectly is very difficult, according to Bob Curtis , founder and CEO of GetWyz . “The bottom line: Don’t buy a home because you think rates are about to go up, and don’t postpone buying solely because you think rates are about to come down,” Curtis tells Realtor.com. “Buy when you find the right home and can comfortably afford the total cost of owning it.” To find the right home at a price they can afford, buyers are expanding their search. Nearly 90% of buyers are open to buying outside a major metro to find an affordable home. Buyers are also looking at different neighborhoods and smaller homes as ways to increase affordability. Ben Mizes , a real estate agent and investor in St. Louis, says that he’s seeing first-time buyers show more awareness with their money. “Rather than spending their budgets on the best house and backyard, they are looking farther away at smaller houses. They are doing more research on houses that can be improved with minor changes,” Mizes tells Realtor.com. “Many people are deciding that they can li",
+      "published_at": 1791737700000,
+      "score": 21,
       "tags": [
         "housing",
         "national",
-        "rates"
-      ],
-      "heat_signals": [
-        "mortgage rate",
-        "30-year fixed",
-        "year-end"
-      ],
-      "importance": 4,
-      "selector_reason": "30年期按揭利率连续上涨并可能在年底回落，直接影响全国购房负担和成交预期。利率变化覆盖全市场，属于重要住宅金融信号。",
-      "section": "national",
-      "extended_window": true,
-      "title_zh": "30Y mortgage一周再涨12 bps",
-      "summary_zh": "30Y fixed mortgage本周上升12 bps，前周已涨25 bps，Treasury收益率高企",
-      "impact": "short-neg",
-      "id": "e329064b",
-      "fetched_at": 1791681722304
-    },
-    {
-      "source_id": "nahb-eyeonhousing",
-      "source_name": "NAHB Eye on Housing",
-      "source_tier": "B",
-      "source_weight": 8,
-      "source_tags": [
-        "data",
         "trend",
-        "policy"
-      ],
-      "region": "national",
-      "title": "ARM Share Increased as Mortgage Rates Spiked",
-      "link": "https://eyeonhousing.org/2026/10/arm-share-increased-as-mortgage-rates-spiked/",
-      "description": "Mortgage application activity declined as the 30-year fixed mortgage rate rose sharply. The Mortgage Bankers Association’s (MBA) Market Composite Index, a measure of total mortgage application volume, decreased 7.7% month-over-month in September on a seasonally adjusted basis. Compared to a year ago, total mortgage applications were lower by 35.4%. Higher fixed mortgage rates contributed to [&#8230;]",
-      "published_at": 1791395349000,
-      "score": 12,
-      "tags": [
-        "housing",
-        "national",
-        "rates"
+        "lender"
       ],
       "heat_signals": [
         "mortgage rate",
-        "30-year fixed"
+        "trend",
+        "trends",
+        "year-over-year"
       ],
-      "importance": 4,
-      "selector_reason": "固定利率上升导致按揭申请量环比下降7.7%、同比下降35.4%，同时ARM占比上升。数据清晰反映利率冲击对全国住宅融资需求的影响，重要性较高。",
+      "importance": 3,
+      "selector_reason": "调查显示，降价可能是当前卖方吸引首次购房者最有效的让利方式。该趋势反映高利率和房价对全国购房决策的持续压制，属于常规住宅市场动态。",
       "section": "national",
-      "extended_window": true,
-      "title_zh": "Mortgage rate飙升推动ARM占比上升",
-      "summary_zh": "MBA数据显示9月申请量环比降7.7%、同比降35.4%，高固定利率推升ARM需求",
+      "title_zh": "降价最能打动 first-time buyers",
+      "summary_zh": "40%首购者称 price cut 最提振信心，86%愿低于要价出价",
       "impact": "short-neg",
-      "id": "82aba09a",
-      "fetched_at": 1791681722304
+      "id": "c966f5cf",
+      "fetched_at": 1791768195443
     }
   ],
   "errors": [
@@ -750,14 +755,14 @@
   "_diagnostics": {
     "writer_mode": "global",
     "sectionsUnderMin": [],
-    "window_hours": 48,
+    "window_hours": 72,
     "pool_sizes": {
       "24h": 10,
-      "48h": 84,
-      "72h": 116
+      "48h": 18,
+      "72h": 79
     },
     "us_holiday": {
-      "today_us": "2026-10-10",
+      "today_us": "2026-10-11",
       "today_us_holiday": null,
       "yesterday_us_holiday": null,
       "tomorrow_us_holiday": null,
@@ -768,26 +773,25 @@
     "writer_audit": [
       {
         "stage": "selector",
-        "input": 114,
-        "output": 39
+        "input": 109,
+        "output": 37
       },
       {
         "stage": "tagger",
-        "items": 39
+        "items": 37
       },
       {
         "stage": "dedupe",
-        "before": 39,
-        "after": 39
+        "before": 37,
+        "after": 37
       },
       {
         "stage": "pick",
         "section_counts": {
-          "national": 7,
+          "national": 10,
           "sunbelt": 4,
-          "btr": 1,
           "cre": 5,
-          "institutional": 3
+          "institutional": 1
         }
       },
       {
@@ -795,6 +799,6 @@
         "items": 20
       }
     ],
-    "candidate_pool_size": 114
+    "candidate_pool_size": 109
   }
 }
