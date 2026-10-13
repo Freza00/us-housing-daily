@@ -1,5 +1,289 @@
 [
   {
+    "url": "https://www.redfin.com/news/pending-home-sales-sink-rates/",
+    "tokens": [
+      "pending",
+      "home",
+      "sales",
+      "sink",
+      "near",
+      "year"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/mba-tri-merge-credit-report/",
+    "tokens": [
+      "broeksmit",
+      "merge",
+      "around",
+      "long"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/fha-credit-score-changes-vantagescore-mortgage-risk/",
+    "tokens": [
+      "credit",
+      "score",
+      "shake",
+      "help",
+      "millions",
+      "home",
+      "lenders",
+      "there",
+      "hidden",
+      "risk"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.redfin.com/news/mortgage-rates-ahead-cpi-october-12/",
+    "tokens": [
+      "eyes",
+      "wednesday",
+      "inflation",
+      "markets",
+      "weigh",
+      "hikes",
+      "left"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1mektPRkVBUmNRclFKN2VYWWdGRHI3YzlsaHZFT2xoUkJmWkhnTGpMTGJ3RzlSZXB1WktaRUJVRUhjWG1CNWI2bEwzdTVoSzNMQlE1ZXl3YzM2TUo1aUdpV1VpUjhxQjRRVFRSajh3WVJEMno2U05Xaw?oc=5",
+    "tokens": [
+      "native",
+      "american",
+      "housing",
+      "bill",
+      "awaits",
+      "senate",
+      "indigenous",
+      "peoples",
+      "inman"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://rebusinessonline.com/pcd-receives-approval-for-120-acre-mixed-use-development-in-pearland-texas/",
+    "tokens": [
+      "receives",
+      "approval",
+      "120",
+      "acre",
+      "mixed",
+      "development",
+      "pearland",
+      "texas"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.bisnow.com/news/south-florida/deal-sheet/terra-lands-507m-loan-for-miami-beach-condo-tower-south-florida-deal-sheet",
+    "tokens": [
+      "terra",
+      "lands",
+      "$507m",
+      "loan",
+      "miami",
+      "beach",
+      "condo",
+      "tower",
+      "south",
+      "florida",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSGJ2eW5HTGZDbDR5ZDNHUGpMc2JiU1pEVnpja1J2WnNQa3JxRHFHNXoxTlQ0WXFYQ244LTBMT0FZMUdLN1JOamg4TldiTGc4eVZfYUFFbldDNXhFbUZaVTBNdHg5Q2NzTlhCWHVkSzFSNXdXX29JQ3UtMG16QnhINGNBZkZLYlRkUy1Bd2tUVTNDS1Z1dXpSM2tXcV81RnI2Xy1pRmdZV0tSVWs5NTctaDBVcmp5UQ?oc=5",
+    "tokens": [
+      "vegas",
+      "ranks",
+      "among",
+      "markets",
+      "homebuyer",
+      "concessions",
+      "review",
+      "journal"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcndNV2NpWGI3NC16b2tVV2w5RGNrX0VnV1FQZ0hJRklBbkE1bWlEcDRpQ0NjWTJ4MVFzQklIWE0wTGZXX3g1Q25OUmdnZVZhd21WMTh3WFFiOHpUWWlUT0RMZFFwaWU0TDVBRkFOSnlSeXZScDJxZkNSSEt0clZ1alhxRHNCNWwtNUlMTGNFRXRjbk9FVEpzRg?oc=5",
+    "tokens": [
+      "higher",
+      "mortgage",
+      "rates",
+      "messing",
+      "housing",
+      "market",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://rebusinessonline.com/ridgeline-capital-partners-acquires-117433-sf-medical-office-portfolio-in-texas/",
+    "tokens": [
+      "ridgeline",
+      "capital",
+      "partners",
+      "acquires",
+      "117",
+      "433",
+      "medical",
+      "office",
+      "portfolio",
+      "texas"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/data-center-community-relations/data-centers-have-become-a-tv-villain-on-the-midterm-campaign-trail",
+    "tokens": [
+      "political",
+      "campaigns",
+      "spent",
+      "$87m",
+      "making",
+      "data",
+      "centers",
+      "villain"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/ambrose-breaks-ground-on-two-facilities-at-indianapolis-logistics-park/",
+    "tokens": [
+      "ambrose",
+      "breaks",
+      "ground",
+      "facilities",
+      "indianapolis",
+      "logistics",
+      "park"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://rebusinessonline.com/kurv-underway-on-471231-sf-industrial-project-in-perth-amboy-new-jersey/",
+    "tokens": [
+      "kurv",
+      "underway",
+      "471",
+      "231",
+      "industrial",
+      "project",
+      "perth",
+      "amboy",
+      "jersey"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/multifamily/social-housing-providers-use-bond-markets-fund-expansions",
+    "tokens": [
+      "social",
+      "housing",
+      "providers",
+      "turn",
+      "bond",
+      "markets",
+      "fund",
+      "expansions"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.bisnow.com/news/denver/capital-markets/receiver-appointed-x-denver-apartment-building-near-coors-field",
+    "tokens": [
+      "receiver",
+      "appointed",
+      "denver",
+      "apartment",
+      "building",
+      "near",
+      "coors",
+      "field"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/articles/home-equity-sharing-firm-unison-is-said-to-pick-banks-for-us-ipo",
+    "tokens": [
+      "home",
+      "equity",
+      "sharing",
+      "firm",
+      "unison",
+      "pick",
+      "banks"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.bisnow.com/news/chicago/multifamily/pair-of-evanston-apartments-trade-hands-including-a-reinsdorf-backed-sale",
+    "tokens": [
+      "pair",
+      "evanston",
+      "apartment",
+      "buildings",
+      "trade",
+      "hands",
+      "including",
+      "reinsdorf",
+      "backed",
+      "sale"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/2026-midterm-election-homeowners-ballot-measures-property-tax/",
+    "tokens": [
+      "midterm",
+      "election",
+      "housing",
+      "ballot",
+      "measures",
+      "every",
+      "homeowner",
+      "needs",
+      "know"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/compass-anywhere-shareholder-lawsuit/",
+    "tokens": [
+      "lawsuit",
+      "claims",
+      "compass",
+      "downplayed",
+      "regulatory",
+      "risks",
+      "ahead",
+      "anywhere",
+      "acquisition"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/optimal-blue-acquires-usherpa/",
+    "tokens": [
+      "optimal",
+      "blue",
+      "expands",
+      "borrower",
+      "engagement",
+      "usherpa",
+      "acquisition"
+    ],
+    "shown_date": "2026-10-13"
+  },
+  {
     "url": "https://www.housingwire.com/articles/mba-originations-forecast-2027-rates/",
     "tokens": [
       "forecast",
@@ -5555,277 +5839,5 @@
       "2026"
     ],
     "shown_date": "2026-09-23"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/09/with-inflation-uptick-fed-hikes-and-signals-more-to-come/",
-    "tokens": [
-      "inflation",
-      "uptick",
-      "hikes",
-      "signals",
-      "come"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/multifamily-starts-apartment-construction-august/830679/",
-    "tokens": [
-      "multifamily",
-      "starts",
-      "plummeted",
-      "nearly",
-      "16%",
-      "august"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/fannie-mba-cut-2026-forecasts-plan-for-6-8-rates",
-    "tokens": [
-      "fannie",
-      "2026",
-      "forecasts",
-      "6.8%",
-      "rates"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/09/17/august-pending-home-sales-rises-0-point-3-percent.html",
-    "tokens": [
-      "pending",
-      "home",
-      "sales",
-      "rises",
-      "0.3%",
-      "august"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.realtor.com/research/metro-report-cards-2026/",
-    "tokens": [
-      "metro",
-      "cards",
-      "bottom",
-      "class",
-      "homebuilding",
-      "affordability"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://rebusinessonline.com/oht-partners-breaks-ground-on-360-unit-multifamily-project-in-west-houston-2/",
-    "tokens": [
-      "partners",
-      "breaks",
-      "ground",
-      "360",
-      "unit",
-      "multifamily",
-      "project",
-      "west",
-      "houston"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/mesa-arizona-hoa-foreclose-toby-newton-update/",
-    "tokens": [
-      "arizona",
-      "turns",
-      "foreclosure",
-      "$475k",
-      "home",
-      "owner",
-      "$977",
-      "debt",
-      "national",
-      "backlash"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1nRmRNUTd6X1BYUnhQWG9VSjQ5cERtaHRVMEpJVjFLclNleXRSMlpDZTFNWXNJSi1vZVp6TXJNN1hHRzduZW9iU3VWNEhNZHJ6allISWZoN0VFVWxzbU5NLXY4QlBHWDNhVDJ6cQ?oc=5",
-    "tokens": [
-      "gamls",
-      "atlanta",
-      "housing",
-      "market",
-      "continues",
-      "shift",
-      "pending",
-      "sales",
-      "fall",
-      "fifth",
-      "month",
-      "atlantaagentmagazine"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOX2JRTngyNGY0aW8zQzFZbHl5eTBrRFVSbkVxVWQwTUZpRlNJeE1McVJzdExqQTdZVkVoU014SFU3OTF5bllpenZIaEpWcDNhNnR3U0p0UjF0aHdMSmxOa1hSclBsejBZNVJKOTBjaHdaOVNBdk1pR2RKRjBuNzdOWGxxVlpfNmlYZ1JVd3NsNFdyeEJxbU1HN2tOTDBDOE5seXNR?oc=5",
-    "tokens": [
-      "apartments",
-      "appear",
-      "neighbor",
-      "samsung",
-      "longtime",
-      "austin",
-      "factory",
-      "bizjournals"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/industrial/breit-lines-up-1-7b-cmbs-loan-for-19m-sf-industrial-portfolio",
-    "tokens": [
-      "breit",
-      "lines",
-      "$1.7b",
-      "cmbs",
-      "loan",
-      "industrial",
-      "portfolio"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.bisnow.com/news/south-florida/construction-development/citadel-construction-collapse-stop-work-order-miami",
-    "tokens": [
-      "citadel",
-      "headquarters",
-      "project",
-      "under",
-      "stop",
-      "work",
-      "order",
-      "following",
-      "collapse"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.bisnow.com/news/houston/construction-development/eli-lilly-breaks-ground-record-breaking-manufacturing-facility-generation-park",
-    "tokens": [
-      "lilly",
-      "starts",
-      "building",
-      "record",
-      "$6.5b",
-      "houston",
-      "manufacturing",
-      "facility"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/office/paramount-warner-bros-antitrust-lawsuit-settlement-rob-bonta",
-    "tokens": [
-      "paramount",
-      "warner",
-      "bros",
-      "settlement",
-      "preserves",
-      "commitments",
-      "first",
-      "years"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.bisnow.com/news/new-york/capital-markets/cuny-maddd-equities-bronx-post-office-201m",
-    "tokens": [
-      "cuny",
-      "buys",
-      "historic",
-      "bronx",
-      "post",
-      "office",
-      "$201m"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/nuveen-green-capital-closes-new-hampshires-first-c-pace-financing/",
-    "tokens": [
-      "nuveen",
-      "green",
-      "capital",
-      "closes",
-      "hampshire",
-      "first",
-      "pace",
-      "financing"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/hoag-hospital-opens-1b-expansion-in-irvine/",
-    "tokens": [
-      "hoag",
-      "hospital",
-      "opens",
-      "$1b",
-      "expansion",
-      "irvine"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/wentworth-tech-breaks-ground-on-residence-tower-for-first-year-students/",
-    "tokens": [
-      "wentworth",
-      "tech",
-      "breaks",
-      "ground",
-      "residence",
-      "tower",
-      "first",
-      "year",
-      "students"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.bisnow.com/news/san-francisco/industrial/warespace-expands-western-region-footprint-south-san-francisco-industrial-acquisition",
-    "tokens": [
-      "warespace",
-      "expands",
-      "microbay",
-      "flex",
-      "industrial",
-      "concept",
-      "south",
-      "francisco",
-      "acquisition"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/walker-dunlop-arranges-86m-refi-for-flushing-affordable-quartet/",
-    "tokens": [
-      "walker",
-      "038",
-      "dunlop",
-      "arranges",
-      "$86m",
-      "refi",
-      "flushing",
-      "affordable",
-      "quartet"
-    ],
-    "shown_date": "2026-09-22"
-  },
-  {
-    "url": "https://www.bisnow.com/news/boston/life-sciences/flexible-lab-provider-closing-boston-location",
-    "tokens": [
-      "flexible",
-      "provider",
-      "closing",
-      "boston",
-      "location"
-    ],
-    "shown_date": "2026-09-22"
   }
 ]
