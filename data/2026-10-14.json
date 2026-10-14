@@ -1,0 +1,821 @@
+{
+  "date": "2026-10-14",
+  "generated_at": 1791944617221,
+  "sources_attempted": 40,
+  "sources_ok": 35,
+  "sections": [
+    {
+      "id": "national",
+      "label": "全国住宅市场",
+      "emoji": "🏠",
+      "desc": "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk",
+      "quota": 5,
+      "maxPerSource": 2,
+      "extendedWindow": false
+    },
+    {
+      "id": "sunbelt",
+      "label": "Sunbelt 住宅",
+      "emoji": "🌵",
+      "desc": "Sun Belt 各州住宅与租赁市场",
+      "quota": 4,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "btr",
+      "label": "全国 BTR / SFR",
+      "emoji": "🏘",
+      "desc": "Build-to-Rent / Single-Family Rental",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "cre",
+      "label": "全国 CRE",
+      "emoji": "🏢",
+      "desc": "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE",
+      "quota": 5,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": false
+    },
+    {
+      "id": "institutional",
+      "label": "全国机构资本",
+      "emoji": "💰",
+      "desc": "PE / REIT 募资、并购、IPO、机构持仓",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    }
+  ],
+  "items": [
+    {
+      "source_id": "realtor-research",
+      "source_name": "Realtor.com Research",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "Existing Home Sales Point to a Slow Market Despite Uptick",
+      "link": "https://www.realtor.com/research/existing-home-sales-september-2026/",
+      "description": "Economic Coverage , Existing Home Sales Existing Home Sales Point to a Slow Market Despite Uptick By Danielle Hale Oct 13, 2026 September 2026 existing-home sales Existing home sales ran at a 3.99M pace in September, 2.2% behind the September 2025 pace (4.08M) but up 1.5% from their August pace of 3.93M which was revised down from the initially reported tally (3.98M). Mortgage rates climbed in July and remained near 6.7% in August when these closed sales likely went under contract, which likely helped the market regain some momentum in September. While 6.7% looks like a good mortgage rate given that the market is well-above 7% today , in early August this rate was a 2026 high and the first time in 44 weeks that mortgage rates had surpassed their prior year level which is why we see a decline from last year. Home sales are likely to remain below their year-ago pace for the rest of 2026 as mortgage rates remain high. The month to month pickup NAR’s pending home sales steadied in August dropping just (0.3%) from July, but trailed the prior year by a larger gap (-4.7%). Meanwhile, Realtor.com September pending home sales also dropped by a larger margin , signaling a rough patch for existing home sales. After a rapid repricing in the second half of September, the 10-year yield has hovered in a narrower 5.2% to 5.3% range in the last two weeks, a stability that will eventually help to stabilize mortgage rates and rebuild homebuyer confidence for navigating the market, but this takes time. Rising Inventory and Slower Sales Keep Months Supply Elevated After climbing to 4.9 months in August, its highest pace since November 2015 (5.1), months supply was revised to 4.8 months, a mark it held in September, amid lower inventory and lower sales. Realtor.com data show that even though new listings remained sluggish in September , not topping their prior year pace as was common in the spring, active inventory continues to rise. First-time Home Buyers Gain Ground First-time home buyer share edged higher, building on gains last month. In September, first- time home buyers purchased 31% of sales, up from 30% in the prior month and year. We’re past the worst of the starter-home supply crunch nationwide, which may help entry-level buyers gain a foothold, but the local picture remains mixed according to the latest Realtor.com report. Home Prices Rose Modestly Home sales prices rose 1.3% from the prior year even as they slipped lower on a monthly basis, as is typical seasonally. The typical U.S. asking price has been softer in 2026 according to Realtor.com data, lagging behind by 1.4% in September .",
+      "published_at": 1791917384000,
+      "score": 24,
+      "tags": [
+        "housing",
+        "national",
+        "data"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "existing home sales",
+        "pending home sales",
+        "existing-home sales",
+        "pending home sales"
+      ],
+      "importance": 5,
+      "selector_reason": "9月成屋销售、同比表现和利率影响提供了全国住宅市场的关键宏观读数。该数据覆盖全国交易量与市场节奏，属于重要住宅市场指标。",
+      "section": "national",
+      "title_zh": "existing home sales 小幅回升，市场仍低迷",
+      "summary_zh": "9月成交年化3.99M，环比增1.5%但同比降2.2%，高利率将压制全年需求",
+      "impact": "short-neg",
+      "id": "d884660a",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "Fed's Waller says higher US yields could help cool demand",
+      "link": "https://www.nationalmortgagenews.com/articles/feds-waller-says-higher-us-yields-could-help-cool-demand",
+      "description": "Capital markets Fed&#x27;s Waller says higher US yields could help cool demand By Swati Pandey and Enda Curran Published October 13, 2026, 12:41 p.m. EDT 3 Min Read Facebook Twitter LinkedIn Email Federal Reserve Governor Christopher Waller said the surge in long-term U.S. Treasury yields is helping to curb demand in interest-rate-sensitive sectors such as housing and automobiles, doing some of the work of tighter monetary policy. Processing Content \"When yields go up, is that going to impact interest-sensitive sectors like housing and autos and other things? Yeah, of course it is,\" Waller said at Bloomberg's New Economy Forum in New Delhi on Tuesday. While that isn't the Fed's intention, higher yields are \"doing a little bit of the work,\" he said. Christopher Waller in New Delhi, on Oct. 13. Photographer: Prakash Singh/Bloo Yields in the US and other advanced economies have climbed to multidecade highs , tightening financial conditions, amid higher inflation triggered by the US-Iran war and concern about budget shortfalls. Traders have responded by paring rate-hike expectations, with the amount priced into swaps across eight major economies falling by almost 200 basis points since mid-September, according to data compiled by Bloomberg. Last week, Waller signaled that further interest-rate hikes will likely be needed to slow inflation, though he added officials have some flexibility on timing as they contemplate another increase. The Federal Open Market Committee voted unanimously last month to raise its benchmark rate for the first time since 2023. Investors initially saw a high chance of another increase at the Fed's Oct. 27-28 meeting, before paring those bets after two top officials signaled policymakers have time to assess the economy before moving again. Economists forecast that inflation data due Wednesday will show the headline rate accelerated in September on the back of energy costs due to the US-Iran war. Core prices, however, are expected to have moderated. Artificial intelligence is also putting upward pressure on prices as the rapid build-out of AI infrastructure fuels demand, Waller said. \"Obviously, if you're building out several trillion dollars of investment in AI and you have to buy all that stuff, and your demand is perfectly inelastic, you'll pay whatever price,\" Waller said. \"You're going to bid up the price of all semiconductors of all type, and that's going to spill over to anybody else who uses those products. And that's what we're starting to see in the US.\" Waller is among many Fed officials who are hopeful that AI can eventually raise productivity gains, enabling stronger growth without generating excess inflation over the long-term. But he said that payoff may still be a few years off — and meanwhile the AI-driven price pressures could last for two or three years. 'There Is a Threat' Asked about the threat to his job from President Donald Trump — who's repeatedly attacked the central bank for not bowing to his demands for lower rates — Waller said he trusts in Congress and the US courts to preserve the central bank's autonomy. \"There is a threat to Fed independence by the administration,\" said Waller, who was appointed by Trump during the president's first term. \"So far, it hasn't really succeeded.\" In his second spell in office, Trump has sought to oust former Chair Jerome Powell, who remains a board governor, and Governor Lisa Cook to make way for his own appointees. His pressure campaign has revived debate about how much influence a president should have over monetary policy. Most economists reckon central banks get better results on inflation if they're left alone to do the job. Trump's pressure campaign isn't over. This month the White House announced the formation of a committee to investigate mortgage fraud allegations against Cook, who'll have to defend herself at a Nov. 5 White House hearing. The Supreme Court already blocked Trump's initial attempt to remove Cook over the allegations, whi",
+      "published_at": 1791909671000,
+      "score": 20,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "macro",
+        "regulator"
+      ],
+      "heat_signals": [
+        "fed",
+        "rate hike",
+        "inflation",
+        "forecast"
+      ],
+      "importance": 5,
+      "selector_reason": "美联储理事Waller明确表示长期国债收益率上升正在抑制住房等利率敏感行业需求。该表态直接关联货币政策、债券收益率和全国住宅市场，具有系统性影响。",
+      "section": "national",
+      "title_zh": "Waller：高收益率正冷却住房需求",
+      "summary_zh": "Fed官员称长期美债收益率上升已抑制housing等利率敏感行业，紧缩压力延续",
+      "impact": "short-neg",
+      "id": "5b924e03",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "fed-press",
+      "source_name": "Federal Reserve Press",
+      "source_tier": "C",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "policy",
+        "macro",
+        "regulator"
+      ],
+      "region": "national",
+      "title": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm",
+      "description": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
+      "published_at": 1791914400000,
+      "score": 11,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "macro",
+        "regulator"
+      ],
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "美联储公布多次贴现率会议纪要，涉及货币政策与金融条件判断。贴现率决定和会议记录会影响利率、信贷及全国住宅和商业地产市场，属于系统性信息。",
+      "section": "national",
+      "title_zh": "Fed discount rate 会议纪要发布",
+      "summary_zh": "公布8月17日、9月9日及9月16日会议纪要，利率路径与分歧细节待披露",
+      "impact": "neutral",
+      "id": "577709f8",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "HUD eyes 203(k) renovation changes to boost housing supply",
+      "link": "https://www.housingwire.com/articles/fha-203k-renovation-program/",
+      "description": "Officials at the U.S. Department of Housing and Urban Development (HUD) are signaling changes to revive the underused Federal Housing Administration (FHA) 203(k) renovation program as a tool to tackle housing affordability and supply constraints. Matt Jones , the FHA&#8217;s deputy assistant secretary in the Office of Single Family Housing, said that a shortage of HUD-approved consultants is limiting the reach of the standard 203(k) program. “When we look at the standard program, obviously the lack of HUD consultants across the country has been a headwind for the ability to do that,” Jones said during the Mortgage Bankers Association ’s Annual Convention and Expo on Tuesday in Chicago. “We&#8217;d love to look at the consultants issue and see if there&#8217;s a way we can make some improvements there while retaining the same safeguards that are provided through using a consultant,” Jones said. Jones, who was nominated by President Donald Trump for the role of FHA commissioner, said the 203(k) program currently reaches only 3,000 to 4,000 units a year, a small share of FHA’s overall single-family footprint. The 203(k) product allows a borrower to purchase or refinance a home and roll the rehabilitation costs into one FHA-insured mortgage. It&#8217;s viewed as a way to update aging housing stock and return it to productive use rather than relying solely on new construction to grow supply. FHA offers the standard 203(k) mortgage for major rehabilitation and repair of single-family properties. Under another option, the Limited 203(k) — which permits homebuyers and homeowners to finance up to $75,000 into their mortgage for repairs and upgrades — FHA announced in June that it would allow up to four contractor draw requests. The goal is to make it easier to complete smaller projects, which are critical in aging and lower-priced markets. Jones said the change “smooths out the draw schedule and also is an important risk mitigant for us to make sure contractors are receiving it in smaller chunks.” Ginnie Mae President Joe Gormley , who is expected to hand the FHA commissioner&#8217;s role to Jones — who is awaiting Senate confirmation — said the renovation products remain underdeveloped relative to their potential. “We&#8217;re looking, trying to find ways to unlock it. In urban contexts, there&#8217;s a lot of potential there,” Gormley said. Related More: FHA loan Ginnie Mae HUD Mortgage Bankers Association",
+      "published_at": 1791921563000,
+      "score": 20,
+      "tags": [
+        "housing",
+        "national",
+        "policy",
+        "regulator"
+      ],
+      "heat_signals": [
+        "fed",
+        "permits",
+        "annual"
+      ],
+      "importance": 4,
+      "selector_reason": "HUD拟调整FHA 203(k)翻修贷款项目，以改善住房供给和可负担性。该政策涉及联邦住房融资工具，可能影响住宅供应和改造贷款市场。",
+      "section": "national",
+      "title_zh": "HUD拟改革203(k)，释放翻修供给",
+      "summary_zh": "HUD拟增加顾问并保留风控，203(k)目前年覆盖仅3K-4K套，供给潜力上升",
+      "impact": "long-pos",
+      "id": "f1c72855",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "cnbc-realestate",
+      "source_name": "CNBC Realty Check",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "macro"
+      ],
+      "region": "national",
+      "title": "3D-printed housing company Icon raises $200 million at a $1.4 billion valuation",
+      "link": "https://www.cnbc.com/video/2026/10/13/3d-printed-home-builder-icon-raises-200-million.html",
+      "description": "3D-printed home builder Icon raises $200 million Skip Navigation Markets Pre-Markets U.S. Markets Currencies Prediction Markets Cryptocurrency Futures Commodities Bonds Funds ETFs Business Economy Finance Health Science Media Real Estate Energy Climate Transportation Investigations Industrials Retail Wealth Sports Life Small Business Investing Personal Finance Fintech Financial Advisors Options Action ETF Street Buffett Archive Earnings Trader Talk Tech Cybersecurity AI Enterprise Internet Media Mobile Social Media CNBC Disruptor 50 Tech Guide Politics Policy White House Policy Defense Congress Expanding Opportunity Video Latest Video Full Episodes Livestream Live Audio Live TV Schedule CNBC Podcasts CEO Interviews CNBC Documentaries Digital Originals Watchlist Investing Club Trust Portfolio Analysis Trade Alerts Meeting Videos Homestretch Jim&#x27;s Columns Education Subscribe PRO Pro News Josh Brown Mike Santoli Calls of the Day My Portfolio Livestream Full Episodes Stock Screener Market Forecast Options Investing Chart Investing Subscribe Livestream Menu Make It select USA INTL Livestream Search quotes, news videos Livestream Watchlist SIGN IN Create free account Markets Business Investing Tech Politics Policy Video Watchlist Investing Club PRO Livestream Menu Original News Videos watch now In this video BLK LEN Share Share Article via Facebook Share Article via Twitter Share Article via LinkedIn Share Article via Email News Videos BlackRock, Baillie Gifford back Icon in $200 million 3D-housing funding round 3D-printed housing is still in its infancy, but the leader in the space, Icon, just got a strong boost of capital and confidence from one of the largest institutional investors in the world. Icon announced $200 million dollars in seres D funding, co-led by Blackrock and Baillie Gifford among other investors, bringing Icon&#x27;s total funding to $700 million dollars, with a valuation of $1.4 billion dollars. CNBC&#x27;s Diana Olick spoke with Icon co-founder and CEO Jason Ballard about the new technology and what this funding round means for the future of the company. 04:07 Tue, Oct 13 2026 8:00 AM EDT Diana Olick Charlotte Morabito Andrea Miller Shawn Baldwin Taiwan agrees to buy 30% of gas from Alaska LNG project, Trump says 15 min ago South Korean carmaker Hyundai plans &#x27;strategic&#x27; investment of $15.5 billion in India by 2032 19 min ago Oil rises amid growing Mideast tensions between Iran-backed Houthis and Saudi Arabia 28 min ago Producer prices in China rise at fastest pace since June 2022, beating expectations 16 min ago China&#x27;s exports likely grew by double-digits in September an hour ago Taiwan agrees to buy 30% of gas from Alaska LNG project, Trump says 15 min ago South Korean carmaker Hyundai plans &#x27;strategic&#x27; investment of $15.5 billion in India by 2032 19 min ago Oil rises amid growing Mideast tensions between Iran-backed Houthis and Saudi Arabia 28 min ago Producer prices in China rise at fastest pace since June 2022, beating expectations 16 min ago China&#x27;s exports likely grew by double-digits in September an hour ago Load More Subscribe to CNBC PRO Subscribe to Investing Club Licensing Reprints CNBC Councils Select Personal Finance Join the CNBC Panel Closed Captioning Digital Products News Releases Internships Corrections About CNBC Site Map Podcasts Careers Help Contact News Tips Got a confidential news tip? We want to hear from you. Get In Touch CNBC Newsletters Sign up for free newsletters and get more CNBC delivered to your inbox Sign Up Now Get this delivered to your inbox, and more info about our products and services. Advertise With Us Please Contact Us Ad Choices Privacy Policy Your Privacy Choices CA Notice Terms of Service © 2026 Versant Media, LLC. All Rights Reserved. A Versant Media Company. Data is a real-time snapshot *Data is delayed at least 15 minutes. Global Business and Financial News, Stock Quotes, and Market Data and Analysis. Market Data Terms of Use an",
+      "published_at": 1791892802000,
+      "score": 17,
+      "tags": [
+        "housing",
+        "national",
+        "fundraising",
+        "tech-adoption",
+        "homebuilder"
+      ],
+      "heat_signals": [
+        "blackrock",
+        "forecast"
+      ],
+      "importance": 4,
+      "selector_reason": "3D打印住宅公司Icon完成2亿美元融资，估值达到14亿美元。该融资规模达到大型单笔交易标准，并涉及住宅建造技术和机构资本。",
+      "section": "national",
+      "title_zh": "Icon融资$200M，估值达$1.4B",
+      "summary_zh": "3D打印住宅公司Icon获$200M融资，估值升至$1.4B，资本认可建造技术",
+      "impact": "long-pos",
+      "id": "3da36934",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Some builders beat an entry-level retreat. Valera eyes an opening",
+      "link": "https://www.housingwire.com/articles/valera-homes-houston-entry-level/",
+      "description": "As many homebuilding operators retreat from entry-level and affordability-driven offerings, the founders of Houston-based StoneManor Homes are countering with a contrarian approach by launching Valera Homes , a new homebuilding brand of homes priced from the $270,000s to the $350,000s. The Valera Homes brand extension arrives at a tricky moment for the most budget-conscious buyer segment. Elevated mortgage rates , higher energy costs, stubborn inflation and weak consumer sentiment have converged to upend the monthly payment calculus for entry-level and value-focused households. Builders have had to resort to “buying sales” through heavy, margin-eroding incentives and concessions. As a result, more builders have scaled back their entry-level exposure and shifted their product mix upmarket, where move-up, active adult and luxury buyers typically require fewer incentives to close. Hovnanian Enterprises , for example, announced during prior earnings calls this year that it was cutting its exposure to most entry-level price points and placing greater emphasis on move-up and active adult housing to generate stronger margins. Meritage Homes , in July , similarly reported an “intentional shift” toward move-up homes, with less emphasis placed on entry-level homes. And M/I Homes , on an earnings call in August, noted that 43% of its sales came from its entry-level Smart Series, down from 52% a year earlier. Beazer Homes executives, on earnings calls before this summer&#8217;s acquisition by Dream Finders Homes , similarly indicated that they expected their share of closings below $500,000 to decline by double digits by the end of fiscal 2026. Most of these builders, and others pursuing a similar mix-shift, haven&#8217;t signaled an outright withdrawal from the entry-level segment, but are instead scaling back their emphasis on it. While that pullback signals a broad industry pivot, John Tucker, CEO of Valera Homes, believes that it also leaves a gap in the market that his company is positioned to fill. “A lot of builders are getting out of that price point, and that allows us to penetrate quicker,” Tucker said in an interview with HousingWire TBD . “We feel like there&#8217;s space in there. Those people still need an affordable home right now.” How Valera aims to deliver affordably priced homes Tucker, previously with Gehan Homes for more than two decades, cofounded StoneManor Homes in 2025 alongside fellow homebuilding industry veteran Scott Sparks. The idea behind the new homebuilding venture was to offer fresh, innovative and semi-custom home designs, rather than relying on the recycled home plans Tucker had seen used in some of his previous roles. Most StoneManor homes run from the mid-$300s up to about $1 million, and a few have even sold for up to $2 million. However, the company is diversifying its market segmentation by adding Valera Homes at a lower price point. One way that Valera plans to keep its homes attainable is by prioritizing design and construction standardization and efficiency, in contrast to StoneManor’s more semi-custom approach. “These are 19-foot-wide plans, very efficient with two stories and multiple elevations, anywhere from a very nice craftsman all the way to a very modern elevation,” Tucker said. Working with a designer, Valera Homes narrowed its everything-included floorplan line-up to five interior and 10 exterior packages, and buyers simply pick their selections at the model home. Because the options are so limited, the purchasing and construction teams know exactly what each home requires, which means fewer errors and lower costs. Beyond that, Tucker says the homes are simple to build, which allows the company to bend its asking-price curve downward. “The only thing we need to factor in is theft, because other than that, they&#8217;re very simple to build,” Tucker said. Where Valera builds matters as much as how it builds. The company favors locations whose land basis and development costs make its ta",
+      "published_at": 1791922069000,
+      "score": 18,
+      "tags": [
+        "housing",
+        "houston",
+        "construction",
+        "homebuilder"
+      ],
+      "heat_signals": [
+        "houston",
+        "inflation",
+        "mortgage rate"
+      ],
+      "importance": 3,
+      "selector_reason": "在大型建商收缩入门级产品之际，Valera推出约27万至35万美元的住宅品牌。该行动反映建商对可负担住房需求的判断，属于常规行业动态。",
+      "section": "sunbelt",
+      "title_zh": "Valera逆势布局$270K起价住宅",
+      "summary_zh": "Houston新品牌主攻$270K-$350K，开发商撤出entry-level之际，低价供给获机会",
+      "impact": "long-pos",
+      "id": "ff2a3c0f",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Miami’s Little Havana confronts housing density's double edge",
+      "link": "https://www.housingwire.com/articles/little-havana-density-housing/",
+      "description": "Proposed zoning changes could make Little Havana Miami’s next housing development frontier, allowing larger apartment buildings and more homes. The decade-long planning effort now unfolds under a different set of development rules, including Florida’s 2023 Live Local Act, revised for the third time this year. Debate around the proposal illustrates the tug-of-war cities and neighborhoods face, not just in Miami but across the country, as leaders seek solutions to increasingly chronic housing affordability concerns. In Miami, discussions over the coming months will address more than the number of apartments permitted. City planning staff are developing design guidelines and a neighborhood revitalization district alongside the zoning proposal. But opposition follows a similar pattern. Residents question how additional density would affect infrastructure, nearby single-family neighborhoods and Little Havana’s historic character. Discussions continue over the coming months City planning staff said at a September hearing that public outreach would continue as design guidelines and overlay tools take shape. The work includes a neighborhood revitalization district intended to incorporate public benefits. Staff anticipated City Commission consideration in October, additional outreach in November and a second reading in December. Those dates were tentative, and the next community meeting remains unconfirmed. State review could extend the process because of the acreage involved in the proposed future land-use changes. Staff said submission, review and a response would require at least 60 days, although the state’s review period is 30 days. Questions from state reviewers could stretch the process to six months. The Planning, Zoning and Appeals Board recommended approval at the Sept. 2 hearing. Further review and outreach will address development capacity alongside rules governing new construction. More capacity, no affordability requirement The changes would expand development capacity across hundreds of properties in Little Havana and parts of the Miami River District. Some properties could accommodate as many as 150 residential units per acre and buildings up to eight stories. The proposal would not reproduce Brickell’s high-rise skyline. But larger apartment buildings could substantially change streets near lower-density residential areas. City planners argue that expanding supply could create opportunities for affordable, workforce and mixed-income development. The proposed changes, however, would allow additional market-rate housing without requiring income-restricted apartments. Live Local offers a separate route , granting development benefits on eligible sites in exchange for affordable rentals. Qualifying projects must reserve at least 40% of residential units as affordable rentals for at least 30 years. The apartments can serve households earning up to 120% of area median income. The law could therefore bring some affordable housing without reaching Little Havana’s lowest-income households. For existing renters, redevelopment also raises questions about the loss of older apartments and the cost of replacements. A new apartment development contrasts with the proposed rezoning. The $53.3 million Brisas del Sol, which opened in March, contains 146 apartments restricted to households earning between 30% and 80% of area median income. Miami contributed $2.25 million in federal HOME funds toward the project. Those apartments carry explicit income restrictions. The proposed zoning changes instead rely on increased development capacity to create more housing opportunities. A decade of planning Planning and design firm Plusurbia developed a Calle Ocho revitalization proposal in 2015 and a broader neighborhood plan in 2019. The work sought to improve Little Havana while retaining its housing, historic buildings and cultural identity. The National Trust for Historic Preservation released the Little Havana “Me Importa” Revitalization Master",
+      "published_at": 1791923191000,
+      "score": 17,
+      "tags": [
+        "housing",
+        "florida",
+        "policy"
+      ],
+      "heat_signals": [
+        "fed"
+      ],
+      "importance": 3,
+      "selector_reason": "迈阿密Little Havana拟通过分区调整增加住房密度，且受到佛州Live Local Act影响。该规划可能改变重要Sun Belt城区的住宅开发容量，属于区域政策动态。",
+      "section": "sunbelt",
+      "title_zh": "Little Havana增密计划面临双重博弈",
+      "summary_zh": "Miami拟放宽密度以增加公寓，但基础设施、社区形态与历史保护争议仍大",
+      "impact": "neutral",
+      "id": "c08a1eb5",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "Bidding Wars Fade Across Texas as Most Buyers Face Zero Opponents",
+      "link": "https://www.realtor.com/news/trends/texas-buyers-less-competition-bidding-wars/",
+      "description": "The number of real estate agents who said their buyers didn’t have to compete against other offers rose from 57% in 2025 to 69% in 2026.",
+      "published_at": 1791930049000,
+      "score": 13,
+      "tags": [
+        "housing",
+        "texas",
+        "data",
+        "brokerage"
+      ],
+      "heat_signals": [
+        "texas"
+      ],
+      "importance": 3,
+      "selector_reason": "德州买方无需面对竞争报价的比例明显上升，显示竞价战在该州广泛消退。该数据是Sun Belt住宅需求降温的重要区域信号。",
+      "section": "sunbelt",
+      "title_zh": "Texas bidding wars消退，69%买家无竞争",
+      "summary_zh": "无需竞价的买家占比由57%升至69%，市场议价权明显转向购房者",
+      "impact": "short-neg",
+      "id": "e75394ee",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "dallas-bj-cre",
+      "source_name": "Dallas Business Journal — Commercial RE",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "dfw",
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "texas",
+      "title": "High Street Residential breaks ground on 435-unit apartment project repurposing vacant Dallas office buildings - The Business Journals",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZTk3Q19hNzk3WVdEY3diZjhXdUVDNkRuNzl5VU5NaDBNc3V3OVFCQ0hianI0T0FtNlllb2dYc3l2VGNPQlZLY3ZNT1doSm1BVlVkWnpWSEl6SDBGOGRseG55SXBPMjdNbml6S1NPbC1VOEtRMUdONEVOYUpHVndER1RWNmZXQVU5NWQxTC1TWTc4S2NZRGl1Z0tLSWFCZm1EandmalZyblg?oc=5",
+      "description": "High Street Residential breaks ground on 435-unit apartment project repurposing vacant Dallas office buildings &nbsp;&nbsp; The Business Journals",
+      "published_at": 1791921360000,
+      "score": 12,
+      "tags": [
+        "multifamily",
+        "dfw",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "dallas"
+      ],
+      "importance": 3,
+      "selector_reason": "达拉斯将闲置办公楼改造为435套公寓，体现办公转住宅的再利用趋势。该项目对Sun Belt住房供应和办公资产处置具有区域意义。",
+      "section": "sunbelt",
+      "title_zh": "High Street改造Dallas空置办公楼建435套公寓",
+      "summary_zh": "High Street Residential启动435-unit项目，以办公改住宅，盘活空置资产并增加租赁供给",
+      "impact": "long-pos",
+      "id": "6c8bdf64",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "JLL Arranges $237.7M Loan for Life Sciences Campus in Research Triangle Park",
+      "link": "https://rebusinessonline.com/jll-arranges-237-7m-loan-for-life-sciences-campus-in-research-triangle-park/",
+      "description": "Development Life Sciences North Carolina Southeast JLL Arranges $237.7M Loan for Life Sciences Campus in Research Triangle Park by John Nelson October 13, 2026 October 13, 2026 4 MORRISVILLE, N.C. — JLL has arranged $237.7 million loan for Phase I of Pathway Triangle, a life sciences campus underway in North Carolina’s Research Triangle Park (RTP). Phase I comprises four life sciences and advanced manufacturing buildings totaling 581,789 square feet on McCrimmon Parkway in Morrisville, about 14 miles west of Raleigh. Brett Paulsrud, Amy Lousararian, Andrew Gray, Ward Smith, Hugh Doherty and Libby Horton of JLL arranged the loan through Starwood Property Trust on behalf of the borrower, King Street Properties. Two buildings totaling 377,111 square feet have been completed at Pathway Triangle and are 73 percent leased. Building 1 is partially leased to Liquidia Pharmaceuticals for the manufacturing of Yutrepia, an FDA-approved inhalation powder treating pulmonary arterial hypertension. Building 2 is fully leased to Novartis. Construction began recently on the other two Phase I buildings — Building 4 (148,434 square feet) and Building 7 (56,244 square feet), which is fully preleased to Novartis. A second phase is planned for Pathway Triangle, upon completion of which the campus will span 950,000 square feet. Facebook Twitter Linkedin Email previous post Cushman Wakefield Brokers Sale of 104,250 SF Industrial Park in Denton, Texas next post American Landmark Acquires 292-Unit Apartment Complex in Southeast Houston You may also like Mohr Capital Breaks Ground on 371,388 SF Warehouse... October 13, 2026 Wegmans to Open 110,000 SF Grocery Store in... October 13, 2026 BKM, Kayne Anderson Acquire Industrial Campus in Metro... October 13, 2026 Atlantic Capital Partners Brokers $18.2M Sale of Shopping... October 13, 2026 CBRE Negotiates Sale of Proposed 386,489 SF Novera... October 13, 2026 Shea Properties Begins Construction on 118,232 SF Industrial... October 13, 2026 Ryan Cos. Opens Multifamily Project at Former Ford... October 13, 2026 Annex Group Completes $62.9M Affordable Housing Development in... October 13, 2026 Alta Housing Breaks Ground on 108-Unit Affordable Housing... October 12, 2026",
+      "published_at": 1791906135000,
+      "score": 16,
+      "tags": [
+        "life-sciences",
+        "carolinas",
+        "deals",
+        "lender"
+      ],
+      "heat_signals": [
+        "texas",
+        "houston",
+        "starwood"
+      ],
+      "importance": 4,
+      "selector_reason": "JLL为北卡Research Triangle Park生命科学园区一期安排2.377亿美元贷款。该融资超过200百万美元，且覆盖Sun Belt重要生命科学地产项目。",
+      "section": "cre",
+      "title_zh": "JLL为RTP生命科学园区安排$237.7M贷款",
+      "summary_zh": "Pathway Triangle一期581,789 SF获$237.7M融资，已完工楼宇出租率73%，需求稳健",
+      "impact": "long-pos",
+      "id": "5c98ad19",
+      "fetched_at": 1791944934413,
+      "cre_subcategory": "生命科学"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Charlotte City Council Leans Toward Extending Data Center Moratorium",
+      "link": "https://www.bisnow.com/news/charlotte/data-center-community-relations/charlotte-city-council-leans-toward-extending-data-center-moratorium",
+      "description": "Charlotte City Council Leans Toward Extending Data Center Moratorium October 13, 2026 | 8:05 pm ET Jessica Beebe, National The city of Charlotte appears headed toward an extended freeze on data center development. Pexels/panumas nikhomkhai Charlotte City Council members held a public hearing on Monday to get community input ahead of a vote to extend the city’s 150-day data center moratorium by up to 11 months. Some council members voiced their support for the proposal. “I think we need the time, and it’s clear,” Council Member Ed Driggs said at the hearing. “We don’t have any policy right now, and we’re starting from scratch, so we should give ourselves that time.” The moratorium is slated to expire on Nov. 5. A vote on whether to extend it will be held on Oct. 26 . Charlotte enacted its moratorium in June following months of local outcry against data centers, with opponents citing significant water and power usage, noise and light pollution, and potential community displacement as key reasons to protest their build-out. “With the demand of artificial intelligence, we are seeing data center demand drastically go up, and we must put protections in place to protect our communities, our pocketbooks and our quality of life,” Council Member Dimple Ajmera said at the hearing. The catalyst for the heavy opposition in the area was American Tower Corp. ’s proposal for a 40K SF facility near Reedy Creek Nature Preserve in East Charlotte, which has now been paused. Cristopher Scalise, co-founder of Stop East Charlotte Data Center, said he hoped the council would “do the right thing and go at least another year” because there is still “an enormous, enormous amount of work” left to do. “We’re not ready to move forward as a city on this issue,” he said at the hearing. Data center moratoriums have spread rapidly across North Carolina in the past several months, with Raleigh enacting one just last week . There are 367 active moratoriums nationwide. North Carolina has been a hot spot for development, with more than 90 data centers, 40 of them in Charlotte, according to Data Center Map . When the moratorium began this summer, Driggs told Bisnow that an extension to one year would better prepare the city for future data center development. Members of local labor unions who attended the Monday hearing said the moratorium should end next month as planned, as construction laborers need work and should be protected by local regulations. But council members indicated that North Carolina is not a pro-union state and would proceed with the vote on the extension as scheduled. Council Member JD Mazuera Arias said there’s more to be done to protect against the negative impacts of data centers and emphasized the potential for the city to work together to lobby the state legislature. “There’s a real great potential here for coalition building, to advocate for more than what we can do currently and what we’re limited to do as a local government based on state statute,” he said. In the meantime, he said, “I do support the extension of a moratorium, and I look forward to voting for it when the time comes.” Continue reading this story with a free account Log in or register Contact Jessica Beebe at jessica.beebe@bisnow.com",
+      "published_at": 1791936355000,
+      "score": 14,
+      "tags": [
+        "data-center",
+        "carolinas",
+        "regulation",
+        "regulator"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "夏洛特市议会倾向延长数据中心开发禁令，继续限制该类项目审批。数据中心监管会影响电力、工业土地和大型资本项目，属于重要地方政策。",
+      "section": "cre",
+      "title_zh": "Charlotte拟延长data center开发冻结",
+      "summary_zh": "市议会倾向将150天暂停期延长最多11个月，水电与社区影响将继续限制开发",
+      "impact": "short-neg",
+      "id": "7acb2899",
+      "fetched_at": 1791944934413,
+      "cre_subcategory": "数据中心"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Access To Power Now The No. 1 Force Shaping U.S. Site Selection Decisions",
+      "link": "https://www.bisnow.com/news/national/economic-development/access-to-power-now-the-no-1-force-shaping-us-site-selection-decisions",
+      "description": "Electric power now tops the list for site selection for megaprojects like factories and data centers, overtaking incentives and talent.",
+      "published_at": 1791935512000,
+      "score": 14,
+      "tags": [
+        "mixed-asset",
+        "national",
+        "trend"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "电力供应已成为美国工厂和数据中心选址的首要因素，超过税收优惠和人才。该趋势反映全国大型地产和基础设施项目的核心约束，行业影响广泛。",
+      "section": "cre",
+      "title_zh": "电力取代激励，成为选址首要因素",
+      "summary_zh": "电力供应已超越税收优惠与人才，成为工厂和data center等大型项目选址核心约束",
+      "impact": "short-pos",
+      "id": "8a0d8d8e",
+      "fetched_at": 1791944934413,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Developers Land $204M Loan For East Village Project: The N.Y. Deal Sheet",
+      "link": "https://www.bisnow.com/news/new-york/deal-sheet/east-village-apartments-203m-construction-loan--the-n-y-deal-sheet",
+      "description": "Plus, the other biggest leases, sales and loans in NYC commercial real estate in this week&#039;s N.Y. Deal Sheet.",
+      "published_at": 1791923601000,
+      "score": 14,
+      "tags": [
+        "mixed-asset",
+        "nyc",
+        "deals",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "纽约East Village项目获得2.04亿美元贷款，属于大型商业地产融资事件。金额达到单笔200百万美元以上标准，对纽约开发融资市场具有代表性。",
+      "section": "cre",
+      "title_zh": "开发商获East Village项目$204M贷款",
+      "summary_zh": "East Village项目获得$204M融资，纽约开发活动延续，但租售交易细节待披露",
+      "impact": "long-pos",
+      "id": "269d95f2",
+      "fetched_at": 1791944934413,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "RMR Lines Up $272M Mortgage Financing for Cedars-Sinai MOBs",
+      "link": "https://www.connectcre.com/stories/rmr-arranges-272m-mortgage-financing-for-cedars-sinai-mobs/",
+      "description": "The RMR Group Inc. has facilitated a $272.1-million interest-only mortgage financing secured by 8631 and 8635 W. Third St., two medical office buildings anchored by Cedars-Sinai Medical Center in Los Angeles. Morgan Stanley and BNP Paribas provided the financing. The loan has a two-year initial term with three one-year extension options and bears interest at ... The post RMR Lines Up $272M Mortgage Financing for Cedars-Sinai MOBs appeared first on Connect CRE .",
+      "published_at": 1791923162000,
+      "score": 13,
+      "tags": [
+        "office",
+        "california",
+        "deals",
+        "lender"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "RMR为两栋由Cedars-Sinai锚定的医疗办公楼安排2.721亿美元抵押融资。该交易超过200百万美元，并反映医疗办公资产的机构融资状况。",
+      "section": "cre",
+      "title_zh": "RMR为Cedars-Sinai医疗楼获$272.1M融资",
+      "summary_zh": "两栋医疗办公楼获$272.1M interest-only mortgage，期限2年并含3次续期选择",
+      "impact": "long-pos",
+      "id": "df67a3cd",
+      "fetched_at": 1791944934413,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Global Investor Buys 8 Mass. Industrial Buildings For $76.5M: The Boston Deal Sheet",
+      "link": "https://www.bisnow.com/news/boston/deal-sheet/bahrain-firm-scoops-up-greater-boston-industrial-portfolio-for-76-5m-the-boston-deal-sheet",
+      "description": "Global Investor Buys 8 Mass. Industrial Buildings For $76.5M: The Boston Deal Sheet October 13, 2026 | 5:15 pm ET Taylor Driscoll, Boston Bahrain-based investment firm Investcorp acquired a portfolio of eight industrial properties along the I-495 corridor and in the Worcester area. Google Maps 28 Torrice Drive in Woburn Investcorp acquired the buildings in Westborough, Marlborough, Woburn, Randolph and Franklin for $76.5M, according to public deed records. The firm purchased the buildings from Boston-based Longfellow Real Estate Partners, the Worcester Business Journal first reported . Longfellow had acquired the eight properties between 2021 and 2022 for roughly $62.3M, according to deed records. The properties are located at 28 Torrice Drive in Woburn; 128-148 Bartlett St. in Marlborough; 52 York Ave. in Randolph; 10 Liberty Way and 120 Constitution Blvd. in Franklin; and 45 Oak St., 23 Bridle Lane and 25 Bridle Lane in Westborough. Investcorp, a global investor with more than $10B in U.S. real estate assets under management, last month announced $225M of industrial acquisitions in the Philadelphia and Nashville markets. It said that deal was part of the company&#039;s strategy &#34;to pursue well-located, infill light industrial product in leading U.S. industrial markets with strong supply-demand fundamentals.&#34; The company didn&#039;t respond to Bisnow &#039;s request for comment on the Massachusetts deal. SALES Redgate sold its One Beachmont development at 205 Revere Beach Parkway to a Nuveen subsidiary for $77M . The property was developed by Redgate-affiliate Gate Residential Properties and The TransDel Corp. for $60M. The 226K SF mid-rise multifamily building sits near the MBTA&#039;s Beachmont Blue Line stop. LEASES Wyzer Biosciences leased 5,800 SF at Cummings Properties’ Boston Avenue campus in Medford. Cummings’ Steve Cusano and JLL’s Marc Consalvi worked on the deal. The biotech company plans to relocate from 85 Bolton St. in Cambridge. Wyzer joins Lithios, Morphoceuticals, Myro Therapeutics, Sunflower Therapeutics and Unravel Biosciences at the Medford campus. *** Electronic materials manufacturer Nano-C signed a 37K SF lease at Kadima Industrial Partners and DRA Advisors’ 79-85 Astor Ave. in Norwood. Colliers represented the landlord and the tenant in the deal. The brokerage is marketing the remaining 23K SF portion of the industrial site. *** Video game developer CD Projekt Red signed a 55K SF lease at Alexandria Real Estate Equities’ Arsenal on the Charles in Watertown, Banker Tradesman reported . The company plans to relocate from 51 Sawyer Road in Waltham. PERSONNEL Colliers Colliers&#039; Rachel Bliss Rachel Bliss was hired to join Colliers&#039; downtown Boston urban leasing team as vice president. In her new role, Bliss will advise tenants in the downtown market on leasing strategy, site selection and negotiations. Previously, Bliss served as vice president at Hughes Marino. She has also held roles at JLL and Cushman Wakefield. *** The Architectural Team appointed Diane Stephens as its chief financial officer. Stephens joins TAT from Essco Calibration Laboratory, where she most recently acted as an executive vice president. CONSTRUCTION AND DEVELOPMENT The Community Builders, Pine Street Inn, state leaders and community members celebrated the opening of 900 Morrissey Blvd. in Dorchester. The project converted a former hotel into 99 affordable studio apartments for older adults who have experienced homelessness. *** WinnCos. completed The Eastwalk residential development in Braintree. The 56-unit, mixed-income development cost $46M to build. The project includes workforce, low-income and market-rate units. Continue reading this story with a free account Log in or register Contact Taylor Driscoll at taylor.driscoll@bisnow.com Related Topics: Investcorp , Longfellow Real Estate Partners",
+      "published_at": 1791926122000,
+      "score": 18,
+      "tags": [
+        "industrial",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [
+        "nuveen"
+      ],
+      "importance": 3,
+      "selector_reason": "Investcorp以7650万美元收购马萨诸塞州八栋工业物业组合。交易具有机构资本和区域工业地产意义，但金额低于200百万美元门槛。",
+      "section": "institutional",
+      "title_zh": "Investcorp以$76.5M收购Massachusetts工业组合",
+      "summary_zh": "Investcorp买入8栋工业物业，价格$76.5M，延续布局高需求infill轻工业资产",
+      "impact": "long-pos",
+      "id": "4e4f4e26",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "BKM, Kayne Anderson Acquire Industrial Campus in Metro Atlanta for $100M",
+      "link": "https://rebusinessonline.com/bkm-kayne-anderson-acquire-industrial-campus-in-metro-atlanta-for-100m/",
+      "description": "SANDY SPRINGS, GA. — BKM Capital Partners and Kayne Anderson Real Estate have acquired Northridge Commons, a 471,000-square-foot industrial campus in Sandy Springs, a northern suburb of Atlanta in Fulton County. Locally based development firm Third &#38; Urban sold the 38-acre property for $100 million. Built in the early 1980s along the Ga. Highway 400 corridor, Northridge Commons comprises seven industrial facilities with suites ranging in size from 2,046 to 39,221 square feet. The campus, which was 90 percent leased at the time of sale, also features a 57 percent office finish. Nathan Willi",
+      "published_at": 1791905042000,
+      "score": 10,
+      "tags": [
+        "industrial",
+        "atlanta",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "BKM与Kayne Anderson以1亿美元收购亚特兰大471000平方英尺工业园区。该交易结合机构资本与Sun Belt工业地产，属于中型市场动态。",
+      "section": "institutional",
+      "title_zh": "BKM与Kayne以$100M收购Atlanta工业园",
+      "summary_zh": "Northridge Commons含471K SF、出租率90%，$100M收购体现Metro Atlanta工业需求",
+      "impact": "long-pos",
+      "id": "8a306a2f",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "FHA Official Predicts ‘Significant Acceleration’ in Manufactured Housing Under New Rules",
+      "link": "https://www.realtor.com/news/real-estate-news/fha-commissioner-hud-matt-jones-manufactured-housing/",
+      "description": "Real Estate News Follow Us On Google FHA Official Predicts ‘Significant Acceleration’ in Manufactured Housing Under New Rules By Keith Griffith October 13, 2026 Tom Williams/CQ-Roll Call, Inc via Getty Images Recent reforms to federal rules for manufactured homes could spur a boom in the sector and boost the supply of affordable starter homes, a top housing official says. Matt Jones , an official in the U.S. Department of Housing and Urban Development and President Donald Trump 's nominee to serve as FHA commissioner , said that a seemingly small change in the recently passed 21st Century Road to Housing Act could have a big impact on manufactured housing . The law removes a federal requirement that manufactured housing include a permanent steel chassis to transport the home. Following the change, Jones says, many modular homes may qualify as manufactured housing under the federal HUD code, which preempts local building codes. \"A lot of today's modular builders will be able to claim code preemption, and as a result, we expect a lot of the state requirements will then be forced to update their state-level code to align with the federal standard,\" he said on Tuesday at the Mortgage Bankers Association's annual conference in Chicago . \"What this means is we think there will be a significant acceleration of factory-built, non-site-built housing.\" Factory-build homes are often much cheaper and more efficient to build than traditional homes, but industry analysts say that onerous financing and zoning rules, as well as stigmas surrounding \"trailer homes,\" have stifled widespread adoption. Jones, who is currently HUD's deputy assistant secretary for single-family housing, argues that the manufactured housing sector has evolved radically, and that modern factory-built homes are a far cry from the double-wide trailers of yesteryear. \"It's remarkable,\" he said. \"I think for most people, they wouldn't even be able to tell the difference between a site-built home and factory-built home.\" Separate from the new federal law, HUD rulemaking had eliminated the permanent chassis requirement for the upper levels of multistory manufactured homes, allowing upper floors to be shipped to the homesite and be stacked like Lego blocks. Earlier this month, the new approach was demonstrated in a display on the National Mall during HUD's annual Innovative Housing Showcase. Loading... The Grande Arbor by Cavco Industries, the first manufactured home constructed without a permanent steel chassis frame and built to the U.S. Department of Housing and Urban Development code Cavco Industries, Inc. \"I think, just, aesthetic appeal is going to really improve. It won't happen overnight. There's going to be retooling of the factories,\" said Jones. \"A lot of it's about destigmatization, but it certainly helps to have the actual product that's coming to market look so much like any other home.\" Jones noted that, following the changes in the Road Act, the lines between manufactured and modular housing may begin to blur. This may allow builders to take advantage of the HUD code preemption for manufactured homes, while accessing the broader buyer financing options available for modular. As well, earlier this month HUD unveiled an action plan to accelerate manufactured housing building. The agency wants to update energy efficiency standards as well as design and construction codes. Speaking at the same event in Chicago, Ginnie Mae President Joseph M. Gormley , another Trump appointee, says there is growing support in the secondary mortgage market for loans secured by manufactured homes. \"From the financing and investment side, one of the things we have found is investors are actually willing to pay up for manufactured housing loans, because they tend to have a longer duration,\" he said. \"So we've been working to provide additional disclosures around the type of construction.\" Gormley said that Ginnie Mae plans to add a \"modular\" category on disclosure forms, so investors ",
+      "published_at": 1791928722000,
+      "score": 17,
+      "tags": [
+        "housing",
+        "national",
+        "policy",
+        "regulator"
+      ],
+      "heat_signals": [
+        "fed",
+        "annual"
+      ],
+      "importance": 4,
+      "selector_reason": "联邦住房官员预计新规则将显著推动制造住宅发展，并增加可负担入门房源。该变化涉及联邦规则和全国住宅供应，行业影响较大。",
+      "section": "national",
+      "title_zh": "新规或推动manufactured housing加速增长",
+      "summary_zh": "取消永久钢底盘要求后，更多modular homes或纳入HUD code，廉价住宅供给有望激增",
+      "impact": "long-pos",
+      "id": "07a276ca",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Regulators should rethink proposed CRA changes, NAAHL says",
+      "link": "https://www.housingwire.com/articles/naahl-cra-proposed-changes/",
+      "description": "Proposed asset threshold changes could leave 31 million people in areas with limited community development coverage, association claims",
+      "published_at": 1791910340000,
+      "score": 13,
+      "tags": [
+        "national",
+        "policy",
+        "lender"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "拟议的CRA资产门槛调整可能减少部分社区的开发金融覆盖，影响约3100万人。该监管变化涉及社区投资和住房融资体系，政策影响较大。",
+      "section": "national",
+      "title_zh": "NAAHL反对CRA门槛调整，担忧覆盖缺口",
+      "summary_zh": "协会称拟议asset threshold变化或使3,100万人失去充分community development覆盖",
+      "impact": "short-neg",
+      "id": "8d1c41e8",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Optimal Blue data shows non-QM lending, ARM usage is expanding",
+      "link": "https://www.housingwire.com/articles/non-qm-arms-optimal-blue/",
+      "description": "Nonqualified mortgage (non-QM) lending continued to expand in September as rising mortgage rates weighed on broader origination activity, according to Optimal Blue ’s newest Market Advantage report, released on Tuesday. Non-QM rate-lock volume increased 8% from August , while total mortgage rate-lock volume fell 2% month over month and 26% year over year. Non-QM loans accounted for 12% of September production, up from the previous month and a year earlier. Overall, total rate-lock volume declined 21% over the past three months as mortgage rates climbed across major loan products. The 30-year conforming fixed mortgage rate tracked by Optimal Blue ’s Mortgage Market Indices ended September at 7.39%, up 67 basis points from August and 107 basis points from a year earlier. The 30-year jumbo rate ended the month at 7.36%, while Federal Housing Administration (FHA) and Department of Veterans Affairs (VA) loan rates reached 7.10% and 7.08%, respectively. “What stands out in September is how much product mix is doing the work of keeping purchase activity moving,” said Brennan O’Connell , director of data solutions at Optimal Blue. “Conforming lost share while non-QM volume grew and ARM usage reached its highest level seen in our report,” he added. “That tells lenders there is still purchase demand to serve, but increasingly it may not fit neatly into the traditional conforming box.” Purchase-heavy, nonconforming conditions Purchase rate-lock volume declined by less than 1% month over month and year over year, accounting for 82% of September production. Refinance activity fell to 18% of total production. Cash-out refinance volume declined 8% from August and 23% year over year. Rate-and-term refinance volume fell 13% month over month and 82% from September 2025. Adjustable-rate mortgages accounted for 14% of total rate-lock volume, up from 10.5% in August and the highest share in Optimal Blue’s data series, which dates to 2019. The composition of mortgage production also shifted away from conforming loans, which accounted for 46% of production, down 71 basis points from August and more than 6 percentage points from a year earlier. Nonconforming loans accounted for nearly 24% of production, up 285 bps from August and nearly 7 percentage points higher year over year. Within the non-QM market, investor and debt-service-coverage ratio loans represented 33% of activity, while bank-statement loans accounted for 30%. Other expanded-guideline programs made up the remaining 37%. O’Connell said Optimal Blue’s Virtual Economist forecasts mortgage rates will continue rising over the next 12 months, citing September’s rate increases, the Federal Reserve ’s indication of further rate hikes , and recent increases in gross domestic product, oil prices and disposable income. The report projects the 30-year conforming fixed rate will reach 7.66% over the next month, 7.80% over three months and 7.85% over the next 12 months. Widening spreads The 10-year Treasury yield also climbed, ending September at 5.29%, up 54 basis points from August and 113 basis points year over year. The spread between the Treasury yield and Optimal Blue’s 30-year conforming mortgage rate widened by 13 bps during the month to approximately 210 basis points. On the secondary market , lenders shifted their hedging activity toward higher mortgage-backed securities coupons as rates increased. The 5.5% coupon for 30-year uniform mortgage-backed securities fell to 50% of hedges, down from 62% in August, while the 6% coupon share rose to 44%. Mortgage-backed securities execution accounted for 47% of hedged loan sales, an increase of 385 bps from August and the highest share since January 2026. “The rapid shift from the 5.5 to the 6.0 coupon shows how quickly lenders repositioned their hedges as rates moved higher,” said Mike Vough , senior vice president of corporate strategy at Optimal Blue. Mortgage servicing rights for conforming 30-year loans increased by only 1 basis point to 1.39%,",
+      "published_at": 1791916973000,
+      "score": 25,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "lender"
+      ],
+      "heat_signals": [
+        "fed",
+        "rate hike",
+        "mortgage rate",
+        "forecast",
+        "year over year"
+      ],
+      "importance": 3,
+      "selector_reason": "非QM贷款和ARM使用量在高利率环境下继续增长，反映抵押贷款结构正在变化。该趋势涉及贷款供给与借款人风险，属于常规行业动态。",
+      "section": "national",
+      "title_zh": "non-QM与ARM扩张，传统贷款占比下降",
+      "summary_zh": "9月non-QM rate-lock增8%，占产量12%；30Y conforming rate达7.39%，需求承压",
+      "impact": "short-neg",
+      "id": "0fb0c054",
+      "fetched_at": 1791944934413
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "South Florida Developers Pull Back On Industrial Construction",
+      "link": "https://www.bisnow.com/news/south-florida/industrial/miami-broward-industrial-warehouse-development-construction-slowdown",
+      "description": "South Florida Developers Pull Back On Industrial Construction October 13, 2026 | 7:14 pm ET Chloe Gallivan, South Florida Industrial developers in South Florida are putting their shovels down as rising costs hit their bottom lines. Pexels/Tiger Lily Adding to the inflation headaches are an inability to push rents and power shortages that are slowing timelines and deterring tenants, all making it increasingly hard to justify building new industrial projects in South Florida, developers said Tuesday at Bisnow ’s Florida Industrial and Manufacturing Conference. “I think the only way that it can change is if rents go much higher, or interest rates go much lower, or construction costs go much lower,” The Easton Group CEO Ed Easton said onstage at the Marriott West Palm Beach. “I don&#039;t see any of those happening in the near term.” The industrial pipeline for Palm Beach, Broward and Miami-Dade counties has fallen to 3M SF at the end of the third quarter from 5.2M SF a year prior — a 42% drop in construction, according to third-quarter Colliers reports. Most of the new development is focused in Miami-Dade County, with 18 buildings underway concentrated in the Northeast Dade and Miami Airport West submarkets, according to a Colliers report. The county’s pipeline shrank from 3M SF to 1.8M SF year-over-year following 1.4M SF in deliveries in the third quarter. Broward County’s pipeline fell from 1.4M SF to 994K SF, and Palm Beach County’s fell from 735K SF to 277K SF, according to Colliers. The dynamic is in stark contrast to the rest of the country, where construction is picking up. There were 314M SF under construction nationwide in the first six months of 2026, up from the 271M SF under construction at the end of 2025, according to an October Colliers report . That&#039;s still a far cry from the historic surge of supply during the pandemic — the construction pipeline soared from 347M SF in 2020 to a record 711M SF in 2022, according to Colliers. Construction costs have been the demise of plenty of commercial projects across every real estate sector amid tariffs, higher fuel prices and elevated interest rates. Prices for construction-related materials rose 13.3% year-over-year in the U.S., according to a September Cushman Wakefield report . It costs roughly $350 per SF to build a new warehouse today, and the cost of debt is on the rise, restricting the possibility for sufficient returns, said Easton, who founded Miami-based The Easton Group more than 50 years ago . “We haven&#039;t built anything since 2023, and really aren&#039;t looking to build anything because the economics just don&#039;t work for those,” Easton said. “Nobody&#039;s going to take a speculative venture on for a projected 3% return.” Bisnow/Chloe Gallivan Colliers&#039; Lauren Pace, Cushman Wakefield&#039;s Christopher Metzger, Kitson Partners&#039; Matt Buehler, MLCO Construction&#039;s Jordan Cater and NAI Miami, Fort Lauderdale&#039;s David Oxios To make new construction work, rents need to be around $23 net per SF, Easton said, well above the tri-county area’s average, which sits between $16 and $18 triple net per SF, according to Colliers. Rents are starting to peak as tenants reach their limit after years of increases, which has led to some companies packing up and moving north to cheaper markets like Orlando, downsizing their footprint or shutting down Florida operations, Cushman Wakefield Vice Chairman Christopher Metzger said. “I think some of the developers that are out there are saying, ‘Hey, I think we&#039;ve kind of peaked out as far as our rent growth of what we&#039;re asking,’ and offering some free rent and starting to offer some discounted rates,” Metzger said. “We&#039;re seeing that plateau as we speak, so I think that you&#039;re going to see a flattening of that rent growth over the next year.” Even though they are hitting their limit on rental costs, tenants are increasingly asking for pricey additions to traditional warehouses, such as",
+      "published_at": 1791933278000,
+      "score": 22,
+      "tags": [
+        "industrial",
+        "florida",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "inflation",
+        "year-over-year",
+        "rent growth"
+      ],
+      "importance": 3,
+      "selector_reason": "南佛州工业开发商因成本上升、租金承压和电力短缺而放缓建设。它反映Sun Belt工业地产供给和开发可行性的变化，属于区域市场信号。",
+      "section": "cre",
+      "title_zh": "South Florida工业开发管线一年缩减42%",
+      "summary_zh": "三县在建管线降至3M SF，成本、租金与电力短缺共同压低新建项目可行性",
+      "impact": "short-neg",
+      "id": "307fe182",
+      "fetched_at": 1791944934413,
+      "cre_subcategory": "工业"
+    }
+  ],
+  "errors": [
+    {
+      "source": "Houston Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://houstonagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Phoenix Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://phoenixagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Atlanta Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://atlantaagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Miami Agent Magazine",
+      "error": "fetch failed",
+      "attempted_urls": [
+        "https://miamiagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Texas Real Estate Research Center (TRERC)",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://trerc.tamu.edu/feed/"
+      ]
+    }
+  ],
+  "_diagnostics": {
+    "writer_mode": "global",
+    "sectionsUnderMin": [],
+    "window_hours": 24,
+    "pool_sizes": {
+      "24h": 98,
+      "48h": 122,
+      "72h": 123
+    },
+    "us_holiday": {
+      "today_us": "2026-10-13",
+      "today_us_holiday": null,
+      "yesterday_us_holiday": null,
+      "tomorrow_us_holiday": null,
+      "is_us_weekend": false,
+      "expected_recovery_bj_date": null,
+      "source": "date.nager.at"
+    },
+    "writer_audit": [
+      {
+        "stage": "selector",
+        "input": 128,
+        "output": 40
+      },
+      {
+        "stage": "tagger",
+        "items": 40
+      },
+      {
+        "stage": "dedupe",
+        "before": 40,
+        "after": 40
+      },
+      {
+        "stage": "pick",
+        "section_counts": {
+          "national": 8,
+          "sunbelt": 4,
+          "cre": 6,
+          "institutional": 2
+        }
+      },
+      {
+        "stage": "translator",
+        "items": 20
+      }
+    ],
+    "candidate_pool_size": 128
+  }
+}
