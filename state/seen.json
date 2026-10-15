@@ -1,5 +1,284 @@
 [
   {
+    "url": "https://www.realtor.com/research/cpi-inflation-september-2026/",
+    "tokens": [
+      "september",
+      "2026",
+      "inflation",
+      "hits",
+      "3.7%",
+      "tough",
+      "print",
+      "housing"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.redfin.com/news/buyers-vs-sellers-september-2026/",
+    "tokens": [
+      "home",
+      "sellers",
+      "outnumber",
+      "buyers",
+      "63%",
+      "biggest",
+      "since",
+      "post",
+      "recession",
+      "housing",
+      "crash"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.realtor.com/news/trends/power-grid-emergency-67-million-americans-homeowners/",
+    "tokens": [
+      "million",
+      "americans",
+      "under",
+      "power",
+      "grid",
+      "emergency",
+      "means",
+      "homeowners"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/falling-housing-inventory-buyer-demand/",
+    "tokens": [
+      "falling",
+      "housing",
+      "inventory",
+      "sending",
+      "sellers",
+      "wrong",
+      "signal"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/gses-seek-to-support-lenders-with-efficiencies-as-rate-rise",
+    "tokens": [
+      "gses",
+      "seek",
+      "support",
+      "lenders",
+      "efficiencies",
+      "rates",
+      "rise"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/morgan-debuts-345-unit-austin-apartment-community/",
+    "tokens": [
+      "morgan",
+      "debuts",
+      "345",
+      "unit",
+      "austin",
+      "apartment",
+      "community"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.dmagazine.com/business-economy/2026/10/fifth-third-to-invest-3-1-billion-in-texas-communities/",
+    "tokens": [
+      "fifth",
+      "third",
+      "invest",
+      "$3.1",
+      "billion",
+      "texas",
+      "communities"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.bisnow.com/news/south-florida/multifamily/russell-galbut-live-local-act-miami-beach-sites",
+    "tokens": [
+      "russell",
+      "galbut",
+      "axes",
+      "miami",
+      "beach",
+      "live",
+      "local",
+      "projects"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.bisnow.com/news/phoenix/student-housing/phoenix-student-housing-faces-competition-multifamily-oversupply",
+    "tokens": [
+      "phoenix",
+      "apartment",
+      "concessions",
+      "luring",
+      "students",
+      "away",
+      "campus",
+      "housing"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.bisnow.com/news/chicago/office/chicago-office-tower-sells-for-550m-to-zara-founder-amancio-ortega",
+    "tokens": [
+      "chicago",
+      "office",
+      "tower",
+      "sells",
+      "$550m",
+      "zara",
+      "founder",
+      "blockbuster",
+      "deal"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/data-center-power/federal-regulators-reject-power-cuts-to-data-centers-that-dont-bring-their-own",
+    "tokens": [
+      "regulators",
+      "reject",
+      "proposed",
+      "rules",
+      "data",
+      "centers",
+      "nation",
+      "039",
+      "largest",
+      "grid"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.bisnow.com/news/atlanta/healthcare/more-details-emerge-on-grady-s-1b-south-fulton-hospital-plan",
+    "tokens": [
+      "details",
+      "emerge",
+      "grady",
+      "039",
+      "$1b",
+      "south",
+      "fulton",
+      "hospital"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.bisnow.com/news/new-york/office/foreclosure-cannon-hill-quinlan-development-life-sciences",
+    "tokens": [
+      "foreclosure",
+      "suit",
+      "filed",
+      "stalled",
+      "penn",
+      "plaza",
+      "life",
+      "sciences",
+      "project"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-values-loan-maturity-10-year-treasury/833015/",
+    "tokens": [
+      "multifamily",
+      "prices",
+      "fell",
+      "2.56%",
+      "past",
+      "year",
+      "trepp"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.bisnow.com/news/san-francisco/multifamily/2-san-jose-multifamily-towers-fetch-combined-380m-kennedy-wilson-brookfield",
+    "tokens": [
+      "jose",
+      "multifamily",
+      "towers",
+      "change",
+      "hands",
+      "combined",
+      "$380m"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/senior-housing/brookdale-senior-living-buying-30-communities-it-operates-from-welltower",
+    "tokens": [
+      "brookdale",
+      "senior",
+      "living",
+      "communities",
+      "operates",
+      "welltower",
+      "$290m"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://pretium.com/pretium-expands-middle-east-presence-with-abu-dhabi-office/",
+    "tokens": [
+      "pretium",
+      "expands",
+      "middle",
+      "east",
+      "presence",
+      "dhabi",
+      "office"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://www.cnbc.com/2026/10/13/blackrock-baillie-gifford-bet-big-on-icon-3d-printed-homes.html",
+    "tokens": [
+      "blackrock",
+      "baillie",
+      "gifford",
+      "icon",
+      "printed",
+      "homes"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/hyundai-transys-to-invest-560m-for-factory-expansion-in-west-point-georgia/",
+    "tokens": [
+      "hyundai",
+      "transys",
+      "invest",
+      "$560m",
+      "factory",
+      "expansion",
+      "west",
+      "point",
+      "georgia"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
+    "url": "https://rebusinessonline.com/suncap-to-develop-959822-sf-industrial-project-near-port-of-savannah/",
+    "tokens": [
+      "suncap",
+      "develop",
+      "959",
+      "822",
+      "industrial",
+      "project",
+      "near",
+      "port",
+      "savannah"
+    ],
+    "shown_date": "2026-10-15"
+  },
+  {
     "url": "https://www.realtor.com/research/existing-home-sales-september-2026/",
     "tokens": [
       "existing",
@@ -5566,287 +5845,5 @@
       "inman"
     ],
     "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/feds-barr-further-policy-adjustments-are-likely",
-    "tokens": [
-      "barr",
-      "further",
-      "policy",
-      "adjustments",
-      "likely"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/bond-market-slide-deepens-pushing-yields-to-two-decade-highs",
-    "tokens": [
-      "bond",
-      "market",
-      "slide",
-      "deepens",
-      "pushing",
-      "yields",
-      "decade",
-      "highs"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/mortgage-rates-surge-above-7-to-a-more-than-two-year-high",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "surge",
-      "above",
-      "7%",
-      "year",
-      "high"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/housing-density-california-cities-bill-newsom/831115/",
-    "tokens": [
-      "high",
-      "rises",
-      "coming",
-      "california",
-      "cities",
-      "under",
-      "housing",
-      "density",
-      "bill"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/09/23/nearly-10percent-of-borrowers-opted-for-riskier-mortgages-last-week.html",
-    "tokens": [
-      "nearly",
-      "10%",
-      "borrowers",
-      "opted",
-      "riskier",
-      "mortgages",
-      "last",
-      "week",
-      "rates",
-      "soared",
-      "7%"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/unison-faces-another-class-action-lawsuit-this-time-in-north-carolina/",
-    "tokens": [
-      "unison",
-      "faces",
-      "another",
-      "class",
-      "action",
-      "lawsuit",
-      "time",
-      "north",
-      "carolina"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://rebusinessonline.com/adam-america-jw-capital-secure-180m-refinancing-for-student-housing-community-adjacent-to-florida-international-university/",
-    "tokens": [
-      "adam",
-      "america",
-      "capital",
-      "secure",
-      "$180m",
-      "refinancing",
-      "student",
-      "housing",
-      "community",
-      "near",
-      "florida",
-      "international",
-      "university"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/stellar-mls-hernando-county/",
-    "tokens": [
-      "stellar",
-      "expands",
-      "hernando",
-      "county",
-      "florida",
-      "merger"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONTFNUjN0TUQtVlBmdXNGeE1DYXFoal9WRDdDeTZLV2ZUbFhMMFVHcXl6OEJ0bGMtSm5ROWJocmV2RVdaU1Utd2dlWHFFeHhCZTVQQTdmZ3AzVG9YUVE4aEpPQkltRFNOdEQyWkhoZTRUdkdqaVRPeXBlU3ZSOGpINHE0bFAyQUlCWGkwVXktQlBCM1ZhVUJFaElLSXlGbUI3LXhJOW5n?oc=5",
-    "tokens": [
-      "taylor",
-      "morrison",
-      "homes",
-      "working",
-      "tandem",
-      "project",
-      "williamson",
-      "county",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.bisnow.com/news/dallas-ft-worth/retail/dfw-s-top-malls-are-thriving-drawing-more-visitors-and-rising-in-value",
-    "tokens": [
-      "039",
-      "malls",
-      "thriving",
-      "drawing",
-      "visitors",
-      "rising",
-      "value"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/data-center-development/texas-and-california-add-new-restrictions-on-data-center-development",
-    "tokens": [
-      "texas",
-      "california",
-      "restrictions",
-      "data",
-      "center",
-      "development"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/george-comfort-sons-refinances-200-madison-for-386m/",
-    "tokens": [
-      "george",
-      "comfort",
-      "038",
-      "sons",
-      "refinances",
-      "200",
-      "madison",
-      "$386m"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.bisnow.com/news/new-york/industrial/manhattan-mini-storage-stan-kroenke-2b-refinancing",
-    "tokens": [
-      "kroenke",
-      "039",
-      "manhattan",
-      "mini",
-      "storage",
-      "lands",
-      "$2.1b",
-      "refinancing",
-      "000",
-      "units"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.bisnow.com/news/boston/office/32-story-downtown-boston-office-tower-heading-to-foreclosure",
-    "tokens": [
-      "story",
-      "downtown",
-      "boston",
-      "office",
-      "tower",
-      "heading",
-      "foreclosure",
-      "auction"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/oaktree-backs-uwm-with-1-5b",
-    "tokens": [
-      "oaktree",
-      "backs",
-      "$1.5b"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/unlisted-reits-redemptions-operating-scale/831158/",
-    "tokens": [
-      "rreef",
-      "property",
-      "trust",
-      "liquidate",
-      "holdings"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/proposed-bank-capital-rules-could-deepen-private-credit-ties",
-    "tokens": [
-      "proposed",
-      "bank",
-      "capital",
-      "rules",
-      "deepen",
-      "private",
-      "credit",
-      "ties"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/senate-bill-merkley-down-payment-assistance-homeownership-promise-act/",
-    "tokens": [
-      "senate",
-      "bill",
-      "give",
-      "first",
-      "time",
-      "homebuyers",
-      "$50k",
-      "faces",
-      "uphill",
-      "battle",
-      "congress"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/mortgages-to-well-heeled-self-employed-back-15-billion-in-rmbs-from-verus",
-    "tokens": [
-      "mortgages",
-      "well",
-      "heeled",
-      "self",
-      "employed",
-      "back",
-      "$15",
-      "billion",
-      "rmbs",
-      "verus"
-    ],
-    "shown_date": "2026-09-24"
-  },
-  {
-    "url": "https://rebusinessonline.com/northmarq-expands-investment-platform-with-acquisition-of-thirdline-capital-management/",
-    "tokens": [
-      "northmarq",
-      "expands",
-      "investment",
-      "platform",
-      "acquisition",
-      "thirdline",
-      "capital",
-      "management"
-    ],
-    "shown_date": "2026-09-24"
   }
 ]
