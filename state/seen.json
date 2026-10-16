@@ -1,5 +1,292 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/immigration-enforcement-home-pipeline-risk/",
+    "tokens": [
+      "surging",
+      "jobsite",
+      "raids",
+      "370",
+      "000",
+      "home",
+      "completions",
+      "risk"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/ginnie-growth-points-to-lender-reliance-on-government-loans",
+    "tokens": [
+      "ginnie",
+      "growth",
+      "points",
+      "lender",
+      "reliance",
+      "government",
+      "loans"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.realtor.com/research/freddie-mac-mortgage-rates-october-15-2026/",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "hold",
+      "steady",
+      "treasury",
+      "yields",
+      "stabilize"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.redfin.com/news/housing-market-update-asking-prices-decline-october/",
+    "tokens": [
+      "housing",
+      "market",
+      "update",
+      "asking",
+      "prices",
+      "fall",
+      "first",
+      "time",
+      "since",
+      "march"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/10/existing-home-sales-increased-in-september/",
+    "tokens": [
+      "existing",
+      "home",
+      "sales",
+      "increased",
+      "september"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.bisnow.com/news/houston/multifamily/nord-group",
+    "tokens": [
+      "lenders",
+      "accuse",
+      "nord",
+      "group",
+      "entities",
+      "pocketing",
+      "rents",
+      "faking",
+      "insurance",
+      "multifamily",
+      "empire",
+      "crumbles"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://rebusinessonline.com/walker-dunlop-arranges-110m-refinancing-of-two-apartment-communities-in-stafford-texas/",
+    "tokens": [
+      "walker",
+      "038",
+      "dunlop",
+      "arranges",
+      "$110m",
+      "refinancing",
+      "apartment",
+      "communities",
+      "stafford",
+      "texas"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://rebusinessonline.com/hsr-breaks-ground-on-435-unit-mixed-income-multifamily-project-in-north-dallas/",
+    "tokens": [
+      "breaks",
+      "ground",
+      "435",
+      "unit",
+      "mixed",
+      "income",
+      "multifamily",
+      "project",
+      "north",
+      "dallas"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-plan-2027-budgets/832725/",
+    "tokens": [
+      "multifamily",
+      "firms",
+      "rethinking",
+      "2027",
+      "budgets"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/build-to-rent-communities-now-eligible-for-fha-financing",
+    "tokens": [
+      "build",
+      "rent",
+      "communities",
+      "eligible",
+      "financing"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/capital-markets/brookfield-christopher-reilly-pretium-global-real-estate-lead",
+    "tokens": [
+      "brookfield",
+      "veteran",
+      "departs",
+      "become",
+      "pretium",
+      "039",
+      "global",
+      "lead"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.bisnow.com/news/chicago/office/jpmorgan-chicago-office-renovation-costing-bank-over-800m-dimon-says",
+    "tokens": [
+      "jpmorgan",
+      "039",
+      "chicago",
+      "office",
+      "renovation",
+      "costing",
+      "bank",
+      "$800m",
+      "dimon"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/soho-office-and-retail-property-refinanced-through-acore-capital/",
+    "tokens": [
+      "soho",
+      "office",
+      "retail",
+      "property",
+      "refinanced",
+      "through",
+      "acore",
+      "capital"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://rebusinessonline.com/jll-arranges-210m-refinancing-for-grand-hyatt-indian-wells-resort-villas-in-california/",
+    "tokens": [
+      "arranges",
+      "$210m",
+      "refinancing",
+      "grand",
+      "hyatt",
+      "indian",
+      "wells",
+      "resort",
+      "038",
+      "villas",
+      "california"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/recent-office-to-residential-conversions-dc/833133/",
+    "tokens": [
+      "notable",
+      "office",
+      "residential",
+      "conversions"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.bisnow.com/news/atlanta/healthcare/hospital-construction-costs-are-climbing-healthcare-systems-keep-building",
+    "tokens": [
+      "hospital",
+      "construction",
+      "costs",
+      "climbing",
+      "atlanta",
+      "039",
+      "healthcare",
+      "systems",
+      "keep",
+      "building"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/beazer-homes-dream-finders-approval/",
+    "tokens": [
+      "beazer",
+      "homes",
+      "stockholders",
+      "approve",
+      "$2.2b",
+      "sale",
+      "dream",
+      "finders"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://rebusinessonline.com/joint-venture-acquires-1035-bed-student-housing-property-near-san-jose-state-university-for-204-7m/",
+    "tokens": [
+      "joint",
+      "venture",
+      "acquires",
+      "035",
+      "student",
+      "housing",
+      "property",
+      "near",
+      "jose",
+      "state",
+      "university",
+      "$204.7m"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://rebusinessonline.com/eastham-capital-bender-cos-buy-198-unit-multifamily-property-in-metro-twin-cities/",
+    "tokens": [
+      "eastham",
+      "capital",
+      "bender",
+      "198",
+      "unit",
+      "multifamily",
+      "property",
+      "metro",
+      "twin",
+      "cities"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/hud-layoffs-staffing-cuts-gao-report-2026/",
+    "tokens": [
+      "layoffs",
+      "caused",
+      "delays",
+      "confusion",
+      "housing",
+      "programs",
+      "independent",
+      "finds"
+    ],
+    "shown_date": "2026-10-16"
+  },
+  {
     "url": "https://www.realtor.com/research/cpi-inflation-september-2026/",
     "tokens": [
       "september",
@@ -5573,277 +5860,5 @@
       "funding"
     ],
     "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.realtor.com/news/real-estate-news/fed-michael-barr-speech-housing-affordability-interest-rates/",
-    "tokens": [
-      "official",
-      "sounds",
-      "warning",
-      "housing",
-      "affordability",
-      "hits",
-      "year"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.cnbc.com/video/2026/09/24/mortgage-rates-rise-to-7-point-45-percent.html",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "rise",
-      "7.45%"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/articles/bond-selloff-deepens-after-30-year-yield-hits-highest-since-2004",
-    "tokens": [
-      "bond",
-      "selloff",
-      "deepens",
-      "year",
-      "yield",
-      "hits",
-      "highest",
-      "since",
-      "2004"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/august-new-home-sales-incentives/",
-    "tokens": [
-      "builders",
-      "prices",
-      "home",
-      "supply",
-      "holds",
-      "months"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/la-city-council-approves-largest-ever-funding-pool-for-affordable-housing/",
-    "tokens": [
-      "city",
-      "council",
-      "approves",
-      "largest",
-      "ever",
-      "funding",
-      "pool",
-      "affordable",
-      "housing"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.kut.org/austin/2026-09-21/austin-tx-mold-rules-stronger-protections",
-    "tokens": [
-      "austin",
-      "drafting",
-      "rules",
-      "address",
-      "mold",
-      "rental",
-      "housing",
-      "8211"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.bisnow.com/news/south-florida/multifamily/miami-developers-walk-a-tightrope-between-filling-apartments-and-keeping-them-full",
-    "tokens": [
-      "miami",
-      "039",
-      "building",
-      "boom",
-      "means",
-      "keeping",
-      "renters",
-      "hard",
-      "finding"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.redfin.com/news/migration-q2-2026/",
-    "tokens": [
-      "vegas",
-      "florida",
-      "america",
-      "hottest",
-      "destinations",
-      "relocating",
-      "house",
-      "hunters"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/536-mission-high-rise-downtown-san-francisco/831288/",
-    "tokens": [
-      "536",
-      "mission",
-      "high",
-      "rise",
-      "coming",
-      "downtown",
-      "francisco"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.cnn.com/2026/09/21/economy/us-housing-market-shifting-toward-buyers",
-    "tokens": [
-      "housing",
-      "market",
-      "shifting",
-      "toward",
-      "buyers",
-      "feeling",
-      "8211"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://finance.yahoo.com/real-estate/articles/high-end-single-family-rent-044926356.html",
-    "tokens": [
-      "high",
-      "single",
-      "family",
-      "rent",
-      "growth",
-      "outpaces",
-      "lower",
-      "tier",
-      "yahoo",
-      "finance"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.inman.com/2026/09/24/housing-bills-us-congress-federal-affordability-supply/",
-    "tokens": [
-      "most",
-      "consequential",
-      "housing",
-      "bills",
-      "watch",
-      "midterms",
-      "8211",
-      "inman"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://rebusinessonline.com/joint-venture-breaks-ground-on-1-msf-industrial-project-in-haslet-texas/",
-    "tokens": [
-      "joint",
-      "venture",
-      "breaks",
-      "ground",
-      "industrial",
-      "project",
-      "haslet",
-      "texas"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.bisnow.com/news/los-angeles/office/half-of-la-office-sales-in-last-12-months-at-a-loss",
-    "tokens": [
-      "50%",
-      "office",
-      "sales",
-      "closed",
-      "loss",
-      "last",
-      "year"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/data-center/senators-are-pushing-to-kick-data-centers-out-of-opportunity-zones",
-    "tokens": [
-      "senators",
-      "pushing",
-      "kick",
-      "data",
-      "centers",
-      "opportunity",
-      "zones"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/newmark-arranges-85m-refi-on-mixed-use-soho-property/",
-    "tokens": [
-      "newmark",
-      "arranges",
-      "$85m",
-      "refi",
-      "mixed",
-      "soho",
-      "property"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.bisnow.com/news/chicago/retail/las-vegas-based-investor-pays-95m-for-massive-suburban-chicago-retail-center",
-    "tokens": [
-      "vegas",
-      "based",
-      "investor",
-      "pays",
-      "$95m",
-      "massive",
-      "suburban",
-      "chicago",
-      "retail",
-      "center"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/housecanary-chapter-11-bankruptcy/",
-    "tokens": [
-      "housecanary",
-      "files",
-      "chapter",
-      "bankruptcy",
-      "jersey"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/homebuilder-land-underwriting-shift/",
-    "tokens": [
-      "land",
-      "strategy",
-      "math",
-      "gets",
-      "tougher",
-      "homebuilders",
-      "2027",
-      "2029"
-    ],
-    "shown_date": "2026-09-25"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0wS09lT3BhT2hTenJGbzYxbHpXS0t0MkNCdlRJMmNEdEtYVEFfeEtxTFZjOG1MY21HYU5wbmNvWEJac3lta0M4c1FwbUpNM0FvYzU3UEFqaFNrNWJjSmR5eXdpTEppMDlycUx5OEdaMXhuckdl?oc=5",
-    "tokens": [
-      "congress",
-      "revives",
-      "push",
-      "federal",
-      "down",
-      "payment",
-      "assistance",
-      "inman"
-    ],
-    "shown_date": "2026-09-25"
   }
 ]
