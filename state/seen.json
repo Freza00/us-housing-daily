@@ -1,5 +1,278 @@
 [
   {
+    "url": "https://www.housingwire.com/articles/fannie-mae-cuts-2027-mortgage-forecast/",
+    "tokens": [
+      "fannie",
+      "slashes",
+      "2027",
+      "mortgage",
+      "forecast",
+      "higher",
+      "rates"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/first-horizon-sells-4-5-billion/",
+    "tokens": [
+      "first",
+      "horizon",
+      "sells",
+      "$4.5b",
+      "mortgage",
+      "portfolio",
+      "discount"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/gilbane-strada-development-break-ground-on-affordable-tower-in-castle-hill-soundview/",
+    "tokens": [
+      "gilbane",
+      "strada",
+      "development",
+      "break",
+      "ground",
+      "affordable",
+      "tower",
+      "castle",
+      "hill",
+      "soundview"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/10/single-family-permitting-declines-through-august/",
+    "tokens": [
+      "single",
+      "family",
+      "permitting",
+      "declines",
+      "through",
+      "august"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.bisnow.com/news/boston/multifamily/bpda-approves-wu-proposed-tax-breaks-4-major-multifamily-developments",
+    "tokens": [
+      "secures",
+      "approval",
+      "give",
+      "breaks",
+      "multifamily",
+      "projects"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://rebusinessonline.com/hpi-breaks-ground-on-396-unit-multifamily-project-in-north-austin/",
+    "tokens": [
+      "breaks",
+      "ground",
+      "396",
+      "unit",
+      "multifamily",
+      "project",
+      "north",
+      "austin"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.realtor.com/news/real-estate-news/florida-homestead-tax-exemption-impact-homeowners/",
+    "tokens": [
+      "florida",
+      "homestead",
+      "sparks",
+      "debate",
+      "local",
+      "services"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/multifamily-investment-strategy-atlanta-apartment-transaction/833273/",
+    "tokens": [
+      "truamerica",
+      "nabs",
+      "446",
+      "units",
+      "surpass",
+      "threshold",
+      "atlanta",
+      "metro",
+      "area"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://rebusinessonline.com/newmark-arranges-76-2m-in-bridge-financing-for-new-orlando-multifamily-community/",
+    "tokens": [
+      "newmark",
+      "arranges",
+      "$76.2m",
+      "bridge",
+      "financing",
+      "orlando",
+      "multifamily",
+      "community"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.multifamilydive.com/news/build-to-rent-eligible-federal-housing-financing/833266/",
+    "tokens": [
+      "build",
+      "rent",
+      "eligible",
+      "federal",
+      "housing",
+      "administration",
+      "financing"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.realtor.com/advice/finance/dscr-loans-for-real-estate-investors/",
+    "tokens": [
+      "these",
+      "loans",
+      "helping",
+      "investors",
+      "rent",
+      "homes",
+      "doesn",
+      "everyone"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://news.bgov.com/bloomberg-government-news/hud-to-expand-mortgage-insurance-to-build-to-rent-housing",
+    "tokens": [
+      "expand",
+      "mortgage",
+      "insurance",
+      "build",
+      "rent",
+      "housing",
+      "8211",
+      "bloomberg",
+      "government"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://rebusinessonline.com/stream-realty-partners-nears-completion-of-215891-sf-industrial-project-in-spring-texas/",
+    "tokens": [
+      "stream",
+      "realty",
+      "partners",
+      "nears",
+      "completion",
+      "215",
+      "891",
+      "industrial",
+      "project",
+      "spring",
+      "texas"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/capital-markets/newmark-179b-low-rate-real-estate-loans-face-refinancing-risk",
+    "tokens": [
+      "newmark",
+      "$179b",
+      "rate",
+      "loans",
+      "face",
+      "refinancing",
+      "risk"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.connectcre.com/stories/tmg-kkr-acquire-san-joses-skyport-plaza-from-hudson-pacific/",
+    "tokens": [
+      "acquire",
+      "jose",
+      "skyport",
+      "plaza",
+      "hudson",
+      "pacific"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://rebusinessonline.com/greenheck-group-to-open-1-3-msf-manufacturing-facility-in-owasso-oklahoma/",
+    "tokens": [
+      "greenheck",
+      "group",
+      "open",
+      "manufacturing",
+      "facility",
+      "owasso",
+      "oklahoma"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://rebusinessonline.com/walker-dunlop-arranges-216m-loan-for-refinancing-of-manhattan-office-retail-building/",
+    "tokens": [
+      "walker",
+      "038",
+      "dunlop",
+      "arranges",
+      "$216m",
+      "loan",
+      "refinancing",
+      "manhattan",
+      "office",
+      "retail",
+      "building"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/retail/site-centers-to-stop-trading-as-it-winds-up-operations",
+    "tokens": [
+      "site",
+      "centers",
+      "stop",
+      "trading",
+      "winds",
+      "operations"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/articles/mortgage-bond-sales-put-on-hold-as-investors-demand-yield",
+    "tokens": [
+      "mortgage",
+      "bond",
+      "sales",
+      "hold",
+      "investors",
+      "demand",
+      "yield"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/home-equity-deal-shows-vantagescore-viable-for-rmbs-ratings",
+    "tokens": [
+      "home",
+      "equity",
+      "deal",
+      "vantagescore",
+      "viable",
+      "rmbs",
+      "ratings"
+    ],
+    "shown_date": "2026-10-17"
+  },
+  {
     "url": "https://www.housingwire.com/articles/immigration-enforcement-home-pipeline-risk/",
     "tokens": [
       "surging",
@@ -5568,297 +5841,5 @@
       "institute"
     ],
     "shown_date": "2026-09-27"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/what-long-end-crowding-on-the-yield-curve-means-for-the-fed",
-    "tokens": [
-      "long",
-      "crowding",
-      "yield",
-      "curve",
-      "means"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/09/24/30-year-fixed-mortgage-rate-spikes-thursday-to-7point45percent.html",
-    "tokens": [
-      "year",
-      "fixed",
-      "mortgage",
-      "rate",
-      "jumps",
-      "sharply",
-      "thursday",
-      "7.45%"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/realpage-states-federal-rent-price-fixing-settlement/831422/",
-    "tokens": [
-      "realpage",
-      "states",
-      "tussle",
-      "federal",
-      "rent",
-      "price",
-      "fixing",
-      "settlement"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/house-dems-seek-extended-comment-period-on-trump-cra-rewrite",
-    "tokens": [
-      "house",
-      "dems",
-      "seek",
-      "extended",
-      "comment",
-      "period",
-      "trump",
-      "rewrite"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/builder-marketing-2027-planning/",
-    "tokens": [
-      "builder",
-      "discounts",
-      "biggest",
-      "buying"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVDl0VV9odnNteEFHQm5GekhONC14NDc5VjBXa3IwLU8wYTN5T21XR2FCODI0cW5GUmExUVZ3ejFubmwxeXpkR0VIRmtNTk1sTkpRZ1ZseGx6TUprSUxydUdQbm5ndEt2azZISi0wRkFFQTlSaFhjS29nNGpQSHpKUkVZX3h1cDFrR1haUlp6RFJJY1JvYmRIXzdfLWFJRERISkhrUVJDZzB5U3IyaHB0bl8yYUIybGxsMFR4VUJn?oc=5",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "7%",
-      "again",
-      "means",
-      "vegas",
-      "homebuyers",
-      "review",
-      "journal"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.cnbc.com/2026/09/24/miami-luxury-housing-boom-bugatti-bubble.html",
-    "tokens": [
-      "miami",
-      "ultra",
-      "luxury",
-      "housing",
-      "market",
-      "booms",
-      "cash",
-      "transactions",
-      "dominate",
-      "high",
-      "brands",
-      "like",
-      "bugatti",
-      "porsche",
-      "jump"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUndQaHZOYXI1bUxBRC1LUGFRTW9qYU9YbEJKc2U4NVJUbnlJT2ptUTFUSEkwcjNTSVVrT3ZkODRpZ1NSOW5wTFJuLWFva2prTUxOcjdfYTVXLXVmZjdKd2xTQzl5NXJhZV9Ld2hQaktVVzZFaF9SbTJ4UWhIaS12cjlMR2lNYWVTRldqQ3JpMA?oc=5",
-    "tokens": [
-      "dallas",
-      "housing",
-      "market",
-      "business",
-      "journals"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBHSy1JV2pQY3RmSkN5eWdGSnh2UGpqbzh3ajVuOXpKSUdEbExpWUt3NDJzcWNWa1RNRkxnVHlubnBfTmJ0dWxoYjNTUzFnYnhEdDhKTlNYbEpYdmswd3dwTjI4YlFpaEdqbm1tM015a0JkLUt4NVlz?oc=5",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "back",
-      "above",
-      "7%",
-      "thecharlotteledger"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://rebusinessonline.com/canvas-residential-kelley-properties-to-develop-141-unit-build-to-rent-project-in-bermuda-run-north-carolina/",
-    "tokens": [
-      "canvas",
-      "residential",
-      "kelley",
-      "properties",
-      "develop",
-      "141",
-      "unit",
-      "build",
-      "rent",
-      "project",
-      "bermuda",
-      "north",
-      "carolina"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.zillow.com/research/august-2026-rent-report/?utm_source=newsletter&#038;utm_medium=email&#038;utm_campaign=newsletter_axioslocal_nashville&#038;stream=top",
-    "tokens": [
-      "renting",
-      "$1,066",
-      "cheaper",
-      "month",
-      "buying",
-      "investing",
-      "pays",
-      "august",
-      "rent",
-      "8211",
-      "zillow"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.politico.com/news/2026/09/20/mortgage-republicans-housing-trump-midterm-election-affordability-inflation-01084635",
-    "tokens": [
-      "rising",
-      "mortgages",
-      "muddling",
-      "housing",
-      "message",
-      "8211",
-      "politico"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.bisnow.com/news/dallas-ft-worth/office/unpaid-79m-loan-puts-downtown-dallas-office-tower-at-risk-of-foreclosure",
-    "tokens": [
-      "unpaid",
-      "$79m",
-      "loan",
-      "puts",
-      "downtown",
-      "dallas",
-      "office",
-      "tower",
-      "risk",
-      "foreclosure"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/data-center-capital-markets/oracle-delays-raise-concerns-on-debt-heavy-ai-data-center-deals",
-    "tokens": [
-      "oracle",
-      "project",
-      "delays",
-      "raise",
-      "concerns",
-      "debt",
-      "heavy",
-      "data",
-      "center",
-      "deals"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.bisnow.com/news/london/capital-markets/blackstone-upsizes-pound1b-industrial-loan-as-giant-platform-refinancing-continues",
-    "tokens": [
-      "blackstone",
-      "upsizes",
-      "industrial",
-      "loan",
-      "giant",
-      "platform",
-      "refinancing",
-      "continues"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://rebusinessonline.com/new-york-life-provides-386m-loan-for-refinancing-of-midtown-manhattan-office-building/",
-    "tokens": [
-      "york",
-      "life",
-      "provides",
-      "$386m",
-      "loan",
-      "refinancing",
-      "midtown",
-      "manhattan",
-      "office",
-      "building"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://rebusinessonline.com/piedmont-healthcare-to-invest-600m-to-relocate-hospital-in-covington-georgia/",
-    "tokens": [
-      "piedmont",
-      "healthcare",
-      "invest",
-      "$600m",
-      "relocate",
-      "hospital",
-      "covington",
-      "georgia"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/first-phase-of-jersey-city-multifamily-secures-310m-financing/",
-    "tokens": [
-      "first",
-      "phase",
-      "jersey",
-      "city",
-      "multifamily",
-      "secures",
-      "$310m",
-      "financing"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.bisnow.com/news/new-york/capital-markets/jpmorgan-deliberating-3-8b-loan-for-extell-s-latest-luxury-supertall",
-    "tokens": [
-      "jpmorgan",
-      "reportedly",
-      "discussing",
-      "$3.8b",
-      "loan",
-      "extell",
-      "039",
-      "latest",
-      "luxury",
-      "supertall"
-    ],
-    "shown_date": "2026-09-26"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/retail/retail-veteran-launches-grocery-anchored-fund-with-200m-in-seed-funding",
-    "tokens": [
-      "retail",
-      "veteran",
-      "launches",
-      "grocery",
-      "anchored",
-      "fund",
-      "$200m",
-      "seed",
-      "funding"
-    ],
-    "shown_date": "2026-09-26"
   }
 ]
