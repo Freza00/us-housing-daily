@@ -1,0 +1,799 @@
+{
+  "date": "2026-10-18",
+  "generated_at": 1792286292950,
+  "sources_attempted": 40,
+  "sources_ok": 36,
+  "sections": [
+    {
+      "id": "national",
+      "label": "全国住宅市场",
+      "emoji": "🏠",
+      "desc": "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk",
+      "quota": 5,
+      "maxPerSource": 2,
+      "extendedWindow": false
+    },
+    {
+      "id": "sunbelt",
+      "label": "Sunbelt 住宅",
+      "emoji": "🌵",
+      "desc": "Sun Belt 各州住宅与租赁市场",
+      "quota": 4,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "btr",
+      "label": "全国 BTR / SFR",
+      "emoji": "🏘",
+      "desc": "Build-to-Rent / Single-Family Rental",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "cre",
+      "label": "全国 CRE",
+      "emoji": "🏢",
+      "desc": "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE",
+      "quota": 5,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": false
+    },
+    {
+      "id": "institutional",
+      "label": "全国机构资本",
+      "emoji": "💰",
+      "desc": "PE / REIT 募资、并购、IPO、机构持仓",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    }
+  ],
+  "items": [
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Inflation ticked up: Here's what it means for real estate - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSVkxYjFOQmIxejJ0U1h5VzQ1U08zcWU1cjBpR21OZk9RLUZObDcxMUotNXlYc2ZZejVnMXEza1VKa3hzT2stZU9wLWFlcjEtVDRrQkVqWGdSbjlfQkFOSEhNQUZUV1RKeW1jcllJdVU1N3FLM19GaEJCak11TTEtYWtvX0pJS1hCc2RHTDVRdDVldGRH?oc=5",
+      "description": "Inflation ticked up: Here's what it means for real estate &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1791986595000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "national",
+        "macro"
+      ],
+      "heat_signals": [
+        "inflation"
+      ],
+      "importance": 5,
+      "selector_reason": "通胀重新抬头会影响利率、按揭成本和房地产估值，是住宅与商业地产周期的核心宏观变量。该议题具有全国性和跨资产影响，重要性达到系统层面。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "通胀升温，房地产将面临什么影响",
+      "summary_zh": "通胀意外上行或推高利率，房地产融资与交易需求承压，影响偏负面",
+      "impact": "short-neg",
+      "id": "f82762ae",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "Cheap Money Built a Generation of Wealth. What Happens to Housing When It’s Gone?",
+      "link": "https://www.realtor.com/news/trends/high-interest-rates-wealth-building-homes-stocks/",
+      "description": "Costlier mortgages, slower home gains, and stretched stocks are forcing households to rethink where they put their money.",
+      "published_at": 1792193177000,
+      "score": 8,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "trend"
+      ],
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "低利率时代结束后，按揭成本上升、房价增速放缓和资产配置变化正在重塑住房财富形成机制。其影响跨越住宅需求、家庭资产负债表和长期房地产周期，具有系统性意义。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "廉价资金时代终结，住房财富如何重估",
+      "summary_zh": "抵押贷款变贵、房价涨幅放缓，家庭资产配置承压，住房财富增长或降温",
+      "impact": "short-neg",
+      "id": "8ef600a3",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Can mortgage rates get under 7% for the holidays?",
+      "link": "https://www.housingwire.com/articles/mortgage-rates-below-7-holidays/",
+      "description": "Last week, inflation was super hot, Fed voting members spoke hawkishly and the economic data was solid, so it’s strange to talk about rates possibly dropping below 7% for the holidays. However, after last week&#8217;s crazy bond action , rates below 7% for Halloween, Thanksgiving, Christmas or New Year&#8217;s are back in play. If you need to catch up on what happened last week in the bond market, I covered it on this episode of the HousingWire Daily podcast. Four hings need to happen to get mortgage rates below 7%. 1. The Iran conflict ending and oil prices falling will be a big help; the last time we saw a noticeable move lower in the 10-year yield was when the first MOU deal was announced in June. However, once that fell apart in July, and especially after President Trump said there would be no deal until the midterms, all hell broke loose and yields exploded higher. 2. Any softness on the AI build-out will help bonds rally; we saw just a glimpse of a giant bleeding last week with CoreWeave , and bonds rallied hard as a result even in a week where inflation was hot and the economic data was firm. If we see any more headlines that AI companies are having a hard time getting financed, or if certain IPOs don’t happen on time, this can be a benefit to bonds when they’re above 5%. Not so much if the 10-year yield is trading between 4.30%-4.60%. 3. The Trade War 2.0 can’t get worse if we want to see rates under 7%. The Fed really takes a hawkish policy stance on the trade war. As long as we don’t impose more/higher tariffs and create more supply drama for Americans, that will be positive for rates. If we start issuing more tariffs with a higher percent collected, then it will be hard to get rates under 7%. 4. Any softness on the economic and labor side, especially with the 10-year yield above 5%, can help push yields lower and get rates under 7% again. However, since we are talking about the holidays in 2026, the jobs data over the next few months will need to surprise to the downside, since most people aren’t expecting big job gains anymore. Now, of course, the opposite of the above is also true. If the conflict escalates, oil prices head higher, more tariffs are imposed, and the labor/economic data stay firm with no AI drama, yields can rise, and mortgage rates with them. Mortgage spreads Mortgage spreads are now the most important story in housing. If spreads worsen, the housing market could get much worse, affecting not only existing home sales but also housing starts for years to come. For now, spreads, although they have worsened since the lows of 2026, have not accelerated to levels we saw in 2023 and 2024 and are slightly below 2025 levels, when they were trending toward multi-year lows. Historically, mortgage spreads have ranged from 1.60% to 1.80%. Last week, spreads rose to 2.21%, up from 2.12% the week before. Let’s compare last week’s mortgage rates to where they would have been over the last three years, given the 10-year yield’s current level: If we had the worst mortgage spread levels of 2023, mortgage rates would be 8.27% today, not 7.37%. If we had the worst 2024 levels, mortgage rates would be 7.89% today. If we had the worst 2025 levels, mortgage rates would be 7.70% today. Housing inventory Housing inventory growth has been very tame this year, with some weeks down year over year. However, as always, when rates rise, especially above 7%, inventory can grow faster. Inventory growth has been slower than in previous years, mostly because we are closer to normal inventory levels, unlike the past few years when we were working from the lowest levels ever recorded. Last week, inventory increased; it’s late in the year, and the seasonal decline in active listings should happen soon. Year-over-year comps also make growth easier to show, as mortgage rates were much lower at this time last year and existing home sales were heading toward a nine-month high in December of 2025. Inventory is up 5.32% year over year. Weekl",
+      "published_at": 1792269062000,
+      "score": 40,
+      "tags": [
+        "housing",
+        "national",
+        "rates"
+      ],
+      "heat_signals": [
+        "fed",
+        "inflation",
+        "mortgage rate",
+        "existing home sales",
+        "housing starts",
+        "trend",
+        "year over year",
+        "year-over-year",
+        "housing market",
+        "housing starts"
+      ],
+      "importance": 4,
+      "selector_reason": "美国抵押贷款利率是否跌破7%将直接影响购房需求、再融资和住房交易活跃度。该议题处于利率与债券市场快速波动背景下，具有较强的全国市场影响。",
+      "section": "national",
+      "title_zh": "假日季30Y mortgage 有望跌破7%",
+      "summary_zh": "若油价回落、AI融资转弱且贸易战不升级，30Y mortgage 假日季可能低于7%",
+      "impact": "neutral",
+      "id": "6fc845c6",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "logan-mohtashami",
+      "source_name": "Logan Mohtashami (HousingWire)",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "rates",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Did mortgage rates just peak or is this some bond market madness?",
+      "link": "https://www.housingwire.com/articles/did-mortgage-rates-just-peak-or-is-this-some-bond-market-madness/",
+      "description": "In the last 48 hours, we got two very hot inflation reports, positive retail sales, rising oil prices and historically low jobless claims",
+      "published_at": 1792085048000,
+      "score": 14,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "macro"
+      ],
+      "heat_signals": [
+        "inflation",
+        "mortgage rate"
+      ],
+      "importance": 4,
+      "selector_reason": "通胀、零售销售、油价和就业数据共同推动债券收益率变化，可能重新定义抵押贷款利率走势。该分析直接关系全国住宅需求和融资环境，重要性高于一般市场评论。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Mortgage rates 是见顶还是债市异常",
+      "summary_zh": "通胀、零售销售和油价均偏强，短期 mortgage rates 仍有上行压力",
+      "impact": "short-neg",
+      "id": "fab27f3d",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "nahb-eyeonhousing",
+      "source_name": "NAHB Eye on Housing",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "data",
+        "trend",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Building Material Price Inflation Nears Four Year High",
+      "link": "https://eyeonhousing.org/2026/10/building-material-price-inflation-nears-four-year-high/",
+      "description": "The Producer Price Index for final demand was up 1.3% in September, after rising 0.5% in August. Compared to a year ago, final demand prices were up 6.3%. The price of goods used in new residential construction (including energy) was up 1.8% over the month and up 9.7% from last year, while the price of [&#8230;]",
+      "published_at": 1792078735000,
+      "score": 11,
+      "tags": [
+        "housing",
+        "national",
+        "macro",
+        "construction"
+      ],
+      "heat_signals": [
+        "inflation"
+      ],
+      "importance": 4,
+      "selector_reason": "建筑材料价格同比上涨9.7%，将增加住宅建设成本并加剧新房供应压力。该成本冲击覆盖全国建造商和购房者，具有明显行业影响。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "建材价格涨幅逼近四年高位",
+      "summary_zh": "新住宅建材价格月涨1.8%、年涨9.7%，将抬高开发成本并压缩利润",
+      "impact": "short-neg",
+      "id": "b211b6ff",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "nrhc",
+      "source_name": "National Rental Home Council (NRHC)",
+      "source_tier": "E",
+      "source_weight": 9,
+      "source_tags": [
+        "btr-sfr",
+        "institutional"
+      ],
+      "region": "national",
+      "title": "Nevada invests more than $38 million to expand attainable housing &#8211; Fox 5 Vegas",
+      "link": "https://www.fox5vegas.com/2026/10/12/nevada-invests-more-than-38-million-expand-attainable-housing/",
+      "description": "Nevada invests more than $38 million to expand attainable housing State funding will support 10 developments statewide Nevada is investing over $38M to add attainable housing across the state, funding projects like Kyle Canyon Townhomes in Las Vegas. Learn what’s coming. By KaiBrina Parkman Published : Oct. 12, 2026 at 3:46 PM PDT Share Add Us On Google Add as a preferred source on Google CARSON CITY ( FOX5 ) — Nevada is investing more than $38 million to expand attainable housing across the state. The funding will support 10 developments, including Volunteer Apartments in Henderson and Kyle Canyon Townhomes in Las Vegas. State officials say the projects will create or support 891 homes and rental units for Nevadans at different income levels. MORE ON FOX5: Henderson Shines community cleanup offers free hazardous waste, electronics drop-off at M Resort The developments include multifamily rentals, single-family homes, and small-scale residential projects. The projects are located in southern and northern Nevada, Carson City, and rural communities. “These 10 projects demonstrate how targeted state funding can help move housing developments forward and deliver results in communities across Nevada,” said Steve Aichroth, administrator of the Nevada Housing Division. The funding follows a major housing investment approved during the 2025 Nevada legislative session. Copyright 2026 KVVU. All rights reserved.",
+      "published_at": 1792175679000,
+      "score": 11,
+      "tags": [
+        "housing",
+        "las-vegas",
+        "policy",
+        "regulator"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "内华达州投入超过3800万美元支持多个可负担住房开发项目，涉及全州住宅供应扩张。该政策对拉斯维加斯等市场的住房可负担性具有区域影响。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "Nevada 投入$38M扩建可负担住房",
+      "summary_zh": "州政府资助10个项目，新增或支持891套住房，扩大Nevada可负担供给",
+      "impact": "long-pos",
+      "id": "3e06b78b",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "GAMLS: Atlanta’s housing market now defined by ‘slower, selective and stable conditions’ - Atlanta Agent Magazine",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5xS0ZCWUhLRENCM19TTjNNTTBVaFhEMWRWVV9MTzNGTzh5MHp5b1l4akxHMVotZnllb0g0aktoNzBHUWI5anNJX2VXOG85a2xFclRNU3hkdGN4clMtejNhR2FhU00tNG5Ja2Z0STJPZUZ6UTg?oc=5",
+      "description": "GAMLS: Atlanta’s housing market now defined by ‘slower, selective and stable conditions’ &nbsp;&nbsp; Atlanta Agent Magazine",
+      "published_at": 1791992494000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "atlanta",
+        "trend",
+        "brokerage"
+      ],
+      "heat_signals": [
+        "housing market"
+      ],
+      "importance": 3,
+      "selector_reason": "亚特兰大市场被描述为增长放缓、选择性增强且趋于稳定，提供了Sun Belt住宅市场的区域拐点信号。虽然信息较简略，但仍可补充东南部市场判断。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "GAMLS：Atlanta市场放缓且趋于稳定",
+      "summary_zh": "Atlanta市场进入更慢、更挑剔但稳定阶段，交易活跃度改善仍待观察",
+      "impact": "neutral",
+      "id": "c46b02af",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "Atlanta Housing Market Sees A Surprising Shift In Buyer Behavior - Patch",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbmVhSEdnLTdzMFBROGZONmpxVE9TUXNUVXh6ZmpuSkt6ZjNMOGVLU1RySHVzczFiREtPU2tzdGJMbEpnRnNiWVJUckNKOTVaNEJhXzlKVEI0V0VLQkdPY1Uwd0duVW44WWd0TVRPZVhqaUJsWEF5M3paa1hGRUg3UEwyZVVpZUhQaGhQZVo4RTZUX3dQNXRWaNIBsAFBVV95cUxQY2FLcGlCN1B2R2dMUWtwOVdqMmZlVURzeGx3clh0SHJmbUdQbHAwTnFrak9jQzQwNHUtMTFBb18yTlhGY3NiMXB0dVV6ZXlGVFZtdHY5TVFjZDhuUElrNHRXelVqdHFTZWg3ZlY3dVlLU3o0WE5JaE1WU0V5Q3I2aTRWU0ZxdEpYMnRaRmpNSmh2OG4xRExyTmZnckpYYURaUFI2QThJY2VXTy01TXF5SA?oc=5",
+      "description": "Atlanta Housing Market Sees A Surprising Shift In Buyer Behavior &nbsp;&nbsp; Patch",
+      "published_at": 1792009631000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "atlanta",
+        "trend"
+      ],
+      "heat_signals": [
+        "housing market"
+      ],
+      "importance": 3,
+      "selector_reason": "亚特兰大买方行为出现意外变化，说明高利率和库存环境正在改变Sun Belt购房决策。该信号偏区域性，适合作为当地市场趋势参考。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "Atlanta买家行为出现意外转变",
+      "summary_zh": "买家决策模式发生变化，但细节与价格影响待披露，市场方向暂不明朗",
+      "impact": "neutral",
+      "id": "8c15d6bb",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "The Real Amendment 3 Before Florida Voters: 5 Things Floridians Should Know About Property Tax Relief",
+      "link": "https://www.realtor.com/news/opinion/amendment-3-florida-homestead-tax-exemption/",
+      "description": "Amendment 3 would put money back into the pockets of eligible homeowners, writes Chuck Bonfiglio Jr., 2026 president of Florida Realtors®.",
+      "published_at": 1792197082000,
+      "score": 8,
+      "tags": [
+        "housing",
+        "florida",
+        "policy",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "佛罗里达房产税减免修正案若获通过，将影响业主持有成本和州内住房负担。该政策覆盖Sun Belt重要住宅市场，但影响主要限于佛州。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "Florida Amendment 3聚焦房产税减免",
+      "summary_zh": "Amendment 3拟向符合条件的房主返还税负，支持购房者与业主现金流",
+      "impact": "long-pos",
+      "id": "4168d516",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "btrlist",
+      "source_name": "BTR List (via Google News)",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "btr-sfr"
+      ],
+      "region": "national",
+      "title": "BTR Daily - October 15, 2026 - BBL completes 315-home BTR near Tampa - BTR List",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFB5TUJPZDRYM3gwQW1CV3VYQW9nZnhqNkljOUM3eXNLLXI4NzV4QUpLSm1nTE9iTld2MEpNTnJSZktRQzZ4d2xXTFJVZHFQN3VyLVdvdVg5UlI1ZG4zMGFKV3Qtbm9jNG5kMmIwdWx3Y2RYdw?oc=5",
+      "description": "BTR Daily - October 15, 2026 - BBL completes 315-home BTR near Tampa &nbsp;&nbsp; BTR List",
+      "published_at": 1792074956000,
+      "score": 14,
+      "tags": [
+        "btr-sfr",
+        "florida",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "btr"
+      ],
+      "importance": 3,
+      "selector_reason": "坦帕附近315套BTR项目完工，反映Sun Belt租赁住宅供应持续落地。项目规模较大，并对当地单户租赁供给有一定参考价值。",
+      "section": "btr",
+      "extended_window": true,
+      "title_zh": "BBL完成Tampa附近315套BTR项目",
+      "summary_zh": "BBL交付315套BTR住房，增加Tampa租赁供给，利好区域住宅运营",
+      "impact": "long-pos",
+      "id": "9e718397",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "nrhc",
+      "source_name": "National Rental Home Council (NRHC)",
+      "source_tier": "E",
+      "source_weight": 9,
+      "source_tags": [
+        "btr-sfr",
+        "institutional"
+      ],
+      "region": "national",
+      "title": "Housing Market Predictions For 2026: When Will Home Prices Drop? &#8211; Forbes",
+      "link": "https://www.forbes.com/advisor/mortgages/real-estate/housing-market-predictions/",
+      "description": "",
+      "published_at": 1792175612000,
+      "score": 14,
+      "tags": [
+        "btr-sfr",
+        "institutional",
+        "housing",
+        "trend"
+      ],
+      "heat_signals": [
+        "housing market"
+      ],
+      "importance": 3,
+      "_from_fallback": true,
+      "section": "btr",
+      "extended_window": true,
+      "title_zh": "2026房价何时下跌仍待观察",
+      "summary_zh": "文章讨论2026房价预测，但缺乏具体数据，价格方向与跌幅细节待披露",
+      "impact": "neutral",
+      "id": "d03297db",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "nrhc",
+      "source_name": "National Rental Home Council (NRHC)",
+      "source_tier": "E",
+      "source_weight": 9,
+      "source_tags": [
+        "btr-sfr",
+        "institutional"
+      ],
+      "region": "national",
+      "title": "Georgia should make homes more affordable following new federal law passage &#8211; Atlanta Journal &#8211; Constitution",
+      "link": "https://www.ajc.com/opinion/2026/10/georgia-affordable-housing-united-way/",
+      "description": "Every day at United Way , we meet families who are doing everything right. They’re working, raising children, contributing to their communities and still struggling to find housing they can afford. For many, the challenge isn’t simply buying a home. It’s finding a safe, stable place to live that fits their budget and allows them to build toward the future. That’s why housing policy matters so much. It touches nearly every aspect of a family’s well-being, from financial stability and educational outcomes to health and workforce participation. Related Story Guest Column: Atlanta is running out of the tools that make affordable housing possible Recently, Congress took an important step by passing the 21st Century ROAD to Housing Act , the first significant federal housing legislation in more than three decades. While no single law will solve Georgia’s housing challenges overnight, it represents meaningful progress and creates an opportunity for states to build on that momentum.",
+      "published_at": 1792175691000,
+      "score": 13,
+      "tags": [
+        "btr-sfr",
+        "institutional",
+        "macro",
+        "policy"
+      ],
+      "heat_signals": [
+        "fed"
+      ],
+      "importance": 3,
+      "_from_fallback": true,
+      "section": "btr",
+      "extended_window": true,
+      "title_zh": "新联邦住房法推动Georgia提高可负担性",
+      "summary_zh": "21st Century ROAD to Housing Act获通过，为Georgia扩大可负担住房政策提供支持",
+      "impact": "long-pos",
+      "id": "0cc0a171",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Illinois Voters Weigh Data Center Referendums On November Ballot",
+      "link": "https://www.bisnow.com/news/chicago/data-center-community-relations/illinois-voters-weigh-data-center-referendums-november-ballot",
+      "description": "Voters in several municipalities across the state have another tool to potentially stymie data center development in Illinois.",
+      "published_at": 1792186997000,
+      "score": 10,
+      "tags": [
+        "data-center",
+        "policy",
+        "regulator"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "伊利诺伊州多个地方将就数据中心公投，可能影响数据中心选址、土地开发和电力基础设施投资。该议题反映全国数据中心扩张面临的地方监管阻力。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "Illinois选民将表决数据中心建设",
+      "summary_zh": "多地公投可能阻碍数据中心开发，项目审批与Illinois产业地产需求面临风险",
+      "impact": "short-neg",
+      "id": "97f5738f",
+      "fetched_at": 1792286429045,
+      "cre_subcategory": "数据中心"
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "St. Louis Wants To Build a $3 Billion Tech Hub—but the Data Center Anchoring It Is Sparking Backlash",
+      "link": "https://www.realtor.com/news/trends/st-louis-missouri-3b-tech-hub-data-center-backlash/",
+      "description": "St. Louis' ambitious plan to transform into a regional tech hub has sparked public opposition, lawsuits, and new regulations.",
+      "published_at": 1792188835000,
+      "score": 8,
+      "tags": [
+        "data-center",
+        "regulation"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "圣路易斯30亿美元科技中心计划因数据中心引发反对、诉讼和新规，体现大型数字基础设施开发的政策风险。该案例对全国数据中心和产业地产投资具有较强借鉴意义。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "St. Louis数据中心引发反弹与诉讼",
+      "summary_zh": "$3B科技枢纽计划遭遇民众反对、诉讼及新规，数据中心落地不确定性上升",
+      "impact": "short-neg",
+      "id": "8d753070",
+      "fetched_at": 1792286429045,
+      "cre_subcategory": "数据中心"
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "National Real Estate Advisors Opens Office-to-Residential Conversion Project in D.C.",
+      "link": "https://rebusinessonline.com/national-real-estate-advisors-opens-office-to-residential-conversion-project-in-d-c/",
+      "description": "WASHINGTON, D.C. —&#160;National Real Estate Advisors has opened Aviator House, an office-to-residential adaptive reuse development located in the Dupont Circle neighborhood of Washington, D.C. The former Air Line Pilots Association headquarters was transformed into 157 residential units, including 15 affordable units. Aviator House was the first project advanced through and opened under the District’s Housing in Downtown (HID) initiative. The project team included Clark Construction (general contractor), Eric Colbert &#38; Associates (architect/design), Gaëtane &#38; Co. (architect/design), D",
+      "published_at": 1792161820000,
+      "score": 8,
+      "tags": [
+        "office",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "华盛顿特区将办公总部改造为157户住宅并包含可负担单元，体现办公转住宅的实际落地。该项目对解决办公空置、增加城市住房供给具有较强示范意义。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "D.C.旧办公楼改建成157套住宅",
+      "summary_zh": "Aviator House新增157套住宅、含15套可负担住房，推动D.C. office-to-residential转型",
+      "impact": "long-pos",
+      "id": "71bbed2d",
+      "fetched_at": 1792286429045,
+      "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Link Logistics Acquires 550,992 SF Industrial Property in Youngsville, North Carolina",
+      "link": "https://rebusinessonline.com/link-logistics-acquires-550992-sf-industrial-property-in-youngsville-north-carolina/",
+      "description": "YOUNGSVILLE, N.C. —&#160;New York City-based Link Logistics has acquired Eaton Logistics Facility, a 550,992-square-foot industrial property located at 2545 Innovation Loop in Youngsville, roughly 23 miles outside Raleigh. The facility, which was fully leased at the time of sale, features 40-foot clear heights, cross-dock configuration and direct access to U.S. Route 1. The property serves as a warehousing and distribution hub that supports manufacturing operations in the Raleigh area. JLL represented the sellers, Summit Real Estate Group and an institutional partner, in the transaction. The s",
+      "published_at": 1792161602000,
+      "score": 8,
+      "tags": [
+        "industrial",
+        "carolinas",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "Link Logistics收购北卡罗来纳州55万平方英尺、全租赁工业设施，显示大型机构资本继续配置Sun Belt物流资产。资产规模和机构买方使其成为较重要的工业地产交易信号。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "Link Logistics收购550,992 SF工业物业",
+      "summary_zh": "Link Logistics买入Youngsville全租赁工业物业，强化Raleigh区域仓储与配送布局",
+      "impact": "long-pos",
+      "id": "36ed62e8",
+      "fetched_at": 1792286429045,
+      "cre_subcategory": "仓储 / 物流"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "AdventHealth Breaks Ground On 375K SF Hospital: The Denver Deal Sheet",
+      "link": "https://www.bisnow.com/news/denver/deal-sheet/adventhealth-breaks-ground-on-375k-sf-hospital-the-denver-deal-sheet",
+      "description": "AdventHealth Louisville will be located in the Redtail Ridge development.",
+      "published_at": 1792185957000,
+      "score": 10,
+      "tags": [
+        "mixed-asset",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "丹佛地区一座37.5万平方英尺医院项目开工，体现医疗地产和大型开发项目的推进。项目规模较大，但影响主要集中在当地商业地产市场。",
+      "section": "cre",
+      "extended_window": true,
+      "title_zh": "AdventHealth在Denver开建375K SF医院",
+      "summary_zh": "AdventHealth启动375K SF医院建设，落地Redtail Ridge并带动区域开发需求",
+      "impact": "long-pos",
+      "id": "f50177a0",
+      "fetched_at": 1792286429045,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "GSE shareholders closer to big payout after petition denial",
+      "link": "https://www.nationalmortgagenews.com/news/gse-shareholders-closer-to-big-payout-after-petition-denial",
+      "description": "After court denies rehearing, investors in the Fairholme case may still face a hurdle from a potential FHFA challenge.",
+      "published_at": 1792184347000,
+      "score": 9,
+      "tags": [
+        "national",
+        "regulation",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "GSE股东诉讼进展可能影响房利美和房地美相关权益、资本安排及住房金融体系。该案件涉及联邦住房金融核心机构，具有系统性金融和监管影响。",
+      "section": "institutional",
+      "extended_window": true,
+      "title_zh": "GSE股东距离巨额赔付更近一步",
+      "summary_zh": "法院拒绝重审后Fairholme投资者更接近赔付，但FHFA潜在挑战仍是主要障碍",
+      "impact": "long-pos",
+      "id": "7d6cdd57",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Doug Middleton to Lead New York Institutional Capital Markets at Cushman &#038; Wakefield",
+      "link": "https://www.connectcre.com/stories/doug-middleton-to-lead-new-york-institutional-capital-markets-at-cushman-wakefield/",
+      "description": "Cushman &#38; Wakefield has hired Doug Middleton and Jack Stillwagon to lead its Institutional Capital Markets business across New York City. Joining from CBRE, Middleton and Stillwagon bring extensive experience in sourcing and executing transactions for large commercial assets across New York City. At Cushman &#38; Wakefield, they will also collaborate with capital markets teams ... The post Doug Middleton to Lead New York Institutional Capital Markets at Cushman & Wakefield appeared first on Connect CRE .",
+      "published_at": 1792185954000,
+      "score": 9,
+      "tags": [
+        "office",
+        "nyc",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "Cushman & Wakefield组建纽约机构资本市场团队，强化大型商业资产交易和机构客户覆盖。该动作反映资本市场竞争变化，但属于公司层面的行业动态。",
+      "section": "institutional",
+      "extended_window": true,
+      "title_zh": "Cushman聘请团队领衔NYC机构资本市场",
+      "summary_zh": "Doug Middleton与Jack Stillwagon加盟Cushman，增强NYC大型商业资产交易能力",
+      "impact": "long-pos",
+      "id": "910f36cc",
+      "fetched_at": 1792286429045
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Senators call on FTC to investigate ‘deceptive’ real estate practices - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9MakJBdHN2U0N4blV5VWFPZUdPY1VSbmNRZDI2Y1ZTWGplSktJeHk1Sm96RGJjdXZIUFUtZDRjZmVXSGZnRkk2dkZ0S1JnMEd4YU43ampON0M4ekNCaXkxQm9ITmUydzRlX2lHQzBIdVQ5dmk4dTJLa1dB?oc=5",
+      "description": "Senators call on FTC to investigate ‘deceptive’ real estate practices &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1792186517000,
+      "score": 10,
+      "tags": [
+        "national",
+        "regulation",
+        "regulator",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "参议员要求FTC调查房地产行业涉嫌欺骗性做法，可能引发联邦层面的执法和合规变化。若调查推进，将影响经纪公司、营销流程和消费者保护规则。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "参议员要求FTC调查房地产欺诈行为",
+      "summary_zh": "参议员指控房地产存在误导性做法并要求FTC调查，brokerage合规压力上升",
+      "impact": "short-neg",
+      "id": "a078650b",
+      "fetched_at": 1792286429045
+    }
+  ],
+  "errors": [
+    {
+      "source": "Houston Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://houstonagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Phoenix Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://phoenixagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Atlanta Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://atlantaagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Miami Agent Magazine",
+      "error": "fetch failed",
+      "attempted_urls": [
+        "https://miamiagentmagazine.com/feed/"
+      ]
+    }
+  ],
+  "_diagnostics": {
+    "writer_mode": "global",
+    "sectionsUnderMin": [],
+    "window_hours": 48,
+    "pool_sizes": {
+      "24h": 15,
+      "48h": 93,
+      "72h": 109
+    },
+    "us_holiday": {
+      "today_us": "2026-10-17",
+      "today_us_holiday": null,
+      "yesterday_us_holiday": null,
+      "tomorrow_us_holiday": null,
+      "is_us_weekend": true,
+      "expected_recovery_bj_date": "2026-10-21",
+      "source": "date.nager.at"
+    },
+    "writer_audit": [
+      {
+        "stage": "selector",
+        "input": 123,
+        "output": 40
+      },
+      {
+        "stage": "tagger",
+        "items": 40
+      },
+      {
+        "stage": "dedupe",
+        "before": 40,
+        "after": 39
+      },
+      {
+        "stage": "pick",
+        "section_counts": {
+          "national": 6,
+          "sunbelt": 4,
+          "btr": 3,
+          "cre": 5,
+          "institutional": 2
+        }
+      },
+      {
+        "stage": "translator",
+        "items": 20
+      }
+    ],
+    "candidate_pool_size": 123
+  }
+}
