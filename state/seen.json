@@ -1,5 +1,291 @@
 [
   {
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbUN5UGFGRGxPWlJJWmRmVzBOb3hGRzRiaFoyZzM4U1k4V2pqdDdJbGtNZk9yTjFiY1NYRWw4YmRUdEVjZHBtaldiRVpLbGhXclpSTXR4b2R4LVlDTndMUmRPOW9xc0JmTDlCdW55OEdJRFdDVEgxTjYxU3JNSllZcA?oc=5",
+    "tokens": [
+      "mortgage",
+      "rates",
+      "surge",
+      "housing",
+      "demand",
+      "cools",
+      "economist",
+      "inman"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9rOEM3eXo2d3E3eHZsb0FXQVA0R0hoN2JPWjhsd2tjeDhFUTBFQkRGbFREbUlTb1FkRVVuNkpxSzQybi1vbnZkeFY5Vy1CbjIwY3I2cHhSek1CZDZ6UU9WZG5EbDlOclFhT3p5TjQyN3VFRXc3Z1M0?oc=5",
+    "tokens": [
+      "home",
+      "sales",
+      "stuck",
+      "under",
+      "inventory",
+      "hits",
+      "pandemic",
+      "levels",
+      "inman"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://www.housingwire.com/articles/housing-ballot-measures-3-states/",
+    "tokens": [
+      "voters",
+      "seize",
+      "state",
+      "battles",
+      "housing",
+      "affordability"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://www.bisnow.com/news/los-angeles/development/california-election-proposition-45-ceqa",
+    "tokens": [
+      "proposition",
+      "deadlines",
+      "projects",
+      "039",
+      "ceqa",
+      "reviews"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://www.nationalmortgagenews.com/news/basel-may-encourage-more-nonbank-mortgage-lenders-to-go-bank",
+    "tokens": [
+      "basel",
+      "encourage",
+      "nonbank",
+      "mortgage",
+      "lenders",
+      "bank"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWklkWnFaMnRrUHQ2YVVjTDRnN25TVEFVN1JSWm1VMWhrY0o4LVpoSWlWLTh5UWpycXJ4VzloQk53ejdRUGJoa19Jc09sM1dBY1hLZzMwNXNJNURlRTk3U1lYalVlWlVXdWRQbUVxUjZqRWwtWDVLNkUxNmJPNkszMnVFbDJMWjBZSVNWVjE4ZXQxUTl6ZVJ3cUhRMGY2Nm5NczRVdzUtVQ?oc=5",
+    "tokens": [
+      "austin",
+      "housing",
+      "market",
+      "sustained",
+      "slow",
+      "pace",
+      "last",
+      "month",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOZ042aERiblFPRnpXeGxqY29OWWhBWlFTMGFVSXlXZzJRYzUwU2ZWcXM1cEtwRDZXbjJBUGN4QWQyWnpRemNSZmNtaWxPLWxfMGhGVEdhR0ZmRXQzeklyRS1yMjhwYVNXUWo2VnRjVjl0VjF0SlgzMzdzbnYxTGZZQ2pqQVNJeVRvb3gtQm5OQ1JOa3lFYkt4M3J6NThFbWJ4dE4xdzk0Ymt0em45SzZaRHNYRkQ3dXpFOEFhMGtmTkpSNGxG?oc=5",
+    "tokens": [
+      "goofiest",
+      "ever",
+      "seen",
+      "navigating",
+      "current",
+      "arizona",
+      "housing",
+      "market"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdnNySlpQYllQZUVPM2JsYy1hU0hJeGl5OXJURkhlZ0F0Y2xNSUlkYzlveEMxTE5zbndCTVBYWmpuU1hmQktMQWR3Ty04RzF1T1JfcEFfcnd1ZXpRNVRqWEUwLWxINjBTbGR3M0ZFbDBPMjllY1BNOXktN1pSeS00eEN5RHJyQ25oZlRUM0c3SEJVcEFJZTVNeGJORlhJb0VDTXM5a2FRVUQ?oc=5",
+    "tokens": [
+      "major",
+      "economic",
+      "wins",
+      "plano",
+      "stage",
+      "housing",
+      "business",
+      "journals"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQW5HWU93aW5IZ0pWU0JsM2IyVWpsNWRGZXF0QWJHMndwSTVPektJRzV4cjlMM2huUWJkUmpEakQ2aXlmWm9pUDlTTU9LWHQ4bUM4bFR1bUUyVzF2SFllYjAyOG9WbTV5R3M5VnNoN18taVh3N3YwOUtwYjZtZmJ4QW5FOA?oc=5",
+    "tokens": [
+      "housing",
+      "market",
+      "showing",
+      "signs",
+      "mortgage",
+      "rates",
+      "impact",
+      "rightmove",
+      "raleigh",
+      "observer"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://investors.zillowgroup.com/news-and-events/news/news-details/2026/Rental-demand-is-up-20-as-high-lending-costs-stifle-the-for-sale-market/default.aspx",
+    "tokens": [
+      "rental",
+      "demand",
+      "20%",
+      "high",
+      "lending",
+      "costs",
+      "stifle",
+      "sale",
+      "market",
+      "8211",
+      "zillow",
+      "group"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://www.bisnow.com/news/houston/deal-sheet/broker-pitches-demo-redevelopment-of-downtown-tower-for-sale-the-houston-deal-sheet",
+    "tokens": [
+      "downtown",
+      "tower",
+      "pitched",
+      "demo",
+      "redevelopment",
+      "houston",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://www.bisnow.com/news/washington-dc/economic-development/bowser-wants-to-lock-in-a-550m-spa-before-she-leaves-d-c-council-members-are-pushing-back",
+    "tokens": [
+      "bowser",
+      "wants",
+      "lock",
+      "$550m",
+      "leaves",
+      "council",
+      "members",
+      "pushing",
+      "back"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://www.bisnow.com/news/national/data-center-development/senate-bill-offers-data-centers-a-faster-path-to-power-but-at-a-price",
+    "tokens": [
+      "senate",
+      "bill",
+      "offers",
+      "data",
+      "centers",
+      "faster",
+      "path",
+      "power",
+      "price"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://www.bisnow.com/news/south-florida/construction-development/andy-ansin-sunbeam-miramar-cove-north-bay-village",
+    "tokens": [
+      "billionaire",
+      "andy",
+      "ansin",
+      "self",
+      "funding",
+      "south",
+      "florida",
+      "megaprojects"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://www.bisnow.com/news/los-angeles/deal-sheet/the-los-angeles-deal-sheet",
+    "tokens": [
+      "pedro",
+      "039",
+      "west",
+      "harbor",
+      "announces",
+      "tenants",
+      "angeles",
+      "deal",
+      "sheet"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://eyeonhousing.org/2026/10/labor-shortages-a-growing-problem/",
+    "tokens": [
+      "labor",
+      "shortages",
+      "growing",
+      "problem"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZUhLTFN0NW43R19PX3VXcmFoRkJZRW5LTFh0SXd0RjZDdlZzZllfbUlXbTE0RnNkaElvQjByUnF6QkZIWnN4a1MycHB3Z0U2WkVPbU9peWtTN2kzYVdSQlZIbWxSZGZ3Z0ZHdTZaT01XUUxVZXRHYm1HdGpXZWp3UGFyMl9pbzJlMDF6TTVES2dIeEJaQnVKczlTZXp4UThRODZubVZmRkktRkY0dTg4YjdCLTU?oc=5",
+    "tokens": [
+      "good",
+      "true",
+      "joins",
+      "others",
+      "cracking",
+      "down",
+      "edited",
+      "listing",
+      "photos",
+      "inman"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONlNsRWhEbDhEYlNTZFd3dWsyVHBHMkNhNmpSTkNORmdmSlJSMlA4d2pEM2dNcEt4TjJTUHpBQVc3bnpwYWdqMV90ZE5yYWNlUWY4Z0FpVWcxZldIdWl4WVFISGtfT3hzQVhtbnFVNjVXUF9jOEZRMWRDempSQWU5Qko5d091WjA?oc=5",
+    "tokens": [
+      "capital",
+      "names",
+      "finalists",
+      "$25m",
+      "homeownership",
+      "grants",
+      "inman"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://www.bisnow.com/news/los-angeles/affordable-housing/candidates-for-california-governor-see-different-solutions-to-state-s-housing-troubles",
+    "tokens": [
+      "california",
+      "governor",
+      "candidates",
+      "different",
+      "solutions",
+      "state",
+      "039",
+      "housing",
+      "troubles"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
+    "url": "https://rebusinessonline.com/berkadia-arranges-sale-of-458-unit-multifamily-property-in-mount-pleasant-wisconsin/",
+    "tokens": [
+      "berkadia",
+      "arranges",
+      "sale",
+      "458",
+      "unit",
+      "multifamily",
+      "property",
+      "mount",
+      "pleasant",
+      "wisconsin"
+    ],
+    "shown_date": "2026-10-19"
+  },
+  {
     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSVkxYjFOQmIxejJ0U1h5VzQ1U08zcWU1cjBpR21OZk9RLUZObDcxMUotNXlYc2ZZejVnMXEza1VKa3hzT2stZU9wLWFlcjEtVDRrQkVqWGdSbjlfQkFOSEhNQUZUV1RKeW1jcllJdVU1N3FLM19GaEJCak11TTEtYWtvX0pJS1hCc2RHTDVRdDVldGRH?oc=5",
     "tokens": [
       "inflation",
@@ -5570,267 +5856,5 @@
       "pushback"
     ],
     "shown_date": "2026-09-29"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/mortgage-rates-have-gone-wild-so-whats-next-for-housing/",
-    "tokens": [
-      "mortgage",
-      "rates",
-      "gone",
-      "wild",
-      "next",
-      "housing"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/mortgage-spreads-yield-spike/",
-    "tokens": [
-      "economic",
-      "data",
-      "sends",
-      "mortgage",
-      "rates",
-      "yearly",
-      "highs"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/fasb-msr-recapture-proposal/",
-    "tokens": [
-      "proposal",
-      "seeks",
-      "standardize",
-      "accounting",
-      "recapture",
-      "values"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.nationalmortgagenews.com/news/how-chase-bofa-wells-are-luring-borrowers-in-a-7-market",
-    "tokens": [
-      "chase",
-      "bofa",
-      "wells",
-      "luring",
-      "borrowers",
-      "7%",
-      "market"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1mcmU2WmExSklmTDJ2ZkJnbmJkakZEeXRZeW1rU3h4bkduYjRuMFctbmU0SW82cWpDZTA1MGJSVW5GNTg0RGJhUlN5RWE5aHdhb1IzdktSRzVLNjNrYjhHZk9ZdVlKaU9IUVZNMzg0dmluNkRGUTJrMUQwTHc1Zw?oc=5",
-    "tokens": [
-      "homesmart",
-      "adds",
-      "nearly",
-      "000",
-      "agents",
-      "northgroup",
-      "merger",
-      "inman"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPTUV5THdEaXJNbkN3endPZi1hNjlKMWFvTU00Z3owaW5ZbmRJeThxWENDRjl3blU4cU9MdU5TWWJDZjlHUmF5cGRZT0d0ai12ZzhWcHFkMFpxVnh6WHlQQVZxSS1aU2FOeXlCR1FDbTZablBtSUczakZIQkc2MTNtNllIUkRnVFRobzFka19ncktaaXhsVndOZU9lN0RfcXpBRFZXamJkZUNFVmJuT1dGc0hzVHNxZ0lFOEhkeG00OA?oc=5",
-    "tokens": [
-      "gilbert",
-      "housing",
-      "market",
-      "softens",
-      "august",
-      "inventory",
-      "rises",
-      "yourvalley"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://trerc.tamu.edu/blog/do-dead-malls-have-game/",
-    "tokens": [
-      "dead",
-      "malls",
-      "game"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQVVjVEEwZXQ1Slp3UVhYUVRiTzVZUGZEckZuWVZBcnY2clYtcUxJVnNfYkRla2pySUpSdmpXMjlFLWlVUUZfb0xCYVpNYjhiZ0kwd2JRa0Etalp0cERfZFNCOGNfWmh2MVMzLTVOMnpSMFR3UFRZY0pQbjdJVjJRTVlMWTFvUzBpV0lVVXFWYUdscnVzNG5jZFJPem9JUUhJRG5PQ3dqZ0doSEE?oc=5",
-    "tokens": [
-      "prague",
-      "build",
-      "rent",
-      "boom",
-      "thousands",
-      "apartments",
-      "coming",
-      "expats"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://rebusinessonline.com/cantex-capital-buys-14860-sf-warehouse-in-haltom-city-texas/",
-    "tokens": [
-      "cantex",
-      "capital",
-      "buys",
-      "860",
-      "warehouse",
-      "haltom",
-      "city",
-      "texas"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/data-center-power/data-center-industry-touts-power-flexibility-as-key-solution-but-some-developers-are-trying-to-avoid-it",
-    "tokens": [
-      "data",
-      "center",
-      "industry",
-      "touts",
-      "power",
-      "flexibility",
-      "solution",
-      "developers",
-      "trying",
-      "avoid"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/construction-development/spiking-material-costs-diesel-prices-are-canceling-construction-projects",
-    "tokens": [
-      "developments",
-      "getting",
-      "mothballed",
-      "because",
-      "spiking",
-      "costs"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.yardimatrix.com/blog/student-housing-preleasing-tops-previous-years/",
-    "tokens": [
-      "student",
-      "housing",
-      "preleasing",
-      "tops",
-      "previous",
-      "years",
-      "yardi",
-      "matrix"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.connectcre.com/stories/colliers-named-sale-and-leasing-advisor-for-oceanfront-innovation-hub/",
-    "tokens": [
-      "colliers",
-      "named",
-      "sale",
-      "leasing",
-      "advisor",
-      "oceanfront",
-      "innovation"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.bisnow.com/news/national/construction-development/softbank-forms-jv-with-industrial-vehicle-automation-company",
-    "tokens": [
-      "softbank",
-      "forms",
-      "industrial",
-      "vehicle",
-      "automation",
-      "company"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.multifamilydive.com/news/t2-capital-property-management-apartment-technology-multifamily-operations/831406/",
-    "tokens": [
-      "illinois",
-      "owner",
-      "entered",
-      "property",
-      "management"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.realtor.com/news/trends/we-buy-ugly-houses-fraud-charles-carrier-dallas-prison-sentence/",
-    "tokens": [
-      "ugly",
-      "houses",
-      "fraudster",
-      "gets",
-      "prison",
-      "$40m",
-      "scheme",
-      "investors"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9EVjl4UlBXSGh4YUtpU0U0dWJDTVhDRXpuNlBnM1EwSWFMaEVBTGsycWZGaFRVeDVjdlIzLUh6Nmg5SDhMR2EwM1hqRm5HM1d1Sm5RQ2IyWm9vRWRVN1dPUFlfa3A4REFJcEwtMVhNMEF6YjV5V3N3T0NyOHVpWDg?oc=5",
-    "tokens": [
-      "proptech",
-      "place",
-      "acquires",
-      "maxwell",
-      "pushes",
-      "deeper",
-      "mortgage",
-      "tech",
-      "inman"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/09/new-home-sales-rise-as-affordability-challenges-continue/",
-    "tokens": [
-      "home",
-      "sales",
-      "rise",
-      "affordability",
-      "challenges",
-      "continue"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://www.housingwire.com/articles/compass-mls-recruiting-data/",
-    "tokens": [
-      "compass",
-      "asks",
-      "mlss",
-      "block",
-      "listing",
-      "data",
-      "recruiting",
-      "tools"
-    ],
-    "shown_date": "2026-09-28"
-  },
-  {
-    "url": "https://eyeonhousing.org/2026/09/q2-2026-remodeling-market-update-labor-and-nonlabor-input-costs/",
-    "tokens": [
-      "2026",
-      "remodeling",
-      "market",
-      "update",
-      "labor",
-      "nonlabor",
-      "input",
-      "costs"
-    ],
-    "shown_date": "2026-09-28"
   }
 ]

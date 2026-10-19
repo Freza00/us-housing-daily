@@ -1,0 +1,803 @@
+{
+  "date": "2026-10-19",
+  "generated_at": 1792372694452,
+  "sources_attempted": 40,
+  "sources_ok": 35,
+  "sections": [
+    {
+      "id": "national",
+      "label": "全国住宅市场",
+      "emoji": "🏠",
+      "desc": "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk",
+      "quota": 5,
+      "maxPerSource": 2,
+      "extendedWindow": false
+    },
+    {
+      "id": "sunbelt",
+      "label": "Sunbelt 住宅",
+      "emoji": "🌵",
+      "desc": "Sun Belt 各州住宅与租赁市场",
+      "quota": 4,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "btr",
+      "label": "全国 BTR / SFR",
+      "emoji": "🏘",
+      "desc": "Build-to-Rent / Single-Family Rental",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "cre",
+      "label": "全国 CRE",
+      "emoji": "🏢",
+      "desc": "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE",
+      "quota": 5,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": false
+    },
+    {
+      "id": "institutional",
+      "label": "全国机构资本",
+      "emoji": "💰",
+      "desc": "PE / REIT 募资、并购、IPO、机构持仓",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    }
+  ],
+  "items": [
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Mortgage Rates Surge As Housing Demand Cools: Economist - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbUN5UGFGRGxPWlJJWmRmVzBOb3hGRzRiaFoyZzM4U1k4V2pqdDdJbGtNZk9yTjFiY1NYRWw4YmRUdEVjZHBtaldiRVpLbGhXclpSTXR4b2R4LVlDTndMUmRPOW9xc0JmTDlCdW55OEdJRFdDVEgxTjYxU3JNSllZcA?oc=5",
+      "description": "Mortgage Rates Surge As Housing Demand Cools: Economist &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1792022075000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "trend"
+      ],
+      "heat_signals": [
+        "mortgage rate"
+      ],
+      "importance": 5,
+      "selector_reason": "抵押贷款利率飙升并导致住房需求降温，直接影响购房负担和交易量。利率是全国住宅市场的核心驱动变量，因此评为系统性重要。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Mortgage Rates 飙升，住房需求降温",
+      "summary_zh": "Mortgage Rates 上行已令 housing demand 冷却，市场短期承压",
+      "impact": "short-neg",
+      "id": "7a8a2e1b",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Home sales stuck under 4M as inventory hits pre-pandemic levels - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9rOEM3eXo2d3E3eHZsb0FXQVA0R0hoN2JPWjhsd2tjeDhFUTBFQkRGbFREbUlTb1FkRVVuNkpxSzQybi1vbnZkeFY5Vy1CbjIwY3I2cHhSek1CZDZ6UU9WZG5EbDlOclFhT3p5TjQyN3VFRXc3Z1M0?oc=5",
+      "description": "Home sales stuck under 4M as inventory hits pre-pandemic levels &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1791912179000,
+      "score": 8,
+      "tags": [
+        "housing",
+        "national",
+        "data",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "全国房屋销售持续低于400万套，同时库存回到疫情前水平。销量与库存的同步变化是判断全国住宅市场周期和供需拐点的关键宏观数据。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Home sales 跌破400万，库存回到疫情前",
+      "summary_zh": "Home sales 持续低于4M，库存回到pre-pandemic水平，成交疲弱",
+      "impact": "short-neg",
+      "id": "22c49a2c",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Voters seize the ‘say’ in key state battles for housing affordability",
+      "link": "https://www.housingwire.com/articles/housing-ballot-measures-3-states/",
+      "description": "Housing affordability is on ballots across the country this fall, and not just in races for state and national office. Voters in California, Florida and Massachusetts will decide direct questions on Nov. 3 about zoning, permitting and property taxes. Early voting doesn&#8217;t begin for a couple of weeks in Massachusetts and Florida. Florida requires 60% approval for constitutional amendments. Voting has started in California, where a simple majority wins. Massachusetts has the most interesting hurdle to clear. It needs more than a simple majority to pass. &#8220;Yes&#8221; votes must also equal at least 30% of all ballots cast in the election. If voters approve, the change would cap minimum lot sizes for single-family homes statewide, the first such ballot questions put to voters in the country. The challenge is making sure voters get to the question. It is the seventh on a nine-question ballot, tying the record for the most statewide questions in Massachusetts history. Housing advocates worry that voters may tire before they reach it or skip a question they don&#8217;t understand. &#8220;There&#8217;s risk of voter fatigue,&#8221; Jesse Kanson-Benanav, executive director of Abundant Housing Massachusetts , told HousingWire TBD . The housing question is competing with higher-profile fights. Voters are also being asked whether to repeal recreational marijuana, weigh in on recent gun law changes, change how primaries work and cap state revenue growth. What Question 7 would do The measure would cap minimum lot sizes at 5,000 square feet. It would apply only to residentially zoned lots with at least 50 feet of frontage and access to public water and sewer. Boston is excluded because the city has taken its own steps. The cap would reach most of the state&#8217;s populated areas but leave out most of Cape Cod, Martha&#8217;s Vineyard, Nantucket and the Berkshires. More than half of Eastern Massachusetts towns now require at least an acre per single-family lot, and some require two. The Massachusetts Municipal Association opposes the measure but still hasn&#8217;t formed a campaign committee to spend against it. The state Republican Party also opposes it but hasn&#8217;t mounted organized opposition. Meanwhile, Republican gubernatorial candidate Mike Minogue supports the measure as he tries to unseat Gov. Maura Healey, who also backs it. Supporters have raised heavily. The Legalize Starter Homes campaign has raised more than $1.7 million, with major contributions from real estate groups. Abundant Housing Massachusetts has launched a field operation to turn out supporters. Backers pitch the measure as one way to address the state&#8217;s housing affordability challenges, with a message built on smaller, lower-cost homes on smaller lots. Kanson-Benanav said no measure has ever won a simple majority and still missed the 30% mark. Housing supply advocates aren&#8217;t taking any chances. The measure&#8217;s odds improved when the state&#8217;s Supreme Judicial Court ruled that a controversial rent stabilization measure had to come off the ballot. Healey and others strongly opposed that measure, which could have fractured the loose coalition backing lot reform. Voters would have had to choose between the two, vote &#8220;yes&#8221; on both or reject one or both. With rent stabilization gone, housing advocates across the board could focus on a single affordability measure, Kanson-Benanav said. California: Proposition 45 Proposition 45 would set deadlines for environmental reviews and court challenges under the California Environmental Quality Act. It would cover housing, water, energy, education, health and transportation projects. Agencies would generally have 365 business days to finish a full environmental impact report, and courts would have 270 days to resolve challenges. The measure would also cap public-comment periods, narrow tribal consultation and limit judicial review. Opponents say that weakens environmental safeguards. Suppor",
+      "published_at": 1792333590000,
+      "score": 13,
+      "tags": [
+        "housing",
+        "national",
+        "policy"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "加州、佛州和马萨诸塞州选民将直接表决分区、许可和房产税等住房政策。多州住房可负担性政策进入选票，可能影响开发环境和住房供给。",
+      "section": "national",
+      "title_zh": "选民将表决住房可负担性方案",
+      "summary_zh": "California、Florida、Massachusetts将表决 zoning、许可和税制，结果待观察",
+      "impact": "neutral",
+      "id": "2c10c877",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Proposition 45 Would Set Deadlines For Some Projects&#039; CEQA Reviews",
+      "link": "https://www.bisnow.com/news/los-angeles/development/california-election-proposition-45-ceqa",
+      "description": "Proposition 45 proposes definite California Environmental Quality Act timelines for essential projects in the state, aiming to reduce costs and delays.",
+      "published_at": 1792189002000,
+      "score": 9,
+      "tags": [
+        "housing",
+        "california",
+        "policy"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "加州提案拟为部分项目的CEQA环境审查设定明确期限。若通过，将改变开发审批周期和成本，对加州住房及商业项目具有重要监管影响。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Prop 45拟加速California项目CEQA审查",
+      "summary_zh": "Prop 45拟设定CEQA审查期限，有望降低项目成本与延误",
+      "impact": "long-pos",
+      "id": "6c0789d8",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "Basel may encourage more nonbank mortgage lenders to go bank",
+      "link": "https://www.nationalmortgagenews.com/news/basel-may-encourage-more-nonbank-mortgage-lenders-to-go-bank",
+      "description": "Proposed changes to the risk weightings assigned to certain assets could encourage more nonbank mortgage firms — particularly those with large servicing portfolios — to seek out bank charters.",
+      "published_at": 1792147285000,
+      "score": 8,
+      "tags": [
+        "housing",
+        "national",
+        "policy",
+        "lender"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "拟议Basel风险权重变化可能促使大型非银行抵押贷款机构申请银行牌照。政策将影响非银贷款商的资本成本、服务权组合和行业结构，属于重要监管动态。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Basel新规或推动非银贷款机构转型银行",
+      "summary_zh": "Basel风险权重调整或促使大型servicing非银机构申请bank charter",
+      "impact": "long-pos",
+      "id": "9261d998",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "austin-bj-cre",
+      "source_name": "Austin Business Journal — Commercial RE",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "austin",
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "texas",
+      "title": "Austin's housing market sustained a slow pace last month - The Business Journals",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWklkWnFaMnRrUHQ2YVVjTDRnN25TVEFVN1JSWm1VMWhrY0o4LVpoSWlWLTh5UWpycXJ4VzloQk53ejdRUGJoa19Jc09sM1dBY1hLZzMwNXNJNURlRTk3U1lYalVlWlVXdWRQbUVxUjZqRWwtWDVLNkUxNmJPNkszMnVFbDJMWjBZSVNWVjE4ZXQxUTl6ZVJ3cUhRMGY2Nm5NczRVdzUtVQ?oc=5",
+      "description": "Austin's housing market sustained a slow pace last month &nbsp;&nbsp; The Business Journals",
+      "published_at": 1791920040000,
+      "score": 11,
+      "tags": [
+        "housing",
+        "austin",
+        "trend"
+      ],
+      "heat_signals": [
+        "austin",
+        "housing market"
+      ],
+      "importance": 3,
+      "selector_reason": "奥斯汀住宅市场上月仍维持低速运行，显示德州核心市场的需求降温。奥斯汀是Sun Belt代表性都市圈，区域趋势具有参考价值。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "Austin住房市场延续低速运行",
+      "summary_zh": "Austin上月市场仍低迷，成交与需求缺乏明显复苏，短期偏弱",
+      "impact": "short-neg",
+      "id": "94dc7060",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "'The goofiest I've ever seen': Navigating the current Arizona housing market - 12News",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOZ042aERiblFPRnpXeGxqY29OWWhBWlFTMGFVSXlXZzJRYzUwU2ZWcXM1cEtwRDZXbjJBUGN4QWQyWnpRemNSZmNtaWxPLWxfMGhGVEdhR0ZmRXQzeklyRS1yMjhwYVNXUWo2VnRjVjl0VjF0SlgzMzdzbnYxTGZZQ2pqQVNJeVRvb3gtQm5OQ1JOa3lFYkt4M3J6NThFbWJ4dE4xdzk0Ymt0em45SzZaRHNYRkQ3dXpFOEFhMGtmTkpSNGxG?oc=5",
+      "description": "'The goofiest I've ever seen': Navigating the current Arizona housing market &nbsp;&nbsp; 12News",
+      "published_at": 1791814680000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "phoenix",
+        "trend"
+      ],
+      "heat_signals": [
+        "housing market"
+      ],
+      "importance": 3,
+      "selector_reason": "亚利桑那住房市场出现明显异常和分化迹象。该州是Sun Belt重要市场，市场拐点信号值得下游关注，但报道信息较为概括。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "Arizona住房市场陷入异常混乱",
+      "summary_zh": "Arizona市场被形容为“最混乱”，供需和定价趋势仍待观察",
+      "impact": "neutral",
+      "id": "aacdbd46",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "dallas-bj-resi",
+      "source_name": "Dallas Business Journal — Residential RE",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "dfw",
+        "housing"
+      ],
+      "region": "texas",
+      "title": "Major economic wins in Plano set stage for more housing - The Business Journals",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdnNySlpQYllQZUVPM2JsYy1hU0hJeGl5OXJURkhlZ0F0Y2xNSUlkYzlveEMxTE5zbndCTVBYWmpuU1hmQktMQWR3Ty04RzF1T1JfcEFfcnd1ZXpRNVRqWEUwLWxINjBTbGR3M0ZFbDBPMjllY1BNOXktN1pSeS00eEN5RHJyQ25oZlRUM0c3SEJVcEFJZTVNeGJORlhJb0VDTXM5a2FRVUQ?oc=5",
+      "description": "Major economic wins in Plano set stage for more housing &nbsp;&nbsp; The Business Journals",
+      "published_at": 1792130520000,
+      "score": 8,
+      "tags": [
+        "housing",
+        "dfw",
+        "trend"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "Plano近期重大经济项目为新增住房建设创造条件。该消息连接产业扩张与住宅供给，是达拉斯—沃斯堡Sun Belt市场的区域信号。",
+      "section": "sunbelt",
+      "extended_window": true,
+      "title_zh": "Plano经济增长为新增住房铺路",
+      "summary_zh": "Plano经济项目取得进展，有望吸引投资并扩大housing供给",
+      "impact": "long-pos",
+      "id": "ac97ae2c",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "google-news-sunbelt",
+      "source_name": "Google News — Sun Belt Housing Market",
+      "source_tier": "D",
+      "source_weight": 7,
+      "source_tags": [
+        "sunbelt",
+        "data"
+      ],
+      "region": "sunbelt",
+      "title": "UK housing market showing signs of mortgage rates impact, Rightmove says - Raleigh News & Observer",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQW5HWU93aW5IZ0pWU0JsM2IyVWpsNWRGZXF0QWJHMndwSTVPektJRzV4cjlMM2huUWJkUmpEakQ2aXlmWm9pUDlTTU9LWHQ4bUM4bFR1bUUyVzF2SFllYjAyOG9WbTV5R3M5VnNoN18taVh3N3YwOUtwYjZtZmJ4QW5FOA?oc=5",
+      "description": "UK housing market showing signs of mortgage rates impact, Rightmove says &nbsp;&nbsp; Raleigh News & Observer",
+      "published_at": 1792365606000,
+      "score": 18,
+      "tags": [
+        "sunbelt",
+        "data",
+        "housing",
+        "macro",
+        "rates",
+        "deals",
+        "trend"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "housing market"
+      ],
+      "importance": 3,
+      "_from_fallback": true,
+      "section": "sunbelt",
+      "title_zh": "Rightmove：Mortgage Rates冲击英国房市",
+      "summary_zh": "Mortgage Rates上升已影响英国housing demand，成交前景转弱",
+      "impact": "short-neg",
+      "id": "00e752e8",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "nrhc",
+      "source_name": "National Rental Home Council (NRHC)",
+      "source_tier": "E",
+      "source_weight": 9,
+      "source_tags": [
+        "btr-sfr",
+        "institutional"
+      ],
+      "region": "national",
+      "title": "Rental demand is up 20% as high lending costs stifle the for-sale market &#8211; Zillow Group",
+      "link": "https://investors.zillowgroup.com/news-and-events/news/news-details/2026/Rental-demand-is-up-20-as-high-lending-costs-stifle-the-for-sale-market/default.aspx",
+      "description": "",
+      "published_at": 1792175633000,
+      "score": 10,
+      "tags": [
+        "btr-sfr",
+        "institutional",
+        "deals"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "_from_fallback": true,
+      "section": "btr",
+      "extended_window": true,
+      "title_zh": "租赁需求增20%，高融资成本压制售房",
+      "summary_zh": "Rental demand增长20%，高lending costs令买家转向租赁，利好BTR与SFR",
+      "impact": "long-pos",
+      "id": "ff7cb45f",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Downtown Tower Pitched For Demo, Redevelopment: The Houston Deal Sheet",
+      "link": "https://www.bisnow.com/news/houston/deal-sheet/broker-pitches-demo-redevelopment-of-downtown-tower-for-sale-the-houston-deal-sheet",
+      "description": "Downtown Tower Pitched For Demo, Redevelopment: The Houston Deal Sheet October 18, 2026 | 7:10 pm ET Maddy McCarty, Houston Houston is selling a 27-story office building at 611 Walker St. as the city moves its public works department to the former Continental Airlines headquarters at 1600 Smith St. Cushman Wakefield A rendering of a new high-rise building at 611 Walker St. in Houston Cushman Wakefield’s Tim Relyea was tapped to market 611 Walker as an opportunity to demolish and redevelop the block into what could become an architectural statement for Houston. “There has not been a site like this available in the last half a century,” Relyea said in a statement. The site, which also has a parking garage, is near the geographic center of Downtown Houston, catty-corner to Hermann Square. The 767K SF office tower, known as the Bob Lanier Building, was built in the late 1960s. Relyea worked with Jon Pickard of Pickard Chilton to create a rendering example of a high-rise that could be created if the site finds the right buyer. Other options include a new hotel or residential tower. “We are extremely excited about the opportunity to offer a major corporation, services firm or investor the opportunity to occupy or invest in what will be the most prominent location in our great city,” Houston Public Works Director Randall Macchi said in a statement. “When the City purchased 1600 Smith, we recognized that it could create a win-win opportunity by making this property available at a time when Houston is once again accelerating.” Top-tier office buildings can achieve full occupancy at premium rental rates in Houston, even in a challenging office environment, Relyea said, citing Texas Tower as an example. He said a new building at 611 Walker could “be uniquely positioned to attract a major U.S. or regional corporate headquarters, national law firm, Big Four accounting firm, investment bank or a combination of these users.” SALES ExchangeRight Essential Income REIT bought the Dow Texas Innovation Center from Brixton Capital. The 664K SF, four-building research and development campus on Abner Jackson Parkway in Lake Jackson is fully triple net leased to Dow Chemical Co. The sale was completed through an UPREIT and debt-assumption transaction. By exchanging the proceeds into shares of ExchangeRight, Brixton deferred taxes, remains invested in real estate and positioned the investment for long-term growth, Brixton principal Corey Eagle said in a statement. CBRE is the campus’s third-party property manager. *** Newman Kelly’s Logan Kelly represented a private investor in the acquisition of two medical office buildings totaling 25K SF in Humble. The seller was represented by David Cummings and Andrew Estrada of Dorado Development Co. *** Courtesy of Simi Capital Miami-based Simi Capital entered Texas with the acquisition of a three-property small-bay industrial portfolio totaling 359K SF in Northwest Houston. The transaction was completed in a joint venture with Decker Capital. The portfolio includes 5829 W. Sam Houston Parkway N. and 600 Sam St. in Houston, and 18307 W. Little York Road in Katy. Sapphire Industrial Lending provided debt financing for the acquisition. Chaim Friedman led the financing for Sapphire. *** KBUSA Properties, the investment arm of Kingsley Beverages USA, purchased two Houston manufacturing buildings totaling 63K SF. The 100% leased properties are at 14406 and 14420 Wagg Way Road. Jason Tangen and Barrett Gibson of Colliers represented KBUSA. LEASES EōS Fitness leased 40K SF at 1234 Interstate 45 N. to open its first location in Willis. NewQuest represented the tenant, while Jarrett Adame with First Hartford Realty Corp. represented the landlord. CONSTRUCTION AND DEVELOPMENT Lovett Homes plans to build six freestanding homes in a half-acre gated community at 2614-2618 and 2704-2708 Mid Lane, near the River Oaks District and Highland Village. Lovett Homes acquired the property in March and anticipates breaking ground in ",
+      "published_at": 1792365029000,
+      "score": 19,
+      "tags": [
+        "office",
+        "houston",
+        "deals",
+        "developer"
+      ],
+      "heat_signals": [
+        "texas",
+        "houston",
+        "occupancy"
+      ],
+      "importance": 3,
+      "selector_reason": "休斯顿拟拆除并重建27层办公楼，反映办公资产重整与城市更新趋势。事件涉及大型城市核心资产，但尚未披露明确交易规模，因此评为常规动态。",
+      "section": "cre",
+      "title_zh": "Houston市推售767K SF办公楼重建机会",
+      "summary_zh": "Houston拟出售27层、767K SF办公楼，拆除重建或改住宅酒店",
+      "impact": "long-pos",
+      "id": "cfed89e1",
+      "fetched_at": 1792373054910,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Bowser Wants To Lock In A $550M Spa Before She Leaves. D.C. Council Members Are Pushing Back",
+      "link": "https://www.bisnow.com/news/washington-dc/economic-development/bowser-wants-to-lock-in-a-550m-spa-before-she-leaves-d-c-council-members-are-pushing-back",
+      "description": "Bowser Wants To Lock In A $550M Spa Before She Leaves. D.C. Council Members Are Pushing Back October 18, 2026 | 12:25 pm ET Emily Wishingrad, Washington, D.C. Muriel Bowser has overseen a development boom in her nearly 12-year run as D.C. mayor: the revitalization of massive waterfront sites and new neighborhoods sprouting up out of obsolete federal lands and industrial districts. In her last year, she set the stage for the largest of them all: an NFL- stadium-anchored neighborhood . Before her tenure ends, she’s making a final push to set up one more project for success. Poplar Point , the District’s last major waterfront development opportunity, would be anchored by a $550M thermal bathing retreat. But the presumptive new mayor is standing in her way. And some members of the D.C. Council have questions about the proposed use and are pushing back against Bowser's ambitious timeline. “You're asking the Council to take a limited, now, amount of time to scrutinize a project proposal because it was sent to us late,” At-Large Councilmember Christina Henderson told Bisnow . “So I don't necessarily feel any sense of needing to rush.” Courtesy of Therme/DSR A rendering of Therme DC, the $550M spa planned to anchor Poplar Point A major hurdle to Bowser's plan comes from presumptive D.C. mayor Janeese Lewis George , who is raising concerns specifically about Therme Group 's proposed thermal bathing spa on a site she says should prioritize housing creation. Lewis George, who represents Ward 4 on the D.C. Council, heads one of the committees now reviewing two pieces of legislation that would move the project forward. But she told The Washington Sun earlier this month that she would not hold a hearing on them this year and will “wait until next year in some capacity.” But such a delay could threaten the project. The Bowser administration and Therme, which was selected to build the wellness retreat a year and a half ago, say there’s no time to wait. “I always think that when you have a deal with a private partner, particularly at a time of economic uncertainty or volatility, then it's important to secure a commitment from a private partner as quickly as possible, and that is what we are doing,” said Deputy Mayor for Planning and Economic Development Nina Albert. Therme Group US Executive Chairman John Alschuler told Bisnow that his company hopes to break ground in three years and finish construction three years after that — around 2033. But time is of the essence, he said, and it’s imperative for the Council to pass the legislation this session, which ends on Jan. 2. “Delay would create significant risk to the ability of the District to proceed,” he said. Road To 110 Acres Of Opportunity Poplar Point, a 110-acre parkland that sits on the eastern bank of the Anacostia River, has long been envisioned as a future waterfront neighborhood, much like the Navy Yard or The Wharf. In 2006, Congress passed legislation setting the requirements the District must meet to acquire the land, including environmental assessments and cleanup efforts and moving federal facilities off the site. Over the past few years, the Bowser administration has accelerated efforts to kick-start the project. In August 2024, it selected HR A Advisors as its owner's representative to guide the District through securing control and developing the site. At the same time, it put out a request for expressions of interest for a ​​“destination anchor” to take 15 acres of the land. Therme, an Austrian-based thermal bathing company with plans to scale globally, had been looking for a spot in D.C. since 2023 to plant its first U.S. location. The company was the only respondent to that RFEI, Albert told Bisnow . At the Bowser administration's annual March Madness event in 2025, Bowser announced that the District had selected Therme to anchor Poplar Point. Bisnow/Emily Wishingrad Therme Group US Executive Chairman John Alschuler speaks at D.C.'s March Madness event in 2025. “They have a",
+      "published_at": 1792340700000,
+      "score": 17,
+      "tags": [
+        "mixed-asset",
+        "deals",
+        "developer"
+      ],
+      "heat_signals": [
+        "fed",
+        "annual"
+      ],
+      "importance": 4,
+      "selector_reason": "华盛顿特区拟推动5.5亿美元大型水疗开发项目，并引发市议会争议。项目规模大且涉及地方政府重大开发决策，具有行业中等重要性。",
+      "section": "cre",
+      "title_zh": "D.C.议员阻击550M美元Therme温泉项目",
+      "summary_zh": "Bowser拟锁定$550M spa，但议会质疑进度并要求优先增加住房",
+      "impact": "short-neg",
+      "id": "8a411324",
+      "fetched_at": 1792373054910,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Senate Bill Offers Data Centers A Faster Path To Power, But At A Price",
+      "link": "https://www.bisnow.com/news/national/data-center-development/senate-bill-offers-data-centers-a-faster-path-to-power-but-at-a-price",
+      "description": "Senate Bill Offers Data Centers A Faster Path To Power, But At A Price October 18, 2026 | 6:02 pm ET Dan Rabb, Data Centers A landmark permitting reform bill has united U.S. senators from both parties, but it is dividing the artificial intelligence data center sector. Some industry leaders say it would make data centers easier to build, while others worry it would make them substantially more expensive. Bisnow/Jon Banister The Bipartisan American Affordability and Jobs Act is being called “the most significant permitting reform bill in years” — intended to accelerate the build-out of major infrastructure and other large-scale projects across the U.S. The bill enjoys support on both sides of the aisle and is expected to clear the Senate during the lame-duck session following November's midterm elections. If it is signed into law, BAAJA would likely have significant implications for the data center industry, potentially rewriting the federal rulebook on how data centers purchase electricity and connect to regional grids. But industry insiders are split on whether the legislation would ultimately be a net positive for the sector or usher in disaster for at least some firms pursuing large-scale digital infrastructure projects. Some within the industry — and some critics of the sector — say BAAJA is poised to fuel further acceleration of the AI data center boom by flattening permitting hurdles and codifying a clear pathway to acquiring power. But others say consumer protection provisions in the bill will make acquiring power much more expensive, adding significant development costs early in projects that could push smaller operators to the sidelines. “Upfront capex, especially speculative, is a death knell,” said Harmol Samra, CEO of AI data center provider Host Digital. “This is just going to slow everyone down.” BAAJA is centered on measures intended to speed up the construction of energy assets, power transmission and other infrastructure, plus other major industrial projects for industries like manufacturing and mining. To do so, the bill would impose firm deadlines for permit approvals, exempt more projects from lengthy reviews, limit how long approvals can be challenged and give previously approved projects greater legal protection. Controversially, it would also make significant changes to the National Environmental Policy Act, the Clean Water Act and the Endangered Species Act. Those provisions have drawn vocal opposition from some environmental groups, with the Center for Biological Diversity calling it a “back-door deal” meant specifically to accelerate data center development. “This would be a golden ticket for huge AI data centers and tech billionaires. Gutting environmental safeguards means opening the floodgates for more gas-powered data centers fouling the air and draining communities’ water supplies,” said Camden Weber, senior climate and energy policy specialist at the Center for Biological Diversity. While other environmental groups have been more receptive — particularly to provisions aimed at accelerating transmission infrastructure that could bring more renewable generation onto the grid — there is truth in the notion that data centers will benefit from faster permitting. Large campuses can face federal delays when projects affect wetlands or trigger environmental or historic preservation reviews. More consequentially, faster approvals for new transmission and generation could shorten the wait for electricity in markets where developers can wait years for grid connections. Yet beyond its permitting reforms, BAAJA also contains a separate set of provisions aimed squarely at data centers, specifically at one of the sector’s most contentious issues: who ends up paying for the billions of dollars of new power infrastructure needed to provide them with electricity. The measures, which apply to data centers larger than 20 megawatts, are intended to ensure that regular electricity customers don’t get stuck with the bi",
+      "published_at": 1792360924000,
+      "score": 16,
+      "tags": [
+        "data-center",
+        "national",
+        "policy",
+        "regulator"
+      ],
+      "heat_signals": [
+        "fed"
+      ],
+      "importance": 4,
+      "selector_reason": "两党参议员推动数据中心更快获得电力的许可改革法案。该政策可能影响AI数据中心建设速度与成本，属于重要监管动态。",
+      "section": "cre",
+      "title_zh": "参议院拟加速Data Center接电但提高成本",
+      "summary_zh": "法案可简化许可和电网接入，却可能推高data center建设成本，影响分化",
+      "impact": "neutral",
+      "id": "108b0657",
+      "fetched_at": 1792373054910,
+      "cre_subcategory": "数据中心"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Why Billionaire Andy Ansin Is Self-Funding 2 South Florida Megaprojects",
+      "link": "https://www.bisnow.com/news/south-florida/construction-development/andy-ansin-sunbeam-miramar-cove-north-bay-village",
+      "description": "Why Billionaire Andy Ansin Is Self-Funding 2 South Florida Megaprojects October 18, 2026 | 2:05 pm ET Chloe Gallivan, South Florida After Andy Ansin ’s father passed away in August 2020, the family’s media empire and vast real estate portfolio, including massive land holdings that had sat untouched for decades, were left to him. One of the first things the now-third-generation CEO of Sunbeam Properties did was meet with developers to discuss building something ambitious on one of his family's big, idle sites. Through those conversations, he discovered something about how he would approach leading the family business. Taking on hundreds of millions of dollars in debt or having to share control with an equity partner — both of which would have a heavy hand in project decision-making — was unfathomable. Instead, the billionaire decided to dip into his family’s fortune to pay for the $1B first phase of Miramar Cove, with thousands of apartments, shops, restaurants and a 5.5-acre blue-water cove with a fountain on 125 acres in southwest Broward County. Bisnow/Chloe Gallivan Andy Ansin discusses the plans for Miramar Cove in between pauses of the nearly seven-minute promotional video at his office in North Bay Village. Ansin said utilizing the inherited wealth allows him to have “the freedom to do what's right.” “When you're building all-cash, there's no risk of losing the project,” he said in an interview last week. “You don't have a lender that's going to foreclose or say that there’s some form of actual or technical default. Really, what your risk is is what return are you going to get, and at what point in time?” Ansin leads Sunbeam Television Corp., owner of local Fox and ABC affiliate WSVN-Channel 7 and two TV stations in Boston, and Sunbeam Properties, which has accumulated and developed a massive real estate portfolio across Florida, California and Indiana — both of which his grandfather founded in the 1950s. With his developer hat on, the 62-year-old has taken the reins of two massive mixed-use developments in Miramar and North Bay Village , which he plans to self-finance through at least their first phases. Ansin tapped Fort Lauderdale-based Stiles to lead the development of Miramar Cove on a fee basis, an agreement that allowed Sunbeam to keep control but have access to an experienced development and construction team, he said. “Most developers, if you went to and asked them to do it on a fee, they wouldn't because they want the equity,” Ansin said. “Even if they did, they might not get their best team, where Stiles had both the development side and the construction side that they deliver, which meant we didn't have to staff up.” Miramar Cove is set to rise on a site that Ansin’s grandfather purchased for $100 per acre in the late 1940s following World War II. It's on the cusp of the Broward and Miami-Dade county line and less than a 15-minute drive north of Hard Rock Stadium The lot was originally intended to house the sixth phase of the 500-acre, 5M SF Miramar Park of Commerce , a warehouse and office campus next to Miramar Cove that the Ansin family has developed in phases since the 1980s. Ansin’s father, Edmund Ansin, previously entertained selling the site to a cruise line or an indoor water park, but nothing stuck. Now, Sunbeam and Stiles are under construction on Miramar Cove’s first phase, which is planned to include 2,874 apartments, 400K SF of retail, dining and entertainment, 125K SF of office and a 185-key hotel surrounding a man-made cove by Blue Mar Basins, where visitors and residents will have access to recreational activities like swimming, rowboats and a water fountain show. Courtesy of Sunbeam Properties The Ansin family has owned the lot for decades. Foundation work is underway for the project’s two apartment buildings, referred to as MF1 and MF2, Ansin and Sunbeam Properties Executive Vice President of Development James Bry said in an interview at WSVN's North Bay Village office last week. Greystar , ",
+      "published_at": 1792346700000,
+      "score": 12,
+      "tags": [
+        "mixed-asset",
+        "florida",
+        "deals",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "南佛州开发商将自筹资金推进两个大型综合开发项目。该事件体现高利率环境下高净值资本对Sun Belt大型项目的持续投入，具有区域市场代表性。",
+      "section": "cre",
+      "title_zh": "Andy Ansin全现金推进$1B South Florida项目",
+      "summary_zh": "Andy Ansin以家族资金投入$1B首期，避免债务和股权稀释，开发确定性高",
+      "impact": "long-pos",
+      "id": "38ffb6a3",
+      "fetched_at": 1792373054910,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "San Pedro&#039;s West Harbor Announces 3 New Tenants: The Los Angeles Deal Sheet",
+      "link": "https://www.bisnow.com/news/los-angeles/deal-sheet/the-los-angeles-deal-sheet",
+      "description": "San Pedro&#039;s West Harbor Announces 3 New Tenants: The Los Angeles Deal Sheet October 18, 2026 | 8:14 pm ET Bianca Barragán, Southern California Courtesy of West Harbor West Harbor in San Pedro, California San Pedro waterfront mixed-use complex West Harbor has announced three new tenants at the $500M, 42-acre destination at the Port of Los Angeles. The three new additions include Wagbar, an approximately 21K SF off-leash dog park and social bar. The open-air space will also host dog-focused events, including rescue and adoption partnerships, as well as community programming. Other announced tenants are Tierra Azul, a Baja California-inspired bar and grill, and Sno Swell, which sells frozen desserts. Square footage for the food tenants was not disclosed. PEOPLE Southern California-based coworking company TailoredSpace has hired Garth Harris as chief operations officer. TailoredSpace operates more than 15 locations in the Inland Empire and Los Angeles, Orange and San Diego counties. SALES Amber Creek Associates LTD and Rosewood Associates LTD have sold Amberwood Apartments and Rosewood Apartments, respectively. Colliers announced the approximately $37M portfolio sale in the northern San Diego County city of Fallbrook. Amberwood, a 133-unit development at 923 Alturas Road, sold for roughly $24M. Rosewood, a 73-unit apartment complex at 338 Ammunition Road, sold for approximately $12M. Colliers' Shane Shafer and Brian Anderson represented the sellers in the transactions. *** Progressive Real Estate Partners’ Greg Bedell and Trinnie Lee represented an undisclosed Orange County-based investor in the sale of a 24K SF multitenant retail property at 24300-24320 Sunnymead Blvd. in Moreno Valley for $3M. An unnamed Orange County-based investor acquired the property. *** A 22K SF, Class-A office building at 2392 Morse Ave. in Irvine sold for $15.7M, or $707 per SF. The deal closed on Oct. 1. Economos DeWolf secured the buyer and put the property into escrow before it was formally brought to market. The property was formerly the headquarters of RiverRock Real Estate Group, which was acquired by Lincoln Property Co. in 2023. Property records show Lincoln as the owner of the office property. Economos DeWolf represented the undisclosed buyer and the seller in the transaction. LEASES Off-price retailer Ross Dress For Less signed a 115K SF office lease at Row DTLA, relocating from Downtown’s central business district. The new space is 110K SF of creative office space and 5K SF of exclusive rooftop space, according to a release from Row DTLA. JLL’s Jaclyn Ward, Cassie Trosclair and Sarah Hancock represented Row DTLA in the transaction. CBRE’s John Zanetos and Kelli Snyder represented Ross. The terms of the lease were not disclosed. CONSTRUCTION AND DEVELOPMENT The $5B OC Vibe project in Anaheim has unveiled a 300-room hotel planned for the project, according to Urbanize LA . The hotel, called Sena, would be the first Marriott Autograph Collection hotel in Anaheim. It is expected to open in 2029. Plans also call for a new restaurant from chef Jose Andres. *** The National City Investment Group has broken ground on Market View, a 120-unit apartment project at 303 Highland Ave. in National City. The development will transform a parking lot adjacent to Manolo Farmers Market, a neighborhood staple serving National City for more than 33 years, into a residential complex. The project was designed by RDC with R.D. Olson Construction as the general contractor and McCullough Landscape Architecture handling landscape design. Called Market View, the development is expected to be complete in the first quarter of 2028. FINANCING JLL arranged $210M in refinancing for the Grand Hyatt Indian Wells Resort Villas, a 531-key luxury resort situated on 45 acres at 44600 Indian Wells Lane in Indian Wells, east of Palm Springs. JLL worked on behalf of Trinity Investments to secure the five-year, floating-rate, single-asset single-borrower CMBS loan through Citi. The",
+      "published_at": 1792368859000,
+      "score": 14,
+      "tags": [
+        "retail",
+        "california",
+        "deals"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "洛杉矶港区5亿美元West Harbor综合项目新增三名租户。大型综合体的招商进展具有一定商业地产信号，但影响范围有限。",
+      "section": "cre",
+      "title_zh": "West Harbor签下三家新租户",
+      "summary_zh": "$500M、42英亩West Harbor新增3家租户，项目运营和客流预期改善",
+      "impact": "long-pos",
+      "id": "f190a482",
+      "fetched_at": 1792373054910,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "nahb-eyeonhousing",
+      "source_name": "NAHB Eye on Housing",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "data",
+        "trend",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Labor Shortages a Growing Problem",
+      "link": "https://eyeonhousing.org/2026/10/labor-shortages-a-growing-problem/",
+      "description": "Labor shortages in the home building industry are becoming more widespread, according to recent results from the NAHB/Well Fargo Housing Market Index (HMI) survey. The September 2026 HMI survey asked builders about shortages in 16 specific trades. The percentage of builders reporting a shortage (either serious or some) of labor they employ directly ranged from [&#8230;]",
+      "published_at": 1791991143000,
+      "score": 11,
+      "tags": [
+        "housing",
+        "national",
+        "data",
+        "construction",
+        "homebuilder"
+      ],
+      "heat_signals": [
+        "housing market"
+      ],
+      "importance": 3,
+      "selector_reason": "NAHB调查显示住宅建筑业多个工种的劳动力短缺正在扩大。建筑用工约束会影响全国新房供应、成本和交付周期，属于重要行业趋势。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "劳动力短缺加剧，住宅建造成本承压",
+      "summary_zh": "NAHB调查显示16类工种出现短缺，施工延误与建造成本风险上升",
+      "impact": "short-neg",
+      "id": "b738c627",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Too good to be true? DC joins others in cracking down on AI-edited listing photos - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZUhLTFN0NW43R19PX3VXcmFoRkJZRW5LTFh0SXd0RjZDdlZzZllfbUlXbTE0RnNkaElvQjByUnF6QkZIWnN4a1MycHB3Z0U2WkVPbU9peWtTN2kzYVdSQlZIbWxSZGZ3Z0ZHdTZaT01XUUxVZXRHYm1HdGpXZWp3UGFyMl9pbzJlMDF6TTVES2dIeEJaQnVKczlTZXp4UThRODZubVZmRkktRkY0dTg4YjdCLTU?oc=5",
+      "description": "Too good to be true? DC joins others in cracking down on AI-edited listing photos &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1792183269000,
+      "score": 9,
+      "tags": [
+        "housing",
+        "national",
+        "regulation",
+        "tech-adoption",
+        "regulator"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "华盛顿特区等地开始限制使用AI编辑的房源照片。该监管趋势会影响经纪营销合规和消费者信息透明度，属于政策细节型动态。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "D.C.加入整治AI美化房源照片行列",
+      "summary_zh": "D.C.将打击AI编辑listing photos，提升信息真实性但限制营销工具使用",
+      "impact": "short-neg",
+      "id": "55a1c0f6",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Capital One names finalists for $25M homeownership grants - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONlNsRWhEbDhEYlNTZFd3dWsyVHBHMkNhNmpSTkNORmdmSlJSMlA4d2pEM2dNcEt4TjJTUHpBQVc3bnpwYWdqMV90ZE5yYWNlUWY4Z0FpVWcxZldIdWl4WVFISGtfT3hzQVhtbnFVNjVXUF9jOEZRMWRDempSQWU5Qko5d091WjA?oc=5",
+      "description": "Capital One names finalists for $25M homeownership grants &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1792141615000,
+      "score": 9,
+      "tags": [
+        "housing",
+        "national",
+        "lender"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "Capital One公布2500万美元住房拥有权补助项目的入围机构。项目涉及住房可负担性和金融机构资本支持，虽规模有限但具有政策与社会住房意义。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Capital One公布$25M置业补助入围者",
+      "summary_zh": "Capital One公布$25M homeownership grants入围者，有助提升购房支持",
+      "impact": "long-pos",
+      "id": "fd6892dd",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "California Governor Candidates See Different Solutions To State&#039;s Housing Troubles",
+      "link": "https://www.bisnow.com/news/los-angeles/affordable-housing/candidates-for-california-governor-see-different-solutions-to-state-s-housing-troubles",
+      "description": "Xavier Becerra and Steve Hilton&#039;s solutions to California&#039;s housing challenges come at affordability concerns from different angles.",
+      "published_at": 1792188535000,
+      "score": 9,
+      "tags": [
+        "housing",
+        "california",
+        "policy"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "加州州长候选人提出不同的住房供给与可负担性解决方案。政策方向可能影响全州开发和住房市场，但目前仍处于竞选主张阶段。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "California州长候选人提出不同住房解法",
+      "summary_zh": "Xavier Becerra与Steve Hilton方案分歧明显，住房政策方向仍不确定",
+      "impact": "neutral",
+      "id": "e15e2e53",
+      "fetched_at": 1792373054910
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Berkadia Arranges Sale of 458-Unit Multifamily Property in Mount Pleasant, Wisconsin",
+      "link": "https://rebusinessonline.com/berkadia-arranges-sale-of-458-unit-multifamily-property-in-mount-pleasant-wisconsin/",
+      "description": "MOUNT PLEASANT, WIS. — Berkadia has arranged the sale of Tivoli Green, a 458-unit multifamily property in Mount Pleasant. Pete Evans and Richard Evans of Berkadia represented the seller, Wangard Partners Inc. The buyer was Illinois-based Santefort Real Estate Group LLC. Wangard has been retained to provide third-party management services for the community. Chris Blechschmidt and Emily Stang of Berkadia arranged acquisition financing through Freddie Mac. Tivoli Green was delivered in three phases from 2021 to 2024. The 22-building property is situated on 38 acres and features two-story townhome",
+      "published_at": 1792157433000,
+      "score": 9,
+      "tags": [
+        "multifamily",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [
+        "freddie mac"
+      ],
+      "importance": 3,
+      "selector_reason": "458户威斯康星州多户住宅物业完成交易。该交易反映中型多户资产仍有流动性，但未披露价格，行业影响属于区域层面。",
+      "section": "national",
+      "extended_window": true,
+      "title_zh": "Berkadia促成458套公寓出售",
+      "summary_zh": "Tivoli Green 458-unit multifamily完成交易，并获Freddie Mac收购融资",
+      "impact": "long-pos",
+      "id": "3374b0a2",
+      "fetched_at": 1792373054910
+    }
+  ],
+  "errors": [
+    {
+      "source": "Houston Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://houstonagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Phoenix Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://phoenixagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Atlanta Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://atlantaagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Miami Agent Magazine",
+      "error": "fetch failed",
+      "attempted_urls": [
+        "https://miamiagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Texas Real Estate Research Center (TRERC)",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://trerc.tamu.edu/feed/"
+      ]
+    }
+  ],
+  "_diagnostics": {
+    "writer_mode": "global",
+    "sectionsUnderMin": [],
+    "window_hours": 72,
+    "pool_sizes": {
+      "24h": 15,
+      "48h": 29,
+      "72h": 86
+    },
+    "us_holiday": {
+      "today_us": "2026-10-18",
+      "today_us_holiday": null,
+      "yesterday_us_holiday": null,
+      "tomorrow_us_holiday": null,
+      "is_us_weekend": true,
+      "expected_recovery_bj_date": "2026-10-21",
+      "source": "date.nager.at"
+    },
+    "writer_audit": [
+      {
+        "stage": "selector",
+        "input": 116,
+        "output": 39
+      },
+      {
+        "stage": "tagger",
+        "items": 39
+      },
+      {
+        "stage": "dedupe",
+        "before": 39,
+        "after": 38
+      },
+      {
+        "stage": "pick",
+        "section_counts": {
+          "national": 10,
+          "sunbelt": 4,
+          "btr": 1,
+          "cre": 5
+        }
+      },
+      {
+        "stage": "translator",
+        "items": 20
+      }
+    ],
+    "candidate_pool_size": 116
+  }
+}
