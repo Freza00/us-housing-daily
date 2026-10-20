@@ -1,0 +1,813 @@
+{
+  "date": "2026-10-20",
+  "generated_at": 1792474861965,
+  "sources_attempted": 40,
+  "sources_ok": 36,
+  "sections": [
+    {
+      "id": "national",
+      "label": "全国住宅市场",
+      "emoji": "🏠",
+      "desc": "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk",
+      "quota": 5,
+      "maxPerSource": 2,
+      "extendedWindow": false
+    },
+    {
+      "id": "sunbelt",
+      "label": "Sunbelt 住宅",
+      "emoji": "🌵",
+      "desc": "Sun Belt 各州住宅与租赁市场",
+      "quota": 4,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "btr",
+      "label": "全国 BTR / SFR",
+      "emoji": "🏘",
+      "desc": "Build-to-Rent / Single-Family Rental",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "cre",
+      "label": "全国 CRE",
+      "emoji": "🏢",
+      "desc": "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE",
+      "quota": 5,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": false
+    },
+    {
+      "id": "institutional",
+      "label": "全国机构资本",
+      "emoji": "💰",
+      "desc": "PE / REIT 募资、并购、IPO、机构持仓",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    }
+  ],
+  "items": [
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Builder confidence plunges as rate shock, costs squeeze margins",
+      "link": "https://www.housingwire.com/articles/nahb-builder-confidence-14-year-low-october/",
+      "description": "Builder confidence in the market for newly built single-family homes fell three points to 29 in October, the lowest reading since June 2012, as rising mortgage rates , higher energy and material costs and worsening labor and lot conditions weigh on project pipelines. The latest National Association of Home Builders (NAHB)/ Wells Fargo Housing Market Index (HMI), released today, shows sentiment firmly in negative territory. Any score below 50 indicates more builders see conditions as poor rather than good. “Mortgage rates have climbed well above 7% in recent weeks, and higher gas prices and inflation have further weakened buyer traffic across much of the country,” NAHB Chairman Bill Owens, a home builder and remodeler from Worthington, Ohio, said in the announcement. “Though builders are also contending with higher costs for construction loans, building materials and diesel, the Trump administration’s efforts to advance regulatory reform are helping to ease some of the cost pressures they face. Nationwide, more than one-third of builders reported immigration enforcement activity in their market areas during the past month, causing construction delays and discouraging legal workers from reporting to work,” Owens added. NAHB Chief Economist Robert Dietz explained that persistent demand is colliding with tightening affordability. “Housing remains squeezed by supply-side constraints and significant affordability challenges,” Dietz said. “Demand persists, but higher mortgage rates, elevated construction costs and weaker consumer confidence are keeping more buyers on the sidelines. As a result, buyer traffic has fallen to its lowest level since April 2012, excluding the pandemic’s onset in April 2020.” Price cuts, incentives increase The decline in builder sentiment comes as the median sales price of newly built homes is at a nearly five-year low. To keep sales moving, builders are increasingly relying on price reductions and sales incentives: 43% of builders cut prices in October, the highest share during the 2020-2026 period. The average price cut remained 6% for the seventh consecutive month. 65% of builders used sales incentives, the 19th straight month that at least 60% reported doing so. For homebuilders, this environment means protecting margins will depend heavily on land basis, spec strategy and the ability to partner with lenders on rate buydowns and closing-cost support. Discounting is no longer targeted to a few slow communities; for many operators, it is now a core part of the sales playbook. What the HMI is signaling on demand NAHB’s HMI, based on a monthly survey the group has conducted for more than 40 years, asks builders to rate current single-family home sales, expectations for the next six months and prospective buyer traffic as “good,” “fair” or “poor,” and “high to very high,” “average” or “low to very low.” Scores for each component are combined into a seasonally adjusted index. All three major HMI components declined in October: Current sales conditions fell two points to 33. Sales expectations over the next six months dropped five points to 32. Prospective buyer traffic fell five points to 18. The sharp drop in expectations and traffic underscores what many builders are seeing in their own communities: fewer qualified walk-ins, more payment-driven shoppers, and buyers stretching to make debt-to-income ratios work at today’s rates. Regional trends: Midwest holding up better On a three-month moving average basis, all four regions surveyed posted lower HMI scores in October: Northeast: down one point to 38. Midwest: down three points to 40. South: down one point to 30. West: down two points to 26. The Midwest remains a relative bright spot for single-family construction, with permits up 2.9%, according to NAHB. Lower land costs and somewhat less severe regulatory burdens in many Midwestern markets are helping support new-home activity compared with higher-priced coastal metros in the West and parts of the Northe",
+      "published_at": 1792444182000,
+      "score": 28,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "data",
+        "homebuilder"
+      ],
+      "heat_signals": [
+        "inflation",
+        "mortgage rate",
+        "permits",
+        "trend",
+        "trends",
+        "housing market"
+      ],
+      "importance": 4,
+      "selector_reason": "美国新建独栋住宅建筑商信心降至2012年以来低点，显示利率、材料和劳动力成本正在同步挤压供给端。该指标对新房开发、库存和未来住宅供应具有广泛影响，属于重要行业信号。",
+      "section": "national",
+      "title_zh": "房贷冲击与成本挤压，Builder信心跌至29",
+      "summary_zh": "NAHB HMI降3点至29，为2012年6月以来最低，项目管线承压",
+      "impact": "short-neg",
+      "id": "37963e1e",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "The 7% Mortgage Rate Paradox: Buyers Gain Leverage but Lose $22K in Purchasing Power",
+      "link": "https://www.realtor.com/news/trends/mortgage-rate-buyers-leverage-purchasing-power-market-clock-report-q3-2026/",
+      "description": "Trends Follow Us On Google The 7% Mortgage Rate Paradox: Buyers Gain Leverage but Lose $22K in Purchasing Power By Snejana Farberov October 19, 2026 Realtor.com Climbing mortgage rates have created a sharp paradox, turning more markets buyer-friendly this fall even as rates above 7% drain shoppers' purchasing power . According to the Realtor.com® 2026 Q3 Market Clock report released on Monday, the national market clock now sits at 4 o'clock after moving one hour toward buyer's territory since the second quarter , signifying a late balanced market trending toward buyers. Over the past 12 months, the number of outright seller's markets shrank from 39 to 27, while the number of buyer's markets expanded from 13 to 17. The remaining 55 markets are in balanced territory, with 49 of them loosening toward buyers and just six tightening toward sellers. As elevated borrowing rates slow the pace of sales, listings pile up on the market. To lure reluctant buyers off the sidelines, motivated sellers increasingly turn to price cuts and concessions. However, the key takeaway for aspiring homeowners is that a greater negotiating power does not equal financial relief, because leverage on terms does not offset lost purchasing power. Realtor.com senior economist Jake Krimmel notes that mortgage rates surged 74 basis points in just over a month, from 6.66% in late August to 7.40% on Oct. 8. For a buyer with a $2,000 monthly principal-and-interest budget, that dramatic spike wiped out $22,000 in home purchasing power. \"While buyers are able to get some great deals right now, mortgage rates and general affordability prices a lot of them out of the market,\" Anne-Kathrin Cao , an agent at West and Main Homes in Colorado Springs , tells Realtor.com. Loading... How the Market Clock works The Market Clock diagnostic tool tracks national and metro-level housing conditions based on key metrics like months of supply, time on the market, price fluctuations, and list-to-sale ratio. This latest fall installment covers 99 of the nation's largest metros and combines the latest housing market inventory data with transaction records and sale projections based on contract activity through September. Typically, quarterly reports cover the top 100 metros, but in the third quarter, Jackson, MS , was excluded from the analysis due to a county-level gap in transaction records. Each of the analyzed markets is placed on a 12-hour clockface, from a peak seller's market at 12 o’clock to a peak buyer’s market at 6 o’clock, to indicate where each market currently stands and where it is likely headed—loosening or tightening. Northeast pivots toward buyers The big-picture report masks significant regional divergence. The Midwest remains an unshakable seller's stronghold, accounting for 16 of the nation's 27 seller-friendly markets where lower home prices continue to generate high demand and keep inventory levels constrained. Meanwhile, the systemically undersupplied Northeast unexpectedly saw the greatest exit of seller's markets, dropping from 11 to five over the past year, as expensive metros like Boston and Providence RI , loosened in response to expanding inventory. \"Buyers are becoming more selective and aren't feeling the same pressure to make quick decisions or offer above asking,\" says George Sarkis of The Sarkis Team at Douglas Elliman based in Massachusetts . \"We're seeing a healthier balance between buyers and sellers than we have in recent years.\" Loading... Boston switched from a seller's market to a balanced one in the third quarter of 2026. Getty Images In more good news for shoppers, the typical seasonal slowdown creates extra room for negotiation with sellers determined to reach the closing table before the end of the year. \"Buyers are more comfortable negotiating on price, requesting inspections, and taking their time,\" the agent tells Realtor.com. \"Sellers are having to adjust their expectations, especially if they're basing their asking price on what homes ",
+      "published_at": 1792400400000,
+      "score": 21,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "trend",
+        "brokerage"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "trend",
+        "trends",
+        "housing market"
+      ],
+      "importance": 4,
+      "selector_reason": "7%以上的房贷利率一方面提高买方议价能力，另一方面使购房者损失约2.2万美元购买力。该数据揭示利率对全国成交和可负担性的双重影响，属于重要住宅市场拐点信号。",
+      "section": "national",
+      "title_zh": "7%房贷悖论：买家议价增强但购买力降$22K",
+      "summary_zh": "房贷利率升至7.40%，买家购买力减少$22K，市场转向买方",
+      "impact": "short-neg",
+      "id": "ba91c594",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "Dems target Zillow-style co-marketing; review RESPA exposure",
+      "link": "https://www.nationalmortgagenews.com/news/dems-target-zillow-style-co-marketing-review-respa-exposure",
+      "description": "Senators asked the Trump administration to investigate real estate platforms steering consumers to affiliated mortgage lenders, among other conduct.",
+      "published_at": 1792430742000,
+      "score": 11,
+      "tags": [
+        "housing",
+        "national",
+        "policy",
+        "regulation",
+        "regulator"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "参议员要求政府调查房地产平台向关联贷款机构导流的联合营销行为，并审查其是否涉及RESPA风险。该事项可能影响大型线上平台、经纪业务和房贷分发规则，具有重要监管意义。",
+      "section": "national",
+      "title_zh": "参议员要求调查Zillow式co-marketing",
+      "summary_zh": "参议员要求审查平台导流关联贷款机构，RESPA监管风险上升",
+      "impact": "short-neg",
+      "id": "ea2be3aa",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "Thousands of Homeowners Are About To See Their Mortgages Jump $1K a Month After Taking a Common Loan Risk",
+      "link": "https://www.realtor.com/advice/finance/arm-rates-increase-2026-over-one-thousand-money-monday/",
+      "description": "These homeowners took a common risk with their mortgages. For some it paid off; for others, their bill's about to go up $1,000 a month.",
+      "published_at": 1792398780000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "distress"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "部分采用常见高风险贷款结构的房主即将面临每月增加约1000美元的还款压力。该现象可能扩大违约、再融资和住房可负担性风险，具有全国按揭市场的重要警示意义。",
+      "section": "national",
+      "title_zh": "高风险房贷将致月供跳涨$1K",
+      "summary_zh": "部分借款人月供即将增加$1,000，违约与财务压力或上升",
+      "impact": "short-neg",
+      "id": "85579220",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Partnership Completes $636M Rehabilitation of Two Brooklyn Affordable Housing Communities",
+      "link": "https://rebusinessonline.com/partnership-completes-636m-rehabilitation-of-two-brooklyn-affordable-housing-communities/",
+      "description": "NEW YORK CITY — A partnership between The New York City Housing Authority, Fairstead, BRP Cos., Urbane and the Local Development Corp. of East New York has completed the $636 million rehabilitation of Reid Apartments and Park Rock, two affordable housing communities in Brooklyn. Located on the east side of the borough, Reid Apartments &#38; Park Rock comprise 1,696 affordable housing units across 87 buildings that are home to roughly 3,000 people. Upgrades covered unit interiors and building exteriors, as well as mechanical and utility systems, security measures and resident services. The proj",
+      "published_at": 1792420330000,
+      "score": 10,
+      "tags": [
+        "housing",
+        "nyc",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "纽约市公屋管理机构与私营合作方完成6.36亿美元、涉及1696套保障性住房的综合改造。项目金额和覆盖住房数量都很大，体现公共住房资本投入和保障性住房更新的重要趋势。",
+      "section": "national",
+      "title_zh": "Brooklyn两大保障房完成$636M翻修",
+      "summary_zh": "Reid Apartments与Park Rock共1,696套保障房完成全面升级",
+      "impact": "long-pos",
+      "id": "55668e90",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "&#039;Let&#039;s Just Get This Over With&#039;: Houston Multifamily Hopes For Capitulation",
+      "link": "https://www.bisnow.com/news/houston/multifamily/-let-s-just-get-this-over-with-houston-multifamily-braces-for-foreclosures-capitulation",
+      "description": "Houston&#039;s multifamily market braces for foreclosures, as investors hope for opportunities despite higher interest rates and equity challenges.",
+      "published_at": 1792444024000,
+      "score": 13,
+      "tags": [
+        "multifamily",
+        "houston",
+        "distress",
+        "institutional"
+      ],
+      "heat_signals": [
+        "houston"
+      ],
+      "importance": 4,
+      "selector_reason": "休斯顿多户住宅市场开始准备面对更多止赎，投资者则等待困境资产机会。休斯顿是重要Sun Belt市场，该报道反映高利率和股权压力向区域公寓市场传导。",
+      "section": "sunbelt",
+      "title_zh": "Houston multifamily等待止跌与止赎出清",
+      "summary_zh": "高利率和股权压力加剧，投资者等待止赎释放低价机会",
+      "impact": "short-neg",
+      "id": "fce3c620",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "Judge denies Yardi’s ask for summary judgement in rent price-fixing case",
+      "link": "https://www.multifamilydive.com/news/judge-denies-yardi-summary-judgement-rent-price-fixing-case/833392/",
+      "description": "An article from Dive Brief Judge denies Yardi’s ask for summary judgement in rent price-fixing case The Washington state class action antitrust suit will now proceed to the rest of the discovery process and examine landlords’ records, per a new court filing. Published Oct. 19, 2026 Julie Strupp Senior Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Getty Images Listen to the article 4 min This audio is auto-generated. Please let us know if you have feedback . Dive Brief: The class action lawsuit against Yardi Systems alleging anticompetitive conduct in the multifamily housing market will proceed to the next stage of discovery after a federal judge denied the software firm’s request for a summary judgment , per an Oct. 13 filing in the U.S. District Court for the Western District of Washington at Seattle. In March 2025, Judge Robert Lasnik agreed to temporarily “stay discovery directed to the landlord defendants” and focus on fact-finding related to Yardi. The goal of segmenting the discovery process “was to determine whether threshold Yardi-focused discovery could obviate the need for broader discovery,” Lasnik said in the filing. “It has not.” In response to the antitrust allegations in Duffy v. Yardi Systems, Yardi previously said that its software never uses confidential competitor data in its rent recommendations. Multifamily Dive reached out to the Santa Barbara, California-based software company for comment on the new developments but did not get a response by the time of publication. Dive Insight: The first phase of discovery focused on the functions of Yardi’s revenue-management software, namely, “what inputs it uses, how it generates pricing recommendations, whether and for what purposes it uses or shares confidential, non-public information, the extent to which clients can control or affect recommendations, how clients configure the software, and the rate at which clients adopt Yardi’s recommendations,” per the filing. But Lasnik ruled that this limited process did not eliminate the need to examine landlords’ “knowledge, understanding, communications, and conduct,” per the filing. He agreed with plaintiffs that doing so is the next step for the case. “The Court therefore concludes that the record should be developed through the remainder of discovery before plaintiffs’ remaining claims are resolved on summary judgment,” Lasnik said in the filing. However, the ruling “expresses no view on the ultimate merits of Yardi’s arguments.” Lasnik also agreed to seal some records related to Yardi’s confidential client, proprietary business and technical information, and denied requests from both plaintiffs and defendants to exclude certain experts. In the lawsuit filed in September 2023, Washington state resident McKenna Duffy alleged that Yardi exchanged competitively sensitive and non-public information with clients through its rent pricing software, Revenue IQ (formerly called RENTmaximizer), and claimed that defendants engaged in direct conversations with their competitors about pricing via market surveys. In 2024, Yardi and 10 out-of-state apartment operators named in the suit asked for the case to be dismissed , arguing that the plaintiffs didn’t have standing and were “attempting to manufacture a Sherman Act violation.” Lasnik denied the request in December 2024 and ruled that the landlords and Yardi must face the suit, writing in his statement, “as technology has evolved, so too have methods of price fixing.” At the end of March 2026, Lasnik narrowed the lawsuit and dismissed claims against those 10 property managers , saying that the court lacked jurisdiction over non-resident LLC defendants who did not undertake “intentional actions expressly aimed at the state.” Yardi previously told Multifamily Dive that it relies on its clients’ property data and publicly available housing market information to help users make pricing decisions. “There is nothing illegal about Yardi’s revenue",
+      "published_at": 1792438680000,
+      "score": 18,
+      "tags": [
+        "multifamily",
+        "national",
+        "regulation"
+      ],
+      "heat_signals": [
+        "fed",
+        "housing market"
+      ],
+      "importance": 4,
+      "selector_reason": "法院拒绝Yardi在租金定价反垄断案中的简易判决请求，案件将继续进入证据和记录审查阶段。该诉讼可能影响公寓定价软件、房东竞争行为和行业监管风险，重要性高于普通诉讼动态。",
+      "section": "sunbelt",
+      "title_zh": "法官拒绝Yardi简易判决申请",
+      "summary_zh": "租金操纵反垄断案进入证据披露，Yardi法律风险继续扩大",
+      "impact": "short-neg",
+      "id": "ab36dae8",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "yardi-matrix",
+      "source_name": "Yardi Matrix Blog",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "National Multifamily Market Report – September 2026",
+      "link": "https://www.yardimatrix.com/blog/national-multifamily-market-report/",
+      "description": "September ended the third quarter with a slight pullback, even as the quarter delivered its first positive result since 2022. Highlights: Annual growth broadens while renewals cool Year-over-year rent growth improved to 0.7% in September, led by Gateway and Midwest markets. San Francisco remained well ahead of the Matrix top 30 at 7.0%, followed by [&#8230;] The post National Multifamily Market Report – September 2026 appeared first on Yardi Matrix Blog .",
+      "published_at": 1792394968000,
+      "score": 22,
+      "tags": [
+        "multifamily",
+        "national",
+        "data",
+        "trend"
+      ],
+      "heat_signals": [
+        "annual",
+        "year-over-year",
+        "rent growth"
+      ],
+      "importance": 3,
+      "selector_reason": "全国多户住宅租金同比增长在9月回升至0.7%，但续租表现转弱且市场分化明显。该报告提供全国公寓市场的月度趋势数据，属于区域和行业层面的常规动态。",
+      "section": "sunbelt",
+      "title_zh": "全国multifamily租金增速回升至0.7%",
+      "summary_zh": "9月租金YoY增长0.7%，Gateway与Midwest市场领涨",
+      "impact": "long-pos",
+      "id": "08685f2f",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Joint Venture Underway on 236-Unit Multifamily Project in Denison, Texas",
+      "link": "https://rebusinessonline.com/joint-venture-underway-on-236-unit-multifamily-project-in-denison-texas/",
+      "description": "DENISON, TEXAS — A joint venture between 2GR Equity, Preston Forrest Capital and Cross Development is underway on construction of The Katy at Waterloo Trails, a 236-unit multifamily project in Denison, about 75 miles north of Dallas. The site is located within the Waterloo Trails master-planned development, and the property will offer amenities such as a pool, fitness center, business center, a community kitchen and dog parks. Information on floor plans was not disclosed. Completion is slated for late 2027. The post Joint Venture Underway on 236-Unit Multifamily Project in Denison, Texas appea",
+      "published_at": 1792421727000,
+      "score": 12,
+      "tags": [
+        "multifamily",
+        "dfw",
+        "deals",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "texas",
+        "dallas"
+      ],
+      "importance": 3,
+      "selector_reason": "德州Denison启动236套多户住宅项目，由多家开发和投资机构组成合资企业推进。该项目体现北德州住宅供给扩张，但交易和项目规模属于区域常规水平。",
+      "section": "sunbelt",
+      "title_zh": "Denison启动236套multifamily项目",
+      "summary_zh": "The Katy at Waterloo Trails预计2027年末完工，DFW北部供给增加",
+      "impact": "long-pos",
+      "id": "80af04b3",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "inman",
+      "source_name": "Inman News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "brokerage"
+      ],
+      "region": "national",
+      "title": "Buy the house, lease the dirt: Inside M. Ryan Gorman’s new affordability venture - Inman Real Estate News",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE42RXFFcGROVnE4cmNaVlVxejJuS3BTWDV3MFk4Q2p0RkwyX1F6bm9ZOHlYZ3Z5LXVIdV9ZUEJhV2s4SUxEZFdBbE1oUU1YcEFxTDVWOFdoVjFUSmZJQWMwUzVYWDg?oc=5",
+      "description": "Buy the house, lease the dirt: Inside M. Ryan Gorman’s new affordability venture &nbsp;&nbsp; Inman Real Estate News",
+      "published_at": 1792071006000,
+      "score": 8,
+      "tags": [
+        "btr-sfr",
+        "national",
+        "trend",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "一项“买房屋、租土地”的新型住房负担能力方案试图降低购房初始成本。该模式涉及住宅金融和土地所有权结构创新，虽尚未显示大规模落地，但具备政策和市场观察价值。",
+      "section": "btr",
+      "extended_window": true,
+      "title_zh": "买房不买地：新模式降低置业门槛",
+      "summary_zh": "M. Ryan Gorman推出房屋购买、土地租赁模式， affordability改善",
+      "impact": "long-pos",
+      "id": "c42584ed",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "multifamily-dive",
+      "source_name": "Multifamily Dive",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "multifamily"
+      ],
+      "region": "national",
+      "title": "Multifamily CMBS delinquency and servicing rates rose yet again",
+      "link": "https://www.multifamilydive.com/news/cmbs-servicing-federal-reserve-apartment-deliquency/833363/",
+      "description": "An article from Dive Brief Multifamily CMBS delinquency and servicing rates rose yet again Private-label securities have a 7.69% delinquency rate, while commercial real estate collateralized loan obligations sit at 3.88%, according to Trepp. Published Oct. 19, 2026 Leslie Shaver Senior Reporter Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Getty Images Dive Brief: As a group of loans across multiple states moved to 30-day delinquent status in September, the multifamily commercial mortgage-backed securities delinquency rate rose 35 basis points to 8.04%, according to Trepp. The multifamily CMBS special servicing rate rose 17 basis points to 8.54% in September, according to Trepp. The overall CRE special servicing rate hit its highest level since February 2013, rising seven basis points in September to 11.49% Multifamily delinquency and servicing rates have followed different trajectories over the past year. Six months ago, the delinquency rate was 7.15% and a year ago it was 6.59%. Six months ago, the special servicing rate was higher at 8.75%. One year ago, it was 8.2%. Dive Insight: Distress mounted across commercial real estate in September, with the overall CMBS delinquency rate increasing 17 bps to 8.02%, according to Trepp. On the delinquency side, a $1.1 billion eight-property studio-and-office portfolio loan in Los Angeles; a $470 million two-tower office complex in Houston; a $280 million beachfront hotel loan in Santa Monica, California; a $230.1 million office loan in Denver; and a $208.9 million office loan in Silicon Valley powered the increase, according to Trepp. CMBS still represents a relatively small piece of the securitized apartment loans in distress, according to Trepp. In August, $11.6 billion out of $635.82 billion of securitized multifamily loans were delinquent . Private-label securities, with a 7.69% delinquency rate, hold $75.48 billion of multifamily debt. Freddie Mac, with $518.99 billion of multifamily debt outstanding, has a 0.8% delinquency rate. Commercial real estate collateralized loan obligations have $41.35 billion of debt and a 3.88% delinquency rate, according to Trepp. “Defaults are getting worse,” Justin Ashcraft, president of Northern Ridge Capital told Multifamily Dive in emailed comments. “This is the highest it’s been since late 2020. Additionally, most groups are expecting another increase in rates this year from the Fed. So there’s no relief on the horizon anytime soon.” Ashcraft said pricing requirements have “shifted quite dramatically from when the loans were originated to today.” What was a realistic take-out cap rate when loans were originated “is now hopelessly out of reach,” he said. He said expectations for market conditions aren't aligning with rents, leaving properties unable to generate cash flow to meet debt service coverage ratios that are acceptable for lenders and investors. “I imagine we’re going to see a lot of upcoming foreclosures which will negatively impact the value of multifamily,” Ashcraft said. “We’re currently focusing a lot on auction financing as the ones that will come out of this situation the best are the ones sitting on the sidelines with an unused war chest.” Click here to sign up to receive multifamily and apartment news like this article in your inbox every weekday. Add us on Google Share Copy link Email LinkedIn X/Twitter Facebook Print License Filed Under: Transactions",
+      "published_at": 1792423438000,
+      "score": 18,
+      "tags": [
+        "multifamily",
+        "national",
+        "distress",
+        "institutional"
+      ],
+      "heat_signals": [
+        "houston",
+        "fed",
+        "freddie mac"
+      ],
+      "importance": 5,
+      "selector_reason": "多户住宅私募CMBS逾期率升至7.69%，商业地产贷款服务和信用压力继续恶化。该信号直接反映公寓信贷市场的系统性风险，对银行、证券化市场和全国多户地产均有影响。",
+      "section": "cre",
+      "title_zh": "multifamily CMBS逾期率升至8.04%",
+      "summary_zh": "9月逾期率升35bps至8.04%，special servicing升至8.54%",
+      "impact": "short-neg",
+      "id": "4e1bde80",
+      "fetched_at": 1792475022111,
+      "cre_subcategory": "多户"
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Big Banks Take Bigger CRE Losses As They Clear Out Problem Loans",
+      "link": "https://www.bisnow.com/news/national/capital-markets/big-banks-take-bigger-cre-losses-as-they-clear-problem-loans",
+      "description": "Major banks are reducing troubled CRE loans across property sectors as nonaccrual and nonperforming balances decline.",
+      "published_at": 1792451432000,
+      "score": 12,
+      "tags": [
+        "mixed-asset",
+        "national",
+        "distress",
+        "lender"
+      ],
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "美国大型银行正在清理问题商业地产贷款，相关非应计和不良余额变化显示银行业仍处于信用风险调整阶段。该报道涉及主要银行和多个地产板块，具有全国性、系统性影响。",
+      "section": "cre",
+      "title_zh": "大银行加速清理问题CRE贷款",
+      "summary_zh": "银行压降nonaccrual与不良余额，但清仓过程带来更大损失",
+      "impact": "short-neg",
+      "id": "ebfb854d",
+      "fetched_at": 1792475022111,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "2.1M SF Chicago Office Complex Set For November Sheriff&#039;s Auction",
+      "link": "https://www.bisnow.com/news/chicago/office/chicago-office-complex-november-foreclosure-auction",
+      "description": "2.1M SF Chicago Office Complex Set For November Sheriff&#039;s Auction October 19, 2026 | 5:45 pm ET Ryan Wangman, Chicago Illinois Center , a sprawling office complex in the East Loop, is slated for a foreclosure auction next month, as the property has struggled to find its footing in this office market. Google Maps Illinois Center at 111 E. Wacker Drive in Chicago Cook County Associate Judge Edward Robles ruled against an affiliate of AmTrust RE in September for defaulting on the $260M mortgage backed by the two-tower property at 111 E. Wacker Drive and 233 N. Michigan Ave., Crain's Chicago Business reported . The decision comes two years after AmTrust was hit with a foreclosure lawsuit on the 2.1M SF property, according to CMBS servicer commentary. The sheriff's sale is slated for Nov. 12, according to the sheriff's website. Special servicer LNR Partners is poised to bid for and take control of the property, according to Crain's. Illinois Center's latest appraised value was $66M, down 22% from its 2024 appraisal and 83% from a $390M valuation when the property's loan was originated in 2015, according to Morningstar Credit. AmTrust paid $376M for the property in 2015. The property's occupancy was 33% as of the end of 2025, according to servicer commentary. As a whole, the East Loop has struggled mightily with empty office space, with a 30.5% vacancy rate that is nearly tied with the Central Loop and well above the overall central business district, according to a Q3 report from NAI Hiffman . A spokesperson for AmTrust didn't respond to a request for comment. Morningstar Associate Managing Director David Putro told Bisnow in an email that he believes the trust will take the title at the foreclosure sale and attempt to stabilize the property, but it could be a few years before it actually sells. \"At the same time, AON is hanging out there awaiting another workout, 135 South LaSalle just saw its value get hit again, and Illinois Center has a tremendous amount of space to re-lease,\" Putro wrote. \"I don’t see this ending up being a good resolution.\" Continue reading this story with a free account Log in or register Contact Ryan Wangman at ryan.wangman@bisnow.com Related Topics: AmTrust Realty , David Putro , Illinois Center , LNR Partners , Morningstar Credit",
+      "published_at": 1792446313000,
+      "score": 18,
+      "tags": [
+        "office",
+        "distress",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [
+        "occupancy",
+        "vacancy"
+      ],
+      "importance": 4,
+      "selector_reason": "芝加哥一处210万平方英尺办公综合体将进入法拍程序，显示核心办公资产仍面临严重再融资和估值压力。超大体量资产的止赎具有全国办公地产信用周期的代表性。",
+      "section": "cre",
+      "title_zh": "Chicago 2.1M SF办公楼将拍卖",
+      "summary_zh": "Illinois Center估值仅$66M， occupancy 33%，11月进入sheriff auction",
+      "impact": "short-neg",
+      "id": "69439590",
+      "fetched_at": 1792475022111,
+      "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "SL Green, Mori Trust Secure $2B Refi of Midtown Office Tower",
+      "link": "https://www.connectcre.com/stories/sl-green-mori-trust-secure-2b-refi-of-midtown-office-tower/",
+      "description": "SL Green Realty Corp. and a U.S. affiliate of Mori Trust Co. have secured a $2 billion refinancing of 245 Park Ave., a 44-story office tower spanning the entire block between East 46th and East 47th in Midtown Manhattan. The five-year, fixed-rate financing carries an interest rate of 6.52% and replaces the property's previous $1.768 ... The post SL Green, Mori Trust Secure $2B Refi of Midtown Office Tower appeared first on Connect CRE .",
+      "published_at": 1792442651000,
+      "score": 11,
+      "tags": [
+        "office",
+        "nyc",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "SL Green和Mori Trust为曼哈顿245 Park Avenue完成20亿美元五年期再融资。超大规模办公楼融资是当前核心办公资产再融资市场的重要案例，金额也显著超过行业中等交易门槛。",
+      "section": "cre",
+      "title_zh": "SL Green获245 Park Ave.$2B refi",
+      "summary_zh": "Midtown办公楼获5年固定利率6.52%融资，成功替换旧债",
+      "impact": "long-pos",
+      "id": "39811a06",
+      "fetched_at": 1792475022111,
+      "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Irvine Company Sells Chicago Tower for $550M to Zara Founder",
+      "link": "https://www.connectcre.com/stories/irvine-company-sells-chicago-tower-for-550m-to-zara-founder/",
+      "description": "Irvine Company has sold the One North Wacker building to Ponte Gadea, the family investment firm of Amancio Ortega, the billionaire founder of fashion retailer Zara. The 51-story office tower was acquired for approximately $550 million, reported Crain's. The transaction includes the assumption of a $353 million CMBS loan that Irvine Company secured in 2021. ... The post Irvine Company Sells Chicago Tower for $550M to Zara Founder appeared first on Connect CRE .",
+      "published_at": 1792439757000,
+      "score": 11,
+      "tags": [
+        "office",
+        "deals",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "芝加哥One North Wacker以约5.5亿美元出售给Zara创始人的家族投资公司，并承接3.53亿美元CMBS贷款。该交易规模大且涉及核心办公资产和CMBS债务，对市场估值和机构资本具有较强参考意义。",
+      "section": "cre",
+      "title_zh": "Irvine Company以$550M出售Chicago塔楼",
+      "summary_zh": "Ponte Gadea接手One North Wacker，并承接$353M CMBS贷款",
+      "impact": "long-pos",
+      "id": "a9ad07b3",
+      "fetched_at": 1792475022111,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Ares, Invesco Nontraded REITs Raise Nearly 6 Times Capital Redeemed In Q3",
+      "link": "https://www.bisnow.com/news/national/capital-markets/ares-invesco-nontraded-reits-fulfill-q3-redemption-requests-raise-nearly-6x-more",
+      "description": "Ares and Invesco&#039;s third-quarter results came as nontraded REITs continued to grapple with investor withdrawals and muted demand for real estate.",
+      "published_at": 1792435386000,
+      "score": 12,
+      "tags": [
+        "mixed-asset",
+        "national",
+        "fundraising",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 5,
+      "selector_reason": "Ares和Invesco非交易型REIT在第三季度募集资金几乎达到赎回额的六倍，但市场仍受到提款和需求疲弱困扰。该结果直接反映机构地产资本流动与流动性压力，具有系统性机构资本意义。",
+      "section": "institutional",
+      "title_zh": "Ares与Invesco募资近赎回额六倍",
+      "summary_zh": "两家nontraded REITs Q3募资接近赎回额六倍，流动性改善",
+      "impact": "long-pos",
+      "id": "278684a7",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Distressed Sales Jump 26%, Led By Multifamily Deals",
+      "link": "https://www.bisnow.com/news/national/capital-markets/distressed-sales-jump-26-driven-by-discounted-apartment-deals",
+      "description": "Transaction volume is up overall, but interest rates keep pressure on pandemic-era buyers.",
+      "published_at": 1792446306000,
+      "score": 12,
+      "tags": [
+        "multifamily",
+        "national",
+        "deals",
+        "distress",
+        "institutional"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "商业地产困境销售量同比增加26%，其中多户住宅交易成为主要推动力。该趋势显示高利率正在加快资产重定价和所有权转移，具有全国信用周期参考价值。",
+      "section": "institutional",
+      "title_zh": "困境资产交易激增26%，multifamily领跑",
+      "summary_zh": "交易量整体上升，但高利率持续压低疫情期买家资产表现",
+      "impact": "short-neg",
+      "id": "0056c1b5",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Copper Mill Sues Partners Over Collapsed Deal For 750-Unit Dorchester Project",
+      "link": "https://www.bisnow.com/news/boston/multifamily/copper-mill-sues-partners-collapsed-deal-750-unit-dorchester-project",
+      "description": "The developer is alleging POB and Pactolus engaged in fraud related to their agreement for the site at 75 Morrissey Blvd.",
+      "published_at": 1792452316000,
+      "score": 12,
+      "tags": [
+        "multifamily",
+        "deals",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 3,
+      "selector_reason": "一宗750套公寓项目因合作协议和涉嫌欺诈问题爆发诉讼，显示大型住宅开发项目在融资和合作关系上的执行风险。项目规模较大，但目前仍是单一项目纠纷，评为常规动态。",
+      "section": "institutional",
+      "title_zh": "Copper Mill起诉合作方，750套项目流产",
+      "summary_zh": "开发商指控POB与Pactolus欺诈，Dorchester项目交易破裂",
+      "impact": "short-neg",
+      "id": "0d32b939",
+      "fetched_at": 1792475022111
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Hamilton, Clarion Purchase Former Bridgestone Tire Plant in Middle Tennessee, Plan 1.5 MSF Redevelopment",
+      "link": "https://rebusinessonline.com/hamilton-clarion-purchase-former-bridgestone-tire-plant-in-middle-tennessee-plan-1-5-msf-redevelopment/",
+      "description": "LA VERGNE, TENN. — Hamilton Development and Clarion Partners have purchased the former Bridgestone Americas tire plant in La Vergne, a southeast suburb of Nashville, with plans to redevelop the site into a master-planned industrial park. Jeff Feste and Dan McGillicuddy of JLL brokered the transaction. Feste, along with Christopher Gaw, Kelsey Johnson and Carly Seaman of JLL, will lead leasing efforts for the new site. Situated at 1201 Bridgestone Parkway, the 135-acre redevelopment will span 1.5 million square feet across 10 buildings. The site offers multiple opportunities for flexible build-",
+      "published_at": 1792417156000,
+      "score": 10,
+      "tags": [
+        "industrial",
+        "nashville",
+        "deals",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [],
+      "importance": 4,
+      "selector_reason": "Hamilton Development与Clarion Partners收购纳什维尔附近旧轮胎工厂，并计划改造为150万平方英尺工业园。项目位于增长型Sun Belt市场且规模较大，体现工业再开发和区域产业地产扩张趋势。",
+      "section": "cre",
+      "title_zh": "Hamilton与Clarion拟重建Nashville工业园",
+      "summary_zh": "收购135英亩旧轮胎厂，规划10栋、1.5M SF工业园",
+      "impact": "long-pos",
+      "id": "a9c84d39",
+      "fetched_at": 1792475022111,
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Bank of America pegs 2027 mortgage volume at $1.72T, warns of 2023-style housing replay",
+      "link": "https://www.housingwire.com/articles/bank-of-america-2027-mortgage-forecast/",
+      "description": "Bank of America projects muted mortgage growth in 2027, with total originations reaching $1.719 trillion and only about $344 billion coming from refinances, according to a report released Friday. The bank’s analysts said their outlook is “slightly lower” than other industry forecasts because they expect weaker housing market conditions and home sales, along with “a marginally higher projected year-end rate level.” Their 2027 forecast is the third major call for origination volume to remain below $2 trillion next year. The Mortgage Bankers Association (MBA) expects total single-family originations to fall 5% to $1.99 trillion in 2027. Fannie Mae is forecasting $1.86 trillion for next year. BofA’s forecast represents a decline of 15% compared to the $2.030 trillion expected for 2026. It assumes a 10-year Treasury yield average of 5.25% in 2027, a 2.5% year-over-year decline in existing home sales , an 0.5% increase in new home sales and a 1% rise in full-year home price appreciation. Secondary market On the capital markets side, BofA analysts expect agency mortgage-backed securities gross issuance of a little more than $1.12 trillion in 2027, down from about $1.33 trillion this year. Weaker issuance is being driven by softer home sales, a higher share of all-cash transactions in a high-rate environment, a smaller contribution from warehouse pipeline effects, and more agency collateral flowing into nonagency securitizations . These headwinds are only partially offset by modest gains in cash-out refis and lower portfolio retention by the government-sponsored enterprises, the analysts said. Replay of 2023? BofA frames 2027 as a replay of 2023 in several key respects: elevated mortgage rates , subdued housing activity, affordability challenges and a persistent lock-in effect. But the analysts argue that 2027 could be “even more challenging” than 2023 because several demand-supportive forces have faded. In 2023, many buyers still believed higher mortgage rates were temporary and leaned on a “buy now, refinance later” strategy. By 2027, rates will have been elevated for nearly five years, and the Federal Reserve will have resumed tightening , eroding confidence in meaningful refinance opportunities. At the same time, home price appreciation has cooled while homeownership looks more like a high-carry, lower-return investment. In addition, the reversal of the work-from-home trend has removed a major tailwind that boosted housing demand during and after the pandemic. The bank does see some offsets. The lock-in effect has eased modestly at the market level as more higher-rate loans have been originated in recent years, slightly increasing the pool of borrowers who could benefit from future rate relief. Housing supply conditions have improved compared to the tightest pandemic-era levels, and some large markets, including parts of Florida , are showing localized signs of recovery. Related More: Bank of America MBS Mortgage Rates",
+      "published_at": 1792437409000,
+      "score": 44,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "trend",
+        "lender"
+      ],
+      "heat_signals": [
+        "fed",
+        "mortgage rate",
+        "existing home sales",
+        "new home sales",
+        "fannie mae",
+        "outlook",
+        "forecast",
+        "trend",
+        "year-end",
+        "year-over-year",
+        "housing market",
+        "new home sales"
+      ],
+      "importance": 3,
+      "selector_reason": "Bank of America下调2027年美国房贷规模预期，反映高利率和低成交量对全国住宅市场的持续压制。该预测覆盖全国按揭和再融资市场，属于有参考价值的常规宏观动态。",
+      "section": "national",
+      "title_zh": "Bank of America下调2027 mortgage预测至$1.72T",
+      "summary_zh": "预计originations较2026年降15%，existing home sales将降2.5%",
+      "impact": "short-neg",
+      "id": "436376ae",
+      "fetched_at": 1792475022111
+    }
+  ],
+  "errors": [
+    {
+      "source": "Houston Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://houstonagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Phoenix Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://phoenixagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Atlanta Agent Magazine",
+      "error": "HTTP 403",
+      "attempted_urls": [
+        "https://atlantaagentmagazine.com/feed/"
+      ]
+    },
+    {
+      "source": "Miami Agent Magazine",
+      "error": "fetch failed",
+      "attempted_urls": [
+        "https://miamiagentmagazine.com/feed/"
+      ]
+    }
+  ],
+  "_diagnostics": {
+    "writer_mode": "global",
+    "sectionsUnderMin": [],
+    "window_hours": 24,
+    "pool_sizes": {
+      "24h": 91,
+      "48h": 99,
+      "72h": 111
+    },
+    "us_holiday": {
+      "today_us": "2026-10-20",
+      "today_us_holiday": null,
+      "yesterday_us_holiday": null,
+      "tomorrow_us_holiday": null,
+      "is_us_weekend": false,
+      "expected_recovery_bj_date": null,
+      "source": "date.nager.at"
+    },
+    "writer_audit": [
+      {
+        "stage": "selector",
+        "input": 121,
+        "output": 40
+      },
+      {
+        "stage": "tagger",
+        "items": 40
+      },
+      {
+        "stage": "dedupe",
+        "before": 40,
+        "after": 40
+      },
+      {
+        "stage": "pick",
+        "section_counts": {
+          "national": 6,
+          "sunbelt": 4,
+          "btr": 1,
+          "cre": 6,
+          "institutional": 3
+        }
+      },
+      {
+        "stage": "translator",
+        "items": 20
+      }
+    ],
+    "candidate_pool_size": 121
+  }
+}
