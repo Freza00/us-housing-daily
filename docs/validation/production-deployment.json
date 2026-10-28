@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-28T15:05:33.662Z",
+  "commit": "0010673fb73114820dde34987a2ce7d2c58bde1d",
+  "origin": "https://news-agent-mu.vercel.app",
+  "checks": [
+    {
+      "url": "/",
+      "status": 200,
+      "matches_release": true,
+      "sha256": "531e6ca80decc94e552dcfb0102d5091c9d7cb19a111156d41ca49dc3cca8a5f"
+    },
+    {
+      "url": "/app.js",
+      "status": 200,
+      "matches_release": true,
+      "sha256": "a07787c5e756ebefc79067b578e6390c15cc416e3b956f3bf03bc3a3c65c814f"
+    },
+    {
+      "url": "/style.css",
+      "status": 200,
+      "matches_release": true,
+      "sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7"
+    },
+    {
+      "url": "/data/latest.json",
+      "status": 200,
+      "matches_release": true,
+      "sha256": "8d07bc5c9a27a0006af44c682e517348b179eaad7a72bdb739e19c5f4e300a4c",
+      "date": "2026-10-28"
+    },
+    {
+      "url": "/api/trigger-weekly",
+      "status": 401,
+      "authenticated_request": false,
+      "payload": {
+        "error": "unauthorized"
+      }
+    }
+  ],
+  "pass": true,
+  "static_assets_pass": true,
+  "api_unauthenticated_guard_pass": true,
+  "production_calendar_skip_verified": false,
+  "notes": [
+    "Production GET without cron authorization is expected to return 401. Calendar behavior is covered by CI; no generation was dispatched.",
+    "Vercel CLI authentication is invalid, so account plan and deployed cron registry were not independently queried."
+  ],
+  "ci": {
+    "url": "https://github.com/Freza00/us-housing-daily/actions/runs/40712118581",
+    "conclusion": "success",
+    "node": "22.23.3",
+    "tests": 103
+  },
+  "vercel": {
+    "state": "success",
+    "url": "https://vercel.com/freza00s-projects/news-agent/J4XSdDEF2RJ5QyNUZi4fY5EBTqzG"
+  }
+}
