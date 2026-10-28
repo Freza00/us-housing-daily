@@ -1,0 +1,20 @@
+name: Validate Pipeline
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/**', 'config/**', 'public/**', 'api/**', 'package.json', '.github/workflows/**']
+  pull_request:
+    paths: ['scripts/**', 'config/**', 'public/**', 'api/**', 'package.json', '.github/workflows/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - run: npm test

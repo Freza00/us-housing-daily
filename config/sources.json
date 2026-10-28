@@ -1,14 +1,19 @@
 {
-  "_doc": "美国住宅地产新闻聚合 - 信源配置。每个 source 包含: id (唯一), name, url (RSS), tier (A/B/D/E), tags (canonical IDs from src/tags.ts), weight (1-10), region. tags 取值见 src/tags.ts 的 TAGS 定义 (4 维度: asset / geo / topic / actor)。",
+  "_doc": "RSS新闻与官方研究目录。type=rss/html/page；page为固定更新页面，以内容版本识别新报告。required源更新/失败单独审计；来源登记不等于正文可访问，运行状态见source_health。",
   "sources": [
     {
       "id": "housingwire",
       "name": "HousingWire",
       "url": "https://www.housingwire.com/feed/",
       "tier": "A",
-      "tags": ["housing", "rates", "policy"],
+      "tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
       "weight": 9,
-      "region": "national"
+      "region": "national",
+      "family": "housingwire"
     },
     {
       "id": "inman",
@@ -18,27 +23,39 @@
         "https://news.google.com/rss/search?q=site:inman.com&hl=en-US&gl=US&ceid=US:en"
       ],
       "tier": "A",
-      "tags": ["housing", "brokerage"],
+      "tags": [
+        "housing",
+        "brokerage"
+      ],
       "weight": 8,
-      "region": "national"
+      "region": "national",
+      "family": "inman"
     },
     {
       "id": "trd-national",
       "name": "The Real Deal (National)",
       "url": "https://therealdeal.com/national/feed/",
       "tier": "A",
-      "tags": ["mixed-asset", "deals"],
+      "tags": [
+        "mixed-asset",
+        "deals"
+      ],
       "weight": 8,
-      "region": "national"
+      "region": "national",
+      "family": "trd-national"
     },
     {
       "id": "bisnow",
       "name": "Bisnow",
       "url": "https://www.bisnow.com/rss",
       "tier": "A",
-      "tags": ["mixed-asset", "deals"],
+      "tags": [
+        "mixed-asset",
+        "deals"
+      ],
       "weight": 8,
-      "region": "national"
+      "region": "national",
+      "family": "bisnow"
     },
     {
       "id": "multi-housing-news",
@@ -48,100 +65,148 @@
         "https://news.google.com/rss/search?q=site:multihousingnews.com&hl=en-US&gl=US&ceid=US:en"
       ],
       "tier": "A",
-      "tags": ["multifamily"],
+      "tags": [
+        "multifamily"
+      ],
       "weight": 9,
-      "region": "national"
+      "region": "national",
+      "family": "multi-housing-news"
     },
     {
       "id": "national-mortgage-news",
       "name": "National Mortgage News",
       "url": "https://www.nationalmortgagenews.com/rss",
       "tier": "A",
-      "tags": ["rates", "macro"],
+      "tags": [
+        "rates",
+        "macro"
+      ],
       "weight": 7,
-      "region": "national"
+      "region": "national",
+      "family": "national-mortgage-news"
     },
     {
       "id": "cnbc-realestate",
       "name": "CNBC Realty Check",
       "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000115",
       "tier": "A",
-      "tags": ["macro"],
+      "tags": [
+        "macro"
+      ],
       "weight": 6,
-      "region": "national"
+      "region": "national",
+      "family": "cnbc-realestate"
     },
     {
       "id": "d-magazine",
       "name": "D Magazine",
       "url": "https://www.dmagazine.com/feed/",
       "tier": "D",
-      "tags": ["dfw"],
+      "tags": [
+        "dfw"
+      ],
       "weight": 5,
       "region": "texas",
-      "filter_required": true
+      "filter_required": true,
+      "family": "d-magazine"
     },
     {
       "id": "houston-agent",
       "name": "Houston Agent Magazine",
       "url": "https://houstonagentmagazine.com/feed/",
       "tier": "D",
-      "tags": ["houston", "brokerage"],
+      "tags": [
+        "houston",
+        "brokerage"
+      ],
       "weight": 6,
-      "region": "texas"
+      "region": "texas",
+      "family": "houston-agent"
     },
     {
       "id": "phoenix-agent",
       "name": "Phoenix Agent Magazine",
       "url": "https://phoenixagentmagazine.com/feed/",
       "tier": "D",
-      "tags": ["phoenix", "arizona", "brokerage"],
+      "tags": [
+        "phoenix",
+        "arizona",
+        "brokerage"
+      ],
       "weight": 6,
-      "region": "arizona"
+      "region": "arizona",
+      "family": "phoenix-agent"
     },
     {
       "id": "atlanta-agent",
       "name": "Atlanta Agent Magazine",
       "url": "https://atlantaagentmagazine.com/feed/",
       "tier": "D",
-      "tags": ["atlanta", "georgia", "brokerage"],
+      "tags": [
+        "atlanta",
+        "georgia",
+        "brokerage"
+      ],
       "weight": 6,
-      "region": "georgia"
+      "region": "georgia",
+      "family": "atlanta-agent"
     },
     {
       "id": "miami-agent",
       "name": "Miami Agent Magazine",
       "url": "https://miamiagentmagazine.com/feed/",
       "tier": "D",
-      "tags": ["miami", "florida", "brokerage"],
+      "tags": [
+        "miami",
+        "florida",
+        "brokerage"
+      ],
       "weight": 6,
-      "region": "florida"
+      "region": "florida",
+      "family": "miami-agent"
     },
     {
       "id": "google-news-sunbelt",
       "name": "Google News — Sun Belt Housing Market",
       "url": "https://news.google.com/rss/search?q=%22housing+market%22+(Phoenix+OR+Tampa+OR+Atlanta+OR+Charlotte+OR+Nashville+OR+%22Las+Vegas%22+OR+Jacksonville+OR+Orlando+OR+Raleigh+OR+Memphis)&hl=en-US&gl=US&ceid=US:en",
       "tier": "D",
-      "tags": ["sunbelt", "data"],
+      "tags": [
+        "sunbelt",
+        "data"
+      ],
       "weight": 7,
-      "region": "sunbelt"
+      "region": "sunbelt",
+      "family": "google-news-sunbelt"
     },
     {
       "id": "nahb-eyeonhousing",
       "name": "NAHB Eye on Housing",
       "url": "https://eyeonhousing.org/feed/",
       "tier": "B",
-      "tags": ["data", "trend", "policy"],
+      "tags": [
+        "data",
+        "trend",
+        "policy"
+      ],
       "weight": 8,
-      "region": "national"
+      "region": "national",
+      "family": "nahb-eyeonhousing",
+      "is_research": true
     },
     {
       "id": "calculated-risk",
       "name": "Calculated Risk (Bill McBride)",
       "url": "https://feeds.feedburner.com/CalculatedRisk",
       "tier": "B",
-      "tags": ["macro", "data", "trend"],
+      "tags": [
+        "macro",
+        "data",
+        "trend"
+      ],
       "weight": 10,
-      "region": "national"
+      "region": "national",
+      "family": "calculated-risk",
+      "is_research": true
     },
     {
       "id": "lance-lambert",
@@ -151,241 +216,1080 @@
         "https://news.google.com/rss/search?q=%22Lance+Lambert%22+OR+%22ResiClub%22&hl=en-US&gl=US&ceid=US:en"
       ],
       "tier": "B",
-      "tags": ["housing", "data", "trend"],
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
       "weight": 10,
-      "region": "national"
+      "region": "national",
+      "family": "lance-lambert",
+      "is_research": true
     },
     {
       "id": "logan-mohtashami",
       "name": "Logan Mohtashami (HousingWire)",
       "url": "https://www.housingwire.com/author/logan-mohtashami/feed/",
       "tier": "B",
-      "tags": ["rates", "trend"],
+      "tags": [
+        "rates",
+        "trend"
+      ],
       "weight": 9,
-      "region": "national"
+      "region": "national",
+      "family": "housingwire",
+      "is_research": true
     },
     {
       "id": "yardi-matrix",
       "name": "Yardi Matrix Blog",
-      "url": "https://www.yardimatrix.com/Blog/feed",
+      "url": "https://www.yardimatrix.com/publications/",
       "tier": "B",
-      "tags": ["multifamily", "data", "trend"],
+      "tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
       "weight": 9,
-      "region": "national"
+      "region": "national",
+      "family": "yardi-matrix",
+      "is_research": true,
+      "type": "html",
+      "include": "/(?:multifamily-national|sfr-btr-national|self-storage-national)/.+",
+      "max_articles": 18
     },
     {
       "id": "realtor-research",
       "name": "Realtor.com Research",
       "url": "https://www.realtor.com/research/feed/",
       "tier": "B",
-      "tags": ["housing", "data"],
+      "tags": [
+        "housing",
+        "data"
+      ],
       "weight": 8,
-      "region": "national"
+      "region": "national",
+      "family": "realtor-com",
+      "is_research": true,
+      "required": true,
+      "alternates": [
+        "https://www.realtor.com/research/articles/"
+      ],
+      "include": "/research/(?!articles/?$|reports/?$|data/?$|feed/).+"
     },
     {
       "id": "realtor-news",
       "name": "Realtor.com News",
       "url": "https://www.realtor.com/news/feed/",
       "tier": "A",
-      "tags": ["housing"],
+      "tags": [
+        "housing"
+      ],
       "weight": 6,
-      "region": "national"
+      "region": "national",
+      "family": "realtor-com"
     },
     {
       "id": "redfin-news",
       "name": "Redfin News",
       "url": "https://www.redfin.com/news/feed/",
       "tier": "A",
-      "tags": ["housing", "data"],
+      "tags": [
+        "housing",
+        "data"
+      ],
       "weight": 8,
-      "region": "national"
+      "region": "national",
+      "family": "redfin-news",
+      "is_research": true
     },
     {
       "id": "trerc",
       "name": "Texas Real Estate Research Center (TRERC)",
-      "url": "https://trerc.tamu.edu/feed/",
+      "url": "https://trerc.tamu.edu/texas-housing-insight/",
       "tier": "D",
-      "tags": ["texas", "data", "trend"],
+      "tags": [
+        "texas",
+        "data",
+        "trend"
+      ],
       "weight": 9,
-      "region": "texas"
+      "region": "texas",
+      "family": "trerc",
+      "is_research": true,
+      "type": "html",
+      "alternates": [
+        "https://trerc.tamu.edu/housing/"
+      ],
+      "include": "/reports/.+",
+      "max_articles": 18
     },
     {
       "id": "fed-press",
       "name": "Federal Reserve Press",
       "url": "https://www.federalreserve.gov/feeds/press_all.xml",
       "tier": "C",
-      "tags": ["rates", "policy", "macro", "regulator"],
+      "tags": [
+        "rates",
+        "policy",
+        "macro",
+        "regulator"
+      ],
       "weight": 7,
-      "region": "national"
+      "region": "national",
+      "family": "fed-press"
     },
     {
       "id": "brookings-housing",
       "name": "Brookings Institution",
-      "url": "https://www.brookings.edu/feed/",
+      "url": "https://www.brookings.edu/topics/housing/",
       "tier": "C",
-      "tags": ["policy", "trend"],
+      "tags": [
+        "policy",
+        "trend"
+      ],
       "weight": 5,
       "region": "national",
-      "filter_required": true
+      "filter_required": true,
+      "family": "brookings-housing",
+      "is_research": true,
+      "type": "html",
+      "include": "/articles/.+",
+      "max_articles": 18
     },
     {
       "id": "pere-news",
       "name": "PERE News",
       "url": "https://www.perenews.com/feed/",
       "tier": "B",
-      "tags": ["institutional", "deals", "trend"],
+      "tags": [
+        "institutional",
+        "deals",
+        "trend"
+      ],
       "weight": 10,
-      "region": "national"
+      "region": "national",
+      "family": "pere-news"
     },
     {
       "id": "multifamily-dive",
       "name": "Multifamily Dive",
       "url": "https://www.multifamilydive.com/feeds/news/",
       "tier": "A",
-      "tags": ["multifamily"],
+      "tags": [
+        "multifamily"
+      ],
       "weight": 9,
-      "region": "national"
+      "region": "national",
+      "family": "multifamily-dive"
     },
     {
       "id": "connect-cre",
       "name": "Connect CRE",
       "url": "https://www.connectcre.com/feed/",
       "tier": "A",
-      "tags": ["mixed-asset", "deals"],
+      "tags": [
+        "mixed-asset",
+        "deals"
+      ],
       "weight": 7,
-      "region": "national"
+      "region": "national",
+      "family": "connect-cre"
     },
     {
       "id": "rebusiness-online",
       "name": "REBusiness Online",
       "url": "https://rebusinessonline.com/feed/",
       "tier": "A",
-      "tags": ["mixed-asset", "deals"],
+      "tags": [
+        "mixed-asset",
+        "deals"
+      ],
       "weight": 6,
-      "region": "national"
+      "region": "national",
+      "family": "rebusiness-online"
     },
     {
       "id": "nrhc",
       "name": "National Rental Home Council (NRHC)",
       "url": "https://www.rentalhomecouncil.org/feed/",
       "tier": "E",
-      "tags": ["btr-sfr", "institutional"],
+      "tags": [
+        "btr-sfr",
+        "institutional"
+      ],
       "weight": 9,
-      "region": "national"
+      "region": "national",
+      "family": "nrhc"
     },
     {
       "id": "pretium-partners",
       "name": "Pretium Partners",
       "url": "https://pretium.com/feed/",
       "tier": "B",
-      "tags": ["btr-sfr", "institutional"],
+      "tags": [
+        "btr-sfr",
+        "institutional"
+      ],
       "weight": 8,
-      "region": "national"
+      "region": "national",
+      "family": "pretium-partners"
     },
     {
       "id": "sec-invh-8k",
       "name": "SEC EDGAR — Invitation Homes 8-K",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
       "tier": "B",
-      "tags": ["btr-sfr", "institutional", "data"],
+      "tags": [
+        "btr-sfr",
+        "institutional",
+        "data"
+      ],
       "weight": 10,
       "region": "national",
-      "ua_style": "sec"
+      "ua_style": "sec",
+      "family": "sec-invh-8k"
     },
     {
       "id": "sec-amh-8k",
       "name": "SEC EDGAR — American Homes 4 Rent 8-K",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
       "tier": "B",
-      "tags": ["btr-sfr", "institutional", "data"],
+      "tags": [
+        "btr-sfr",
+        "institutional",
+        "data"
+      ],
       "weight": 10,
       "region": "national",
-      "ua_style": "sec"
+      "ua_style": "sec",
+      "family": "sec-amh-8k"
     },
     {
       "id": "btrlist",
       "name": "BTR List (via Google News)",
       "url": "https://news.google.com/rss/search?q=site:news.btrlist.com&hl=en-US&gl=US&ceid=US:en",
       "tier": "B",
-      "tags": ["btr-sfr"],
+      "tags": [
+        "btr-sfr"
+      ],
       "weight": 8,
-      "region": "national"
+      "region": "national",
+      "family": "btrlist"
     },
     {
       "id": "google-news-btr",
       "name": "Google News — BTR / SFR keywords",
       "url": "https://news.google.com/rss/search?q=%22build-to-rent%22+OR+%22single-family+rental%22+OR+%22Invitation+Homes%22+OR+%22American+Homes+4+Rent%22+OR+Tricon+OR+Pretium+OR+%22Progress+Residential%22+OR+Roofstock+OR+%22Main+Street+Renewal%22+OR+%22FirstKey+Homes%22+OR+%22Home+Partners%22&hl=en-US&gl=US&ceid=US:en",
       "tier": "B",
-      "tags": ["btr-sfr"],
+      "tags": [
+        "btr-sfr"
+      ],
       "weight": 6,
       "region": "national",
-      "filter_required": true
+      "filter_required": true,
+      "family": "google-news-btr"
     },
     {
       "id": "houston-bj-cre",
       "name": "Houston Business Journal — Commercial RE",
       "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
-      "alternates": ["https://www.bizjournals.com/houston/news/commercial-real-estate/feed"],
+      "alternates": [
+        "https://www.bizjournals.com/houston/news/commercial-real-estate/feed"
+      ],
       "tier": "D",
-      "tags": ["houston", "mixed-asset", "deals"],
+      "tags": [
+        "houston",
+        "mixed-asset",
+        "deals"
+      ],
       "weight": 7,
       "region": "texas",
-      "filter_required": true
+      "filter_required": true,
+      "family": "bizjournals"
     },
     {
       "id": "houston-bj-resi",
       "name": "Houston Business Journal — Residential RE",
       "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en",
-      "alternates": ["https://www.bizjournals.com/houston/news/residential-real-estate/feed"],
+      "alternates": [
+        "https://www.bizjournals.com/houston/news/residential-real-estate/feed"
+      ],
       "tier": "D",
-      "tags": ["houston", "housing"],
+      "tags": [
+        "houston",
+        "housing"
+      ],
       "weight": 7,
       "region": "texas",
-      "filter_required": true
+      "filter_required": true,
+      "family": "bizjournals"
     },
     {
       "id": "dallas-bj-cre",
       "name": "Dallas Business Journal — Commercial RE",
       "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
-      "alternates": ["https://www.bizjournals.com/dallas/news/commercial-real-estate/feed"],
+      "alternates": [
+        "https://www.bizjournals.com/dallas/news/commercial-real-estate/feed"
+      ],
       "tier": "D",
-      "tags": ["dfw", "mixed-asset", "deals"],
+      "tags": [
+        "dfw",
+        "mixed-asset",
+        "deals"
+      ],
       "weight": 7,
       "region": "texas",
-      "filter_required": true
+      "filter_required": true,
+      "family": "bizjournals"
     },
     {
       "id": "dallas-bj-resi",
       "name": "Dallas Business Journal — Residential RE",
       "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en",
-      "alternates": ["https://www.bizjournals.com/dallas/news/residential-real-estate/feed"],
+      "alternates": [
+        "https://www.bizjournals.com/dallas/news/residential-real-estate/feed"
+      ],
       "tier": "D",
-      "tags": ["dfw", "housing"],
+      "tags": [
+        "dfw",
+        "housing"
+      ],
       "weight": 7,
       "region": "texas",
-      "filter_required": true
+      "filter_required": true,
+      "family": "bizjournals"
     },
     {
       "id": "austin-bj-cre",
       "name": "Austin Business Journal — Commercial RE",
       "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
-      "alternates": ["https://www.bizjournals.com/austin/news/commercial-real-estate/feed"],
+      "alternates": [
+        "https://www.bizjournals.com/austin/news/commercial-real-estate/feed"
+      ],
       "tier": "D",
-      "tags": ["austin", "mixed-asset", "deals"],
+      "tags": [
+        "austin",
+        "mixed-asset",
+        "deals"
+      ],
       "weight": 7,
       "region": "texas",
-      "filter_required": true
+      "filter_required": true,
+      "family": "bizjournals"
     },
     {
       "id": "austin-bj-resi",
       "name": "Austin Business Journal — Residential RE",
       "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en",
-      "alternates": ["https://www.bizjournals.com/austin/news/residential-real-estate/feed"],
+      "alternates": [
+        "https://www.bizjournals.com/austin/news/residential-real-estate/feed"
+      ],
       "tier": "D",
-      "tags": ["austin", "housing"],
+      "tags": [
+        "austin",
+        "housing"
+      ],
       "weight": 7,
       "region": "texas",
-      "filter_required": true
+      "filter_required": true,
+      "family": "bizjournals"
+    },
+    {
+      "id": "har-research",
+      "name": "HAR Research",
+      "url": "https://www.har.com/content/department/newsroom?pid=640",
+      "type": "html",
+      "include": "/content/department/newsroom\\?pid=\\d+",
+      "family": "har-research",
+      "region": "texas",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "required": true,
+      "max_articles": 18,
+      "prefer_link_title": true,
+      "link_title_include": "HOUSTON|HOUSING|RENTAL|HOMEBUY|HOME SALES",
+      "exclude": "[?&]pid=(?:640|612|1678|2006|2005)(?:&|$)",
+      "discovery_order": "newest_first"
+    },
+    {
+      "id": "zillow-research",
+      "name": "Zillow Research",
+      "url": "https://www.zillow.com/research/feed/",
+      "type": "rss",
+      "include": "/research/.+",
+      "family": "zillow-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "required": true,
+      "max_articles": 6,
+      "alternates": [
+        "https://www.zillow.com/research/"
+      ]
+    },
+    {
+      "id": "nar-research",
+      "name": "NAR Research",
+      "url": "https://www.nar.realtor/research-and-statistics/research-reports/research-update",
+      "type": "html",
+      "include": "/(?:newsroom/[^/]+|news/economists-outlook/[^/]+|commercial-real-estate-market-insights/[^/]+|research-and-statistics/housing-statistics/(?:existing-home-sales|pending-home-sales))",
+      "family": "nar-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "required": true,
+      "max_articles": 18,
+      "mutable": false,
+      "alternates": [
+        "https://www.nar.realtor/research-and-statistics"
+      ],
+      "exclude": "research-update/?$|release-schedule",
+      "follow_directories": "/housing-statistics/(?:existing-home-sales|pending-home-sales)/?$"
+    },
+    {
+      "id": "census-construction",
+      "name": "Census New Residential Construction",
+      "url": "https://www.census.gov/construction/nrc/current/index.html",
+      "type": "page",
+      "family": "census",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "mutable": true,
+      "max_articles": 6,
+      "content_start": "FOR IMMEDIATE RELEASE:"
+    },
+    {
+      "id": "census-sales",
+      "name": "Census New Residential Sales",
+      "url": "https://www.census.gov/construction/nrs/current/index.html",
+      "type": "page",
+      "family": "census",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "mutable": true,
+      "max_articles": 6,
+      "content_start": "FOR IMMEDIATE RELEASE:"
+    },
+    {
+      "id": "fhfa-research",
+      "name": "FHFA House Price Index",
+      "url": "https://www.fhfa.gov/data/hpi",
+      "type": "html",
+      "include": "/document/d/hpi/|/news/news-release/[^/]+$",
+      "family": "fhfa-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "fannie-esr",
+      "name": "Fannie Mae ESR",
+      "url": "https://www.fanniemae.com/data-and-insights/forecast",
+      "type": "html",
+      "include": "/media/document/pdf/(?:housing|economic)-forecast",
+      "family": "fannie-esr",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "freddie-pmms",
+      "name": "Freddie Mac PMMS",
+      "url": "https://www.freddiemac.com/pmms",
+      "type": "page",
+      "family": "freddie-mac",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "mutable": true,
+      "max_articles": 6
+    },
+    {
+      "id": "freddie-research",
+      "name": "Freddie Mac Research",
+      "url": "https://www.freddiemac.com/research-and-perspectives",
+      "type": "html",
+      "include": "/(?:research|research-and-perspectives)/.+",
+      "family": "freddie-mac",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18,
+      "exclude": "/research/(?:insight|forecast|brief|spotlight)/?$"
+    },
+    {
+      "id": "texas-realtors",
+      "name": "Texas REALTORS Research",
+      "url": "https://www.texasrealestate.com/research/quarterly-housing-report",
+      "type": "html",
+      "include": "/api/media/file/.+\\.pdf",
+      "family": "texas-realtors",
+      "region": "texas",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "metrotex-research",
+      "name": "MetroTex Market Reports",
+      "url": "https://www.mymetrotex.com/market-reports/",
+      "type": "html",
+      "include": "/(?:[a-z]+-20\\d{2}-north-texas|20\\d{2}|.*housing-market)",
+      "family": "metrotex-research",
+      "region": "texas",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "unlock-research",
+      "name": "Unlock MLS Research",
+      "url": "https://www.unlockmls.com/news",
+      "type": "html",
+      "include": "/news/.+housing-report",
+      "family": "unlock-research",
+      "region": "texas",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "harvard-jchs",
+      "name": "Harvard JCHS",
+      "url": "https://www.jchs.harvard.edu/blog",
+      "type": "html",
+      "include": "/blog/.+",
+      "family": "harvard-jchs",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "urban-housing",
+      "name": "Urban Institute Housing Finance",
+      "url": "https://www.urban.org/expertise/housing-finance",
+      "type": "html",
+      "include": "/research/publication/.+",
+      "family": "urban-housing",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "cbre-research",
+      "name": "CBRE Research",
+      "url": "https://www.cbre.com/services/property-types/multifamily",
+      "type": "html",
+      "include": "/insights/.*(?:us-|u-s-|multifamily|housing|texas|houston|dallas|austin)",
+      "family": "cbre-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18,
+      "alternates": [
+        "https://www.cbre.com/shared-sitemap/figure.xml",
+        "https://www.cbre.com/insights"
+      ]
+    },
+    {
+      "id": "jll-research",
+      "name": "JLL Research",
+      "url": "https://www.jll.com/en-us/insights",
+      "type": "html",
+      "include": "/en-us/insights/.+",
+      "family": "jll-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "cushman-research",
+      "name": "Cushman & Wakefield Research",
+      "url": "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats",
+      "type": "html",
+      "include": "/united-states/(?:insights/us-marketbeats/|news/20)",
+      "family": "cushman-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "colliers-research",
+      "name": "Colliers Research",
+      "url": "https://www.colliers.com/en/research",
+      "type": "html",
+      "include": "/en/research/.+",
+      "family": "colliers-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "realpage-research",
+      "name": "RealPage Analytics",
+      "url": "https://www.realpage.com/analytics/feed/",
+      "type": "rss",
+      "include": "/analytics/.+",
+      "family": "realpage-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 6,
+      "alternates": [
+        "https://www.realpage.com/analytics/"
+      ]
+    },
+    {
+      "id": "nmhc-research",
+      "name": "NMHC Research",
+      "url": "https://www.nmhc.org/research-insight/quarterly-survey/",
+      "type": "html",
+      "include": "/quarterly-survey/20",
+      "family": "nmhc-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "naa-research",
+      "name": "NAA Research",
+      "url": "https://naahq.org/research",
+      "type": "html",
+      "include": "/research/.+",
+      "family": "naa-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "uli-pwc",
+      "name": "ULI/PwC Emerging Trends",
+      "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
+      "type": "html",
+      "include": "/newsroom/press-releases/emerging-trends-in-real-estate-20\\d{2}\\.html",
+      "family": "uli-pwc",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18,
+      "alternates": [
+        "https://www.pwc.com/us/en/about-us/newsroom.html"
+      ]
+    },
+    {
+      "id": "msci-research",
+      "name": "MSCI Real Assets Research",
+      "url": "https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi",
+      "type": "page",
+      "family": "msci-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "mutable": true,
+      "max_articles": 6
+    },
+    {
+      "id": "john-burns",
+      "name": "John Burns Research",
+      "url": "https://jbrec.com/resources/insights/",
+      "type": "html",
+      "include": "/insights/.+",
+      "family": "john-burns",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "northmarq-research",
+      "name": "Northmarq Research",
+      "url": "https://www.northmarq.com/insights",
+      "type": "html",
+      "include": "/insights/insights/.+",
+      "family": "northmarq-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "berkadia-research",
+      "name": "Berkadia Research",
+      "url": "https://www.berkadia.com/multifamily-reports/",
+      "type": "html",
+      "include": "(?:research|report|insight).+",
+      "family": "berkadia-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "arbor-research",
+      "name": "Arbor/Chandan Research",
+      "url": "https://arbor.com/research/reports/",
+      "type": "html",
+      "include": "/research/.+",
+      "family": "arbor-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "newmark-research",
+      "name": "Newmark Research",
+      "url": "https://www.nmrk.com/insights/market-report",
+      "type": "html",
+      "include": "/insights/market-report/.+",
+      "family": "newmark-research",
+      "region": "national",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "cotality-research",
+      "name": "Cotality / CoreLogic Research",
+      "url": "https://www.cotality.com/insights/all-insights",
+      "include": "/insights/articles/.+",
+      "type": "html",
+      "family": "cotality",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "ice-research",
+      "name": "ICE Mortgage Monitor",
+      "url": "https://mortgagetech.ice.com/resources/data-reports",
+      "include": "/resources/data-reports/.+|/publicdocs/mortgage/.+\\.pdf",
+      "type": "html",
+      "family": "ice",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "attom-research",
+      "name": "ATTOM Research",
+      "url": "https://www.attomdata.com/news/category/market-trends/",
+      "include": "/news/market-trends/.+",
+      "type": "html",
+      "family": "attom",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "mba-research",
+      "name": "MBA Research",
+      "url": "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey",
+      "include": "/news-and-research/newsroom/news/20",
+      "type": "html",
+      "family": "mba",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "apartmentlist-research",
+      "name": "Apartment List Research",
+      "url": "https://www.apartmentlist.com/research",
+      "include": "/research/(?:national-rent-data|.+20\\d{2}.*|.+report.*)",
+      "type": "html",
+      "family": "apartmentlist",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "costar-research",
+      "name": "CoStar / Apartments.com Research",
+      "url": "https://www.apartments.com/grow/learning-center/market-trends",
+      "include": "/grow/learning-center/(?:rent-growth|.*market.*|.*report.*)",
+      "type": "html",
+      "family": "costar",
+      "tier": "B",
+      "weight": 9,
+      "tags": [
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "is_research": true,
+      "max_articles": 18
+    },
+    {
+      "id": "sp-case-shiller",
+      "name": "S&P Cotality Case-Shiller",
+      "url": "https://press.spglobal.com/index.php?l=50&s=2429",
+      "alternates": [
+        "https://www.spglobal.com/spdji/en/index-announcements/"
+      ],
+      "type": "html",
+      "include": "/20\\d{2}-\\d{2}-\\d{2}-.*case-shiller|/index-announcements/article/.*case-shiller",
+      "family": "sp-dow-jones",
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "weight": 10,
+      "tier": "B",
+      "region": "national",
+      "is_research": true,
+      "max_articles": 8
+    },
+    {
+      "id": "zonda-research",
+      "name": "Zonda Research",
+      "url": "https://zondahome.com/new-home-market-update/",
+      "type": "page",
+      "family": "zonda",
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "weight": 9,
+      "tier": "B",
+      "region": "national",
+      "is_research": true,
+      "mutable": true
+    },
+    {
+      "id": "zonda-lot-supply",
+      "name": "Zonda Lot Supply Index",
+      "url": "https://zondahome.com/new-home-lot-supply-index-2/",
+      "type": "page",
+      "family": "zonda",
+      "tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "weight": 9,
+      "tier": "B",
+      "region": "national",
+      "is_research": true,
+      "mutable": true
     }
   ]
 }

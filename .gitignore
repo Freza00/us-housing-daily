@@ -15,3 +15,11 @@ data/data
 
 # Claude Code session state + worktrees
 .claude/
+
+.tmp/
+
+# Reusable public-source/model caches live in Actions cache, not Git
+state/source-cache.json
+state/llm-cache/
+
+state/collection-cache.json

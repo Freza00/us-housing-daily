@@ -38,14 +38,14 @@ function initialMode() {
 // ========== i18n ==========
 const I18N = {
   zh: {
-    tagline: '美国住宅地产每日 20 条',
-    cron_info: '每天北京 09:00 自动更新（数据截止 08:57）',
+    tagline: '美国住宅地产工作日精选',
+    cron_info: '北京周一至周五 09:00 更新；周一合并周末（截止 08:57）',
     sources_label: '信源：',
     sources_unit: '个 OK',
     updated_prefix: '更新于 ',
     timezone_label: '北京',
     loading: '加载中…',
-    section_empty: '今日 24h 内无新内容',
+    section_empty: '本期暂无达到入选标准的内容',
     no_filter_match: '该 filter 下暂无新闻',
     load_failed: '加载失败',
     load_failed_hint: '如果首次部署还没有数据，请手动触发一次 GitHub Actions workflow，或等明早 9 点 cron 自动跑。',
@@ -83,7 +83,7 @@ const I18N = {
     tab_monthly: '月报',
     themes_weekly_title: '本周主线',
     themes_monthly_title: '本月主线',
-    window_banner: (h, n, rec) => `今日适逢周末或美国假期，US 房产媒体发稿较少${rec ? `，预计 ${rec} digest 完全恢复` : ''}。本期含 ${n} 条来自更早时间窗。`,
+    window_banner: (h) => `本期汇总 ${h} 小时内的新闻与研究；周一合并周末，截稿后的消息进入下一期。`,
     window_banner_holiday_today: (name, n, rec) => `今天是美国联邦假期 ${name}，US 房产媒体大面积停发${rec ? `，预计 ${rec} digest 起完全恢复` : ''}。本期含 ${n} 条来自更早时间窗。`,
     window_banner_holiday_shoulder: (name, n, rec) => `昨天是美国联邦假期 ${name}，US 房产媒体仍在恢复发稿${rec ? `，预计 ${rec} digest 完全归位` : ''}。本期含 ${n} 条来自更早时间窗。`,
     period_label_week: '周',
@@ -91,17 +91,17 @@ const I18N = {
     period_month_suffix: '',
     period_empty: '暂无历史',
     monthly_not_yet: '月报暂未发布',
-    monthly_not_yet_hint: '月报在每月首个周一北京 10:30 自动发布，覆盖上一个自然月。',
+    monthly_not_yet_hint: '月报在每月首个周一北京 14:30 自动发布，覆盖上一个自然月。',
   },
   en: {
     tagline: 'US Housing Daily — Top 20',
-    cron_info: 'Auto-updates daily ~9:00 PM ET (data cutoff 8:57 PM ET)',
+    cron_info: 'Beijing Mon–Fri 09:00; Monday combines the weekend',
     sources_label: 'Sources: ',
     sources_unit: ' OK',
     updated_prefix: 'Updated ',
     timezone_label: 'ET',
     loading: 'Loading…',
-    section_empty: 'No items in 24h window',
+    section_empty: 'No qualifying items in this issue',
     no_filter_match: 'No items matching filter',
     load_failed: 'Failed to load',
     load_failed_hint: 'If this is the first deploy with no data yet, manually trigger the GitHub Actions workflow or wait for the daily cron.',
@@ -139,7 +139,7 @@ const I18N = {
     tab_monthly: 'Monthly',
     themes_weekly_title: 'Weekly themes',
     themes_monthly_title: 'Monthly themes',
-    window_banner: (h, n, rec) => `Weekend or US holiday — US real-estate media publishing is sparse${rec ? `; full digest expected to resume on ${rec}` : ''}. ${n} item(s) are pulled from an earlier window.`,
+    window_banner: (h) => `This issue covers ${h} hours. Monday combines the weekend; later releases enter the next issue.`,
     window_banner_holiday_today: (name, n, rec) => `Today is the US federal holiday ${name} — US real-estate media is largely paused${rec ? `; full digest expected to resume on ${rec}` : ''}. ${n} item(s) are pulled from an earlier window.`,
     window_banner_holiday_shoulder: (name, n, rec) => `Yesterday was the US federal holiday ${name} — US real-estate media is still resuming${rec ? `; full digest expected by ${rec}` : ''}. ${n} item(s) are pulled from an earlier window.`,
     period_label_week: 'Wk',
@@ -162,7 +162,7 @@ let availableDates = new Set();
 let selectedDate = null;
 let calendarMonth = null;
 // Weekly/monthly period navigation
-let weeklyPeriods = [];     // ["2026-05-18", ...] — ET Mon of each period_start, sorted asc
+let weeklyPeriods = [];     // ["2026-05-18", ...] — period_start of each saved issue (legacy ET / current Beijing), sorted asc
 let monthlyPeriods = [];    // ["2026-05", ...] — YYYY-MM, sorted asc
 let selectedWeekly = null;  // currently displayed period_start (weekly mode)
 let selectedMonthly = null; // currently displayed YYYY-MM (monthly mode)
@@ -333,7 +333,7 @@ function renderCard(it, i) {
   // 标题渲染：zh = 中文主标 + 英文副标 + 中文摘要； en = 英文主标 (无副标，无摘要)
   let titleBlock;
   if (currentLang === 'zh' && it.title_zh) {
-    titleBlock = `<div class="card-title-zh">${numHtml}${escapeHtml(it.title_zh)}</div>
+    titleBlock = `<div class="card-title-zh">${numHtml}${escapeHtml(formatChinese(it.title_zh))}</div>
       <h2 class="card-title">${escapeHtml(it.title)}</h2>`;
   } else {
     // en mode 或 zh 模式但无 title_zh → EN 主标
@@ -341,13 +341,14 @@ function renderCard(it, i) {
   }
   // summary：zh 显示 LLM 中文摘要；en 模式从 description 取前 200 字（fallback，无 LLM EN summary）
   const summary = currentLang === 'zh'
-    ? it.summary_zh || ''
+    ? formatChinese(it.summary_zh || '')
     : (it.description || '').slice(0, 240) + ((it.description || '').length > 240 ? '…' : '');
 
   const stars = `<span class="card-stars" title="${t().importance_title} ${it.importance ?? 3}/5">${renderStars(it.importance)}</span>`;
   const impactLabel = (t().impact[it.impact] || t().impact.neutral);
   const impactCls = IMPACT_CLS[it.impact] || 'imp-n';
   const impactPill = `<span class="impact-pill ${impactCls}">${impactLabel}</span>`;
+  const evidencePill = it.evidence_basis === 'title' || it.access === 'preview' || it.evidence_status === 'feed_excerpt' ? `<span class="card-tag">${currentLang === 'zh' ? '公开摘要' : 'Public excerpt'}</span>` : '';
   const extPill = it.extended_window
     ? `<span class="ext-pill" title="${t().extended_title}">${t().extended_pill}</span>`
     : '';
@@ -360,9 +361,10 @@ function renderCard(it, i) {
       <div class="card-meta">
         ${stars}
         ${impactPill}
+        ${evidencePill}${it.late_discovery ? `<span class="card-tag">${currentLang === 'zh' ? '补采' : 'Late discovery'}</span>` : ''}
         ${extPill}
         <span class="card-source">${escapeHtml(it.source_name)}</span>
-        <span>${timeAgo(it.published_at)}</span>
+        <span>${it.date_precision === 'day' && it.published_date ? escapeHtml(it.published_date) : timeAgo(it.published_at)}</span>
         ${creTag}
         ${keywordTags}
       </div>
@@ -544,6 +546,7 @@ function readInlineInitialData() {
   } catch { return null; }
 }
 function applyLoadedData(data) {
+  renderBrief(data);
   currentData = data;
   selectedDate = currentData.date || null;
   updatedEl.textContent = formatUpdated(currentData.generated_at);
@@ -589,7 +592,7 @@ function applyLoadedData(data) {
       && Array.isArray(data.themes) && data.themes.length > 0) {
     for (const theme of data.themes) {
       const li = document.createElement('li');
-      li.textContent = theme.title; // textContent — XSS-safe even if LLM emits HTML
+      li.textContent = formatChinese(theme.title); // textContent — XSS-safe even if LLM emits HTML
       ul.appendChild(li);
     }
     themesBlock.querySelector('.themes-title').textContent =
@@ -672,7 +675,7 @@ async function loadPeriodList(mode) {
 
 // Render the period strip into the datestrip element. Mode-aware:
 //   daily   → 14-day strip (existing renderDateStrip)
-//   weekly  → list of past weeks (each cell = ET Mon period_start, labeled M/D)
+//   weekly  → list of past weeks (each cell = saved period_start, labeled M/D)
 //   monthly → list of past months (each cell = YYYY-MM, labeled `<MM>月`)
 function renderPeriodStrip(mode) {
   if (mode === 'daily') {
@@ -837,6 +840,7 @@ function applyLanguage() {
   }
   if (currentData) {
     updatedEl.textContent = formatUpdated(currentData.generated_at);
+    renderBrief(currentData);
     applyFilter();         // 重新渲染卡片 + filter chip 用新语言
     if (currentMode === 'daily') renderDateStrip(); // 重新渲染 weekday header
     // Re-render themes title if visible
@@ -876,3 +880,23 @@ langSeg.addEventListener('click', (e) => {
   }
   await setDigestMode(startMode);
 })();
+
+function renderBrief(data) {
+  const block=$('briefBlock'), text=$('briefText');
+  if(!block||!text)return;
+  text.replaceChildren();
+  const sentences=data.executive_summary?.sentences||[];
+  $('briefTitle').textContent=currentLang==='zh'?'速读摘要':'Executive summary (Chinese)';
+  for(const sentence of sentences){const p=document.createElement('p');p.textContent=formatChinese(sentence.text);for(const id of sentence.item_ids||[]){const i=(data.items||[]).findIndex(x=>x.id===id);if(i<0)continue;const a=document.createElement('a');a.href=data.items[i].link;a.target='_blank';a.rel='noopener noreferrer';a.textContent=' ['+(data.items[i].source_name||'来源')+']';p.append(a);}text.append(p);}
+  block.hidden=!sentences.length;
+  const note=$('coverageNote');
+  if(note){note.hidden=data.publication_status!=='degraded';note.textContent=currentLang==='zh'?'本期部分研究来源或历史材料暂未取全，补齐后可更新。':'Some research sources or historical inputs are incomplete; this issue can be updated.';}
+  const research=(data._diagnostics?.source_health||[]).filter(s=>s.research);const details=$('researchCoverage'), list=$('researchStatus');
+  if(details&&list){list.replaceChildren();details.hidden=!research.length;$('researchTitle').textContent=(currentLang==='zh'?'研究来源覆盖：':'Research coverage: ')+research.filter(s=>s.status==='ok').length+'/'+research.length;for(const source of research){const li=document.createElement('li');const labels={ok:'已检查',empty_listing:'目录未发现有效条目',unreadable:'正文暂不可读',error:'抓取失败'};li.textContent=source.name+'：'+(currentLang==='zh'?(labels[source.status]||source.status):source.status)+(source.undated?' · '+source.undated+(currentLang==='zh'?' 条日期待核实':' date(s) unverified'):'');list.append(li);}}
+}
+
+function formatChinese(value) {
+  return String(value || '').replace(/[—–]/g, '--').replace(/([\u3400-\u9fff])([A-Za-z0-9])/g, '$1 $2').replace(/([A-Za-z0-9%])([\u3400-\u9fff])/g, '$1 $2')
+    .replace(/([\u3400-\u9fff])[,:;!?]/g, (m, ch) => ch + ({ ',': '，', ':': '：', ';': '；', '!': '！', '?': '？' }[m.at(-1)]))
+    .replace(/[,:;!?](?=[\u3400-\u9fff])/g, ch => ({ ',': '，', ':': '：', ';': '；', '!': '！', '?': '？' }[ch])).replace(/\s*([，。！？；：、])\s*/g, '$1');
+}

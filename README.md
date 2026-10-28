@@ -1,131 +1,85 @@
-<h1 align="center">US Housing Daily</h1>
+# US Housing Daily
 
-<p align="center">
-  <strong>A daily-updated dashboard for US residential real-estate news, in Chinese.</strong><br>
-  30 RSS sources → bilingual cards with importance scores and impact direction → published as a static site.
-</p>
+美国住宅地产工作日新闻与研究摘要，覆盖全国住宅、Sun Belt、BTR／SFR、CRE 和机构资本。静态页面由 Vercel 托管，生成任务由 GitHub Actions 执行。当前开发及发布状态见 [ROADMAP.md](ROADMAP.md)。
 
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0"></a>
-  <a href="https://news-agent-mu.vercel.app"><img src="https://img.shields.io/badge/demo-live-success?logo=vercel&logoColor=white" alt="Live demo"></a>
-  <a href=".github/workflows/daily.yml"><img src="https://img.shields.io/badge/cron-daily_08:57_Beijing-brightgreen" alt="Daily build"></a>
-  <a href="https://github.com/Freza00/us-housing-daily/stargazers"><img src="https://img.shields.io/github/stars/Freza00/us-housing-daily?style=social" alt="Stars"></a>
-</p>
+## 运行时间
 
-<p align="center">
-  <a href="https://news-agent-mu.vercel.app">→ Live demo</a> ·
-  <a href="docs/DEPLOY.md">Deploy your own</a> ·
-  <a href="config/sources.json">Source list</a>
-</p>
+以下均为北京时间，实际生成完成时间取决于抓取和模型响应。
 
----
+| 报告 | 触发时间 | 内容窗口 |
+| --- | --- | --- |
+| 日报 | 周一至周五 05:00 主触发，目标 09:00 前可读 | 各来源从上次成功采集的截止点续接至本日 05:00 |
+| 周报 | 周一 07:00 首跑、08:00 补偿 | 北京时间上周一 05:00 至本周一 05:00，固定 7 日回顾 |
+| 月报 | 每月第一个周一 14:30 | 上一个已结束的美东自然月 |
 
-## What this is
+北京时间周六、周日，生产脚本和触发接口均在抓取及模型调用前退出，包括强制生产运行。截稿后的消息进入下一期。每源水位仅在有效覆盖且原始材料落盘后推进；失败源保留旧水位，已有水位不按固定小时数或 7 天上限截断。只有没有历史记录的首次运行，才以此前一期截止点或上一工作日 05:00 初始化，并记录 lower_basis。历史回放有独立输出和状态目录。
 
-A free, open-source pipeline that wakes up every day at **08:57 Beijing time**, pulls 30 hand-picked RSS feeds covering US residential real-estate news (national + Sun Belt + BTR/SFR + CRE + institutional capital), runs them through a deduplicating + scoring pipeline, then makes a single batched LLM call to translate the top 20 stories into Chinese-language titles and 60-character summaries with **★ importance** (1–5) and **impact direction** (long-pos / short-pos / neutral / short-neg / long-neg).
+周报复用期内原始材料与已写日报，并对同一周期重新检查重要研究；周一日报模型失败时，直接读取已保存的待处理材料，不等待日报成稿。09:00 是可读目标；GitHub 排队、源站和模型故障仍可能使发布延后，主触发与错峰补偿检查共同增加余量。
 
-The output is a static `/data/latest.json` file, served directly from Vercel. The frontend is a single `index.html` + `app.js` with a Chinese/English language toggle. **Total infrastructure cost: under $1/month** (Vercel hobby + GitHub Actions free tier + LLM API).
+## 生成流程
 
-It is built for someone who wants the highlights of the US residential market every morning without reading 200 RSS items by hand. The pipeline is open-source and easily forked for adjacent verticals — multifamily ops, single-family rental, fintech, etc. — by editing `config/sources.json` and a few regex patterns.
+1. 脚本采集 RSS、官方研究目录、报告正文与公开 PDF；使用并发上限、请求超时、条件请求和缓存。短摘要或缺日期的 RSS 先有界补文，再判断日期和证据资格。
+2. 脚本规范 URL、去重、过滤已刊条目，并按出版机构分配候选机会，最多给模型 72 条。固定报告 URL 同时记录日期和正文版本；没有新日期的内容变化列为待核实，不自动当作今日报告。
+3. `gpt-6.1-sol` 以显式 `medium` 判断重要性、栏目和语义重复。没有固定星级分布，不强凑 20 条。
+4. 脚本执行来源限额、栏目软目标和排除规则。同一出版集团通常最多 3 条；必需研究源的系统性重大原始研究最多额外 1 条，并记录原因。
+5. 同一模型以显式 `low` 生成中文卡片和速读摘要。摘要目标 180 字，通常 150～200 字、上限 250 字，句句关联原文。周月报主线与此步骤一起生成。
+6. 脚本核对 ID、逐字证据、数字、标签及摘要长度，确定性修正中文排版。通过后写期刊文件，最后写 `latest.json`。生成失败保留上一期。
 
-## Features
+请求使用 JSON object 模式，并检查完整响应。契约错误最多附具体原因纠正 1 次，不接收部分结果。只有日期而无时刻的报告记录 day 精度，网页展示日期；不能拿服务器本地时区猜具体发布时间。
 
-- **30 first-party RSS sources** — HousingWire / Inman / Multi-Housing News / Bisnow / Calculated Risk / ResiClub / SEC EDGAR (INVH/AMH 8-K) / NAHB Eye on Housing / Phoenix–Atlanta–Miami Agent Magazines / TRERC / and more
-- **Five sections with hard quotas** — National housing (5) · Sun Belt residential (4) · BTR/SFR (3) · CRE (5) · Institutional capital (3) — never more, never less
-- **Strict 24-hour window for high-volume sections; 7-day extended-window fallback for low-volume ones** with visible `[ext]` badge so you can tell apart fresh from carry-over
-- **Cloudflare/Substack 403 fallback** — sources that block GitHub Actions IPs (Inman, Multi-Housing News, ResiClub) auto-route through a Google News RSS aggregator with no proxy or secret needed
-- **Importance-aware ranking** — LLM scores each story 1–5 with a forced distribution (no all-3s); items reordered by `importance × 5 + score × 0.5` so the most consequential headline floats to the top of each section
-- **Cross-day deduplication** with rolling 21-day seen-list to avoid yesterday's news showing up again
-- **One LLM call per day** — entire batch of 20 in a single request, keeping cost under $1/month even on commercial models (GPT-4o-mini / Kimi / Claude Haiku)
-- **Bilingual frontend** — Chinese/English toggle with cached language preference; mobile-responsive
-- **Apache 2.0 licensed** — fork it, change the topic, change the language, ship a different vertical
+正常流程为 2 次模型调用；瞬时网络错误可能增加重试，缓存命中会减少调用。不会接受截断 SSE、未正常完成的输出或抢救出的半截 JSON。永久路由错误立即失败。数字校验不是完整事实核查，也不能验证因果判断。
 
-## Architecture
+## 研究来源及可追溯性
 
-```
-30 RSS sources
-     ↓ fetch (parallel, browser-fingerprint headers + alternates fallback)
-     ↓ parse / score / 28-tag classify
-     ↓ 24h time-window + entity-level dedupe + cross-day dedupe (21d)
-     ↓ enrich top-30 by fetching article bodies
-     ↓ pick by section quota (3-pass: 24h-quota → 7d-extend → 24h-flex)
-     ↓ ensureSectionMinimum: ≥ 2 per section · ensureTexasCity: ≥ 1 DFW/Houston/Austin
-     ↓ single LLM batch call → titles_zh + summaries_zh + imp 1-5 + dir
-     ↓ importance-aware reranking inside each section
-write data/latest.json + data/YYYY-MM-DD.json + state/seen.json
-     ↓ git commit + push
-     ↓ Vercel auto-deploys main on every push
-public/index.html → serves the static dashboard
-```
+共配置 77 个采集入口，其中 46 个为研究类入口。HAR、Zillow Research、Realtor.com Research 和 NAR Research 是必需监测源。完整机构清单、入口形式与访问限制见 [研究覆盖说明](docs/source-coverage.md)。
 
-90% scripts (fetcher / regex / scoring / classification / dedup), 10% LLM (one call to translate and rank).
+“已配置”不代表实时抓取已通过。403、仅预览、目录截断、正文不足及日期缺失分别记录，不绕过登录或付费限制，也不为机构凑稿。页面显示研究检查状态；缺少必需来源或历史覆盖证据时标记为 `degraded`，后续允许重建。
 
-## Quick start
+`state/collection-checkpoint.json` 保存各源水位与待处理原始材料；模型失败后可续跑，成功发布后 pending 仅保留截稿后材料；忽略 Git 的 collection-cache.json 另保留最近原始池，恢复推送失败或模型失败的任务。`state/snapshots/` 保存每日窗口内的采集条目，不局限于入选稿；`state/inputs/` 保存实际模型候选、初始去重状态和覆盖信息。周月报使用这些采集快照，旧日报的入选条目只作为补充。没有原始快照的日期不能声称已完整覆盖。覆盖区间还需有效来源状态和日期跨度证据，不把一次当前抓取自动当成整周历史。
+
+## 本地运行
+
+需要 Node.js 22 或更新版本；PDF 提取使用 Poppler 的 `pdftotext`。当前项目不需要 npm 运行依赖。复制 `.env.example` 为 `.env`，填写已有兼容路由的密钥、完整 Chat Completions URL 和模型名。该路由必须支持 `reasoning_effort`、`max_completion_tokens`、流式响应及完成原因；先运行小额探针验证，不能假定中转会透传参数。
 
 ```bash
-git clone https://github.com/Freza00/us-housing-daily.git
-cd us-housing-daily
-
-# 1. Configure
-cp .env.example .env
-# Edit .env to fill in:
-#   LLM_API_KEY, LLM_ENDPOINT, LLM_MODEL  (any OpenAI-compatible API)
-#   SEC_CONTACT_EMAIL                     (your email, required by SEC EDGAR)
-
-# 2. Run the pipeline
-npm run build               # full pipeline with LLM (~70s)
-LLM_SKIP=1 node scripts/build.mjs   # skip LLM, just verify fetching (~12s)
-
-# 3. Preview the dashboard
-npm run preview             # http://localhost:8080
+npm test
+node --env-file=.env scripts/probe-model.mjs
+node scripts/validate-sources.mjs --research-only --enrich --output .tmp/source-check/report.json
+npm run build
+npm run build:weekly
+npm run build:monthly
 ```
 
-That's it for local. For continuous daily updates on free tiers (GitHub Actions cron + Vercel hosting), see [`docs/DEPLOY.md`](docs/DEPLOY.md).
+生产构建受日历约束。手动强制重建仅限工作日：`FORCE_RUN=1 npm run build`。三类构建均可设置 `LLM_SKIP=1`，但必须同时设置隔离的 `NEWS_DATA_DIR` 和 `NEWS_STATE_DIR`，防止覆盖正式数据。历史 `PUBLISH_NOW` 和回放也强制要求隔离。
 
-## Customizing
+```bash
+NEWS_DATA_DIR=.tmp/replay/data NEWS_STATE_DIR=.tmp/replay/state \
+REPLAY_SNAPSHOT=state/inputs/daily-2026-10-28.json \
+PUBLISH_NOW=2026-10-28T01:00:00Z node --env-file=.env scripts/build.mjs
 
-- **Add or remove a source** — edit `config/sources.json`. Each entry needs `id`, `name`, `url`, `tier` (A–E), `tags` (canonical IDs from `scripts/build.mjs`), `weight` (1–10), `region`. Optional: `alternates: []` for 403-prone feeds, `ua_style: "sec"` for SEC EDGAR fair-use UA.
-- **Tweak section quotas** — `SECTIONS` array near the top of `scripts/build.mjs`. Each section has `quota` (target count) and `extendedWindow` (whether to fall back to the 7-day pool when 24h pool is dry).
-- **Reclassify items (legacy mode)** — `classify()` and the `RE_*` regex patterns. The current logic routes `multifamily-in-Sun-Belt` to the sunbelt section and bare `multifamily` (no Sun Belt city) to CRE; flip this by editing `RE_MULTIFAMILY_ASSET` and `SUNBELT_REGIONS`.
-- **Section boundary definitions (global mode)** — `config/sections.json` defines each section's include/exclude rules and edge cases that the writer + reviewer LLMs both consume. Edit here when you want the LLM to apply different judgment without changing code.
-- **Tag whitelist (global mode)** — `config/tags.json` is the closed vocabulary of 4-dimension tags (asset / geo / topic / actor). Add new tags here; the writer is constrained to choose from this list and the reviewer enforces the whitelist.
-- **Change the language or tone** — the LLM `systemPrompt` in `summarizeBatch()` (legacy) or `globalPassWriter()` (global) is in Chinese; rewrite it for English, German, etc. A few in-prompt examples teach the model the desired voice.
-- **Use a different LLM provider** — set `LLM_ENDPOINT` to any OpenAI-compatible chat-completions URL. Tested with Kimi (Moonshot), GPT-4o-mini, Claude Haiku via proxy, Together, Fireworks.
+npm run evaluate -- --output .tmp/ab/report.json
 
-### `WRITER_MODE` — pick the writer pipeline
+# cases.json: [{"kind":"daily","now":"2026-10-22T01:00:00Z"}]
+node --env-file=.env scripts/evaluate-models.mjs --snapshot .tmp/source-check/report-snapshot.json \
+  --cases .tmp/ab/cases.json --output .tmp/ab/models
+npm run preview
+```
 
-| Value | Behavior |
-|-------|----------|
-| `legacy` (default) | Regex-based classify + section quota fill (3-pass). LLM only translates the already-picked 20. Cheap (~1 LLM call). |
-| `global` | LLM reads ~80 candidates in one pass, picks 20, classifies, tags, rates, translates. A reviewer LLM then audits and can loop back up to 2x. Cost: 2–6 LLM calls/day. |
-| `global-dry` | Same as `global` but stops at prompt construction — no LLM call, no file writes. Use to inspect prompt size and pool composition without burning tokens. |
+模型对照脚本固定同一输入，比较编辑 medium／low，写稿均为 low；最多 4 个明确历史案例，所有输出与状态隔离。来源或解析规则变化时，本地验收使用新的状态目录；CI 按来源配置与解析模块散列隔离缓存。
 
-Run with `WRITER_MODE=global node scripts/build.mjs`. The audit log is persisted in `data/latest.json` under `_diagnostics.writer_audit` (round-by-round issues from the reviewer).
+回放读取固定输入，不请求来源；要完全离线再加 `LLM_SKIP=1`。回放可在周末执行验证，生产任务仍不运行。历史构建不写项目首页。评估脚本使用旧稿固定评分，只比较确定性选稿，不能估计漏报召回率、摘要质量或 token 节省比例。
 
-### First-paint prerender
+本地预览地址为 `http://localhost:8080`。上线配置和检查点缓存见 [部署说明](docs/DEPLOY.md)；本次验证和限制见 [早间时间验收](docs/validation/2026-10-28-morning-deadline.md) 和 [模型／选稿对照](docs/validation/2026-10-28-reliability.md)。
 
-After writing `data/latest.json`, the build also injects the same payload as `<script id="initial-data" type="application/json">…</script>` into `public/index.html`. The frontend reads that inline data on page load before falling back to a `fetch('/data/latest.json')`. Removes the "loading…" flash, gives search engines + social-share previews real content, and adds ~50 KB to the HTML (gzipped ~10 KB on the wire).
+## 代码入口
 
-## Status & limitations
+- `scripts/lib/sources.mjs`：采集、目录发现、正文与 PDF。
+- `calendar.mjs`：北京时间守卫、周报固定截稿、美东月报周期及覆盖缺口。
+- `news-core.mjs`：解析、规则评分和确定性去重。
+- `editorial.mjs`：候选预算、编辑契约、来源限额和证据校验。
+- `llm-client.mjs`：参数、超时、重试、完整响应与缓存。
+- `pipeline.mjs`：日报、周报和月报的共享流水线。
+- `config/sources.json`：采集入口和出版集团；`config/tags.json`：标签词表。
+- `public/`：无框架前端；`api/`：Vercel 定时触发守卫。
 
-- Pipeline is single-tenant by design — one config, one output JSON. Multi-tenant or per-user weights are out of scope.
-- LLM importance scoring is forced into a distribution but still depends on model quality; smaller models (≤7B) have struggled with the constraint in testing — Kimi-K2.6 / GPT-4o-mini / Claude-3.5-Haiku work well.
-- The 24h window is strict for `national` and `cre`; `sunbelt` / `btr` / `institutional` fall back to 7d when the 24h pool is dry. Items from the 7d fallback are tagged `extended_window: true` and rendered with a visible `[ext]` badge.
-- No tests. The pipeline is a personal-tool-grown-into-a-shareable-thing, not a production system.
-
-## Roadmap
-
-Ideas if anyone wants to PR:
-
-- Email / Telegram / Slack push of the daily digest
-- Per-user weight learning from frontend click-through data
-- A second vertical config (e.g. `config/sources.crypto.json`) so one repo can serve multiple topic streams
-- Better evaluation: a small ground-truth set of "these 5 items were the day's biggest news" labeled by a human, so we can A/B-test scoring tweaks
-
-## Contributing
-
-Issues and PRs welcome. There is no test suite — verify changes by running `npm run build` locally and inspecting `data/latest.json`. Avoid committing `.env` (it's gitignored anyway). For substantive changes (a new section, a new region), open an issue first to discuss.
-
-## License
-
-[Apache License 2.0](LICENSE) — free to use, modify, and redistribute, with patent grant.
+旧 `adaptive-window.mjs`、`digest-core.mjs`、`themes.mjs` 及其测试保留作旧行为比较，不在新版生产生成链中。旧 `WRITER_MODE`／`LEGACY_PICKER` 配置不再切换生成路径。

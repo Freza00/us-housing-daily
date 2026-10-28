@@ -1,0 +1,25 @@
+{
+  "provenance": "Previously downloaded authenticated upstream archive fb7f130; not fresh Actions run logs",
+  "meaning": "generated_at is the field recorded in each report; it does not prove deployment completion or separate scheduling and model time",
+  "excluded_manual_recovery": "2026-10-28",
+  "observations": [
+    {
+      "date": "2026-09-25",
+      "generated_at": 1790303275198,
+      "generated_beijing": "2026-09-25 10:27:55",
+      "last_item_fetched_at": 1790303438494
+    },
+    {
+      "date": "2026-10-14",
+      "generated_at": 1791944617221,
+      "generated_beijing": "2026-10-14 10:23:37",
+      "last_item_fetched_at": 1791944934413
+    },
+    {
+      "date": "2026-10-20",
+      "generated_at": 1792474861965,
+      "generated_beijing": "2026-10-20 13:41:01",
+      "last_item_fetched_at": 1792475022111
+    }
+  ]
+}

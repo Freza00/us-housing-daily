@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-28T14:58:45.038Z",
+  "syntax_files": 34,
+  "syntax_errors": [],
+  "yaml_exit": 0,
+  "yaml_log": "OK .github/workflows/daily-retry.yml\nOK .github/workflows/daily.yml\nOK .github/workflows/monthly.yml\nOK .github/workflows/validate.yml\nOK .github/workflows/weekly.yml\n",
+  "workflow_checks": [
+    {
+      "kind": "daily",
+      "no_push_trigger": true,
+      "artifact_after_publish": true,
+      "cache_ignored_copy": true
+    },
+    {
+      "kind": "weekly",
+      "no_push_trigger": true,
+      "artifact_after_publish": true,
+      "cache_ignored_copy": true
+    },
+    {
+      "kind": "monthly",
+      "no_push_trigger": true,
+      "artifact_after_publish": true,
+      "cache_ignored_copy": true
+    }
+  ],
+  "ci_readonly": true,
+  "weekly_cron": "0 23 * * 0"
+}

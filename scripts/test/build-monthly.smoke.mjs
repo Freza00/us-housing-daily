@@ -1,67 +1,36 @@
-import { test } from "node:test";
-import assert from "node:assert/strict";
-import { spawnSync } from "node:child_process";
-import fs from "node:fs";
-import os from "node:os";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {runPipeline} from '../lib/pipeline.mjs';
+import {buildWindow} from '../lib/calendar.mjs';
+import {sandbox,sample,fakeClient,replayEnv} from './helpers.mjs';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, "../..");
+test('monthly replay verifies completed ET period and evidence-linked themes',async t=>{
+ const root=await sandbox(t),now='2026-06-01T06:30:00Z',window=buildWindow('monthly',new Date(now));
+ const env=await replayEnv(root,{items:[sample('may',Date.parse('2026-05-22T14:00:00Z'))],coverage_snapshots:[{window,coverage_status:'observed',source_health:[]}]},now);
+ const result=await runPipeline('monthly',{root,env,client:fakeClient()});
+ assert.equal(result.period_label,'2026-05');assert.equal(result.publication_status,'complete');
+ assert.equal(result.items.length,1);assert.equal(result.themes[0].item_ids[0],'may');
+});
+test('all live entry points skip Beijing weekends before collection or model calls',async()=>{
+ for(const kind of ['daily','weekly','monthly']) for(const date of ['2026-10-31T01:00:00Z','2026-11-01T01:00:00Z']){
+  const result=await runPipeline(kind,{env:{FORCE_RUN:'1'},now:new Date(date),collector:{collect(){throw new Error('must not collect');}},client:{call(){throw new Error('must not call');}}});
+  assert.equal(result.skipped,true);
+ }
+});
+test('failed writer preserves the previous latest issue',async t=>{
+ const root=await sandbox(t),previous={date:'2026-10-27',items:[{id:'old'}]};
+ await fs.writeFile(path.join(root,'data/latest.json'),JSON.stringify(previous));
+ const env=await replayEnv(root,{items:[sample('new',Date.parse('2026-10-27T14:00:00Z'))]},'2026-10-28T01:00:00Z');
+ await assert.rejects(runPipeline('daily',{root,env,client:fakeClient({failWriter:true})}),/Writer failed/);
+ assert.deepEqual(JSON.parse(await fs.readFile(path.join(root,'data/latest.json'),'utf8')),previous);
+});
 
-test("build-monthly: end-to-end smoke with FORCE_RUN=1",
-  { skip: !process.env.RUN_SMOKE },
-  () => {
-    // 2026-06-01 IS the first Mon of June 2026; FORCE_RUN bypasses the gate so the
-    // smoke can run on any day. PUBLISH_NOW is pinned for deterministic output.
-    const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "digest-monthly-smoke-"));
-    try {
-      const r = spawnSync("node", ["scripts/build-monthly.mjs"], {
-        cwd: ROOT,
-        env: {
-          ...process.env,
-          LLM_SKIP: "1",
-          PUBLISH_NOW: "2026-06-01T02:30:00Z",
-          FORCE_RUN: "1",
-          DIGEST_OUT_DIR: outDir,
-        },
-        stdio: "inherit",
-      });
-      assert.equal(r.status, 0);
-
-      const out = JSON.parse(fs.readFileSync(path.join(outDir, "latest.json"), "utf8"));
-      assert.equal(out.kind, "monthly");
-      assert.equal(out.period_start, "2026-05-01");
-      assert.equal(out.period_end, "2026-05-31");
-      assert.equal(out.period_label, "2026-05");
-      assert.ok(out.items.length > 0);
-      assert.ok(out.items.length <= 20);
-    } finally {
-      fs.rmSync(outDir, { recursive: true, force: true });
-    }
-  }
-);
-
-test("build-monthly: self-gates and exits 0 on non-first-Monday",
-  { skip: !process.env.RUN_SMOKE },
-  () => {
-    // 2026-06-08 is the SECOND Monday of June; without FORCE_RUN the script should no-op.
-    const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "digest-monthly-gate-"));
-    try {
-      const r = spawnSync("node", ["scripts/build-monthly.mjs"], {
-        cwd: ROOT,
-        env: {
-          ...process.env,
-          LLM_SKIP: "1",
-          PUBLISH_NOW: "2026-06-08T02:30:00Z",
-          DIGEST_OUT_DIR: outDir,
-        },
-        stdio: "pipe",
-      });
-      assert.equal(r.status, 0);
-      assert.match(r.stdout.toString(), /not the first Monday/i);
-    } finally {
-      fs.rmSync(outDir, { recursive: true, force: true });
-    }
-  }
-);
+test('isolated historical builds never rewrite the project homepage',async t=>{
+ const root=await sandbox(t),index=path.join(root,'public/index.html'),before=await fs.readFile(index,'utf8');
+ const now='2026-10-28T01:00:00Z',env={PUBLISH_NOW:now,NEWS_DATA_DIR:path.join(root,'data'),NEWS_STATE_DIR:path.join(root,'state')};
+ const collector={cache:{},collect:async()=>[{items:[sample('isolated',Date.parse('2026-10-27T14:00:00Z'))],health:{id:'r',required:true,status:'ok',articles:1,undated:0,coverage:{lower:0,upper:Date.parse(now)}}}],enrich:async x=>x};
+ await runPipeline('daily',{root,env,collector,client:fakeClient()});
+ assert.equal(await fs.readFile(index,'utf8'),before);
+});

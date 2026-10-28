@@ -1,0 +1,2652 @@
+{
+  "generated_at": "2026-10-28T10:54:19.778Z",
+  "method": "Offline paired selector comparison. Same archived published items and frozen historical importance/section ratings; no LLM calls.",
+  "limitations": [
+    "Archives contain the old selected stories, not the original candidate feeds. This cannot measure missed-story recall, original-source availability, summary quality, or token savings.",
+    "Weekly replay unions historical published items only; acquisition coverage remains unverified.",
+    "Missing Oct 21-27 reports require separately labelled retrospective reconstruction; they are not original-time snapshots."
+  ],
+  "summary": {
+    "issues": 159,
+    "baseline_source_cap_violations": 126,
+    "candidate_source_cap_violations": 0
+  },
+  "issues": [
+    {
+      "date": "2026-05-07",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-08",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 5,
+        "research": 4
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-09",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 4,
+        "research": 3
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-10",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-11",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-12",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-13",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 4,
+        "research": 5
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-14",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-15",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-16",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 5,
+        "research": 2
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-17",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 5,
+        "research": 5
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-18",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-19",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-20",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-21",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-22",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-23",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-24",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-25",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 4
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-26",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 4,
+        "research": 3
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-27",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-28",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-29",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 0
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-30",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-05-31",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-01",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-02",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 6,
+        "research": 2
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-03",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 4,
+        "research": 0
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-04",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 8,
+        "research": 1
+      },
+      "candidate": {
+        "items": 15,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-05",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 6,
+        "research": 3
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-06",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 0
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-07",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-08",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-09",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-10",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-11",
+      "baseline": {
+        "items": 20,
+        "publishers": 15,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 15,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-12",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-13",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-14",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-15",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-16",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-17",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 7,
+        "research": 2
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-18",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-19",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-20",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 3
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-21",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 4
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-22",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 0
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-23",
+      "baseline": {
+        "items": 20,
+        "publishers": 15,
+        "max_publisher_items": 2,
+        "research": 1
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 15,
+        "max_publisher_items": 2,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-24",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-25",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-26",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-27",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-28",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-29",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-06-30",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 5,
+        "research": 0
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-01",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 6,
+        "research": 3
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-02",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 7,
+        "research": 2
+      },
+      "candidate": {
+        "items": 15,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-03",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-04",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 5,
+        "research": 2
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-05",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 5
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-06",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-07",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-08",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 6,
+        "research": 0
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-09",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-10",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-11",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-12",
+      "baseline": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 14,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-13",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-14",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 0
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-15",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 4,
+        "research": 3
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-16",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-17",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 7,
+        "research": 2
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-18",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 6,
+        "research": 0
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-19",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-20",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 4,
+        "research": 0
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-21",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-22",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-23",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 4,
+        "research": 0
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-24",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-25",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-26",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-27",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-28",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 5,
+        "research": 6
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 6
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-29",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 8,
+        "research": 1
+      },
+      "candidate": {
+        "items": 15,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-30",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 7,
+        "research": 2
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-07-31",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 8,
+        "research": 3
+      },
+      "candidate": {
+        "items": 15,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-02",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 0
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-03",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-04",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 3
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-05",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-06",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-07",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 7,
+        "research": 2
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-08",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 5,
+        "research": 0
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-09",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 3
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-10",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-11",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-12",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 0
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-13",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-14",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-15",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 5,
+        "research": 2
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-16",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-17",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 5,
+        "research": 2
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-18",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 5
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-19",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 4,
+        "research": 3
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-22",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 6,
+        "research": 3
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-23",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 6,
+        "research": 1
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-24",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-25",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-26",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 6,
+        "research": 3
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-28",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-29",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-30",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-08-31",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-02",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-03",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-04",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 6,
+        "research": 3
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-05",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-06",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-07",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 3
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-09",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-10",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 2
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-11",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 7,
+        "research": 1
+      },
+      "candidate": {
+        "items": 15,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-12",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-13",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-14",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-15",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 6,
+        "research": 2
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-19",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 4
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-20",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-21",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 5,
+        "research": 6
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-22",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 7,
+        "research": 2
+      },
+      "candidate": {
+        "items": 15,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-23",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 5,
+        "research": 4
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-24",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 6,
+        "research": 0
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-25",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-26",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 5,
+        "research": 0
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-27",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 4,
+        "research": 4
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 4
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-28",
+      "baseline": {
+        "items": 20,
+        "publishers": 13,
+        "max_publisher_items": 4,
+        "research": 5
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 13,
+        "max_publisher_items": 3,
+        "research": 5
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-29",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 7,
+        "research": 1
+      },
+      "candidate": {
+        "items": 15,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-09-30",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 6,
+        "research": 2
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-01",
+      "baseline": {
+        "items": 20,
+        "publishers": 12,
+        "max_publisher_items": 5,
+        "research": 0
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 12,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-02",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-03",
+      "baseline": {
+        "items": 20,
+        "publishers": 7,
+        "max_publisher_items": 7,
+        "research": 1
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 7,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-04",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 6,
+        "research": 1
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-05",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-06",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-07",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 7,
+        "research": 1
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-08",
+      "baseline": {
+        "items": 20,
+        "publishers": 8,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 8,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-09",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 7,
+        "research": 0
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 0
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-10",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 4,
+        "research": 2
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-11",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-12",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-13",
+      "baseline": {
+        "items": 20,
+        "publishers": 10,
+        "max_publisher_items": 5,
+        "research": 2
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 10,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-14",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 16,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-15",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 8,
+        "research": 2
+      },
+      "candidate": {
+        "items": 15,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-16",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 5,
+        "research": 3
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-17",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 5,
+        "research": 1
+      },
+      "candidate": {
+        "items": 18,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-18",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "candidate": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 2
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-19",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 7,
+        "research": 1
+      },
+      "candidate": {
+        "items": 15,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-20",
+      "baseline": {
+        "items": 20,
+        "publishers": 9,
+        "max_publisher_items": 6,
+        "research": 1
+      },
+      "candidate": {
+        "items": 17,
+        "publishers": 9,
+        "max_publisher_items": 3,
+        "research": 1
+      },
+      "exception_count": 0
+    },
+    {
+      "date": "2026-10-28",
+      "baseline": {
+        "items": 20,
+        "publishers": 11,
+        "max_publisher_items": 4,
+        "research": 3
+      },
+      "candidate": {
+        "items": 19,
+        "publishers": 11,
+        "max_publisher_items": 3,
+        "research": 3
+      },
+      "exception_count": 0
+    }
+  ],
+  "weekly_replay": {
+    "window": {
+      "lower": 1792382400000,
+      "upper": 1792987200000,
+      "hours": 168,
+      "periodStart": "2026-10-19",
+      "periodEnd": "2026-10-25"
+    },
+    "provenance": "legacy_published_selection_only",
+    "input": {
+      "items": 18,
+      "publishers": 9,
+      "max_publisher_items": 4,
+      "research": 2
+    },
+    "output": {
+      "items": 17,
+      "publishers": 9,
+      "max_publisher_items": 3,
+      "research": 2
+    },
+    "titles": [
+      {
+        "title": "Multifamily CMBS delinquency and servicing rates rose yet again",
+        "source": "Multifamily Dive"
+      },
+      {
+        "title": "Big Banks Take Bigger CRE Losses As They Clear Out Problem Loans",
+        "source": "Bisnow"
+      },
+      {
+        "title": "Builder confidence plunges as rate shock, costs squeeze margins",
+        "source": "HousingWire"
+      },
+      {
+        "title": "The 7% Mortgage Rate Paradox: Buyers Gain Leverage but Lose $22K in Purchasing Power",
+        "source": "Realtor.com News"
+      },
+      {
+        "title": "2.1M SF Chicago Office Complex Set For November Sheriff&#039;s Auction",
+        "source": "Bisnow"
+      },
+      {
+        "title": "Judge denies Yardi’s ask for summary judgement in rent price-fixing case",
+        "source": "Multifamily Dive"
+      },
+      {
+        "title": "&#039;Let&#039;s Just Get This Over With&#039;: Houston Multifamily Hopes For Capitulation",
+        "source": "Bisnow"
+      },
+      {
+        "title": "Dems target Zillow-style co-marketing; review RESPA exposure",
+        "source": "National Mortgage News"
+      },
+      {
+        "title": "Irvine Company Sells Chicago Tower for $550M to Zara Founder",
+        "source": "Connect CRE"
+      },
+      {
+        "title": "SL Green, Mori Trust Secure $2B Refi of Midtown Office Tower",
+        "source": "Connect CRE"
+      },
+      {
+        "title": "Partnership Completes $636M Rehabilitation of Two Brooklyn Affordable Housing Communities",
+        "source": "REBusiness Online"
+      },
+      {
+        "title": "Thousands of Homeowners Are About To See Their Mortgages Jump $1K a Month After Taking a Common Loan Risk",
+        "source": "Realtor.com News"
+      },
+      {
+        "title": "National Multifamily Market Report – September 2026",
+        "source": "Yardi Matrix Blog"
+      },
+      {
+        "title": "Joint Venture Underway on 236-Unit Multifamily Project in Denison, Texas",
+        "source": "REBusiness Online"
+      },
+      {
+        "title": "Hamilton, Clarion Purchase Former Bridgestone Tire Plant in Middle Tennessee, Plan 1.5 MSF Redevelopment",
+        "source": "REBusiness Online"
+      },
+      {
+        "title": "U.S. Pending Home Sales Sink to a New Low",
+        "source": "Redfin News"
+      },
+      {
+        "title": "Bank of America pegs 2027 mortgage volume at $1.72T, warns of 2023-style housing replay",
+        "source": "HousingWire"
+      }
+    ]
+  }
+}

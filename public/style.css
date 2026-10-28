@@ -433,3 +433,20 @@ dialog::backdrop { background: rgba(0,0,0,.6); }
 .themes-block .themes-title { margin: 0 0 8px 0; font-size: 14px; font-weight: 600; color: var(--text); }
 .themes-block .themes-list { margin: 0; padding-left: 20px; }
 .themes-block .themes-list li { margin: 4px 0; font-size: 14px; line-height: 1.5; color: var(--text-dim); }
+
+/* Research brief and acquisition coverage */
+.brief-block, .research-coverage, .coverage-note {
+  max-width: var(--max-width); margin: 16px auto; padding: 18px 20px;
+  border-radius: 8px; background: var(--bg-elev); color: var(--text);
+  border: 1px solid var(--border);
+}
+.brief-block h2 { margin: 0 0 10px; font-size: 15px; }
+.brief-block p { margin: 8px 0; line-height: 1.8; font-size: 14px; }
+.brief-block a { font-size: 12px; color: var(--accent-2); }
+.coverage-note { color: #e2b07b; background: #2a2118; border-color: #5a4127; font-size: 13px; }
+.research-coverage summary { cursor: pointer; font-size: 13px; color: var(--text-dim); }
+.research-coverage ul { columns: 2; font-size: 13px; line-height: 1.8; padding-left: 20px; color: var(--text-dim); }
+@media (max-width: 680px) {
+  .brief-block, .research-coverage, .coverage-note { margin: 12px; padding: 16px; }
+  .research-coverage ul { columns: 1; }
+}

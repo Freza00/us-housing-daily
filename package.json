@@ -1,7 +1,7 @@
 {
   "name": "us-housing-daily",
-  "version": "0.2.0",
-  "description": "美国住宅地产新闻聚合 — 每天北京 9 点 GitHub Actions 跑 pipeline，Vercel 静态站托管",
+  "version": "0.3.0",
+  "description": "工作日美国地产新闻与主流研究摘要；周一合并周末，GitHub Actions + Vercel",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,11 +11,14 @@
     "build:weekly:dry": "LLM_SKIP=1 node scripts/build-weekly.mjs",
     "build:monthly": "node --env-file=.env scripts/build-monthly.mjs",
     "build:monthly:dry": "LLM_SKIP=1 node scripts/build-monthly.mjs",
-    "test": "node --test 'scripts/test/**/*.{test,smoke}.mjs'",
-    "dry-run": "node scripts/dry-run.mjs",
-    "preview": "cd public && (ln -sf ../data data 2>/dev/null; python3 -m http.server 8080)"
+    "test": "node --test scripts/test/*.test.mjs scripts/test/*.smoke.mjs",
+    "dry-run": "node scripts/evaluate.mjs",
+    "preview": "cd public && (ln -sf ../data data 2>/dev/null; python3 -m http.server 8080)",
+    "test:live": "node scripts/validate-sources.mjs",
+    "evaluate": "node scripts/evaluate.mjs",
+    "evaluate:models": "node --env-file=.env scripts/evaluate-models.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   }
 }

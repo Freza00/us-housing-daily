@@ -1,0 +1,658 @@
+{
+  "started_at": "2026-10-28T11:41:14.934Z",
+  "method": "Paired fixed-input experiment; editor medium vs low, writer low in both. Shared valid-result cache. No source requests and no production writes.",
+  "snapshot": ".tmp/live-validation/paired-v3-snapshot.json",
+  "cases": [
+    {
+      "kind": "daily",
+      "now": "2026-10-22T01:00:00Z",
+      "editor_effort": "medium",
+      "ok": true,
+      "ms": 81187,
+      "status": "degraded",
+      "items": 4,
+      "summary_characters": 226,
+      "source_counts": {
+        "har-research": 1,
+        "realtor-com": 1,
+        "nahb-eyeonhousing": 2
+      },
+      "selected": [
+        {
+          "id": "b236c4ec0a837788",
+          "title": "HOUSTON RENTAL DEMAND REMAINS STRONG IN SEPTEMBER",
+          "source": "HAR Research",
+          "importance": 4
+        },
+        {
+          "id": "882f154971886d8c",
+          "title": "H1 2026 Investor Report: Small Investors Take Over as Institutional Buyers Retreat",
+          "source": "Realtor.com Research",
+          "importance": 4
+        },
+        {
+          "id": "14ecc8aa3c83c1d2",
+          "title": "Nearly One in Three Construction Workers are Hispanic",
+          "source": "NAHB Eye on Housing",
+          "importance": 3
+        },
+        {
+          "id": "615f3f223f6ea9dd",
+          "title": "Market Share for Modular and Other Non-Site Built Housing in 2025",
+          "source": "NAHB Eye on Housing",
+          "importance": 3
+        }
+      ],
+      "executive_summary": {
+        "text": "休斯敦租赁市场在 9 月继续表现活跃，独栋住宅租赁量同比增加，联排及公寓租赁量增长更快，但租金整体略有回落，显示需求强劲与租赁选择增加并存。全国住宅投资市场的结构正在变化，Realtor.com Research 指出小型投资者在 2026 年上半年接替机构买家成为主导力量，但材料未披露具体交易规模及其对房价的影响。建筑业劳动力中西语裔占比已达 32.8%，而非现场建造独栋住宅在 2025 年的市场份额仍为 3%；后续可关注劳动力供给与替代建造方式是否出现进一步变化。",
+        "sentences": [
+          {
+            "text": "休斯敦租赁市场在 9 月继续表现活跃，独栋住宅租赁量同比增加，联排及公寓租赁量增长更快，但租金整体略有回落，显示需求强劲与租赁选择增加并存。",
+            "item_ids": [
+              "b236c4ec0a837788"
+            ]
+          },
+          {
+            "text": "全国住宅投资市场的结构正在变化，Realtor.com Research 指出小型投资者在 2026 年上半年接替机构买家成为主导力量，但材料未披露具体交易规模及其对房价的影响。",
+            "item_ids": [
+              "882f154971886d8c"
+            ]
+          },
+          {
+            "text": "建筑业劳动力中西语裔占比已达 32.8%，而非现场建造独栋住宅在 2025 年的市场份额仍为 3%；后续可关注劳动力供给与替代建造方式是否出现进一步变化。",
+            "item_ids": [
+              "14ecc8aa3c83c1d2",
+              "615f3f223f6ea9dd"
+            ]
+          }
+        ]
+      },
+      "usage": [
+        {
+          "label": "editor",
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "attempt": 1,
+          "ms": 29033,
+          "cache_hit": false,
+          "repairs": 0,
+          "response_model": "gpt-6.1-sol",
+          "usage": {
+            "prompt_tokens": 8988,
+            "completion_tokens": 535,
+            "total_tokens": 9523,
+            "completion_tokens_details": {
+              "reasoning_tokens": 140
+            }
+          }
+        },
+        {
+          "label": "writer",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 1,
+          "ms": 20429,
+          "failed": true,
+          "retryable": true,
+          "error": "LLM stream error: {\"message\":\"Our servers are currently overloaded. Please try again later.\",\"type\":\"upstream_error\"}",
+          "usage": null
+        },
+        {
+          "label": "writer",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 2,
+          "ms": 30701,
+          "cache_hit": false,
+          "repairs": 0,
+          "response_model": "gpt-6.1-sol",
+          "usage": {
+            "completion_tokens": 816,
+            "total_tokens": 2314,
+            "prompt_tokens": 1498,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_creation_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 83
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "daily",
+      "now": "2026-10-22T01:00:00Z",
+      "editor_effort": "low",
+      "ok": true,
+      "ms": 58308,
+      "status": "degraded",
+      "items": 4,
+      "summary_characters": 213,
+      "source_counts": {
+        "har-research": 1,
+        "realtor-com": 1,
+        "nahb-eyeonhousing": 2
+      },
+      "selected": [
+        {
+          "id": "b236c4ec0a837788",
+          "title": "HOUSTON RENTAL DEMAND REMAINS STRONG IN SEPTEMBER",
+          "source": "HAR Research",
+          "importance": 4
+        },
+        {
+          "id": "882f154971886d8c",
+          "title": "H1 2026 Investor Report: Small Investors Take Over as Institutional Buyers Retreat",
+          "source": "Realtor.com Research",
+          "importance": 4
+        },
+        {
+          "id": "14ecc8aa3c83c1d2",
+          "title": "Nearly One in Three Construction Workers are Hispanic",
+          "source": "NAHB Eye on Housing",
+          "importance": 3
+        },
+        {
+          "id": "615f3f223f6ea9dd",
+          "title": "Market Share for Modular and Other Non-Site Built Housing in 2025",
+          "source": "NAHB Eye on Housing",
+          "importance": 3
+        }
+      ],
+      "executive_summary": {
+        "text": "休斯敦租赁市场 9 月需求保持强劲，独栋住宅租赁量同比增加，联排及公寓租赁量同比增长 26.3%，但独栋住宅租金小幅回落，显示租赁活跃度与价格表现并不同步。Realtor.com Research 将投资者竞争变化概括为小型投资者接替退出的机构买家，市场参与者结构变化及其对购房竞争的影响仍值得观察。建筑业劳动力结构继续多元化，西语裔工人占比达到 32.8%；与此同时，非现场建造独栋住宅在 2025 年的市场份额维持 3%，供给方式尚未扩大。",
+        "sentences": [
+          {
+            "text": "休斯敦租赁市场 9 月需求保持强劲，独栋住宅租赁量同比增加，联排及公寓租赁量同比增长 26.3%，但独栋住宅租金小幅回落，显示租赁活跃度与价格表现并不同步。",
+            "item_ids": [
+              "b236c4ec0a837788"
+            ]
+          },
+          {
+            "text": "Realtor.com Research 将投资者竞争变化概括为小型投资者接替退出的机构买家，市场参与者结构变化及其对购房竞争的影响仍值得观察。",
+            "item_ids": [
+              "882f154971886d8c"
+            ]
+          },
+          {
+            "text": "建筑业劳动力结构继续多元化，西语裔工人占比达到 32.8%；与此同时，非现场建造独栋住宅在 2025 年的市场份额维持 3%，供给方式尚未扩大。",
+            "item_ids": [
+              "14ecc8aa3c83c1d2",
+              "615f3f223f6ea9dd"
+            ]
+          }
+        ]
+      },
+      "usage": [
+        {
+          "label": "editor",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 1,
+          "ms": 4449,
+          "failed": true,
+          "retryable": true,
+          "error": "LLM stream error: {\"message\":\"Upstream HTTP/2 stream failed\",\"type\":\"upstream_error\"}",
+          "usage": null
+        },
+        {
+          "label": "editor",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 2,
+          "ms": 2013,
+          "failed": true,
+          "retryable": true,
+          "error": "LLM stream error: {\"message\":\"Our servers are currently overloaded. Please try again later.\",\"type\":\"upstream_error\"}",
+          "usage": null
+        },
+        {
+          "label": "editor",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 3,
+          "ms": 19268,
+          "cache_hit": false,
+          "repairs": 0,
+          "response_model": "gpt-6.1-sol",
+          "usage": {
+            "prompt_tokens": 6452,
+            "completion_tokens": 479,
+            "total_tokens": 6931,
+            "completion_tokens_details": {
+              "reasoning_tokens": 86
+            }
+          }
+        },
+        {
+          "label": "writer",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 1,
+          "ms": 15169,
+          "failed": true,
+          "retryable": true,
+          "error": "Evidence quote is not present in source for b236c4ec0a837788",
+          "usage": {
+            "prompt_tokens": 5964,
+            "completion_tokens": 803,
+            "total_tokens": 6767
+          }
+        },
+        {
+          "label": "writer",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 2,
+          "ms": 11383,
+          "cache_hit": false,
+          "repairs": 1,
+          "response_model": "gpt-6.1-sol",
+          "usage": {
+            "prompt_tokens": 6020,
+            "completion_tokens": 721,
+            "total_tokens": 6741,
+            "completion_tokens_details": {
+              "reasoning_tokens": 45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "weekly",
+      "now": "2026-10-26T06:00:00Z",
+      "editor_effort": "medium",
+      "ok": true,
+      "ms": 107561,
+      "status": "degraded",
+      "items": 14,
+      "summary_characters": 230,
+      "source_counts": {
+        "zillow-research": 3,
+        "trerc": 1,
+        "nar-research": 1,
+        "census": 1,
+        "nahb-eyeonhousing": 2,
+        "har-research": 1,
+        "realtor-com": 3,
+        "redfin-news": 2
+      },
+      "selected": [
+        {
+          "id": "3fbe437e32968960",
+          "title": "The Rate Path Wildcard (October 2026 Housing Market Forecast)",
+          "source": "Zillow Research",
+          "importance": 4
+        },
+        {
+          "id": "d4d6eadddbb1f548",
+          "title": "Texas Housing Insight | October 2026 | Texas Real Estate Research Center",
+          "source": "Texas Real Estate Research Center (TRERC)",
+          "importance": 4
+        },
+        {
+          "id": "4dccd869376f4236",
+          "title": "Pending Home Sales Decreased 7.3% in September",
+          "source": "NAR Research",
+          "importance": 4
+        },
+        {
+          "id": "8d7fa89fe746f25e",
+          "title": "Hidden Costs of Homeownership Top $16.6K a Year as Insurance Climbs",
+          "source": "Zillow Research",
+          "importance": 4
+        },
+        {
+          "id": "1846e8a6e8f7dc6e",
+          "title": "New Residential Construction Press Release",
+          "source": "Census New Residential Construction",
+          "importance": 4
+        },
+        {
+          "id": "6c1a2c49fb2d23f2",
+          "title": "Builder Sentiment Falls on Rising Rates",
+          "source": "NAHB Eye on Housing",
+          "importance": 4
+        },
+        {
+          "id": "b236c4ec0a837788",
+          "title": "HOUSTON RENTAL DEMAND REMAINS STRONG IN SEPTEMBER",
+          "source": "HAR Research",
+          "importance": 3
+        },
+        {
+          "id": "89b803fda4e65c02",
+          "title": "Renters: Results from the Consumer Housing Trends Report 2026",
+          "source": "Zillow Research",
+          "importance": 3
+        },
+        {
+          "id": "882f154971886d8c",
+          "title": "H1 2026 Investor Report: Small Investors Take Over as Institutional Buyers Retreat",
+          "source": "Realtor.com Research",
+          "importance": 3
+        },
+        {
+          "id": "455181a18dfab54f",
+          "title": "Mortgage rates drop for the first time in two months",
+          "source": "Realtor.com Research",
+          "importance": 3
+        },
+        {
+          "id": "afd98cb17701780f",
+          "title": "Geopolitics and AI to Drive Mortgage Rates This Week as an October Fed Rate Hike Appears Unlikely",
+          "source": "Redfin News",
+          "importance": 3
+        },
+        {
+          "id": "67c3ddf3606cc6c7",
+          "title": "The Slow Unlock Stalls as Rates Climb",
+          "source": "Realtor.com Research",
+          "importance": 3
+        },
+        {
+          "id": "360e371d03c18a7c",
+          "title": "A Quarter of Remodelers Started ADUs Over Past Twelve Months",
+          "source": "NAHB Eye on Housing",
+          "importance": 3
+        },
+        {
+          "id": "7803d36771ece5f1",
+          "title": "U.S. Home-Sale Prices Ticked Up 0.25% in September",
+          "source": "Redfin News",
+          "importance": 3
+        }
+      ],
+      "executive_summary": {
+        "text": "销售与交易数据呈现走弱：NAR 报告 9 月待售房屋签约量同比下降 11.3%，Zillow 预计四季度成屋销售降幅或扩大；德州活动放缓，建筑商信心也降至 14 年低点。利率仍是市场关键变量。美国 30 年期按揭利率本周小幅回落至 7.32%，但仍处高位；新屋开工与竣工同比下降，房主保险和维护等持有成本继续增加，购房负担仍需关注。租赁端表现相对有韧性，休斯敦独栋住宅租赁量同比增长，Zillow 调查也显示租客广泛使用数字工具；后续应关注按揭利率走势、销售变化及租赁需求能否延续。",
+        "sentences": [
+          {
+            "text": "销售与交易数据呈现走弱：NAR 报告 9 月待售房屋签约量同比下降 11.3%，Zillow 预计四季度成屋销售降幅或扩大；德州活动放缓，建筑商信心也降至 14 年低点。",
+            "item_ids": [
+              "4dccd869376f4236",
+              "3fbe437e32968960",
+              "d4d6eadddbb1f548",
+              "6c1a2c49fb2d23f2"
+            ]
+          },
+          {
+            "text": "利率仍是市场关键变量。美国 30 年期按揭利率本周小幅回落至 7.32%，但仍处高位；新屋开工与竣工同比下降，房主保险和维护等持有成本继续增加，购房负担仍需关注。",
+            "item_ids": [
+              "455181a18dfab54f",
+              "1846e8a6e8f7dc6e",
+              "8d7fa89fe746f25e"
+            ]
+          },
+          {
+            "text": "租赁端表现相对有韧性，休斯敦独栋住宅租赁量同比增长，Zillow 调查也显示租客广泛使用数字工具；后续应关注按揭利率走势、销售变化及租赁需求能否延续。",
+            "item_ids": [
+              "b236c4ec0a837788",
+              "89b803fda4e65c02",
+              "afd98cb17701780f",
+              "7803d36771ece5f1"
+            ]
+          }
+        ]
+      },
+      "usage": [
+        {
+          "label": "editor",
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "attempt": 1,
+          "ms": 85457,
+          "cache_hit": false,
+          "repairs": 0,
+          "response_model": "gpt-6.1-sol",
+          "usage": {
+            "prompt_tokens": 11026,
+            "completion_tokens": 2131,
+            "total_tokens": 13157,
+            "completion_tokens_details": {
+              "reasoning_tokens": 429
+            }
+          }
+        },
+        {
+          "label": "writer",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 1,
+          "ms": 22066,
+          "cache_hit": false,
+          "repairs": 0,
+          "response_model": "gpt-6.1-sol",
+          "usage": {
+            "prompt_tokens": 9725,
+            "completion_tokens": 2428,
+            "total_tokens": 12153,
+            "completion_tokens_details": {
+              "reasoning_tokens": 81
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "weekly",
+      "now": "2026-10-26T06:00:00Z",
+      "editor_effort": "low",
+      "ok": true,
+      "ms": 112168,
+      "status": "degraded",
+      "items": 16,
+      "summary_characters": 220,
+      "source_counts": {
+        "nar-research": 1,
+        "zillow-research": 3,
+        "trerc": 1,
+        "realtor-com": 3,
+        "nahb-eyeonhousing": 3,
+        "har-research": 1,
+        "redfin-news": 3,
+        "census": 1
+      },
+      "selected": [
+        {
+          "id": "4dccd869376f4236",
+          "title": "Pending Home Sales Decreased 7.3% in September",
+          "source": "NAR Research",
+          "importance": 5
+        },
+        {
+          "id": "3fbe437e32968960",
+          "title": "The Rate Path Wildcard (October 2026 Housing Market Forecast)",
+          "source": "Zillow Research",
+          "importance": 4
+        },
+        {
+          "id": "d4d6eadddbb1f548",
+          "title": "Texas Housing Insight | October 2026 | Texas Real Estate Research Center",
+          "source": "Texas Real Estate Research Center (TRERC)",
+          "importance": 4
+        },
+        {
+          "id": "455181a18dfab54f",
+          "title": "Mortgage rates drop for the first time in two months",
+          "source": "Realtor.com Research",
+          "importance": 4
+        },
+        {
+          "id": "013538bddee719a6",
+          "title": "Single-Family Starts Down as Affordability Challenges Persist",
+          "source": "NAHB Eye on Housing",
+          "importance": 4
+        },
+        {
+          "id": "8d7fa89fe746f25e",
+          "title": "Hidden Costs of Homeownership Top $16.6K a Year as Insurance Climbs",
+          "source": "Zillow Research",
+          "importance": 4
+        },
+        {
+          "id": "b236c4ec0a837788",
+          "title": "HOUSTON RENTAL DEMAND REMAINS STRONG IN SEPTEMBER",
+          "source": "HAR Research",
+          "importance": 4
+        },
+        {
+          "id": "89b803fda4e65c02",
+          "title": "Renters: Results from the Consumer Housing Trends Report 2026",
+          "source": "Zillow Research",
+          "importance": 4
+        },
+        {
+          "id": "882f154971886d8c",
+          "title": "H1 2026 Investor Report: Small Investors Take Over as Institutional Buyers Retreat",
+          "source": "Realtor.com Research",
+          "importance": 4
+        },
+        {
+          "id": "d866149a8b5ee7a4",
+          "title": "U.S. Pending Home Sales Sink to a New Low",
+          "source": "Redfin News",
+          "importance": 4
+        },
+        {
+          "id": "1846e8a6e8f7dc6e",
+          "title": "New Residential Construction Press Release",
+          "source": "Census New Residential Construction",
+          "importance": 4
+        },
+        {
+          "id": "6c1a2c49fb2d23f2",
+          "title": "Builder Sentiment Falls on Rising Rates",
+          "source": "NAHB Eye on Housing",
+          "importance": 4
+        },
+        {
+          "id": "afd98cb17701780f",
+          "title": "Geopolitics and AI to Drive Mortgage Rates This Week as an October Fed Rate Hike Appears Unlikely",
+          "source": "Redfin News",
+          "importance": 3
+        },
+        {
+          "id": "788e143acfd5b9c1",
+          "title": "Weekly Housing Trends: U.S. Market Update (Week Ending Oct. 17, 2026)",
+          "source": "Realtor.com Research",
+          "importance": 3
+        },
+        {
+          "id": "22d0f57b1da6b3b7",
+          "title": "State-Level Employment Situation: September 2026",
+          "source": "NAHB Eye on Housing",
+          "importance": 3
+        },
+        {
+          "id": "7803d36771ece5f1",
+          "title": "U.S. Home-Sale Prices Ticked Up 0.25% in September",
+          "source": "Redfin News",
+          "importance": 3
+        }
+      ],
+      "executive_summary": {
+        "text": "美国住房需求在高按揭利率和可负担性压力下持续走弱：9 月待售房屋销售环比下降 7.3%、同比下降 11.3%，周度销售亦降至 2021 年以来新低，库存增长尚未抵消融资成本冲击。供给端同步承压，9 月住宅开工量环比下降 5.2%，单户开工量降至一年低位，建筑商信心降至 14 年低点；德州市场也显示库存偏高、需求受限。租赁需求相对稳健，休斯敦租赁量增加，而房屋持有隐性成本持续上升；后续重点观察按揭利率是否见顶、12 月政策路径及库存增长能否改善购房可负担性。",
+        "sentences": [
+          {
+            "text": "美国住房需求在高按揭利率和可负担性压力下持续走弱：9 月待售房屋销售环比下降 7.3%、同比下降 11.3%，周度销售亦降至 2021 年以来新低，库存增长尚未抵消融资成本冲击。",
+            "item_ids": [
+              "4dccd869376f4236",
+              "d866149a8b5ee7a4",
+              "788e143acfd5b9c1"
+            ]
+          },
+          {
+            "text": "供给端同步承压，9 月住宅开工量环比下降 5.2%，单户开工量降至一年低位，建筑商信心降至 14 年低点；德州市场也显示库存偏高、需求受限。",
+            "item_ids": [
+              "1846e8a6e8f7dc6e",
+              "013538bddee719a6",
+              "6c1a2c49fb2d23f2",
+              "d4d6eadddbb1f548"
+            ]
+          },
+          {
+            "text": "租赁需求相对稳健，休斯敦租赁量增加，而房屋持有隐性成本持续上升；后续重点观察按揭利率是否见顶、12 月政策路径及库存增长能否改善购房可负担性。",
+            "item_ids": [
+              "b236c4ec0a837788",
+              "8d7fa89fe746f25e",
+              "455181a18dfab54f",
+              "afd98cb17701780f"
+            ]
+          }
+        ]
+      },
+      "usage": [
+        {
+          "label": "editor",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 1,
+          "ms": 67500,
+          "failed": true,
+          "retryable": true,
+          "error": "Invalid decision ID/fields: {\"id\":\"b236c4ec0a837788\",\"known_id\":true,\"repeated\":false,\"keep\":true,\"importance\":4,\"section\":\"texas\",\"tags\":[\"housing\",\"btr-sfr\",\"texas\",\"houston\",\"data\"]}",
+          "usage": {
+            "completion_tokens": 1803,
+            "total_tokens": 8303,
+            "prompt_tokens": 6500,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_creation_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 121
+            }
+          }
+        },
+        {
+          "label": "editor",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 2,
+          "ms": 24068,
+          "cache_hit": false,
+          "repairs": 1,
+          "response_model": "gpt-6.1-sol",
+          "usage": {
+            "prompt_tokens": 11125,
+            "completion_tokens": 1553,
+            "total_tokens": 12678,
+            "completion_tokens_details": {
+              "reasoning_tokens": 97
+            }
+          }
+        },
+        {
+          "label": "writer",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 1,
+          "ms": 19573,
+          "cache_hit": false,
+          "repairs": 0,
+          "response_model": "gpt-6.1-sol",
+          "usage": {
+            "prompt_tokens": 11210,
+            "completion_tokens": 2478,
+            "total_tokens": 13688,
+            "completion_tokens_details": {
+              "reasoning_tokens": 68
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Reconstructed current feeds are not original-time acquisition snapshots.",
+    "Proxy usage is reported usage; accepted reasoning_effort does not prove native reasoning internals.",
+    "Writer cache hits reduce charged calls and must be separated when comparing input sizes.",
+    "Evidence and numeric checks do not assess every causal or editorial judgment."
+  ],
+  "snapshot_sha256": "001fd8349b37d72ebad582b2fde4cd6124f0a4f1c14d1eda0ae5019c4fa38f50"
+}

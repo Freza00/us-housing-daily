@@ -1,0 +1,1798 @@
+{
+  "method": "Latest observation per source across one full probe and targeted bug-fix probes; not a simultaneous all-source pass. ok means at least one readable article, not complete or fresh coverage.",
+  "checked_at": "2026-10-28T12:28:43.619Z",
+  "sources": [
+    {
+      "url": "https://eyeonhousing.org/feed/",
+      "type": "rss",
+      "id": "nahb-eyeonhousing",
+      "name": "NAHB Eye on Housing",
+      "research": true,
+      "required": false,
+      "checked_at": 1793186902770,
+      "attempted_urls": [
+        "https://eyeonhousing.org/feed/"
+      ],
+      "status": "ok",
+      "discovered": 18,
+      "articles": 18,
+      "discovery_truncated": false,
+      "article_budget": 0,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 9,
+      "earliest_dated": 1791915755000,
+      "coverage": {
+        "lower": 1792582102770,
+        "upper": 1793186902770
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793186902770,
+      "samples": [
+        {
+          "title": "Affordability Challenges Push New Home Sales Lower",
+          "url": "https://eyeonhousing.org/2026/10/affordability-challenges-push-new-home-sales-lower/",
+          "published_at": 1793115648000,
+          "body_length": 4507,
+          "access": "public"
+        },
+        {
+          "title": "Which Construction Occupations Will See the Largest Job Gains Over the Next Decade?",
+          "url": "https://eyeonhousing.org/2026/10/which-construction-occupations-will-see-the-largest-job-gains-over-the-next-decade/",
+          "published_at": 1793107200000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "Uptick for Non-Conventional Financing in 2025",
+          "url": "https://eyeonhousing.org/2026/10/uptick-for-non-conventional-financing-in-2025/",
+          "published_at": 1793021400000,
+          "body_length": 3731,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://feeds.feedburner.com/CalculatedRisk",
+      "type": "rss",
+      "id": "calculated-risk",
+      "name": "Calculated Risk (Bill McBride)",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://feeds.feedburner.com/CalculatedRisk"
+      ],
+      "status": "ok",
+      "discovered": 25,
+      "articles": 25,
+      "discovery_truncated": false,
+      "article_budget": 0,
+      "undated": 0,
+      "recent": 0,
+      "earliest_dated": 1767714840001,
+      "coverage": {
+        "lower": 1792580914022,
+        "upper": 1793185714022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "This is the End and a New Beginning",
+          "url": "http://www.blogger.com/feeds/10004977/posts/default/1850858928807080500",
+          "published_at": 1768224060005,
+          "body_length": 600,
+          "access": "feed_excerpt"
+        },
+        {
+          "title": "Sunday Night Futures",
+          "url": "http://www.blogger.com/feeds/10004977/posts/default/7171326054045106871",
+          "published_at": 1768179000001,
+          "body_length": 600,
+          "access": "feed_excerpt"
+        },
+        {
+          "title": "Hotels: Occupancy Rate Increased 4.4% Year-over-year",
+          "url": "http://www.blogger.com/feeds/10004977/posts/default/1428564876758748355",
+          "published_at": 1768137120005,
+          "body_length": 600,
+          "access": "feed_excerpt"
+        }
+      ]
+    },
+    {
+      "url": "https://lancelambert.substack.com/feed",
+      "type": "rss",
+      "id": "lance-lambert",
+      "name": "Lance Lambert / ResiClub",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://lancelambert.substack.com/feed",
+        "https://news.google.com/rss/search?q=%22Lance+Lambert%22+OR+%22ResiClub%22&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "status": "ok",
+      "discovered": 59,
+      "articles": 59,
+      "discovery_truncated": false,
+      "article_budget": 0,
+      "undated": 0,
+      "recent": 3,
+      "earliest_dated": 1453881600000,
+      "coverage": {
+        "lower": 1792580914022,
+        "upper": 1793185714022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Inside giant homebuilder D.R. Horton’s bet on robotic homebuilding - ResiClub",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxON1FkeURMZnh6eHZDSHVQYnViV1J0Y1BjRkN5T2szTGhvanFJd19jc0pCSERubUNCa1FZeDBxVEx1WERSdW02UVBVWW4tYmF6cnFtYzV1NFBtVnBuWlBzWmRyTHgwN2pkZFlGTF9nc2luaWIyY3Y0V1BBNXZkZjJkYmQ4UUpuV0ZxT1ltMHJyb21RTmZwbFFyamRLN2F6Rmdl?oc=5",
+          "published_at": 1792621483000,
+          "body_length": 88,
+          "access": "feed_excerpt"
+        },
+        {
+          "title": "Warren Buffett's successor makes third big housing market bet this year—now owning around 11% of Lennar - ResiClub",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbEhYOHIzQmJJWDZVLXN4UVU5ZjFEb08xMVhacUlpTkNNa0VKOXpQVFFEWXB6dF9uVmhldzR5Unpjdld6NjYyYUNnVHlpNnpRR0FjYTZDZG9IMnhWWHV1X3Z5cnR6NGR4M3hKTzhWNEI0cVhaR3Z3endVOTRjSzgyR19EY1c5Rk1vMUdCQUc0SlM3T01ld2FHUi14clh5ZXlNV2tEZzJDY2d4eHdL?oc=5",
+          "published_at": 1791270000000,
+          "body_length": 125,
+          "access": "feed_excerpt"
+        },
+        {
+          "title": "The housing market deserves sharper analysis: ResiClub is hiring a data journalist / housing analyst - ResiClub",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcW1ISEdWY3VLYmd3ZTVNUWlqdkNZbGJ5Zk4xaE9FNklWSlJ1VUFPX0pFX2tMbjVlMjVyQWE0R3Nwanp5U09xcWgtLWZuZjhqVUpiSFFmV2JsazhDQU13ZFl5TXNrTnlXcVlfQU1VYndjM0tvY0xqQnptaVJpc2RpdkNCOTFCLWxaRkd5RVZZbDVGd1ZFUVVIcDVFeWlXaTlZWms4c2xReVBLazZMT3hEOExnUW42T1ZkRktNYUZfZVJVUXVxTUE?oc=5",
+          "published_at": 1785481200000,
+          "body_length": 122,
+          "access": "feed_excerpt"
+        }
+      ]
+    },
+    {
+      "url": "https://www.housingwire.com/author/logan-mohtashami/feed/",
+      "type": "rss",
+      "id": "logan-mohtashami",
+      "name": "Logan Mohtashami (HousingWire)",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.housingwire.com/author/logan-mohtashami/feed/"
+      ],
+      "status": "ok",
+      "discovered": 10,
+      "articles": 10,
+      "discovery_truncated": false,
+      "article_budget": 0,
+      "undated": 0,
+      "recent": 3,
+      "earliest_dated": 1790962363000,
+      "coverage": {
+        "lower": 1792580914022,
+        "upper": 1793185714022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Why home prices and new home sales aren’t as hot as today’s reports show",
+          "url": "https://www.housingwire.com/articles/case-shiller-lagged-prices/",
+          "published_at": 1793128503000,
+          "body_length": 5402,
+          "access": "public"
+        },
+        {
+          "title": "Slightly lower mortgage rates finally pause slide in housing demand",
+          "url": "https://www.housingwire.com/articles/mortgage-rates-demand-stabilizes/",
+          "published_at": 1792869680000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "The 10-year yield is under 5%. Are sub-7% mortgage rates next?",
+          "url": "https://www.housingwire.com/articles/the-10-year-yield-is-under-5-are-sub-7-mortgage-rates-next/",
+          "published_at": 1792702847000,
+          "body_length": 3220,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.yardimatrix.com/publications/",
+      "type": "html",
+      "id": "yardi-matrix",
+      "name": "Yardi Matrix Blog",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.yardimatrix.com/publications/"
+      ],
+      "status": "ok",
+      "discovered": 3,
+      "articles": 3,
+      "discovery_truncated": false,
+      "article_budget": 3,
+      "undated": 0,
+      "recent": 0,
+      "earliest_dated": 1790812800000,
+      "coverage": {
+        "lower": 1792580914022,
+        "upper": 1793185714022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Matrix Multifamily National Report – September 2026",
+          "url": "https://yardimatrix.com/multifamily-national/matrix-multifamily-national-report-september-2026",
+          "published_at": 1790812800000,
+          "body_length": 796,
+          "access": "preview"
+        },
+        {
+          "title": "Matrix Single-Family Rental National Report – September 2026",
+          "url": "https://yardimatrix.com/sfr-btr-national/matrix-single-family-rental-national-report-september-2026",
+          "published_at": 1790812800000,
+          "body_length": 564,
+          "access": "preview"
+        },
+        {
+          "title": "Matrix Self Storage National Report – October 2026",
+          "url": "https://yardimatrix.com/self-storage-national/matrix-self-storage-national-report-october-2026",
+          "published_at": 1790812800000,
+          "body_length": 714,
+          "access": "preview"
+        }
+      ]
+    },
+    {
+      "url": "https://www.realtor.com/research/feed/",
+      "type": "rss",
+      "id": "realtor-research",
+      "name": "Realtor.com Research",
+      "research": true,
+      "required": true,
+      "checked_at": 1793186902770,
+      "attempted_urls": [
+        "https://www.realtor.com/research/feed/"
+      ],
+      "status": "ok",
+      "discovered": 10,
+      "articles": 10,
+      "discovery_truncated": false,
+      "article_budget": 0,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 8,
+      "earliest_dated": 1792507024000,
+      "coverage": {
+        "lower": 1792582102770,
+        "upper": 1793186902770
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793186902770,
+      "samples": [
+        {
+          "title": "New Home Sales Slip Slightly in September",
+          "url": "https://www.realtor.com/research/new-home-sales-september-2026/",
+          "published_at": 1793112363000,
+          "body_length": 3151,
+          "access": "public"
+        },
+        {
+          "title": "U.S. Home Price Growth Accelerates to 2.1% in August",
+          "url": "https://www.realtor.com/research/case-shiller-home-prices-august-2026/",
+          "published_at": 1793108847000,
+          "body_length": 2424,
+          "access": "public"
+        },
+        {
+          "title": "New York City Rental Report 2026Q3: Squeezed Both Ways—NYC Renters Face Record High Rents and 7% Mortgage Rates",
+          "url": "https://www.realtor.com/research/nyc-q3-2026/",
+          "published_at": 1793095237000,
+          "body_length": 205,
+          "access": "feed_excerpt"
+        }
+      ]
+    },
+    {
+      "url": "https://www.redfin.com/news/feed/",
+      "type": "rss",
+      "id": "redfin-news",
+      "name": "Redfin News",
+      "research": true,
+      "required": false,
+      "checked_at": 1793186902770,
+      "attempted_urls": [
+        "https://www.redfin.com/news/feed/"
+      ],
+      "status": "ok",
+      "discovered": 6,
+      "articles": 6,
+      "discovery_truncated": false,
+      "article_budget": 0,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 4,
+      "earliest_dated": 1792504008000,
+      "coverage": {
+        "lower": 1792582102770,
+        "upper": 1793186902770
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793186902770,
+      "samples": [
+        {
+          "title": "Holiday Season Is the Best Time For Homebuyers to Score a Deal in These 7 U.S. Metros",
+          "url": "https://www.redfin.com/news/best-time-to-get-deal-november-december/",
+          "published_at": 1793102446000,
+          "body_length": 6000,
+          "access": "preview"
+        },
+        {
+          "title": "Mortgage Rates Dip as AI Jitters Boost Bonds Ahead of Fed Decision, GDP Data",
+          "url": "https://www.redfin.com/news/mortgage-rates-dip-as-ai-jitters-boost-bonds-ahead-of-fed-decision-gdp-data/",
+          "published_at": 1793045798000,
+          "body_length": 4072,
+          "access": "preview"
+        },
+        {
+          "title": "U.S. Pending Home Sales Sink to a New Low",
+          "url": "https://www.redfin.com/news/housing-market-update-pending-home-sales-sink-high-rates/",
+          "published_at": 1792670430000,
+          "body_length": 5061,
+          "access": "preview"
+        }
+      ]
+    },
+    {
+      "url": "https://trerc.tamu.edu/texas-housing-insight/",
+      "type": "html",
+      "id": "trerc",
+      "name": "Texas Real Estate Research Center (TRERC)",
+      "research": true,
+      "required": false,
+      "checked_at": 1793186902770,
+      "attempted_urls": [
+        "https://trerc.tamu.edu/texas-housing-insight/"
+      ],
+      "status": "ok",
+      "discovered": 69,
+      "articles": 18,
+      "discovery_truncated": true,
+      "article_budget": 18,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 1,
+      "earliest_dated": 1743523903000,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793186902770,
+      "samples": [
+        {
+          "title": "Texas Rural Land Markets | Second Quarter 2026 | Texas Real Estate Research Center",
+          "url": "https://trerc.tamu.edu/reports/texas-rural-land-markets-second-quarter-2026",
+          "published_at": 1787239754000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "Texas Housing Insight | October 2026 | Texas Real Estate Research Center",
+          "url": "https://trerc.tamu.edu/reports/texas-housing-insight-october-2026",
+          "published_at": 1792767532000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "Texas Housing Insight | January 2026 | Texas Real Estate Research Center",
+          "url": "https://trerc.tamu.edu/reports/texas-housing-insight-january-2026",
+          "published_at": 1770133593000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.brookings.edu/topics/housing/",
+      "type": "html",
+      "id": "brookings-housing",
+      "name": "Brookings Institution",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.brookings.edu/topics/housing/"
+      ],
+      "status": "ok",
+      "discovered": 4,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 4,
+      "article_errors": [
+        {
+          "url": "https://www.brookings.edu/articles/americas-rural-future-olympic-peninsula/",
+          "error": "Article body unavailable or too short"
+        },
+        {
+          "url": "https://www.brookings.edu/articles/how-local-homeowners-insurance-market-stress-impacts-urban-and-suburban-housing-markets/",
+          "error": "Article body unavailable or too short"
+        },
+        {
+          "url": "https://www.brookings.edu/articles/pricing-climate-risk-hurricane-models-and-home-insurance-over-the-last-two-decades/",
+          "error": "Article body unavailable or too short"
+        }
+      ],
+      "undated": 0,
+      "recent": 0,
+      "earliest_dated": 1790197214000,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "How did the post-pandemic migration surge affect labor and housing markets?",
+          "url": "https://brookings.edu/articles/how-did-the-post-pandemic-migration-surge-affect-labor-and-housing-markets",
+          "published_at": 1790197214000,
+          "body_length": 194,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.har.com/content/department/newsroom?pid=640",
+      "type": "html",
+      "id": "har-research",
+      "name": "HAR Research",
+      "research": true,
+      "required": true,
+      "checked_at": 1793190008022,
+      "attempted_urls": [
+        "https://www.har.com/content/department/newsroom?pid=640"
+      ],
+      "status": "ok",
+      "discovered": 131,
+      "articles": 4,
+      "discovery_truncated": true,
+      "article_budget": 18,
+      "fetched_articles": 4,
+      "stop_reason": "date_horizon",
+      "fallback_bodies": 4,
+      "undated": 0,
+      "recent": 2,
+      "earliest_dated": 1789574400000,
+      "coverage_basis": "ordered_date_horizon",
+      "coverage": {
+        "lower": 1792585208022,
+        "upper": 1793190008022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793190008022,
+      "samples": [
+        {
+          "title": "HUFFMAN AREA LEADS HOUSTON'S HOTTEST COMMUNITIES WITH TRIPLE-DIGIT GROWTH",
+          "url": "https://har.com/content/department/newsroom?pid=2250",
+          "published_at": 1793030400000,
+          "body_length": 3342,
+          "access": "public"
+        },
+        {
+          "title": "HOUSTON RENTAL DEMAND REMAINS STRONG IN SEPTEMBER",
+          "url": "https://har.com/content/department/newsroom?pid=2248",
+          "published_at": 1792598400000,
+          "body_length": 2012,
+          "access": "public"
+        },
+        {
+          "title": "HOUSTON HOMEBUYING ACTIVITY EASES IN SEPTEMBER AS MORTGAGE RATES RISE",
+          "url": "https://har.com/content/department/newsroom?pid=2247",
+          "published_at": 1791993600000,
+          "body_length": 5202,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.zillow.com/research/feed/",
+      "type": "rss",
+      "id": "zillow-research",
+      "name": "Zillow Research",
+      "research": true,
+      "required": true,
+      "checked_at": 1793186902770,
+      "attempted_urls": [
+        "https://www.zillow.com/research/feed/"
+      ],
+      "status": "ok",
+      "discovered": 10,
+      "articles": 10,
+      "discovery_truncated": false,
+      "article_budget": 0,
+      "fallback_bodies": 6,
+      "undated": 0,
+      "recent": 6,
+      "earliest_dated": 1791410384000,
+      "coverage": {
+        "lower": 1792582102770,
+        "upper": 1793186902770
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793186902770,
+      "samples": [
+        {
+          "title": "Down Payment Assistance Could Cut the Time to Save for a Home by a Year and a Half or More",
+          "url": "https://www.zillow.com/research/down-payment-assistance-october-2026/",
+          "published_at": 1793181000000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "New Home Sales Declined in September as Builders Focused on Inventory Management",
+          "url": "https://www.zillow.com/research/new-home-sales-september-2026/",
+          "published_at": 1793114023000,
+          "body_length": 3298,
+          "access": "public"
+        },
+        {
+          "title": "Zillow: CPI Shelter Forecast, October 2026",
+          "url": "https://www.zillow.com/research/cpi-forecast-2026-oct/",
+          "published_at": 1793113200000,
+          "body_length": 5169,
+          "access": "preview"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nar.realtor/research-and-statistics/research-reports/research-update",
+      "type": "html",
+      "id": "nar-research",
+      "name": "NAR Research",
+      "research": true,
+      "required": true,
+      "checked_at": 1793187395183,
+      "attempted_urls": [
+        "https://www.nar.realtor/research-and-statistics/research-reports/research-update"
+      ],
+      "status": "ok",
+      "discovered": 13,
+      "articles": 13,
+      "discovery_truncated": false,
+      "article_budget": 13,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 0,
+      "earliest_dated": 1325243280000,
+      "coverage": {
+        "lower": 1792582595183,
+        "upper": 1793187395183
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793187395183,
+      "samples": [
+        {
+          "title": "October 2026 Commercial Real Estate Market Insights Report",
+          "url": "https://nar.realtor/commercial-real-estate-market-insights/october-2026-commercial-real-estate-market-insights-report",
+          "published_at": 1791212400000,
+          "body_length": 3424,
+          "access": "public"
+        },
+        {
+          "title": "How Lower Property Taxes Could Improve Housing Affordability in Florida",
+          "url": "https://nar.realtor/news/economists-outlook/how-lower-property-taxes-could-improve-housing-affordability-in-florida",
+          "published_at": 1792157400000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "Agent Movement and Retention Trends",
+          "url": "https://nar.realtor/news/economists-outlook/agent-movement-and-retention-trends",
+          "published_at": 1792157400000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.census.gov/construction/nrc/current/index.html",
+      "type": "page",
+      "id": "census-construction",
+      "name": "Census New Residential Construction",
+      "research": true,
+      "required": false,
+      "checked_at": 1793187395183,
+      "attempted_urls": [
+        "https://www.census.gov/construction/nrc/current/index.html"
+      ],
+      "status": "ok",
+      "discovered": 1,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 1,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 0,
+      "earliest_dated": 1792512000000,
+      "coverage": {
+        "lower": 1792582595183,
+        "upper": 1793187395183
+      },
+      "changed_without_new_date": [],
+      "versions": {
+        "https://census.gov/construction/nrc/current/index.html": "32a3768fcced69a73a044289c3d73c3550311fcd8e4990cb51c57ccfb352375d"
+      },
+      "last_success": 1793187395183,
+      "samples": [
+        {
+          "title": "New Residential Construction Press Release",
+          "url": "https://census.gov/construction/nrc/current/index.html",
+          "published_at": 1792512000000,
+          "body_length": 2429,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.census.gov/construction/nrs/current/index.html",
+      "type": "page",
+      "id": "census-sales",
+      "name": "Census New Residential Sales",
+      "research": true,
+      "required": false,
+      "checked_at": 1793187395183,
+      "attempted_urls": [
+        "https://www.census.gov/construction/nrs/current/index.html"
+      ],
+      "status": "ok",
+      "discovered": 1,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 1,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 1,
+      "earliest_dated": 1793116800000,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {
+        "https://census.gov/construction/nrs/current/index.html": "c03a0fa38527aa533c777b78bcff1e34902417a91673053b2d16e0b2dee2051a"
+      },
+      "last_success": 1793187395183,
+      "samples": [
+        {
+          "title": "New Residential Sales Press Release",
+          "url": "https://census.gov/construction/nrs/current/index.html",
+          "published_at": 1793116800000,
+          "body_length": 2317,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.fhfa.gov/data/hpi",
+      "type": "html",
+      "id": "fhfa-research",
+      "name": "FHFA House Price Index",
+      "research": true,
+      "required": false,
+      "checked_at": 1793186902770,
+      "attempted_urls": [
+        "https://www.fhfa.gov/data/hpi"
+      ],
+      "status": "ok",
+      "discovered": 1,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 1,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 1,
+      "earliest_dated": 1793116800000,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793186902770,
+      "samples": [
+        {
+          "title": "House Price Index (HPI) Monthly Report",
+          "url": "https://fhfa.gov/document/d/hpi/fhfa-hpi-monthly-october-2026",
+          "published_at": 1793116800000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.fanniemae.com/data-and-insights/forecast",
+      "type": "html",
+      "id": "fannie-esr",
+      "name": "Fannie Mae ESR",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.fanniemae.com/data-and-insights/forecast"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403",
+      "samples": []
+    },
+    {
+      "url": "https://www.freddiemac.com/pmms",
+      "type": "page",
+      "id": "freddie-pmms",
+      "name": "Freddie Mac PMMS",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.freddiemac.com/pmms"
+      ],
+      "status": "ok",
+      "discovered": 13,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 1,
+      "undated": 0,
+      "recent": 1,
+      "earliest_dated": 1792598400000,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {
+        "https://freddiemac.com/pmms": "0e8fb86c395e279e61efe93e340843758ef713767a57d771ea2346c9aedb0058"
+      },
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Mortgage Rates",
+          "url": "https://freddiemac.com/pmms",
+          "published_at": 1792598400000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.freddiemac.com/research-and-perspectives",
+      "type": "html",
+      "id": "freddie-research",
+      "name": "Freddie Mac Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.freddiemac.com/research-and-perspectives"
+      ],
+      "status": "ok",
+      "discovered": 7,
+      "articles": 7,
+      "discovery_truncated": false,
+      "article_budget": 7,
+      "undated": 2,
+      "recent": 0,
+      "earliest_dated": 1687276800000,
+      "coverage": {
+        "lower": 1792580914022,
+        "upper": 1793185714022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Insights, Notes, Briefs & Spotlights",
+          "url": "https://freddiemac.com/research/insight",
+          "published_at": 1734624000000,
+          "body_length": 2724,
+          "access": "public"
+        },
+        {
+          "title": "Consumer Research",
+          "url": "https://freddiemac.com/research/consumer-research",
+          "published_at": 1687276800000,
+          "body_length": 2524,
+          "access": "public"
+        },
+        {
+          "title": "Indices",
+          "url": "https://freddiemac.com/research/indices",
+          "published_at": 0,
+          "body_length": 2115,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.texasrealestate.com/research/quarterly-housing-report",
+      "type": "html",
+      "id": "texas-realtors",
+      "name": "Texas REALTORS Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.texasrealestate.com/research/quarterly-housing-report"
+      ],
+      "status": "ok",
+      "discovered": 36,
+      "articles": 9,
+      "discovery_truncated": true,
+      "article_budget": 18,
+      "article_errors": [
+        {
+          "url": "https://www.texasrealestate.com/api/media/file/2026_Q1_Texas_Quarterly_Housing_Report.pdf",
+          "error": "This operation was aborted"
+        },
+        {
+          "url": "https://www.texasrealestate.com/api/media/file/2026_Q3_Texas_Quarterly_Housing_Report-1.pdf",
+          "error": "This operation was aborted"
+        },
+        {
+          "url": "https://www.texasrealestate.com/api/media/file/2025_Q1_QuarterlyHousingReport.pdf",
+          "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)"
+        },
+        {
+          "url": "https://www.texasrealestate.com/api/media/file/2025_Q3_TexasQuarterlyHousingReport.pdf",
+          "error": "This operation was aborted"
+        },
+        {
+          "url": "https://www.texasrealestate.com/api/media/file/2024_Q2_QuarterlyHousingReport.pdf",
+          "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)"
+        },
+        {
+          "url": "https://www.texasrealestate.com/api/media/file/2023_Q2_QuarterlyHousingReport.pdf",
+          "error": "This operation was aborted"
+        },
+        {
+          "url": "https://www.texasrealestate.com/api/media/file/2022_Q1_QuarterlyHousingReport.pdf",
+          "error": "This operation was aborted"
+        },
+        {
+          "url": "https://www.texasrealestate.com/api/media/file/2022_Q2_QuarterlyHousingReport.pdf",
+          "error": "This operation was aborted"
+        },
+        {
+          "url": "https://www.texasrealestate.com/api/media/file/TexasRealEstateYearInReview_2022.pdf",
+          "error": "This operation was aborted"
+        }
+      ],
+      "undated": 9,
+      "recent": 0,
+      "earliest_dated": null,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Texas Quarterly Statewide Second quarter 2025",
+          "url": "https://texasrealestate.com/api/media/file/2025_Q2_TexasQuarterlyHousingReport.pdf",
+          "published_at": 0,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "Texas 5-YEAR COMPARISON by the numbers* HOME SALES VOLUME VS. MEDIAN PRICE",
+          "url": "https://texasrealestate.com/api/media/file/2025-Texas-Real-Estate-Year-in-Review-report.pdf",
+          "published_at": 0,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "Texas Quarterly Statewide First quarter 2024",
+          "url": "https://texasrealestate.com/api/media/file/2024_Q1_QuarterlyHousingReport.pdf",
+          "published_at": 0,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mymetrotex.com/market-reports/",
+      "type": "html",
+      "id": "metrotex-research",
+      "name": "MetroTex Market Reports",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.mymetrotex.com/market-reports/"
+      ],
+      "status": "ok",
+      "discovered": 165,
+      "articles": 17,
+      "discovery_truncated": true,
+      "article_budget": 18,
+      "article_errors": [
+        {
+          "url": "https://www.mymetrotex.com/wp-content/uploads/2026/06/NTREIS-Monthly-MLS-Summary-Report-202605.pdf",
+          "error": "This operation was aborted"
+        }
+      ],
+      "undated": 17,
+      "recent": 0,
+      "earliest_dated": null,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "North Texas Real Estate Information System Monthly MLS Summary Report",
+          "url": "https://mymetrotex.com/wp-content/uploads/2026/10/NTREIS-Monthly-MLS-Summary-Report-202609.pdf",
+          "published_at": 0,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "North Texas Real Estate Information System Monthly MLS Summary Report",
+          "url": "https://mymetrotex.com/wp-content/uploads/2026/02/NTREIS-Monthly-MLS-Summary-Report-202601.pdf",
+          "published_at": 0,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "North Texas Real Estate Information System Monthly MLS Summary Report",
+          "url": "https://mymetrotex.com/wp-content/uploads/2026/03/NTREIS-Monthly-MLS-Summary-Report-202602.pdf",
+          "published_at": 0,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.unlockmls.com/news",
+      "type": "html",
+      "id": "unlock-research",
+      "name": "Unlock MLS Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.unlockmls.com/news"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "This operation was aborted",
+      "samples": []
+    },
+    {
+      "url": "https://www.jchs.harvard.edu/blog",
+      "type": "html",
+      "id": "harvard-jchs",
+      "name": "Harvard JCHS",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.jchs.harvard.edu/blog"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403",
+      "samples": []
+    },
+    {
+      "url": "https://www.urban.org/expertise/housing-finance",
+      "type": "html",
+      "id": "urban-housing",
+      "name": "Urban Institute Housing Finance",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.urban.org/expertise/housing-finance"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403",
+      "samples": []
+    },
+    {
+      "url": "https://www.cbre.com/services/property-types/multifamily",
+      "type": "html",
+      "id": "cbre-research",
+      "name": "CBRE Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793187395183,
+      "attempted_urls": [
+        "https://www.cbre.com/services/property-types/multifamily",
+        "https://www.cbre.com/shared-sitemap/figure.xml",
+        "https://www.cbre.com/insights"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403",
+      "samples": []
+    },
+    {
+      "url": "https://www.jll.com/en-us/insights",
+      "type": "html",
+      "id": "jll-research",
+      "name": "JLL Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.jll.com/en-us/insights"
+      ],
+      "status": "ok",
+      "discovered": 15,
+      "articles": 14,
+      "discovery_truncated": false,
+      "article_budget": 15,
+      "article_errors": [
+        {
+          "url": "https://www.jll.com/en-us/insights/artificial-intelligence",
+          "error": "This operation was aborted"
+        }
+      ],
+      "undated": 6,
+      "recent": 0,
+      "earliest_dated": 1719426600000,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Global Real Estate Perspective, August 2026",
+          "url": "https://jll.com/en-us/insights/market-perspectives/global",
+          "published_at": 1785744000000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "Capital Flows",
+          "url": "https://jll.com/en-us/insights/capital-flows",
+          "published_at": 0,
+          "body_length": 278,
+          "access": "public"
+        },
+        {
+          "title": "Cities",
+          "url": "https://jll.com/en-us/insights/cities",
+          "published_at": 0,
+          "body_length": 274,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats",
+      "type": "html",
+      "id": "cushman-research",
+      "name": "Cushman & Wakefield Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
+      ],
+      "status": "ok",
+      "discovered": 87,
+      "articles": 15,
+      "discovery_truncated": true,
+      "article_budget": 18,
+      "article_errors": [
+        {
+          "url": "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats/us-office-marketbeat-reports",
+          "error": "This operation was aborted"
+        },
+        {
+          "url": "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats/us-multifamily-marketbeat",
+          "error": "This operation was aborted"
+        },
+        {
+          "url": "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats/hospitality-marketbeat",
+          "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)"
+        }
+      ],
+      "undated": 0,
+      "recent": 10,
+      "earliest_dated": 1791892800000,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "U.S. Industrial MarketBeat Report",
+          "url": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/us-industrial-marketbeat",
+          "published_at": 1791979200000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "U.S. Shopping Center MarketBeat Reports",
+          "url": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/us-shopping-center-marketbeat-report",
+          "published_at": 1791979200000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "Life Sciences MarketBeat",
+          "url": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/life-sciences-marketbeat",
+          "published_at": 1793102400000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.colliers.com/en/research",
+      "type": "html",
+      "id": "colliers-research",
+      "name": "Colliers Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.colliers.com/en/research"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403",
+      "samples": []
+    },
+    {
+      "url": "https://www.realpage.com/analytics/feed/",
+      "type": "rss",
+      "id": "realpage-research",
+      "name": "RealPage Analytics",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.realpage.com/analytics/feed/"
+      ],
+      "status": "ok",
+      "discovered": 1098,
+      "articles": 1098,
+      "discovery_truncated": false,
+      "article_budget": 0,
+      "undated": 0,
+      "recent": 12,
+      "earliest_dated": 1680193015000,
+      "coverage": {
+        "lower": 1792580914022,
+        "upper": 1793185714022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Apartment Market Turns a Corner as Supply Finally Exhales",
+          "url": "https://www.realpage.com/analytics/webcast-recap-us/",
+          "published_at": 1793137368000,
+          "body_length": 600,
+          "access": "feed_excerpt"
+        },
+        {
+          "title": "Concession Use Slips in Three U.S. Regions as the Midwest Ticks Up",
+          "url": "https://www.realpage.com/analytics/market-concessions-september-2026/",
+          "published_at": 1793084411000,
+          "body_length": 600,
+          "access": "feed_excerpt"
+        },
+        {
+          "title": "New York Job Gains Drop Sharply",
+          "url": "https://www.realpage.com/analytics/metro-jobs-september-2026/",
+          "published_at": 1793084411000,
+          "body_length": 600,
+          "access": "feed_excerpt"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nmhc.org/research-insight/quarterly-survey/",
+      "type": "html",
+      "id": "nmhc-research",
+      "name": "NMHC Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.nmhc.org/research-insight/quarterly-survey/"
+      ],
+      "status": "ok",
+      "discovered": 10,
+      "articles": 10,
+      "discovery_truncated": false,
+      "article_budget": 10,
+      "undated": 10,
+      "recent": 0,
+      "earliest_dated": null,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "NMHC Quarterly Survey of Apartment Conditions (October 2026)",
+          "url": "https://nmhc.org/research-insight/quarterly-survey/2026/nmhc-quarterly-survey-of-apartment-conditions-october-2026",
+          "published_at": 0,
+          "body_length": 4443,
+          "access": "public"
+        },
+        {
+          "title": "NMHC Quarterly Survey of Apartment Conditions (July 2026)",
+          "url": "https://nmhc.org/research-insight/quarterly-survey/2026/nmhc-quarterly-survey-of-apartment-conditions-july-2026",
+          "published_at": 0,
+          "body_length": 5002,
+          "access": "public"
+        },
+        {
+          "title": "NMHC Quarterly Survey of Apartment Conditions (April 2026)",
+          "url": "https://nmhc.org/research-insight/quarterly-survey/2026/nmhc-quarterly-survey-of-apartment-conditions-april-2026",
+          "published_at": 0,
+          "body_length": 5595,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://naahq.org/research",
+      "type": "html",
+      "id": "naa-research",
+      "name": "NAA Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://naahq.org/research"
+      ],
+      "status": "ok",
+      "discovered": 9,
+      "articles": 9,
+      "discovery_truncated": false,
+      "article_budget": 9,
+      "undated": 2,
+      "recent": 1,
+      "earliest_dated": 1785390340000,
+      "coverage": {
+        "lower": 1792580914022,
+        "upper": 1793185714022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Apartment Labor Market Dynamics Report | National Apartment Association",
+          "url": "https://naahq.org/research/apartment-labor-market-dynamics-report",
+          "published_at": 1785952132000,
+          "body_length": 4490,
+          "access": "public"
+        },
+        {
+          "title": "Apartment Market Pulse | National Apartment Association",
+          "url": "https://naahq.org/research/apartment-market-pulse",
+          "published_at": 1785390340000,
+          "body_length": 1619,
+          "access": "public"
+        },
+        {
+          "title": "Dollar of Rent Tool",
+          "url": "https://naahq.org/research/dollar-rent-tool",
+          "published_at": 0,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
+      "type": "html",
+      "id": "uli-pwc",
+      "name": "ULI/PwC Emerging Trends",
+      "research": true,
+      "required": false,
+      "checked_at": 1793186902770,
+      "attempted_urls": [
+        "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
+        "https://www.pwc.com/us/en/about-us/newsroom.html"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "Directory contained no matching links",
+      "samples": []
+    },
+    {
+      "url": "https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi",
+      "type": "page",
+      "id": "msci-research",
+      "name": "MSCI Real Assets Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)",
+      "samples": []
+    },
+    {
+      "url": "https://jbrec.com/resources/insights/",
+      "type": "html",
+      "id": "john-burns",
+      "name": "John Burns Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://jbrec.com/resources/insights/"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)",
+      "samples": []
+    },
+    {
+      "url": "https://www.northmarq.com/insights",
+      "type": "html",
+      "id": "northmarq-research",
+      "name": "Northmarq Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.northmarq.com/insights"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403",
+      "samples": []
+    },
+    {
+      "url": "https://www.berkadia.com/multifamily-reports/",
+      "type": "html",
+      "id": "berkadia-research",
+      "name": "Berkadia Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.berkadia.com/multifamily-reports/"
+      ],
+      "status": "ok",
+      "discovered": 7,
+      "articles": 6,
+      "discovery_truncated": false,
+      "article_budget": 7,
+      "article_errors": [
+        {
+          "url": "https://www.berkadia.com/research/berkadia-mid-year-2026-multifamily-market-report-national/",
+          "error": "Article body unavailable or too short"
+        }
+      ],
+      "undated": 2,
+      "recent": 0,
+      "earliest_dated": 1786982400000,
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Beyond Insights",
+          "url": "https://berkadia.com/beyond-insights",
+          "published_at": 1789660800000,
+          "body_length": 3625,
+          "access": "public"
+        },
+        {
+          "title": "Forget Neutral. Are Financial Conditions Actually Restrictive?",
+          "url": "https://berkadia.com/beyond-insights/economy",
+          "published_at": 1789660800000,
+          "body_length": 3191,
+          "access": "public"
+        },
+        {
+          "title": "NIC Fall Conference Recap: Development Takes Center Stage as the Market Evolves and Other Takeaways from this Year’s Conference",
+          "url": "https://berkadia.com/beyond-insights/markets",
+          "published_at": 0,
+          "body_length": 2584,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://arbor.com/research/reports/",
+      "type": "html",
+      "id": "arbor-research",
+      "name": "Arbor/Chandan Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://arbor.com/research/reports/"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)",
+      "samples": []
+    },
+    {
+      "url": "https://www.nmrk.com/insights/market-report",
+      "type": "html",
+      "id": "newmark-research",
+      "name": "Newmark Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.nmrk.com/insights/market-report"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403",
+      "samples": []
+    },
+    {
+      "url": "https://www.cotality.com/insights/all-insights",
+      "type": "html",
+      "id": "cotality-research",
+      "name": "Cotality / CoreLogic Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.cotality.com/insights/all-insights"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)",
+      "samples": []
+    },
+    {
+      "url": "https://mortgagetech.ice.com/resources/data-reports",
+      "type": "html",
+      "id": "ice-research",
+      "name": "ICE Mortgage Monitor",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://mortgagetech.ice.com/resources/data-reports"
+      ],
+      "status": "ok",
+      "discovered": 3,
+      "articles": 3,
+      "discovery_truncated": false,
+      "article_budget": 3,
+      "undated": 0,
+      "recent": 0,
+      "earliest_dated": 1780502400000,
+      "coverage": {
+        "lower": 1792580914022,
+        "upper": 1793185714022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "November Mortgage Monitor",
+          "url": "https://mortgagetech.ice.com/resources/data-reports/mortgage-monitor-webinar",
+          "published_at": 1780502400000,
+          "body_length": 902,
+          "access": "public"
+        },
+        {
+          "title": "ICE First Look at Mortgage Performance: Mortgage Performance Holds Steady Despite Calendar-Driven Rise in Delinquencies",
+          "url": "https://mortgagetech.ice.com/resources/data-reports/first-look-at-september-2026-mortgage-data",
+          "published_at": 1782446400000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "ICE Mortgage Monitor: Gen Z Accounts for Record 1 in 5 Purchase Mortgage Locks",
+          "url": "https://mortgagetech.ice.com/resources/data-reports/october-2026-mortgage-monitor",
+          "published_at": 1780876800000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://www.attomdata.com/news/category/market-trends/",
+      "type": "html",
+      "id": "attom-research",
+      "name": "ATTOM Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.attomdata.com/news/category/market-trends/"
+      ],
+      "status": "ok",
+      "discovered": 7,
+      "articles": 7,
+      "discovery_truncated": false,
+      "article_budget": 7,
+      "undated": 0,
+      "recent": 2,
+      "earliest_dated": 1789657204000,
+      "coverage": {
+        "lower": 1792580914022,
+        "upper": 1793185714022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793185714022,
+      "samples": [
+        {
+          "title": "Top 10 Counties Where Home Costs Consumed the Lowest Percentage of Average Wages in Q3 2026",
+          "url": "https://attomdata.com/news/market-trends/figuresfriday/top-10-counties-where-home-costs-consumed-the-lowest-percentage-of-average-wages-in-q3-2026",
+          "published_at": 1792775975000,
+          "body_length": 5522,
+          "access": "preview"
+        },
+        {
+          "title": "Home Affordability Remains Strained as Mortgage Rates Rise",
+          "url": "https://attomdata.com/news/market-trends/home-sales-prices/q3-2026-home-affordability-index",
+          "published_at": 1792681236000,
+          "body_length": 6000,
+          "access": "preview"
+        },
+        {
+          "title": "Top 10 Metros with the Largest Increases in Home Flipping ROI",
+          "url": "https://attomdata.com/news/market-trends/figuresfriday/top-10-metros-with-the-largest-increases-in-home-flipping-roi",
+          "published_at": 1792173097000,
+          "body_length": 4244,
+          "access": "preview"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey",
+      "type": "html",
+      "id": "mba-research",
+      "name": "MBA Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403",
+      "samples": []
+    },
+    {
+      "url": "https://www.apartmentlist.com/research",
+      "type": "html",
+      "id": "apartmentlist-research",
+      "name": "Apartment List Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793185714022,
+      "attempted_urls": [
+        "https://www.apartmentlist.com/research"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403",
+      "samples": []
+    },
+    {
+      "url": "https://www.apartments.com/grow/learning-center/market-trends",
+      "type": "html",
+      "id": "costar-research",
+      "name": "CoStar / Apartments.com Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793186902770,
+      "attempted_urls": [
+        "https://www.apartments.com/grow/learning-center/market-trends"
+      ],
+      "status": "ok",
+      "discovered": 13,
+      "articles": 13,
+      "discovery_truncated": false,
+      "article_budget": 13,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 0,
+      "earliest_dated": 1767960000000,
+      "coverage": {
+        "lower": 1792582102770,
+        "upper": 1793186902770
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793186902770,
+      "samples": [
+        {
+          "title": "7 Ways Multifamily Marketing Will Transform in 2027",
+          "url": "https://apartments.com/grow/learning-center/marketing-trends-transformations-2027-webinar",
+          "published_at": 1790251200000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "September Report: Rent Growth Continues Gradual Upward Climb",
+          "url": "https://apartments.com/grow/learning-center/rent-growth-update-september-2026",
+          "published_at": 1791201600000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "August Report: Rent Growth Reaches 1.3%, Indicating Stabilizing Market Conditions",
+          "url": "https://apartments.com/grow/learning-center/rent-growth-update-august-2026",
+          "published_at": 1789041600000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://press.spglobal.com/index.php?l=50&s=2429",
+      "type": "html",
+      "id": "sp-case-shiller",
+      "name": "S&P Cotality Case-Shiller",
+      "research": true,
+      "required": false,
+      "checked_at": 1793190008022,
+      "attempted_urls": [
+        "https://press.spglobal.com/index.php?l=50&s=2429"
+      ],
+      "status": "ok",
+      "discovered": 4,
+      "articles": 4,
+      "discovery_truncated": false,
+      "article_budget": 4,
+      "fetched_articles": 4,
+      "fallback_bodies": 4,
+      "undated": 0,
+      "recent": 1,
+      "earliest_dated": 1785254400000,
+      "coverage_basis": "full_listing",
+      "coverage": {
+        "lower": 1792585208022,
+        "upper": 1793190008022
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1793190008022,
+      "samples": [
+        {
+          "title": "S&P Cotality Case-Shiller Index Reports Annual Gain in August 2026 - Oct 27, 2026",
+          "url": "https://press.spglobal.com/2026-10-27-S-P-Cotality-Case-Shiller-Index-Reports-Annual-Gain-in-August-2026",
+          "published_at": 1793116800000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "S&P Cotality Case-Shiller Index Reports Annual Gain in July 2026 - Sep 29, 2026",
+          "url": "https://press.spglobal.com/2026-09-29-S-P-Cotality-Case-Shiller-Index-Reports-Annual-Gain-in-July-2026",
+          "published_at": 1790697600000,
+          "body_length": 6000,
+          "access": "public"
+        },
+        {
+          "title": "S&P Cotality Case-Shiller Index Reports Annual Gain in June 2026 - Aug 25, 2026",
+          "url": "https://press.spglobal.com/2026-08-25-S-P-Cotality-Case-Shiller-Index-Reports-Annual-Gain-in-June-2026",
+          "published_at": 1787673600000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://zondahome.com/new-home-market-update/",
+      "type": "page",
+      "id": "zonda-research",
+      "name": "Zonda Research",
+      "research": true,
+      "required": false,
+      "checked_at": 1793190481447,
+      "attempted_urls": [
+        "https://zondahome.com/new-home-market-update/"
+      ],
+      "status": "ok",
+      "discovered": 1,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 1,
+      "fetched_articles": 1,
+      "fallback_bodies": 1,
+      "undated": 0,
+      "recent": 1,
+      "earliest_dated": 1792670400000,
+      "coverage_basis": "full_listing",
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {
+        "https://zondahome.com/new-home-market-update": "472389cbb3863416bd9389f5284bfbf753323d3dcb748402a562f70f854f24df"
+      },
+      "last_success": 1793190481447,
+      "samples": [
+        {
+          "title": "New Home Market Update",
+          "url": "https://zondahome.com/new-home-market-update",
+          "published_at": 1792670400000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    },
+    {
+      "url": "https://zondahome.com/new-home-lot-supply-index-2/",
+      "type": "page",
+      "id": "zonda-lot-supply",
+      "name": "Zonda Lot Supply Index",
+      "research": true,
+      "required": false,
+      "checked_at": 1793190481447,
+      "attempted_urls": [
+        "https://zondahome.com/new-home-lot-supply-index-2/"
+      ],
+      "status": "ok",
+      "discovered": 1,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 1,
+      "fetched_articles": 1,
+      "fallback_bodies": 1,
+      "undated": 0,
+      "recent": 0,
+      "earliest_dated": 1786622400000,
+      "coverage_basis": "full_listing",
+      "coverage": {
+        "lower": 1792585681447,
+        "upper": 1793190481447
+      },
+      "changed_without_new_date": [],
+      "versions": {
+        "https://zondahome.com/new-home-lot-supply-index-2": "1e27e1aaa61d30025009eb6adf8b8bf7d6fb75a859a0c453543d7bae47151a15"
+      },
+      "last_success": 1793190481447,
+      "samples": [
+        {
+          "title": "New Home Lot Supply Index",
+          "url": "https://zondahome.com/new-home-lot-supply-index-2",
+          "published_at": 1786622400000,
+          "body_length": 6000,
+          "access": "public"
+        }
+      ]
+    }
+  ]
+}

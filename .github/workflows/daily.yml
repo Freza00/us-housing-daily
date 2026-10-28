@@ -1,75 +1,90 @@
 name: Daily News Build
-
-# 北京 08:57 是发布主时间点。三条独立路径同时兜底：
-#   1. GH schedule '57 0 * * *'         主时间点（GH best-effort，可能 skip / 迟到几小时）
-#   2. Vercel Cron → repository_dispatch  同一时刻并发，不同 infra 平行兜底（见 vercel.json）
-#   3. GH schedule 3 次小时级 retry      上面两条都挂时的最后一道防线
-# 任何一路 commit 了 data/<今天>.json 之后，剩余 fire 都会被 dedupe step 5s no-op 掉。
 on:
   schedule:
-    - cron: '57 0 * * *'        # UTC 00:57 = 北京 08:57 — 主时间点（和 Vercel Cron 同时）
-    - cron: '27 1,2,3 * * *'    # 北京 09:27 / 10:27 / 11:27 — 主路径都挂时兜底
-  workflow_dispatch: {}
+    - cron: '17 21,22,23 * * 0-4'
+    - cron: '17 0 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Rebuild an existing issue on a working day
+        type: boolean
+        default: false
   repository_dispatch:
-    types: [daily-build]   # 由 Vercel Cron 通过 GH dispatches API 触发
-  push:
-    branches: [main]
-    paths:
-      - 'config/sources.json'
-      - '.github/workflows/daily.yml'
-      - 'scripts/build.mjs'
-
+    types: [daily-build]
 permissions:
-  contents: write   # 需要 commit data/ + state/
-
+  contents: write
 concurrency:
-  group: daily-build
+  group: news-build
   cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      FORCE_RUN: ${{ inputs.force && '1' || '0' }}
     steps:
       - uses: actions/checkout@v5
-
-      - name: Check if today's build already exists
-        id: dedupe
-        run: |
-          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
-          echo "today_bj=${TODAY}" >> "$GITHUB_OUTPUT"
-          if [ -f "data/${TODAY}.json" ]; then
-            echo "already_built=true" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Skipped::data/${TODAY}.json 已存在，跳过 pipeline（同日补打 cron 自动 no-op）"
-          else
-            echo "already_built=false" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Building::data/${TODAY}.json 不存在，跑 pipeline"
-          fi
-
       - uses: actions/setup-node@v5
-        if: steps.dedupe.outputs.already_built == 'false'
         with:
-          node-version: '20'
-
-      - name: Run pipeline (fetch + score + enrich + LLM summarize)
-        if: steps.dedupe.outputs.already_built == 'false'
+          node-version: '22'
+      - name: Calendar and complete-issue guard
+        id: gate
+        run: node scripts/can-run.mjs daily
+      - name: Restore acquisition and model checkpoints
+        if: steps.gate.outputs.go == 'true'
+        uses: actions/cache/restore@v6
+        with:
+          path: |
+            state/source-cache.json
+            state/collection-cache.json
+            state/llm-cache/
+          key: news-v4-${{ hashFiles('config/sources.json', 'scripts/lib/sources.mjs') }}-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: news-v4-${{ hashFiles('config/sources.json', 'scripts/lib/sources.mjs') }}-${{ runner.os }}-
+      - name: Ensure PDF text extraction
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends poppler-utils
+          fi
+      - name: Validate pipeline
+        if: steps.gate.outputs.go == 'true'
+        run: npm test
+      - name: Build daily
+        if: steps.gate.outputs.go == 'true'
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
-          WRITER_MODE: global
         run: node scripts/build.mjs
-
-      - name: Commit data files
-        if: steps.dedupe.outputs.already_built == 'false'
-        env:
-          TODAY_BJ: ${{ steps.dedupe.outputs.today_bj }}
+      - name: Preserve checkpoints even after a failed model stage
+        if: always() && steps.gate.outputs.go == 'true'
+        uses: actions/cache/save@v6
+        with:
+          path: |
+            state/source-cache.json
+            state/collection-cache.json
+            state/llm-cache/
+          key: news-v4-${{ hashFiles('config/sources.json', 'scripts/lib/sources.mjs') }}-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Publish generated files
+        if: steps.gate.outputs.go == 'true'
         run: |
           git config user.name "Freza00"
           git config user.email "Freza00@users.noreply.github.com"
           git add data/ state/ public/index.html
-          if git diff --cached --quiet; then
-            echo "no changes to commit"
-          else
-            git commit -m "chore: daily build for ${TODAY_BJ}"
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: 更新工作日新闻与研究摘要及采集诊断"
             git push
           fi
+      - name: Preserve failed-run acquisition evidence
+        if: failure() && steps.gate.outputs.go == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: news-inputs-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            state/collection-checkpoint.json
+            state/collection-cache.json
+            state/inputs/
+            state/snapshots/
+          retention-days: 14
+          if-no-files-found: ignore

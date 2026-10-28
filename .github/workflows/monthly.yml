@@ -1,81 +1,90 @@
 name: Monthly Digest Build
-
-# 每周一北京 10:30 (UTC 02:30) 是发布主时间点。三条独立路径同时兜底：
-#   1. GH schedule '30 2 * * 1'   主时间点
-#   2. Vercel Cron → repository_dispatch  同一时刻并发 (见 vercel.json)
-#   3. GH schedule 3 次小时级 retry
-# build-monthly.mjs 内部 isFirstMondayOfMonth 守卫：非当月第一个周一时脚本自行退出 0，
-# 不写文件 → git diff --cached --quiet → "no changes to commit" 干净 no-op。
-# 当月第一个周一 commit 了 data/monthly/<period_label>.json 之后，后续 fire 被 dedupe step no-op 掉。
 on:
   schedule:
-    - cron: '30 2 * * 1'       # 北京 10:30 — 主时间点（和 Vercel Cron 同时）
-    - cron: '0 4,5,6 * * 1'    # 北京 12:00 / 13:00 / 14:00 — retry trio
-  workflow_dispatch: {}
+    - cron: '30 6 * * 1'
+    - cron: '0 8,9 * * 1'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Rebuild an existing issue on a working day
+        type: boolean
+        default: false
   repository_dispatch:
-    types: [monthly-build]   # 由 Vercel Cron 通过 GH dispatches API 触发
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/build-monthly.mjs'
-      - 'scripts/lib/digest-core.mjs'
-      - 'scripts/lib/dates.mjs'
-      - '.github/workflows/monthly.yml'
-
+    types: [monthly-build]
 permissions:
   contents: write
-
 concurrency:
-  group: monthly-build
+  group: news-build
   cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      FORCE_RUN: ${{ inputs.force && '1' || '0' }}
     steps:
       - uses: actions/checkout@v5
-
       - uses: actions/setup-node@v5
         with:
-          node-version: '20'
-
-      - name: Compute ET period_label + dedupe check
-        id: period
+          node-version: '22'
+      - name: Calendar and complete-issue guard
+        id: gate
+        run: node scripts/can-run.mjs monthly
+      - name: Restore acquisition and model checkpoints
+        if: steps.gate.outputs.go == 'true'
+        uses: actions/cache/restore@v6
+        with:
+          path: |
+            state/source-cache.json
+            state/collection-cache.json
+            state/llm-cache/
+          key: news-v4-${{ hashFiles('config/sources.json', 'scripts/lib/sources.mjs') }}-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: news-v4-${{ hashFiles('config/sources.json', 'scripts/lib/sources.mjs') }}-${{ runner.os }}-
+      - name: Ensure PDF text extraction
+        if: steps.gate.outputs.go == 'true'
         run: |
-          TODAY_BJ=$(TZ=Asia/Shanghai date +%Y-%m-%d)
-          echo "today_bj=${TODAY_BJ}" >> "$GITHUB_OUTPUT"
-          # period_label = YYYY-MM of the prior calendar month. Use dates.mjs helper.
-          PERIOD_LABEL=$(node --input-type=module -e \
-            "import('./scripts/lib/dates.mjs').then(m => console.log(m.etMonthBounds(new Date()).label));")
-          echo "period_label=${PERIOD_LABEL}" >> "$GITHUB_OUTPUT"
-          if [ -f "data/monthly/${PERIOD_LABEL}.json" ]; then
-            echo "already_built=true" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Skipped::data/monthly/${PERIOD_LABEL}.json 已存在，跳过 pipeline"
-          else
-            echo "already_built=false" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Building::data/monthly/${PERIOD_LABEL}.json 不存在，跑 pipeline"
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends poppler-utils
           fi
-
-      - name: Run monthly pipeline
-        if: steps.period.outputs.already_built == 'false'
+      - name: Validate pipeline
+        if: steps.gate.outputs.go == 'true'
+        run: npm test
+      - name: Build monthly
+        if: steps.gate.outputs.go == 'true'
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
         run: node scripts/build-monthly.mjs
-
-      - name: Commit
-        if: steps.period.outputs.already_built == 'false'
-        env:
-          TODAY_BJ: ${{ steps.period.outputs.today_bj }}
-          PERIOD_LABEL: ${{ steps.period.outputs.period_label }}
+      - name: Preserve checkpoints even after a failed model stage
+        if: always() && steps.gate.outputs.go == 'true'
+        uses: actions/cache/save@v6
+        with:
+          path: |
+            state/source-cache.json
+            state/collection-cache.json
+            state/llm-cache/
+          key: news-v4-${{ hashFiles('config/sources.json', 'scripts/lib/sources.mjs') }}-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Publish generated files
+        if: steps.gate.outputs.go == 'true'
         run: |
           git config user.name "Freza00"
           git config user.email "Freza00@users.noreply.github.com"
-          git add data/monthly/
-          if git diff --cached --quiet; then
-            echo "no changes to commit"
-          else
-            git commit -m "chore: monthly digest for ${PERIOD_LABEL} (built ${TODAY_BJ})"
+          git add data/ state/ public/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: 更新月度研究摘要及采集诊断"
             git push
           fi
+      - name: Preserve failed-run acquisition evidence
+        if: failure() && steps.gate.outputs.go == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: news-inputs-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            state/collection-checkpoint.json
+            state/collection-cache.json
+            state/inputs/
+            state/snapshots/
+          retention-days: 14
+          if-no-files-found: ignore

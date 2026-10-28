@@ -4,21 +4,36 @@
   "outputDirectory": "public",
   "framework": null,
   "crons": [
-    { "path": "/api/trigger-daily",   "schedule": "57 0 * * *" },
-    { "path": "/api/trigger-weekly",  "schedule": "0 2 * * 1" },
-    { "path": "/api/trigger-monthly", "schedule": "30 2 * * 1" }
+    {
+      "path": "/api/trigger-daily",
+      "schedule": "0 21 * * 0-4"
+    },
+    {
+      "path": "/api/trigger-weekly",
+      "schedule": "0 23 * * 0"
+    },
+    {
+      "path": "/api/trigger-monthly",
+      "schedule": "30 6 * * 1"
+    }
   ],
   "headers": [
     {
       "source": "/data/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=300, s-maxage=600, stale-while-revalidate=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, s-maxage=600, stale-while-revalidate=3600"
+        }
       ]
     },
     {
       "source": "/(style.css|app.js)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     }
   ]

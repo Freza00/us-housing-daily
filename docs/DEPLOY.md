@@ -1,169 +1,50 @@
-# Deployment Guide
+# 部署与运行
 
-This guide walks you through running US Housing Daily as a continuously updating site on free tiers. End state:
+Vercel 托管 `public/`，构建时复制 `data/`。GitHub Actions 生成数据并提交回仓库，主分支推送触发既有 Vercel 集成。生产部署与远端写入需要用户明确授权。
 
-- Static dashboard hosted on Vercel
-- GitHub Actions cron updates `data/latest.json` daily at **08:57 Beijing time** (UTC 00:57)
-- Vercel auto-redeploys on every push to `main`
-- Total cost: under $1/month
+## 配置
 
-Estimated time: **15–20 minutes**.
+GitHub Repository Secrets 使用 `LLM_API_KEY`、`LLM_ENDPOINT`、`LLM_MODEL`。保留已有密钥；推荐的当前模型配置是 `gpt-6.1-sol`。生成时分别显式请求 `medium` 和 `low`，不传 `temperature`。中转兼容性以 `scripts/probe-model.mjs` 的实际结果为准。
 
-## Prerequisites
+SEC EDGAR 来源需要配置真实 `SEC_CONTACT_EMAIL`；未设置时该来源可能拒绝访问，不能把占位联系方式视为已符合要求。可通过 Actions 的环境配置传入；不要将真实密钥写进代码。
 
-- A GitHub account (free)
-- A Vercel account (hobby tier, free)
-- An LLM API key — any OpenAI-compatible endpoint works. Tested:
-  - OpenAI (`gpt-4o-mini`, `gpt-5-mini`)
-  - Moonshot Kimi (`kimi-k2-turbo-preview`, `Kimi-K2.6` via proxy)
-  - Anthropic Claude via OpenAI-compatible proxy (`claude-haiku-4-5`)
-  - Together / Fireworks / Groq / self-hosted vLLM
+可选 Vercel 定时触发使用 `GH_PAT` 和 `CRON_SECRET`：前者需要仓库 dispatch 权限，后者验证定时请求。已启用的 GitHub cron 可独立运行，不必增加一套触发器。两个入口同时触发时，共享并发组和完整期刊守卫负责减少重复生成。
 
-## 1. Fork or push the repo
+## 日历与重试
 
-**Fork on GitHub web UI** (easiest), or push from local:
+时间及周期见 README.md。工作流的 UTC cron 已换成北京时间工作日：
 
-```bash
-# After cloning + customizing
-cd us-housing-daily
-git remote set-url origin git@github.com:<your-username>/us-housing-daily.git
-git push -u origin main
-```
+- 日报：Vercel 主触发为 UTC 周日至周四 21:00，即北京周一至周五 05:00；Actions 在 UTC 周日至周四 21:17、22:17、23:17 及周一至周五 00:17 补偿检查。
+- 周报：Vercel 主触发为周日 23:00 UTC，即北京周一 07:00；Actions 于周日 23:07、23:27、23:47 UTC 及周一 00:07、00:27、00:47 UTC 作补偿检查（北京 07:00／08:00 两轮）。固定统计上周一 05:00 至本周一 05:00（北京），不等待日报模型成稿。
+- 月报：周一 06:30 UTC；08:00、09:00 UTC 补偿检查，脚本限定首个周一。
+- 周末在 API、工作流守卫和生成脚本退出，`force` 也不绕过周末。
 
-## 2. Configure GitHub Secrets
+完整期刊已存在且 latest 指向该期时，补偿检查不再抓取或调用模型；不完整期刊可重建。GitHub 定时执行可能延迟，不承诺整点完成。
 
-Repo → **Settings → Secrets and variables → Actions → New repository secret**. Add four secrets:
+三类工作流共享 `news-build` 并发组，任务最长 20 分钟。PDF 工具缺失时安装 Poppler，再运行测试。旧的失败后等待一小时再触发循环已移除，失败监测工作流只记录告警。
 
-| Secret | Value | Example |
-|---|---|---|
-| `LLM_API_KEY` | Your provider API key | `sk-...` |
-| `LLM_ENDPOINT` | Chat-completions URL | `https://api.openai.com/v1/chat/completions` |
-| `LLM_MODEL` | Model name | `gpt-4o-mini` |
-| `SEC_CONTACT_EMAIL` *(optional)* | Your email | `you@example.com` |
+## 检查点与故障证据
 
-> ⚠️ Never commit your API key. The `.env` file is in `.gitignore`. GitHub Secrets are encrypted at rest and only decrypted into the runner during workflow execution.
->
-> The SEC EDGAR fair-use policy requires fetcher User-Agent strings to include real contact info. If you skip `SEC_CONTACT_EMAIL`, the fallback `contact@example.com` will still get responses but you should configure your own to be a good citizen.
+来源条件请求缓存及按完整模型请求计算的结果缓存使用 Actions cache restore/save；缓存组包含来源配置与解析模块散列，规则变动后不恢复旧解析结果；即使后续模型失败也保存检查点。模型缓存只存已通过校验的结果，重跑时再次校验。来源缓存和模型缓存不写入 Git。Actions cache 的逐出意味着缓存命中不保证，不能作为正确性前提。
 
-## 3. Trigger the first build
+失败任务上传 `state/inputs/` 和 `state/snapshots/` 作为 artifact，保留 14 天。成功任务提交每日采集快照和实际候选，可用于周月报与离线比较。缓存和 artifact 不包含 .env 或密钥。
 
-Repo → **Actions tab** → **Daily News Build** workflow → **Run workflow** (manual `workflow_dispatch`).
+相关能力依据 [Actions cache 官方说明](https://github.com/actions/cache) 和 [upload-artifact 官方说明](https://github.com/actions/upload-artifact)，当前候选分别使用 v6 和 v7。配置的运行效果仍需一次获准的线上工作流验证。
 
-It takes 60–90 seconds. The action will:
+## 发布验收
 
-1. Fetch all 30 RSS sources in parallel
-2. Run scoring, deduplication, and section selection
-3. Call the LLM once with the top-20 batch
-4. Commit `data/latest.json` and `data/YYYY-MM-DD.json` back to `main`
+1. 本地测试通过，检查仅包含本次工程改动。
+2. 在可联网环境运行研究源探针，检查必需来源、日期、正文和固定 URL 的版本记录。
+3. 使用既有路由运行 low／medium 小额参数探针，再执行隔离日报与周报；记录实际 usage、耗时和失败率。
+4. 用固定新快照作模型 A/B，缺失日期的事后重建必须单独标注。旧选中稿不能证明原始候选召回。
+5. 完成桌面及手机视觉验收后，取得提交、推送和生产部署授权，再发布并核对线上日期和来源状态。
 
-When it finishes, you should see a new commit `chore: daily build for YYYY-MM-DD` on `main`.
+当前未完成的验收以 ROADMAP.md 为准。
 
-## 4. Connect Vercel
+## 早间可读目标及检查点
 
-Go to **[vercel.com/new](https://vercel.com/new) → Import Git Repository → select your fork → Deploy**.
+09:00 是可读目标，不是平台承诺。GitHub 的 schedule 可排队延迟；Vercel Hobby cron 只保证小时内精度，部署前核对套餐。日报与周报均有 Vercel 主触发和 Actions 错峰补偿，同类型相同截止点的完整期刊跳过重建。
 
-Vercel auto-detects `vercel.json`. Key settings (no need to change):
+collection-checkpoint.json 记录逐源水位和待处理原料，成功时随 state 提交；collection-cache.json 保留完整最近采集池，由 Actions cache 保存，恢复时按源合并，不覆盖已提交的更新水位；源站与模型缓存不进 Git。恢复检查点时与原始快照一起使用，不用发布成功时间替代采集水位。首次切换若没有检查点，从此前期刊截止点初始化并记录来源；已有游标不做 7 天截断。
 
-- **Build Command**: `mkdir -p public/data && cp -r data/* public/data/ 2>/dev/null || true`
-- **Output Directory**: `public`
-- **Framework**: None (static site)
-
-The build copies `data/` into `public/data/` so the static dashboard can fetch JSON from `/data/latest.json`. About 30 seconds to deploy.
-
-After deploy, visit `https://<your-project>.vercel.app` to see the dashboard.
-
-## 5. Verify the daily cron
-
-The workflow (`.github/workflows/daily.yml`) runs daily at **UTC 00:57 (Beijing 08:57)**:
-
-```yaml
-on:
-  schedule:
-    - cron: '57 0 * * *'
-  workflow_dispatch:    # also allow manual trigger
-```
-
-Each daily run produces a new commit. Vercel watches the `main` branch and redeploys automatically — typically the new content is live by **09:00 Beijing time**.
-
-The time window is `[yesterday 08:57, today 08:57)` (absolute boundaries), so news cleanly chains across days with no overlap or gap.
-
-## Local development
-
-```bash
-# Skip LLM, just verify the fetching pipeline (~12s)
-LLM_SKIP=1 node scripts/build.mjs
-
-# Full pipeline with LLM (~60–90s, depends on LLM provider latency)
-npm run build              # reads .env
-
-# Local preview server (auto-symlinks data/ into public/data/)
-npm run preview            # http://localhost:8080
-```
-
-## Cost breakdown
-
-| Component | Free-tier limit | Daily usage | Monthly cost |
-|---|---|---|---|
-| GitHub Actions | 2,000 minutes/month | ~1.5 min/day = 45 min/month | $0 |
-| Vercel hobby | 100 GB-hr execution / 100 GB bandwidth | < 1 GB | $0 |
-| LLM API | varies | ~3–5K tokens/day batch | $0.50–1 |
-| **Total** | — | — | **< $1/month** |
-
-## Static API endpoints
-
-| Path | Description |
-|---|---|
-| `/` | Frontend dashboard (with zh / en toggle) |
-| `/data/latest.json` | Latest run |
-| `/data/YYYY-MM-DD.json` | Specific date |
-| `/data/dates.json` | Index of available dates (last 90 days) |
-
-Anyone can `curl` these — they're plain static files.
-
-## Customizing without redeploy
-
-Most knobs are in two files:
-
-**`config/sources.json`** — add / remove / reweight RSS sources. After editing, `git push` triggers the next cron to use the new config.
-
-**`scripts/build.mjs`** — scoring weights, classification regex, LLM prompt, section quotas. Specifically:
-
-- Source weights — `weight` field (1–10) per source in `sources.json`
-- Time decay — `scoreItem()` near line 232: `ageH < 6 → +6`, `< 24 → +4`, `< 48 → +2`
-- Keyword multipliers — `HOT_CORE` / `HOT_REGIONAL` / `HOT_MACRO` / `HOT_INST` / `HOT_TREND` arrays
-- Section quotas / extended-window policy — `SECTIONS` array
-- Classification rules — `classify()` plus `RE_RES`, `RE_SUNBELT`, `RE_MULTIFAMILY_ASSET`, `RE_NON_HOUSING_MARKET`
-- LLM prompt + importance distribution targets — `summarizeBatch()`
-
-Push to `main`, the next cron picks up the change. No Vercel redeploy needed (it's data-driven, not code-driven for the frontend).
-
-## FAQ
-
-**The first push didn't trigger Actions.**
-Check Actions tab. If disabled, click "I understand my workflows, go ahead and enable them."
-
-**Vercel deployed but the dashboard is blank.**
-Check Vercel build logs. Common cause: `vercel.json` `outputDirectory` mismatch. Verify `public/index.html` exists and `public/data/latest.json` was copied during build.
-
-**Data isn't updating.**
-Check whether `main` has a new `chore: daily build for ...` commit. If not, the cron failed — read the failed Actions run log. Most common cause: `LLM_API_KEY` missing or invalid.
-
-**`seen.json` is growing.**
-The pipeline auto-prunes entries older than 21 days. Each entry is ~150 bytes; max size is ~60 KB.
-
-**A source returns HTTP 403 from GitHub Actions.**
-Add an `alternates: []` field to that source in `sources.json`. Default fallback is Google News RSS — see `config/sources.json` for `inman` / `multi-housing-news` / `lance-lambert` examples.
-
-**A whole section is missing or under-quota.**
-The 24-hour pool was empty for that section. Either:
-1. Add more sources (most common — see `config/sources.json` and how Sun Belt coverage was expanded with `phoenix-agent` / `atlanta-agent` / `miami-agent` / `google-news-sunbelt`)
-2. Set `extendedWindow: true` on the section in `SECTIONS`, so it falls back to a 7-day window when 24h is dry.
-
-**Want to switch from US housing to a different topic.**
-Replace `config/sources.json` with feeds for your topic, then update:
-- `SECTIONS` (the 5 buckets)
-- `classify()` (routing rules)
-- `RE_*` regex patterns (keyword detection)
-- LLM `systemPrompt` (the persona / language)
-
-The pipeline is topic-agnostic — only the configuration is housing-specific.
+代码 push／PR 只运行 Validate Pipeline 离线测试，不携带生产密钥。生成工作流仅由 schedule、workflow_dispatch 或 repository_dispatch 触发，避免晚间部署改写当天早间期刊。

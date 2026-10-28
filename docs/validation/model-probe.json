@@ -1,0 +1,30 @@
+[
+  {
+    "requested_effort": "low",
+    "response_model": "gpt-6.1-sol",
+    "ms": 7504,
+    "usage": {
+      "completion_tokens": 9,
+      "total_tokens": 326,
+      "prompt_tokens": 317,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "cached_creation_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    }
+  },
+  {
+    "requested_effort": "medium",
+    "response_model": "gpt-6.1-sol",
+    "ms": 2523,
+    "usage": {
+      "prompt_tokens": 4397,
+      "completion_tokens": 9,
+      "total_tokens": 4406
+    }
+  }
+]

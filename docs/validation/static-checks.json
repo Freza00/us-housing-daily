@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-28T12:29:30.850Z",
+  "node": "25.8.0",
+  "syntax_files": 32,
+  "syntax_errors": [],
+  "yaml_files": [
+    ".github/workflows/daily-retry.yml",
+    ".github/workflows/daily.yml",
+    ".github/workflows/monthly.yml",
+    ".github/workflows/weekly.yml"
+  ],
+  "yaml_exit": 0,
+  "yaml_result": "YAML parsed\n"
+}
