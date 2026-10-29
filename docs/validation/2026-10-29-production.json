@@ -1,0 +1,62 @@
+{
+  "origin": "https://news-agent-mu.vercel.app",
+  "commit": "fcf48b8e4907bf9d28cb53caecc3b5216d63ec38",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "4912a07be54aa13dd1abe9fc2174db0523e89008ddcf9ba98c3f738697a440bd",
+      "matches_candidate": true,
+      "date": "2026-10-29",
+      "items": 20,
+      "publication_status": "degraded"
+    },
+    {
+      "path": "/data/latest.json",
+      "status": 200,
+      "sha256": "782e69c7e88419b098b43c9393779b61d8cb6893dd76e20271b61f33b6092337",
+      "matches_candidate": true,
+      "date": "2026-10-29",
+      "items": 20,
+      "publication_status": "degraded"
+    },
+    {
+      "path": "/data/2026-10-29.json",
+      "status": 200,
+      "sha256": "782e69c7e88419b098b43c9393779b61d8cb6893dd76e20271b61f33b6092337",
+      "matches_candidate": true,
+      "date": "2026-10-29",
+      "items": 20,
+      "publication_status": "degraded"
+    },
+    {
+      "path": "/data/dates.json",
+      "status": 200,
+      "sha256": "74a3d2981c12259a80638af562aedc9a1ca3aea5ec6851140d8c12550b8dbff4",
+      "matches_candidate": true,
+      "contains_29": true,
+      "first": "2026-10-29"
+    }
+  ],
+  "pass": true,
+  "verified_at": "2026-10-29 16:59 Asia/Shanghai",
+  "repository": "https://github.com/Freza00/us-housing-daily",
+  "ci": {
+    "url": "https://github.com/Freza00/us-housing-daily/actions/runs/40845600776",
+    "status": "success",
+    "node_major": 22,
+    "tests": 127,
+    "pass": 127,
+    "fail": 0
+  },
+  "deployment": {
+    "url": "https://vercel.com/freza00s-projects/news-agent/ChAbePwZpDBsK8fkG9RhpEzJaeUe",
+    "status": "success"
+  },
+  "limits": [
+    "Issue recovered from saved complete model output with one contiguous quote correction and one missing summary source reference.",
+    "Publication remains degraded; source coverage gaps are retained.",
+    "Future scheduled generation and production failure artifacts remain unverified.",
+    "No additional model requests were made for recovery or deployment."
+  ]
+}
