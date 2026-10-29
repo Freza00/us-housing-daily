@@ -45,7 +45,7 @@ const I18N = {
     updated_prefix: '更新于 ',
     timezone_label: '北京',
     loading: '加载中…',
-    section_empty: '本期暂无达到入选标准的内容',
+    section_empty: '本期暂无已入选内容',
     no_filter_match: '该 filter 下暂无新闻',
     load_failed: '加载失败',
     load_failed_hint: '如果首次部署还没有数据，请手动触发一次 GitHub Actions workflow，或等明早 9 点 cron 自动跑。',
@@ -101,7 +101,7 @@ const I18N = {
     updated_prefix: 'Updated ',
     timezone_label: 'ET',
     loading: 'Loading…',
-    section_empty: 'No qualifying items in this issue',
+    section_empty: 'No selected items in this issue',
     no_filter_match: 'No items matching filter',
     load_failed: 'Failed to load',
     load_failed_hint: 'If this is the first deploy with no data yet, manually trigger the GitHub Actions workflow or wait for the daily cron.',
@@ -278,6 +278,7 @@ const TAG_LABEL = {
   'housing':'住宅市场','multifamily':'多户','btr-sfr':'BTR/SFR',
   'office':'办公','industrial':'工业','data-center':'数据中心',
   'retail':'零售','hotel':'酒店','mixed-asset':'跨资产',
+  'self-storage':'自存储','senior-housing':'老年住房','life-sciences':'生命科学',
   // 地理
   'texas':'德州','dfw':'DFW','houston':'Houston','austin':'Austin',
   'sun-belt':'Sun Belt','nyc':'NYC','california':'California',
@@ -297,6 +298,7 @@ const TAG_DIM = {
   // asset
   'housing':'asset','multifamily':'asset','btr-sfr':'asset','office':'asset',
   'industrial':'asset','data-center':'asset','retail':'asset','hotel':'asset','mixed-asset':'asset',
+  'self-storage':'asset','senior-housing':'asset','life-sciences':'asset',
   // geo
   'texas':'geo','dfw':'geo','houston':'geo','austin':'geo','sun-belt':'geo','nyc':'geo','california':'geo',
   // topic
@@ -377,6 +379,7 @@ const TAG_LABEL_EN = {
   'housing': 'Housing', 'multifamily': 'Multifamily', 'btr-sfr': 'BTR/SFR',
   'office': 'Office', 'industrial': 'Industrial', 'data-center': 'Data Center',
   'retail': 'Retail', 'hotel': 'Hotel', 'mixed-asset': 'Mixed-Asset',
+  'self-storage': 'Self Storage', 'senior-housing': 'Senior Housing', 'life-sciences': 'Life Sciences',
   'texas': 'Texas', 'dfw': 'DFW', 'houston': 'Houston', 'austin': 'Austin',
   'sun-belt': 'Sun Belt', 'nyc': 'NYC', 'california': 'California',
   'policy': 'Policy', 'rates': 'Rates', 'macro': 'Macro', 'deals': 'Deals',
@@ -388,7 +391,7 @@ function tagLabelEn(id) { return TAG_LABEL_EN[id] || id; }
 function creSubcategoryEn(zh) {
   return ({ '数据中心': 'Data Center', '生命科学': 'Life Sciences',
     '仓储 / 物流': 'Warehouse', '工业': 'Industrial', '办公': 'Office',
-    '零售': 'Retail', '酒店': 'Hotel', '多户': 'Multifamily' })[zh] || zh;
+    '零售': 'Retail', '酒店': 'Hotel', '多户': 'Multifamily', '老年住房': 'Senior Housing', '自存储': 'Self Storage', '跨资产': 'Mixed Asset' })[zh] || zh;
 }
 
 function renderItems(items) {
@@ -413,7 +416,7 @@ function renderItems(items) {
   for (const sec of sections) {
     const arr = bySection.get(sec.id) || [];
     const cardsHtml = arr.length === 0
-      ? `<p class="section-empty">${t().section_empty}</p>`
+      ? `<p class="section-empty">${sectionEmptyMessage(currentData, sec.id)}</p>`
       : arr.map(it => renderCard(it, ++globalIdx)).join('');
     const label = t().sec[sec.id] || sec.label;
     const desc = t().sec_desc[sec.id] || sec.description || '';
@@ -429,6 +432,22 @@ function renderItems(items) {
     `);
   }
   newsList.innerHTML = blocks.join('');
+}
+
+function sectionEmptyMessage(data, sectionId) {
+  const audit = data?._diagnostics?.editorial_coverage?.sections?.[sectionId];
+  if (audit?.source_failures?.length) return currentLang === 'zh'
+    ? '本栏部分关键来源尚未取全，不能据此判断没有重要消息。'
+    : 'Key sources for this section are incomplete; important news may be missing.';
+  if (audit?.qualified > 0) return currentLang === 'zh'
+    ? '本栏有可用候选，已合并或因选稿限制未单列。' : 'Candidates were merged or were not selected for this issue.';
+  if (audit?.candidates > 0) return currentLang === 'zh'
+    ? '本栏已观察到候选，本期未入选。' : 'Candidates were observed; none were selected for this issue.';
+  const attempted = Number(data?.sources_attempted), ok = Number(data?.sources_ok);
+  if (Number.isFinite(attempted) && attempted > 0 && Number.isFinite(ok) && ok >= 0 && ok < attempted) {
+    return currentLang === 'zh' ? '本期有来源未完成检查；本栏暂无已入选内容。' : 'Some sources could not be checked; no items were selected for this section.';
+  }
+  return t().section_empty;
 }
 
 function applyFilter() {
@@ -893,6 +912,35 @@ function renderBrief(data) {
   if(note){note.hidden=data.publication_status!=='degraded';note.textContent=currentLang==='zh'?'本期部分研究来源或历史材料暂未取全，补齐后可更新。':'Some research sources or historical inputs are incomplete; this issue can be updated.';}
   const research=(data._diagnostics?.source_health||[]).filter(s=>s.research);const details=$('researchCoverage'), list=$('researchStatus');
   if(details&&list){list.replaceChildren();details.hidden=!research.length;$('researchTitle').textContent=(currentLang==='zh'?'研究来源覆盖：':'Research coverage: ')+research.filter(s=>s.status==='ok').length+'/'+research.length;for(const source of research){const li=document.createElement('li');const labels={ok:'已检查',empty_listing:'目录未发现有效条目',unreadable:'正文暂不可读',error:'抓取失败'};li.textContent=source.name+'：'+(currentLang==='zh'?(labels[source.status]||source.status):source.status)+(source.undated?' · '+source.undated+(currentLang==='zh'?' 条日期待核实':' date(s) unverified'):'');list.append(li);}}
+
+  const audit = data._diagnostics?.editorial_coverage;
+  if (audit && details && list) {
+    details.hidden = false;
+    $('researchTitle').textContent = currentLang === 'zh' ? '来源与行业覆盖' : 'Source and sector coverage';
+    for (const asset of audit.assets || []) {
+      const li = document.createElement('li');
+      li.textContent = currentLang === 'zh'
+        ? asset.label + '：本期 ' + asset.selected + ' 条' + (data.kind === 'daily' ? '；近 5 个工作日已记录 ' + asset.recent_selected + ' 条' : '')
+        : tagLabelEn(asset.id) + ': ' + asset.selected + ' selected';
+      list.append(li);
+    }
+    if (audit.unclassified_selected > 0) {
+      const li = document.createElement('li');
+      li.textContent = currentLang === 'zh' ? '未标注资产类型：本期 ' + audit.unclassified_selected + ' 条。' : 'Unclassified asset type: ' + audit.unclassified_selected + ' selected.';
+      list.append(li);
+    }
+    for (const section of Object.values(audit.sections || {})) for (const source of section.source_failures || []) {
+      const li = document.createElement('li');
+      li.textContent = source.name + (currentLang === 'zh' ? '：关键来源尚未取全。' : ': key source incomplete.');
+      list.append(li);
+    }
+    if (data.kind === 'daily' && audit.history?.missing_dates?.length) {
+      const li = document.createElement('li');
+      li.textContent = currentLang === 'zh' ? '近期记录有缺口，不能视为完整行业覆盖。' : 'Recent issue history has gaps; sector coverage is incomplete.';
+      list.append(li);
+    }
+  }
+
 }
 
 function formatChinese(value) {

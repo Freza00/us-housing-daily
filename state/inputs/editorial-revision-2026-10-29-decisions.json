@@ -1,0 +1,662 @@
+{
+  "decisions": [
+    {
+      "id": "ebe773dd8b9f7a09",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "7ef0cbe0af1fcbf5",
+      "reason": "人工复核：同次 FOMC 决策合并到可读官方声明，保留原始候选供追溯"
+    },
+    {
+      "id": "360d4f04aac1b5fa",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "tags": [
+        "national",
+        "housing",
+        "data",
+        "trend"
+      ],
+      "duplicate_of": null,
+      "reason": "报告住房拥有率、房主空置率和租赁空置率，租赁空置率升至2014年以来最高，提供独立市场信号"
+    },
+    {
+      "id": "41c66b54bab2a426",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "tags": [
+        "national",
+        "housing",
+        "policy",
+        "data"
+      ],
+      "duplicate_of": null,
+      "reason": "量化首付援助对购房储蓄时间、月供及可负担房源的影响，为住房政策分析提供参考"
+    },
+    {
+      "id": "b5964665e894360e",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "7ef0cbe0af1fcbf5",
+      "reason": "人工复核：同次 FOMC 决策合并到可读官方声明，保留原始候选供追溯"
+    },
+    {
+      "id": "b0834c45598e94d0",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "7ef0cbe0af1fcbf5",
+      "reason": "人工复核：同次 FOMC 决策合并到可读官方声明，保留原始候选供追溯"
+    },
+    {
+      "id": "40ce259297fb2fb1",
+      "keep": true,
+      "importance": 2,
+      "section": "national",
+      "tags": [
+        "national",
+        "macro",
+        "rates"
+      ],
+      "duplicate_of": null,
+      "reason": "汇总通胀、利率和住宅建设指标，但证据较概括，边际信息有限"
+    },
+    {
+      "id": "ee97eb3b7b51bf8f",
+      "keep": true,
+      "importance": 2,
+      "section": "cre",
+      "tags": [
+        "office",
+        "las-vegas",
+        "data"
+      ],
+      "duplicate_of": null,
+      "reason": "涵盖拉斯维加斯多个商业地产板块季度报告，区域参考价值有限且正文未列具体指标"
+    },
+    {
+      "id": "3b3700e0a611e2b3",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "泛论价格下调比例的解读方法，未提供独立数据或明确市场结论"
+    },
+    {
+      "id": "5b88a7f716cf4d8d",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "7ef0cbe0af1fcbf5",
+      "reason": "人工复核：原有同事件重复关系直接指向新官方主稿，避免去重链"
+    },
+    {
+      "id": "1beb35ced7a8dcb8",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "7ef0cbe0af1fcbf5",
+      "reason": "人工复核：原有同事件重复关系直接指向新官方主稿，避免去重链"
+    },
+    {
+      "id": "2270494886c9f76b",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "涉及选举与联储预期，但所给证据不足以支持明确的房地产市场结论"
+    },
+    {
+      "id": "f092712eb523aadd",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "tags": [
+        "mixed-asset",
+        "national",
+        "earnings",
+        "deals",
+        "brokerage"
+      ],
+      "duplicate_of": null,
+      "reason": "人工复核：JLL 集团业绩横跨资产，不虚构具体物业行业"
+    },
+    {
+      "id": "6fb55dc90f591689",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "tags": [
+        "national",
+        "multifamily",
+        "data",
+        "trend"
+      ],
+      "duplicate_of": null,
+      "reason": "纽约市三季度公寓中位要价租金创纪录，并量化租住与购房成本差距"
+    },
+    {
+      "id": "7ef0cbe0af1fcbf5",
+      "keep": true,
+      "importance": 5,
+      "section": "national",
+      "tags": [
+        "mixed-asset",
+        "national",
+        "rates",
+        "policy",
+        "regulator"
+      ],
+      "duplicate_of": null,
+      "reason": "人工复核：官方正文提取已恢复，直接披露本次利率决策及表决"
+    },
+    {
+      "id": "d6e24306c650d5a6",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "只有标题，证据不足以判断所称政策压力的内容或影响"
+    },
+    {
+      "id": "34eb563c906f28cf",
+      "keep": true,
+      "importance": 4,
+      "section": "sunbelt",
+      "tags": [
+        "sun-belt",
+        "housing",
+        "homebuilder",
+        "trend"
+      ],
+      "duplicate_of": null,
+      "reason": "休斯敦在PwC-ULI年度住宅建设前景榜单中排名第一，反映机构对区域市场的评估"
+    },
+    {
+      "id": "f0667e0b40f35e10",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "博物馆高管人物与扩建花絮，与住宅、CRE或机构资本研究无关"
+    },
+    {
+      "id": "9051043be0f06539",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "tags": [
+        "retail",
+        "texas",
+        "construction",
+        "deals"
+      ],
+      "duplicate_of": null,
+      "reason": "人工复核：Kyle 零售开发按资产归 CRE，Texas 仅为地理标签"
+    },
+    {
+      "id": "e4004a01052e70b4",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "经纪公司新人业绩要求调整，缺乏行业层面的市场证据"
+    },
+    {
+      "id": "6e6fa774103a089e",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "犹他州特色短租房营销内容，与Texas无关且无研究增量"
+    },
+    {
+      "id": "85afaba23638ef03",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "与20为同一特色短租房内容，无独立增量"
+    },
+    {
+      "id": "901468ed42dbcbcf",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "与20为同一特色短租房内容，无独立增量"
+    },
+    {
+      "id": "8f51e30b0b1f3098",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "360d4f04aac1b5fa",
+      "reason": "重复报道三季度住房拥有率，未显示足以独立保留的增量"
+    },
+    {
+      "id": "5fd36eec9e7023b2",
+      "keep": true,
+      "importance": 2,
+      "section": "cre",
+      "tags": [
+        "office",
+        "data"
+      ],
+      "duplicate_of": null,
+      "reason": "提供Hartford/New Haven办公与工业季度市场报告及部分租赁数据，具有局部参考价值"
+    },
+    {
+      "id": "8b3572b381f3a1c1",
+      "keep": true,
+      "importance": 2,
+      "section": "cre",
+      "tags": [
+        "office",
+        "data"
+      ],
+      "duplicate_of": null,
+      "reason": "提供Louisville办公与工业季度市场报告，正文具体市场数据有限"
+    },
+    {
+      "id": "41b1abfeaed8da5c",
+      "keep": true,
+      "importance": 2,
+      "section": "sunbelt",
+      "tags": [
+        "sun-belt",
+        "office",
+        "data"
+      ],
+      "duplicate_of": null,
+      "reason": "提供Greensboro/Winston-Salem办公与工业市场季度报告，具有区域参考价值"
+    },
+    {
+      "id": "43a2e3f7a9a5881c",
+      "keep": true,
+      "importance": 2,
+      "section": "sunbelt",
+      "tags": [
+        "sun-belt",
+        "office",
+        "data"
+      ],
+      "duplicate_of": null,
+      "reason": "提供Hampton Roads零售与工业季度市场报告，但所给证据缺少具体指标"
+    },
+    {
+      "id": "9938a0982d782f8c",
+      "keep": true,
+      "importance": 4,
+      "section": "sunbelt",
+      "tags": [
+        "sun-belt",
+        "housing",
+        "data",
+        "trend"
+      ],
+      "duplicate_of": null,
+      "reason": "Austin挂牌中位价同比下跌9.8%，并列出其他市场跌幅，显示区域房价变化及买方议价环境"
+    },
+    {
+      "id": "ba947e22a4386a1e",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "tags": [
+        "multifamily",
+        "california",
+        "earnings",
+        "landlord"
+      ],
+      "duplicate_of": null,
+      "reason": "Essex上调全年指引且北加州物业收入增长，为西海岸多户住宅基本面提供企业业绩证据"
+    },
+    {
+      "id": "68d1c64d01b01d5e",
+      "keep": true,
+      "importance": 2,
+      "section": "national",
+      "tags": [
+        "national",
+        "brokerage",
+        "tech-adoption"
+      ],
+      "duplicate_of": null,
+      "reason": "独立经纪商加入开放房源平台，涉及挂牌透明度与分销模式，但市场影响尚不明确"
+    },
+    {
+      "id": "0e4365bbd64c88dc",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "7ef0cbe0af1fcbf5",
+      "reason": "人工复核：同次 FOMC 决策合并到可读官方声明，保留原始候选供追溯"
+    },
+    {
+      "id": "2b040cce84686f22",
+      "keep": true,
+      "importance": 4,
+      "section": "cre",
+      "tags": [
+        "life-sciences",
+        "california",
+        "deals",
+        "institutional"
+      ],
+      "duplicate_of": null,
+      "reason": "KKR以4.75亿美元投资Alexandria生命科学园区项目，属于重要机构资本交易"
+    },
+    {
+      "id": "65c7e37d787eda13",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "7ef0cbe0af1fcbf5",
+      "reason": "人工复核：同次 FOMC 决策合并到可读官方声明，保留原始候选供追溯"
+    },
+    {
+      "id": "f8abb773597cb259",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "tags": [
+        "national",
+        "housing",
+        "lender",
+        "distress",
+        "data"
+      ],
+      "duplicate_of": null,
+      "reason": "数据显示2022年后发放贷款占9月止赎启动量43%，是住宅信贷压力的重要风险信号"
+    },
+    {
+      "id": "1a43072dd2f326ba",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "tags": [
+        "housing",
+        "national",
+        "earnings",
+        "tech-adoption",
+        "brokerage"
+      ],
+      "duplicate_of": null,
+      "reason": "人工复核：Homes.com 住宅销售平台增长属于全国住宅"
+    },
+    {
+      "id": "97d0c853fb0eac18",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "内容聚焦财富税政治广告与选举活动，缺乏房地产市场直接证据"
+    },
+    {
+      "id": "9cdb12c9db5f2463",
+      "keep": true,
+      "importance": 4,
+      "section": "cre",
+      "tags": [
+        "mixed-asset",
+        "national",
+        "tech-adoption",
+        "deals",
+        "brokerage"
+      ],
+      "duplicate_of": null,
+      "reason": "人工复核：房地产影像平台收购横跨资产，不虚构具体物业行业"
+    },
+    {
+      "id": "dc7d0545934d49f5",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "tags": [
+        "national",
+        "housing",
+        "homebuilder",
+        "trend"
+      ],
+      "duplicate_of": null,
+      "reason": "报道住宅开发商在销售与利润承压时收紧土地承销标准，对住宅建设决策有参考价值"
+    },
+    {
+      "id": "f2489a3f13a20dd4",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "海外社会住房收购，与美国市场研究范围不符"
+    },
+    {
+      "id": "f27e20d045e684a1",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "7ef0cbe0af1fcbf5",
+      "reason": "人工复核：原有同事件重复关系直接指向新官方主稿，避免去重链"
+    },
+    {
+      "id": "98c87833064dd023",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": "7ef0cbe0af1fcbf5",
+      "reason": "人工复核：同次 FOMC 决策合并到可读官方声明，保留原始候选供追溯"
+    },
+    {
+      "id": "758467fa9bc0f00c",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "大学特殊教育拨款与房地产研究无关"
+    },
+    {
+      "id": "ab6eae2f9ad60ace",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "tags": [
+        "national",
+        "rates",
+        "housing",
+        "lender",
+        "data"
+      ],
+      "duplicate_of": null,
+      "reason": "按揭利率仍高，购房申请同比下降且ARM申请占比升至一年多高点，显示借款人应对高利率的变化"
+    },
+    {
+      "id": "62fcb8f9a60082d1",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "抵押贷款科技公司并购策略报道，缺乏市场数据或广泛行业影响证据"
+    },
+    {
+      "id": "db87e418eef20c23",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "tags": [
+        "national",
+        "multifamily",
+        "policy",
+        "regulation"
+      ],
+      "duplicate_of": null,
+      "reason": "县级简化分区规范的提案旨在减少开发障碍，对住房供给与规划改革有参考价值"
+    },
+    {
+      "id": "d0143b4200cf2f8c",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "防务科技企业融资与房地产研究无直接关系"
+    },
+    {
+      "id": "a11e9a3286473cd1",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "泛论多户投资周期，所给证据缺少独立数据或具体结论"
+    },
+    {
+      "id": "6af7275173eeb03f",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "债务到期管理建议，未提供独立市场数据或具体事件"
+    },
+    {
+      "id": "5ee6a4461cf169be",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "tags": [
+        "industrial",
+        "texas",
+        "deals",
+        "institutional"
+      ],
+      "duplicate_of": null,
+      "reason": "Alliance Industrial与BGO收购Fort Worth工业资产，体现机构资本在DFW工业市场的交易活动"
+    },
+    {
+      "id": "32c317dbcc7ae5cc",
+      "keep": true,
+      "importance": 3,
+      "section": "sunbelt",
+      "tags": [
+        "multifamily",
+        "dfw",
+        "construction",
+        "developer"
+      ],
+      "duplicate_of": null,
+      "reason": "人工复核：原酒店拆除后拟建多户与零售，按拟建住宅用途分类"
+    },
+    {
+      "id": "c96301d3ca6c15ec",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "企业高管对达拉斯的主观评价，缺少可验证的房地产证据"
+    },
+    {
+      "id": "a45e5bc998837100",
+      "keep": true,
+      "importance": 2,
+      "section": "cre",
+      "tags": [
+        "office",
+        "texas",
+        "deals"
+      ],
+      "duplicate_of": null,
+      "reason": "Austin办公楼购入一年后转售，可能反映资产策略或市场定价变化，但证据细节有限"
+    },
+    {
+      "id": "23426f43e8d3ac0d",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "啤酒厂开业报道，不属于重要商业地产研究"
+    },
+    {
+      "id": "10c1f43acc6b5a2b",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "体育场馆选址推测，未提供已确认开发或交易证据"
+    },
+    {
+      "id": "ed7fe9a4cf7fb168",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "零售租赁未披露面积，属于信息量有限的租赁公告"
+    },
+    {
+      "id": "e053223b6b2bb187",
+      "keep": true,
+      "importance": 4,
+      "section": "institutional",
+      "tags": [
+        "institutional",
+        "senior-housing",
+        "deals",
+        "trend"
+      ],
+      "duplicate_of": null,
+      "reason": "养老住宅交易额截至9月约280亿美元，超过任何完整年度总额，显示老龄化需求带动的资本流入"
+    },
+    {
+      "id": "03d361c83f9c7118",
+      "keep": false,
+      "importance": 1,
+      "section": null,
+      "tags": [],
+      "duplicate_of": null,
+      "reason": "泛论AI应用回报，未提供房地产行业的具体证据"
+    },
+    {
+      "id": "e2e16391dffddf73",
+      "keep": true,
+      "importance": 4,
+      "section": "btr",
+      "tags": [
+        "btr-sfr",
+        "national",
+        "earnings",
+        "btr-operator"
+      ],
+      "duplicate_of": null,
+      "reason": "人工复核：截稿前发布的 INVH 官方季度经营结果，补回失败入口漏稿"
+    }
+  ]
+}

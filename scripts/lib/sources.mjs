@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { spawn } from 'node:child_process';
 import { etMidnight } from './calendar.mjs';
 import { parseFeed, makeItem, decode, canonicalUrl, itemId } from './news-core.mjs';
+import { nativeFetch } from './source-http.mjs';
 
 export async function mapLimit(values, limit, fn) {
   const result = new Array(values.length); let index = 0;
@@ -11,7 +12,7 @@ export async function mapLimit(values, limit, fn) {
   return result;
 }
 const hash = s => createHash('sha256').update(s).digest('hex');
-const clean = s => decode(String(s).replace(/<(script|style|svg|nav|footer|header|noscript)\b[^>]*>[\s\S]*?<\/\1>/gi, ' '));
+const clean = s => decode(String(s).replace(/<(script|style|svg|nav|footer|header|aside|noscript)\b[^>]*>[\s\S]*?<\/\1>/gi, ' '));
 const attr = (s, name) => s.match(new RegExp('\\b' + name + '\\s*=\\s*["\']([^"\']+)["\']', 'i'))?.[1] || '';
 const errorMessage = e => e.message + (e.cause?.code ? ' (' + e.cause.code + ')' : '');
 function dateFields(value) {
@@ -31,15 +32,18 @@ export function extractArticle(html, url, source = {}) {
   for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) { try { visit(JSON.parse(match[1])); } catch {} }
   const article = jsonNodes.find(x => /Article|NewsArticle|BlogPosting|Report/i.test(String(x['@type']))) || {};
   const title = clean(article.headline || metadata['og:title'] || html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || '');
-  const contentHtml = html.replace(/<(script|style|svg|noscript|header|footer|nav)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ');
+  const contentHtml = html.replace(/<(script|style|svg|noscript|header|footer|nav|aside)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ');
   const main = contentHtml.match(/<article\b[^>]*>([\s\S]*?)<\/article>/i)?.[1] || contentHtml.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1];
   const fallback = contentHtml.match(/<body\b[^>]*>([\s\S]*)<\/body>/i)?.[1];
   const marker = source.content_start ? contentHtml.indexOf(source.content_start) : -1;
   let body = clean(marker >= 0 ? contentHtml.slice(marker) : article.articleBody || (clean(main || '').length >= 160 ? main : fallback || main) || fallback || metadata.description || metadata['og:description'] || '');
-  if (marker < 0 && !article.articleBody && clean(main || '').length < 160 && fallback) {
-    const heading = clean(contentHtml.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '');
-    const at = heading.length > 8 ? body.indexOf(heading) : -1;
+  if (marker < 0 && !article.articleBody) {
+    const headings = [...contentHtml.matchAll(/<h[1-3]\b[^>]*>([\s\S]*?)<\/h[1-3]>/gi)].map(match => clean(match[1])).filter(value => value.length > 8);
+    const matching = headings.find(value => title.toLowerCase().includes(value.toLowerCase()) || value.toLowerCase().includes(title.toLowerCase()));
+    const heading = matching || (clean(main || '').length < 160 ? headings[0] : '');
+    const at = heading ? body.indexOf(heading) : -1;
     if (at >= 0) body = body.slice(at);
+    else if (/^(?:skip to main content|an official website|here.s how you know)\b/i.test(body)) body = clean(metadata.description || metadata['og:description'] || '');
   }
   const explicit = article.datePublished || metadata['article:published_time'] || metadata['datePublished'] || metadata['pubdate'] || html.match(/<time\b[^>]*datetime=["']([^"']+)/i)?.[1];
   const visible = body.slice(0, 1800).match(/\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+20\d{2}\b/i)?.[0];
@@ -85,13 +89,15 @@ async function pdfText(bytes) {
   });
 }
 
-export function createCollector({ cache = {}, fetchImpl = fetch, now = Date.now(), upper = now, lower = upper - 7 * 86400000, lowerBySource = {} } = {}) {
+export function createCollector({ cache = {}, fetchImpl = fetch, nativeFetchImpl = fetchImpl === fetch ? nativeFetch : fetchImpl, sources = [], now = Date.now(), upper = now, lower = upper - 7 * 86400000, lowerBySource = {} } = {}) {
   const docs = cache.docs ||= {}, sourcesState = cache.sources ||= {};
+  const sourceById = new Map(sources.map(source => [source.id, source]));
   async function request(url, source) {
     const old = docs[url];
     const ctrl = new AbortController(), timer = setTimeout(() => ctrl.abort(), 15000);
     try {
-      const res = await fetchImpl(url, { signal: ctrl.signal, headers: { 'User-Agent': source.ua_style === 'sec' ? `US-Housing-Research ${process.env.SEC_CONTACT_EMAIL || 'research-contact-not-configured'}` : 'Mozilla/5.0 (compatible; HousingResearch/1.0)',
+      const fetchSource = source.http_client === 'https' ? nativeFetchImpl : fetchImpl;
+      const res = await fetchSource(url, { signal: ctrl.signal, headers: { 'User-Agent': source.ua_style === 'sec' && /(^|\.)sec\.gov$/i.test(new URL(url).hostname) ? `US-Housing-Research ${process.env.SEC_CONTACT_EMAIL || 'research-contact-not-configured'}` : 'Mozilla/5.0 (compatible; HousingResearch/1.0)',
         Accept: 'text/html,application/rss+xml,application/atom+xml,application/xml,application/pdf;q=0.8,*/*;q=0.5',
         ...(old?.etag ? { 'If-None-Match': old.etag } : {}), ...(old?.last_modified ? { 'If-Modified-Since': old.last_modified } : {}) } });
       if (res.status === 304 && old) return { ...old, cached: true };
@@ -104,7 +110,9 @@ export function createCollector({ cache = {}, fetchImpl = fetch, now = Date.now(
       if (pdf) { const body = await pdfText(bytes); const date = body.slice(0, 2500).match(/\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+20\d{2}\b/i)?.[0]; document = { article: { title: clean(body.split('\n').filter(x => x.trim().length > 12).slice(0, 2).join(' ')), description: body.slice(0, 6000), ...dateFields(date), canonical: canonicalUrl(url), content_hash: hash(body), access: 'public' } }; }
       else {
         const text = bytes.toString();
-        if (/<rss\b|<feed\b/i.test(text)) document = { items: parseFeed(text, source) };
+        if (/<rss\b|<feed\b/i.test(text)) document = { items: parseFeed(text, source).flatMap(item => {
+          try { const link = new URL(item.link, url); return /^https?:$/.test(link.protocol) ? [{ ...item, link: link.href }] : []; } catch { return []; }
+        }) };
         else document = { article: extractArticle(text, url, source), links: discoverLinks(text, url, source), embedded_pdfs: [...text.matchAll(/<(?:iframe|embed|object)\b[^>]*(?:src|data)=["']([^"']+\.pdf(?:\?[^"']*)?)["']/gi)].map(m => new URL(m[1], url).href) };
       }
       const value = { ...document, first_seen_at: old?.first_seen_at || now, etag: res.headers.get('etag'), last_modified: res.headers.get('last-modified'), checked_at: now };
@@ -112,8 +120,9 @@ export function createCollector({ cache = {}, fetchImpl = fetch, now = Date.now(
     } finally { clearTimeout(timer); }
   }
   async function collectSource(source) {
+    sourceById.set(source.id, source);
     const sourceLower = lowerBySource[source.id] ?? lower;
-    const prior = sourcesState[source.id], health = { id: source.id, name: source.name, research: !!source.is_research, required: !!source.required, checked_at: now, attempted_urls: [], status: 'error', discovered: 0, articles: 0 };
+    const prior = sourcesState[source.id], health = { id: source.id, name: source.name, research: !!source.is_research, required: !!source.required, required_for_section: source.required_for_section, checked_at: now, attempted_urls: [], status: 'error', discovered: 0, articles: 0 };
     let document, selectedUrl, error;
     for (const url of [source.url, ...(source.alternates || [])]) {
       health.attempted_urls.push(url);
@@ -171,6 +180,8 @@ export function createCollector({ cache = {}, fetchImpl = fetch, now = Date.now(
     health.status = health.discovered === 0 ? 'empty_listing' : items.length === 0 ? 'unreadable' : 'ok';
     health.undated = items.filter(it => !it.published_at).length;
     health.recent = items.filter(it => it.published_at >= sourceLower && it.published_at < upper).length;
+    health.unreadable_recent = items.filter(it => it.published_at >= sourceLower && it.published_at < upper && it.description.length < 80).length;
+    if (health.recent && health.unreadable_recent === health.recent) health.status = 'unreadable';
     health.earliest_dated = Math.min(...items.filter(it => it.published_at).map(it => it.published_at), Infinity);
     if (!Number.isFinite(health.earliest_dated)) health.earliest_dated = null;
     const dates = items.map(it => it.published_at);
@@ -186,9 +197,9 @@ export function createCollector({ cache = {}, fetchImpl = fetch, now = Date.now(
   async function enrich(item) {
     if (item.description?.length >= 1200) return { ...item, evidence_status: item.access === 'preview' ? 'preview' : 'article' };
     try {
-      const document = await request(item.link, item);
+      const document = await request(item.link, sourceById.get(item.source_id) || item);
       if (!document.article || document.article.description.length < 160) return { ...item, evidence_status: item.description.length >= 160 ? 'feed_excerpt' : 'insufficient' };
-      return { ...item, ...document.article, published_at: item.published_at || document.article.published_at, link: item.link, description: document.article.description,
+      return { ...item, ...document.article, title: item.title || document.article.title, published_at: item.published_at || document.article.published_at, link: item.link, description: document.article.description,
         evidence_status: document.article.access === 'preview' ? 'preview' : 'article', id: item.id };
     } catch (e) { return { ...item, evidence_status: item.description.length >= 160 ? 'feed_excerpt' : 'insufficient', enrichment_error: errorMessage(e) }; }
   }

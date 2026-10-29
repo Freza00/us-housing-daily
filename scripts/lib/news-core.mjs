@@ -230,7 +230,16 @@ function classify(item) {
 }
 
 function detectCreSubcategory(it) {
-  const t = it.title.toLowerCase();
+  const assetLabels = {
+    "multifamily": "多户", "office": "办公", "industrial": "工业",
+    "data-center": "数据中心", "hotel": "酒店", "retail": "零售",
+    "senior-housing": "老年住房", "life-sciences": "生命科学", "self-storage": "自存储",
+    "mixed-asset": "跨资产",
+  };
+  const asset = (Array.isArray(it.tags) ? it.tags : []).find(tag => Object.hasOwn(assetLabels, tag));
+  if (asset) return assetLabels[asset];
+  const t = String(it.title || "").toLowerCase();
+  if (/self[-\s]?storage|mini\s+storage/.test(t)) return "自存储";
   if (/data\s+center/.test(t)) return "数据中心";
   if (/life\s+sciences/.test(t)) return "生命科学";
   if (/warehouse|warehousing|logistics/.test(t)) return "仓储 / 物流";

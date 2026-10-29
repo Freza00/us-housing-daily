@@ -114,7 +114,7 @@ test('blocked research is explicit, while an empty parsed feed tries the alterna
   const blocked = createCollector({ fetchImpl: async () => new Response('', { status: 403 }) });
   const [r] = await blocked.collect([{ id: 'nar', name: 'NAR', url: 'https://example.com', required: true, is_research: true }]);
   assert.equal(r.health.status, 'error'); assert.match(r.health.error, /403/);
-  let calls = 0; const fallback = createCollector({ fetchImpl: async () => { calls++; return new Response(calls === 1 ? '<rss></rss>' : '<rss><item><title>Important housing market research</title><link>https://example.com/report</link><description>Evidence</description><pubDate>Tue, 27 Oct 2026 14:00:00 GMT</pubDate></item></rss>'); } });
+  let calls = 0; const fallback = createCollector({ fetchImpl: async () => { calls++; return new Response(calls === 1 ? '<rss></rss>' : '<rss><item><title>Important housing market research</title><link>https://example.com/report</link><description>Evidence about housing inventory, mortgage financing and market conditions based on verified original data.</description><pubDate>Tue, 27 Oct 2026 14:00:00 GMT</pubDate></item></rss>'); } });
   const [ok] = await fallback.collect([{ id: 'z', name: 'Zillow', url: 'https://example.com/feed', alternates: ['https://example.com/other'], tags: [], is_research: true }]);
   assert.equal(calls, 3); assert.equal(ok.health.status, 'ok');
 });

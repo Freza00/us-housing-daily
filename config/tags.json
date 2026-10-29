@@ -22,6 +22,7 @@
         { "id": "data-center", "label_zh": "数据中心", "applies_to": "data center 项目 / 公司" },
         { "id": "hotel", "label_zh": "酒店", "applies_to": "hotel / hospitality / lodging" },
         { "id": "retail", "label_zh": "零售", "applies_to": "retail center / shopping center / 街铺" },
+        { "id": "self-storage", "label_zh": "自存储", "applies_to": "self-storage / mini storage / 自助仓储设施及运营商" },
         { "id": "senior-housing", "label_zh": "养老地产", "applies_to": "senior housing / 养老社区" },
         { "id": "life-sciences", "label_zh": "生命科学", "applies_to": "life sciences 实验室 / 生物科技园" },
         { "id": "mixed-asset", "label_zh": "混合资产", "applies_to": "兜底：跨多种资产类型的报道（仅当其他 asset tag 都不适用）" }

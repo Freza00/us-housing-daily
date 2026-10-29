@@ -6,14 +6,18 @@
 
 10 月 29 日日报 20 条已上线，首页、latest、当日归档及日期列表均与发布候选内容一致，GitHub CI 在 Node.js 22 上通过 127 项测试。补稿复用已保存的完整模型答案，显式修正一处连续原文引文及一处摘要来源引用；保留 degraded 和覆盖缺口，未增加模型调用。本次为编辑恢复与发布验收，不代表后续自动出刊已验证。[本轮验收](docs/validation/2026-10-29-model-recovery.md)；[生产核验](docs/validation/2026-10-29-production.json)。
 
+后续跨板块去重、行业覆盖与 BTR 漏稿修复已在本地完成，隔离 29 号修订稿和 advisor 验收通过。用户已于 10 月 29 日明确授权同步开源仓库及上线，正在执行发布及生产验收。[修复验收](docs/validation/2026-10-29-editorial-coverage.md)；[修订稿](docs/validation/2026-10-29-editorial-preview.md)。
+
 ## 进行中
 
+- 跨板块及行业覆盖修复发布中：用户已授权提交、推送和上线，本地代码、来源配置、20 条隔离修订稿及文档已验收。FOMC 5 条合为 1 条，补入截稿前 INVH 财报及其他漏选稿；后续仍需本轮 Node.js 22 CI、生产页面核对，生产 IR 采集和下一次自动出刊继续观察。见 [施工与授权范围](docs/plans/2026-10-29-editorial-coverage.md)。
 - 修复已上线；真实生成任务的诊断 artifact 与后续自动出刊仍待验证。原授权 4 次调用累计 326.783 秒，未直接产出合格期刊；当前补稿为零新增调用的显式编辑恢复，不能视为自动全链路通过。
 - 任务内恢复无法解决平台未启动或延迟启动。10 月 29 日 05:36、09:02 及 13:52 生成均未成功发布，后续定时启动和 09:00 可读目标仍需持续观察。
 - 15 个研究入口仍有访问或发现障碍；31／46 可读是此前本机探针结果，不代表生产已全部覆盖。Vercel CLI 现有 token 无效，未独立读取账号套餐和线上 cron 注册表；部署已接受仓库 cron 配置，Actions 补偿配置已上线。
 
 ## 最近完成
 
+- 2026-10-29 18:56 本地完成跨栏目事件防重、动态栏目与资产补位、正文导航剔除、INVH／AMH 官方 IR 补文、CRE 资产分类及缺刊覆盖说明。隔离修订稿 20 条，栏目 9／3／1／6／1，FOMC 1 条、INVH 1 条，6 条 CRE 子类明确；advisor 内容和代码复审通过。未提交、推送或上线。[验收](docs/validation/2026-10-29-editorial-coverage.md)。
 - 2026-10-29 16:59 经用户明确授权，提交 fcf48b8 并推送 main，Vercel 部署成功。短编号映射、有界重试与诊断、拒稿规范化、金额连字符修复及 29 号 20 条补稿已上线；advisor 复验通过，保持数字与连续引文校验。65／77 源成功，degraded 和历史覆盖缺口保留。[施工与范围](docs/plans/2026-10-29-model-recovery.md)。
 - 2026-10-28 23:07 发布代码 0010673，Vercel 报告部署成功；生产 HTML／JS／CSS 与隔离发布版逐项 SHA-256 一致，最新日报仍为 10 月 28 日。原工作区及无关 CSS、截图、lock 未改写。发布证据见 [生产验收](docs/validation/production-deployment.json)。
 - 2026-10-28 23:00 采纳 advisor 意见：05:00 日报、07:00 周报及 08:00 补偿；周报固定北京上周一 05:00 至本周一 05:00，不等待日报模型成功。生成工作流取消 push 触发，独立只读 CI 运行离线测试。
@@ -22,6 +26,7 @@
 
 ## 最近验证
 
+- 2026-10-29 18:56 主工作区和隔离发布候选在 Node.js v25.8.0 各通过 166 项测试；17 个运行脚本语法及 JSON 检查通过，首页内嵌／latest／归档一致。实际 57 条保存决策回放 19 条、FOMC 1 条；人工补查修订 20 条的数字及连续引文通过。两源本机实采 2／2 可读，advisor 独立复审通过；55 个正式文件和原 CSS／水位／pending 未变。不是远端 CI、生产采集或新模型全链路验收。[范围与限制](docs/validation/2026-10-29-editorial-coverage.md)。
 - 2026-10-29 16:59 生产首页、latest、29 号 JSON 及日期索引均返回 HTTP 200，SHA-256 与候选逐项一致，日期为 2026-10-29、20 条。[Node.js 22 CI](https://github.com/Freza00/us-housing-daily/actions/runs/40845600776) 127 项通过、0 失败；[Vercel 部署](https://vercel.com/freza00s-projects/news-agent/ChAbePwZpDBsK8fkG9RhpEzJaeUe) 成功。本地 127 项、5 个 YAML、脚本语法及 diff 检查通过，完整补稿与 advisor 复验通过；固定截止点和 14 条截稿后 pending 保留，根工作区 59 个正式文件及无关资源未改。[结构化证据](docs/validation/2026-10-29-production.json)。
 - 2026-10-28 23:07 [生产 CI](https://github.com/Freza00/us-housing-daily/actions/runs/40712118581) 在 Node.js 22.23.3 完成 103 项测试，0 失败；生产静态文件和最新数据内容比对通过，周报接口无授权请求返回预期 401，未触发生成。Vercel 部署 [J4XSdDEF2RJ5QyNUZi4fY5EBTqzG](https://vercel.com/freza00s-projects/news-agent/J4XSdDEF2RJ5QyNUZi4fY5EBTqzG) 成功。
 - 2026-10-28 23:00 隔离发布版 34 个脚本语法、5 个工作流 YAML 与 Git diff --check 通过；59 个原工作区受保护文件未变，发布目录保留远端 data／state 与首页内嵌数据。

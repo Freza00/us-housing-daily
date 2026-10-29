@@ -437,8 +437,11 @@
     },
     {
       "id": "sec-invh-8k",
-      "name": "SEC EDGAR — Invitation Homes 8-K",
+      "name": "Invitation Homes (SEC / official IR)",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
+      "alternates": ["https://www.invh.com/rss/PressRelease.aspx?LanguageId=1"],
+      "http_client": "https",
+      "required_for_section": "btr",
       "tier": "B",
       "tags": [
         "btr-sfr",
@@ -452,8 +455,11 @@
     },
     {
       "id": "sec-amh-8k",
-      "name": "SEC EDGAR — American Homes 4 Rent 8-K",
+      "name": "AMH (SEC / official IR)",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
+      "alternates": ["https://investors.amh.com/rss/PressRelease.aspx?LanguageId=1"],
+      "http_client": "https",
+      "required_for_section": "btr",
       "tier": "B",
       "tags": [
         "btr-sfr",

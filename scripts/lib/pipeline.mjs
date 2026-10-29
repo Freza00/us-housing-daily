@@ -10,6 +10,7 @@ import { createLlmClient } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
 import { prepareCandidates, decisionSystem, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, dryDecisions } from './editorial.mjs';
 import { createModelBatch } from './model-references.mjs';
+import { editorialCoverage, coverageDates } from './editorial-coverage.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 async function readJson(file, fallback) { try { return JSON.parse(await fs.readFile(file, 'utf8')); } catch (e) { if (e.code === 'ENOENT') return fallback; throw e; } }
@@ -70,7 +71,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
     }
     const cache = await readJson(path.join(stateDir, 'source-cache.json'), {});
     const lowerBySource = kind === 'daily' ? Object.fromEntries(sources.map(s => [s.id,sourceLower(checkpoint,s.id,window.lower)])) : {};
-    collector = options.collector || createCollector({ cache, now: now.getTime(), upper: window.upper, lower: window.lower, lowerBySource });
+    collector = options.collector || createCollector({ cache, sources, now: now.getTime(), upper: window.upper, lower: window.lower, lowerBySource });
     const toCollect = kind === 'daily' ? sources.filter(s => sourceLower(checkpoint,s.id,window.lower) < window.upper) : sources;
     const collected = await collector.collect(toCollect);
     if (kind === 'daily') {
@@ -120,9 +121,16 @@ export async function runPipeline(kind = 'daily', options = {}) {
       { effort: 'low', label: 'writer', maxTokens: 10000, validate, repair: data => createWritingRepair(data, writerBatch.items, kind, validate) });
   }
   const { validation_notes: validationNotes, ...publicWritten } = written;
+  const history = [];
+  if (kind === 'daily') for (const date of coverageDates(label).slice(1)) {
+    const issue = await readJson(path.join(dataDir, date + '.json'), null);
+    if (issue?.date === date && Array.isArray(issue.items)) history.push(issue);
+  }
+  const editorialAudit = editorialCoverage({ candidates, decisions, selected: written.items, health, sources, tagConfig, date: beijingDateStr(now.getTime()), history });
   const gaps = coverageGaps(snapshots, window);
   const requiredProblems = health.filter(s => s.required && (s.status !== 'ok' || s.undated === s.articles));
-  const status = dry ? 'dry_run' : gaps.length || requiredProblems.length ? 'degraded' : 'complete';
+  const sectionProblems = Object.values(editorialAudit.sections).some(section => section.source_failures.length);
+  const status = dry ? 'dry_run' : gaps.length || requiredProblems.length || sectionProblems ? 'degraded' : 'complete';
   const payload = { schema_version: 2, kind, date: kind === 'daily' ? label : undefined, publish_date: beijingDateStr(now.getTime()), generated_at: (env.PUBLISH_NOW || options.now) ? now.getTime() : Date.now(),
     period_start: window.periodStart, period_end: window.periodEnd, period_label: window.label, window, publication_status: status,
     sections: SECTIONS, ...publicWritten, sources_attempted: health.length, sources_ok: health.filter(h => h.status === 'ok').length,
@@ -130,7 +138,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
     _diagnostics: { timings: { cutoff: window.upper, job_started_at: now.getTime(), collection_finished_at: collectionFinishedAt, generation_finished_at: Date.now() }, collection_watermarks: kind === 'daily' ? checkpoint.source_upper || {} : undefined, writer_validation: validationNotes || null, pipeline_version: '2.1', provenance: inputProvenance, window_hours: window.hours, candidate_pool_size: candidates.length, eligible_count: prepared.eligible_count, backlog_before_window: candidates.filter(it=>it.published_at<window.lower).map(it=>it.id),
       source_health: health, research_audit: normalized.filter(x => x.is_research && x.published_at >= window.lower && x.published_at < window.upper).map(x => ({ id: x.id, source: x.source_name, title: x.title, link: x.link,
         disposition: written.items.some(it => it.id === x.id) ? 'selected' : decisions.find(d => d.id === x.id)?.duplicate_of ? 'merged' : candidates.some(it => it.id === x.id) ? 'editorial_not_selected' : 'candidate_budget' })),
-      source_counts: selection.source_counts, source_exceptions: selection.exceptions, coverage_gaps: gaps, required_source_problems: requiredProblems.map(x => x.id),
+      editorial_coverage: editorialAudit, source_counts: selection.source_counts, source_exceptions: selection.exceptions, coverage_gaps: gaps, required_source_problems: requiredProblems.map(x => x.id),
       llm: client.usage, input_fingerprint: fingerprint(snapshot.items), summary_characters: [...(written.executive_summary?.text || '').replace(/\s/g, '')].length } };
   await writeJson(path.join(outDir, label + '.json'), payload);
   const datesFile = path.join(outDir, 'dates.json'), dates = await readJson(datesFile, []);

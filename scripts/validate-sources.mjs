@@ -8,7 +8,7 @@ if (!output.includes('/.tmp/')) throw new Error('Source probes must write to a t
 const config = JSON.parse(await fs.readFile(new URL('../config/sources.json', import.meta.url), 'utf8'));
 const idsAt = args.indexOf('--ids'), ids = idsAt >= 0 ? args[idsAt + 1].split(',') : null;
 const sources = config.sources.filter(s => (!args.includes('--research-only') || s.is_research) && (!ids || ids.includes(s.id)));
-const collector = createCollector();
+const collector = createCollector({ sources });
 const results = await collector.collect(sources);
 if (args.includes('--enrich')) {
  const eligible = prepareCandidates(results.flatMap(r => r.items), { lower: Date.now() - 14 * 86400000, upper: Date.now() }, []).candidates;
