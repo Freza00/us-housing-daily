@@ -86,9 +86,9 @@ test('permanent route errors fail once while transient 503 retries', async () =>
   calls = 0; const retry = createLlmClient({ endpoint: 'https://example.com', apiKey: 'test', retryDelays: [0], sleep: async () => {}, fetchImpl: async () => ++calls === 1 ? new Response('overloaded', { status: 503 }) : response({ ok: true }) });
   assert.deepEqual(await retry.call('s', 'u'), { ok: true }); assert.equal(calls, 2);
 });
-test('LLM connection idle timeout aborts a request', async () => {
-  const c = createLlmClient({ endpoint: 'https://example.com', apiKey: 'test', idleMs: 5, retryDelays: [], fetchImpl: (u, { signal }) => new Promise((resolve, reject) => signal.addEventListener('abort', () => reject(signal.reason))) });
-  await assert.rejects(c.call('s', 'u'), /idle timeout/);
+test('LLM first response timeout aborts a request before any data arrives', async () => {
+  const c = createLlmClient({ endpoint: 'https://example.com', apiKey: 'test', firstByteMs: 5, retryDelays: [], fetchImpl: (u, { signal }) => new Promise((resolve, reject) => signal.addEventListener('abort', () => reject(signal.reason))) });
+  await assert.rejects(c.call('s', 'u'), /first response timeout/);
 });
 test('numeric validation understands translated monetary units', () => {
   assert.deepEqual(numericValues('$2 billion'), numericValues('20 亿美元'));

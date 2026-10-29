@@ -8,7 +8,8 @@ import { createCollector } from './sources.mjs';
 import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement } from './collection-checkpoint.mjs';
 import { createLlmClient } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
-import { prepareCandidates, decisionSystem, candidatePrompt, validateDecisions, selectItems, writingSystem, validateWriting, dryDecisions } from './editorial.mjs';
+import { prepareCandidates, decisionSystem, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, dryDecisions } from './editorial.mjs';
+import { createModelBatch } from './model-references.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 async function readJson(file, fallback) { try { return JSON.parse(await fs.readFile(file, 'utf8')); } catch (e) { if (e.code === 'ENOENT') return fallback; throw e; } }
@@ -98,16 +99,26 @@ export async function runPipeline(kind = 'daily', options = {}) {
   if (!candidates.length) throw new Error('No eligible dated candidates; refusing to replace last successful issue');
   const snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, initial_seen: seen, source_health: health, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: s.source_health || [] })), pipeline_version: '2.1' };
   await writeJson(path.join(stateDir, 'inputs', kind + '-' + label + '.json'), snapshot);
-  const client = options.client || createLlmClient({ endpoint: env.LLM_ENDPOINT, apiKey: env.LLM_API_KEY, model: env.LLM_MODEL || 'gpt-6.1-sol', cacheDir: path.join(stateDir, 'llm-cache') });
+  const client = options.client || createLlmClient({ endpoint: env.LLM_ENDPOINT, apiKey: env.LLM_API_KEY, model: env.LLM_MODEL || 'gpt-6.1-sol', cacheDir: path.join(stateDir, 'llm-cache'),
+    diagnosticsDir: path.join(stateDir, 'llm-diagnostics'), onEvent: event => console.log('LLM ' + JSON.stringify(event)) });
+  const editorBatch = createModelBatch(candidates);
   let decisions;
   if (dry) decisions = dryDecisions(candidates);
-  else decisions = (await client.call(editorSystem, candidatePrompt(candidates), { effort: 'medium', label: 'editor', maxTokens: 12000, validate: data => validateDecisions(data, candidates, tagConfig) })).decisions;
+  else decisions = (await client.call(editorSystem, candidatePrompt(editorBatch.items), { effort: 'medium', label: 'editor', maxTokens: 12000,
+    validate: (data, context = {}) => validateDecisions(context.cacheHit ? data : editorBatch.decisions(validateDecisions(data, editorBatch.items, tagConfig)), candidates, tagConfig) })).decisions;
   const selection = selectItems(candidates, decisions);
   if (!selection.items.length) throw new Error('No stories met the editorial quality threshold');
   let written;
   if (dry) written = { items: selection.items.map(it => ({ ...it, title_zh: '', summary_zh: '(离线验证，未调用模型)', impact: 'neutral' })), themes: [], executive_summary: null };
-  else written = await client.call(writingSystem, JSON.stringify({ kind, items: selection.items.map(it => ({ id: it.id, title: it.title, source: it.source_name, section: it.section, published_at: it.published_at, late_discovery: !!it.late_discovery, evidence: it.description.slice(0, 1800) })) }),
-    { effort: 'low', label: 'writer', maxTokens: 10000, validate: (data, context) => validateWriting(data, selection.items, kind, context) });
+  else {
+    const writerBatch = createModelBatch(selection.items);
+    const validate = (data, context = {}) => {
+      if (!context.cacheHit) validateWriting(structuredClone(data), writerBatch.items, kind);
+      return validateWriting(context.cacheHit ? data : writerBatch.writing(data), selection.items, kind, context);
+    };
+    written = await client.call(writingSystem, writingPrompt(kind, writerBatch.items),
+      { effort: 'low', label: 'writer', maxTokens: 10000, validate, repair: data => createWritingRepair(data, writerBatch.items, kind, validate) });
+  }
   const { validation_notes: validationNotes, ...publicWritten } = written;
   const gaps = coverageGaps(snapshots, window);
   const requiredProblems = health.filter(s => s.required && (s.status !== 'ok' || s.undated === s.articles));

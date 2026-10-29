@@ -86,5 +86,15 @@ jobs:
             state/collection-cache.json
             state/inputs/
             state/snapshots/
+            state/llm-diagnostics/
+          retention-days: 14
+          if-no-files-found: ignore
+      - name: Preserve model attempt diagnostics
+        if: always() && steps.gate.outputs.go == 'true'
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: news-llm-monthly-${{ github.run_id }}-${{ github.run_attempt }}
+          path: state/llm-diagnostics/
           retention-days: 14
           if-no-files-found: ignore
