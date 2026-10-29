@@ -1,6 +1,6 @@
 # 2026-10-29 跨板块去重与行业覆盖验收
 
-本轮本地修复及隔离修订稿已通过验收。用户已明确授权同步开源仓库及上线，正在执行发布验收。advisor 复核代码、实际 20 条内容及来源证据后，未发现剩余可行动问题。原工作区正式 data／state、首页及用户样式未改。
+本轮修复及 29 号修订稿已按用户授权提交、推送并上线，代码为 828c07b，脚本资源版本补充为 c9be26c。advisor 复核代码、实际 20 条内容及来源证据后，未发现剩余可行动问题。远端 CI 及生产内容核对通过；原工作区正式 data／state、首页及用户样式未改。
 
 ## 问题与修复
 
@@ -43,11 +43,14 @@ INVH 财报在美东 10 月 28 日 16:15 发布，即北京时间 29 日 04:15�
 
 [完整修订稿](2026-10-29-editorial-preview.md)。隔离发布候选位于项目 `.tmp/house-daily-editorial-coverage-20261029/release-candidate/`；仅覆盖本轮代码、配置、测试、文档和修订期刊，保留生产原样式。新增入选的 5 个稳定 ID 已仅在候选 seen 状态中补记，原采集水位不推进。用户授权后已将候选 origin 设置为 Freza00/us-housing-daily，并核对远端 main 未出现新提交。
 
+## 生产验收
+
+2026-10-29 19:06，北京时间：最终代码 c9be26c 已推送 main，[Node.js 22.23.4 CI](https://github.com/Freza00/us-housing-daily/actions/runs/40862687916) 166 项通过、0 失败；[Vercel 部署](https://vercel.com/freza00s-projects/news-agent/5SSJsjZXD7NhjCbCafGnh3pbuF4Z) 成功。生产首页、app.js、CSS、latest、29 号归档及日期列表逐项 SHA-256 与候选一致。首页实际引用 /app.js?v=2026-10-29-editorial，该 URL 正文也与候选匹配，避免旧浏览器脚本缓存。日期为 2026-10-29、20 条、FOMC 1 条、BTR 1 条，固定截止点未变。[结构化生产证据](2026-10-29-editorial-production.json)。
+
+核验覆盖线上响应及内容一致性，未执行浏览器渲染或桌面／手机视觉验收。此次只改已有展示中的文案和覆盖列表，保留原 CSS；不将内容核对描述成视觉验收。
+
 ## 仍需验证
 
-2026-10-29 19:05，北京时间：代码及修订稿已提交为 828c07b 并推送 main，[Node.js 22.23.4 CI](https://github.com/Freza00/us-housing-daily/actions/runs/40862241725) 166 项通过、0 失败；[Vercel 部署](https://vercel.com/freza00s-projects/news-agent/HRJtfxoFHpRefgfzbzidA2R6XHtF) 成功。生产首页、app.js、CSS、latest、29 号归档及日期列表逐项 SHA-256 与候选一致。补充更新首页 app.js 的版本参数，避免旧浏览器缓存隐藏覆盖展示，随后再次核对生产实际引用的脚本。
-
-- 前端资源版本补充发布及最终生产复验仍在执行。
 - 本机两个 IR 入口可读，不代表 GitHub runner 的网络已验证；需观察生产实际发现与正文补抓。
 - 新提示词、来源与选稿规则的下一次真实两阶段自动生成及定时启动仍待验证。本次人工修订不能证明次日 09:00 可读目标已实现。
 

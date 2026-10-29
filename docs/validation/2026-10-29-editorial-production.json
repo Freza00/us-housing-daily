@@ -1,0 +1,139 @@
+{
+  "checked_at": "2026-10-29T11:06:09.034Z",
+  "host": "https://news-agent-mu.vercel.app",
+  "code_commit": "c9be26cd516d7fd51e48facd5e3d135119efd903",
+  "files": [
+    {
+      "route": "/",
+      "file": "public/index.html",
+      "status": 200,
+      "sha256": "bc6e387de699dd4378785058eb69893b181641a44aa31dfd19574a3db18bf84d",
+      "expected_sha256": "bc6e387de699dd4378785058eb69893b181641a44aa31dfd19574a3db18bf84d",
+      "equal": true
+    },
+    {
+      "route": "/app.js",
+      "file": "public/app.js",
+      "status": 200,
+      "sha256": "99cf87b67ce6b2e19c90f406ea3e7054477e0320b44290c6ed16fa575309fae2",
+      "expected_sha256": "99cf87b67ce6b2e19c90f406ea3e7054477e0320b44290c6ed16fa575309fae2",
+      "equal": true
+    },
+    {
+      "route": "/style.css",
+      "file": "public/style.css",
+      "status": 200,
+      "sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7",
+      "expected_sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7",
+      "equal": true
+    },
+    {
+      "route": "/data/latest.json",
+      "file": "data/latest.json",
+      "status": 200,
+      "sha256": "1b860b6cbeb7349ad571ace9df1000d04a26dbd3dddc5fb090c4ed7352d20f0b",
+      "expected_sha256": "1b860b6cbeb7349ad571ace9df1000d04a26dbd3dddc5fb090c4ed7352d20f0b",
+      "equal": true
+    },
+    {
+      "route": "/data/2026-10-29.json",
+      "file": "data/2026-10-29.json",
+      "status": 200,
+      "sha256": "1b860b6cbeb7349ad571ace9df1000d04a26dbd3dddc5fb090c4ed7352d20f0b",
+      "expected_sha256": "1b860b6cbeb7349ad571ace9df1000d04a26dbd3dddc5fb090c4ed7352d20f0b",
+      "equal": true
+    },
+    {
+      "route": "/data/dates.json",
+      "file": "data/dates.json",
+      "status": 200,
+      "sha256": "74a3d2981c12259a80638af562aedc9a1ca3aea5ec6851140d8c12550b8dbff4",
+      "expected_sha256": "74a3d2981c12259a80638af562aedc9a1ca3aea5ec6851140d8c12550b8dbff4",
+      "equal": true
+    }
+  ],
+  "publication": {
+    "date": "2026-10-29",
+    "count": 20,
+    "cutoff": 1793221200000,
+    "status": "degraded",
+    "sections": {
+      "national": 9,
+      "sunbelt": 3,
+      "btr": 1,
+      "cre": 6,
+      "institutional": 1
+    },
+    "fomc_count": 1,
+    "btr": [
+      {
+        "id": "e2e16391dffddf73",
+        "title": "INVH 三季度同店 NOI 增长 1.1%",
+        "published_at": 1793218500000,
+        "link": "https://www.invh.com/files/doc_earnings/2026/q3/earnings-result/Q3-2026-Press_Release.pdf"
+      }
+    ],
+    "cre": [
+      {
+        "id": "2b040cce84686f22",
+        "asset": "生命科学"
+      },
+      {
+        "id": "9cdb12c9db5f2463",
+        "asset": "跨资产"
+      },
+      {
+        "id": "ba947e22a4386a1e",
+        "asset": "多户"
+      },
+      {
+        "id": "5ee6a4461cf169be",
+        "asset": "工业"
+      },
+      {
+        "id": "9051043be0f06539",
+        "asset": "零售"
+      },
+      {
+        "id": "f092712eb523aadd",
+        "asset": "跨资产"
+      }
+    ],
+    "sources_ok": 67,
+    "sources_attempted": 77,
+    "history_missing_dates": [
+      "2026-10-27",
+      "2026-10-26",
+      "2026-10-23"
+    ],
+    "new_model_calls": 0
+  },
+  "verification": {
+    "content_hashes": true,
+    "dates": true,
+    "inline_matches_latest": true,
+    "script_path": "/app.js?v=2026-10-29-editorial",
+    "referenced_script_matches": true,
+    "browser_rendering": false
+  },
+  "ci": {
+    "conclusion": "success",
+    "headSha": "c9be26cd516d7fd51e48facd5e3d135119efd903",
+    "status": "completed",
+    "url": "https://github.com/Freza00/us-housing-daily/actions/runs/40862687916",
+    "node": "v22.23.4",
+    "tests": 166,
+    "passed": 166,
+    "failed": 0
+  },
+  "deployment": {
+    "state": "success",
+    "url": "https://vercel.com/freza00s-projects/news-agent/5SSJsjZXD7NhjCbCafGnh3pbuF4Z",
+    "description": "Deployment has completed"
+  },
+  "original_workspace_protected_files_unchanged": 55,
+  "remaining": [
+    "Production runner IR discovery and hydration",
+    "Next actual model generation and scheduled publication"
+  ]
+}
