@@ -26,6 +26,7 @@
 
 ## 最近验证
 
+- 2026-10-29 19:05 修复提交 828c07b 已推送 main，Vercel 报告部署成功；Node.js 22.23.4 CI 166 项通过、0 失败，线上首页／JS／CSS／latest／29 号归档／日期列表与候选 SHA-256 全部一致。正在补齐前端资源版本，随后复验实际页面引用。[验收](docs/validation/2026-10-29-editorial-coverage.md)。
 - 2026-10-29 18:56 主工作区和隔离发布候选在 Node.js v25.8.0 各通过 166 项测试；17 个运行脚本语法及 JSON 检查通过，首页内嵌／latest／归档一致。实际 57 条保存决策回放 19 条、FOMC 1 条；人工补查修订 20 条的数字及连续引文通过。两源本机实采 2／2 可读，advisor 独立复审通过；55 个正式文件和原 CSS／水位／pending 未变。不是远端 CI、生产采集或新模型全链路验收。[范围与限制](docs/validation/2026-10-29-editorial-coverage.md)。
 - 2026-10-29 16:59 生产首页、latest、29 号 JSON 及日期索引均返回 HTTP 200，SHA-256 与候选逐项一致，日期为 2026-10-29、20 条。[Node.js 22 CI](https://github.com/Freza00/us-housing-daily/actions/runs/40845600776) 127 项通过、0 失败；[Vercel 部署](https://vercel.com/freza00s-projects/news-agent/ChAbePwZpDBsK8fkG9RhpEzJaeUe) 成功。本地 127 项、5 个 YAML、脚本语法及 diff 检查通过，完整补稿与 advisor 复验通过；固定截止点和 14 条截稿后 pending 保留，根工作区 59 个正式文件及无关资源未改。[结构化证据](docs/validation/2026-10-29-production.json)。
 - 2026-10-28 23:07 [生产 CI](https://github.com/Freza00/us-housing-daily/actions/runs/40712118581) 在 Node.js 22.23.3 完成 103 项测试，0 失败；生产静态文件和最新数据内容比对通过，周报接口无授权请求返回预期 401，未触发生成。Vercel 部署 [J4XSdDEF2RJ5QyNUZi4fY5EBTqzG](https://vercel.com/freza00s-projects/news-agent/J4XSdDEF2RJ5QyNUZi4fY5EBTqzG) 成功。

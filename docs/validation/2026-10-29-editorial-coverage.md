@@ -45,7 +45,9 @@ INVH 财报在美东 10 月 28 日 16:15 发布，即北京时间 29 日 04:15�
 
 ## 仍需验证
 
-- 本轮尚未运行远端 Node.js 22 CI、Vercel 部署及生产页面核对。
+2026-10-29 19:05，北京时间：代码及修订稿已提交为 828c07b 并推送 main，[Node.js 22.23.4 CI](https://github.com/Freza00/us-housing-daily/actions/runs/40862241725) 166 项通过、0 失败；[Vercel 部署](https://vercel.com/freza00s-projects/news-agent/HRJtfxoFHpRefgfzbzidA2R6XHtF) 成功。生产首页、app.js、CSS、latest、29 号归档及日期列表逐项 SHA-256 与候选一致。补充更新首页 app.js 的版本参数，避免旧浏览器缓存隐藏覆盖展示，随后再次核对生产实际引用的脚本。
+
+- 前端资源版本补充发布及最终生产复验仍在执行。
 - 本机两个 IR 入口可读，不代表 GitHub runner 的网络已验证；需观察生产实际发现与正文补抓。
 - 新提示词、来源与选稿规则的下一次真实两阶段自动生成及定时启动仍待验证。本次人工修订不能证明次日 09:00 可读目标已实现。
 
