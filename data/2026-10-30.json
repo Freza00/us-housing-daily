@@ -1,0 +1,3697 @@
+{
+  "schema_version": 2,
+  "kind": "daily",
+  "date": "2026-10-30",
+  "publish_date": "2026-10-30",
+  "generated_at": 1793329995186,
+  "window": {
+    "lower": 1793221200000,
+    "upper": 1793307600000,
+    "hours": 24,
+    "date": "2026-10-30",
+    "timezone": "Asia/Shanghai",
+    "lower_basis": "collection_checkpoint"
+  },
+  "publication_status": "complete",
+  "sections": [
+    {
+      "id": "national",
+      "label": "全国住宅市场",
+      "emoji": "🏠",
+      "desc": "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk",
+      "quota": 5,
+      "maxPerSource": 2,
+      "extendedWindow": false
+    },
+    {
+      "id": "sunbelt",
+      "label": "Sunbelt 住宅",
+      "emoji": "🌵",
+      "desc": "Sun Belt 各州住宅与租赁市场",
+      "quota": 4,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "btr",
+      "label": "全国 BTR / SFR",
+      "emoji": "🏘",
+      "desc": "Build-to-Rent / Single-Family Rental",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "cre",
+      "label": "全国 CRE",
+      "emoji": "🏢",
+      "desc": "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE",
+      "quota": 5,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": false
+    },
+    {
+      "id": "institutional",
+      "label": "全国机构资本",
+      "emoji": "💰",
+      "desc": "PE / REIT 募资、并购、IPO、机构持仓",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    }
+  ],
+  "items": [
+    {
+      "source_id": "realtor-research",
+      "source_name": "Realtor.com Research",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "Los Angeles Rental Report 2026Q3: Renters Catch a Break as New Supply Pushes Rents Lower; Buying Still Costs Nearly $5,000 More a Month",
+      "link": "https://www.realtor.com/research/la-q3-2026-rent/",
+      "description": "Los Angeles Rental Report 2026Q3: Renters Catch a Break as New Supply Pushes Rents Lower; Buying Still Costs Nearly $5,000 More a Month By Jiayi Xu , Danielle Hale Oct 29, 2026 Highlights In 2026Q3, the median asking rent in Los Angeles County registered at $2,554,—down $96, or 3.6%, from a year earlier. The median asking rent for 0-2 bedrooms in L.A. County was $2,239, reflecting a decline of $88 (-3.8%) from the previous year. Meanwhile, rent for 3+ bedroom units dropped by $70 (-1.9%) compared to 2025Q3, standing at $3,571. For renters in L.A. County : Buying costs far more than renting. In 2026Q3, a median-priced home cost $4,716 more a month than renting one, nearly 185% higher, even though the monthly buying cost fell about 2% as home prices dropped. Mortgage rates above 7% could erase that relief. At 7%, the same home would cost about $7,456 a month, roughly where it stood a year ago, erasing the savings from lower prices In the third quarter of 2026, the median asking rent for all rental properties listed on Realtor.com in Los Angeles County was $2,554, a decline of $96, or 3.6%, compared with a year ago. While the county experienced a temporary dip in rents during the pandemic, asking rents quickly rebounded to pre-pandemic levels and peaked in the summer of 2022. Since then, a surge in new multifamily construction has put sustained downward pressure on rent. In the most recent quarter, the median asking rent in Los Angeles County was $340, or 11.7%, below its 2022 peak. In addition, Los Angeles County renters are overwhelmingly local. In the third quarter of 2026, more than half (61.3%) of online traffic to L.A. County rental listings originated from within the county, with an additional 15.5% coming from elsewhere in California. Out-of-state renters accounted for 19.8% of traffic, while international traffic represented 3.4%. Breaking down by bedroom type, the median asking rent for 0-2 bedroom units in Los Angeles County was $2,239 in 2026Q3, a decline of $88 or 3.8%, from a year ago. Larger units with three or more bedrooms saw a comparatively modest softening, with a median asking rent of $3,571 — down $70, or 1.9%, year-over-year. The steeper rent decline among smaller units suggests renters in that segment are experiencing greater pricing relief. The surge in ADUs across Los Angeles County may partially explain this trend. As those permitted units complete construction — typically requiring 6 to 18 months from permit to occupancy — a growing wave of new small rental units has been entering the market, adding downward price pressure concentrated in the smaller unit segment. Figure 1: Rents by Unit Size in L.A. County—2026Q3 Table 1: L.A. County Rents by Unit Size, 2026Q3 Unit Size Median Asking Rent Rent YoY vs. Peak Overall $2,554 -3.6% -11.7% 0-2 beds $2,239 -3.8% -14.7% 3+ beds $3,571 -1.9% -11.3% City of Los Angeles: Relief from the peak, but still out of reach for many In the third quarter of 2026, the median asking rent for rental properties listed on Realtor.com in the City of Los Angeles was $2,708, reflecting a decline of $92, or 3.3%, from a year earlier. Consistent with the broader L.A. County trend, rents in the City of Los Angeles have been on a downward trajectory since peaking in the summer of 2022. While the current median remains $158, or 5.5%, above pre-pandemic levels, renters today are saving $363 per month, or 11.8%, compared to the 2022 peak, translating to $4,356 in annual savings. Nevertheless, in order to afford a typical home in the city of Los Angeles, a minimum annual income of $108,320 is required— 22.1% higher than the city's estimated median household income of $88,730 1 High mortgage rates squeeze renters hoping to buy Renters may be catching a break, but for most renters who want to become homeowners in L.A. County, homeownership remains out of reach. On top of that, with mortgage rates now above 7%, higher borrowing costs could push homeownership even further out of reach for renters who want to buy. In 2026Q3, buying a typical home in L.A. County costs $4,716 more per month than renting one. Buying got slightly cheaper over the past year because home prices fell, even as mortgage rates rose. The median listing price dropped 3.2% to $970,000 over the past year, which more than offset a small increase in the average 30-year fixed mortgage rate, from 6.57% to 6.68%. As a result, the estimated monthly cost of buying a median-priced home fell about 2.1%, or $159, from a year earlier, to $7,270. But that relief may not last. Rates surpassed 7% in late-September and remain well- above this mark. At 7%, the same home price would cost about $7,456 a month, roughly where it stood a year ago, erasing the monthly payment savings from lower prices. Methodology To determine the monthly cost of buying a home, we find the median listing price for homes in Los Angeles County. As first-time homebuyers plan lower down payments, we assume a 10% down payment and use the 30-year fixed mortgage rate during the quarter to calculate a monthly mortgage payment. We also include the HOA fees, taxes, and homeowners insurance as part of the costs. L.A. rental data as of 2026Q3 for all units advertised for rent on Realtor.com®. Rental units include apartments as well as private rentals (condos, townhomes, single-family homes). We use rental sources that reliably report data each month within L.A. county. To calculate the median asking rent for each quarter, we first obtain the median asking rent for each month within that quarter and then take the average of the three months. Footnotes Data Source: Claritas’ estimation based on Census ACS data.",
+      "published_at": 1793268210000,
+      "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1793231911000,
+      "extraction": "semantic",
+      "canonical": "https://realtor.com/research/la-q3-2026-rent",
+      "content_hash": "0cc22dfc69065c545dd9b819d76f158e309d89a4eb889c048d468703d602ea8a",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "19953728e834ddb2",
+      "source_family": "realtor-com",
+      "is_research": true,
+      "required_source": true,
+      "first_seen_at": 1793309852130,
+      "score": 31,
+      "tags": [
+        "housing",
+        "data",
+        "trend",
+        "california"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "30-year fixed",
+        "trend",
+        "annual",
+        " yoy",
+        "year-over-year",
+        "occupancy"
+      ],
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "duplicate_of": null,
+      "selector_reason": "Realtor.com research documents a 3.6% year-over-year rent decline in Los Angeles County and a nearly $5,000 monthly rent-versus-buy gap, providing useful affordability and supply evidence.",
+      "title_zh": "洛杉矶租金同比下降，购房月成本仍高",
+      "summary_zh": "Realtor.com Research 统计显示，2026 年第三季度洛杉矶县挂牌租金为 $2,554，同比下降 3.6%；中位房屋月度购买成本仍比租房高 $4,716。",
+      "impact": "long-pos",
+      "evidence_quote": "In 2026Q3, the median asking rent in Los Angeles County registered at $2,554,—down $96, or 3.6%, from a year earlier.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "colliers-research",
+      "source_name": "Colliers Research",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Select Markets Drive U.S. Office Market Recovery",
+      "link": "https://colliers.com/en/research/nrep-usofc-us-office-market-outlook-report-q3-2026",
+      "description": "Select Markets Drive U.S. Office Market Recovery Oct 29, 2026 U.S. Office Market Outlook Report | Q3 2026 Download Report Experts Marianne Skorupski Director, National Office Research Matthew Gannon Executive Managing Director | Washington D.C. & Head of Agency Leasing | U.S. Jodie Poirier President, Occupier Services & Agency Leasing Market Summary The U.S. office market strengthened in Q3 2026, with the national vacancy rate declining to 17.7%, down 60 basis points from one year ago and the lowest level since Q4 2023. Positive net absorption continued for a ninth consecutive quarter, while demand remained concentrated in high-quality Class A and trophy office buildings across major markets, including New York, San Francisco, Boston, and Seattle. Limited development activity and declining sublease availability are supporting occupancy and rent growth in top-performing assets. Key Findings The U.S. office vacancy rate declined to 17.7% in Q3 2026 , down 20 basis points quarter-over-quarter and 60 basis points year-over-year, marking the lowest level since Q4 2023. Net absorption totaled 9.5 million square feet during Q3 2026, extending a streak of positive absorption to nine consecutive quarters. Total available U.S. office sublease space fell to 150.9 million square feet , down 15.8% year-over-year and marking the 12th consecutive quarter of decline. Download Report Share Experts Marianne Skorupski Director, National Office Research Atlanta Matthew Gannon Executive Managing Director | Washington D.C. & Head of Agency Leasing | U.S. Washington, DC Jodie Poirier President, Occupier Services & Agency Leasing Los Angeles - Downtown Related insights Oct 21, 2026 Fundamentals Take the Lead as Capital Stays Selective Read More Oct 19, 2026 U.S. Office Market Statistics | Q3 2026 Read More Oct 6, 2026 U.S. Leading Markets Office Construction | Q3 2026 Read More Aug 24, 2026 World Cup Impact Report | August 2026 Read More",
+      "published_at": 1793286900000,
+      "date_precision": "timestamp",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://colliers.com/en/research/nrep-usofc-us-office-market-outlook-report-q3-2026",
+      "content_hash": "1e168f2da83d9cf25f29c6007ee44f373e2c46023aeced2afdb5f1fed83a300b",
+      "access": "public",
+      "source_family": "colliers-research",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "91dce5f4bf6b7865",
+      "score": 30,
+      "tags": [
+        "office",
+        "data",
+        "trend",
+        "national"
+      ],
+      "heat_signals": [
+        "outlook",
+        "year-over-year",
+        "rent growth",
+        "occupancy",
+        "vacancy"
+      ],
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "cre",
+      "duplicate_of": null,
+      "selector_reason": "National office vacancy declined to 17.7% with positive absorption for a ninth consecutive quarter, although recovery remains concentrated in high-quality assets.",
+      "title_zh": "美国办公楼空置率降至 17.7%",
+      "summary_zh": "Colliers Research 表示，2026 年第三季度美国办公楼空置率降至 17.7%，连续第 9 个季度录得正净吸纳，但需求仍集中于高品质资产。",
+      "impact": "long-pos",
+      "evidence_quote": "The U.S. office market strengthened in Q3 2026, with the national vacancy rate declining to 17.7%, down 60 basis points from one year ago and the lowest level since Q4 2023.",
+      "evidence_basis": "body",
+      "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "cushman-research",
+      "source_name": "Cushman & Wakefield Research",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "U.S. Retail Demand Remains Solid as Limited Construction Keeps Space Tight",
+      "link": "https://cushmanwakefield.com/en/united-states/news/2026/10/us-retail-demand-remains-solid",
+      "description": "U.S. Retail Demand Remains Solid as Limited Construction Keeps Space Tight Phoebe Schmidt &bull; 10/29/2026 Q3 U.S. Retail Marketbeat Shopping centers recorded 3.5 million square feet of net absorption in Q3, with fitness, wellness and value retailers leading leasing activity New York -- U.S. shopping center demand remained solid in the third quarter of 2026 as retailers backfilled vacated stores and selectively expanded their footprints, according to Cushman & Wakefield's latest U.S. Retail MarketBeat report . Limited construction continued to support market fundamentals, with national vacancy holding steady at 5.9%, well below the historical average of 7.4%. Net absorption totaled 3.5 million square feet in Q3, the second-strongest quarterly reading since Q4 2023, bringing year-to-date absorption into positive territory at 1.2 million square feet. The improvement followed first-half declines that reflected seasonal weakness and the effects of store closures in 2025. \"Retail demand has remained solid beneath the quarterly fluctuations,\" said James Bohnaker , Principal Economist at Cushman & Wakefield. \"Retailers are backfilling space left by earlier closures and continuing to expand selectively. For tenants looking to grow, finding the right space in a quality shopping center remains a challenge.\" Fitness, wellness and value-oriented retailers are leading categories for leasing activity, reflecting a continued shift toward consumer services and demand for affordable shopping options. Discount retailers accounted for 1,046 store openings year to date, while off-price apparel retailers added 214 locations. New construction remained limited, with just 2.3 million square feet delivered during the quarter. The development pipeline represented only 0.4% of existing inventory. National asking rents reached $25.80 per square foot, up 2.2% year over year, although the pace of growth moderated. \"With so little new space being built, even modest expansion can keep availability tight,\" Bohnaker said. \"Consumer spending is holding steady, but retailers remain disciplined about where they open stores. Well-located centers with strong tenant mixes are best positioned to capture that demand.\" Demand was positive across several regions. The West absorbed 1.4 million square feet and remained the only region to record positive absorption in every quarter of 2026, led in Q3 by Phoenix, the Inland Empire and Orange County. The Northeast recorded 1.2 million square feet of absorption, with vacancy declining in eight of its 11 tracked markets. The Midwest led regional asking rent growth at 3.6% year over year, with Columbus, Cincinnati and St. Louis among the strongest-performing markets nationally. The South accounted for 52% of year-to-date construction completions but maintained the lowest regional vacancy rate at 5.7%. Cushman & Wakefield expects retail fundamentals to remain resilient through year-end, supported by limited new supply and continued tenant demand. Performance will vary by market and property, with location, tenant quality and retailers' value propositions remaining key differentiators. Cushman & Wakefield's quarterly retail report can be found here . About Cushman & Wakefield Cushman & Wakefield (NYSE: CWK) is a leading global commercial real estate services firm for occupiers and investors with approximately 53,000 employees in over 350 offices and nearly 60 countries. In 2025, the firm reported revenue of $10.3 billion across its core service lines of Services, Leasing, Capital markets, and Valuation and other. Built around the belief that Better never settles , the firm receives numerous industry and business accolades for its award-winning culture. For additional information, visit www.cushmanwakefield.com . Media Contact Phoebe Schmidt PR Manager, Americas --> CAN'T FIND WHAT YOU'RE LOOKING FOR? Get in touch with one of our professionals. CONTACT US Your privacy matters to us With your permission we and our partners would like to use cookies in order to access and record information and process personal data, such as unique identifiers and standard information sent by a device to ensure our website performs as expected, to develop and improve our products, and for advertising and insight purposes. Alternatively click on More Options and select your preferences before providing or refusing consent. Some processing of your personal data may not require your consent, but you have a right to object to such processing. You can change your preferences at any time by returning to this site or clicking on Cookies More Options Agree and Close These cookies ensure that our website performs as expected,for example website traffic load is balanced across our servers to prevent our website from crashing during particularly high usage. These cookies allow our website to remember choices you make (such as your user name, language or the region you are in) and provide enhanced features. These cookies do not gather any information about you that could be used for advertising or remember where you have been on the internet. These cookies allow us to work with our marketing partners to understand which ads or links you have clicked on before arriving on our website or to help us make our advertising more relevant to you. Cookie preferences Agree All Reject All SAVE SETTINGS Essential Non Essential Marketing",
+      "published_at": 1793275200000,
+      "date_precision": "timestamp",
+      "modified_at": 1793255305000,
+      "extraction": "semantic",
+      "canonical": "https://cushmanwakefield.com/en/united-states/news/2026/10/us-retail-demand-remains-solid",
+      "content_hash": "7945061fcb94912527a145cbaaf3cdbeb6d4894ae365bf7074e040d81d179919",
+      "access": "public",
+      "source_family": "cushman-research",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "2e2baa36e6c22e97",
+      "score": 25,
+      "tags": [
+        "retail",
+        "data",
+        "trend",
+        "national"
+      ],
+      "heat_signals": [
+        "year-end",
+        "year over year",
+        "rent growth",
+        "vacancy"
+      ],
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "cre",
+      "duplicate_of": null,
+      "selector_reason": "National retail net absorption reached 3.5 million square feet in Q3 while vacancy held at 5.9%, supported by limited construction.",
+      "title_zh": "美国零售需求稳健，供应受限支撑市场",
+      "summary_zh": "Cushman & Wakefield Research 称，2026 年第三季度购物中心净吸纳量为 350 万平方英尺，全国空置率为 5.9%，低于历史均值。",
+      "impact": "long-pos",
+      "evidence_quote": "Net absorption totaled 3.5 million square feet in Q3, the second-strongest quarterly reading since Q4 2023, bringing year-to-date absorption into positive territory at 1.2 million square feet.",
+      "evidence_basis": "body",
+      "cre_subcategory": "零售"
+    },
+    {
+      "source_id": "cbre-research",
+      "source_name": "CBRE Research",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Q3 2026 Portland Multifamily Figures",
+      "link": "https://cbre.com/insights/figures/q3-2026-portland-multifamily-figures",
+      "description": "Q3 2026 Portland Multifamily Figures Investment Sales Rebound to Highest Level Since 2022 October 29, 2026 3 Minute Read Looking for a PDF of this content? Download -The Portland multifamily market closed Q3 2026 with an occupancy rate of 95.2%, remaining essentially flat from 95.3% in Q2 2026. -Deliveries reached 1,097 units in Q3 2026, up from 928 units in Q2 2026, continuing a steady pace of new supply. -Net absorption totaled 1,320 units in Q3 2026, exceeding the 1,097 units delivered during the quarter and indicating that demand continued to outpace new supply. -The average monthly rent per unit in Portland ended Q3 2026 at $1,764, up 0.7% from Q2 2026. -Investment sales surged to $658.8 million in Q3 2026, up from $359.2 million in Q2 2026 and marking the strongest quarter for transaction volume since Q4 2022.",
+      "published_at": 1793289600000,
+      "date_precision": "day",
+      "published_date": "2026-10-29",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://cbre.com/insights/figures/q3-2026-portland-multifamily-figures",
+      "content_hash": "ccc69dcafbaec836ef7ac4a6fabfa965ef9b3d4b62a697a3a38fdbb338442571",
+      "access": "public",
+      "source_family": "cbre-research",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "0401af233f3153d9",
+      "score": 18,
+      "tags": [
+        "multifamily",
+        "data",
+        "deals"
+      ],
+      "heat_signals": [
+        "occupancy"
+      ],
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "duplicate_of": null,
+      "selector_reason": "Portland multifamily absorption exceeded deliveries, occupancy held near 95%, rents increased and investment sales reached their strongest quarterly level since Q4 2022.",
+      "title_zh": "波特兰多户住宅交易额创 2022 年以来新高",
+      "summary_zh": "CBRE Research 数据显示，波特兰多户住宅 2026 年第三季度净吸纳量超过交付量，平均月租环比上涨 0.7%，投资销售额升至 $658.8 million。",
+      "impact": "long-pos",
+      "evidence_quote": "Investment sales surged to $658.8 million in Q3 2026, up from $359.2 million in Q2 2026 and marking the strongest quarter for transaction volume since Q4 2022.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Carrier Global to Invest $600M in HVAC Manufacturing Facility in Fort Worth, Create 1,500 Jobs",
+      "link": "https://rebusinessonline.com/carrier-global-to-invest-600m-in-hvac-manufacturing-facility-in-fort-worth-create-1500-jobs/",
+      "description": "Carrier Global to Invest $600M in HVAC Manufacturing Facility in Fort Worth, Create 1,500 Jobs by Taylor Williams October 29, 2026 October 29, 2026 4 FORT WORTH, TEXAS — Carrier Global Corp. (NYSE: CARR) will invest approximately $600 million in a new HVAC manufacturing and engineering facility in Fort Worth, an initiative that is expected to add about 1,500 new jobs to the local economy over the next three years. The site is located within Hillwood’s AllianceTexas master-planned community on the city’s north side. The facility will span approximately 1 million square feet and produce advanced thermal management systems, including air- and water-cooled commercial chillers. Carrier expects to begin operations at the facility sometime next year. Facebook Twitter Linkedin Email previous post Partners Development Breaks Ground on 80,000 SF Industrial Project in Seguin, Texas You may also like Partners Development Breaks Ground on 80,000 SF Industrial... October 29, 2026 StreetLevel Investments Welcomes New Tenants to Mixed-Use Development... October 29, 2026 HRSS CPAs Signs 19,569 SF Office Lease in... October 29, 2026 PCCP Provides $130M Construction Loan for Newark Multifamily... October 29, 2026 JLL Negotiates $58M Sale of Multifamily Development Site... October 29, 2026 Marcus & Millichap Brokers Sale of 231-Unit Self-Storage... October 29, 2026 Truist Provides $152M Construction Loan for Marina Shores... October 29, 2026 Origin Investments, Mill Creek Residential to Develop 190-Unit... October 29, 2026 Lee & Associates Negotiates Sale of 34,168 SF... October 29, 2026",
+      "published_at": 1793287080000,
+      "source_family": "rebusiness-online",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "01006bf809c2c6e5",
+      "score": 14,
+      "tags": [
+        "industrial",
+        "construction",
+        "deals",
+        "developer",
+        "texas"
+      ],
+      "heat_signals": [
+        "texas",
+        "fort worth"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 1793287081000,
+      "extraction": "semantic",
+      "canonical": "https://rebusinessonline.com/carrier-global-to-invest-600m-in-hvac-manufacturing-facility-in-fort-worth-create-1500-jobs",
+      "content_hash": "41d2201ef1512df166ddf419cd8692fef724aa94f20159f47d4f62be247b67b6",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "cre",
+      "duplicate_of": null,
+      "selector_reason": "Carrier's planned $600 million, 1-million-square-foot Fort Worth HVAC manufacturing facility and 1,500 jobs represent a major industrial development and economic-demand signal.",
+      "title_zh": "Carrier 将在沃思堡投资 $600 million 建厂",
+      "summary_zh": "Carrier Global 计划在得州沃思堡投资约 $600 million 建设 HVAC 制造与工程设施，预计未来 3 年新增约 1,500 个就业岗位。",
+      "impact": "long-pos",
+      "evidence_quote": "Carrier Global Corp. (NYSE: CARR) will invest approximately $600 million in a new HVAC manufacturing and engineering facility in Fort Worth, an initiative that is expected to add about 1,500 new jobs to the local economy over the next three years.",
+      "evidence_basis": "body",
+      "cre_subcategory": "工业"
+    },
+    {
+      "source_id": "freddie-pmms",
+      "source_name": "Freddie Mac PMMS",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Mortgage Rates",
+      "link": "https://freddiemac.com/pmms",
+      "description": "Mortgage Rates Primary Mortgage Market Survey ® (PMMS ® ) results are based on the mortgage rate collected from thousands of loan applications submitted to Freddie Mac through Loan Product Advisor ® (LPA ® ) from lenders across the country when a borrower applies for a mortgage. Learn more in our FAQs . Primary Mortgage Market Survey ® U.S. weekly mortgage rate averages as of 10/29/2026 30-year Fixed-Rate Mortgage 7.24% 15-year Fixed-Rate Mortgage 6.60% Download Rates Since 1971 Mortgage Rates Decline Further to 7.24% The average 30-year fixed-rate mortgage declined again this week, reaching its lowest level this month and modestly boosting purchasing power for prospective buyers. The 30-year fixed-rate mortgage averaged 7.24% as of October 29, 2026, down from last week when it averaged 7.32%. A year ago at this time, the 30-year FRM averaged 6.17%. The 15-year fixed-rate mortgage averaged 6.60%, down from last week when it averaged 6.68%. A year ago at this time, the 15-year FRM averaged 5.41%. PMMS results are released weekly on Thursdays at 12 p.m. ET. and are an average of loan rates offered the prior Thursday through Wednesday. See our publication calendar . Compare Historical PMMS Results Frequently Asked Questions Toggle all accordion sections Expand All What data is used for PMMS? The PMMS results are based on data from our Loan Product Advisor (LPA): mortgage rates collected from thousands of loan applications submitted to Freddie Mac from lenders across the country when a borrower applies for a mortgage. For more detailed information, see Enhanced Mortgage Rate Survey Explained . How is the national average determined? We collect the mortgage rate of all purchase applications based on PMMS criteria and a national average mortgage rate is calculated out of all the selected loan applications. The criteria include weekly conventional, single-family originations with conforming loan limits as set by FHFA. Is the PMMS rate based on current lender quotes or recent settlements? PMMS rates are based on applications submitted to Freddie Mac for the given week from lenders across the country. What type of lenders are included in the PMMS? Currently, our lenders are a mix of credit unions, commercial banks and mortgage lending companies. Do the PMMS results represent the rates charged on a specific day of the week? If so, which day? Or are they the average rate charged that week? PMMS is published each Thursday at noon ET. When a U.S. holiday falls on a Thursday, the PMMS will publish on the Wednesday of that week. The week of application activity starts at 12:00 a.m. ET the prior Thursday and lasts through 11:59 p.m. ET Wednesday. Therefore, the PMMS results are an average of loan rates offered Thursday through Wednesday. See our publication calendar . Why are adjustable rates no longer published? ARMs indexed to alternatives to U.S. Treasury securities have become more prevalent in the market. As we worked on enhancing the PMMS , we carefully considered which loan products were most popular for the PMMS borrower profile (good/excellent credit, 20% loans, home purchase loans on owner occupied 1-unit single-family properties). Additionally, in recent years the mortgage market has been dominated by fixed mortgage products. While there has been an uptick recently in the share of adjustable-rate mortgages (ARMs) for the broader mortgage market, ARMs remain most popular for higher loan size (nonconforming) loans. Why are fees/points no longer published? Under the current LPA requirements, fees and points are not always required to be provided by lenders. Therefore, we are not able to report on the average fees and points. How has PMMS changed over time? Since April 1971, Freddie Mac shared the average 30-year fixed-rate mortgage rate with the PMMS. We have updated the information we collect and the process for gathering data over time. Changes in Data Processes When it was launched, PMMS surveyed lenders on the rates and points for their most popular 30-year fixed-rate, 15-year fixed-rate and 5/1 hybrid amortizing adjustable-rate mortgage products. The survey was based on first-lien prime conventional conforming home purchase mortgages with a loan-to-value of 80 percent. In addition, the adjustable-rate mortgage (ARM) products were indexed to U.S. Treasury yields, and lenders were asked for both the initial coupon rate and points as well as the margin on the ARM products. Lenders surveyed each week were a mix of lender types — credit unions, commercial banks and mortgage lending companies — roughly proportional to the level of mortgage business that each type commands nationwide. On November 17, 2022, the mortgage rate gathering process was updated. Instead of surveying lenders, we now use data from our Loan Product Advisor (LPA). Changes in Information Shared In 1984 , the 1-year ARM was added to the survey. In 1991 , the 15-year fixed-rate mortgage rate was added. In January 2005 , a 5/1 hybrid ARM series was added. In January 2016 , the 1-year ARM was discontinued. In November 2022 , adjustable rates and fees/points were discontinued. For more detailed information, see Enhanced Mortgage Rate Survey Explained . PMMS Archives See weekly rates by year in our historical data archive. See Archives Questions? Send your questions and comments to our economists. Contact Us Opinions, estimates, forecasts, and other views contained in this document are those of Freddie Mac’s economists and other researchers, do not necessarily represent the views of Freddie Mac or its management, and should not be construed as indicating Freddie Mac’s business prospects or expected results. Although the authors attempt to provide reliable, useful information, they do not guarantee that the information or other content in this document is accurate, current or suitable for any particular purpose. All content is subject to change without notice. All content is provided on an “as is” basis, with no warranties of any kin",
+      "published_at": 1793289600000,
+      "date_precision": "day",
+      "published_date": "2026-10-29",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://freddiemac.com/pmms",
+      "content_hash": "2651d3ded4ad7cb873813e3b5f45750905677a8a742e8a478a5f05e750f740ce",
+      "access": "public",
+      "source_family": "freddie-mac",
+      "is_research": true,
+      "required_source": false,
+      "mutable": true,
+      "first_seen_at": 1793309852130,
+      "id": "6287cfae336b9be0",
+      "score": 25,
+      "tags": [
+        "rates",
+        "data",
+        "housing"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "30-year fixed",
+        "freddie mac",
+        "forecast",
+        "primary mortgage market survey"
+      ],
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "duplicate_of": null,
+      "selector_reason": "Freddie Mac's primary mortgage survey records the 30-year fixed rate at 7.24%, down 8 basis points weekly but materially above the prior year's 6.17%.",
+      "title_zh": "30 年期按揭利率降至 7.24%",
+      "summary_zh": "Freddie Mac PMMS 显示，截至 10 月 29 日，30 年期固定按揭平均利率为 7.24%，较上周的 7.32% 下降，但仍高于一年前的 6.17%。",
+      "impact": "long-pos",
+      "evidence_quote": "The 30-year fixed-rate mortgage averaged 7.24% as of October 29, 2026, down from last week when it averaged 7.32%. A year ago at this time, the 30-year FRM averaged 6.17%.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "realtor-research",
+      "source_name": "Realtor.com Research",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "Weekly Housing Trends: U.S. Market Update (Week Ending Oct. 24, 2026)",
+      "link": "https://www.realtor.com/research/eekly-housing-trends-view-data-week-october-24-2026/",
+      "description": "Weekly Housing Trends: U.S. Market Update (Week Ending Oct. 24, 2026) By Jiayi Xu Oct 29, 2026 Welcome to this weekly housing trends update, where we bring you the latest snapshot of inventory trends, listing activity, and buyer-seller dynamics across the U.S. housing market. In addition to our monthly housing trends reports , which offer deeper insights into long-term patterns, we publish these weekly updates to provide more timely views into market changes. This effort began in response to rapid shifts in the economy and housing landscape. You can count on a new Weekly Housing Trends update, fresh weekly data each Thursday, and a weekly video from our economists to help you stay informed. What this week’s data shows This week’s housing data reflects a market increasingly weighed down by renewed rate pressure. With mortgage rates topping 7%, hesitation is spreading across both sides of the market — buyers are pulling back, leaving homes to sit longer and unsold listings to accumulate, while sellers grow equally reluctant to list. Yet there are glimmers of hope: mortgage rates have eased from their recent peak , offering modest relief to budget sensitive buyers— though a more meaningful drop would be needed to meaningfully shift the landscape. On the seller side, the share of price cuts has hit a four-year high and the share of listings pulled from the market remains in line with a year ago — both signs that sellers, though cautious, are still committed to closing deals. For buyers, the key is preparation: rate-proofing their budget now and ensuring they are financially positioned to move when the right opportunity arises. Active inventory climbed 8.0% year-over-year The number of homes for sale rose 8.0% compared to a year ago, the highest weekly growth rate since late January. Inventory has been building momentum throughout the fall, rising from roughly 4% year-over-year growth in late August to 8% now. The pickup is not being driven by a flood of new sellers. Instead, the slowdown in buyer activity is allowing unsold listings to accumulate, pushing the overall count higher. Year-to-date, active inventory i s up 4.8%. Homes spent 1 day longer on the market compared to a year ago Median days on market came in at 64 days, with homes selling one day slower than the same time last year — snapping a streak of faster or matching pace that had held since late May. As mortgage rates top 7%, more buyers are retreating to the sidelines, and the shift could be an early signal of market slowdown. Year-to-date, time on market remains 2 days behind last year’s pace, as the sluggish start to 2025 continues to weigh on the cumulative figure. New listings, a measure of sellers putting homes up for sale, fell 1.5% year-over-year New listing activity continues to slow down, drop 1.5% year over year. Sellers are discouraged because buyers are discouraged. The prices the market will bear are less appealing to sellers than they were when mortgage rates were lower, and the difference between current rates and the rates many would-be sellers are sitting on in their has grown, making relocating a less attractive proposition. The stronger new listing activity earlier in the year has the year-to-date change at -0.3%. The median listing price fell 1.4% year-over-year The median listing price dropped to $414,000, down 1.4% from the same week last year. Listing prices have now been negative on a year-over-year basis for 41 consecutive weeks. The median price per square foot also declined, falling 1.3% year over year. Mortgage rates have buyers in an affordability crunch that has diminished their willingness to pay, and the median price in the market is slowly responding. Year-to-date, median listing prices sit 1.9% below 2025 levels.",
+      "published_at": 1793269840000,
+      "source_family": "realtor-com",
+      "is_research": true,
+      "required_source": true,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "7b9301acbecccd83",
+      "score": 21,
+      "tags": [
+        "housing",
+        "data",
+        "rates"
+      ],
+      "heat_signals": [
+        "trend",
+        "trends",
+        "housing market"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 1793232268000,
+      "extraction": "semantic",
+      "canonical": "https://realtor.com/research/eekly-housing-trends-view-data-week-october-24-2026",
+      "content_hash": "851cd18c6dcdcf3bf9617752a1f5fe408e54cd9a03259aec9ff8218437947f90",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "duplicate_of": null,
+      "selector_reason": "Weekly national data shows mortgage rates above 7% weighing on buyer and seller activity, with listings accumulating and market time increasing.",
+      "title_zh": "美国在售库存同比增长 8.0%",
+      "summary_zh": "Realtor.com Research 指出，抵押贷款利率超过 7% 令买卖双方趋于谨慎；本周美国在售房源同比增长 8.0%，价格下调比例升至四年高位。",
+      "impact": "short-neg",
+      "evidence_quote": "Active inventory climbed 8.0% year-over-year",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Blackstone Mortgage Trust Reports Unexpected Q3 Net Loss",
+      "link": "https://www.bisnow.com/news/national/capital-markets/blackstone-mortgage-trust-reports-unexpected-q3-net-loss",
+      "description": "Blackstone Mortgage Trust reported a $327M net loss for the third quarter, news that sent stocks tumbling. Unsplash/Clarisse Croset Shares were at $9.95 during premarket trading on Thursday. Though they had rebounded during trading hours to just under $11 per share, they were still down 11% over the last month and down roughly 42% over the last six months. As of about 3 p.m. ET Thursday, BXMT shares were trading up 3.75%, or $10.94 per share. Leadership pointed to higher interest rates and challenges facing the office market. \"While higher rates and an elongated office recovery impacted our reserves and book value, our watchlist is now at the lowest level since 2019, and the remainder of our legacy portfolio is performing well and shrinking rapidly,\" Blackstone Mortgage Trust CEO Tim Johnson said in a statement. The company impaired roughly $800M of loans on its books, the vast majority being office assets, indicating that it still has work to do balancing its portfolio, Johnson said on an earnings call Thursday. Leadership said it is still on track to meet or exceed its previously announced goal of reducing office and legacy loans by 40% by year-end. Johnson said higher interest rates will have the greatest impact on some of the REIT's pre-2023 investments, which is why it's prioritizing the sale of older loans. Blackstone Mortgage Trust's total net revenue rose to $141.9M from $132.6M in the same period in 2025 , but interest and related income fell to $280.6M from approximately $346M a year ago, below the Visible Alpha consensus of $293.5M, according to Seeking Alpha . UPDATE, OCT. 29, 3 P.M. ET: This story has been updated with additional context about BXMT's stock price. Continue reading this story with a free account Log in or register",
+      "published_at": 1793298249000,
+      "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1793301775000,
+      "extraction": "semantic",
+      "canonical": "https://bisnow.com/news/national/capital-markets/blackstone-mortgage-trust-reports-unexpected-q3-net-loss",
+      "content_hash": "f3a0c237c4f8fe2e3f6458c63774ab6e7a01912b21a6f7540286d85f9dfb17ae",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "e865d511ce0e604e",
+      "source_family": "bisnow",
+      "is_research": false,
+      "required_source": false,
+      "first_seen_at": 1793309852130,
+      "score": 21,
+      "tags": [
+        "office",
+        "distress",
+        "lender",
+        "earnings"
+      ],
+      "heat_signals": [
+        "blackstone",
+        "year-end"
+      ],
+      "keep": true,
+      "importance": 4,
+      "section": "cre",
+      "duplicate_of": null,
+      "selector_reason": "Blackstone Mortgage Trust reported a $327 million Q3 loss and roughly $800 million of loan impairments, mostly office-related, highlighting continuing CRE credit distress.",
+      "title_zh": "BXMT 第三季度意外净亏损 $327 million",
+      "summary_zh": "Blackstone Mortgage Trust 第三季度净亏损 $327 million，并计提约 $800 million 贷款减值，管理层将高利率和办公楼市场复苏缓慢列为影响因素。",
+      "impact": "short-neg",
+      "evidence_quote": "The company impaired roughly $800M of loans on its books, the vast majority being office assets, indicating that it still has work to do balancing its portfolio, Johnson said on an earnings call Thursday.",
+      "evidence_basis": "body",
+      "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "realtor-research",
+      "source_name": "Realtor.com Research",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "Mortgage Rates Fall 8 Basis Points for the Second Week in a Row",
+      "link": "https://www.realtor.com/research/freddie-mac-mortgage-rates-october-29-2026/",
+      "description": "Mortgage Rates Fall 8 Basis Points for the Second Week in a Row By Joel Berner Oct 29, 2026 What happened to mortgage rates this week? The Freddie Mac 30-year mortgage rate dropped 8 basis points this week, from 7.32% to 7.24%, in conjunction with the 10-year Treasury yield, which averaged about 5.02% in the past week compared to 5.13% the week prior. The retreat in the Treasury yield was spurred on by volatility in the stock market, leading investors to seek safety in government debt. It could be argued that weak housing market data, namely softer home construction activity , record-low pending sales , and declining new home sales , are creating a feedback loop as well. A struggling housing market can be a sign of weaker economic growth to come, which lowers the returns investors demand on their bond purchases. In turn, this allows mortgage rates to fall and hopefully alleviate some of the negative effects being experienced by the housing market. The Federal Reserve’s Open Market Committee met yesterday and left the target interest rate unchanged , but two members dissented in favor of a 25 bps hike. Prediction markets already favored a hike in December, but that likelihood grew higher after the release. Expectations of further Fed tightening are widespread, but the upcoming data releases on inflation and employment before December 9th will give stronger indication of whether upward pressure on mortgage rates is in store. The Fed appears laser-focused on the price level, and another month of core inflation coming in above their target of 2% would justify those rate hike expectations. What does this mean for the housing market? This week’s retreat in mortgage rates is certainly welcome news to anyone involved with the housing market, but it comes during a period in the year where home sales activity is usually more muted anyway. The best time of year to buy a home has passed for most markets in the country, and the winter slowdown is upcoming, so the rate relief this week may not have much of an impact on the market. Both buyers and sellers are hoping that the downward trajectory of the last two weeks is a sign of things to come, and that the great housing market unlocking becomes a reality in 2027.",
+      "published_at": 1793289699000,
+      "source_family": "realtor-com",
+      "is_research": true,
+      "required_source": true,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "351a74a8baa4794d",
+      "score": 18,
+      "tags": [
+        "rates",
+        "macro",
+        "housing"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "freddie mac"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 1793288601000,
+      "extraction": "semantic",
+      "canonical": "https://realtor.com/research/freddie-mac-mortgage-rates-october-29-2026",
+      "content_hash": "e9b529c24bc617e8ffceaf1109698bc30d7910aa83c5dcd1f8ce25a44a355775",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "duplicate_of": null,
+      "selector_reason": "Reports a second consecutive 8-basis-point decline in mortgage rates to 7.24% and notes the Federal Reserve decision to hold rates with dissenting votes for a hike.",
+      "title_zh": "按揭利率连续第二周下降 8 个基点",
+      "summary_zh": "Realtor.com Research 称，本周 Freddie Mac 30 年期按揭利率从 7.32% 降至 7.24%，但通胀和就业数据仍可能影响美联储进一步收紧政策的预期。",
+      "impact": "short-neg",
+      "evidence_quote": "The Freddie Mac 30-year mortgage rate dropped 8 basis points this week, from 7.32% to 7.24%, in conjunction with the 10-year Treasury yield, which averaged about 5.02% in the past week compared to 5.13% the week prior.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "nahb-eyeonhousing",
+      "source_name": "NAHB Eye on Housing",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "data",
+        "trend",
+        "policy"
+      ],
+      "region": "national",
+      "title": "PCE Inflation Accelerated in September",
+      "link": "https://eyeonhousing.org/2026/10/pce-inflation-accelerated-in-september/",
+      "description": "PCE Inflation Accelerated in September October 29, 2026 Fan-Yu Kuo No Comments The Federal Reserve's preferred inflation gauge accelerated in September after holding at 3.0% for three consecutive months, complicating the Fed's path to its 2% target. Consumer spending continued to be pushed up by elevated energy prices rather than income growth, driving the personal saving rate to the lowest level in nearly four years. The headline Personal Consumption Expenditure (PCE) Price Index increased 3.6% in September from a year ago, the fastest pace since May, according to the Bureau of Economic Analysis . The “core” PCE price index, which excludes food and energy, rose 3.1% over the past twelve months, following a 3.0% increase last month. Core PCE has remained at or above 3.0% since the start of the Iran conflict, suggesting inflation pressure persists even excluding volatile energy prices. Consumer spending rose 0.5% in September, while real spending, adjusted to remove inflation, remained unchanged. Meanwhile, personal income rose 0.2% in September. This growth was led by increases in compensation and government social benefits. Real disposable income—income adjusted for taxes and inflation—fell 0.3%. On a year-over-year basis, personal income was 4.1% higher, and real (inflation-adjusted) disposable income was up 1.0%. With spending growth outpacing income growth, the personal saving rate fell to 3.8% in September, the lowest level since November 2022. The personal saving rate has been on a downward trend since the start of this year, with the exception of July. personal income , U.S. Bureau of Economic Analysis (BEA) Prev Previous U.S. Economy Accelerated in the Third Quarter of 2026 Leave a Reply Cancel reply Your email address will not be published. Required fields are marked * Comment * Name * Email * Website Yes, add me to your mailing list Share this Page Subscribe to Blog Subscribe Search by Category Video Updates View Please leave this field empty Subscribe to Blog via Email Email Frequency * Instant Daily Weekly Check your inbox or spam folder to confirm your subscription. Construction Statistics Single-Family Multifamily Remodeling Labor Force Construction Wages Employment Data Job Openings Finance Builder Loans Consumer Finance Mortgages Home Sales and Prices Housing Affordability Housing Prices Housing Sales Macroeconomics Federal Reserve GDP Inflation Market Trends Housing Characteristics Housing Demand Industry Demographics Policy Research Building Materials Homeownership Tax Policy Local Data NAHB Indices Research Studies",
+      "published_at": 1793293200000,
+      "source_family": "nahb-eyeonhousing",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "e8f5f2480f552fbd",
+      "score": 18,
+      "tags": [
+        "macro",
+        "data"
+      ],
+      "heat_signals": [
+        "fed",
+        "inflation"
+      ],
+      "date_precision": "day",
+      "published_date": "2026-10-29",
+      "modified_at": 0,
+      "extraction": "body_fallback",
+      "canonical": "https://eyeonhousing.org/2026/10/pce-inflation-accelerated-in-september",
+      "content_hash": "455403c7e4976603d8c3cd6038b45dc175676ee9361c7f0172095fb78a13d315",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "duplicate_of": null,
+      "selector_reason": "September headline PCE inflation accelerated to 3.6% and core PCE to 3.1%, complicating monetary policy and borrowing-cost expectations.",
+      "title_zh": "9 月 PCE 通胀加速至 3.6%",
+      "summary_zh": "NAHB Eye on Housing 根据 BEA 数据称，9 月总体 PCE 价格指数同比上涨 3.6%，核心 PCE 上涨 3.1%，个人储蓄率降至 3.8%。",
+      "impact": "short-neg",
+      "evidence_quote": "The headline Personal Consumption Expenditure (PCE) Price Index increased 3.6% in September from a year ago, the fastest pace since May, according to the Bureau of Economic Analysis .",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "redfin-news",
+      "source_name": "Redfin News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "U.S. Home-Sale Prices Just Fell for the First Time in 3 Years",
+      "link": "https://www.redfin.com/news/housing-market-update-home-sale-prices-fall-october-2026/",
+      "description": "U.S. Home-Sale Prices Just Fell for the First Time in 3 Years Published on October 29th, 2026 by Dana Anderson The median monthly mortgage payment is still sitting at its second-highest level on record, spooking would-be buyers. What to know about the U.S. housing market for the four weeks ending October 25: The median U.S. home-sale price has fallen for the first time in more than three years . The median home-sale price was $389,601, down 0.1% year over year. That marks the second straight week in which prices ticked down–it follows a 0.2% decline last week–after three straight years of increases. Homebuying demand fell to a new low. Pending home sales declined 1.8% from a week earlier to the lowest level in records dating back to 2021. For the third week in a row, pending sales declined in all 50 of the most populous U.S. metro areas. The typical homebuyer’s monthly payment hit its second-highest level on record. The median mortgage payment was $2,786, up 10.7% year over year to the highest level in our record except the prior week. The weekly average mortgage rate is 7.32% , down from 7.4% a week earlier but still near a three-year high. Would-be sellers pulled back. New listings declined 0.6% from a week earlier to their lowest level since the start of the year as homeowners react to slow homebuying demand. Total supply is creeping up. The total number of homes for sale ticked up 0.3% from a week earlier. Even though new listings are falling, pending sales are falling more, keeping the pool of inventory partly filled. There are hundreds of thousands more home sellers than buyers nationwide, giving buyers more negotiating power than they’ve had in over a decade. For Redfin economists’ takes on the housing market, please visit Redfin’s “ From Our Economists ” page. Below is a summary of our most recent housing-market data. For more national and metro-level stats, please visit Redfin’s data center. U.S. highlights: Four weeks ending Oct. 25, 2026 Redfin’s national metrics include data from 900+ U.S. metro areas and are based on homes listed and/or sold during the period. Weekly housing-market data goes back through 2021. Subject to revision. Four weeks ending Oct. 25, 2026 Year-over-year change Week-over-week change (where applicable) Notes Median sale price $389,601 -0.1% First decline in over 3 years (except the prior week) Median asking price (seasonally adjusted) $400,703 1.2% Median monthly mortgage payment (seasonally adjusted) $2,786 at a 7.32% mortgage rate 10.7% Highest level in our records (except the prior week) Pending sales (seasonally adjusted) 276,352 -15.9% -1.8% Lowest level in our records New listings (seasonally adjusted) 352,421 -4% -0.6% Lowest level since January Active listings (seasonally adjusted) 1,510,619 2.2% 0.3% Months of supply 4.5 Up from 4 4 to 5 months of supply is considered balanced Share of homes off market in two weeks 27.5% Down from 28.5% Median days on market 50 1 Share of home listings with price drops 21.5% Up from 20.9% Share of homes sold above list price 23.2% Unchanged Average sale-to-list price ratio 98.3% Unchanged Metro-level highlights: Four weeks ending Oct. 25, 2026 Redfin’s metro-level rankings data includes the 50 most populous U.S. metros. Select metros may be excluded from time to time to ensure data accuracy. Metros with biggest year-over-year increases Metros with biggest year-over-year decreases Notes Median sale price San Francisco (15%) New Brunswick, NJ (8.4%) Pittsburgh (7.4%) Montgomery County, PA (6.2%) Cleveland (4.9%) Seattle (-5.1%) San Jose, CA (-4.9%) Austin, TX (-4.6%) Kansas City, MO (-4.3%) Nashville, TN (-3.3%) Pending sales Seattle (-31.6%) Atlanta (-25.9%) San Diego (-25.3%) Las Vegas (-22.7%) Denver (-22.3%) Declined in every single metro we analyzed, for the third week in a row New listings San Jose, CA (17.9%) Newark, NJ (14.4%) Boston (12.8%) Nashville, TN (9.1%) San Francisco (8.5%) Atlanta (-26.5%) San Antonio (-18.7%) Dallas (-17.6%) Austin, TX (-12.9%) Minneapolis (-8%) Refer to our metrics definition page for explanations of all the metrics used in this report. Dana Anderson As a data journalist at Redfin, Dana Anderson writes about the numbers behind real estate trends. Redfin is a full-service real estate brokerage that uses modern technology to make clients smarter and faster. For more information about working with a Redfin real estate agent to buy or sell a home, visit our Why Redfin page. Email Dana Get a home loan that helps you win Get prequalified Join us on X for more #housingmarket updates Follow Us You Might Also Like U.S. Pending Home Sales Sink to a New Low Housing Market Update: Sellers' Asking Prices Fall For the First Time Since March Pending Home Sales Dip to Lowest Level in Nearly 3 Years High Costs Sideline Some Would-Be Homebuyers, Handing Upper Hand to Those Who Stay in the Market Homebuyers Have More Fresh Options Than They’ve Had in 4 Years New Listings Hit 4-Month High While Demand Slips, Giving Serious Buyers Chance to Get a Deal Done New Listings Tick Up As Summer Winds Down Be the first to see the latest real estate news: Facebook This field is for validation purposes and should be left unchanged. Email * Sign up By submitting your email you agree to Redfin’s Terms of Use and Privacy Policy Add Redfin as a preferred source on Google &times; Scroll to Top",
+      "published_at": 1793274313000,
+      "source_family": "redfin-news",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "9ece3f4253d7065a",
+      "score": 15,
+      "tags": [
+        "housing",
+        "data",
+        "rates"
+      ],
+      "heat_signals": [
+        "housing market"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://redfin.com/news/housing-market-update-home-sale-prices-fall-october-2026",
+      "content_hash": "1c219d18e2efb07ee4111d8288cbec852db3c961da1d5500069acf5a93d7b1b4",
+      "access": "preview",
+      "evidence_status": "preview",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "duplicate_of": null,
+      "selector_reason": "Redfin reports the first year-over-year decline in U.S. home-sale prices in more than three years, record-low pending sales and a near-record monthly mortgage payment.",
+      "title_zh": "美国房屋成交价三年多来首次同比下跌",
+      "summary_zh": "Redfin 数据显示，截至 10 月 25 日的四周，美国房屋成交价中位数同比下降 0.1% 至 $389,601；住宅签约量降至 2021 年以来记录最低。",
+      "impact": "short-neg",
+      "evidence_quote": "The median home-sale price was $389,601, down 0.1% year over year.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "nahb-eyeonhousing",
+      "source_name": "NAHB Eye on Housing",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "data",
+        "trend",
+        "policy"
+      ],
+      "region": "national",
+      "title": "U.S. Economy Accelerated in the Third Quarter of 2026",
+      "link": "https://eyeonhousing.org/2026/10/u-s-economy-accelerated-in-the-third-quarter-of-2026/",
+      "description": "U.S. Economy Accelerated in the Third Quarter of 2026 October 29, 2026 Jing Fu No Comments The U.S. economy grew at a faster pace in the third quarter of 2026, supported by stronger consumer spending, robust business investment, and increased government spending. However, residential investment remained a weak spot, highlighting the continued challenges facing the housing sector amid elevated borrowing costs. According to the “advance” estimate released by the Bureau of Economic Analysis (BEA), real gross domestic product (GDP) expanded at an annual rate of 3.4% in the third quarter, up from a 2.2% increase in the second quarter of 2026. The acceleration suggests that overall economic activity strengthened during the summer, although the advance estimate remains subject to revision. The latest GDP report also showed that inflationary pressures eased in the third quarter. The price index for gross domestic purchases rose 3.0% in the third quarter, down from 5.6% in the second quarter. The Personal Consumption Expenditures (PCE) Price Index, which measures inflation (or deflation) across various consumer expenses and reflects changes in consumer behavior, increased 2.1%, compared with a 5.0% increase in the previous quarter. Excluding food and energy, the core PCE price index increased 2.5%, easing from 3.3% in the second quarter. Breaking down the third-quarter data further, growth in real GDP primarily reflected gains in consumer spending, investment, and government spending, which were partly offset by a decrease in exports. Imports, which are a subtraction in the calculation of GDP, increased during the quarter. Consumer spending, the backbone of the U.S. economy, increased at an annual rate of 3.8% in the third quarter, following a similar pace of growth in the second quarter. The increase in consumer spending reflected increases in both services and goods. Gross private domestic investment continued to support economic growth in the third quarter, particularly through strong business investment in equipment and intellectual property products. Investment associated with artificial intelligence and information-processing equipment contributed to the expansion, while residential investment remained weak. Nonresidential fixed investment increased 12.7% in the third quarter. Strong gains in equipment (+20.9%) and intellectual property products (+8.8%) supported business investment. Meanwhile, residential fixed investment (RFI) declined 3.3%. Within the residential category, investment in single-family permanent site structures decreased 5.0% at an annual rate, multifamily permanent site structures rose 0.3%, and spending on improvements rose 2.7%. Government spending increased 5.3% in the third quarter, contributing to the acceleration in overall economic growth. Trade activity was a drag on GDP growth in the third quarter. Exports declined, while imports increased. Because imports are subtracted from GDP, the increase in imports further weighed on headline growth, partly offsetting the positive contributions from consumer spending, investment, and government spending. For the common BEA terms and definitions, please access bea.gov/Help/Glossary . GDP , Government spending , Personal Consumption Expenditures , residential fixed investment , U.S. Bureau of Economic Analysis (BEA) Prev Previous Homeownership Rate Rises to 65.5% Next PCE Inflation Accelerated in September Next Leave a Reply Cancel reply Your email address will not be published. Required fields are marked * Comment * Name * Email * Website Yes, add me to your mailing list Share this Page Subscribe to Blog Subscribe Search by Category Video Updates View Please leave this field empty Subscribe to Blog via Email Email Frequency * Instant Daily Weekly Check your inbox or spam folder to confirm your subscription. Construction Statistics Single-Family Multifamily Remodeling Labor Force Construction Wages Employment Data Job Openings Finance Builder Loans Consumer Finance Mortgages Home Sales and Prices Housing Affordability Housing Prices Housing Sales Macroeconomics Federal Reserve GDP Inflation Market Trends Housing Characteristics Housing Demand Industry Demographics Policy Research Building Materials Homeownership Tax Policy Local Data NAHB Indices Research Studies",
+      "published_at": 1793286362000,
+      "source_family": "nahb-eyeonhousing",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "6753f5529b7edd81",
+      "score": 14,
+      "tags": [
+        "macro",
+        "data",
+        "housing"
+      ],
+      "heat_signals": [],
+      "date_precision": "day",
+      "published_date": "2026-10-29",
+      "modified_at": 0,
+      "extraction": "body_fallback",
+      "canonical": "https://eyeonhousing.org/2026/10/u-s-economy-accelerated-in-the-third-quarter-of-2026",
+      "content_hash": "9f3da88ab28acee118156526755df3d0ead684e86a4829875013cd127670299d",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "duplicate_of": null,
+      "selector_reason": "Advance GDP growth accelerated to 3.4% in Q3 while residential investment remained weak, offering important macro context for housing and CRE.",
+      "title_zh": "美国第三季度 GDP 增速加快至 3.4%",
+      "summary_zh": "NAHB Eye on Housing 援引 BEA 初值称，美国第三季度实际 GDP 年化增长 3.4%，但住宅投资仍是经济增长的薄弱环节，住房市场继续承受融资成本压力。",
+      "impact": "neutral",
+      "evidence_quote": "According to the “advance” estimate released by the Bureau of Economic Analysis (BEA), real gross domestic product (GDP) expanded at an annual rate of 3.4% in the third quarter, up from a 2.2% increase in the second quarter of 2026.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "Biggest US homebuilder misses estimates, sees fewer closings",
+      "link": "https://www.nationalmortgagenews.com/articles/biggest-us-homebuilder-misses-estimates-sees-fewer-closings",
+      "description": "Biggest US homebuilder misses estimates, sees fewer closings By Dina Katgara Published October 29, 2026, 4:12 p.m. EDT 1 Min Read Facebook Twitter LinkedIn Email D.R. Horton Inc., the biggest US homebuilder, reported earnings that missed analyst estimates and said it expects to keep offering more discounts than usual to entice sluggish buyers. Processing Content The company reported earnings per share of $2.67 in the fourth quarter, below the average analyst estimate of $3.02 compiled by Bloomberg. D.R. Horton now expects to close fewer home sales in the coming fiscal year, forecasting as few as 79,000 closings in 2027 compared to about 84,000 this year. Rising rates, affordability constraints and cautious consumer sentiment pressured demand in the quarter, Executive Chairman David Auld said in a statement. READ MORE: DR Horton fights RICO suit over lowballed escrow estimates \"There's just a lot of noise today out there,\" Chief Executive Officer Paul Romanowski said in a call with analysts Thursday. \"It would be nice to go through a spring without an additional shock or something coming out there so that people can settle down\" and buy homes, he said. D.R. Horton focuses on entry-level buyers sensitive to borrowing cost changes. Romanowski said expecting rates to fall is \"imprudent,\" but added that greater geopolitical stability, lower gas prices and stronger consumer confidence could help the housing market. In the meantime, homebuilders are using a variety of discounts or sweeteners to help sell houses when demand weakens. The so-called incentives — things like providing below-market mortgage rates and reducing closing costs — cut into profit margins. More than half of builders reported using sales incentives in October, according to the National Association of Home Builders. READ MORE: ADU project volume, cost growth an opportunity for lenders D.R. Horton said it expects its use of incentives to remain higher into the new fiscal year. The company's shares rose as much as 2.2% in New York trading Thursday. Dina Katgara Bloomberg News",
+      "published_at": 1793304778000,
+      "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1793304778019,
+      "extraction": "semantic",
+      "canonical": "https://nationalmortgagenews.com/articles/biggest-us-homebuilder-misses-estimates-sees-fewer-closings",
+      "content_hash": "41c1adfc76c1b2fd6533ea847ffb5c7f746f468fba70ef440502adea8ae7fd01",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "7fdc557f0987a80f",
+      "source_family": "national-mortgage-news",
+      "is_research": false,
+      "required_source": false,
+      "first_seen_at": 1793309852130,
+      "score": 21,
+      "tags": [
+        "homebuilder",
+        "earnings",
+        "housing",
+        "rates"
+      ],
+      "heat_signals": [
+        "mortgage rate",
+        "forecast",
+        "housing market"
+      ],
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "duplicate_of": null,
+      "selector_reason": "D.R. Horton missed earnings and lowered projected 2027 closings, citing rates, affordability and cautious buyers, making it a meaningful housing-cycle and builder-demand signal.",
+      "title_zh": "D.R. Horton 预计 2027 年交付量下降",
+      "summary_zh": "D.R. Horton 报告季度每股收益低于分析师预期，并预计 2027 财年交付量最低约 79,000 套；公司称高利率、可负担性约束和消费者谨慎压制需求。",
+      "impact": "short-neg",
+      "evidence_quote": "D.R. Horton now expects to close fewer home sales in the coming fiscal year, forecasting as few as 79,000 closings in 2027 compared to about 84,000 this year.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "lance-lambert",
+      "source_name": "Lance Lambert / ResiClub",
+      "source_tier": "B",
+      "source_weight": 10,
+      "source_tags": [
+        "housing",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Build-to-Rent gets a clean exemption: House Republicans remove 7-year selloff rule from institutional homebuying ban - ResiClub",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPb1lac25LZ3J5b3pIUm91LXVSTDBFXzZXZWtGZEI5V2ZjYy1vcTFvSHF4NEc5V3N0dnJQWWJiWk00dzQwc214NXJmMmM5MC10ZEhKb0lLREVrTWktWXZBWGliMWJ3dFJaVlJMY0pyeUJuSlBoT3p3bmhodFFLai1RZ0hEbUdMWHIyckN0VDh4SUw0bW1kVzhPc0V2YjVhWkdUa0oyaklBZTVYZ19MamlCNG45WlVZVkt2MzNjaUxKTUU2dw?oc=5",
+      "description": "Build-to-Rent gets a clean exemption: House Republicans remove 7-year selloff rule from institutional homebuying ban &nbsp;&nbsp; ResiClub",
+      "published_at": 1778734890000,
+      "source_family": "lance-lambert",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "755762329c432a76",
+      "late_discovery": true,
+      "score": 12,
+      "tags": [
+        "btr-sfr",
+        "policy",
+        "regulation",
+        "institutional"
+      ],
+      "heat_signals": [
+        "build-to-rent"
+      ],
+      "evidence_status": "insufficient",
+      "keep": true,
+      "importance": 3,
+      "section": "institutional",
+      "duplicate_of": null,
+      "selector_reason": "The proposed exemption of BTR from a seven-year selloff rule in institutional-homebuying legislation is directly relevant to institutional rental-housing strategy and regulation.",
+      "title_zh": "众议院共和党人移除机构购房 7 年出售限制",
+      "summary_zh": "ResiClub 标题显示，众议院共和党人从机构购房禁令中移除了 7 年出售规则，并为 Build-to-Rent 提供豁免。",
+      "impact": "long-pos",
+      "evidence_quote": "Build-to-Rent gets a clean exemption: House Republicans remove 7-year selloff rule from institutional homebuying ban",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "Freddie Mac's loan acquisitions top Fannie's as rates rise",
+      "link": "https://www.nationalmortgagenews.com/news/freddie-macs-loan-acquisitions-top-fannies-as-rates-rise",
+      "description": "Freddie Mac's loan acquisitions top Fannie's as rates rise By Bonnie Sinnock CloseText About Bonnie twitter bcynic mailto bonnie.sinnock@arizent.com linkedin bonnie-sinnock-115a829 Published October 29, 2026, 3:27 p.m. EDT 4 Min Read Facebook Twitter LinkedIn Email Key Insight: See why Freddie Mac's new loan acquisitions moved ahead of Fannie Mae's in the third quarter. What's at Stake: Competition between Fannie and Freddie could make them more willing to open up the credit box for lenders who sell loans to them. A profitable Freddie Mac regained its lead over larger competitor Fannie Mae in single-family loan acquisitions during the third quarter as higher rates intensified competition between them. Freddie, which is the smaller of the two government-sponsored enterprises when it comes to its outstanding portfolio size, reported Thursday that it acquired $98 billion in home mortgages during the fiscal period. Fannie Mae , in comparison, purchased $88 billion in single-family loans. Processing Content These and other numbers in their recent earnings raises the question of what Freddie is doing to capture more loan acquisitions and whether it's opening up the credit box to do it. The latest underwriting indicators in earnings show Freddie's credit score and loan-to-value ratio tolerances are slightly higher, but the growth in credit reserves and some elevated delinquency measures at both GSEs suggests both will be cautious about the size of their credit boxes. \"We are growing our financial strength, applying disciplined decision-making and risk management, and continuing to invest in the capabilities that can make the housing system work better,\" Freddie Mac Chief Financial Officer Jim Whitlinger said in the GSE's earnings call. What underwriting indicators show Whitlinger reported that Freddie's weighted average current loan-to-value ratio was 54% and the equivalent credit score was 755 in the company's third-quarter earnings call. Fannie's equivalent credit score number was 753 and its mark-to-market loan-to-value ratio was 51%. Current or mark-to-market LTVs on the outstanding portfolios account for property value changes and paydowns on loans over time. Weighted averages for original LTVs are generally higher and have averaged more around 78%, according to Fannie. The underwriting metrics for new acquisitions are a subset of the broader portfolio numbers. Whitlinger and others have indicated there may be more caution in that part of the market because slight increases in certain delinquency buckets have been driven by newer vintages. \"The year-over-year increase was primarily driven by higher serious delinquency rates for loans originated during 2022 through 2024,\" Whitlinger said during the call. Both Fannie and Freddie have seen some delinquencies inch up in both their single- and multifamily book, calling for broader risk management. With risk growing, Freddie had to manage a larger-than anticipated shift from a $900 million benefit for credit losses to a $800 million reserve during the quarter, analysts at BTIG noted. Fannie also recorded a shift from a benefit for credit losses to a reserve in the period. All this suggests that for the time being, Freddie and Fannie are keeping an eye on credit, which may limit how much leeway in underwriting they want to use to compete. But they still want to offer some additional support to help consumers afford homes to the extent their delinquency rates and overall financials allow. While some types of arrears are rising, the single-family serious delinquency rate is still historically low at less than 1% at both GSEs. \"Financial strength matters because of what it enables us to do,\" Whitlinger said. \"It gives us greater capacity to provide liquidity throughout the economic cycle, support sustainable homeownership and help make housing finance more efficient and affordable.\" Examples include a lender option that both GSEs now offer to use the modernized VantageScore 4.0 credit metric for loan pricing, which some mortgage companies have said helped them get certain borrowers approved. This was used for 6% of the loans Fredddie bought in the third quarter, Whitlinger said. Other key financial metrics to watch The GSEs so far have shown that they are financially strong from a net income perspective and have sustained the long run of profitability that followed their 2008 move into conservatorship. So long as that financial strength persists, they might do more to expand some underwriting selectively with offsetting, more conservative adjustments in other areas in line with the trend seen in the condo market. Freddie reported that quarterly net income rose by around 17% on the year to $3.2 billion, and Fannie announced a day earlier that its strongest net revenues since 2023 drove an 8% increase during the same period to $4.2 billion. The smaller GSE's $3.2 billion in growth for the quarter also brought its total net worth to $81 billion, helping to close a regulatory capital gap that's also essential to their financial soundness and an eventual conservatorship exit. Fannie also reported improvement in this area. \"Excluding buffers, our capital shortfall was $98 billion at the end of third quarter 2026, largely because the $73 billion of senior preferred stock does not qualify,\" Whitlinger said in a reminder that an exit would need to address this, a key point prominent GSE investors have emphasized. Adjusted for the SPS, this means capital is around $21 billion below its statutory minimum level, Keefe, Bruyette & Woods analysts noted in a report on Freddie's earnings. \"FMCC's capital remains subordinate to the government's senior preferred shares and liquidation preference, so any privatization would have to include either forgiveness or conversion,\" the KBW analysts wrote. Both Freddie and Fannie's shares were trading higher on the day at press time on Thursday, with the former's stock up by a little over 12% at $4.09 per share and latter's ar",
+      "published_at": 1793302040000,
+      "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1793302040052,
+      "extraction": "semantic",
+      "canonical": "https://nationalmortgagenews.com/news/freddie-macs-loan-acquisitions-top-fannies-as-rates-rise",
+      "content_hash": "fcc61540383a4af8db0670e6fa28c87848712515f6cbadda4300c2b9bde4fa60",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "91ecfe2d8e61d81a",
+      "source_family": "national-mortgage-news",
+      "is_research": false,
+      "required_source": false,
+      "first_seen_at": 1793309852130,
+      "score": 23,
+      "tags": [
+        "institutional",
+        "data"
+      ],
+      "heat_signals": [
+        "freddie mac",
+        "fannie mae",
+        "trend",
+        "year-over-year"
+      ],
+      "keep": true,
+      "importance": 3,
+      "section": "institutional",
+      "duplicate_of": null,
+      "selector_reason": "Freddie Mac acquired $98 billion of single-family mortgages in Q3 versus Fannie's $88 billion, providing relevant GSE origination and credit-market data.",
+      "title_zh": "Freddie Mac 第三季度购入住房贷款超越 Fannie Mae",
+      "summary_zh": "National Mortgage News 报道，Freddie Mac 第三季度购入 $98 billion 住房按揭贷款，高于 Fannie Mae 的 $88 billion；双方信贷标准仍保持审慎。",
+      "impact": "neutral",
+      "evidence_quote": "Freddie, which is the smaller of the two government-sponsored enterprises when it comes to its outstanding portfolio size, reported Thursday that it acquired $98 billion in home mortgages during the fiscal period. Fannie Mae , in comparison, purchased $88 billion in single-family loans.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Philly Hospitals Seek Cost Savings From Architects, Builders",
+      "link": "https://www.bisnow.com/news/philadelphia/healthcare/hospital-ceos-construction-budgets-architects-builders",
+      "description": "Hospitals across greater Philadelphia face a challenging operating environment, and with federal support expected to dry up, executives are looking to the ancillary businesses they work with for help. Pexels/K Architecture and construction firms that depend on these projects can do more to help keep capital budgets in check as healthcare systems respond to sustained patient demand, CEOs from across the region said Tuesday at Bisnow ’s Pennsylvania Healthcare Real Estate Summit, held at the Crystal Tea Room in Philadelphia. “You’ve got to help us in our ecosystem,” University of Pennsylvania Health System CEO Kevin Mahoney said. “Get on our team. We’re getting paid less.” The Children’s Hospital of Philadelphia is spending nearly $2.6B to build a new patient tower in West Philadelphia, CEO Joseph Mitchell said. The 20-story building is due in 2028. While he is proud of the project, Mitchell said the institution can’t afford to keep spending like this in the current climate. “That’s just unaffordable in the long term,” he said. “Partner with your clients to find ways to reduce these costs. It’s a two-way street.” Hospitals' already strained operating margins are facing more issues from federal spending cuts that lead to an increase in uncompensated care. Last year's One Big Beautiful Bill Act included a $1T cut to Medicaid through 2034, which is expected to cause more than 10 million Americans to lose their health insurance coverage over that period. This is a particularly grave issue for cash-strapped rural hospitals. More than 100 have shuttered over the past decade, and another 700 are at risk of closing, according to a July report from the Center for Healthcare Quality and Payment Reform. Hospitals face additional economic challenges when looking to build new facilities. Construction costs across Eastern Pennsylvania were up 2.2% month-over-month and 11.2% year-over-year in September, according to a report from the local branch of Associated Builders and Contractors. Mitchell acknowledged that construction costs are ballooning across the U.S. and that health systems sometimes don’t pick the cheapest ways to do projects. For example, CHOP has opted to utilize union labor on the tower. Last-minute changes to hospital projects that are commonplace in the industry also add extra costs, Mitchell said. But ultimately, the executive said something has to break: “Can we find ways to limit astronomical growth in capital spending?” Bisnow/Noah Zucker LF Driscoll's Mike Dikon, Thomas Jefferson University's Joseph Cacchione, Children's Hospital of Philadelphia's Joseph Mitchell, Tower Health's Michael Stern, Highmark Health's Karen Hanlon, Geisinger's Terry Gilliland, Cooper University Health Care's Anthony Mazzarelli and University of Pennsylvania Health System's Kevin Mahoney Mahoney suggested that less traditional construction techniques could be part of the solution. He said Penn Medicine’s 17-story, 504-bed Pavilion came online in West Philly in 2021 after the system spent $1.6B. The project was 30% modular, Mahoney said. He thought projects should be closer to 70% prefabricated as a way to rein in construction budgets. Penn Medicine signed a 40K SF lease for its first Delaware location in February. The space in suburban Wilmington will be focused on primary care and some specialty services. Artificial intelligence is just as hot a topic in the design and building world as anywhere else, but Cooper University Health Care CEO Anthony Mazzarelli said healthcare systems aren't seeing the technology create shorter construction timelines or anything else that would save them money. “That's how long that took two years ago. You just told me you're using all this AI stuff. How are you passing on that efficiency to us?” he said. “We're the one throat to choke from the government when it comes to spending, but it's also going to hurt everybody else.” Earlier at Tuesday's event, a different panel was asked about unconventional techniques that could be used to expedite projects. CHOP Assistant Vice President of Facilities Project Management and Construction Brian Gardner floated organizationwide standardized construction plans. While designing and coming to a consensus on those plans can be an arduous process, he said the work pays off down the line and is one of the few meaningful levers healthcare systems can pull to shorten construction timelines. \"Standardization is probably one of the low-hanging fruits that organizations can work through because decisions come quicker,” Gardner said. The CEOs’ pleas for cost savings come as regional hospital system players expect higher construction prices in Pennsylvania amid the data center boom. Many of the contractors and suppliers that hospital systems depend on have been focused on getting a piece of the artificial intelligence data center boom, a trend that is already making it harder to build healthcare projects in other markets, like Houston . “We’re already seeing it with the data centers, believe it or not,” Guthrie Senior Vice President Joseph Sawyer said. He recalled being given a yearlong lead time for critical components such as generators and air handlers. Increased competition for construction workers is also straining construction budgets. “How do we address, when we’re trying to do pro formas nationally, the impact of 50% labor increases because we can’t find enough qualified labor?” Limbach Vice President Jay Levin said. KQT Health owner Todd Strine said he believes there is no end in sight and that it would behoove health systems to expedite their construction decision-making. “Prices are going to go way up,” he said. “If you’re going to make a large decision, I think it’s better to do it sooner than later.” See more photos from Tuesday's event below. Continue reading this story with a free account Log in or register Related Topics: Alistair Erskine , Anchor Health Properties , Anthony Mazzarelli , Anthony Naccarato , AtlantiCare , Beth Muller",
+      "published_at": 1793221914000,
+      "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1793227291000,
+      "extraction": "semantic",
+      "canonical": "https://bisnow.com/news/philadelphia/healthcare/hospital-ceos-construction-budgets-architects-builders",
+      "content_hash": "a500079c6d24aefd40b7bf31f31c4a69404e98e29a507772d53aa42e5e752b58",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "fcd05d4dba44161e",
+      "source_family": "bisnow",
+      "is_research": false,
+      "required_source": false,
+      "first_seen_at": 1793235749217,
+      "score": 21,
+      "tags": [
+        "construction",
+        "institutional"
+      ],
+      "heat_signals": [
+        "houston",
+        "fed",
+        "trend",
+        "year-over-year"
+      ],
+      "keep": true,
+      "importance": 3,
+      "section": "institutional",
+      "duplicate_of": null,
+      "selector_reason": "Philadelphia hospital systems are reassessing major capital programs while a $2.6 billion patient tower remains under construction, providing a meaningful institutional real-estate capital signal.",
+      "title_zh": "费城医院寻求降低建筑与运营成本",
+      "summary_zh": "费城医院经营环境承压，管理层要求建筑师和施工企业协助控制资本预算；宾夕法尼亚大学医疗系统称医院正面临更低支付水平。",
+      "impact": "short-neg",
+      "evidence_quote": "“Partner with your clients to find ways to reduce these costs. It’s a two-way street.”",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "cushman-research",
+      "source_name": "Cushman & Wakefield Research",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "MarketBeat Miami Retail Q3 2026",
+      "link": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/miami-marketbeats/retail",
+      "description": "Share: Share on Facebook Share on Twitter Share on LinkedIn I recommend visiting cushmanwakefield.com to read:%0A%0A {0} %0A%0A {1} Insights Miami Retail MarketBeat This MarketBeat report covers the Miami retail real estate market for Q3 2026, highlighting key themes across supply, demand, pricing, and retail sales activity. Read the report for the full details and insights. DOWNLOAD THE Q3 2026 REPORT Key Takeaways Miami-Dade County’s retail construction pipeline remained steady in the third quarter of 2026, with 1.3 msf underway. Vacancy increased 10 bps QOQ to 3.1% and rose by the same amount YOY. Retail leasing activity across Miami-Dade County totaled more than 441,000 sf in the third quarter of 2026, bringing YTD deal volume to 1.7 msf, down 18.0% YOY. Miami-Dade County’s average retail asking rent reached $50.27 psf in the third quarter of 2026, representing a 1.8% increase YOY. Miami-Dade County recorded $619.9 million in retail investment sales during the third quarter of 2026, representing almost 810,000 sf sold. Supply Miami-Dade County’s retail construction pipeline remained steady in the third quarter of 2026, with 1.3 million square feet (msf) underway. Construction commenced on nearly 63,000 square feet (sf) of new retail space during the quarter. Meanwhile, deliveries totaled 78,000 sf, bringing year-to-date (YTD) deliveries to 158,000 sf. This represented a 64.6% year-over-year (YOY) decrease from the 447,000 sf delivered during the same period in 2025. Vacancy increased 10 basis points (bps) quarter-over-quarter (QOQ) to 3.1% and rose by the same amount YOY. Despite the slight increase, Miami-Dade County’s retail market continued to demonstrate tight conditions, with vacancy remaining the lowest among Florida markets, below Fort Lauderdale at 4.2%, Orlando at 3.9% and Tampa at 3.8%. Demand Retail leasing activity across Miami-Dade County totaled more than 441,000 sf in the third quarter of 2026, bringing YTD deal volume to 1.7 msf, down 18.0% YOY. The market recorded negative 81,000 sf of net absorption during the quarter, bringing the YTD total to negative 129,000 sf. Although occupancy losses have persisted in six of the past seven quarters, quarterly performance improved considerably from negative 230,000 sf in the third quarter of 2025. At the submarket level, Kendall and Miami Airport led occupancy gains, recording 97,000 sf and nearly 51,000 sf of positive absorption, respectively. These gains were offset by losses in Coral Gables (negative 41,000 sf) and Northeast Dade (negative 35,000 sf). By property type, malls posted the strongest performance, with occupancy gains of just under 12,000 sf, while general retail recorded the largest decline at negative 62,000 sf. Overall, leasing activity and occupancy trends remained mixed across the county, with gains in select submarkets and property types offset by continued weakness elsewhere. Looking ahead, the construction pipeline may provide additional opportunities for retailers as new space enters the market, although future occupancy gains will depend on demand keeping pace with new supply. Pricing Miami-Dade County’s average retail asking rent reached $50.27 per square foot (psf) in the third quarter of 2026, representing a 1.8% increase YOY. Among the county’s retail submarkets, Miami Beach commanded the highest average asking rent at $97.85 psf, while Miami recorded the lowest at $31.92 psf. Compared YOY, average asking rents increased in 16 submarkets and declined in three. Outlying Miami-Dade County recorded the largest YOY increase, with rents rising 4.1% from $40.97 psf to $42.65 psf. In contrast, Brickell asking rents declined 2.4% YOY to $84.96 psf. Retail Sales Miami-Dade County recorded $619.9 million in retail investment sales during the third quarter of 2026, representing almost 810,000 sf sold. This brought YTD transaction volume to $1.2 billion across 2.0 msf. YTD transaction volume declined 25.5% YOY and was 6.6% below the five-year average. Miami Airport led all submarkets with $265.8 million in sales. Notable transactions included the $72.0 million sale of Airpark Plaza, located at 5715 NW Seventh Street in the Miami Airport submarket. By property type, strip malls recorded the highest average sale price at $815 psf during the quarter. Pricing remained elevated, with Miami averaging $450 psf, well above the U.S. average of $246 psf, underscoring the market’s continued premium positioning. Miami-Dade County’s retail capitalization rates ranged from 4.9% to 7.2%, averaging 5.8%. This was below the national average of 7.4%, indicating that local retail properties continued to trade at lower yields than the national average. Insights in your Inbox Subscribe to the latest local market research, insights and analysis from Cushman & Wakefield across the United States. Subscribe Authors Eric Messer Research Director Current Marketbeats MarketBeat Miami Retail MarketBeat This MarketBeat report covers the Miami retail real estate market for Q3 2026, highlighting key themes across supply, demand, pricing, and retail sales activity. Read the report for the full details and insights. Eric Messer &bull; 10/29/2026 MarketBeat Miami Industrial MarketBeat MarketBeat Miami Industrial Q3 2026 covers key trends and conditions in Miami’s industrial real estate market for the third quarter of 2026. Read the report for the full details. Eric Messer &bull; 10/20/2026 MarketBeat Miami Office MarketBeat This MarketBeat report covers the Miami office real estate market for Q3 2026, including narrative insights on supply, demand, and pricing conditions. Read the report for the full details. Eric Messer &bull; 10/12/2026 Q2 2026 Miami Multifamily Report Miami's multifamily pricing environment remained stable during Q2, with overall effective rents averaging $2,596 per unit, declining 0.3% YOY. Download Full Report Related Insights MarketBeat Miami Track Miami's commercial real estate market with sector-specific MarketBeat repor",
+      "published_at": 1793275200000,
+      "date_precision": "timestamp",
+      "modified_at": 1793238552000,
+      "extraction": "semantic",
+      "canonical": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/miami-marketbeats/retail",
+      "content_hash": "1bb403c9644665dcb8f17db3d7e5949b62593cbd29cb0d2714e529825ca227e3",
+      "access": "public",
+      "source_family": "cushman-research",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "055a545ad3859db6",
+      "score": 31,
+      "tags": [
+        "retail",
+        "data",
+        "deals",
+        "florida"
+      ],
+      "heat_signals": [
+        "trend",
+        "trends",
+        " yoy",
+        "year-over-year",
+        "occupancy",
+        "vacancy"
+      ],
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "duplicate_of": null,
+      "selector_reason": "Miami-Dade retail data provides current construction, vacancy, leasing, rent and investment-sales metrics, including 1.3 million square feet underway and $619.9 million of quarterly sales.",
+      "title_zh": "迈阿密零售空置率升至 3.1%",
+      "summary_zh": "Cushman & Wakefield Research 显示，2026 年第三季度迈阿密--戴德县零售空置率环比升至 3.1%，租赁面积超过 441,000 平方英尺，平均租金同比上涨 1.8%。",
+      "impact": "neutral",
+      "evidence_quote": "Vacancy increased 10 bps QOQ to 3.1% and rose by the same amount YOY. Retail leasing activity across Miami-Dade County totaled more than 441,000 sf in the third quarter of 2026, bringing YTD deal volume to 1.7 msf, down 18.0% YOY.",
+      "evidence_basis": "body",
+      "cre_subcategory": "零售"
+    },
+    {
+      "source_id": "cushman-research",
+      "source_name": "Cushman & Wakefield Research",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "MarketBeat Portland Office Q3 2026",
+      "link": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/portland-marketbeats/office",
+      "description": "Share: Share on Facebook Share on Twitter Share on LinkedIn I recommend visiting cushmanwakefield.com to read:%0A%0A {0} %0A%0A {1} Insights Portland Office MarketBeat This MarketBeat report covers the Portland office market for Q3 2026, including narrative insights on the economy, supply and demand, and pricing conditions. Read the report for the full details and context. DOWNLOAD THE Q3 2026 REPORT Key Takeaways Economic conditions in the Portland region moderated during the third quarter of 2026. Overall vacancy rose to 23.9%, while quarterly net absorption was minimally negative at 21,000 sf, bringing YTD absorption to negative 627,000 sf. Despite ongoing occupancy hurdles, leasing activity remained relatively active with nearly 1.4 msf transacted YTD. New construction remains effectively absent, with no office space currently under construction, limiting future supply additions and allowing market fundamentals to gradually stabilize as vacant space is naturally absorbed over time. Average full-service asking rents dropped 3.8% YOY to $32.54 psf, as property owners continued prioritizing occupancy within a highly competitive leasing environment. Economy: Labor Market Moderates Economic conditions in the Portland region moderated during the third quarter of 2026. Total nonfarm employment declined 1.7% to just over 1.2 million jobs, while the Portland unemployment held steady year-over-year – at 5.0%, it remained 80 basis points higher than the national rate of 4.2%. Looking ahead, while employment growth is expected to remain muted, relatively stable labor market conditions should support a gradual recovery in office leasing activity as occupiers gain greater confidence in long-term space planning. Supply and Demand: Market Continues to Rebalance The Portland office market continued to navigate challenging demand conditions during the third quarter, as occupiers remained selective and continued to prioritize efficiency in their space requirements. Overall vacancy rose to 23.9%, while quarterly net absorption was minimally negative at 21,000 square feet (sf), bringing year-to-date absorption to negative 627,000 sf. Despite ongoing occupancy hurdles, leasing activity remained relatively active with nearly 1.4 million square feet transacted year-to-date. New construction remains effectively absent, with no office space currently under construction, limiting future supply additions and allowing market fundamentals to gradually stabilize as vacant space is naturally absorbed over time. Pricing: Focus on Concession Packages Average full-service asking rents dropped 3.8% YOY to $32.54 per square foot (psf), as property owners continued prioritizing occupancy within a highly competitive leasing environment. Rather than significantly reducing quoted rents, many landlords have focused on concession packages including tenant improvement allowances, free rent and flexible lease structures to attract tenants. Premium Class A properties continue to outperform the broader market, with average Class A asking rents reaching $36.80 psf, reflecting ongoing tenant preference for well-located, amenity-rich buildings that support evolving workplace strategies. Insights in your Inbox Subscribe to the latest local market research, insights and analysis from Cushman & Wakefield across the United States. Subscribe Author Brian Cagayat Research Manager Current Marketbeats MarketBeat Portland Office MarketBeat This MarketBeat report covers the Portland office market for Q3 2026, including narrative insights on the economy, supply and demand, and pricing conditions. Read the report for the full details and context. Brian Cagayat &bull; 10/29/2026 MarketBeat Portland Industrial MarketBeat This MarketBeat report covers the Portland industrial real estate market for Q3 2026. Read the report for a full overview of market conditions and trends. Brian Cagayat &bull; 10/29/2026 Related Insights MarketBeat Portland Track Portland commercial real estate conditions with MarketBeat reports covering sector performance and the latest market trends. 10/28/2026 --> CAN'T FIND WHAT YOU'RE LOOKING FOR? Get in touch with one of our professionals. CONTACT US Your privacy matters to us With your permission we and our partners would like to use cookies in order to access and record information and process personal data, such as unique identifiers and standard information sent by a device to ensure our website performs as expected, to develop and improve our products, and for advertising and insight purposes. Alternatively click on More Options and select your preferences before providing or refusing consent. Some processing of your personal data may not require your consent, but you have a right to object to such processing. You can change your preferences at any time by returning to this site or clicking on Cookies More Options Agree and Close These cookies ensure that our website performs as expected,for example website traffic load is balanced across our servers to prevent our website from crashing during particularly high usage. These cookies allow our website to remember choices you make (such as your user name, language or the region you are in) and provide enhanced features. These cookies do not gather any information about you that could be used for advertising or remember where you have been on the internet. These cookies allow us to work with our marketing partners to understand which ads or links you have clicked on before arriving on our website or to help us make our advertising more relevant to you. Cookie preferences Agree All Reject All SAVE SETTINGS Essential Non Essential Marketing",
+      "published_at": 1793275200000,
+      "date_precision": "timestamp",
+      "modified_at": 1793249654000,
+      "extraction": "semantic",
+      "canonical": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/portland-marketbeats/office",
+      "content_hash": "0f1ace5b6bdde169f4c150d9ac642b9b258aa51c91dc58ffdb945623eeabd677",
+      "access": "public",
+      "source_family": "cushman-research",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "c58a8c83aa45c609",
+      "score": 31,
+      "tags": [
+        "office",
+        "data",
+        "distress"
+      ],
+      "heat_signals": [
+        "trend",
+        "trends",
+        " yoy",
+        "year-over-year",
+        "occupancy",
+        "vacancy"
+      ],
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "duplicate_of": null,
+      "selector_reason": "Portland office vacancy reached 23.9%, absorption remained negative and rents fell 3.8% year over year, while no new office space was under construction.",
+      "title_zh": "波特兰办公楼空置率升至 23.9%",
+      "summary_zh": "Cushman & Wakefield Research 称，波特兰第三季度办公楼空置率升至 23.9%，年初至今净吸纳量为负 627,000 平方英尺，平均租金同比下降 3.8%。",
+      "impact": "short-neg",
+      "evidence_quote": "Overall vacancy rose to 23.9%, while quarterly net absorption was minimally negative at 21,000 sf, bringing YTD absorption to negative 627,000 sf.",
+      "evidence_basis": "body",
+      "cre_subcategory": "办公"
+    },
+    {
+      "source_id": "national-mortgage-news",
+      "source_name": "National Mortgage News",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "rates",
+        "macro"
+      ],
+      "region": "national",
+      "title": "Fannie Mae logs title, appraisal savings; net revenues soar",
+      "link": "https://www.nationalmortgagenews.com/news/fannie-mae-logs-title-appraisal-savings-net-revenues-soar",
+      "description": "Fannie Mae Fannie Mae logs title, appraisal savings; net revenues soar By Bonnie Sinnock CloseText About Bonnie twitter bcynic mailto bonnie.sinnock@arizent.com linkedin bonnie-sinnock-115a829 Published October 28, 2026, 5:29 p.m. EDT 3 Min Read Facebook Twitter LinkedIn Email Key Insight: Why Fannie Mae came out ahead in earnings despite mixed impacts from higher rates, and has new reason to press forward with title alternatives. Supporting Data: Fannie found borrowers' collective savings from appraisal and title alternatives so far this year have been over $100 million. Overview bullets generated by AI with editorial review. Fannie Mae reported its highest net revenues since 2023 and revealed significant mission-related borrower savings from title and appraisal alternative initiatives in the third quarter, when it contended with mixed impacts from higher rates but was still able to hold costs for lenders relatively low. Consumer savings from the title and appraisal waiver programs show these alternatives got enough use to drive a 7-figure reduction in origination expenses. They also reinforce a recent executive order backing both and transitioning Fannie's title alternative pilot to a national program with monitoring. Processing Content \"Our efforts to provide appraisal and title insurance alternatives helped borrowers save an estimated $141 million in closing costs so far this year,\" Peter Akwaboah, acting CEO and chief operating officer at Fannie Mae said during the government-related loan buyer's earnings call. Peter Akwaboah, acting CEO and chief operating officer at Fannie Mae Fannie was able to support such housing affordability initiatives with $4.2 billion in net income, representing a 5% rise from the previous quarter and an 8% increase from a year ago, even though higher rates diminished the industry originations it buys. The government-sponsored enterprise's executives explained why during its earnings call. Why fewer acquisitions didn't hurt revenue \"Changes in interest rates affect various aspects of our financial results. For example, in single-family, while higher rates tend to reduce acquisition volumes, they also slow prepayments and book runoff, helping to preserve guaranty revenues,\" Chief Financial Officer Chryssa Halley noted during the company's call. Fannie's core guaranty business fueled 79% of its $7.7 billion in total net revenues, which drove the government-sponsored enterprise's earnings gain. Single-family loan acquisition volumes did fall by roughly 21% from the previous quarter and around 11% from a year earlier to $88 billion in line with some industry declines, but with refinancing representing only $18 billion of that total, prepayments for Fannie were reduced. Refi activity in the dominant single-family business matched year-ago levels but was down nearly 53% from the previous quarter. In addition to affecting prepayments and loan volume in the quarter, this may have another impact, according to Halley. \"From an allowance perspective, slow prepayments extend the expected life of our loans, which combined with higher mortgage costs for certain borrowers can increase our expected credit losses,\" she said. Serious and 60-day delinquencies in the single-family sector remained historically low but have been drifting generally higher in the past year, ending at 62 and 92 basis points, respectively, in the third quarter. They were both nearly 20 basis points lower than a year earlier. Sixty-day delinquencies were 7 basis points lower the previous quarter. Serious delinquencies were 4 basis points lower compared to the same period. Thirty-day delinquencies matched the previous quarter's 1.09%, but were below the 1% level reported a year earlier. Fannie recorded a total single- and multifamily allowance for credit losses of $1.1 billion, offset by other developments that included $630 million in fair value gains. The GSE also reported $94 million in investment gains. It additionally took $1 billion in net unrealized losses in its available-for-sale portfolio. Efficiency initiatives and regulatory capital Fannie also engaged in further efficiency initiatives during the quarter that Halley said offset some personnel costs for increased salaries, benefits and a $28 million severance expense. Expenditures on occupancy and technology were $52 million lower than the previous quarter. Fannie reported a total adjusted capital deficit of $11 billion for the quarter, down from $14 billion in the previous three-month period. Its illustrative return on average required tier 1 capital was 11.1% in the quarter, up from 10.8%. \"Despite volatility across aspects of our financial results, we increased net income both quarter over quarter and year over year, growing net worth to more than $119 billion while reducing our regulatory capital deficit,\" Halley said. Bonnie Sinnock Capital Markets Editor Bonnie Sinnock is National Mortgage News' Capital Markets Editor at Arizent and has worked for NMN and affiliated publications since 1995. Her... Read full bio twitter mailto linkedin",
+      "published_at": 1793222989000,
+      "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1793222989622,
+      "extraction": "semantic",
+      "canonical": "https://nationalmortgagenews.com/news/fannie-mae-logs-title-appraisal-savings-net-revenues-soar",
+      "content_hash": "952d235b7f5fb8f4724cd1280d913deb30a731626e86deab7e9bf38c0921623e",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "a659d4c5b44d6a64",
+      "source_family": "national-mortgage-news",
+      "is_research": false,
+      "required_source": false,
+      "first_seen_at": 1793223428172,
+      "score": 19,
+      "tags": [
+        "institutional",
+        "tech-adoption",
+        "data"
+      ],
+      "heat_signals": [
+        "fannie mae",
+        "year over year",
+        "occupancy"
+      ],
+      "keep": true,
+      "importance": 3,
+      "section": "institutional",
+      "duplicate_of": null,
+      "selector_reason": "Fannie Mae reported strong net revenue and more than $100 million in borrower savings from title and appraisal alternatives, relevant to mortgage infrastructure and lender efficiency.",
+      "title_zh": "Fannie Mae 报告净收入增长及借款人节省",
+      "summary_zh": "National Mortgage News 报道，Fannie Mae 第三季度净收入为 $4.2 billion，同比增长 8%；其称产权和评估替代方案今年已为借款人节省约 $141 million。",
+      "impact": "long-pos",
+      "evidence_quote": "“Our efforts to provide appraisal and title insurance alternatives helped borrowers save an estimated $141 million in closing costs so far this year,” Peter Akwaboah, acting CEO and chief operating officer at Fannie Mae said during the government-related loan buyer's earnings call.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Partners Development Breaks Ground on 80,000 SF Industrial Project in Seguin, Texas",
+      "link": "https://rebusinessonline.com/partners-development-breaks-ground-on-80000-sf-industrial-project-in-seguin-texas/",
+      "description": "Partners Development Breaks Ground on 80,000 SF Industrial Project in Seguin, Texas by Taylor Williams October 29, 2026 October 29, 2026 3 SEGUIN, TEXAS — Partners Development, an affiliate of Partners Real Estate, has broken ground on an 80,000-square-foot industrial project in Seguin, located northeast of San Antonio. The project, which will feature two 40,000-square-foot buildings, represents Phase I of Seguin Commerce Park, a development that is ultimately planned to comprise eight buildings totaling 234,600 square feet. Palladius Capital Management provided construction financing for Phase I of the project, which is slated for a late spring/early summer 2027 delivery. Partners is also marketing the buildings for lease and/or sale. Facebook Twitter Linkedin Email previous post StreetLevel Investments Welcomes New Tenants to Mixed-Use Development in Forney, Texas next post Carrier Global to Invest $600M in HVAC Manufacturing Facility in Fort Worth, Create 1,500 Jobs You may also like Carrier Global to Invest $600M in HVAC Manufacturing... October 29, 2026 StreetLevel Investments Welcomes New Tenants to Mixed-Use Development... October 29, 2026 HRSS CPAs Signs 19,569 SF Office Lease in... October 29, 2026 PCCP Provides $130M Construction Loan for Newark Multifamily... October 29, 2026 JLL Negotiates $58M Sale of Multifamily Development Site... October 29, 2026 Marcus & Millichap Brokers Sale of 231-Unit Self-Storage... October 29, 2026 Truist Provides $152M Construction Loan for Marina Shores... October 29, 2026 Origin Investments, Mill Creek Residential to Develop 190-Unit... October 29, 2026 Lee & Associates Negotiates Sale of 34,168 SF... October 29, 2026",
+      "published_at": 1793286772000,
+      "source_family": "rebusiness-online",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1793309852130,
+      "id": "ff5543df1395110d",
+      "score": 14,
+      "tags": [
+        "industrial",
+        "construction",
+        "deals",
+        "developer",
+        "texas"
+      ],
+      "heat_signals": [
+        "texas",
+        "san antonio"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 1793286773000,
+      "extraction": "semantic",
+      "canonical": "https://rebusinessonline.com/partners-development-breaks-ground-on-80000-sf-industrial-project-in-seguin-texas",
+      "content_hash": "cf3f45f596cdcf54961bb5670e6102366c95bff00f85c7977b58f9fce4007a47",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "duplicate_of": null,
+      "selector_reason": "Partners Development broke ground on an 80,000-square-foot Seguin industrial project financed by Palladius, with an eventual eight-building, 234,600-square-foot plan.",
+      "title_zh": "得州 Seguin 启动 80,000 平方英尺工业项目",
+      "summary_zh": "Partners Development 已在得州 Seguin 启动一期工业项目，包含两栋各 40,000 平方英尺建筑，计划于 2027 年春末或初夏交付。",
+      "impact": "long-pos",
+      "evidence_quote": "Partners Development, an affiliate of Partners Real Estate, has broken ground on an 80,000-square-foot industrial project in Seguin, located northeast of San Antonio.",
+      "evidence_basis": "body",
+      "cre_subcategory": "工业"
+    }
+  ],
+  "executive_summary": {
+    "text": "美国住房市场仍受高融资成本压制，30 年期按揭利率虽降至 7.24%，但住宅签约量、成交价和新房需求继续走弱，D.R. Horton 也下调 2027 年交付预期。商业地产呈现明显分化：美国办公楼空置率整体改善，高品质资产需求支撑复苏，但波特兰办公市场空置率升至 23.9%；零售市场则受限于低供应，需求和租赁表现相对稳健。后续需关注通胀数据对利率路径的影响，以及住宅库存上升是否进一步压低价格；与此同时，部分多户住宅和工业资产仍显示需求、交易或投资活动韧性。",
+    "sentences": [
+      {
+        "text": "美国住房市场仍受高融资成本压制，30 年期按揭利率虽降至 7.24%，但住宅签约量、成交价和新房需求继续走弱，D.R. Horton 也下调 2027 年交付预期。",
+        "item_ids": [
+          "6287cfae336b9be0",
+          "7b9301acbecccd83",
+          "351a74a8baa4794d",
+          "9ece3f4253d7065a",
+          "7fdc557f0987a80f"
+        ]
+      },
+      {
+        "text": "商业地产呈现明显分化：美国办公楼空置率整体改善，高品质资产需求支撑复苏，但波特兰办公市场空置率升至 23.9%；零售市场则受限于低供应，需求和租赁表现相对稳健。",
+        "item_ids": [
+          "91dce5f4bf6b7865",
+          "2e2baa36e6c22e97",
+          "055a545ad3859db6",
+          "c58a8c83aa45c609"
+        ]
+      },
+      {
+        "text": "后续需关注通胀数据对利率路径的影响，以及住宅库存上升是否进一步压低价格；与此同时，部分多户住宅和工业资产仍显示需求、交易或投资活动韧性。",
+        "item_ids": [
+          "0401af233f3153d9",
+          "e8f5f2480f552fbd",
+          "6753f5529b7edd81",
+          "ff5543df1395110d"
+        ]
+      }
+    ]
+  },
+  "themes": [],
+  "sources_attempted": 77,
+  "sources_ok": 67,
+  "errors": [
+    {
+      "source": "The Real Deal (National)",
+      "error": "Directory contained no matching links"
+    },
+    {
+      "source": "Miami Agent Magazine",
+      "error": "fetch failed (ERR_TLS_CERT_ALTNAME_INVALID)"
+    },
+    {
+      "source": "PERE News",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "Fannie Mae ESR",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "Harvard JCHS",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "ULI/PwC Emerging Trends",
+      "error": "Directory contained no matching links"
+    },
+    {
+      "source": "John Burns Research",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "Arbor/Chandan Research",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "Newmark Research",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "MBA Research",
+      "error": "HTTP 403"
+    }
+  ],
+  "_diagnostics": {
+    "timings": {
+      "cutoff": 1793307600000,
+      "job_started_at": 1793329695649,
+      "collection_finished_at": 1793329724091,
+      "generation_finished_at": 1793329995186
+    },
+    "collection_watermarks": {
+      "inman": 1793307600000,
+      "multi-housing-news": 1793307600000,
+      "national-mortgage-news": 1793221200000,
+      "cnbc-realestate": 1793307600000,
+      "d-magazine": 1793307600000,
+      "houston-agent": 1793307600000,
+      "phoenix-agent": 1793307600000,
+      "atlanta-agent": 1793307600000,
+      "google-news-sunbelt": 1793307600000,
+      "nahb-eyeonhousing": 1793307600000,
+      "calculated-risk": 1793307600000,
+      "lance-lambert": 1793307600000,
+      "logan-mohtashami": 1793307600000,
+      "yardi-matrix": 1793307600000,
+      "realtor-research": 1793307600000,
+      "realtor-news": 1793307600000,
+      "redfin-news": 1793307600000,
+      "fed-press": 1793307600000,
+      "brookings-housing": 1793307600000,
+      "multifamily-dive": 1793307600000,
+      "nrhc": 1793307600000,
+      "pretium-partners": 1793307600000,
+      "btrlist": 1793307600000,
+      "google-news-btr": 1793307600000,
+      "houston-bj-cre": 1793307600000,
+      "houston-bj-resi": 1793307600000,
+      "dallas-bj-cre": 1793307600000,
+      "dallas-bj-resi": 1793307600000,
+      "austin-bj-cre": 1793307600000,
+      "austin-bj-resi": 1793307600000,
+      "har-research": 1793307600000,
+      "zillow-research": 1793307600000,
+      "nar-research": 1793307600000,
+      "census-construction": 1793307600000,
+      "census-sales": 1793307600000,
+      "fhfa-research": 1793307600000,
+      "freddie-pmms": 1793221200000,
+      "unlock-research": 1793307600000,
+      "urban-housing": 1793307600000,
+      "realpage-research": 1793307600000,
+      "msci-research": 1793307600000,
+      "northmarq-research": 1793307600000,
+      "cotality-research": 1793307600000,
+      "ice-research": 1793307600000,
+      "attom-research": 1793307600000,
+      "apartmentlist-research": 1793307600000,
+      "costar-research": 1793307600000,
+      "sp-case-shiller": 1793307600000,
+      "zonda-research": 1793307600000,
+      "zonda-lot-supply": 1793307600000,
+      "sec-invh-8k": 1793307600000,
+      "sec-amh-8k": 1793307600000,
+      "colliers-research": 1793307600000
+    },
+    "writer_validation": {
+      "discarded_output_ids": []
+    },
+    "pipeline_version": "2.1",
+    "provenance": "live",
+    "window_hours": 24,
+    "candidate_pool_size": 70,
+    "eligible_count": 489,
+    "backlog_before_window": [
+      "e38dd51f7388b895",
+      "d05862ef3bc74182",
+      "99836ae83331c38a",
+      "c47a1a8fe7099001",
+      "be9c806ed024307a",
+      "755762329c432a76",
+      "f88ccf5901ddb3e1",
+      "55d60c342bf730ca",
+      "54a013029cdd1e63",
+      "2e95d9d0fa4e812b",
+      "59636693c093539a",
+      "d724954daca35c90",
+      "9cd94ab16b886c3b",
+      "6504c3fb2bb5055c",
+      "12479921583601b6"
+    ],
+    "source_health": [
+      {
+        "id": "housingwire",
+        "name": "HousingWire",
+        "research": false,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.housingwire.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 9,
+        "unreadable_recent": 1,
+        "earliest_dated": 1793288575000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "inman",
+        "name": "Inman News",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.inman.com/feed/",
+          "https://news.google.com/rss/search?q=site:inman.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 16,
+        "unreadable_recent": 0,
+        "earliest_dated": 1149297689000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "trd-national",
+        "name": "The Real Deal (National)",
+        "research": false,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://therealdeal.com/national/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "bisnow",
+        "name": "Bisnow",
+        "research": false,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.bisnow.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 4,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793298249000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "multi-housing-news",
+        "name": "Multi-Housing News",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.multihousingnews.com/feed/",
+          "https://news.google.com/rss/search?q=site:multihousingnews.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1383202800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "national-mortgage-news",
+        "name": "National Mortgage News",
+        "research": false,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.nationalmortgagenews.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 6,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793294800000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "cnbc-realestate",
+        "name": "CNBC Realty Check",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000115"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1791897901000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "d-magazine",
+        "name": "D Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.dmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793128074000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "houston-agent",
+        "name": "Houston Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://houstonagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792681034000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "phoenix-agent",
+        "name": "Phoenix Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://phoenixagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792688362000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "atlanta-agent",
+        "name": "Atlanta Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://atlantaagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792618035000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "miami-agent",
+        "name": "Miami Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://miamiagentmagazine.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "fetch failed (ERR_TLS_CERT_ALTNAME_INVALID)"
+      },
+      {
+        "id": "google-news-sunbelt",
+        "name": "Google News — Sun Belt Housing Market",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=%22housing+market%22+(Phoenix+OR+Tampa+OR+Atlanta+OR+Charlotte+OR+Nashville+OR+%22Las+Vegas%22+OR+Jacksonville+OR+Orlando+OR+Raleigh+OR+Memphis)&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 58,
+        "articles": 58,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 3,
+        "unreadable_recent": 1,
+        "earliest_dated": 1622617200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "nahb-eyeonhousing",
+        "name": "NAHB Eye on Housing",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://eyeonhousing.org/feed/"
+        ],
+        "status": "ok",
+        "discovered": 18,
+        "articles": 18,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792078735000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "calculated-risk",
+        "name": "Calculated Risk (Bill McBride)",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://feeds.feedburner.com/CalculatedRisk"
+        ],
+        "status": "ok",
+        "discovered": 25,
+        "articles": 25,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1767714840001,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "lance-lambert",
+        "name": "Lance Lambert / ResiClub",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://lancelambert.substack.com/feed",
+          "https://news.google.com/rss/search?q=%22Lance+Lambert%22+OR+%22ResiClub%22&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 57,
+        "articles": 57,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1453881600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "logan-mohtashami",
+        "name": "Logan Mohtashami (HousingWire)",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.housingwire.com/author/logan-mohtashami/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1791062064000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "yardi-matrix",
+        "name": "Yardi Matrix Blog",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.yardimatrix.com/publications/"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1790812800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "realtor-research",
+        "name": "Realtor.com Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.realtor.com/research/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 5,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793095237000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "realtor-news",
+        "name": "Realtor.com News",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.realtor.com/news/feed/"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 23,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793207309000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "redfin-news",
+        "name": "Redfin News",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.redfin.com/news/feed/"
+        ],
+        "status": "ok",
+        "discovered": 6,
+        "articles": 6,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792587642000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "trerc",
+        "name": "Texas Real Estate Research Center (TRERC)",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://trerc.tamu.edu/texas-housing-insight/"
+        ],
+        "status": "ok",
+        "discovered": 69,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1743523903000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "fed-press",
+        "name": "Federal Reserve Press",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.federalreserve.gov/feeds/press_all.xml"
+        ],
+        "status": "ok",
+        "discovered": 20,
+        "articles": 20,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1789581600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "brookings-housing",
+        "name": "Brookings Institution",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.brookings.edu/topics/housing/"
+        ],
+        "status": "ok",
+        "discovered": 4,
+        "articles": 4,
+        "discovery_truncated": false,
+        "article_budget": 4,
+        "fetched_articles": 4,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1789058190000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "pere-news",
+        "name": "PERE News",
+        "research": false,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.perenews.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "multifamily-dive",
+        "name": "Multifamily Dive",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.multifamilydive.com/feeds/news/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793021893000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "connect-cre",
+        "name": "Connect CRE",
+        "research": false,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.connectcre.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 5,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793303451000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "rebusiness-online",
+        "name": "REBusiness Online",
+        "research": false,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://rebusinessonline.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 20,
+        "articles": 20,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 20,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793280809000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "nrhc",
+        "name": "National Rental Home Council (NRHC)",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.rentalhomecouncil.org/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792175661000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "pretium-partners",
+        "name": "Pretium Partners",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://pretium.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1777923095000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "sec-invh-8k",
+        "name": "Invitation Homes (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://www.invh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1781261100000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "sec-amh-8k",
+        "name": "AMH (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://investors.amh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1772226900000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "btrlist",
+        "name": "BTR List (via Google News)",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site:news.btrlist.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 56,
+        "articles": 56,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1722134745000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "google-news-btr",
+        "name": "Google News — BTR / SFR keywords",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=%22build-to-rent%22+OR+%22single-family+rental%22+OR+%22Invitation+Homes%22+OR+%22American+Homes+4+Rent%22+OR+Tricon+OR+Pretium+OR+%22Progress+Residential%22+OR+Roofstock+OR+%22Main+Street+Renewal%22+OR+%22FirstKey+Homes%22+OR+%22Home+Partners%22&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 31,
+        "articles": 31,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1579075200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "houston-bj-cre",
+        "name": "Houston Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 11,
+        "unreadable_recent": 3,
+        "earliest_dated": 1478466013000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "houston-bj-resi",
+        "name": "Houston Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 13,
+        "unreadable_recent": 4,
+        "earliest_dated": 1478466013000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "dallas-bj-cre",
+        "name": "Dallas Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 16,
+        "unreadable_recent": 6,
+        "earliest_dated": 1530200828000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "dallas-bj-resi",
+        "name": "Dallas Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1481702400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "austin-bj-cre",
+        "name": "Austin Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 91,
+        "articles": 91,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 10,
+        "unreadable_recent": 3,
+        "earliest_dated": 1499392736000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "austin-bj-resi",
+        "name": "Austin Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 92,
+        "articles": 92,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 10,
+        "unreadable_recent": 3,
+        "earliest_dated": 1499392736000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "har-research",
+        "name": "HAR Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.har.com/content/department/newsroom?pid=640"
+        ],
+        "status": "ok",
+        "discovered": 131,
+        "articles": 2,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 2,
+        "stop_reason": "date_horizon",
+        "fallback_bodies": 2,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792598400000,
+        "coverage_basis": "ordered_date_horizon",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "zillow-research",
+        "name": "Zillow Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.zillow.com/research/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792004400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "nar-research",
+        "name": "NAR Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.nar.realtor/research-and-statistics/research-reports/research-update"
+        ],
+        "status": "ok",
+        "discovered": 13,
+        "articles": 13,
+        "discovery_truncated": false,
+        "article_budget": 13,
+        "fetched_articles": 13,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1325243280000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "census-construction",
+        "name": "Census New Residential Construction",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.census.gov/construction/nrc/current/index.html"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792512000000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://census.gov/construction/nrc/current/index.html": "32a3768fcced69a73a044289c3d73c3550311fcd8e4990cb51c57ccfb352375d"
+        },
+        "last_success": 1793309852130
+      },
+      {
+        "id": "census-sales",
+        "name": "Census New Residential Sales",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.census.gov/construction/nrs/current/index.html"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793116800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://census.gov/construction/nrs/current/index.html": "c03a0fa38527aa533c777b78bcff1e34902417a91673053b2d16e0b2dee2051a"
+        },
+        "last_success": 1793309852130
+      },
+      {
+        "id": "fhfa-research",
+        "name": "FHFA House Price Index",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.fhfa.gov/data/hpi"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793116800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "fannie-esr",
+        "name": "Fannie Mae ESR",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.fanniemae.com/data-and-insights/forecast"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "freddie-pmms",
+        "name": "Freddie Mac PMMS",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.freddiemac.com/pmms"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793289600000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {
+          "https://freddiemac.com/pmms": "2651d3ded4ad7cb873813e3b5f45750905677a8a742e8a478a5f05e750f740ce"
+        },
+        "last_success": 1793329695649
+      },
+      {
+        "id": "freddie-research",
+        "name": "Freddie Mac Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.freddiemac.com/research-and-perspectives"
+        ],
+        "status": "ok",
+        "discovered": 6,
+        "articles": 6,
+        "discovery_truncated": false,
+        "article_budget": 6,
+        "fetched_articles": 6,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1687363200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "texas-realtors",
+        "name": "Texas REALTORS Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.texasrealestate.com/research/quarterly-housing-report"
+        ],
+        "status": "ok",
+        "discovered": 36,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "metrotex-research",
+        "name": "MetroTex Market Reports",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.mymetrotex.com/market-reports/"
+        ],
+        "status": "ok",
+        "discovered": 165,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "unlock-research",
+        "name": "Unlock MLS Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.unlockmls.com/news"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1786406400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "harvard-jchs",
+        "name": "Harvard JCHS",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.jchs.harvard.edu/blog"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "urban-housing",
+        "name": "Urban Institute Housing Finance",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.urban.org/expertise/housing-finance"
+        ],
+        "status": "ok",
+        "discovered": 2,
+        "articles": 2,
+        "discovery_truncated": false,
+        "article_budget": 2,
+        "fetched_articles": 2,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1751284800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "cbre-research",
+        "name": "CBRE Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.cbre.com/services/property-types/multifamily"
+        ],
+        "status": "ok",
+        "discovered": 15,
+        "articles": 15,
+        "discovery_truncated": false,
+        "article_budget": 15,
+        "fetched_articles": 15,
+        "fallback_bodies": 0,
+        "undated": 2,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1750867200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "jll-research",
+        "name": "JLL Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.jll.com/en-us/insights"
+        ],
+        "status": "ok",
+        "discovered": 15,
+        "articles": 15,
+        "discovery_truncated": false,
+        "article_budget": 15,
+        "fetched_articles": 15,
+        "fallback_bodies": 0,
+        "undated": 7,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1719426600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "cushman-research",
+        "name": "Cushman & Wakefield Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
+        ],
+        "status": "ok",
+        "discovered": 87,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 10,
+        "unreadable_recent": 0,
+        "earliest_dated": 1791979200000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "colliers-research",
+        "name": "Colliers Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.colliers.com/en/research"
+        ],
+        "status": "ok",
+        "discovered": 2,
+        "articles": 2,
+        "discovery_truncated": false,
+        "article_budget": 2,
+        "fetched_articles": 2,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792587720000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "realpage-research",
+        "name": "RealPage Analytics",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.realpage.com/analytics/feed/"
+        ],
+        "status": "ok",
+        "discovered": 1098,
+        "articles": 1098,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1680193015000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "nmhc-research",
+        "name": "NMHC Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.nmhc.org/research-insight/quarterly-survey/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 10,
+        "fetched_articles": 10,
+        "fallback_bodies": 0,
+        "undated": 10,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "naa-research",
+        "name": "NAA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://naahq.org/research"
+        ],
+        "status": "ok",
+        "discovered": 9,
+        "articles": 9,
+        "discovery_truncated": false,
+        "article_budget": 9,
+        "fetched_articles": 9,
+        "fallback_bodies": 0,
+        "undated": 2,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1785390340000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "uli-pwc",
+        "name": "ULI/PwC Emerging Trends",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
+          "https://www.pwc.com/us/en/about-us/newsroom.html"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "msci-research",
+        "name": "MSCI Real Assets Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792684800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi": "bca6c6c9dd06a44e08d18d85a6ff5b833a9a5d830d12de16226484a149d5c757"
+        },
+        "last_success": 1793309852130
+      },
+      {
+        "id": "john-burns",
+        "name": "John Burns Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://jbrec.com/resources/insights/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "northmarq-research",
+        "name": "Northmarq Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.northmarq.com/insights"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792080000000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "berkadia-research",
+        "name": "Berkadia Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.berkadia.com/multifamily-reports/"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 7,
+        "fetched_articles": 7,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787068800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793329695649
+      },
+      {
+        "id": "arbor-research",
+        "name": "Arbor/Chandan Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://arbor.com/research/reports/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "newmark-research",
+        "name": "Newmark Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.nmrk.com/insights/market-report"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "cotality-research",
+        "name": "Cotality / CoreLogic Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.cotality.com/insights/all-insights"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 12,
+        "fetched_articles": 12,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1786377600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "ice-research",
+        "name": "ICE Mortgage Monitor",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://mortgagetech.ice.com/resources/data-reports"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1780588800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "attom-research",
+        "name": "ATTOM Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.attomdata.com/news/category/market-trends/"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 7,
+        "fetched_articles": 7,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1790866826000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "mba-research",
+        "name": "MBA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793329695649,
+        "attempted_urls": [
+          "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "apartmentlist-research",
+        "name": "Apartment List Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.apartmentlist.com/research"
+        ],
+        "status": "ok",
+        "discovered": 4,
+        "articles": 4,
+        "discovery_truncated": false,
+        "article_budget": 4,
+        "fetched_articles": 4,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1773907200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "costar-research",
+        "name": "CoStar / Apartments.com Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://www.apartments.com/grow/learning-center/market-trends"
+        ],
+        "status": "ok",
+        "discovered": 13,
+        "articles": 13,
+        "discovery_truncated": false,
+        "article_budget": 13,
+        "fetched_articles": 13,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1770638400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "sp-case-shiller",
+        "name": "S&P Cotality Case-Shiller",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://press.spglobal.com/index.php?l=50&s=2429"
+        ],
+        "status": "ok",
+        "discovered": 4,
+        "articles": 4,
+        "discovery_truncated": false,
+        "article_budget": 4,
+        "fetched_articles": 4,
+        "fallback_bodies": 4,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1785254400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1793309852130
+      },
+      {
+        "id": "zonda-research",
+        "name": "Zonda Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://zondahome.com/new-home-market-update/"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792670400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://zondahome.com/new-home-market-update": "472389cbb3863416bd9389f5284bfbf753323d3dcb748402a562f70f854f24df"
+        },
+        "last_success": 1793309852130
+      },
+      {
+        "id": "zonda-lot-supply",
+        "name": "Zonda Lot Supply Index",
+        "research": true,
+        "required": false,
+        "checked_at": 1793309852130,
+        "attempted_urls": [
+          "https://zondahome.com/new-home-lot-supply-index-2/"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1786622400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793221200000,
+          "upper": 1793307600000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://zondahome.com/new-home-lot-supply-index-2": "1e27e1aaa61d30025009eb6adf8b8bf7d6fb75a859a0c453543d7bae47151a15"
+        },
+        "last_success": 1793309852130
+      }
+    ],
+    "research_audit": [
+      {
+        "id": "e8f5f2480f552fbd",
+        "source": "NAHB Eye on Housing",
+        "title": "PCE Inflation Accelerated in September",
+        "link": "https://eyeonhousing.org/2026/10/pce-inflation-accelerated-in-september/",
+        "disposition": "selected"
+      },
+      {
+        "id": "6753f5529b7edd81",
+        "source": "NAHB Eye on Housing",
+        "title": "U.S. Economy Accelerated in the Third Quarter of 2026",
+        "link": "https://eyeonhousing.org/2026/10/u-s-economy-accelerated-in-the-third-quarter-of-2026/",
+        "disposition": "selected"
+      },
+      {
+        "id": "ccaaeb4c7e196840",
+        "source": "Lance Lambert / ResiClub",
+        "title": "Lance Lambert: Mortgage purchase applications hover near lowest levels in 30 years - Traders Union",
+        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNY1ZlXzRNdlNCeXN3djk1VXB5eVhRMnZRRGQ3TGJCMzBwVXVJOV9ZdlMtRHZ4SmhyMVl0XzhhMnhMZzJCUy1jYUZYdFN2WEhJZkpDYkEwd0NNblJTTUc2LUpGaTJHMGtxal9EdEdSblVWMkNnQ0FsS2J3Vi02LXJBUDdwZUt1cWJRRDcwcWZWNEtVSVJ1LWc?oc=5",
+        "disposition": "editorial_not_selected"
+      },
+      {
+        "id": "351a74a8baa4794d",
+        "source": "Realtor.com Research",
+        "title": "Mortgage Rates Fall 8 Basis Points for the Second Week in a Row",
+        "link": "https://www.realtor.com/research/freddie-mac-mortgage-rates-october-29-2026/",
+        "disposition": "selected"
+      },
+      {
+        "id": "7b9301acbecccd83",
+        "source": "Realtor.com Research",
+        "title": "Weekly Housing Trends: U.S. Market Update (Week Ending Oct. 24, 2026)",
+        "link": "https://www.realtor.com/research/eekly-housing-trends-view-data-week-october-24-2026/",
+        "disposition": "selected"
+      },
+      {
+        "id": "19953728e834ddb2",
+        "source": "Realtor.com Research",
+        "title": "Los Angeles Rental Report 2026Q3: Renters Catch a Break as New Supply Pushes Rents Lower; Buying Still Costs Nearly $5,000 More a Month",
+        "link": "https://www.realtor.com/research/la-q3-2026-rent/",
+        "disposition": "selected"
+      },
+      {
+        "id": "60415201fe788091",
+        "source": "Realtor.com Research",
+        "title": "Luxury Cut: The Fall 2026 Wall Street Journal/Realtor.com Luxury Housing Market Ranking",
+        "link": "https://www.realtor.com/research/october-2026-wsj-rdc-luxury-housing-market-ranking/",
+        "disposition": "editorial_not_selected"
+      },
+      {
+        "id": "1425da9374021eed",
+        "source": "Realtor.com Research",
+        "title": "The Fall 2026 Wall Street Journal/Realtor.com Housing Market Ranking",
+        "link": "https://www.realtor.com/research/october-2026-wsj-rdc-housing-market-ranking/",
+        "disposition": "editorial_not_selected"
+      },
+      {
+        "id": "9ece3f4253d7065a",
+        "source": "Redfin News",
+        "title": "U.S. Home-Sale Prices Just Fell for the First Time in 3 Years",
+        "link": "https://www.redfin.com/news/housing-market-update-home-sale-prices-fall-october-2026/",
+        "disposition": "selected"
+      },
+      {
+        "id": "6287cfae336b9be0",
+        "source": "Freddie Mac PMMS",
+        "title": "Mortgage Rates",
+        "link": "https://freddiemac.com/pmms",
+        "disposition": "selected"
+      },
+      {
+        "id": "0401af233f3153d9",
+        "source": "CBRE Research",
+        "title": "Q3 2026 Portland Multifamily Figures",
+        "link": "https://cbre.com/insights/figures/q3-2026-portland-multifamily-figures",
+        "disposition": "selected"
+      },
+      {
+        "id": "2e2baa36e6c22e97",
+        "source": "Cushman & Wakefield Research",
+        "title": "U.S. Retail Demand Remains Solid as Limited Construction Keeps Space Tight",
+        "link": "https://cushmanwakefield.com/en/united-states/news/2026/10/us-retail-demand-remains-solid",
+        "disposition": "selected"
+      },
+      {
+        "id": "c58a8c83aa45c609",
+        "source": "Cushman & Wakefield Research",
+        "title": "MarketBeat Portland Office Q3 2026",
+        "link": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/portland-marketbeats/office",
+        "disposition": "selected"
+      },
+      {
+        "id": "055a545ad3859db6",
+        "source": "Cushman & Wakefield Research",
+        "title": "MarketBeat Miami Retail Q3 2026",
+        "link": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/miami-marketbeats/retail",
+        "disposition": "selected"
+      },
+      {
+        "id": "91dce5f4bf6b7865",
+        "source": "Colliers Research",
+        "title": "Select Markets Drive U.S. Office Market Recovery",
+        "link": "https://colliers.com/en/research/nrep-usofc-us-office-market-outlook-report-q3-2026",
+        "disposition": "selected"
+      },
+      {
+        "id": "7c34db4f5a755b74",
+        "source": "ATTOM Research",
+        "title": "Home Vacancy and 'Zombie' Rates Tick Down in Fourth Quarter",
+        "link": "https://attomdata.com/news/market-trends/foreclosures/q4-2026-vacancy-and-zombie-foreclosure-report",
+        "disposition": "editorial_not_selected"
+      },
+      {
+        "id": "c0dcb7bac97279f2",
+        "source": "CoStar / Apartments.com Research",
+        "title": "October Report: Accelerating Rent Growth Hits 1.6%",
+        "link": "https://apartments.com/grow/learning-center/rent-growth-update-october-2026",
+        "disposition": "editorial_not_selected"
+      }
+    ],
+    "editorial_coverage": {
+      "sections": {
+        "national": {
+          "candidates": 32,
+          "qualified": 13,
+          "selected": 9,
+          "required_sources": 0,
+          "source_failures": [],
+          "status": "selected"
+        },
+        "sunbelt": {
+          "candidates": 8,
+          "qualified": 0,
+          "selected": 0,
+          "required_sources": 0,
+          "source_failures": [],
+          "status": "no_qualified"
+        },
+        "btr": {
+          "candidates": 6,
+          "qualified": 0,
+          "selected": 0,
+          "required_sources": 2,
+          "source_failures": [],
+          "status": "no_qualified"
+        },
+        "cre": {
+          "candidates": 19,
+          "qualified": 8,
+          "selected": 7,
+          "required_sources": 0,
+          "source_failures": [],
+          "status": "selected"
+        },
+        "institutional": {
+          "candidates": 5,
+          "qualified": 5,
+          "selected": 4,
+          "required_sources": 0,
+          "source_failures": [],
+          "status": "selected"
+        }
+      },
+      "assets": [
+        {
+          "id": "housing",
+          "label": "住宅市场",
+          "candidates": 11,
+          "qualified": 10,
+          "selected": 7,
+          "recent_selected": 24,
+          "last_selected_date": "2026-10-30"
+        },
+        {
+          "id": "multifamily",
+          "label": "多户公寓",
+          "candidates": 2,
+          "qualified": 2,
+          "selected": 1,
+          "recent_selected": 10,
+          "last_selected_date": "2026-10-30"
+        },
+        {
+          "id": "btr-sfr",
+          "label": "BTR / SFR",
+          "candidates": 1,
+          "qualified": 1,
+          "selected": 1,
+          "recent_selected": 3,
+          "last_selected_date": "2026-10-30"
+        },
+        {
+          "id": "office",
+          "label": "办公",
+          "candidates": 5,
+          "qualified": 3,
+          "selected": 3,
+          "recent_selected": 6,
+          "last_selected_date": "2026-10-30"
+        },
+        {
+          "id": "industrial",
+          "label": "工业 / 仓储",
+          "candidates": 3,
+          "qualified": 2,
+          "selected": 2,
+          "recent_selected": 3,
+          "last_selected_date": "2026-10-30"
+        },
+        {
+          "id": "data-center",
+          "label": "数据中心",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "hotel",
+          "label": "酒店",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "retail",
+          "label": "零售",
+          "candidates": 2,
+          "qualified": 2,
+          "selected": 2,
+          "recent_selected": 3,
+          "last_selected_date": "2026-10-30"
+        },
+        {
+          "id": "self-storage",
+          "label": "自存储",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "senior-housing",
+          "label": "养老地产",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 1,
+          "last_selected_date": "2026-10-29"
+        },
+        {
+          "id": "life-sciences",
+          "label": "生命科学",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 2,
+          "last_selected_date": "2026-10-29"
+        },
+        {
+          "id": "mixed-asset",
+          "label": "混合资产",
+          "candidates": 1,
+          "qualified": 1,
+          "selected": 0,
+          "recent_selected": 4,
+          "last_selected_date": "2026-10-29"
+        }
+      ],
+      "unclassified_selected": 4,
+      "history": {
+        "expected_dates": [
+          "2026-10-30",
+          "2026-10-29",
+          "2026-10-28",
+          "2026-10-27",
+          "2026-10-26"
+        ],
+        "observed_dates": [
+          "2026-10-30",
+          "2026-10-29",
+          "2026-10-28"
+        ],
+        "missing_dates": [
+          "2026-10-27",
+          "2026-10-26"
+        ]
+      }
+    },
+    "source_counts": {
+      "realtor-com": 3,
+      "colliers-research": 1,
+      "cushman-research": 3,
+      "cbre-research": 1,
+      "rebusiness-online": 2,
+      "freddie-mac": 1,
+      "bisnow": 2,
+      "nahb-eyeonhousing": 2,
+      "redfin-news": 1,
+      "national-mortgage-news": 3,
+      "lance-lambert": 1
+    },
+    "source_exceptions": [],
+    "coverage_gaps": [],
+    "required_source_problems": [],
+    "llm": [
+      {
+        "label": "editor",
+        "model": "gpt-6.1-sol",
+        "effort": "medium",
+        "attempt": 1,
+        "request_id": "3806ea0c-ebe6-4f55-99c0-63da6538ef94",
+        "request_hash": "fef9053d55fbaf59c9ffbec4133420fea8e8948326605e8290a9354a3d6d3eb7",
+        "started_at": "2026-10-30T03:08:47.796Z",
+        "cache_hit": false,
+        "repairs": 0,
+        "response_model": "gpt-6.1-sol",
+        "ms": 168014,
+        "first_byte_ms": 55836,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_0660ca00649edb01016ae40a5e52cc819782e28b018345e2d1",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 22836,
+          "completion_tokens": 4169,
+          "total_tokens": 27005,
+          "completion_tokens_details": {
+            "reasoning_tokens": 773
+          }
+        },
+        "response_characters": 15430
+      },
+      {
+        "label": "writer",
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "attempt": 1,
+        "request_id": "326f214a-665e-4a28-ba36-3f5accca8d9d",
+        "request_hash": "8af5a30b49572328234f92fd03cabeb540137aaccfdfb572421adeff6010c394",
+        "started_at": "2026-10-30T03:11:35.816Z",
+        "failed": true,
+        "retryable": true,
+        "error": "Output contains a number absent from its evidence: 8",
+        "error_name": "Error",
+        "error_code": null,
+        "causes": [],
+        "ms": 76521,
+        "first_byte_ms": 60280,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_09d5a88145eeeb71016ae40b22f0688199b7a0c51c0f34ded0",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 13529,
+          "completion_tokens": 2844,
+          "total_tokens": 16373,
+          "completion_tokens_details": {
+            "reasoning_tokens": 48
+          }
+        },
+        "response_characters": 7625,
+        "response_file": "326f214a-665e-4a28-ba36-3f5accca8d9d.response.json"
+      },
+      {
+        "label": "writer",
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "attempt": 2,
+        "request_id": "f0e3f029-495f-4c5d-a530-18af7f20ac77",
+        "request_hash": "ed612f98145917614e215674483963d3309e2d19b283a09199b3678cde1283ed",
+        "started_at": "2026-10-30T03:13:07.349Z",
+        "cache_hit": false,
+        "repairs": 1,
+        "response_model": "gpt-6.1-sol",
+        "ms": 7826,
+        "first_byte_ms": 4901,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_0e3bd1bd5c9c8c85016ae40b43e0d487d299995a5a50452f94",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "completion_tokens": 221,
+          "total_tokens": 1648,
+          "prompt_tokens": 1427,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cached_creation_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 63
+          }
+        },
+        "response_characters": 363
+      }
+    ],
+    "input_fingerprint": "2371aef74b2eeda8dea717f6c2c302cde29eb35a57fc514b9c1e48e11e7c2d0d",
+    "summary_characters": 223
+  }
+}
