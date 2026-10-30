@@ -8,7 +8,7 @@ import { createCollector } from './sources.mjs';
 import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement } from './collection-checkpoint.mjs';
 import { createLlmClient } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
-import { prepareCandidates, decisionSystem, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, dryDecisions } from './editorial.mjs';
+import { dailyPublicationEligibility, prepareCandidates, decisionSystem, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, dryDecisions } from './editorial.mjs';
 import { createModelBatch } from './model-references.mjs';
 import { editorialCoverage, coverageDates } from './editorial-coverage.mjs';
 
@@ -92,13 +92,27 @@ export async function runPipeline(kind = 'daily', options = {}) {
   }
   const collectionFinishedAt = Date.now();
   const normalized = allItems.map(it => ({ ...it, id: it.id || itemId(it), source_family: it.source_family || sources.find(s => s.id === it.source_id)?.family || it.source_id, ...(kind === 'daily' && it.published_at < window.lower ? { late_discovery: true } : {}) }));
-  const candidateWindow = kind === 'daily' ? { ...window, lower: normalized.reduce((n,it)=>Math.min(n,it.published_at),window.lower) } : window;
-  const prepared = prepareCandidates(normalized, candidateWindow, kind === 'daily' ? seen : []);
+  const legacySnapshots = [];
+  if (kind === 'daily' && normalized.some(it => it.published_at < window.lower && !Object.hasOwn(it, 'acquisition_window'))) {
+    const snapshotDir = path.join(stateDir, 'snapshots');
+    for (const name of await fs.readdir(snapshotDir).catch(e => e.code === 'ENOENT' ? [] : Promise.reject(e))) {
+      if (!/^\d{4}-\d{2}-\d{2}\.json$/.test(name)) continue;
+      const saved = await readJson(path.join(snapshotDir, name), null);
+      if (saved?.provenance === 'live' && saved.window?.upper <= window.upper) legacySnapshots.push(saved);
+    }
+  }
+  const eligibility = kind === 'daily' ? dailyPublicationEligibility(normalized, window, legacySnapshots) : { eligible: normalized, excluded: [] };
+  const candidateWindow = kind === 'daily' ? { ...window, lower: eligibility.eligible.reduce((n,it)=>Math.min(n,it.published_at),window.lower) } : window;
+  const prepared = prepareCandidates(eligibility.eligible, candidateWindow, kind === 'daily' ? seen : []);
   let candidates = prepared.candidates;
   if (collector) candidates = await collector.enrich(candidates);
+  if (kind === 'daily') {
+    const enriched = dailyPublicationEligibility(candidates, window);
+    candidates = enriched.eligible; eligibility.excluded.push(...enriched.excluded);
+  }
   if (collector) await writeJson(path.join(stateDir, 'source-cache.json'), collector.cache);
   if (!candidates.length) throw new Error('No eligible dated candidates; refusing to replace last successful issue');
-  const snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, initial_seen: seen, source_health: health, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: s.source_health || [] })), pipeline_version: '2.1' };
+  const snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, initial_seen: seen, source_health: health, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: s.source_health || [] })), pipeline_version: '2.1' };
   await writeJson(path.join(stateDir, 'inputs', kind + '-' + label + '.json'), snapshot);
   const client = options.client || createLlmClient({ endpoint: env.LLM_ENDPOINT, apiKey: env.LLM_API_KEY, model: env.LLM_MODEL || 'gpt-6.1-sol', cacheDir: path.join(stateDir, 'llm-cache'),
     diagnosticsDir: path.join(stateDir, 'llm-diagnostics'), onEvent: event => console.log('LLM ' + JSON.stringify(event)) });
@@ -136,8 +150,8 @@ export async function runPipeline(kind = 'daily', options = {}) {
     sections: SECTIONS, ...publicWritten, sources_attempted: health.length, sources_ok: health.filter(h => h.status === 'ok').length,
     errors: health.filter(h => h.status !== 'ok').map(h => ({ source: h.name, error: h.error || h.status })),
     _diagnostics: { timings: { cutoff: window.upper, job_started_at: now.getTime(), collection_finished_at: collectionFinishedAt, generation_finished_at: Date.now() }, collection_watermarks: kind === 'daily' ? checkpoint.source_upper || {} : undefined, writer_validation: validationNotes || null, pipeline_version: '2.1', provenance: inputProvenance, window_hours: window.hours, candidate_pool_size: candidates.length, eligible_count: prepared.eligible_count, backlog_before_window: candidates.filter(it=>it.published_at<window.lower).map(it=>it.id),
-      source_health: health, research_audit: normalized.filter(x => x.is_research && x.published_at >= window.lower && x.published_at < window.upper).map(x => ({ id: x.id, source: x.source_name, title: x.title, link: x.link,
-        disposition: written.items.some(it => it.id === x.id) ? 'selected' : decisions.find(d => d.id === x.id)?.duplicate_of ? 'merged' : candidates.some(it => it.id === x.id) ? 'editorial_not_selected' : 'candidate_budget' })),
+      publication_exclusions: eligibility.excluded, source_health: health, research_audit: normalized.filter(x => x.is_research && x.published_at >= window.lower && x.published_at < window.upper).map(x => ({ id: x.id, source: x.source_name, title: x.title, link: x.link,
+        disposition: written.items.some(it => it.id === x.id) ? 'selected' : eligibility.excluded.find(it => it.id === x.id)?.reason || (decisions.find(d => d.id === x.id)?.duplicate_of ? 'merged' : candidates.some(it => it.id === x.id) ? 'editorial_not_selected' : 'candidate_budget') })),
       editorial_coverage: editorialAudit, source_counts: selection.source_counts, source_exceptions: selection.exceptions, coverage_gaps: gaps, required_source_problems: requiredProblems.map(x => x.id),
       llm: client.usage, input_fingerprint: fingerprint(snapshot.items), summary_characters: [...(written.executive_summary?.text || '').replace(/\s/g, '')].length } };
   await writeJson(path.join(outDir, label + '.json'), payload);

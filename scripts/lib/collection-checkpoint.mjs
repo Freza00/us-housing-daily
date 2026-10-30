@@ -38,7 +38,7 @@ export function finishCapture(checkpoint,upper) {
 }
 
 // The caller writes raw capture first, then this checkpoint, before invoking models.
-export function stageCapture(previous,sources,results,window,priorCapture=null,capturedAt=Date.now()) {
+export function stageCapture(previous,sources,results,window,priorCapture=null,capturedAt=Date.now(),{activatePending=true}={}) {
   const source_upper={...previous.source_upper},source_floor={...previous.source_floor};
   const healthById=new Map((previous.health||[]).map(h=>[h.id,h]));
   const fresh=[],observedIds=new Set(previous.observed_ids||[]),initialized=new Set(previous.initialized_sources||[]);
@@ -49,12 +49,16 @@ export function stageCapture(previous,sources,results,window,priorCapture=null,c
     for(const it of items) {
       if(!Number.isFinite(it.published_at)||!it.published_at||!it.title||!(it.description?.length>=80))continue;
       const unseen=!observedIds.has(it.id);observedIds.add(it.id);
-      if(unseen && (it.published_at>=lower || initialized.has(health.id)))fresh.push({...it,...(it.published_at<lower?{late_discovery:true}: {})});
+      if(unseen && (it.published_at>=lower || initialized.has(health.id)))fresh.push({...it,
+        acquisition_window:it.published_at>=lower?{lower,upper:window.upper}:null,
+        ...(it.published_at<lower?{late_discovery:true}: {})});
     }
     if(health.status==='ok')initialized.add(health.id);
     if(health.status==='ok'&&!health.undated&&health.coverage?.lower<=lower&&health.coverage?.upper>=window.upper&&!health.article_errors?.length)source_upper[health.id]=Math.max(source_upper[health.id]||0,window.upper);
   }
-  const raw=dedupe([...(previous.pending?.items||[]),...(priorCapture?.items||[]),...fresh]);
+  const raw=dedupe([...(previous.pending?.items||[]),...(priorCapture?.items||[]),...fresh]).map(it=>
+    activatePending&&it.published_at>=window.lower&&it.published_at<window.upper
+      ?{...it,acquisition_window:{lower:window.lower,upper:window.upper}}:it);
   const items=raw.filter(it=>it.published_at<window.upper);
   const lower=Math.min(window.lower,priorCapture?.window?.lower??window.lower);
   const captureWindow={...window,lower,hours:(window.upper-lower)/3600000};
@@ -67,6 +71,6 @@ export function stageCapture(previous,sources,results,window,priorCapture=null,c
 
 // Periodic audits retain new observations without consuming the daily acquisition interval.
 export function stageSupplement(previous,sources,results,window,capturedAt=Date.now()) {
- const staged=stageCapture(previous,sources,results,window,null,capturedAt).checkpoint;
+ const staged=stageCapture(previous,sources,results,window,null,capturedAt,{activatePending:false}).checkpoint;
  return {...previous,source_floor:staged.source_floor,observed_ids:staged.observed_ids,initialized_sources:staged.initialized_sources,pending:staged.pending};
 }

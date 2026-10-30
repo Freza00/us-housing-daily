@@ -3,7 +3,7 @@
   "kind": "daily",
   "date": "2026-10-30",
   "publish_date": "2026-10-30",
-  "generated_at": 1793329995186,
+  "generated_at": 1793333890531,
   "window": {
     "lower": 1793221200000,
     "upper": 1793307600000,
@@ -118,7 +118,11 @@
       "impact": "long-pos",
       "evidence_quote": "In 2026Q3, the median asking rent in Los Angeles County registered at $2,554,—down $96, or 3.6%, from a year earlier.",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "colliers-research",
@@ -172,7 +176,11 @@
       "impact": "long-pos",
       "evidence_quote": "The U.S. office market strengthened in Q3 2026, with the national vacancy rate declining to 17.7%, down 60 basis points from one year ago and the lowest level since Q4 2023.",
       "evidence_basis": "body",
-      "cre_subcategory": "办公"
+      "cre_subcategory": "办公",
+      "acquisition_window": {
+        "lower": 1793180442798,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "cushman-research",
@@ -225,7 +233,11 @@
       "impact": "long-pos",
       "evidence_quote": "Net absorption totaled 3.5 million square feet in Q3, the second-strongest quarterly reading since Q4 2023, bringing year-to-date absorption into positive territory at 1.2 million square feet.",
       "evidence_basis": "body",
-      "cre_subcategory": "零售"
+      "cre_subcategory": "零售",
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "cbre-research",
@@ -275,7 +287,11 @@
       "impact": "long-pos",
       "evidence_quote": "Investment sales surged to $658.8 million in Q3 2026, up from $359.2 million in Q2 2026 and marking the strongest quarter for transaction volume since Q4 2022.",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793180442798,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "rebusiness-online",
@@ -326,7 +342,11 @@
       "impact": "long-pos",
       "evidence_quote": "Carrier Global Corp. (NYSE: CARR) will invest approximately $600 million in a new HVAC manufacturing and engineering facility in Fort Worth, an initiative that is expected to add about 1,500 new jobs to the local economy over the next three years.",
       "evidence_basis": "body",
-      "cre_subcategory": "工业"
+      "cre_subcategory": "工业",
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "freddie-pmms",
@@ -380,7 +400,11 @@
       "impact": "long-pos",
       "evidence_quote": "The 30-year fixed-rate mortgage averaged 7.24% as of October 29, 2026, down from last week when it averaged 7.32%. A year ago at this time, the 30-year FRM averaged 6.17%.",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "realtor-research",
@@ -430,7 +454,11 @@
       "impact": "short-neg",
       "evidence_quote": "Active inventory climbed 8.0% year-over-year",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "bisnow",
@@ -480,7 +508,11 @@
       "impact": "short-neg",
       "evidence_quote": "The company impaired roughly $800M of loans on its books, the vast majority being office assets, indicating that it still has work to do balancing its portfolio, Johnson said on an earnings call Thursday.",
       "evidence_basis": "body",
-      "cre_subcategory": "办公"
+      "cre_subcategory": "办公",
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "realtor-research",
@@ -529,7 +561,11 @@
       "impact": "short-neg",
       "evidence_quote": "The Freddie Mac 30-year mortgage rate dropped 8 basis points this week, from 7.32% to 7.24%, in conjunction with the 10-year Treasury yield, which averaged about 5.02% in the past week compared to 5.13% the week prior.",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "nahb-eyeonhousing",
@@ -579,7 +615,11 @@
       "impact": "short-neg",
       "evidence_quote": "The headline Personal Consumption Expenditure (PCE) Price Index increased 3.6% in September from a year ago, the fastest pace since May, according to the Bureau of Economic Analysis .",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "redfin-news",
@@ -627,7 +667,11 @@
       "impact": "short-neg",
       "evidence_quote": "The median home-sale price was $389,601, down 0.1% year over year.",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "nahb-eyeonhousing",
@@ -675,7 +719,11 @@
       "impact": "neutral",
       "evidence_quote": "According to the “advance” estimate released by the Bureau of Economic Analysis (BEA), real gross domestic product (GDP) expanded at an annual rate of 3.4% in the third quarter, up from a 2.2% increase in the second quarter of 2026.",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "national-mortgage-news",
@@ -726,52 +774,11 @@
       "impact": "short-neg",
       "evidence_quote": "D.R. Horton now expects to close fewer home sales in the coming fiscal year, forecasting as few as 79,000 closings in 2027 compared to about 84,000 this year.",
       "evidence_basis": "body",
-      "cre_subcategory": null
-    },
-    {
-      "source_id": "lance-lambert",
-      "source_name": "Lance Lambert / ResiClub",
-      "source_tier": "B",
-      "source_weight": 10,
-      "source_tags": [
-        "housing",
-        "data",
-        "trend"
-      ],
-      "region": "national",
-      "title": "Build-to-Rent gets a clean exemption: House Republicans remove 7-year selloff rule from institutional homebuying ban - ResiClub",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPb1lac25LZ3J5b3pIUm91LXVSTDBFXzZXZWtGZEI5V2ZjYy1vcTFvSHF4NEc5V3N0dnJQWWJiWk00dzQwc214NXJmMmM5MC10ZEhKb0lLREVrTWktWXZBWGliMWJ3dFJaVlJMY0pyeUJuSlBoT3p3bmhodFFLai1RZ0hEbUdMWHIyckN0VDh4SUw0bW1kVzhPc0V2YjVhWkdUa0oyaklBZTVYZ19MamlCNG45WlVZVkt2MzNjaUxKTUU2dw?oc=5",
-      "description": "Build-to-Rent gets a clean exemption: House Republicans remove 7-year selloff rule from institutional homebuying ban &nbsp;&nbsp; ResiClub",
-      "published_at": 1778734890000,
-      "source_family": "lance-lambert",
-      "is_research": true,
-      "required_source": false,
-      "mutable": false,
-      "first_seen_at": 1793309852130,
-      "id": "755762329c432a76",
-      "late_discovery": true,
-      "score": 12,
-      "tags": [
-        "btr-sfr",
-        "policy",
-        "regulation",
-        "institutional"
-      ],
-      "heat_signals": [
-        "build-to-rent"
-      ],
-      "evidence_status": "insufficient",
-      "keep": true,
-      "importance": 3,
-      "section": "institutional",
-      "duplicate_of": null,
-      "selector_reason": "The proposed exemption of BTR from a seven-year selloff rule in institutional-homebuying legislation is directly relevant to institutional rental-housing strategy and regulation.",
-      "title_zh": "众议院共和党人移除机构购房 7 年出售限制",
-      "summary_zh": "ResiClub 标题显示，众议院共和党人从机构购房禁令中移除了 7 年出售规则，并为 Build-to-Rent 提供豁免。",
-      "impact": "long-pos",
-      "evidence_quote": "Build-to-Rent gets a clean exemption: House Republicans remove 7-year selloff rule from institutional homebuying ban",
-      "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "national-mortgage-news",
@@ -821,7 +828,11 @@
       "impact": "neutral",
       "evidence_quote": "Freddie, which is the smaller of the two government-sponsored enterprises when it comes to its outstanding portfolio size, reported Thursday that it acquired $98 billion in home mortgages during the fiscal period. Fannie Mae , in comparison, purchased $88 billion in single-family loans.",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "bisnow",
@@ -871,7 +882,11 @@
       "impact": "short-neg",
       "evidence_quote": "“Partner with your clients to find ways to reduce these costs. It’s a two-way street.”",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "cushman-research",
@@ -926,7 +941,11 @@
       "impact": "neutral",
       "evidence_quote": "Vacancy increased 10 bps QOQ to 3.1% and rose by the same amount YOY. Retail leasing activity across Miami-Dade County totaled more than 441,000 sf in the third quarter of 2026, bringing YTD deal volume to 1.7 msf, down 18.0% YOY.",
       "evidence_basis": "body",
-      "cre_subcategory": "零售"
+      "cre_subcategory": "零售",
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "cushman-research",
@@ -980,7 +999,11 @@
       "impact": "short-neg",
       "evidence_quote": "Overall vacancy rose to 23.9%, while quarterly net absorption was minimally negative at 21,000 sf, bringing YTD absorption to negative 627,000 sf.",
       "evidence_basis": "body",
-      "cre_subcategory": "办公"
+      "cre_subcategory": "办公",
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "national-mortgage-news",
@@ -1030,7 +1053,11 @@
       "impact": "long-pos",
       "evidence_quote": "“Our efforts to provide appraisal and title insurance alternatives helped borrowers save an estimated $141 million in closing costs so far this year,” Peter Akwaboah, acting CEO and chief operating officer at Fannie Mae said during the government-related loan buyer's earnings call.",
       "evidence_basis": "body",
-      "cre_subcategory": null
+      "cre_subcategory": null,
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     },
     {
       "source_id": "rebusiness-online",
@@ -1081,7 +1108,11 @@
       "impact": "long-pos",
       "evidence_quote": "Partners Development, an affiliate of Partners Real Estate, has broken ground on an 80,000-square-foot industrial project in Seguin, located northeast of San Antonio.",
       "evidence_basis": "body",
-      "cre_subcategory": "工业"
+      "cre_subcategory": "工业",
+      "acquisition_window": {
+        "lower": 1793221200000,
+        "upper": 1793307600000
+      }
     }
   ],
   "executive_summary": {
@@ -3444,7 +3475,7 @@
         "institutional": {
           "candidates": 5,
           "qualified": 5,
-          "selected": 4,
+          "selected": 3,
           "required_sources": 0,
           "source_failures": [],
           "status": "selected"
@@ -3474,9 +3505,9 @@
           "label": "BTR / SFR",
           "candidates": 1,
           "qualified": 1,
-          "selected": 1,
-          "recent_selected": 3,
-          "last_selected_date": "2026-10-30"
+          "selected": 0,
+          "recent_selected": 2,
+          "last_selected_date": "2026-10-29"
         },
         {
           "id": "office",
@@ -3578,7 +3609,8 @@
           "2026-10-27",
           "2026-10-26"
         ]
-      }
+      },
+      "candidate_audit_basis": "original_editor_before_publication_revision"
     },
     "source_counts": {
       "realtor-com": 3,
@@ -3590,8 +3622,7 @@
       "bisnow": 2,
       "nahb-eyeonhousing": 2,
       "redfin-news": 1,
-      "national-mortgage-news": 3,
-      "lance-lambert": 1
+      "national-mortgage-news": 3
     },
     "source_exceptions": [],
     "coverage_gaps": [],
@@ -3692,6 +3723,30 @@
       }
     ],
     "input_fingerprint": "2371aef74b2eeda8dea717f6c2c302cde29eb35a57fc514b9c1e48e11e7c2d0d",
-    "summary_characters": 223
+    "summary_characters": 223,
+    "editorial_revision": {
+      "mode": "offline_publication_eligibility_review",
+      "revised_at": 1793333890531,
+      "original_generated_at": 1793329995186,
+      "additional_generation_calls": 0,
+      "removed": [
+        {
+          "id": "755762329c432a76",
+          "published_at": 1778734890000,
+          "reason": "outside_publication_window"
+        }
+      ],
+      "unchanged_cutoff": true,
+      "unchanged_summary": true,
+      "saved_candidate_replay": {
+        "input": 70,
+        "eligible": 45,
+        "excluded": {
+          "insufficient_evidence": 10,
+          "outside_publication_window": 15
+        }
+      },
+      "note": "原始模型调用、候选与合格数保留为历史审计；本次仅撤下不具备本期出版资格的稿件并重算实际入选统计，不代表新模型全链路已验证。"
+    }
   }
 }

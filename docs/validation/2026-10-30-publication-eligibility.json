@@ -1,0 +1,258 @@
+{
+  "checked_at": "2026-10-30T04:19:42.412Z",
+  "baseline": "8ba6090",
+  "generation_calls": 0,
+  "actual_saved_candidate_replay": {
+    "input": 70,
+    "eligible": 45,
+    "excluded": {
+      "insufficient_evidence": 10,
+      "outside_publication_window": 15
+    },
+    "rejected": [
+      {
+        "id": "ccaaeb4c7e196840",
+        "published_at": 1793234716000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "f557c8cb010f7b5d",
+        "published_at": 1793296020000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "f4e2d7dea5ffdb6a",
+        "published_at": 1793290579000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "e38dd51f7388b895",
+        "published_at": 1776582000000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "d05862ef3bc74182",
+        "published_at": 1793112300000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "99836ae83331c38a",
+        "published_at": 1654844400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "c47a1a8fe7099001",
+        "published_at": 1752130800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "be9c806ed024307a",
+        "published_at": 1792773910000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "755762329c432a76",
+        "published_at": 1778734890000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "f88ccf5901ddb3e1",
+        "published_at": 1698476400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "55d60c342bf730ca",
+        "published_at": 1724310000000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "54a013029cdd1e63",
+        "published_at": 1762156800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "28c7fabfea68bb90",
+        "published_at": 1793301600000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "2a2d3aa3841428d9",
+        "published_at": 1793302428000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "42e82ddaab45091b",
+        "published_at": 1793300100000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "4050b6ffa7da0a6c",
+        "published_at": 1793297100000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "345c59b79a85aa18",
+        "published_at": 1793295930000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "31deb8ea1ea81980",
+        "published_at": 1793295342000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "1ab561ea82f17478",
+        "published_at": 1793271780000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "2e95d9d0fa4e812b",
+        "published_at": 1792774705000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "59636693c093539a",
+        "published_at": 1737532800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "d724954daca35c90",
+        "published_at": 1792999964000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "9cd94ab16b886c3b",
+        "published_at": 1784185200000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "6504c3fb2bb5055c",
+        "published_at": 1711090800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "12479921583601b6",
+        "published_at": 1641283200000,
+        "reason": "outside_publication_window"
+      }
+    ]
+  },
+  "actual_raw_replay": {
+    "input": 489,
+    "eligible_before_budget": 155,
+    "candidates_after_budget": 53,
+    "excluded": {
+      "insufficient_evidence": 13,
+      "outside_publication_window": 321
+    }
+  },
+  "revision": {
+    "before": 20,
+    "after": 19,
+    "removed": [
+      {
+        "id": "755762329c432a76",
+        "published_at": 1778734890000,
+        "reason": "outside_publication_window"
+      }
+    ],
+    "cutoff_unchanged": true,
+    "summary_unchanged": true,
+    "sections": {
+      "national": 9,
+      "sunbelt": 0,
+      "btr": 0,
+      "cre": 7,
+      "institutional": 3
+    },
+    "source_counts": {
+      "realtor-com": 3,
+      "colliers-research": 1,
+      "cushman-research": 3,
+      "cbre-research": 1,
+      "rebusiness-online": 2,
+      "freddie-mac": 1,
+      "bisnow": 2,
+      "nahb-eyeonhousing": 2,
+      "redfin-news": 1,
+      "national-mortgage-news": 3
+    },
+    "original_editor_audit_preserved_and_labeled": true,
+    "numeric_and_quote_validation": "passed",
+    "embedded_latest_archive_equal": true
+  },
+  "limits": [
+    "No new model generation, remote CI or production deployment",
+    "Candidate editor decisions not re-run; original candidate and qualified counts are historical"
+  ],
+  "numeric_actual_card_replay": [
+    {
+      "name": "early",
+      "result": "pass"
+    },
+    {
+      "name": "early-correction",
+      "result": "pass"
+    },
+    {
+      "name": "rerun",
+      "result": "Output contains a number absent from its evidence: 8"
+    }
+  ],
+  "full_failed_writer_replay": [
+    {
+      "request_id": "9f065cf1-01b0-4eec-b624-b1934c54f4ad",
+      "selected_count": 20,
+      "result": "Evidence quote is not present in source for 13",
+      "repair_scope": "full_contract_correction",
+      "with_exact_source_quote": 20
+    },
+    {
+      "request_id": "f9c18626-8fb0-4758-be9c-be67fe151678",
+      "selected_count": 20,
+      "result": "Evidence quote is not present in source for 13",
+      "repair_scope": [
+        "13"
+      ],
+      "with_exact_source_quote": 20
+    }
+  ],
+  "verification": {
+    "node": "v25.8.0",
+    "root_tests": {
+      "passed": 179,
+      "failed": 0
+    },
+    "release_tests": {
+      "passed": 179,
+      "failed": 0
+    },
+    "changed_scripts_syntax": "passed",
+    "release_diff_check": "passed",
+    "protected_root_files_unchanged": 56,
+    "unrelated_release_files_unchanged": 291,
+    "production_state_unchanged": true,
+    "surviving_card_text_unchanged": true
+  },
+  "advisor": {
+    "model": "gpt-6-astra",
+    "status": "passed",
+    "independent_tests": {
+      "passed": 67,
+      "failed": 0
+    },
+    "findings": [
+      {
+        "severity": "P1",
+        "issue": "Periodic audit reauthorized denied pending items",
+        "resolution": "stageSupplement disables pending activation; 7 and 31 day regression passed"
+      },
+      {
+        "severity": "P2",
+        "issue": "Bare month name in company name licensed a numeric month",
+        "resolution": "Calendar context required; March Capital and of May Capital rejected"
+      }
+    ],
+    "scope": "Local code and offline evidence; no production end-to-end validation"
+  }
+}
