@@ -24,3 +24,7 @@ state/llm-cache/
 
 state/collection-cache.json
 state/llm-diagnostics/
+
+# Versioned draft checkpoints and delivery receipts travel as artifacts only.
+state/issues/
+state/delivery-receipts/

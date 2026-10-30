@@ -1,0 +1,140 @@
+{
+  "checked_at": "2026-10-30T04:51:32.036Z",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "max",
+  "review": "passed",
+  "runtime_changes": false,
+  "house_daily_generation_calls": 0,
+  "computer_use": false,
+  "baseline": "9f1f644",
+  "source_baseline": "ca5f11f",
+  "mode": "offline_stub_only",
+  "probes": {
+    "degraded_rebuild": {
+      "first_status": "degraded",
+      "second_status": "degraded",
+      "second_skipped": false,
+      "collected_sources": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b"
+        ]
+      ],
+      "client_stage_invocations": [
+        "editor",
+        "writer",
+        "editor",
+        "writer"
+      ],
+      "note": "Stub stage calls demonstrate re-entry; a real unchanged request may still hit the existing exact-request cache."
+    },
+    "false_complete": {
+      "pipeline_response": {
+        "skipped": true,
+        "reason": "Complete issue already exists"
+      },
+      "workflow_gate_response": {
+        "kind": "daily",
+        "go": false,
+        "timezone": "Asia/Shanghai"
+      },
+      "accepted_items": 0
+    },
+    "editor_cache_drift": {
+      "collected_sources": [
+        [
+          "a"
+        ],
+        []
+      ],
+      "requests": [
+        {
+          "stage": "editor",
+          "evidence_hash": "9d0b42741afce0157bfa0c614d0fa8fb66bd6624d7194f683a9a6249675669bc",
+          "candidate_ids": [
+            "1"
+          ]
+        },
+        {
+          "stage": "writer"
+        },
+        {
+          "stage": "editor",
+          "evidence_hash": "467fb3e33a87dfbf8d012223d5658593e93da833be675c7cf5042a470b08ee53",
+          "candidate_ids": [
+            "1"
+          ]
+        },
+        {
+          "stage": "writer"
+        }
+      ],
+      "same_stable_ids": true,
+      "input_hashes": [
+        "1843a8a426626c3e27b0f4e19c4de4397e8719fc4ab12aa08b98c23c5cbcac7d",
+        "ce017cf80ba7735cfc3a1cd5a695d8f90b3afb173a4bc760c8c051a174b94196"
+      ]
+    },
+    "shared_summary_blast_radius": {
+      "valid_cards": 3,
+      "partial_repair_plan": null,
+      "requests": [
+        [
+          "system",
+          "user"
+        ],
+        [
+          "system",
+          "user",
+          "assistant",
+          "user"
+        ]
+      ],
+      "saved_cache_files": [
+        "4d49dd3a6f3374b441bef8848b3895941171a64a9227dbc2483905e53701a251.failure.json"
+      ],
+      "result": "Whole writer stage failed; valid cards have no reusable validated checkpoint."
+    }
+  },
+  "source_checks": [
+    {
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule",
+      "finding": "Schedule delay and dropped event possible"
+    },
+    {
+      "url": "https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency",
+      "finding": "Default single pending; shared group can replace pending across workflow kinds"
+    },
+    {
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching#usage-limits-and-eviction-policy",
+      "finding": "Cache retention and capacity eviction apply"
+    },
+    {
+      "url": "https://vercel.com/docs/cron-jobs/manage-cron-jobs",
+      "finding": "Cron failure not automatically retried; actual project invocation health unverified"
+    },
+    {
+      "url": "https://vercel.com/docs/cron-jobs/usage-and-pricing",
+      "finding": "Cron precision differs by plan; actual user plan unverified"
+    },
+    {
+      "url": "https://github.com/actions/cache/blob/v6/src/saveImpl.ts",
+      "finding": "Most save errors become warnings; not ranked as primary failure"
+    },
+    {
+      "url": "https://vercel.com/docs/cli/redeploy",
+      "finding": "Redeploy capability exists; usable project credentials still require verification"
+    }
+  ],
+  "validation": {
+    "protected_runtime_config_frontend_files": 16,
+    "protected_original_data_frontend_files": 56,
+    "release_checkout_clean": true,
+    "probe_source_and_outputs_reviewed": true,
+    "full_suite_rerun": false,
+    "reason": "Read-only review and documentation only; existing 179-test pass remains prior deployment evidence"
+  }
+}

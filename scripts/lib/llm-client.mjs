@@ -13,10 +13,10 @@ export function parseJson(text) {
 
 export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cacheDir, diagnosticsDir, onEvent,
   fetchImpl = fetch, totalMs = 240000, firstByteMs = 150000, idleMs = 90000, budgetMs = 660000,
-  retryDelays = [15000, 45000], sleep = pause } = {}) {
+  retryDelays = [15000, 45000], sleep = pause, ledger } = {}) {
   const usage = [];
   const delays = retryDelays.slice(0, 2);
-  const deadline = Date.now() + budgetMs;
+  const deadline = Date.now() + Math.max(0, budgetMs - (ledger?.spentMs || 0));
   const redact = value => apiKey ? String(value).replaceAll(apiKey, '[REDACTED]') : String(value);
   const safeEvent = event => JSON.parse(redact(JSON.stringify(event)));
   async function record(event) {
@@ -34,11 +34,13 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
     const key = createHash('sha256').update(JSON.stringify(body)).digest('hex');
     const cacheFile = cacheDir && path.join(cacheDir, key + '.json');
     if (cacheFile) {
-      try { const saved = JSON.parse(await fs.readFile(cacheFile, 'utf8')); const result = validate(saved.result, { cacheHit: true }); const event = safeEvent({ label, model, effort, cache_hit: true, response_model: saved.response_model || null, usage: saved.usage || null }); usage.push(event); await record({ event: 'cache_hit', ...event }); return result; }
+      try { const saved = JSON.parse(await fs.readFile(cacheFile, 'utf8')); const result = await validate(saved.result, { cacheHit: true }); const event = safeEvent({ label, model, effort, cache_hit: true, response_model: saved.response_model || null, usage: saved.usage || null }); usage.push(event); await record({ event: 'cache_hit', ...event }); return result; }
       catch (e) { if (e.code !== 'ENOENT' && !(e instanceof SyntaxError) && !(e instanceof LlmError)) throw e; }
     }
     let repairs = 0, validateResponse = validate;
-    for (let attempt = 0; attempt <= delays.length; attempt++) {
+    if (ledger?.blockedStages?.includes(label)) throw new LlmError('Cross-run model budget is unknown; only validated cache or delivery recovery is allowed: ' + label);
+    const previousAttempts = ledger?.attempts?.[label]?.length || 0;
+    for (let attempt = previousAttempts; attempt <= delays.length; attempt++) {
       const remaining = deadline - Date.now();
       if (remaining <= 0) { await record({ event: 'budget_exhausted', label, model, effort }); throw new LlmError('LLM run time budget exhausted'); }
       const ctrl = new AbortController(); let idle;
@@ -48,7 +50,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
       let tokenUsage, responseModel, responseText = '', finish, done = false, parsed, upstreamRequestId, responseId, firstByteAt, httpStatus;
       let outcome;
       const requestHash = createHash('sha256').update(JSON.stringify(body)).digest('hex');
-      const request = { label, model, effort, attempt: attempt + 1, request_id: requestId, request_hash: requestHash, started_at: new Date(started).toISOString() };
+      const request = { label, model, effort, attempt: attempt + 1, request_id: requestId, request_hash: requestHash, started_at: new Date(started).toISOString(), reserved_ms: Math.min(totalMs, remaining) };
       const heartbeat = () => { clearTimeout(idle); idle = setTimeout(() => ctrl.abort(new Error('LLM stream idle timeout')), idleMs); };
       const received = () => { if (!firstByteAt) { firstByteAt = Date.now(); clearTimeout(first); } heartbeat(); };
       const readText = async response => {
@@ -60,6 +62,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
         return text + decoder.decode();
       };
       try {
+        await ledger?.recordAttempt(label, request);
         await record({ event: 'request_started', ...request });
         const res = await fetchImpl(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + apiKey }, body: JSON.stringify(body), signal: ctrl.signal });
         httpStatus = res.status;
@@ -95,7 +98,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
         }
         if (!done || finish !== 'stop' || !responseText.trim()) throw new LlmError(`Incomplete response: done=${done}, finish=${finish}`, true);
         let result;
-        try { parsed = parseJson(responseText); result = validateResponse(parsed, { cacheHit: false }); } catch (error) { if (error instanceof LlmError) error.validation = true; throw error; }
+        try { parsed = parseJson(responseText); result = await validateResponse(parsed, { cacheHit: false }); } catch (error) { if (error instanceof LlmError) error.validation = true; throw error; }
         outcome = { ...request, cache_hit: false, repairs, response_model: responseModel || null };
         if (cacheFile) { await fs.mkdir(cacheDir, { recursive: true }); await fs.writeFile(cacheFile, JSON.stringify({ result, response_model: responseModel || null, usage: tokenUsage || null })); }
         return result;
@@ -105,7 +108,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
         let retryable = error.retryable ?? !(error instanceof LlmError);
         if (error.validation && repairs === 0 && attempt < delays.length) {
           repairs++; retryable = true;
-          const correction = parsed && repair?.(parsed, error);
+          const correction = parsed && await repair?.(parsed, error);
           if (correction) {
             body.messages = [{ role: 'system', content: correction.system || system }, { role: 'user', content: correction.user }];
             validateResponse = correction.validate;
@@ -125,6 +128,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
             upstream_request_id: upstreamRequestId || null, response_id: responseId || null,
             finish_reason: finish || null, done, usage: tokenUsage || null, response_characters: responseText.length });
           usage.push(event);
+          await ledger?.recordOutcome(label, event);
           if (event.failed && diagnosticsDir && responseText) {
             event.response_file = requestId + '.response.json';
             await fs.writeFile(path.join(diagnosticsDir, event.response_file), redact(JSON.stringify({ request_id: requestId, label, error: event.error, response: responseText.slice(0, 2000000) })));
@@ -133,8 +137,10 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
         }
       }
       if (deadline - Date.now() <= delays[attempt]) { await record({ event: 'budget_exhausted', label, model, effort }); throw new LlmError('LLM run time budget exhausted before retry'); }
+      await ledger?.recordDelay(label, requestId, delays[attempt]);
       await sleep(delays[attempt]);
     }
+    throw new LlmError('Issue stage request budget exhausted: ' + label);
   }
   return { call, usage };
 }

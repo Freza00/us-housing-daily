@@ -1,17 +1,25 @@
-import { dedupe } from './news-core.mjs';
 import {createHash} from 'node:crypto';
+
+// Acquisition retains content versions; editorial story deduplication happens later.
+export function mergeRawItems(items) {
+ const result=new Map();
+ for(const item of items){const key=materialFingerprint(item);if(!result.has(key))result.set(key,item);}
+ return [...result.values()];
+}
+export const materialFingerprint=it=>createHash('sha256').update(JSON.stringify([it.id,it.content_hash||'',it.published_at,it.title||'',it.description||''])).digest('hex');
 
 export function captureFingerprint(row) {
  const upper=row.cutoff_upper??row.window.upper;
- return createHash('sha256').update(JSON.stringify(row.items.filter(it=>it.published_at<upper).map(it=>[it.id,it.content_hash||'']).sort((a,b)=>String(a[0]).localeCompare(String(b[0]))))).digest('hex');
+ return createHash('sha256').update(JSON.stringify(row.items.filter(it=>it.published_at<upper).map(materialFingerprint).sort())).digest('hex');
 }
+function legacyCaptureFingerprint(row){const upper=row.cutoff_upper??row.window.upper;return createHash('sha256').update(JSON.stringify(row.items.filter(it=>it.published_at<upper).map(it=>[it.id,it.content_hash||'']).sort((a,b)=>String(a[0]).localeCompare(String(b[0]))))).digest('hex');}
 
 export function sourceLower(checkpoint,id,fallback) {
   return checkpoint.source_upper?.[id] ?? checkpoint.source_floor?.[id] ?? fallback;
 }
 function combinePending(rows) {
   rows=rows.filter(r=>r?.items?.length);if(!rows.length)return null;
-  const items=dedupe(rows.flatMap(r=>r.items));
+  const items=mergeRawItems(rows.flatMap(r=>r.items));
   const lower=Math.min(...rows.map(r=>r.window.lower),...items.map(it=>it.published_at));
   const upper=Math.max(...rows.map(r=>r.window.upper),...items.map(it=>it.published_at+1));
   return {schema_version:3,provenance:'live',coverage_status:'unverified',cutoff_upper:Math.max(...rows.map(r=>r.cutoff_upper??r.window.upper)),window:{lower,upper,hours:(upper-lower)/3600000},items,source_health:rows.flatMap(r=>r.source_health||[])};
@@ -26,7 +34,7 @@ export function mergeCheckpoints(committed={},cached={}) {
   const rows=[committed.pending,cached.pending,cached.last_capture].filter(Boolean);
   const pending=combinePending(rows.map(r=>{
     const upper=r.cutoff_upper??r.window.upper,done=committed.processed_capture;
-    const processed=done?.upper===upper&&done.fingerprint===captureFingerprint(r);
+    const processed=done?.upper===upper&&(done.fingerprint===captureFingerprint(r)||(!done.fingerprint_version&&r.items.filter(it=>it.published_at<upper).every(it=>it.content_hash)&&done.fingerprint===legacyCaptureFingerprint(r)));
     return {...r,items:processed?r.items.filter(it=>it.published_at>=upper):r.items};
   }));
   return {schema_version:1,daily_upper:Math.max(committed.daily_upper||0,cached.daily_upper||0)||undefined,source_upper,source_floor,observed_ids:[...new Set([...(committed.observed_ids||[]),...(cached.observed_ids||[])])],initialized_sources:[...new Set([...(committed.initialized_sources||[]),...(cached.initialized_sources||[])])],health:[...health.values()],processed_capture:committed.processed_capture,pending,last_capture:cached.last_capture};
@@ -34,7 +42,7 @@ export function mergeCheckpoints(committed={},cached={}) {
 export function finishCapture(checkpoint,upper) {
   const row=checkpoint.pending;
   const pending=row?combinePending([{...row,window:{lower:upper,upper:Math.max(upper,...row.items.map(it=>it.published_at+1))},items:row.items.filter(it=>it.published_at>=upper)}]):null;
-  return {...checkpoint,pending,processed_capture:checkpoint.last_capture?{upper,fingerprint:captureFingerprint(checkpoint.last_capture)}:checkpoint.processed_capture};
+  return {...checkpoint,pending,processed_capture:checkpoint.last_capture?{upper,fingerprint:captureFingerprint(checkpoint.last_capture),fingerprint_version:2}:checkpoint.processed_capture};
 }
 
 // The caller writes raw capture first, then this checkpoint, before invoking models.
@@ -56,7 +64,7 @@ export function stageCapture(previous,sources,results,window,priorCapture=null,c
     if(health.status==='ok')initialized.add(health.id);
     if(health.status==='ok'&&!health.undated&&health.coverage?.lower<=lower&&health.coverage?.upper>=window.upper&&!health.article_errors?.length)source_upper[health.id]=Math.max(source_upper[health.id]||0,window.upper);
   }
-  const raw=dedupe([...(previous.pending?.items||[]),...(priorCapture?.items||[]),...fresh]).map(it=>
+  const raw=mergeRawItems([...(previous.pending?.items||[]),...(priorCapture?.items||[]),...fresh]).map(it=>
     activatePending&&it.published_at>=window.lower&&it.published_at<window.upper
       ?{...it,acquisition_window:{lower:window.lower,upper:window.upper}}:it);
   const items=raw.filter(it=>it.published_at<window.upper);

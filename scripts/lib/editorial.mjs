@@ -173,7 +173,7 @@ export const writingSystem = `你是机构级中文地产编辑。只使用给�
 术语：existing-home sales译成屋销售；pending home sales按口径译住宅签约量或成屋签约销售指数，不译待售房屋销售；housing starts译新屋开工；inventory译在售库存。
 同时生成executive_summary.sentences，通常3句、合计150-200中文字，最多250字；只提最重要变化、对相关市场的含义与待观察项，不罗列目录，不硬凑结论。每句附item_ids，只能引用输入id。
 返回严格JSON：{"items":[{"id":"输入id","title_zh":"...","summary_zh":"...","impact":"neutral","evidence_quote":"..."}],"executive_summary":{"sentences":[{"text":"...","item_ids":["id"]}]},"themes":[{"title":"主线判断","item_ids":["id"]}]}。items逐条覆盖输入且无重复。themes仅周/月报输出最多3项，日报为空数组。中文全角标点，中英文/数字间加空格，破折号用--。`;
-function validateWritingCard(card, it) {
+export function validateWritingCard(card, it) {
   if (!it || !card.title_zh || !card.summary_zh || !['long-pos', 'short-pos', 'neutral', 'short-neg', 'long-neg'].includes(card.impact)) throw new LlmError('Invalid writing ID/fields');
   const quoteText = text => String(text || '').normalize('NFKC').toLowerCase().replace(/−/g, '-').replace(/(?<!\d)\.|\.(?!\d)|(?<!\d),|,(?!\d)/g, ' ').replace(/[^\p{L}\p{N}\s.%+,$\-]/gu, ' ').replace(/\s+/g, ' ').trim();
   const quote = quoteText(card.evidence_quote), bodyMatch = quoteText(it.description).includes(quote), titleMatch = quoteText(it.title).includes(quote);
@@ -197,7 +197,7 @@ export function validateWriting(data, selected, kind = 'daily', context = {}) {
   });
   return { validation_notes: { discarded_output_ids: discardedIds }, items: cards, ...validateWritingMetadata(data, selected, kind) };
 }
-function validateWritingMetadata(data, selected, kind) {
+export function validateWritingMetadata(data, selected, kind) {
   const source = new Map(selected.map(it => [it.id, it]));
   const sentences = data.executive_summary?.sentences;
   if (!Array.isArray(sentences) || sentences.length < 1 || sentences.length > 4) throw new LlmError('Missing executive summary');
@@ -232,13 +232,22 @@ export function createWritingRepair(data, selected, kind, validate) {
     if (!cards.has(it.id)) { errors.set(it.id, 'Missing writing card'); return true; }
     try { validateWritingCard(cards.get(it.id), it); return false; } catch (error) { if (error instanceof LlmError) { errors.set(it.id, error.message); return true; } throw error; }
   });
-  if (!invalid.length || invalid.length === selected.length) return null;
-  // Shared summary/theme failures need a full correction, never a guessed merge.
-  try { validateWritingMetadata(structuredClone(data), selected, kind); } catch (error) { if (error instanceof LlmError) return null; throw error; }
+  let metadataError;
+  try { validateWritingMetadata(structuredClone(data), selected, kind); } catch (error) { if (!(error instanceof LlmError)) throw error; metadataError = error.message; }
+  if (invalid.length === selected.length) return null;
+  if (!invalid.length && metadataError) return {
+    system: writingSystem + '\n仅纠正 executive_summary 和 themes，不返回或重写任何 items；已通过的全部卡片由程序保留。',
+    user: JSON.stringify({ ...JSON.parse(writingPrompt(kind, selected)), previous_metadata: { executive_summary: data.executive_summary, themes: data.themes }, error: metadataError }),
+    validate(correction, context) {
+      if (correction?.items !== undefined) throw new LlmError('Metadata repair cannot replace cards');
+      return validate({ ...data, executive_summary: correction?.executive_summary, themes: correction?.themes }, context);
+    }
+  };
+  if (!invalid.length) return null;
   const expected = new Set(invalid.map(it => it.id));
   return {
-    system: writingSystem + '\n本次仅修复指定条目的卡片。只返回 {"items":[...]}，恰好覆盖本次输入 ID；已通过的卡片、速读摘要和主线由程序保留，不要重写。',
-    user: JSON.stringify({ ...JSON.parse(writingPrompt(kind, invalid)), corrections: invalid.map(it => ({ id: it.id, error: errors.get(it.id), previous_card: cards.get(it.id) || null })) }),
+    system: writingSystem + '\n本次仅修复指定条目的卡片，恰好覆盖本次输入 ID；已通过的卡片由程序保留。' + (metadataError ? '同时纠正 executive_summary 和 themes，引用只能来自 original_item_ids。' : '只返回 {"items":[...]}，不要重写已通过的速读摘要和主线。'),
+    user: JSON.stringify({ ...JSON.parse(writingPrompt(kind, invalid)), original_item_ids: selected.map(it => it.id), ...(metadataError ? { metadata_error: metadataError, original_evidence: JSON.parse(writingPrompt(kind, selected)).items, previous_metadata: { executive_summary: data.executive_summary, themes: data.themes } } : {}), corrections: invalid.map(it => ({ id: it.id, error: errors.get(it.id), previous_card: cards.get(it.id) || null })) }),
     validate(correction, context) {
       if (!Array.isArray(correction?.items) || correction.items.length !== expected.size) throw new LlmError('Repair coverage mismatch');
       const replacements = new Map();
@@ -246,7 +255,7 @@ export function createWritingRepair(data, selected, kind, validate) {
         if (!expected.has(card?.id) || replacements.has(card.id)) throw new LlmError('Invalid repair reference');
         replacements.set(card.id, card);
       }
-      return validate({ ...data, items: selected.map(it => replacements.get(it.id) || cards.get(it.id)) }, context);
+      return validate({ ...data, ...(metadataError ? { executive_summary: correction.executive_summary, themes: correction.themes } : {}), items: selected.map(it => replacements.get(it.id) || cards.get(it.id)) }, context);
     }
   };
 }

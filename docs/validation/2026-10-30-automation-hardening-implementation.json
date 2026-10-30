@@ -1,0 +1,107 @@
+{
+  "checked_at": "2026-10-30 17:27",
+  "baseline_commit": "9f1f644d7a30984d58ba13cec21f369a444130ef",
+  "runtime": "v25.8.0",
+  "local_tests": {
+    "isolated": {
+      "passed": 205,
+      "failed": 0
+    },
+    "root": {
+      "passed": 205,
+      "failed": 0
+    }
+  },
+  "static_checks": {
+    "workflow_yaml": 5,
+    "generation_workflow_assertions": "passed",
+    "esm_syntax_files": 51,
+    "git_diff_check": "passed"
+  },
+  "real_saved_data_replay": {
+    "generation_calls": 0,
+    "network_calls": 0,
+    "issues": [
+      {
+        "date": "2026-10-29",
+        "cards": 20,
+        "input_candidates": 57,
+        "full_contract": "passed",
+        "ready_resume_without_models": "passed",
+        "inline_latest_archive": "matched",
+        "subsequent_generation": "skipped"
+      },
+      {
+        "date": "2026-10-30",
+        "cards": 19,
+        "input_candidates": 70,
+        "full_contract": "passed",
+        "ready_resume_without_models": "passed",
+        "inline_latest_archive": "matched",
+        "subsequent_generation": "skipped"
+      }
+    ],
+    "limits": [
+      "Offline replay of saved production content and captured model answers; no new generation or live workflow/deployment verification."
+    ],
+    "eligibility": {
+      "saved_candidates": 70,
+      "eligible": 45,
+      "excluded": 25,
+      "stale_id_rejected": "755762329c432a76"
+    },
+    "saved_answer_checks": [
+      {
+        "case": "early",
+        "result": "date month accepted with original evidence"
+      },
+      {
+        "case": "early-correction",
+        "result": "date month accepted with original evidence"
+      },
+      {
+        "case": "rerun",
+        "result": "unsupported derived 8 rejected"
+      },
+      {
+        "case": "saved altered quote",
+        "result": "rejected"
+      }
+    ]
+  },
+  "workspace_preservation": {
+    "baseline_files": 110,
+    "unchanged_non_target_files": 97,
+    "synced_target_files": 26,
+    "formal_data_state_public_unchanged": true,
+    "root_target_hashes_match_isolated": true
+  },
+  "advisor": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "max",
+    "status": "passed",
+    "independent_tests": {
+      "passed": 79,
+      "failed": 0
+    },
+    "git_diff_check": "passed",
+    "remaining_blockers": []
+  },
+  "external_changes": {
+    "new_house_daily_generation_calls": 0,
+    "commit": false,
+    "push": false,
+    "deployment": false,
+    "external_schedule_enabled": false,
+    "notifications_enabled": false,
+    "secrets_modified": false
+  },
+  "not_validated": [
+    "GitHub runner stage upload and cross-run restore",
+    "Next real scheduled generation",
+    "Real redeploy permission and deployment",
+    "Independent monitor scheduling or alerts",
+    "Ten working days online by 09:00 SLA",
+    "New Node.js 22 CI run"
+  ]
+}

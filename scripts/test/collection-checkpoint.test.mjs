@@ -34,7 +34,7 @@ test('collector applies source-specific lower bounds rather than a global lookba
  const results=await createCollector({now:upper,lower,lowerBySource:{a:old},fetchImpl:async()=>new Response(xml)}).collect(sources.map(s=>({...s,url:'https://example.com/'+s.id,type:'rss'})));
  assert.equal(results[0].health.coverage.lower,old);assert.equal(results[1].health.coverage.lower,lower);
 });
-test('failed daily writer resumes saved raw material without recollecting successful sources',async t=>{
+test('failed writer resumes its frozen selection; an explicit revision can recover a failed source',async t=>{
  const root=await sandbox(t);await fs.writeFile(path.join(root,'config/sources.json'),JSON.stringify({sources}));
  await fs.writeFile(path.join(root,'data/latest.json'),JSON.stringify({date:'2026-10-27',generated_at:lower}));
  const env={PUBLISH_NOW:'2026-10-28T00:30:00Z',NEWS_DATA_DIR:path.join(root,'data'),NEWS_STATE_DIR:path.join(root,'state')};
@@ -45,8 +45,10 @@ test('failed daily writer resumes saved raw material without recollecting succes
  assert.equal(staged.source_upper.a,upper);assert.ok(staged.pending.items.some(x=>x.id==='a-story'));
  assert.equal(JSON.parse(await fs.readFile(path.join(root,'data/latest.json'),'utf8')).date,'2026-10-27');
  retry=true;const result=await runPipeline('daily',{root,env,collector,client:fakeClient()});
- assert.deepEqual(calls,[['a','b'],['b']]);assert.equal(result.items.length,2);assert.equal(result.window.upper,upper);
+ assert.deepEqual(calls,[['a','b']]);assert.equal(result.items.length,1);assert.equal(result.window.upper,upper);
  assert.equal(JSON.parse(await fs.readFile(path.join(root,'state/collection-checkpoint.json'),'utf8')).pending,null);
+ const revision=await runPipeline('daily',{root,env:{...env,FORCE_RUN:'1'},collector,client:fakeClient()});
+ assert.deepEqual(calls,[['a','b'],['b']]);assert.equal(revision.items.length,2);assert.equal(revision.edition.revision,2);
 });
 test('weekly can publish from a pending raw capture while Monday daily has not been written',async t=>{
  const root=await sandbox(t);const now='2026-11-02T00:00:00Z',window=buildWindow('weekly',new Date(now));

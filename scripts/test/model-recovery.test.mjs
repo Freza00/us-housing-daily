@@ -92,9 +92,12 @@ test('writer cannot use a partial correction to rewrite another card or bypass n
   assert.throws(() => plan.validate({ items: [data.items[1]] }), /number absent/);
   for (const invalid of [
     { ...data, items: [data.items[0], data.items[0]] },
-    { ...data, items: [...data.items, { id: 'unknown' }] },
-    { ...data, executive_summary: { sentences: [{ text: '销售增长 99%。', item_ids: ['1'] }] } }
+    { ...data, items: [...data.items, { id: 'unknown' }] }
   ]) assert.equal(createWritingRepair(invalid, batch.items, 'daily', validate), null);
+  const mixed = { ...data, executive_summary: { sentences: [{ text: '销售增长 99%。', item_ids: ['1'] }] } };
+  const mixedPlan = createWritingRepair(mixed, batch.items, 'daily', validate);
+  assert.throws(() => mixedPlan.validate({ items: [card(batch.items[1])], executive_summary: mixed.executive_summary }), /number absent/);
+  assert.equal(mixedPlan.validate({ items: [card(batch.items[1])], executive_summary: { sentences: [{ text: '销售增长 5%。', item_ids: ['1'] }] }, themes: [] }).items.length, 3);
 });
 
 test('full correction includes the failed answer and shares a three-attempt transport budget', async () => {
