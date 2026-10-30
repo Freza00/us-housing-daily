@@ -2,13 +2,13 @@
 
 ## 当前状态
 
-30 号日期缩写误报与 168 天前旧闻入选已完成本地修复；19 条修订候选、179 项测试和 Astra 最终复审通过。用户已明确授权“提交、同步开源仓库并上线”，当前执行发布，远端 CI 和生产内容验收待完成。此前 29 号去重与覆盖修复已上线，生产在本轮部署前仍为用户 rerun 发布的原 20 条。[本地修复验收](docs/validation/2026-10-30-publication-eligibility.md)；[30 号根因分析](docs/validation/2026-10-30-rerun-diagnosis.md)；[29 号生产核验](docs/validation/2026-10-29-editorial-production.json)。
+30 号日期缩写与旧闻入选修复已按用户授权提交 ca5f11f、同步开源 main 并上线 Vercel。30 号现为 19 条，168 天前的旧闻已移除；Node.js 22 CI 的 179 项测试、Astra 复审及生产内容核验通过。首页内嵌、latest、30 号归档一致，29 号归档保持原样。[修复验收](docs/validation/2026-10-30-publication-eligibility.md)；[生产核验](docs/validation/2026-10-30-publication-production.json)；[根因分析](docs/validation/2026-10-30-rerun-diagnosis.md)。
 
 线上模型为 gpt-6.1-sol。工作日日报 05:00；周一周报 07:00 首跑、08:00 补偿；月报维持首个周一 14:30，均为北京时间。09:00 为可读目标，仍受平台调度与外部服务影响。真实生产采集和下一次自动生成仍需验证，人工修订及离线 CI 不等同于自动全链路通过。
 
 ## 进行中
 
-- 30 号修复已获本轮发布授权，正在提交、推送并核对 CI／Vercel。主工作区和隔离版 179 项测试、Astra 独立 67 项及最终复审已通过；19 条修订候选已备好。新规则生产自动全链路仍待上线后验证。[验收与限制](docs/validation/2026-10-30-publication-eligibility.md)。
+- 30 号修复及 19 条修订稿已上线，源头采集／新提示词生成及下一次定时发布仍待生产自动全链路验证。本次部署和离线回放未新增 House Daily 模型调用，不能替代下一轮自动生成验收。[验收与限制](docs/validation/2026-10-30-publication-eligibility.md)。
 - 30 号生产原料证实 INVH 公告正文取得成功，因已在 29 号发布而按 seen 去重；AMH 本期源检查正常但无当期新稿，新的正文补抓仍待观察。本机与 runner 验证证据分别记录。[本轮证据](docs/validation/2026-10-30-publication-eligibility.md)。
 - 30 号真实两阶段生成及诊断 artifact 已验证能运行，定时阶段数字校验连续失败；用户 rerun 的单卡修复成功。稳定在 09:00 前自动出刊仍未实现，不能用一次手动恢复替代稳定性验收。
 - 任务内恢复无法解决平台未启动或延迟启动。10 月 29 日 05:36、09:02 及 13:52 生成均未成功发布，后续定时启动和 09:00 可读目标仍需持续观察。
@@ -16,6 +16,7 @@
 
 ## 最近完成
 
+- 2026-10-30 12:24 经用户明确授权，提交 ca5f11f 并推送开源 main，Vercel 部署成功。30 号 19 条修订稿及出版资格／月份修复上线；生产首页、JS、CSS、latest、30／29 号归档和日期列表逐项 SHA-256 一致。原工作区 56 个受保护文件未变。[生产证据](docs/validation/2026-10-30-publication-production.json)。
 - 2026-10-30 12:19 完成本地日报出版资格与月份缩写修复；原料保留独立于出版资格，失败／停源积压可追溯恢复，超期首次发现和明确正文不足拒绝。采纳 Astra 意见防止周月补采重授资格及机构名误授月份。19 条撤稿候选、179 项测试和独立复审通过，未提交或上线。[施工与验收](docs/plans/2026-10-30-publication-eligibility.md)。
 - 2026-10-29 19:06 经用户明确授权，将 828c07b、c9be26c 推送 main 并部署至 Vercel；29 号修订稿、跨栏去重、栏目与资产补位、BTR 来源和覆盖说明已上线。更新脚本版本参数使浏览器加载新展示。开源代码、配置、测试、文档及数据同步完成。[验收](docs/validation/2026-10-29-editorial-coverage.md)。
 - 2026-10-29 18:56 本地完成跨栏目事件防重、动态栏目与资产补位、正文导航剔除、INVH／AMH 官方 IR 补文、CRE 资产分类及缺刊覆盖说明。隔离修订稿 20 条，栏目 9／3／1／6／1，FOMC 1 条、INVH 1 条，6 条 CRE 子类明确；advisor 内容和代码复审通过。未提交、推送或上线。[验收](docs/validation/2026-10-29-editorial-coverage.md)。
@@ -27,6 +28,7 @@
 
 ## 最近验证
 
+- 2026-10-30 12:24 [代码 ca5f11f 的 CI](https://github.com/Freza00/us-housing-daily/actions/runs/41002557228) 在 Node.js v22.23.4 通过 179 项测试，0 失败；[Vercel 部署](https://vercel.com/freza00s-projects/news-agent/Fw3q2yQrwVQEF7Byuu2XJfkPRPrK) 成功。线上 30 号 19 条，旧闻移除、截止点 1793307600000、数字／引文／摘要引用及首页／latest／归档一致性通过；无浏览器视觉验收或新模型全链路生成。[结构化证据](docs/validation/2026-10-30-publication-production.json)。
 - 2026-10-30 12:19 主工作区和隔离版 Node.js v25.8.0 均通过 179 项测试；Astra 独立 67 项测试及最终复审通过。真实 70 候选中 15 条超期、10 条证据不足被门禁排除，19 条修订候选的数字、引文、摘要引用和首页／归档／latest 一致性通过。两次日期 10 误报已消除，推算 8 和改写引文继续拒绝；根目录 56 个受保护文件未变。无新增生成调用或部署。[验证](docs/validation/2026-10-30-publication-eligibility.md)。
 - 2026-10-30 11:26 通过 CLI／API 取得 05:36、09:07 失败及用户成功 rerun 的完整日志，下载可用诊断附件和实际输入；导入实际模块复现日期缩写误报、推算差额拦截及超期旧稿补采入池。生产已是 30 号 20 条，但第 17 条发布日期为 5 月 14 日，内容时效验收不通过。此次分析未新增模型调用或改生产。[证据与结论](docs/validation/2026-10-30-rerun-diagnosis.md)。
 - 2026-10-29 19:06 最终代码 c9be26c 的 Node.js 22.23.4 CI 166 项通过、0 失败；Vercel 部署成功。线上首页／JS／CSS／latest／29 号归档／日期列表与候选 SHA-256 全部一致，页面实际引用 /app.js?v=2026-10-29-editorial 内容匹配；FOMC 1 条、BTR 1 条、20 条总数及固定截止点通过。未执行浏览器视觉验收或付费生成。[结构化证据](docs/validation/2026-10-29-editorial-production.json)。

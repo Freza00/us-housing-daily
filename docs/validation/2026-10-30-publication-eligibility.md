@@ -1,6 +1,6 @@
 # 日报出版资格与月份缩写已修复，30 号撤稿候选保留 19 条
 
-2026-10-30 12:19，北京时间。本地修复、离线回放和 Astra 独立复审通过；尚未提交、推送或部署。施工范围见 [计划](../plans/2026-10-30-publication-eligibility.md)，原故障证据见 [根因分析](2026-10-30-rerun-diagnosis.md)，结构化结果见 [验证数据](2026-10-30-publication-eligibility.json)。
+2026-10-30 12:24，北京时间。本地修复、离线回放和 Astra 独立复审通过，用户授权后已提交 ca5f11f、推送开源 main 并上线 Vercel；生产 30 号已是 19 条。施工范围见 [计划](../plans/2026-10-30-publication-eligibility.md)，原故障证据见 [根因分析](2026-10-30-rerun-diagnosis.md)，本地与生产证据分别见 [本地验证](2026-10-30-publication-eligibility.json) 和 [生产核验](2026-10-30-publication-production.json)。
 
 ## 修复行为
 
@@ -21,10 +21,12 @@ Astra 独立复审指出并复验两项补充修复：周／月补采不能用�
 
 生产 30 号原料还证实 INVH 公告已由 runner 取得 6,000 字符正文；该公告已在 29 号发布，因此按 seen 正常去重。AMH 本期来源检查正常但无当期新稿；不能据此声称市场没有 BTR 消息。
 
-修订数据位于项目 `.tmp/house-daily-eligibility-20261030/release-candidate/`，latest、30 号归档和首页内嵌内容一致。正式根目录的 data、state、HTML 和 CSS 未改，生产仍为原 20 条。
+修订从项目 `.tmp/house-daily-eligibility-20261030/release-candidate/` 隔离发布，latest、30 号归档和首页内嵌内容一致。生产已核对为 19 条；正式根工作区的 data、state、HTML 和 CSS 未改，原有其他修改没有带入发布。
 
 ## 验证与限制
 
 主工作区和隔离候选在 Node.js v25.8.0 均通过 179 项测试，0 失败；Astra 独立运行出版资格、采集检查点和可靠性相关 67 项，全部通过，最终未发现剩余阻断项。新增回归覆盖旧闻反复重试不洗白、超过 7 日的真实来源积压、跨工作日写稿恢复、旧版快照迁移、截稿后材料、补采不能重授资格、候选预算及月份／数字边界。修改脚本语法及 Git diff 检查通过，根目录 56 个受保护数据和前端文件未变；隔离候选的非目标已跟踪文件未变。
 
-未使用 Computer Use，未新增 House Daily 模型调用；未运行新提示词的付费生成、远端 CI 或生产部署。本地修复已验收，仍须获得本轮公开发布授权，才能提交、同步开源并上线修订稿。
+代码 ca5f11f 的 [远端 CI](https://github.com/Freza00/us-housing-daily/actions/runs/41002557228) 在 Node.js v22.23.4 完成 179 项测试，0 失败；[Vercel 部署](https://vercel.com/freza00s-projects/news-agent/Fw3q2yQrwVQEF7Byuu2XJfkPRPrK) 成功。通过 HTTP 对首页、JS、CSS、latest、30／29 号归档及日期列表逐项比对，均为 HTTP 200 且 SHA-256 与候选一致。生产数字、连续引文、摘要引用、截止点及旧闻移除通过。
+
+全程仅用 CLI／API，未使用 Computer Use，未新增 House Daily 模型调用。新提示词付费生成、来源采集及下一次定时发布仍待真实自动全链路验证；本次未执行浏览器视觉验收。
