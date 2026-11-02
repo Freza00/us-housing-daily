@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-02T09:27:35Z",
-  "status": "local_validated_publication_in_progress",
+  "checked_at": "2026-11-02T09:34:00Z",
+  "status": "published_and_production_verified",
   "authorized": [
     "weekly recovery publication",
     "monthly recovery publication",
@@ -71,6 +71,233 @@
   },
   "new_model_requests": 0,
   "new_source_collection_requests": 0,
-  "published": false,
-  "official_limit_source": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github"
+  "published": true,
+  "official_limit_source": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+  "release": {
+    "remote_before_code_push": "bd26ff8c3146f8caa2196f246c413949539ba834",
+    "merge_commit": "23cc0fd7d419c0d4b8c1be098b8edd3d1d87f1a0",
+    "code_commits": [
+      "29de00a69e3692937fe46cce16b1168597553b92",
+      "08360444fe8bac04cb5826ec3d21ec5e7bdc7d6d",
+      "30fb9cc"
+    ],
+    "weekly_data_commit": "c6466328fbc0d07f6fe962f28c3dcc56984ec15b",
+    "monthly_data_commit": "bd26ff8c3146f8caa2196f246c413949539ba834",
+    "code_push_head": "23cc0fd7d419c0d4b8c1be098b8edd3d1d87f1a0",
+    "code_changed_files": [
+      "AGENTS.md",
+      "README.md",
+      "ROADMAP.md",
+      "docs/RECOVERY.md",
+      "docs/plans/2026-11-02-periodicals-release.md",
+      "docs/plans/2026-11-02-summary-contract-repair.md",
+      "docs/validation/2026-11-02-advisor-comparison.json",
+      "docs/validation/2026-11-02-advisor-comparison.md",
+      "docs/validation/2026-11-02-periodicals-release.json",
+      "docs/validation/2026-11-02-periodicals-release.md",
+      "docs/validation/2026-11-02-postcommit-run.json",
+      "docs/validation/2026-11-02-postcommit-run.md",
+      "docs/validation/2026-11-02-summary-contract-repair.json",
+      "docs/validation/2026-11-02-summary-contract-repair.md",
+      "scripts/lib/collection-checkpoint.mjs",
+      "scripts/lib/editorial.mjs",
+      "scripts/lib/pipeline.mjs",
+      "scripts/lib/publication.mjs",
+      "scripts/test/collection-checkpoint.test.mjs",
+      "scripts/test/fixtures/2026-11-02-summary-responses.json",
+      "scripts/test/publication-eligibility.test.mjs",
+      "scripts/test/publication.test.mjs",
+      "scripts/test/summary-contract.test.mjs"
+    ],
+    "prepush_checks": {
+      "tests": 225,
+      "failed": 0,
+      "scope": "passed",
+      "secret_patterns": "passed",
+      "diff_check": "passed"
+    }
+  },
+  "production_verification": {
+    "checked_at": "2026-11-02T09:33:24.102Z",
+    "code_commit": "23cc0fd7d419c0d4b8c1be098b8edd3d1d87f1a0",
+    "periodicals": {
+      "weekly": {
+        "schema_version": 1,
+        "ok": true,
+        "host": "https://news-agent-mu.vercel.app",
+        "identity": {
+          "kind": "weekly",
+          "period_key": "2026-10-26",
+          "cutoff_upper": 1793566800000,
+          "revision": 1
+        },
+        "payload_sha256": "7672f8e7ee6de9c4c9574a3938154e0a640935340cb2bd36c730de132a10c328",
+        "commit": "23cc0fd7d419c0d4b8c1be098b8edd3d1d87f1a0",
+        "checked_at": 1793612004114,
+        "files": [
+          {
+            "route": "/data/weekly/latest.json",
+            "ok": true
+          },
+          {
+            "route": "/data/weekly/2026-10-26.json",
+            "ok": true
+          },
+          {
+            "route": "/data/weekly/dates.json",
+            "ok": true
+          }
+        ]
+      },
+      "monthly": {
+        "schema_version": 1,
+        "ok": true,
+        "host": "https://news-agent-mu.vercel.app",
+        "identity": {
+          "kind": "monthly",
+          "period_key": "2026-10",
+          "cutoff_upper": 1793505600000,
+          "revision": 1
+        },
+        "payload_sha256": "34599ae92252517901b74f9c1201f6e479a90fe9b8f0ffb57d8086a4f07f659c",
+        "commit": "23cc0fd7d419c0d4b8c1be098b8edd3d1d87f1a0",
+        "checked_at": 1793612006367,
+        "files": [
+          {
+            "route": "/data/monthly/latest.json",
+            "ok": true
+          },
+          {
+            "route": "/data/monthly/2026-10.json",
+            "ok": true
+          },
+          {
+            "route": "/data/monthly/dates.json",
+            "ok": true
+          }
+        ]
+      }
+    },
+    "frontend": {
+      "daily": {
+        "date": "2026-11-02",
+        "items": 20,
+        "inline_latest_archive_match": true,
+        "payload_sha256": "ee2f33cf84c802aa2a290e2c5777efcf8f31b14a5b8dd61c05e52a70450cff8a"
+      },
+      "app.js": {
+        "route": "/app.js?v=2026-10-29-editorial",
+        "sha256": "99cf87b67ce6b2e19c90f406ea3e7054477e0320b44290c6ed16fa575309fae2",
+        "matches": true
+      },
+      "style.css": {
+        "route": "/style.css?v=2026-10-28",
+        "sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7",
+        "matches": true
+      },
+      "html_matches": true
+    },
+    "model_requests": 0,
+    "source_collection_requests": 0,
+    "ci_runs": [
+      {
+        "id": 41421525772,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "23cc0fd7d419c0d4b8c1be098b8edd3d1d87f1a0",
+        "html_url": "https://github.com/Freza00/us-housing-daily/actions/runs/41421525772"
+      }
+    ],
+    "commit_status": {
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "target_url": "https://vercel.com/freza00s-projects/news-agent/9ySZuio5SP1RcXAH5GuCTgi5nnQ2",
+          "description": "Deployment has completed"
+        }
+      ]
+    }
+  },
+  "weekly_delivery": {
+    "schema_version": 1,
+    "ok": true,
+    "host": "https://news-agent-mu.vercel.app",
+    "identity": {
+      "kind": "weekly",
+      "period_key": "2026-10-26",
+      "cutoff_upper": 1793566800000,
+      "revision": 1
+    },
+    "payload_sha256": "7672f8e7ee6de9c4c9574a3938154e0a640935340cb2bd36c730de132a10c328",
+    "commit": "c6466328fbc0d07f6fe962f28c3dcc56984ec15b",
+    "checked_at": 1793611739978,
+    "files": [
+      {
+        "route": "/data/weekly/latest.json",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/2026-10-26.json",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/dates.json",
+        "ok": true
+      }
+    ],
+    "pushed": {
+      "commit": "c6466328fbc0d07f6fe962f28c3dcc56984ec15b",
+      "already_pushed": false
+    }
+  },
+  "monthly_delivery": {
+    "schema_version": 1,
+    "ok": true,
+    "host": "https://news-agent-mu.vercel.app",
+    "identity": {
+      "kind": "monthly",
+      "period_key": "2026-10",
+      "cutoff_upper": 1793505600000,
+      "revision": 1
+    },
+    "payload_sha256": "34599ae92252517901b74f9c1201f6e479a90fe9b8f0ffb57d8086a4f07f659c",
+    "commit": "bd26ff8c3146f8caa2196f246c413949539ba834",
+    "checked_at": 1793611803870,
+    "files": [
+      {
+        "route": "/data/monthly/latest.json",
+        "ok": true
+      },
+      {
+        "route": "/data/monthly/2026-10.json",
+        "ok": true
+      },
+      {
+        "route": "/data/monthly/dates.json",
+        "ok": true
+      }
+    ],
+    "pushed": {
+      "commit": "bd26ff8c3146f8caa2196f246c413949539ba834",
+      "already_pushed": false
+    }
+  },
+  "protected_original_workspace_files": 122,
+  "ci": {
+    "run": 41421525772,
+    "node": "v22.23.4",
+    "tests": 225,
+    "passed": 225,
+    "failed": 0,
+    "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41421525772"
+  },
+  "unverified": [
+    "automatic weekly/monthly first run after fix",
+    "long-term morning SLA",
+    "browser visual inspection",
+    "actual redeploy"
+  ]
 }

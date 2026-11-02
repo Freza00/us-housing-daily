@@ -87,7 +87,7 @@ npm run preview
 
 回放读取固定输入，不请求来源；要完全离线再加 `LLM_SKIP=1`。回放可在周末执行验证，生产任务仍不运行。历史构建不写项目首页。评估脚本使用旧稿固定评分，只比较确定性选稿，不能估计漏报召回率、摘要质量或 token 节省比例。
 
-本地预览地址为 `http://localhost:8080`。上线配置和检查点缓存见 [部署说明](docs/DEPLOY.md)；本次验证和限制见 [早间时间验收](docs/validation/2026-10-28-morning-deadline.md) 和 [模型／选稿对照](docs/validation/2026-10-28-reliability.md)。
+本地预览地址为 `http://localhost:8080`。上线配置和检查点缓存见 [部署说明](docs/DEPLOY.md)；摘要与周／月恢复发布的验证及限制见 [发布验收](docs/validation/2026-11-02-periodicals-release.md)，早间调度和模型对照的历史证据见 [早间时间验收](docs/validation/2026-10-28-morning-deadline.md) 和 [模型／选稿对照](docs/validation/2026-10-28-reliability.md)。
 
 ## 代码入口
 
