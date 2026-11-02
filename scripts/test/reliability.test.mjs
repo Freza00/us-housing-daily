@@ -22,23 +22,23 @@ test('daily windows resume from the exact successful cutoff and retain long outa
   const pool=prepareCandidates([item('before',{published_at:w.lower-1}),item('start',{published_at:w.lower}),item('end',{published_at:w.upper})],w);
   assert.deepEqual(pool.candidates.map(x=>x.id),['start']);
 });
-test('05:00 Beijing daily and 07:00 weekly gates handle UTC previous-day weekdays', () => {
+test('05:00 Beijing daily and 14:00 weekly gates honor their separate publication schedules', () => {
   assert.equal(shouldRun('daily',new Date('2026-11-01T20:59:59Z')),false);
   assert.equal(shouldRun('daily',new Date('2026-11-01T21:00:00Z')),true);
   assert.equal(shouldRun('daily',new Date('2026-10-30T21:00:00Z')),false);
-  assert.equal(shouldRun('weekly',new Date('2026-11-01T22:59:59Z')),false);
-  assert.equal(shouldRun('weekly',new Date('2026-11-01T23:00:00Z')),true);
+  assert.equal(shouldRun('weekly',new Date('2026-11-02T05:59:59Z')),false);
+  assert.equal(shouldRun('weekly',new Date('2026-11-02T06:00:00Z')),true);
 });
-test('weekly Beijing cutoff remains fixed across delays and both ET DST transitions', () => {
+test('weekly ET midnight cutoff remains fixed across delays and handles both DST transitions', () => {
   assert.equal(etMidnight('2026-03-08'),Date.parse('2026-03-08T05:00:00Z'));
   assert.equal(etMidnight('2026-03-09'),Date.parse('2026-03-09T04:00:00Z'));
   assert.equal(etMidnight('2026-11-02'),Date.parse('2026-11-02T05:00:00Z'));
-  for(const date of ['2026-03-09','2026-11-02']){
-    const w=buildWindow('weekly',new Date(date+'T00:00:00Z'));
-    assert.equal(w.hours,168);assert.equal(w.upper,Date.parse(date+'T05:00:00+08:00'));
-    assert.deepEqual(buildWindow('weekly',new Date(date+'T06:00:00Z')),w);
+  for(const [date,hours] of [['2026-03-09',167],['2026-11-02',169]]){
+    const w=buildWindow('weekly',new Date(date+'T06:00:00Z'));
+    assert.equal(w.hours,hours);assert.equal(w.upper,etMidnight(date));
+    assert.deepEqual(buildWindow('weekly',new Date(date+'T10:00:00Z')),w);
   }
-  assert.throws(()=>buildWindow('weekly',new Date('2026-11-01T20:59:00Z')),/cutoff/);
+  assert.throws(()=>buildWindow('weekly',new Date('2026-11-02T04:59:00Z')),/cutoff/);
 });
 test('sales and rents with the same year/city are not merged', () => {
   const a = item('sales', { title: 'Houston home sales rose 5% in September 2026' });

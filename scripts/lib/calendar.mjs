@@ -1,4 +1,4 @@
-import { beijingDateStr, etMonthBounds, isFirstMondayOfMonth } from './dates.mjs';
+import { beijingDateStr, etMonthBounds, isFirstWeekdayOfMonth } from './dates.mjs';
 
 const DAY = 86400000;
 export function beijingWeekday(now) { return new Date(now.getTime() + 8 * 3600000).getUTCDay(); }
@@ -9,8 +9,14 @@ export function shouldRun(kind, now, { force = false } = {}) {
   if (force) return true;
   const minutes = new Date(now.getTime() + 8 * 3600000).getUTCHours() * 60 + now.getUTCMinutes();
   if (kind === 'daily') return minutes >= 300;
-  if (kind === 'weekly') return day === 1 && minutes >= 420;
-  return isFirstMondayOfMonth(now) && minutes >= 870;
+  if (kind === 'weekly') return day === 1 && minutes >= 840;
+  return isFirstWeekdayOfMonth(now) && minutes >= 900;
+}
+
+export function publicationDeadline(kind, now) {
+  const hour = {daily:'09',weekly:'15',monthly:'16'}[kind];
+  if (!hour || !Number.isFinite(now.getTime())) throw new Error('Invalid publication deadline');
+  return Date.parse(beijingDateStr(now.getTime()) + 'T' + hour + ':00:00+08:00');
 }
 
 // Convert local ET midnight using the offset at that date; no fixed -04/-05 offset.
@@ -33,16 +39,17 @@ export function buildWindow(kind, now, watermark = null) {
   const date = beijingDateStr(now.getTime());
   if (kind === 'weekly') {
     const monday = new Date(Date.parse(date + 'T00:00:00Z') - ((beijingWeekday(now) + 6) % 7) * DAY).toISOString().slice(0,10);
-    const upper = Date.parse(monday + 'T05:00:00+08:00'), lower = upper - 7 * DAY;
+    const periodStart = new Date(Date.parse(monday + 'T00:00:00Z') - 7 * DAY).toISOString().slice(0,10);
+    const periodEnd = new Date(Date.parse(monday + 'T00:00:00Z') - DAY).toISOString().slice(0,10);
+    const upper = etMidnight(monday), lower = etMidnight(periodStart);
     if (upper > now.getTime()) throw new Error('Weekly cutoff has not arrived');
-    const periodStart = beijingDateStr(lower), periodEnd = monday;
-    return { lower, upper, hours: 168, timezone: 'Asia/Shanghai', periodStart, periodEnd, label: periodStart + ' 05:00 至 ' + periodEnd + ' 05:00（北京）' };
+    return { lower, upper, hours: (upper-lower)/3600000, timezone: 'America/New_York', periodStart, periodEnd, label: periodStart + ' 00:00 至 ' + monday + ' 00:00（美东）' };
   }
   if (kind === 'monthly') {
     const period = etMonthBounds(now);
     const lower = etMidnight(period.periodStart), upper = etMidnight(nextDate(period.periodEnd));
     if (upper > now.getTime()) throw new Error('ET reporting period has not ended');
-    return { lower, upper, hours: (upper - lower) / 3600000, ...period };
+    return { lower, upper, hours: (upper - lower) / 3600000, timezone: 'America/New_York', ...period };
   }
   const upper = Date.parse(date + 'T05:00:00+08:00');
   if (upper > now.getTime()) throw new Error('Daily cutoff has not arrived');

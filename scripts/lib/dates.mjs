@@ -50,7 +50,7 @@ export function etWeekBounds(publishMoment) {
 
 // For a publish moment, return the PRIOR calendar month in ET.
 // We use the Beijing date (not ET) to determine which month to look back from,
-// because the cron fires on Beijing Mondays (e.g. Beijing 2026-06-01 = ET 2026-05-31;
+// because the publication calendar is in Beijing (e.g. Beijing 2026-06-01 = ET 2026-05-31;
 // the digest should cover May, not April).
 export function etMonthBounds(publishMoment) {
   const todayBj = beijingDateStr(publishMoment.getTime());
@@ -64,22 +64,12 @@ export function etMonthBounds(publishMoment) {
   return { periodStart, periodEnd, label: `${prevY}-${String(prevM).padStart(2, "0")}` };
 }
 
-// Compute the first Monday of (year, 1-indexed month). Returns YYYY-MM-DD.
-export function firstMondayOfMonth(year, month1Indexed) {
-  const first = new Date(Date.UTC(year, month1Indexed - 1, 1));
-  const wd = first.getUTCDay(); // 0=Sun..6=Sat
-  const daysToMon = wd === 0 ? 1 : (wd === 1 ? 0 : 8 - wd);
-  const mon = new Date(first);
-  mon.setUTCDate(1 + daysToMon);
-  return mon.toISOString().slice(0, 10);
-}
-
-// Check whether the Beijing calendar date of `now` is the first Monday of its
-// Beijing month. Use Beijing (not ET) because the cron fires on Beijing Mondays.
-export function isFirstMondayOfMonth(now) {
-  const bjDate = beijingDateStr(now.getTime());
-  const [y, m] = bjDate.split("-").map(Number);
-  return firstMondayOfMonth(y, m) === bjDate;
+// Working day means Monday–Friday in Beijing; no holiday calendar is applied.
+export function isFirstWeekdayOfMonth(now) {
+  const date = beijingDateStr(now.getTime()), [year, month] = date.split('-').map(Number);
+  const weekday = new Date(Date.UTC(year, month - 1, 1)).getUTCDay();
+  const first = weekday === 6 ? 3 : weekday === 0 ? 2 : 1;
+  return Number(date.slice(8)) === first;
 }
 
 // Given an ET range [periodStart, periodEnd] (inclusive), return the list of

@@ -2,7 +2,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
-import { shouldRun, buildWindow } from './lib/calendar.mjs';
+import { shouldRun, buildWindow, publicationDeadline } from './lib/calendar.mjs';
 import { beijingDateStr } from './lib/dates.mjs';
 import { validateIssue, periodKey } from './lib/issue-contract.mjs';
 import { verifyOnline, recoveryDecision } from './lib/delivery.mjs';
@@ -10,7 +10,7 @@ import { verifyOnline, recoveryDecision } from './lib/delivery.mjs';
 export async function checkPublication({ kind = 'daily', now = new Date(), host = 'https://news-agent-mu.vercel.app', candidate = null, fetchImpl = fetch, runs = null } = {}) {
   if (!shouldRun(kind, now)) return { due: false, action: 'none', reason: 'Outside current publication calendar' };
   const window = buildWindow(kind, now), period = periodKey(kind, window);
-  const deadline = kind === 'monthly' ? null : Date.parse(beijingDateStr(now.getTime()) + 'T09:00:00+08:00');
+  const deadline = publicationDeadline(kind,now);
   let issue = candidate, receipt, error, candidateReady = false;
   try {
     if (!issue) {
@@ -23,7 +23,7 @@ export async function checkPublication({ kind = 'daily', now = new Date(), host 
     candidateReady = !!candidate;
     receipt = await verifyOnline(issue, { host, fetchImpl, now: now.getTime() });
   } catch (e) { error = e.message; }
-  return { due: true, kind, period, cutoff: window.upper, deadline, ...recoveryDecision({ online: !!receipt?.ok, candidateReady, runs, now: now.getTime(), deadline: deadline ?? Infinity }), execution_observed: runs !== null, deadline_compliance: deadline === null ? 'policy_pending' : now.getTime() < deadline ? 'not_due' : !receipt?.ok ? 'missed' : issue.generated_at > deadline ? 'late' : 'not_observed_before_deadline', ...(deadline === null ? { deadline_policy_pending: true } : {}), receipt, ...(error ? { error } : {}), external_schedule_enabled: false, notifications_enabled: false };
+  return { due: true, kind, period, cutoff: window.upper, deadline, ...recoveryDecision({ online: !!receipt?.ok, candidateReady, runs, now: now.getTime(), deadline }), execution_observed: runs !== null, deadline_compliance: now.getTime() < deadline ? 'not_due' : !receipt?.ok ? 'missed' : issue.generated_at > deadline ? 'late' : 'not_observed_before_deadline', receipt, ...(error ? { error } : {}), external_schedule_enabled: false, notifications_enabled: false };
 }
 
 async function main() {

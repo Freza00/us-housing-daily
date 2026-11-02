@@ -3,8 +3,7 @@ import assert from "node:assert/strict";
 import {
   etWeekBounds,
   etMonthBounds,
-  firstMondayOfMonth,
-  isFirstMondayOfMonth,
+  isFirstWeekdayOfMonth,
   beijingDateStr,
   beijingDatesCoveringEtRange,
 } from "../lib/dates.mjs";
@@ -35,24 +34,24 @@ test("etMonthBounds: first-Mon of Jan 2027 covers Dec 2026", () => {
   assert.equal(r.label, "2026-12");
 });
 
-test("firstMondayOfMonth: June 2026 = June 1", () => {
-  assert.equal(firstMondayOfMonth(2026, 6), "2026-06-01");
+test("first weekday: June 2026 starts on Monday June 1", () => {
+  assert.equal(isFirstWeekdayOfMonth(new Date("2026-06-01T07:00:00Z")), true);
 });
 
-test("firstMondayOfMonth: Feb 2026 = Feb 2", () => {
-  assert.equal(firstMondayOfMonth(2026, 2), "2026-02-02");
+test("first weekday: Sunday-start February 2026 uses February 2", () => {
+  assert.equal(isFirstWeekdayOfMonth(new Date("2026-02-02T07:00:00Z")), true);
 });
 
-test("firstMondayOfMonth: Aug 2026 = Aug 3", () => {
-  assert.equal(firstMondayOfMonth(2026, 8), "2026-08-03");
+test("first weekday: Saturday-start August 2026 uses August 3", () => {
+  assert.equal(isFirstWeekdayOfMonth(new Date("2026-08-03T07:00:00Z")), true);
 });
 
-test("isFirstMondayOfMonth: true on 2026-06-01 Beijing morning", () => {
-  assert.equal(isFirstMondayOfMonth(new Date("2026-06-01T02:30:00Z")), true);
+test("first weekday does not wait for Monday when December starts on Tuesday", () => {
+  assert.equal(isFirstWeekdayOfMonth(new Date("2026-12-01T07:00:00Z")), true);
 });
 
-test("isFirstMondayOfMonth: false on 2026-06-08 (second Mon)", () => {
-  assert.equal(isFirstMondayOfMonth(new Date("2026-06-08T02:30:00Z")), false);
+test("first weekday excludes the following Monday in December", () => {
+  assert.equal(isFirstWeekdayOfMonth(new Date("2026-12-07T07:00:00Z")), false);
 });
 
 test("beijingDateStr: 2026-05-25T15:30Z is Beijing 2026-05-25", () => {

@@ -39,7 +39,7 @@ function initialMode() {
 const I18N = {
   zh: {
     tagline: '美国住宅地产工作日精选',
-    cron_info: '北京周一至周五 09:00 更新；周一合并周末（截止 08:57）',
+    cron_info: '北京可读目标：日报 09:00；周报周一 15:00；月报月初首个工作日 16:00',
     sources_label: '信源：',
     sources_unit: '个 OK',
     updated_prefix: '更新于 ',
@@ -91,11 +91,11 @@ const I18N = {
     period_month_suffix: '',
     period_empty: '暂无历史',
     monthly_not_yet: '月报暂未发布',
-    monthly_not_yet_hint: '月报在每月首个周一北京 14:30 自动发布，覆盖上一个自然月。',
+    monthly_not_yet_hint: '月报覆盖上一个完整美东自然月，目标在次月首个工作日北京 16:00 前可读。',
   },
   en: {
     tagline: 'US Housing Daily — Top 20',
-    cron_info: 'Beijing Mon–Fri 09:00; Monday combines the weekend',
+    cron_info: 'Beijing reading targets: daily 09:00; weekly Monday 15:00; monthly first weekday 16:00',
     sources_label: 'Sources: ',
     sources_unit: ' OK',
     updated_prefix: 'Updated ',
@@ -147,7 +147,7 @@ const I18N = {
     period_month_suffix: '',
     period_empty: 'No issues yet',
     monthly_not_yet: 'Monthly digest not yet published',
-    monthly_not_yet_hint: 'The monthly digest publishes on the first Monday of each month at 10:30 Beijing time and covers the prior calendar month.',
+    monthly_not_yet_hint: 'The monthly digest covers the prior full ET calendar month, with a 16:00 Beijing reading target on the first weekday of the new month.',
   },
 };
 
@@ -183,13 +183,26 @@ function weekdayLabel(jsDay) {
   return t().weekdays[idx];
 }
 
-function timeAgo(ms) {
-  if (!ms) return '';
-  const diff = Date.now() - ms;
-  const h = Math.floor(diff / 3600_000);
-  if (h < 1) return Math.floor(diff / 60_000) + 'm ago';
-  if (h < 24) return h + 'h ago';
-  return Math.floor(h / 24) + 'd ago';
+function articleDate(item) {
+  const day = /^\d{4}-\d{2}-\d{2}$/.test(item.published_date || '') ? item.published_date : null;
+  const validTime = Number.isFinite(item.published_at) && item.published_at > 0;
+  const label = day || (validTime ? new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(item.published_at) : '');
+  const exact = item.date_precision === 'timestamp' && validTime;
+  const title = exact
+    ? (currentLang === 'zh' ? '原文发布时间（美东）：' : 'Original publication time (ET): ') + new Intl.DateTimeFormat(currentLang === 'zh' ? 'zh-CN' : 'en-US', {timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23',timeZoneName:'short'}).format(item.published_at)
+    : (currentLang === 'zh' ? '原文发布日期；具体时刻未确认' : 'Original publication date; exact time unconfirmed');
+  return {label,title};
+}
+
+function periodWindowText(data) {
+  const w=data.window,zone=w?.timezone || (data.kind === 'monthly' ? 'America/New_York' : null);
+  const prefix=currentLang === 'zh' ? '覆盖：' : 'Coverage: ';
+  if(w && Number.isFinite(w.lower) && Number.isFinite(w.upper) && ['Asia/Shanghai','America/New_York'].includes(zone)) {
+    const format=ms=>new Intl.DateTimeFormat('en-CA',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(ms).replace(',','');
+    const name=zone === 'Asia/Shanghai' ? (currentLang === 'zh' ? '北京' : 'Beijing') : (currentLang === 'zh' ? '美东' : 'ET');
+    return prefix+format(w.lower)+' '+(currentLang === 'zh' ? '至' : 'to')+' '+format(w.upper)+(currentLang === 'zh' ? '（'+name+'）' : ' ('+name+')');
+  }
+  return data.period_start && data.period_end ? prefix+data.period_start+' '+(currentLang === 'zh' ? '至' : 'to')+' '+data.period_end : '';
 }
 
 // "2026-05-28" → zh "5/28 (周四)" | en "5/28 (Thu)". Null in → null out.
@@ -318,6 +331,7 @@ function sortTags(ids) {
 }
 
 function renderCard(it, i) {
+  const date = articleDate(it);
   // keyword tags
   const sorted = sortTags(it.tags || []).slice(0, 6);
   const keywordTags = sorted.map(id => {
@@ -366,7 +380,7 @@ function renderCard(it, i) {
         ${evidencePill}${it.late_discovery ? `<span class="card-tag">${currentLang === 'zh' ? '补采' : 'Late discovery'}</span>` : ''}
         ${extPill}
         <span class="card-source">${escapeHtml(it.source_name)}</span>
-        <span>${it.date_precision === 'day' && it.published_date ? escapeHtml(it.published_date) : timeAgo(it.published_at)}</span>
+        <span title="${escapeHtml(date.title)}">${escapeHtml(date.label)}</span>
         ${creTag}
         ${keywordTags}
       </div>
@@ -601,7 +615,8 @@ function applyLoadedData(data) {
     if (msg) { windowBanner.textContent = msg; windowBanner.hidden = false; }
     else     { windowBanner.hidden = true; }
   } else {
-    windowBanner.hidden = true;
+    windowBanner.textContent = periodWindowText(data);
+    windowBanner.hidden = !windowBanner.textContent;
   }
 
   // Themes block — weekly / monthly only
@@ -868,7 +883,10 @@ function applyLanguage() {
         currentMode === 'weekly' ? t().themes_weekly_title : t().themes_monthly_title;
     }
     // Re-render window banner if visible
-    if (!windowBanner.hidden && currentData._diagnostics?.window_hours > 24) {
+    if (currentMode !== 'daily') {
+      windowBanner.textContent = periodWindowText(currentData);
+      windowBanner.hidden = !windowBanner.textContent;
+    } else if (!windowBanner.hidden && currentData._diagnostics?.window_hours > 24) {
       const h = currentData._diagnostics.window_hours;
       const extCount = (currentData.items || []).filter(it => it.extended_window).length;
       windowBanner.textContent = t().window_banner(h, extCount);

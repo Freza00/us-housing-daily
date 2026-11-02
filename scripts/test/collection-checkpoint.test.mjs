@@ -62,7 +62,7 @@ test('failed writer resumes its frozen selection; an explicit revision can recov
  assert.deepEqual(calls,[['a','b'],['b']]);assert.equal(revision.items.length,2);assert.equal(revision.edition.revision,2);
 });
 test('weekly can publish from a pending raw capture while Monday daily has not been written',async t=>{
- const root=await sandbox(t);const now='2026-11-02T00:00:00Z',window=buildWindow('weekly',new Date(now));
+ const root=await sandbox(t);const now='2026-11-02T07:00:00Z',window=buildWindow('weekly',new Date(now));
  await fs.writeFile(path.join(root,'config/sources.json'),JSON.stringify({sources:[sources[0]]}));
  await fs.writeFile(path.join(root,'state/collection-checkpoint.json'),JSON.stringify({daily_upper:window.upper,pending:{window,coverage_status:'unverified',items:[sample('weekend',Date.parse('2026-11-01T19:00:00Z'))],source_health:[]}}));
  const collector={cache:{},enrich:async x=>x,collect:async()=>[{items:[],health:{id:'a',required:true,status:'error',error:'timeout'}}]};
@@ -162,7 +162,7 @@ test('weekly and monthly audits preserve observed post-cutoff raw without advanc
  const next=stageCapture(audited,[sources[0]],[],{lower:upper,upper:upper+86400000});assert.ok(next.capture.items.some(it=>it.id==='audit-future'));
 });
 test('a weekly audit persists out-of-period observations for the next daily even when absent from its own output',async t=>{
- const root=await sandbox(t),now='2026-11-02T00:00:00Z',window=buildWindow('weekly',new Date(now));
+ const root=await sandbox(t),now='2026-11-02T07:00:00Z',window=buildWindow('weekly',new Date(now));
  const inside=sample('inside',window.upper-86400000),after=sample('after-week',window.upper+3600000);
  await fs.writeFile(path.join(root,'config/sources.json'),JSON.stringify({sources:[sources[0]]}));
  const collector={cache:{},enrich:async x=>x,collect:async()=>[{items:[inside,after],health:{...health('a'),coverage:{lower:window.lower,upper:window.upper}}}]};
