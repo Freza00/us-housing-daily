@@ -8,6 +8,9 @@ export function mergeRawItems(items) {
 }
 export const materialFingerprint=it=>createHash('sha256').update(JSON.stringify([it.id,it.content_hash||'',it.published_at,it.title||'',it.description||''])).digest('hex');
 
+// Keep every distinct observation, including failures and different coverage windows.
+export const uniqueSourceHealth=rows=>[...new Map(rows.map(row=>[JSON.stringify(row),row])).values()];
+
 export function captureFingerprint(row) {
  const upper=row.cutoff_upper??row.window.upper;
  return createHash('sha256').update(JSON.stringify(row.items.filter(it=>it.published_at<upper).map(materialFingerprint).sort())).digest('hex');
@@ -22,7 +25,7 @@ function combinePending(rows) {
   const items=mergeRawItems(rows.flatMap(r=>r.items));
   const lower=Math.min(...rows.map(r=>r.window.lower),...items.map(it=>it.published_at));
   const upper=Math.max(...rows.map(r=>r.window.upper),...items.map(it=>it.published_at+1));
-  return {schema_version:3,provenance:'live',coverage_status:'unverified',cutoff_upper:Math.max(...rows.map(r=>r.cutoff_upper??r.window.upper)),window:{lower,upper,hours:(upper-lower)/3600000},items,source_health:rows.flatMap(r=>r.source_health||[])};
+  return {schema_version:3,provenance:'live',coverage_status:'unverified',cutoff_upper:Math.max(...rows.map(r=>r.cutoff_upper??r.window.upper)),window:{lower,upper,hours:(upper-lower)/3600000},items,source_health:uniqueSourceHealth(rows.flatMap(r=>r.source_health||[]))};
 }
 export function mergeCheckpoints(committed={},cached={}) {
   const source_upper={},source_floor={},health=new Map();

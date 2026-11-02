@@ -5,12 +5,23 @@ import path from 'node:path';
 import {sourceLower,stageCapture,finishCapture,mergeCheckpoints,stageSupplement} from '../lib/collection-checkpoint.mjs';
 import {createCollector} from '../lib/sources.mjs';
 import {runPipeline} from '../lib/pipeline.mjs';
-import {buildWindow} from '../lib/calendar.mjs';
+import {buildWindow,coverageGaps} from '../lib/calendar.mjs';
 import {sandbox,sample,fakeClient} from './helpers.mjs';
 const sources=[{id:'a',required:true},{id:'b',required:true}];
 const lower=Date.parse('2026-10-26T21:00:00Z'),upper=Date.parse('2026-10-27T21:00:00Z');
 const health=id=>({id,required:true,status:'ok',articles:1,undated:0,coverage:{lower,upper}});
 const story=id=>({...sample(id+'-story',Date.parse('2026-10-27T18:00:00Z')),source_id:id,source_family:id});
+
+test('repeated checkpoint recovery keeps distinct coverage observations without multiplying copies',()=>{
+ const failed={...health('a'),status:'error',checked_at:upper-1000},passed={...health('a'),checked_at:upper};
+ let state={pending:{window:{lower,upper},coverage_status:'observed',items:[story('a')],source_health:[failed,passed]}};
+ const before=coverageGaps([state.pending],{lower,upper});
+ for(let i=0;i<6;i++)state=mergeCheckpoints(state,{...state,last_capture:state.pending});
+ assert.equal(state.pending.source_health.length,2);
+ assert.deepEqual(state.pending.source_health,[failed,passed]);
+ assert.deepEqual(coverageGaps([state.pending],{lower,upper}),before);
+ assert.equal(state.pending.items.length,1);
+});
 
 test('per-source cursors advance only on verified coverage and retain failed source floors',()=>{
  const staged=stageCapture({},sources,[{items:[story('a')],health:health('a')},{items:[],health:{id:'b',required:true,status:'error'}}],{lower,upper});

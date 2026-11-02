@@ -1,0 +1,76 @@
+{
+  "checked_at": "2026-11-02T09:27:35Z",
+  "status": "local_validated_publication_in_progress",
+  "authorized": [
+    "weekly recovery publication",
+    "monthly recovery publication",
+    "open-source fixes and production deployment"
+  ],
+  "tests": {
+    "total": 225,
+    "passed": 225,
+    "failed": 0
+  },
+  "storage_repair": {
+    "weekly": {
+      "items": 20,
+      "payload_sha256": "7672f8e7ee6de9c4c9574a3938154e0a640935340cb2bd36c730de132a10c328",
+      "frozen_bundle_unchanged": true,
+      "raw_candidates_unchanged": true,
+      "distinct_source_observations_preserved": true,
+      "coverage_gaps_unchanged": true,
+      "input_bytes_before": 1686728,
+      "input_bytes_after": 850295,
+      "coverage_health_rows_before": [
+        1155,
+        77,
+        77,
+        77
+      ],
+      "coverage_health_rows_after": [
+        154,
+        77,
+        77,
+        77
+      ],
+      "all_publication_files_below_github_limit": true
+    },
+    "monthly": {
+      "items": 20,
+      "payload_sha256": "34599ae92252517901b74f9c1201f6e479a90fe9b8f0ffb57d8086a4f07f659c",
+      "frozen_bundle_unchanged": true,
+      "raw_candidates_unchanged": true,
+      "distinct_source_observations_preserved": true,
+      "coverage_gaps_unchanged": true,
+      "input_bytes_before": 188733460,
+      "input_bytes_after": 1005059,
+      "coverage_health_rows_before": [
+        225302,
+        77,
+        77,
+        77,
+        77
+      ],
+      "coverage_health_rows_after": [
+        231,
+        77,
+        77,
+        77,
+        77
+      ],
+      "all_publication_files_below_github_limit": true
+    }
+  },
+  "monthly_artifact": {
+    "run": 41403419302,
+    "artifact": 13121849608,
+    "trusted": true,
+    "checksums": "passed",
+    "editor_attempts_preserved": 1,
+    "writer_attempts_preserved": 2
+  },
+  "new_model_requests": 0,
+  "new_source_collection_requests": 0,
+  "published": false,
+  "official_limit_source": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github"
+}

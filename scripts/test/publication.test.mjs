@@ -7,7 +7,7 @@ import { promisify } from 'node:util';
 import { runPipeline } from '../lib/pipeline.mjs';
 import { buildWindow } from '../lib/calendar.mjs';
 import { periodKey } from '../lib/issue-contract.mjs';
-import { pushCandidate, gitCommand, publicationFiles, gitEnvironment } from '../lib/publication.mjs';
+import { pushCandidate, gitCommand, publicationFiles, gitEnvironment, assertPublicationFilesFit } from '../lib/publication.mjs';
 import { sandbox, sample, fakeClient } from './helpers.mjs';
 
 const exec = promisify(execFile), now = new Date('2026-10-28T00:30:00Z'), lower = Date.parse('2026-10-26T21:00:00Z'), upper = lower + 86400000;
@@ -50,6 +50,14 @@ test('temporary publisher receives scoped authentication only through process en
   assert.equal(inherited.GIT_CONFIG_COUNT,'1');assert.equal(inherited.GIT_CONFIG_VALUE_1,undefined);
 });
 
+test('publication rejects files over GitHub 100 MiB before staging and accepts the exact boundary',async t=>{
+  const root=await sandbox(t),file='state/oversized-input.json',target=path.join(root,file);
+  await fs.writeFile(target,'');await fs.truncate(target,100*1024*1024);
+  await assertPublicationFilesFit(root,[file]);
+  await fs.truncate(target,100*1024*1024+1);
+  await assert.rejects(assertPublicationFilesFit(root,[file]),/100 MiB limit: state\/oversized-input\.json \(104857601 bytes\); frozen candidate retained/);
+});
+
 test('explicit weekday force is retained through staged weekly recovery and publishing while weekends stay blocked',async t=>{
   const at=new Date('2026-10-27T00:30:00Z'),fixture=await setup(t,{kind:'weekly',at,force:true});
   const env={PUBLISH_NOW:at.toISOString(),NEWS_DATA_DIR:path.join(fixture.root,'data'),NEWS_STATE_DIR:path.join(fixture.root,'state'),PIPELINE_UNTIL:'ready',ISSUE_REVISION:'1',EXPECTED_PERIOD:fixture.bundle.identity.period_key,EXPECTED_CUTOFF:String(fixture.bundle.identity.cutoff_upper)};
@@ -79,6 +87,22 @@ test('publication safely retries unrelated main progress and never stages drafts
   assert(files.every(file=>!file.startsWith('state/issues')&&file!=='USER_EDIT.md'));
   assert(publicationFiles(fixture.bundle.payload).every(file=>!file.startsWith('state/issues')));
   assert.equal(fixture.client.usage.length,2);
+});
+
+test('publishing a frozen periodic input removes only identical coverage copies without changing the candidate',async t=>{
+ const at=new Date('2026-11-02T07:00:00Z'),fixture=await setup(t,{kind:'monthly',at});
+ const bundle=structuredClone(fixture.bundle),window=bundle.payload.window;
+ const failed={id:'a',required:true,status:'error',checked_at:window.upper-1000,coverage:window};
+ const passed={...failed,status:'ok',checked_at:window.upper};
+ bundle.snapshot.coverage_snapshots=[{window,coverage_status:'unverified',source_health:[failed,passed,failed,passed]}];
+ const original=JSON.stringify(bundle);
+ await pushCandidate(bundle,{root:fixture.root,now:at});
+ await gitCommand(fixture.seed,['fetch','origin','main']);
+ const input=await remoteJson(fixture,'state/inputs/monthly-2026-10.json');
+ assert.deepEqual(input.coverage_snapshots[0].source_health,[failed,passed]);
+ assert.deepEqual(input.items,bundle.snapshot.items);
+ assert.deepEqual(await remoteJson(fixture,'data/monthly/latest.json'),bundle.payload);
+ assert.equal(JSON.stringify(bundle),original);
 });
 
 test('a successful push with a lost response is recognized without publishing again',async t=>{

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { shouldRun, buildWindow, coverageGaps } from './calendar.mjs';
 import { beijingDateStr } from './dates.mjs';
 import { createCollector } from './sources.mjs';
-import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint } from './collection-checkpoint.mjs';
+import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint, uniqueSourceHealth } from './collection-checkpoint.mjs';
 import { createLlmClient, LlmError } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
 import { dailyPublicationEligibility, prepareCandidates, decisionSystem, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, validateWritingMetadata, dryDecisions } from './editorial.mjs';
@@ -142,7 +142,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
   }
   if (collector) await writeJson(path.join(stateDir, 'source-cache.json'), collector.cache);
   if (!candidates.length) throw new Error('No eligible dated candidates; refusing to replace last successful issue');
-  snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, initial_seen: seen, source_health: health, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: s.source_health || [] })), pipeline_version: '3.0' };
+  snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, initial_seen: seen, source_health: health, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: uniqueSourceHealth(s.source_health || []) })), pipeline_version: '3.0' };
   await writeJson(path.join(stateDir, 'inputs', kind + '-' + label + '.json'), snapshot);
   collectionFinishedAt = Date.now();
   if (store) await store.put('prepared', { snapshot, normalized, checkpoint, base, eligible_count: prepared.eligible_count, collection_finished_at: collectionFinishedAt });
@@ -278,7 +278,9 @@ export async function materializeIssue(bundle, { root, outDir, dataDir, stateDir
     await writeJson(path.join(stateDir, 'collection-cache.json'), merged);
   }
   if (!dry && !replay && bundle.snapshot) {
-    await writeJson(path.join(stateDir, 'inputs', kind + '-' + label + '.json'), bundle.snapshot);
+    const snapshot={...bundle.snapshot};
+    if(Array.isArray(snapshot.coverage_snapshots))snapshot.coverage_snapshots=snapshot.coverage_snapshots.map(s=>({...s,source_health:uniqueSourceHealth(s.source_health||[])}));
+    await writeJson(path.join(stateDir, 'inputs', kind + '-' + label + '.json'), snapshot);
     const capture = bundle.checkpoint?.last_capture;
     if (kind === 'daily' && capture?.cutoff_upper === window.upper) {
       const file = path.join(stateDir, 'snapshots', label + '.json'), current = await readJson(file, null);

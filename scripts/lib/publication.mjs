@@ -29,6 +29,13 @@ export function publicationFiles(issue) {
     ...(kind === 'daily' ? ['public/index.html', 'state/seen.json', 'state/publication-watermark.json', 'state/snapshots/' + label + '.json'] : [])];
 }
 
+export async function assertPublicationFilesFit(root,files) {
+  for(const file of files) {
+    const {size}=await fs.stat(path.join(root,file));
+    if(size>100*1024*1024)throw new Error(`Publication file exceeds GitHub 100 MiB limit: ${file} (${size} bytes); frozen candidate retained`);
+  }
+}
+
 async function projectionMatches(root, issue) {
   const files = publicationFiles(issue), archive = await readJson(path.join(root, files[0])), latest = await readDerivedJson(path.join(root, files[1]));
   if (!archive || !latest || digest(archive) !== digest(issue) || digest(latest) !== digest(issue)) return false;
@@ -70,6 +77,7 @@ export async function pushCandidate(bundle, { root, now = new Date(), force = fa
       await materializeIssue(bundle, { root: checkout, dataDir: path.join(checkout, 'data'), outDir, stateDir: path.join(checkout, 'state'), now });
       const files = [];
       for (const file of publicationFiles(issue)) { try { await fs.access(path.join(checkout, file)); files.push(file); } catch (e) { if (e.code !== 'ENOENT') throw e; } }
+      await assertPublicationFilesFit(checkout,files);
       await git(checkout, ['add', '--', ...files]);
       await git(checkout, ['diff', '--cached', '--check']);
       if (!await git(checkout, ['diff', '--cached', '--name-only'])) return { commit: await git(checkout, ['rev-parse', 'HEAD']), already_pushed: true };
