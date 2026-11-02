@@ -47,7 +47,7 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 ## 最近验证
 
-- 2026-11-02 19:17 [Node.js v22.23.4 CI](https://github.com/Freza00/us-housing-daily/actions/runs/41435127322) 的 237／237、0 失败；[Vercel](https://vercel.com/freza00s-projects/news-agent/EUvSHtoQwNcz8GibhaJ4qT5QQbYK) success。线上 HTML、新版 JS／CSS 与发布候选散列一致，七个期刊数据路由不变；周报桌面和月报手机的中英文均显示 20 个固定日期，旧窗口真实，无 pageerror 或横向溢出。135 个非目标起始文件保持，无重刊／模型调用；未触发下一期或设置外部观察器。[结构化证据](docs/validation/2026-11-02-periodical-calendar-production.json)。
+- 2026-11-02 19:17 [Node.js v22.23.4 CI](https://github.com/Freza00/us-housing-daily/actions/runs/41435127322) 的 237／237、0 失败；[Vercel](https://vercel.com/freza00s-projects/news-agent/EUvSHtoQwNcz8GibhaJ4qT5QQbYK) success。线上 HTML、新版 JS／CSS 与发布候选散列一致，七个期刊数据路由不变；周报桌面和月报手机的中英文均显示 20 个固定日期，旧窗口真实，无 pageerror 或横向溢出。134 个非目标起始文件保持，无重刊／模型调用；未触发下一期或设置外部观察器。[结构化证据](docs/validation/2026-11-02-periodical-calendar-production.json)。
 
 - 2026-11-02 18:14 主工作区和隔离版各 237／237、0 失败；104 个连续周、24 个月初、57 个脚本语法、JSON／YAML 及 diff 通过。实际 CLI dry-run 周／月各 20 条，四种桌面／手机组合的中英文、20 张固定日期、旧窗口和无横向溢出检查通过；116 个非目标起始文件、原业务数据与首页内嵌数据保持。[结构化证据](docs/validation/2026-11-02-periodical-calendar-trial.json)。
 

@@ -19,7 +19,7 @@
 - 本地提交前 237 项通过；[Node.js v22.23.4 CI](https://github.com/Freza00/us-housing-daily/actions/runs/41435127322) 的 237 项通过、0 失败。[Vercel 部署](https://vercel.com/freza00s-projects/news-agent/EUvSHtoQwNcz8GibhaJ4qT5QQbYK) 为 success。
 - 线上 HTML、实际引用的新 JS 和 CSS 均与隔离发布候选 SHA-256 匹配。日报 latest、周／月 latest／当期归档／日期索引共七路数据与上线前原始字节散列完全一致，首页内嵌日报数据保持。
 - 独立无头 Chromium 只读访问生产静态页面，阻断 `/api/` 和外部站点，不使用 Computer Use 或用户 Chrome。周报桌面、月报手机各检查中文和英文，每种均有 20 个固定日期；无 pageerror 或横向溢出，语言切换保留正确窗口。
-- 原工作区 135 个非目标起始文件保持，发布克隆无 data／state 改动，未强推或改写历史；本次新增模型和来源采集调用均为 0。
+- 原工作区 134 个非目标起始文件保持，发布克隆无 data／state 改动，未强推或改写历史；本次新增模型和来源采集调用均为 0。
 
 ## 本期过渡与未验证范围
 
