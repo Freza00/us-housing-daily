@@ -1,0 +1,105 @@
+{
+  "checked_at_beijing": "2026-11-02 15:51",
+  "scope": "Read-only diagnosis and comparison; business code and production unchanged",
+  "advisors": [
+    {
+      "model": "gemini-4-argon-high",
+      "effort": "high",
+      "route": "Antigravity CLI"
+    },
+    {
+      "model": "gpt-6-astra",
+      "effort": "max",
+      "route": "Codex advisor sub-agent"
+    }
+  ],
+  "validation": {
+    "independent_probes": 14,
+    "comparison_probes": 6,
+    "comparison_probes_rerun_by_main": true,
+    "protected_files_unchanged_before_documentation": 121,
+    "house_daily_generation_requests": 0,
+    "external_writes": 0
+  },
+  "shared_findings": [
+    "Prompt and validator use different summary length wording",
+    "Length repair has no measured count or exact target",
+    "Cold resume loses failed metadata and original validation error",
+    "December temporal expressions can be rejected despite explicit source wording",
+    "Daily and weekly frozen cards and cross-run quota protection worked in the observed runs"
+  ],
+  "summary_counts": {
+    "all_non_whitespace": [
+      258,
+      255,
+      284
+    ],
+    "han_only": [
+      191,
+      185,
+      185
+    ],
+    "daily_first_summary_all_non_whitespace": 310
+  },
+  "decisions": [
+    {
+      "topic": "summary contract",
+      "conclusion": "Use one non-whitespace Unicode-character metric; retain the existing 250 hard cap and report measured length."
+    },
+    {
+      "topic": "deterministic sentence prefix",
+      "conclusion": "Three real summaries can retain their first two complete sentences at 171/171/188 characters and pass full writing validation with all 20 cards unchanged. This removes summary topics; editorial policy acceptance is required before automatic use."
+    },
+    {
+      "topic": "draft persistence",
+      "conclusion": "The cold-resume context loss is real. A new repair-draft stage is not necessary solely for overlength; consider bound unvalidated context later for content repairs."
+    },
+    {
+      "topic": "repair count",
+      "conclusion": "One correction per process is existing policy. Do not globally remove its guard; any later adjustment must stay within stage request/time limits and distinguish writer local repair from editor/full correction/permanent errors."
+    },
+    {
+      "topic": "savedCards mutability",
+      "conclusion": "Not established as the cause. The normal merge path preserves prior good cards, verified progressively from 1 to 3."
+    },
+    {
+      "topic": "months and duration conversion",
+      "conclusion": "Bound the December fix to actual temporal contexts. annual/year-ending to 12 months is semantically plausible but unsupported by current literal-number policy, not proof of invented facts."
+    }
+  ],
+  "current_weekly_recovery": {
+    "source_period": "2026-10-26",
+    "revision": 1,
+    "rules_match_current_code": true,
+    "new_model_requests_needed": 0,
+    "preserve": [
+      "frozen input",
+      "editor decisions",
+      "all 20 validated cards",
+      "original three-attempt ledger",
+      "failure diagnostics"
+    ],
+    "method": "After explicit acceptance and publication authorization, assemble validated metadata from saved sentences under the matching old rules, fully validate, then use existing ready/publish verification. Do not clear quota or modify old rules fingerprints.",
+    "executed": false
+  },
+  "prefix_boundaries": {
+    "only_for_pure_length_failure": true,
+    "complete_contiguous_prefix_only": true,
+    "no_card_removal": true,
+    "no_sentence_truncation_or_skipping": true,
+    "first_sentence_above_250_remains_failure": true,
+    "full_revalidation_required": true
+  },
+  "source_runs": [
+    "https://github.com/Freza00/us-housing-daily/actions/runs/41352913933",
+    "https://github.com/Freza00/us-housing-daily/actions/runs/41369302432",
+    "https://github.com/Freza00/us-housing-daily/actions/runs/41363218765",
+    "https://github.com/Freza00/us-housing-daily/actions/runs/41377430618",
+    "https://github.com/Freza00/us-housing-daily/actions/runs/41396726590"
+  ],
+  "not_assessed": [
+    "Current monthly run after the original evidence capture",
+    "Exact matching cron/queue delay for each scheduled run",
+    "Real production publication of the proposed prefix candidate"
+  ]
+}

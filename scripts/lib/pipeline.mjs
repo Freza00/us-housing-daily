@@ -8,7 +8,7 @@ import { createCollector } from './sources.mjs';
 import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint } from './collection-checkpoint.mjs';
 import { createLlmClient, LlmError } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
-import { dailyPublicationEligibility, prepareCandidates, decisionSystem, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, validateWritingCard, validateWritingMetadata, dryDecisions } from './editorial.mjs';
+import { dailyPublicationEligibility, prepareCandidates, decisionSystem, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, validateWritingMetadata, dryDecisions } from './editorial.mjs';
 import { createModelBatch } from './model-references.mjs';
 import { editorialCoverage, coverageDates } from './editorial-coverage.mjs';
 import { validArchive, periodKey, validateIssue, assertExpectedIssue } from './issue-contract.mjs';
@@ -172,7 +172,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
     const selectedDigest = fingerprint(selection.items);
     const savedCards = store && await store.get('cards'), savedMetadata = store && await store.get('metadata');
     if ((savedCards && savedCards.selected_digest !== selectedDigest) || (savedMetadata && savedMetadata.selected_digest !== selectedDigest)) throw new Error('Writing checkpoint selection mismatch');
-    const persistParts = async (data, context) => {
+    const persistParts = async (data, context, summaryShortening) => {
       if (!store || !Array.isArray(data?.items)) return;
       const inputs = context.cacheHit ? selection.items : writerBatch.items;
       const byId = new Map(inputs.map(it => [it.id, it]));
@@ -184,19 +184,26 @@ export async function runPipeline(kind = 'daily', options = {}) {
       let metadata;
       try { metadata = validateWritingMetadata(structuredClone(data), inputs, kind); } catch (error) { if (error instanceof LlmError) return; throw error; }
       if (!context.cacheHit) metadata = writerBatch.writing({ items: [], ...metadata });
-      await store.put('metadata', { selected_digest: selectedDigest, executive_summary: metadata.executive_summary, themes: metadata.themes });
+      await store.put('metadata', { selected_digest: selectedDigest, executive_summary: metadata.executive_summary, themes: metadata.themes, ...(summaryShortening ? { summary_shortening: summaryShortening } : {}) });
     };
     let completeAnswer;
     const validate = async (data, context = {}) => {
       completeAnswer = structuredClone(data);
-      await persistParts(data, context);
-      if (!context.cacheHit) validateWriting(structuredClone(data), writerBatch.items, kind);
-      return validateWriting(context.cacheHit ? data : writerBatch.writing(data), selection.items, kind, context);
+      let preparedWriting, result;
+      try {
+        preparedWriting = prepareWriting(structuredClone(data), context.cacheHit ? selection.items : writerBatch.items, kind, context);
+        const mapped = context.cacheHit ? preparedWriting : writerBatch.writing({ ...data, executive_summary: preparedWriting.executive_summary, themes: preparedWriting.themes });
+        result = validateWriting(mapped, selection.items, kind, context);
+      } catch (error) { await persistParts(data, context); throw error; }
+      const summaryShortening = preparedWriting.validation_notes?.summary_shortening || (context.cacheHit && data.validation_notes?.summary_shortening) || context.summaryShortening;
+      if (summaryShortening) result.validation_notes.summary_shortening = summaryShortening;
+      await persistParts(result, { cacheHit: true }, summaryShortening);
+      return result;
     };
     const shortIds = new Map(selection.items.map((it, i) => [it.id, String(i + 1)]));
     const shortMetadata = value => value && ({ ...value, sentences: value.sentences?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) });
     const saved = { items: (savedCards?.items || []).map(it => ({ ...it, id: shortIds.get(it.id) })), executive_summary: shortMetadata(savedMetadata?.executive_summary), themes: savedMetadata?.themes?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) };
-    if (savedCards?.items.length === selection.items.length && savedMetadata) written = await validate(saved);
+    if (savedCards?.items.length === selection.items.length && savedMetadata) written = await validate(saved, { summaryShortening: savedMetadata.summary_shortening });
     else {
       const resume = saved.items.length && createWritingRepair(saved, writerBatch.items, kind, validate);
       written = await client.call(resume?.system || writingSystem, resume?.user || writingPrompt(kind, writerBatch.items),
@@ -222,7 +229,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
       publication_exclusions: eligibility.excluded, source_health: health, research_audit: normalized.filter(x => x.is_research && x.published_at >= window.lower && x.published_at < window.upper).map(x => ({ id: x.id, source: x.source_name, title: x.title, link: x.link,
         disposition: written.items.some(it => it.id === x.id) ? 'selected' : eligibility.excluded.find(it => it.id === x.id)?.reason || (decisions.find(d => d.id === x.id)?.duplicate_of ? 'merged' : candidates.some(it => it.id === x.id) ? 'editorial_not_selected' : 'candidate_budget') })),
       editorial_coverage: editorialAudit, source_counts: selection.source_counts, source_exceptions: selection.exceptions, coverage_gaps: gaps, required_source_problems: requiredProblems.map(x => x.id),
-      llm: store && Object.values(store.manifest.attempts).flat().length ? [...Object.values(store.manifest.attempts).flat(), ...(client.usage || []).filter(event => event.cache_hit)].sort((a,b) => String(a.started_at || '').localeCompare(String(b.started_at || ''))) : client.usage, input_fingerprint: fingerprint(snapshot.items), summary_characters: [...(written.executive_summary?.text || '').replace(/\s/g, '')].length } };
+      llm: store && Object.values(store.manifest.attempts).flat().length ? [...Object.values(store.manifest.attempts).flat(), ...(client.usage || []).filter(event => event.cache_hit)].sort((a,b) => String(a.started_at || '').localeCompare(String(b.started_at || ''))) : client.usage, input_fingerprint: fingerprint(snapshot.items), summary_characters: summaryCharacterCount(written.executive_summary?.text || '') } };
   const bundle = { schema_version: 1, identity: store?.identity, payload, checkpoint, snapshot, base };
   if (store) { validateIssue(payload, { kind, upper: window.upper, period: label }); await store.put('ready', bundle); }
   if (until === 'ready') return boundary('ready');

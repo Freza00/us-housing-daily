@@ -1,0 +1,129 @@
+{
+  "checked_at_beijing": "2026-11-02 16:32",
+  "implementation_base": "fa5ac41d10676a095c20fec9ab36d5d5feb34dee",
+  "runtime": "v25.8.0",
+  "scope": "Summary contract, generation-only complete-prefix preparation, narrow month contexts, regression tests and offline weekly candidate",
+  "tests": {
+    "isolated": {
+      "passed": 222,
+      "failed": 0
+    },
+    "root": {
+      "passed": 222,
+      "failed": 0
+    },
+    "new_regressions": 17
+  },
+  "static_checks": {
+    "esm_files": 52,
+    "esm_syntax": "passed",
+    "fixture_json": "passed",
+    "git_diff_check": "passed",
+    "workflow_changes": false
+  },
+  "real_frozen_source_replay": {
+    "additional_model_requests": 0,
+    "source_requests": 0,
+    "cases": [
+      {
+        "response": "2a1febe7-528b-490a-b209-6edcf329c6bb.response.json",
+        "original_error": "Executive summary exceeds 250 characters: actual=258, limit=250, over_by=8, target=200 (all non-whitespace Unicode characters after normalization)",
+        "summary_characters": 171,
+        "cards_preserved": 20,
+        "summary_shortening": {
+          "method": "whole_sentence_prefix",
+          "original_characters": 258,
+          "final_characters": 171,
+          "original_sentence_count": 3,
+          "kept_sentence_count": 2
+        },
+        "full_contract": "passed"
+      },
+      {
+        "response": "8a3aff56-aa46-4f58-9c22-2a9d0eb0aa17.response.json",
+        "original_error": "Executive summary exceeds 250 characters: actual=255, limit=250, over_by=5, target=200 (all non-whitespace Unicode characters after normalization)",
+        "summary_characters": 171,
+        "cards_preserved": 20,
+        "summary_shortening": {
+          "method": "whole_sentence_prefix",
+          "original_characters": 255,
+          "final_characters": 171,
+          "original_sentence_count": 3,
+          "kept_sentence_count": 2
+        },
+        "full_contract": "passed"
+      },
+      {
+        "response": "d909f1f0-8330-4765-b866-e1dbcc3ca638.response.json",
+        "original_error": "Executive summary exceeds 250 characters: actual=284, limit=250, over_by=34, target=200 (all non-whitespace Unicode characters after normalization)",
+        "summary_characters": 188,
+        "cards_preserved": 20,
+        "summary_shortening": {
+          "method": "whole_sentence_prefix",
+          "original_characters": 284,
+          "final_characters": 188,
+          "original_sentence_count": 3,
+          "kept_sentence_count": 2
+        },
+        "full_contract": "passed"
+      }
+    ],
+    "daily_month_translation": "passed",
+    "daily_literal_twelve_months": "still rejected",
+    "old_rules": "187b50c0a98b83dde4d9544ad67804056be08cacc9ea68eb967f23260fb85c72",
+    "new_rules": "c0a8e93507f40e7d04505bf97d8bfda068d296b1975b69bf10bb0d25660fb6fa",
+    "rules_version_mismatch_blocked": true
+  },
+  "old_rule_weekly_candidate": {
+    "candidate_dir": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/house-daily-summary-repair-20261102/weekly-candidate-wxybMt",
+    "ready_file": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/house-daily-summary-repair-20261102/weekly-candidate-wxybMt/state/issues/weekly/2026-10-26/r1/ready.json",
+    "payload_sha256": "7672f8e7ee6de9c4c9574a3938154e0a640935340cb2bd36c730de132a10c328",
+    "identity": {
+      "kind": "weekly",
+      "period_key": "2026-10-26",
+      "cutoff_upper": 1793566800000,
+      "revision": 1
+    },
+    "rules": "187b50c0a98b83dde4d9544ad67804056be08cacc9ea68eb967f23260fb85c72",
+    "rules_unchanged": true,
+    "source_collection_calls": 0,
+    "additional_model_requests": 0,
+    "writer_attempts_preserved": 3,
+    "all_cards_preserved": 20,
+    "summary_characters": 188,
+    "summary_sentences": 2,
+    "full_issue_contract": "passed",
+    "frozen_phase_hashes_unchanged": true,
+    "preview_latest_archive_equal": true,
+    "published": false
+  },
+  "policy": {
+    "whole_sentence_prefix_accepted": true,
+    "all_selected_cards_required": true,
+    "strict_published_validation_retained": true,
+    "summary_limit": 250,
+    "requests_per_stage_limit": 3,
+    "combined_model_time_ms": 660000,
+    "new_repair_draft_stage": false,
+    "global_correction_guard_removed": false
+  },
+  "workspace": {
+    "initial_protected_files": 121,
+    "unchanged_non_target_files_after_docs": 114,
+    "formal_data_state_public_unchanged": true
+  },
+  "external_changes": {
+    "additional_source_collection_calls": 0,
+    "additional_house_daily_model_requests": 0,
+    "commit": false,
+    "push": false,
+    "production_publish": false,
+    "external_monitor_or_notifications_enabled": false
+  },
+  "remaining": [
+    "Submission, open-source sync and production release require separate authorization",
+    "When publishing both, verify/publish the compatible old-rule weekly candidate before pushing generic rule changes; if remote rules already changed, stop for explicit migration",
+    "No new Node.js 22 CI or next scheduled generation was run",
+    "Cold resume of other invalid metadata can still lose the failed draft; draft persistence and correction timing were deferred"
+  ]
+}

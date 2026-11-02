@@ -155,6 +155,35 @@ test('a translated month does not interfere with a grounded negative percentage'
   assert.throws(() => validateWriting(writing(it, '5 月，住宅销售增长 5%。'), [it]), /number absent/);
 });
 
+test('explicit scheduled-event and commit-on month phrases permit only calendar translations', () => {
+  for (const evidence of [
+    'A December increase remains on the table as economic data continue to be evaluated.',
+    'The analyst declined to commit on December until seeing more economic data.',
+    'The December meeting will review housing demand and the outlook for inflation.'
+  ]) {
+    const it = source(evidence);
+    assert.equal(validateWriting(writing(it, '12 月利率前景仍待观察。'), [it]).items.length, 1);
+    assert.throws(() => validateWriting(writing(it, '12 月，住宅销售增长 12%。'), [it]), /number absent.*12/);
+    assert.throws(() => validateWriting(writing(it, '住宅研究覆盖 12 个月。'), [it]), /number absent.*12/);
+  }
+});
+
+test('new month contexts do not authorize company names or references to people', () => {
+  for (const [month, evidence] of [
+    [4, 'April leads the housing research team at a regional investment company.'],
+    [6, 'The board commented on June after the interview with the research team.'],
+    [6, 'The committee will commit on June Capital after completing diligence.'],
+    [12, 'The acquisition of December Capital includes several residential assets.'],
+    [12, 'A December Capital transaction expanded the residential portfolio.']
+  ]) assert.throws(() => validateWriting(writing(source(evidence), `${month} 月住宅投资出现变化。`), [source(evidence)]), /number absent/);
+});
+
+test('annual reporting keeps its original period wording without licensing a literal twelve', () => {
+  const it = source('The annual housing report for September 2026 covers permitting in the year-ending September.');
+  assert.throws(() => validateWriting(writing(it, '截至 9 月的 12 个月住宅许可量受到关注。'), [it]), /number absent.*12/);
+  assert.equal(validateWriting(writing(it, '截至 9 月的一年期住宅许可量受到关注。'), [it]).items.length, 1);
+});
+
 test('writer still rejects a calculated difference absent from source evidence', () => {
   const it = source('As of October 29, 2026 the 30-year mortgage rate averaged 7.24%, down from 7.32% last week.');
   assert.throws(() => validateWriting(writing(it, '10 月 29 日，30 年期按揭利率下降 8 个基点至 7.24%。'), [it]), /number absent.*8/);

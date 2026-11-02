@@ -2,22 +2,28 @@
 
 ## 当前状态
 
-30 号日期缩写与旧闻入选修复已按用户授权提交 ca5f11f、同步开源 main 并上线 Vercel。30 号现为 19 条，168 天前的旧闻已移除；Node.js 22 CI 的 179 项测试、Astra 复审及生产内容核验通过。首页内嵌、latest、30 号归档一致，29 号归档保持原样。[修复验收](docs/validation/2026-10-30-publication-eligibility.md)；[生产核验](docs/validation/2026-10-30-publication-production.json)；[根因分析](docs/validation/2026-10-30-rerun-diagnosis.md)。
+11 月 2 日摘要修复已完成本地代码与离线验收，用户现已授权本地提交并运行验证；远端尚未更新，纯超长摘要按用户接受的连续整句规则处理，原全部稿件保留。本期周报已备妥零新增模型调用的旧规则候选，补发仍待授权。[本地验收](docs/validation/2026-11-02-summary-contract-repair.md)。
 
-线上模型为 gpt-6.1-sol。工作日日报 05:00；周一周报 07:00 首跑、08:00 补偿；月报维持首个周一 14:30，均为北京时间。09:00 为可读目标，仍受平台调度与外部服务影响。真实生产采集和下一次自动生成仍需验证，人工修订及离线 CI 不等同于自动全链路通过。
+11 月 2 日日报首跑失败后，同版冻结阶段与 18 张合格卡片被自动恢复，08:51:43 完成 20 条线上核验，形成首个强化后的真实恢复样本；来源 66／77 成功，HAR 超时，本期 degraded。本次采集证据截至当日 15:04，周报 20 张卡片已合格，但三次摘要超长、writer 额度用尽，尚未发布。[日志及双顾问对照](docs/validation/2026-11-02-advisor-comparison.md)。
+
+线上模型为 gpt-6.1-sol。工作日日报 05:00；周一周报 07:00 首跑、08:00 补偿；月报维持首个周一 14:30，均为北京时间。09:00 为可读目标，仍受平台调度与外部服务影响。日报已有一次真实自动恢复及准时交付证据；连续多日 SLA、周月报自动发布和真实 redeploy 仍需后续验证，不能由单次样本推断长期稳定。
 
 P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段附件、卡片／摘要局部恢复、跨运行额度账本、独立候选发布及线上确认均已实现；隔离版和主工作区各 205 项测试通过。Astra max 最终只读复审通过，独立 79 项测试通过。已按用户授权提交 69a45a1、同步开源 main 并上线 Vercel，Node.js 22 CI 的 205 项通过，生产内容核验通过。独立外部截止调度与通知继续不启用。[生产证据](docs/validation/2026-10-30-automation-hardening-production.md)。[本地验收](docs/validation/2026-10-30-automation-hardening-implementation.md)；[施工清单](docs/plans/2026-10-30-automation-hardening-implementation.md)。
 
 ## 进行中
 
-- P0 强化已上线；真实 runner 阶段上传／恢复、下一次自动生成／交付、Vercel redeploy 和连续 10 工作日 SLA 尚未验证。外部观察器调度及通知继续不启用，P1 少稿政策另定，不声称生产自动自愈已具备。[发布与后续验证](docs/validation/2026-10-30-automation-hardening-production.md)。
-- 30 号修复及 19 条修订稿已上线，源头采集／新提示词生成及下一次定时发布仍待生产自动全链路验证。本次部署和离线回放未新增 House Daily 模型调用，不能替代下一轮自动生成验收。[验收与限制](docs/validation/2026-10-30-publication-eligibility.md)。
+- 摘要契约、生成端连续完整句处理和限定月份语境已获授权并完成本地验收；主工作区／隔离版各 222 项通过。已生成保持原三次账本和 20 卡的旧规则周报候选，188 字符；正在本地提交及入口回放，不推送、部署或补发。[实现验收与发布顺序](docs/validation/2026-11-02-summary-contract-repair.md)。
+- 日报真实 runner 阶段上传／恢复、同版续写与线上交付已验证一次；Vercel redeploy、连续 10 工作日 SLA 及周月报自动发布仍待验证。外部观察器调度和通知继续不启用，P1 少稿政策另定。
 - 30 号生产原料证实 INVH 公告正文取得成功，因已在 29 号发布而按 seen 去重；AMH 本期源检查正常但无当期新稿，新的正文补抓仍待观察。本机与 runner 验证证据分别记录。[本轮证据](docs/validation/2026-10-30-publication-eligibility.md)。
 - 30 号真实两阶段生成及诊断 artifact 已验证能运行，定时阶段数字校验连续失败；用户 rerun 的单卡修复成功。稳定在 09:00 前自动出刊仍未实现，不能用一次手动恢复替代稳定性验收。
 - 任务内恢复无法解决平台未启动或延迟启动。10 月 29 日 05:36、09:02 及 13:52 生成均未成功发布，后续定时启动和 09:00 可读目标仍需持续观察。
 - 15 个研究入口仍有访问或发现障碍；31／46 可读是此前本机探针结果，不代表生产已全部覆盖。Vercel CLI 现有 token 无效，未独立读取账号套餐和线上 cron 注册表；部署已接受仓库 cron 配置，Actions 补偿配置已上线。
 
 ## 最近完成
+
+- 2026-11-02 16:32 完成摘要单一计数口径、定量错误、生成端完整句前缀与审计恢复、限定月份语境及 17 项回归；222 项通过。旧规则周报 20 卡、188 字符候选已离线准备，原账本／阶段散列不变；未提交、推送或补发。[施工交付](docs/plans/2026-11-02-summary-contract-repair.md)。
+
+- 2026-11-02 15:51 完成反重力 Argon High 与 Astra max 的只读对照及离线复现；确认恢复／额度保护有效，区分摘要契约、草稿上下文、月份误拦与既定策略，给出保留 20 卡的零新增模型候选路径。仅形成报告，未实施或补发。[综合诊断](docs/validation/2026-11-02-advisor-comparison.md)。
 
 - 2026-10-30 17:59 提交 69a45a1 并同步开源 main、Vercel 上线成功；P0 冻结阶段、局部恢复、跨运行额度及交付核验正式上线。生产 30 号 19 条及 29 号归档保持，未新增模型生成或启用独立调度／通知。[发布证据](docs/validation/2026-10-30-automation-hardening-production.md)。
 
@@ -35,6 +41,10 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 2026-10-28 17:48 将线上及本地模型恢复为 gpt-6.1-sol，补跑日报成功，用户确认 10 月 28 日显示。[运行日志](https://github.com/Freza00/us-housing-daily/actions/runs/40666081378)。
 
 ## 最近验证
+
+- 2026-11-02 16:32 隔离／主工作区 Node.js v25.8.0 均 222／222、0 失败；52 个 ESM、固定 JSON 与 diff 检查通过。原始冻结 20 卡与三稿回放为 171／171／188，旧规则 ready 和预览归档一致，原三次账本保持；114 个非目标起始文件及正式 data／state／public 未变，无新采集、模型或部署。[证据](docs/validation/2026-11-02-summary-contract-repair.json)。
+
+- 2026-11-02 15:51 Astra 14 组独立探针与 6 组比较探针通过，主 agent 复跑后确认三稿前缀 171／171／188 的完整写稿校验、全部 20 卡不变、250 边界及原始阶段散列／规则匹配。报告前 121 个受保护文件不变，无新增 House Daily 调用或外部写入；只更新审查记录与进度。[证据](docs/validation/2026-11-02-advisor-comparison.json)。
 
 - 2026-10-30 17:59 [本轮 CI](https://github.com/Freza00/us-housing-daily/actions/runs/41037034837) 在 Node.js v22.23.4 通过 205 项、0 失败；[Vercel](https://vercel.com/freza00s-projects/news-agent/FNDBn9fXLLtFvxFdPMAzFn97u5Kx) success。生产 7 个路由内容散列匹配候选，首页／latest／归档一致，只读观察返回 online_verified；原工作区 112 个受保护文件不变，无生成工作流或浏览器视觉验收。[结构化证据](docs/validation/2026-10-30-automation-hardening-production.json)。
 
