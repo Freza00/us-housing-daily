@@ -1,0 +1,200 @@
+{
+  "checked_at_beijing": "2026-11-02 19:17",
+  "status": "published_and_production_verified",
+  "code_commit": "d160c43788884f598739936374360abeabf05d48",
+  "manifest": {
+    "code_commit": "d160c43788884f598739936374360abeabf05d48",
+    "files": [
+      ".github/workflows/monthly.yml",
+      ".github/workflows/weekly.yml",
+      "AGENTS.md",
+      "README.md",
+      "docs/DEPLOY.md",
+      "docs/RECOVERY.md",
+      "public/app.js",
+      "public/index.html",
+      "scripts/can-run.mjs",
+      "scripts/check-publication.mjs",
+      "scripts/lib/calendar.mjs",
+      "scripts/lib/dates.mjs",
+      "scripts/test/build-weekly.smoke.mjs",
+      "scripts/test/collection-checkpoint.test.mjs",
+      "scripts/test/dates.test.mjs",
+      "scripts/test/reliability.test.mjs",
+      "vercel.json",
+      "scripts/test/periodical-calendar.test.mjs",
+      "ROADMAP.md",
+      "docs/plans/2026-11-02-periodical-calendar-trial.md",
+      "docs/validation/2026-11-02-periodical-calendar-trial.md",
+      "docs/validation/2026-11-02-periodical-calendar-trial.json"
+    ],
+    "baseline": "86a3df49670ed1fcd4f3de93fdf936d157b4b103",
+    "transition": "retain published weekly r1 and document 8-hour gap; no regeneration",
+    "tests": 237,
+    "new_model_requests": 0,
+    "pushed": true
+  },
+  "production": {
+    "checked_at": "2026-11-02T11:14:52.176Z",
+    "code_commit": "d160c43788884f598739936374360abeabf05d48",
+    "host": "https://news-agent-mu.vercel.app",
+    "publication_routes": {
+      "/data/latest.json": {
+        "sha256": "31959763a4db537d85754c2887de723cb6dae743f5b8b8deacc389b5fc610957",
+        "unchanged": true
+      },
+      "/data/monthly/dates.json": {
+        "sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+        "unchanged": true
+      },
+      "/data/weekly/dates.json": {
+        "sha256": "86b1c150dc7cf3cce1a1009788a195ada1c4049b6b9fb685842e9d9ab2c1e822",
+        "unchanged": true
+      },
+      "/data/weekly/latest.json": {
+        "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "unchanged": true
+      },
+      "/data/weekly/2026-10-26.json": {
+        "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "unchanged": true
+      },
+      "/data/monthly/2026-10.json": {
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "unchanged": true
+      },
+      "/data/monthly/latest.json": {
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "unchanged": true
+      }
+    },
+    "assets": {
+      "html": {
+        "matches": true,
+        "sha256": "67624cc2751ec2eca86208f16a9f699bd3853e7650fb0fe060c08334b2131f8a"
+      },
+      "app.js": {
+        "route": "/app.js?v=2026-11-02-et-periods",
+        "matches": true,
+        "sha256": "2354b279c1058e4280b42c54f7f3e7089c9f73b4ce53ba640dbb0b639b31c55b"
+      },
+      "style.css": {
+        "route": "/style.css?v=2026-10-28",
+        "matches": true,
+        "sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7"
+      }
+    },
+    "schedule": {
+      "weekly": {
+        "next_start_beijing": "2026-11-09 14:00",
+        "window": {
+          "lower": 1793595600000,
+          "upper": 1794200400000,
+          "hours": 168,
+          "timezone": "America/New_York",
+          "periodStart": "2026-11-02",
+          "periodEnd": "2026-11-08",
+          "label": "2026-11-02 00:00 至 2026-11-09 00:00（美东）"
+        },
+        "reading_deadline": 1794207600000
+      },
+      "monthly": {
+        "next_start_beijing": "2026-12-01 15:00",
+        "window": {
+          "lower": 1793505600000,
+          "upper": 1796101200000,
+          "hours": 721,
+          "timezone": "America/New_York",
+          "periodStart": "2026-11-01",
+          "periodEnd": "2026-11-30",
+          "label": "2026-11"
+        },
+        "reading_deadline": 1796112000000
+      }
+    },
+    "new_source_collection_requests": 0,
+    "new_model_requests": 0,
+    "deployment": {
+      "state": "success",
+      "contexts": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "target_url": "https://vercel.com/freza00s-projects/news-agent/EUvSHtoQwNcz8GibhaJ4qT5QQbYK",
+          "description": "Deployment has completed"
+        }
+      ]
+    },
+    "ci_runs": [
+      {
+        "id": 41435127322,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "d160c43788884f598739936374360abeabf05d48",
+        "html_url": "https://github.com/Freza00/us-housing-daily/actions/runs/41435127322"
+      }
+    ],
+    "daily_inline_unchanged": true,
+    "ok": true
+  },
+  "online_render": {
+    "engine": "isolated headless Chromium",
+    "host": "https://news-agent-mu.vercel.app",
+    "requests": "GET static site only; API and external origins blocked",
+    "results": [
+      {
+        "kind": "weekly",
+        "lang": "zh",
+        "absolute_dates": 20,
+        "banner": "覆盖：2026-10-26 05:00 至 2026-11-02 05:00（北京）",
+        "page_errors": []
+      },
+      {
+        "kind": "weekly",
+        "lang": "en",
+        "absolute_dates": 20,
+        "banner": "Coverage: 2026-10-26 05:00 to 2026-11-02 05:00 (Beijing)",
+        "page_errors": []
+      },
+      {
+        "kind": "monthly",
+        "lang": "zh",
+        "absolute_dates": 20,
+        "banner": "覆盖：2026-10-01 00:00 至 2026-11-01 00:00（美东）",
+        "page_errors": []
+      },
+      {
+        "kind": "monthly",
+        "lang": "en",
+        "absolute_dates": 20,
+        "banner": "Coverage: 2026-10-01 00:00 to 2026-11-01 00:00 (ET)",
+        "page_errors": []
+      }
+    ]
+  },
+  "ci": {
+    "node": "v22.23.4",
+    "tests": 237,
+    "pass": 237,
+    "fail": 0,
+    "run": 41435127322
+  },
+  "transition": {
+    "decision": "retain current published weekly r1 and document gap; observe next week",
+    "weekly_only": true,
+    "unreissued_interval_beijing": [
+      "2026-11-02 05:00",
+      "2026-11-02 13:00"
+    ],
+    "hours": 8,
+    "daily_and_monthly_rules_unchanged_by_transition": true,
+    "new_revision_generated": false
+  },
+  "protected_original_workspace_files": 134,
+  "new_model_requests": 0,
+  "new_source_collection_requests": 0,
+  "external_observer_enabled": false,
+  "notifications_enabled": false,
+  "next_real_cron_execution": "not yet observed"
+}
