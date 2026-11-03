@@ -33,9 +33,9 @@
     "commit": "413682dfcc32c7439010ec1ee014e243e1cb3cf9",
     "already_pushed": false
   },
-  "checked_at_beijing": "2026-11-03 14:14",
+  "checked_at_beijing": "2026-11-03 14:17",
   "data_deployment_status": "success",
-  "code_deployment_status": "pending",
+  "code_deployment_status": "success",
   "additional_generation_calls": 0,
   "additional_collection_calls": 0,
   "local_tests": {
@@ -43,5 +43,65 @@
     "release_checkout": 242,
     "failed": 0
   },
-  "protected_original_workspace_files": 206
+  "protected_original_workspace_files": 206,
+  "code_verification": {
+    "commit": "cc4895555ae8f65e357ab8c1c57592e703721889",
+    "status": "success",
+    "deployments": [
+      {
+        "context": "Vercel",
+        "state": "success",
+        "url": "https://vercel.com/freza00s-projects/news-agent/4bqqr2UPmw9PAV2oAK62HssR2rRE"
+      }
+    ],
+    "runs": [
+      {
+        "id": 41588745043,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41588745043"
+      }
+    ],
+    "online": {
+      "schema_version": 1,
+      "ok": true,
+      "host": "https://news-agent-mu.vercel.app",
+      "identity": {
+        "kind": "daily",
+        "period_key": "2026-11-03",
+        "cutoff_upper": 1793653200000,
+        "revision": 1
+      },
+      "payload_sha256": "ecdef283534e4128f4d9d10b440fbfb9d20e513132bc97af5d2e917c5c71c405",
+      "commit": "cc4895555ae8f65e357ab8c1c57592e703721889",
+      "checked_at": 1793686569734,
+      "files": [
+        {
+          "route": "/data/latest.json",
+          "ok": true
+        },
+        {
+          "route": "/data/2026-11-03.json",
+          "ok": true
+        },
+        {
+          "route": "/data/dates.json",
+          "ok": true
+        },
+        {
+          "route": "/",
+          "ok": true
+        }
+      ]
+    }
+  },
+  "ci_tests": {
+    "node": "22.23.4",
+    "passed": 242,
+    "failed": 0
+  },
+  "source_workspace_data_unchanged": true,
+  "original_ledger_unchanged": true,
+  "generation_workflow_rerun": false
 }
