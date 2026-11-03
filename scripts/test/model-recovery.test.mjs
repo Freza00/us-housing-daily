@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createLlmClient } from '../lib/llm-client.mjs';
 import { createModelBatch } from '../lib/model-references.mjs';
-import { createWritingRepair, validateDecisions, validateWriting, writingPrompt, writingSystem, selectItems, numericValues } from '../lib/editorial.mjs';
+import { createWritingRepair, validateDecisions, validateWriting, writingPrompt, writingSystem, selectItems, numericValues, normalizeChinese } from '../lib/editorial.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
 import { sandbox, sample, replayEnv } from './helpers.mjs';
 
@@ -13,6 +13,21 @@ const items = ['ee97eb3b7b51bf8f', '8f51e30b0b1f3098', 'third'].map(id => sample
 const decision = id => ({ id, keep: true, importance: 4, section: 'national', tags: [], duplicate_of: null });
 const card = item => ({ id: item.id, title_zh: '住宅研究', summary_zh: '销售增长 5%。', impact: 'neutral', evidence_quote: item.description });
 const writing = selected => ({ items: selected.map(card), executive_summary: { sentences: [{ text: '销售增长 5%，可负担性仍是约束。', item_ids: selected.map(x => x.id) }] }, themes: [] });
+
+test('numeric ranges and narrative dashes survive formatting without inventing negative claims', () => {
+  for (const range of ['30–40', '30--40', '30-40', '30 - 40', '30%–40%', '30%-40%', '预期--30 至 40']) {
+    assert.deepEqual([...numericValues(range)], ['30', '40'], range);
+    assert.deepEqual(numericValues(normalizeChinese(range)), numericValues(range), range);
+  }
+  for (const negative of ['-40', '−40', '下降 -40%']) assert.deepEqual([...numericValues(negative)], ['-40']);
+  assert.deepEqual([...numericValues('-40 to -30')], ['-40', '-30']);
+  assert.deepEqual(numericValues(normalizeChinese('-40–−30')), new Set(['-40', '-30']));
+  const selected = [{ ...items[0], description: 'Mortgage rates declined by 30–40 basis points according to the research.' }];
+  const data = { items: [{ ...card(selected[0]), summary_zh: '利率下降 30–40 个基点。' }], executive_summary: { sentences: [{ text: '利率下降 30–40 个基点。', item_ids: [selected[0].id] }] }, themes: [{ title: '利率下降 30–40 个基点', item_ids: [selected[0].id] }] };
+  const result = validateWriting(data, selected, 'weekly');
+  assert.deepEqual(validateWriting(JSON.parse(JSON.stringify(result)), selected, 'weekly'), result);
+  assert.throws(() => validateWriting({ ...data, items: [{ ...data.items[0], summary_zh: '利率为 -40。' }] }, selected), /number absent/);
+});
 function response(value, { done = true } = {}) {
   return new Response('data: ' + JSON.stringify({ id: 'upstream-response', model: 'test-model', choices: [{ delta: { content: typeof value === 'string' ? value : JSON.stringify(value) }, finish_reason: 'stop' }], usage: { prompt_tokens: 10, completion_tokens: 4 } }) + '\n\n' + (done ? 'data: [DONE]\n\n' : ''), { headers: { 'content-type': 'text/event-stream', 'x-request-id': 'upstream-request' } });
 }

@@ -1,0 +1,50 @@
+{
+  "new_code_validates_original_saved_cards": 17,
+  "old_rule_compatible_candidate": {
+    "stage": "ready",
+    "cards": 17,
+    "summary_characters": 192,
+    "summary_shortening": {
+      "method": "whole_sentence_prefix",
+      "original_characters": 278,
+      "final_characters": 192,
+      "original_sentence_count": 3,
+      "kept_sentence_count": 2
+    },
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-03",
+      "cutoff_upper": 1793653200000,
+      "revision": 1
+    },
+    "rules": "852ff3f79d17ba16e65a5f7fa79a67c66dbe83b21d024e4cb8a9aeebc1812367",
+    "producer_commit": "1c1cf286792877bb09b441e58d2d8703dc536400",
+    "ledger_unchanged": true,
+    "model_ms": 258051
+  },
+  "source_calls": 0,
+  "model_calls": 0,
+  "original_attachments_unchanged": true,
+  "formal_data_untouched": true,
+  "published": false,
+  "checked_at_beijing": "2026-11-03 11:42",
+  "tests": {
+    "command": "npm test",
+    "passed": 242,
+    "failed": 0
+  },
+  "protected_original_files": 198,
+  "changed_existing_files": [
+    "README.md",
+    "ROADMAP.md",
+    "docs/RECOVERY.md",
+    "scripts/lib/editorial.mjs",
+    "scripts/lib/pipeline.mjs",
+    "scripts/test/hardening.test.mjs",
+    "scripts/test/model-recovery.test.mjs"
+  ],
+  "candidate_state_dir": "state/issues/recovery-candidates/2026-11-03-range-fix/state",
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

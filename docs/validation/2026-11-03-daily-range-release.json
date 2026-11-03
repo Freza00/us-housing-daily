@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "ok": true,
+  "host": "https://news-agent-mu.vercel.app",
+  "identity": {
+    "kind": "daily",
+    "period_key": "2026-11-03",
+    "cutoff_upper": 1793653200000,
+    "revision": 1
+  },
+  "payload_sha256": "ecdef283534e4128f4d9d10b440fbfb9d20e513132bc97af5d2e917c5c71c405",
+  "commit": "413682dfcc32c7439010ec1ee014e243e1cb3cf9",
+  "checked_at": 1793686408799,
+  "files": [
+    {
+      "route": "/data/latest.json",
+      "ok": true
+    },
+    {
+      "route": "/data/2026-11-03.json",
+      "ok": true
+    },
+    {
+      "route": "/data/dates.json",
+      "ok": true
+    },
+    {
+      "route": "/",
+      "ok": true
+    }
+  ],
+  "pushed": {
+    "commit": "413682dfcc32c7439010ec1ee014e243e1cb3cf9",
+    "already_pushed": false
+  },
+  "checked_at_beijing": "2026-11-03 14:14",
+  "data_deployment_status": "success",
+  "code_deployment_status": "pending",
+  "additional_generation_calls": 0,
+  "additional_collection_calls": 0,
+  "local_tests": {
+    "workspace": 242,
+    "release_checkout": 242,
+    "failed": 0
+  },
+  "protected_original_workspace_files": 206
+}

@@ -1,0 +1,589 @@
+{
+  "checked_at_beijing": "2026-11-03 11:32",
+  "scope": "Read-only diagnosis requested by user; no implementation or publication",
+  "advisor": {
+    "provider": "Antigravity agy CLI",
+    "requested_model": "gemini-4-argon-high",
+    "effort": "high",
+    "status": "SUCCESS",
+    "conversation_id": "bf546c57-d043-4720-9fd9-a04de3139fd2",
+    "duration_seconds": 549.131595,
+    "num_turns": 1,
+    "usage": {
+      "input_tokens": 56224,
+      "output_tokens": 50152,
+      "thinking_tokens": 42294,
+      "cache_read_tokens": 0,
+      "total_tokens": 106376
+    },
+    "tools_called": "none reported; inline evidence only",
+    "models_directory_lookup": "timed out; actual print invocation succeeded"
+  },
+  "source_commit": "1c1cf286792877bb09b441e58d2d8703dc536400",
+  "summary": {
+    "date": "2026-11-03",
+    "source_commit": "1c1cf286792877bb09b441e58d2d8703dc536400",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-03",
+      "cutoff_upper": 1793653200000,
+      "revision": 1
+    },
+    "rules": "852ff3f79d17ba16e65a5f7fa79a67c66dbe83b21d024e4cb8a9aeebc1812367",
+    "model": "gpt-6.1-sol",
+    "candidates": 50,
+    "selected": 17,
+    "saved_cards": 17,
+    "phases": [
+      "prepared",
+      "editor",
+      "cards",
+      "metadata"
+    ],
+    "attempts": {
+      "editor": [
+        {
+          "label": "editor",
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "attempt": 1,
+          "request_id": "b436e60e-b405-4e4b-a849-c1bc256f1c4d",
+          "request_hash": "8ea491307a6a4037a2aae081e0202da1c832c8aa8f93d28b55fb77c5a95c22aa",
+          "started_at": "2026-11-02T21:37:42.533Z",
+          "reserved_ms": 240000,
+          "failed": true,
+          "retryable": true,
+          "error": "terminated",
+          "error_name": "TypeError",
+          "error_code": null,
+          "causes": [
+            {
+              "name": "Error",
+              "code": "ECONNRESET",
+              "message": "read ECONNRESET"
+            }
+          ],
+          "ms": 82906,
+          "first_byte_ms": 18560,
+          "http_status": 200,
+          "upstream_request_id": null,
+          "response_id": "resp_0f08df0cf797e2aa016ae902a80d0c819387a4afa0f580b5bd",
+          "finish_reason": null,
+          "done": false,
+          "usage": null,
+          "response_characters": 7406,
+          "retry_delay_ms": 15000
+        },
+        {
+          "label": "editor",
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "attempt": 2,
+          "request_id": "d0116604-713d-4649-bdce-e6a3e0f1ba12",
+          "request_hash": "8ea491307a6a4037a2aae081e0202da1c832c8aa8f93d28b55fb77c5a95c22aa",
+          "started_at": "2026-11-02T21:39:20.447Z",
+          "reserved_ms": 240000,
+          "cache_hit": false,
+          "repairs": 0,
+          "response_model": "gpt-6.1-sol",
+          "ms": 93120,
+          "first_byte_ms": 16575,
+          "http_status": 200,
+          "upstream_request_id": null,
+          "response_id": "resp_09eec8a4c7c018b1016ae9030928e88196b22cd317f5228914",
+          "finish_reason": "stop",
+          "done": true,
+          "usage": {
+            "prompt_tokens": 21556,
+            "completion_tokens": 3348,
+            "total_tokens": 24904,
+            "completion_tokens_details": {
+              "reasoning_tokens": 1089
+            }
+          },
+          "response_characters": 10135
+        }
+      ],
+      "writer": [
+        {
+          "label": "writer",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 1,
+          "request_id": "4e4f3627-c77d-4b1b-97b4-0cf56e3c7bbf",
+          "request_hash": "e976201315d1e9f54b376abfd04df039d5c8bcd76a3f5401019d65acfebb89fd",
+          "started_at": "2026-11-02T21:40:54.949Z",
+          "reserved_ms": 240000,
+          "failed": true,
+          "retryable": true,
+          "error": "Evidence quote is not present in source for 1",
+          "error_name": "Error",
+          "error_code": null,
+          "causes": [],
+          "ms": 62214,
+          "first_byte_ms": 3763,
+          "http_status": 200,
+          "upstream_request_id": null,
+          "response_id": "resp_035cf8363b9dfd5d016ae9036822088198956d0c7d4fde44fe",
+          "finish_reason": "stop",
+          "done": true,
+          "usage": {
+            "prompt_tokens": 14586,
+            "completion_tokens": 2219,
+            "total_tokens": 16805,
+            "completion_tokens_details": {
+              "reasoning_tokens": 47
+            }
+          },
+          "response_characters": 5883,
+          "retry_delay_ms": 15000
+        },
+        {
+          "label": "writer",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 2,
+          "request_id": "764ee1ea-1434-4747-92e7-657f1642191b",
+          "request_hash": "ed92a3a5b8bfa49696a200a88ed1337f4423f9e446451930986b6353479fc4d5",
+          "started_at": "2026-11-02T21:42:12.176Z",
+          "reserved_ms": 240000,
+          "failed": true,
+          "retryable": false,
+          "error": "Output contains a number absent from its evidence: -40",
+          "error_name": "Error",
+          "error_code": null,
+          "causes": [],
+          "ms": 19811,
+          "first_byte_ms": 11241,
+          "http_status": 200,
+          "upstream_request_id": null,
+          "response_id": "resp_04287772547ff444016ae903b9eca0819b8e45e7b434fd95ea",
+          "finish_reason": "stop",
+          "done": true,
+          "usage": {
+            "prompt_tokens": 16165,
+            "completion_tokens": 498,
+            "total_tokens": 16663,
+            "completion_tokens_details": {
+              "reasoning_tokens": 125
+            }
+          },
+          "response_characters": 972
+        }
+      ]
+    },
+    "bundles_identical_attempts": true,
+    "phase_hashes_verified": true,
+    "source_rules_verified": true,
+    "source_health": {
+      "total": 77,
+      "ok": 67,
+      "required_problems": []
+    },
+    "saved_card_revalidation": [
+      {
+        "id": "ff6977aad77e9dfa",
+        "ok": true
+      },
+      {
+        "id": "f9559e91fee7a2bf",
+        "ok": true
+      },
+      {
+        "id": "c39fdbabcf0f66bf",
+        "ok": true
+      },
+      {
+        "id": "38752fcdb5e0c31b",
+        "ok": true
+      },
+      {
+        "id": "d574011206bd12ed",
+        "ok": false,
+        "error": "Output contains a number absent from its evidence: -40"
+      },
+      {
+        "id": "94ef206f7c671a54",
+        "ok": true
+      },
+      {
+        "id": "5a25ea885918130d",
+        "ok": true
+      },
+      {
+        "id": "63b29ba3efae8923",
+        "ok": true
+      },
+      {
+        "id": "25afd5df7a3be6f2",
+        "ok": true
+      },
+      {
+        "id": "2f5168864c31f28f",
+        "ok": true
+      },
+      {
+        "id": "7c34db4f5a755b74",
+        "ok": true
+      },
+      {
+        "id": "4504ed5c69dd591f",
+        "ok": true
+      },
+      {
+        "id": "5af9ccacc251a6bd",
+        "ok": true
+      },
+      {
+        "id": "201330f4c5d8f60f",
+        "ok": true
+      },
+      {
+        "id": "bfdfbbf59fba539c",
+        "ok": true
+      },
+      {
+        "id": "5c8dd6817ac029b8",
+        "ok": true
+      },
+      {
+        "id": "15b38a69bd82a805",
+        "ok": true
+      }
+    ],
+    "saved_metadata_revalidation_error": "Output contains a number absent from its evidence: -40",
+    "numeric_probe": {
+      "30–40": {
+        "normalized": "30--40",
+        "before": [
+          "30",
+          "40"
+        ],
+        "after": [
+          "30",
+          "-40"
+        ]
+      },
+      "30--40": {
+        "normalized": "30--40",
+        "before": [
+          "30",
+          "-40"
+        ],
+        "after": [
+          "30",
+          "-40"
+        ]
+      },
+      "-40": {
+        "normalized": "-40",
+        "before": [
+          "-40"
+        ],
+        "after": [
+          "-40"
+        ]
+      },
+      "−40": {
+        "normalized": "−40",
+        "before": [
+          "-40"
+        ],
+        "after": [
+          "-40"
+        ]
+      }
+    }
+  },
+  "production_events": [
+    {
+      "run": 41529948118,
+      "event": "request_started",
+      "label": "editor",
+      "model": "***",
+      "effort": "medium",
+      "attempt": 1,
+      "request_id": "b436e60e-b405-4e4b-a849-c1bc256f1c4d",
+      "request_hash": "8ea491307a6a4037a2aae081e0202da1c832c8aa8f93d28b55fb77c5a95c22aa",
+      "started_at": "2026-11-02T21:37:42.533Z",
+      "reserved_ms": 240000
+    },
+    {
+      "run": 41529948118,
+      "event": "request_finished",
+      "label": "editor",
+      "model": "***",
+      "effort": "medium",
+      "attempt": 1,
+      "request_id": "b436e60e-b405-4e4b-a849-c1bc256f1c4d",
+      "request_hash": "8ea491307a6a4037a2aae081e0202da1c832c8aa8f93d28b55fb77c5a95c22aa",
+      "started_at": "2026-11-02T21:37:42.533Z",
+      "reserved_ms": 240000,
+      "failed": true,
+      "retryable": true,
+      "error": "terminated",
+      "error_name": "TypeError",
+      "error_code": null,
+      "causes": [
+        {
+          "name": "Error",
+          "code": "ECONNRESET",
+          "message": "read ECONNRESET"
+        }
+      ],
+      "ms": 82906,
+      "first_byte_ms": 18560,
+      "http_status": 200,
+      "upstream_request_id": null,
+      "response_id": "resp_0f08df0cf797e2aa016ae902a80d0c819387a4afa0f580b5bd",
+      "finish_reason": null,
+      "done": false,
+      "usage": null,
+      "response_characters": 7406,
+      "response_file": "b436e60e-b405-4e4b-a849-c1bc256f1c4d.response.json"
+    },
+    {
+      "run": 41529948118,
+      "event": "request_started",
+      "label": "editor",
+      "model": "***",
+      "effort": "medium",
+      "attempt": 2,
+      "request_id": "d0116604-713d-4649-bdce-e6a3e0f1ba12",
+      "request_hash": "8ea491307a6a4037a2aae081e0202da1c832c8aa8f93d28b55fb77c5a95c22aa",
+      "started_at": "2026-11-02T21:39:20.447Z",
+      "reserved_ms": 240000
+    },
+    {
+      "run": 41529948118,
+      "event": "request_finished",
+      "label": "editor",
+      "model": "***",
+      "effort": "medium",
+      "attempt": 2,
+      "request_id": "d0116604-713d-4649-bdce-e6a3e0f1ba12",
+      "request_hash": "8ea491307a6a4037a2aae081e0202da1c832c8aa8f93d28b55fb77c5a95c22aa",
+      "started_at": "2026-11-02T21:39:20.447Z",
+      "reserved_ms": 240000,
+      "cache_hit": false,
+      "repairs": 0,
+      "response_model": "***",
+      "ms": 93120,
+      "first_byte_ms": 16575,
+      "http_status": 200,
+      "upstream_request_id": null,
+      "response_id": "resp_09eec8a4c7c018b1016ae9030928e88196b22cd317f5228914",
+      "finish_reason": "stop",
+      "done": true,
+      "usage": {
+        "prompt_tokens": 21556,
+        "completion_tokens": 3348,
+        "total_tokens": 24904,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1089
+        }
+      },
+      "response_characters": 10135
+    },
+    {
+      "run": 41529948118,
+      "event": "request_started",
+      "label": "writer",
+      "model": "***",
+      "effort": "low",
+      "attempt": 1,
+      "request_id": "4e4f3627-c77d-4b1b-97b4-0cf56e3c7bbf",
+      "request_hash": "e976201315d1e9f54b376abfd04df039d5c8bcd76a3f5401019d65acfebb89fd",
+      "started_at": "2026-11-02T21:40:54.949Z",
+      "reserved_ms": 240000
+    },
+    {
+      "run": 41529948118,
+      "event": "request_finished",
+      "label": "writer",
+      "model": "***",
+      "effort": "low",
+      "attempt": 1,
+      "request_id": "4e4f3627-c77d-4b1b-97b4-0cf56e3c7bbf",
+      "request_hash": "e976201315d1e9f54b376abfd04df039d5c8bcd76a3f5401019d65acfebb89fd",
+      "started_at": "2026-11-02T21:40:54.949Z",
+      "reserved_ms": 240000,
+      "failed": true,
+      "retryable": true,
+      "error": "Evidence quote is not present in source for 1",
+      "error_name": "Error",
+      "error_code": null,
+      "causes": [],
+      "ms": 62214,
+      "first_byte_ms": 3763,
+      "http_status": 200,
+      "upstream_request_id": null,
+      "response_id": "resp_035cf8363b9dfd5d016ae9036822088198956d0c7d4fde44fe",
+      "finish_reason": "stop",
+      "done": true,
+      "usage": {
+        "prompt_tokens": 14586,
+        "completion_tokens": 2219,
+        "total_tokens": 16805,
+        "completion_tokens_details": {
+          "reasoning_tokens": 47
+        }
+      },
+      "response_characters": 5883,
+      "response_file": "4e4f3627-c77d-4b1b-97b4-0cf56e3c7bbf.response.json"
+    },
+    {
+      "run": 41529948118,
+      "event": "request_started",
+      "label": "writer",
+      "model": "***",
+      "effort": "low",
+      "attempt": 2,
+      "request_id": "764ee1ea-1434-4747-92e7-657f1642191b",
+      "request_hash": "ed92a3a5b8bfa49696a200a88ed1337f4423f9e446451930986b6353479fc4d5",
+      "started_at": "2026-11-02T21:42:12.176Z",
+      "reserved_ms": 240000
+    },
+    {
+      "run": 41529948118,
+      "event": "request_finished",
+      "label": "writer",
+      "model": "***",
+      "effort": "low",
+      "attempt": 2,
+      "request_id": "764ee1ea-1434-4747-92e7-657f1642191b",
+      "request_hash": "ed92a3a5b8bfa49696a200a88ed1337f4423f9e446451930986b6353479fc4d5",
+      "started_at": "2026-11-02T21:42:12.176Z",
+      "reserved_ms": 240000,
+      "failed": true,
+      "retryable": false,
+      "error": "Output contains a number absent from its evidence: -40",
+      "error_name": "Error",
+      "error_code": null,
+      "causes": [],
+      "ms": 19811,
+      "first_byte_ms": 11241,
+      "http_status": 200,
+      "upstream_request_id": null,
+      "response_id": "resp_04287772547ff444016ae903b9eca0819b8e45e7b434fd95ea",
+      "finish_reason": "stop",
+      "done": true,
+      "usage": {
+        "prompt_tokens": 16165,
+        "completion_tokens": 498,
+        "total_tokens": 16663,
+        "completion_tokens_details": {
+          "reasoning_tokens": 125
+        }
+      },
+      "response_characters": 972,
+      "response_file": "764ee1ea-1434-4747-92e7-657f1642191b.response.json"
+    }
+  ],
+  "reproduction": {
+    "full_pipeline_reproduced": "Output contains a number absent from its evidence: -40",
+    "source_calls": 0,
+    "model_calls": 0,
+    "writer_attempts_before": 2,
+    "writer_attempts_after": 2,
+    "remaining_writer_slots": 1,
+    "read_only_probe_using_unambiguous_range_wording": {
+      "full_strict_validation": "passed",
+      "cards": 17,
+      "scope": "In-memory copy only; not a publishable frozen candidate"
+    },
+    "original_downloaded_artifacts_unchanged": true
+  },
+  "advisor_claims_checked": {
+    "first_response_card5_already_failed": "Output contains a number absent from its evidence: -40",
+    "first_response_summary_error": "Executive summary exceeds 250 characters: actual=278, limit=250, over_by=28, target=200 (all non-whitespace Unicode characters after normalization)",
+    "broader_original_summary_prefix_recovery": {
+      "strict_validation": "passed",
+      "cards": 17,
+      "summary_shortening": {
+        "method": "whole_sentence_prefix",
+        "original_characters": 278,
+        "final_characters": 192,
+        "original_sentence_count": 3,
+        "kept_sentence_count": 2
+      },
+      "referenced_ids": [
+        "f9559e91fee7a2bf",
+        "94ef206f7c671a54",
+        "15b38a69bd82a805",
+        "ff6977aad77e9dfa",
+        "c39fdbabcf0f66bf"
+      ]
+    },
+    "advisor_direct_prepared_mapping_recommendation": {
+      "blind_adoption_would_discard_unknown_id": true,
+      "current_raw_mapping_rejects": "Unknown model reference: \"outside-model-batch\""
+    },
+    "clarifications": {
+      "current_writer_used": 2,
+      "maximum_writer_requests": 3,
+      "remaining": 1,
+      "quota_exhaustion_not_actual_root": true,
+      "rule_digest_includes_editorial_and_pipeline": true,
+      "do_not_reset_ledger_or_bump_revision_for_hash_bypass": true,
+      "final_validate_issue_still_prevents_publishing_invalid_normalized_cards": true,
+      "advisor_approximate_summary_count_corrected_to_278": true
+    },
+    "no_project_code_modified": true
+  },
+  "history_comparison": {
+    "baseline": "fa5ac41",
+    "today_source": "1c1cf286792877bb09b441e58d2d8703dc536400",
+    "unchanged_functions": {
+      "normalizeChinese": true,
+      "numericValues": true,
+      "validateWritingCard": true
+    }
+  },
+  "final_state": {
+    "runs": [
+      {
+        "id": 41569200423,
+        "created_at": "2026-11-03T02:56:50Z",
+        "status": "completed",
+        "conclusion": "failure",
+        "head_sha": "1c1cf286792877bb09b441e58d2d8703dc536400",
+        "html_url": "https://github.com/Freza00/us-housing-daily/actions/runs/41569200423"
+      },
+      {
+        "id": 41529948118,
+        "created_at": "2026-11-02T21:36:52Z",
+        "status": "completed",
+        "conclusion": "failure",
+        "head_sha": "1c1cf286792877bb09b441e58d2d8703dc536400",
+        "html_url": "https://github.com/Freza00/us-housing-daily/actions/runs/41529948118"
+      },
+      {
+        "id": 41398595860,
+        "created_at": "2026-11-02T06:13:47Z",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5a46633470813b3a7cf6de45fe09a7cb375b90cf",
+        "html_url": "https://github.com/Freza00/us-housing-daily/actions/runs/41398595860"
+      }
+    ],
+    "online": {
+      "date": "2026-11-02",
+      "items": 20,
+      "edition": {
+        "kind": "daily",
+        "period_key": "2026-11-02",
+        "cutoff_upper": 1793566800000,
+        "revision": 1
+      }
+    }
+  },
+  "protected_original_workspace_files": 138,
+  "additional_house_daily_model_requests": 0,
+  "source_collection_requests": 0,
+  "implementation_changes": false,
+  "workflow_reruns": false,
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

@@ -30,6 +30,52 @@ function answer(input, bad = false) {
   return { items: input.items.map(it => ({ id: it.id, title_zh: '住宅销售研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', evidence_quote: it.evidence.slice(0,70) })), executive_summary: { sentences: [{ text: `住宅销售增长 ${bad ? 99 : 5}%。`, item_ids: input.items.map(it => it.id) }] }, themes: [] };
 }
 
+for (const mode of ['card-and-metadata', 'metadata-only', 'all-cards', 'exhausted']) test('invalid complete frozen writing resumes safely: ' + mode, async t => {
+  const opts = await setup(t), env = { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid', PIPELINE_UNTIL: 'ready' };
+  const seed = { retryDelays: [0,0], fetchImpl: async (_url, request) => {
+    const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+    return response(Array.isArray(input) ? { decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', tags: [], duplicate_of: null })) } : answer(input));
+  } };
+  await runPipeline('daily', { ...opts, env, llmOptions: seed });
+  const manifest = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'manifest.json')));
+  const store = await openIssueStore(env.NEWS_STATE_DIR, { kind: 'daily', period: '2026-10-28', upper, rules: manifest.rules, model: manifest.model });
+  delete store.manifest.phases.ready;
+  const cards = await store.get('cards'), metadata = await store.get('metadata');
+  const originalCards = structuredClone(cards.items);
+  if (mode !== 'metadata-only') for (const card of mode === 'all-cards' ? cards.items : cards.items.slice(0,1)) card.summary_zh = '住宅销售增长 99%。';
+  metadata.executive_summary.sentences[0].text = '住宅销售增长 99%。';
+  if (mode === 'exhausted') store.manifest.attempts.writer.push({ request_id: 'prior-2' }, { request_id: 'prior-3' });
+  await store.put('cards', cards); await store.put('metadata', metadata);
+  await fs.rm(path.join(opts.root, 'state/llm-cache'), { recursive: true, force: true });
+  const attemptsBefore = structuredClone(store.manifest.attempts), requests = [];
+  const options = { ...opts, env, collector: { collect() { throw Error('recollection'); } }, llmOptions: { retryDelays: [0,0], fetchImpl: async (_url, request) => {
+    const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content); requests.push(body);
+    assert(!Array.isArray(input), 'editor must not run again');
+    if (mode === 'metadata-only') {
+      assert.match(body.messages[0].content, /仅纠正 executive_summary/);
+      return response({ executive_summary: answer(input).executive_summary, themes: [] });
+    }
+    assert.equal(input.items.length, mode === 'all-cards' ? 3 : 1);
+    const result = answer(input); result.executive_summary.sentences[0].item_ids = input.original_item_ids || input.items.map(it => it.id);
+    return response(result);
+  } } };
+  if (mode === 'exhausted') {
+    await assert.rejects(runPipeline('daily', options), /request budget exhausted/);
+    assert.equal(requests.length, 0);
+    const after = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'manifest.json')));
+    assert.deepEqual(after.attempts, attemptsBefore);
+    assert.equal(JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'cards.json'))).items.length, 2);
+  } else {
+    assert.equal((await runPipeline('daily', options)).stage, 'ready');
+    assert.equal(requests.length, 1);
+    const restored = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'cards.json')));
+    for (const card of restored.items) if (mode === 'metadata-only' || mode !== 'all-cards' && card.id !== originalCards[0].id) assert.deepEqual(card, originalCards.find(it => it.id === card.id));
+    const after = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'manifest.json')));
+    assert.deepEqual(after.attempts.editor, attemptsBefore.editor);
+    assert.equal(after.attempts.writer.length, 2);
+  }
+});
+
 test('validated degraded issues skip generation, while a fake complete empty issue is rejected', async t => {
   const opts = await setup(t, [...sources, { id: 'b', required: true }]);
   opts.collector.collect = async () => [{ items: rows, health }, { items: [], health: { id: 'b', required: true, status: 'error', error: 'offline source outage' } }];

@@ -170,8 +170,28 @@ export async function runPipeline(kind = 'daily', options = {}) {
   else {
     const writerBatch = createModelBatch(selection.items);
     const selectedDigest = fingerprint(selection.items);
-    const savedCards = store && await store.get('cards'), savedMetadata = store && await store.get('metadata');
+    let savedCards = store && await store.get('cards'), savedMetadata = store && await store.get('metadata');
     if ((savedCards && savedCards.selected_digest !== selectedDigest) || (savedMetadata && savedMetadata.selected_digest !== selectedDigest)) throw new Error('Writing checkpoint selection mismatch');
+    // Presence and checksums do not establish content validity. Retain only parts
+    // that pass the current contract before choosing a no-request resume path.
+    if (savedCards) {
+      const byId = new Map(selection.items.map(it => [it.id, it]));
+      if (savedCards.items.some(it => !byId.has(it?.id)) || new Set(savedCards.items.map(it => it.id)).size !== savedCards.items.length) throw new LlmError('Invalid saved writing references');
+      const items = [];
+      for (const card of savedCards.items) {
+        try { items.push(validateWritingCard(card, byId.get(card.id))); } catch (error) { if (!(error instanceof LlmError)) throw error; }
+      }
+      savedCards = { selected_digest: selectedDigest, items };
+      await store.put('cards', savedCards);
+    }
+    if (savedMetadata) {
+      try { validateWritingMetadata(structuredClone(savedMetadata), selection.items, kind); }
+      catch (error) {
+        if (!(error instanceof LlmError)) throw error;
+        savedMetadata = null;
+        await store.put('metadata', null);
+      }
+    }
     const persistParts = async (data, context, summaryShortening) => {
       if (!store || !Array.isArray(data?.items)) return;
       const inputs = context.cacheHit ? selection.items : writerBatch.items;
@@ -180,7 +200,10 @@ export async function runPipeline(kind = 'daily', options = {}) {
       const valid = [];
       for (const card of data.items) { try { valid.push(validateWritingCard(card, byId.get(card.id))); } catch (error) { if (!(error instanceof LlmError)) throw error; } }
       const mapped = context.cacheHit ? valid : writerBatch.writing({ items: valid }).items;
-      if (mapped.length) await store.put('cards', { selected_digest: selectedDigest, items: [...new Map([...(savedCards?.items || []), ...mapped].map(it => [it.id, it])).values()] });
+      if (mapped.length) {
+        savedCards = { selected_digest: selectedDigest, items: [...new Map([...(savedCards?.items || []), ...mapped].map(it => [it.id, it])).values()] };
+        await store.put('cards', savedCards);
+      }
       let metadata;
       try { metadata = validateWritingMetadata(structuredClone(data), inputs, kind); } catch (error) { if (error instanceof LlmError) return; throw error; }
       if (!context.cacheHit) metadata = writerBatch.writing({ items: [], ...metadata });

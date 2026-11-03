@@ -122,7 +122,11 @@ export function selectItems(items, decisions, { limit = 20, sourceCap = 3 } = {}
 
 const NUMERIC_LITERAL = /(?<!\d)[+-]?\d[\d,]*(?:\.\d+)?\s*(?:trillion|billion|million|thousand|万亿|亿|万|[TBMK](?![A-Za-z]))?/gi;
 export function numericValues(text) {
-  const out = new Set(), normalized = String(text).replace(/−/g, '-').replace(/(\d)[-\u2011](?=(?:trillion|billion|million|thousand)\b)/gi, '$1 ');
+  // A formatted dash is punctuation, while a single unary minus remains a sign.
+  const out = new Set(), normalized = String(text).replace(/−/g, '-')
+    .replace(/(\d\s*%?)\s*[-\u2011–—]\s*(?=\d)/g, '$1 ')
+    .replace(/--/g, ' ')
+    .replace(/(\d)[-\u2011](?=(?:trillion|billion|million|thousand)\b)/gi, '$1 ');
   for (const m of normalized.matchAll(NUMERIC_LITERAL)) {
     const n = Number(m[0].match(/[+-]?[\d,.]+/)[0].replace(/,/g, ''));
     const unit = m[0].replace(/[+\-\d,.\s]/g, '').toLowerCase();
@@ -182,8 +186,9 @@ export function validateWritingCard(card, it) {
   const quoteText = text => String(text || '').normalize('NFKC').toLowerCase().replace(/−/g, '-').replace(/(?<!\d)\.|\.(?!\d)|(?<!\d),|,(?!\d)/g, ' ').replace(/[^\p{L}\p{N}\s.%+,$\-]/gu, ' ').replace(/\s+/g, ' ').trim();
   const quote = quoteText(card.evidence_quote), bodyMatch = quoteText(it.description).includes(quote), titleMatch = quoteText(it.title).includes(quote);
   if (typeof card.evidence_quote !== 'string' || quote.length < 15 || (!bodyMatch && !titleMatch)) throw new LlmError('Evidence quote is not present in source for ' + card.id);
-  groundedNumbers(card.title_zh + ' ' + card.summary_zh, it.title + ' ' + it.description);
-  return { ...it, title_zh: normalizeChinese(card.title_zh), summary_zh: normalizeChinese(card.summary_zh), impact: card.impact,
+  const title_zh = normalizeChinese(card.title_zh), summary_zh = normalizeChinese(card.summary_zh);
+  groundedNumbers(title_zh + ' ' + summary_zh, it.title + ' ' + it.description);
+  return { ...it, title_zh, summary_zh, impact: card.impact,
     evidence_quote: card.evidence_quote, evidence_basis: bodyMatch ? 'body' : 'title', cre_subcategory: it.section === 'cre' ? detectCreSubcategory(it) : null };
 }
 export function validateWriting(data, selected, kind = 'daily', context = {}) {
@@ -207,12 +212,14 @@ export function validateWritingMetadata(data, selected, kind) {
   if (!Array.isArray(sentences) || sentences.length < 1 || sentences.length > 4) throw new LlmError('Missing executive summary');
   for (const sentence of sentences) {
     if (!sentence?.text || !Array.isArray(sentence.item_ids) || !sentence.item_ids.length || sentence.item_ids.some(id => !source.has(id))) throw new LlmError('Invalid summary evidence reference');
-    groundedNumbers(sentence.text, sentence.item_ids.map(id => source.get(id).title + ' ' + source.get(id).description).join(' ')); sentence.text = normalizeChinese(sentence.text);
+    sentence.text = normalizeChinese(sentence.text);
+    groundedNumbers(sentence.text, sentence.item_ids.map(id => source.get(id).title + ' ' + source.get(id).description).join(' '));
   }
   const text = sentences.map(x => x.text).join('');
   const themes = kind === 'daily' ? [] : (data.themes || []).slice(0, 3);
   for (const theme of themes) {
     if (!theme?.title || !Array.isArray(theme.item_ids) || !theme.item_ids.length || theme.item_ids.some(id => !source.has(id))) throw new LlmError('Invalid theme references');
+    theme.title = normalizeChinese(theme.title);
     groundedNumbers(theme.title, theme.item_ids.map(id => source.get(id).title + ' ' + source.get(id).description).join(' '));
   }
   const characters = summaryCharacterCount(text);
