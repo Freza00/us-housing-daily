@@ -1,6 +1,6 @@
 {
-  "checked_at_beijing": "2026-11-05 00:49",
-  "status": "publishing",
+  "checked_at_beijing": "2026-11-05 00:51",
+  "status": "deployed",
   "scope": "Explicitly authorized code commit, open-source sync and deployment; leave Nov4 archive and Nov5 automatic generation unchanged",
   "base_commit": "81a7043615cd17bc6a75352d635fc032e78197ff",
   "local_tests": {
@@ -12,5 +12,90 @@
   "new_collection_calls": 0,
   "manual_generation_dispatches": 0,
   "generation_rules": "ae75b2a0184df3eaed2a60a863986d2b8f5183e3815b577d10e48b4183a467ed",
-  "old_issue_rewritten": false
+  "old_issue_rewritten": false,
+  "code_commit": "8cf6579955cbc6e7ff3fe4b4421601feac06ef09",
+  "verification": {
+    "commit": "8cf6579955cbc6e7ff3fe4b4421601feac06ef09",
+    "vercel": [
+      {
+        "context": "Vercel",
+        "state": "success",
+        "url": "https://vercel.com/freza00s-projects/news-agent/A9CxpKZLC7vb1twEeziPbFuNTFvD"
+      }
+    ],
+    "status": "success",
+    "runs": [
+      {
+        "id": 41871352390,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41871352390"
+      }
+    ],
+    "online_unchanged": true,
+    "files": [
+      {
+        "route": "/",
+        "sha256": "792f350fe4ada69665a893d89f49f7697aa0d1cf44b325aad451eb4746c311b2",
+        "ok": true
+      },
+      {
+        "route": "/app.js",
+        "sha256": "2354b279c1058e4280b42c54f7f3e7089c9f73b4ce53ba640dbb0b639b31c55b",
+        "ok": true
+      },
+      {
+        "route": "/style.css",
+        "sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7",
+        "ok": true
+      },
+      {
+        "route": "/data/latest.json",
+        "sha256": "c7a110313399585dfea3487c3edff2a696b918e3c5df74042c9812b2336d467c",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-04.json",
+        "sha256": "c7a110313399585dfea3487c3edff2a696b918e3c5df74042c9812b2336d467c",
+        "ok": true
+      },
+      {
+        "route": "/data/dates.json",
+        "sha256": "235d2974dc6e13689daa581be3eaa347610b29f85bc1c84085e969ee0da0fc71",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/latest.json",
+        "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/dates.json",
+        "sha256": "86b1c150dc7cf3cce1a1009788a195ada1c4049b6b9fb685842e9d9ab2c1e822",
+        "ok": true
+      },
+      {
+        "route": "/data/monthly/latest.json",
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "ok": true
+      },
+      {
+        "route": "/data/monthly/dates.json",
+        "sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+        "ok": true
+      }
+    ],
+    "manual_generation_dispatches": 0,
+    "new_model_calls": 0
+  },
+  "ci": {
+    "run": 41871352390,
+    "node": "22.23.4",
+    "passed": 255,
+    "failed": 0
+  },
+  "protected_original_files": 220,
+  "nov5_automatic_generation": "pending; no manual dispatch or new observer registered",
+  "nov4_and_periodicals": "unchanged; all 10 data and frontend routes match"
 }
