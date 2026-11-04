@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-11 月 4 日测试时钟修复已由 4514369 同步开源并上线；本地两份及 Node.js 22 CI 各 249 项通过，规则散列不变。补跑 41842020832 已生成 16 条并由 c7ba641 推送，editor／writer 各 1 次；发布器因线上未更新在等待窗口后返回交付失败，正在只恢复部署与核验，不再次生成。自动数据提交为何没有对应部署记录待确认。[验收](docs/validation/2026-11-04-test-clock-implementation.md)。
+11 月 4 日测试时钟修复及 16 条日报已同步开源并上线。修复提交 4514369，主工作区、隔离副本及 Node.js 22 CI 各 249 项通过，规则散列不变；补跑 41842020832 完成生成并由 c7ba641 推送，editor／writer 各 1 次。该任务因线上交付超时仍记 failure；随后 f98420b 单独恢复部署，Vercel success、四路线上数据与原候选完全一致，恢复未新增模型请求。自动数据提交缺少部署记录的原因仍待查，不记为准时或全程自动成功。[验收](docs/validation/2026-11-04-test-clock-implementation.md)。
 
 11 月 3 日 17 条日报和通用修复均已同步开源 main 并上线。先以 413682d 发布旧规则恢复稿，再以 cc48955 修复数字区间／负号解析、最终排版校验和冻结卡片／摘要恢复；Node.js 22 CI 的 242 项通过，Vercel success。两次部署后的首页、latest、归档及索引均匹配候选。零新模型／源站请求，原规则、r1、账本及原工作区业务数据保持；下次自动首跑和连续准时出刊仍待观察。[发布验收](docs/validation/2026-11-03-daily-range-release.md)。
 
@@ -18,7 +18,7 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 ## 进行中
 
-- 11 月 4 日生成已完成并推送，正在恢复交付，禁止再次调用模型；自动数据提交缺少部署记录的具体原因待确认。P1 工作流职责划分继续不实施。[验收](docs/validation/2026-11-04-test-clock-implementation.md)。
+- 11 月 4 日 P0 修复和 16 条补发均已完成，自动数据提交未建部署记录的具体原因待查；本次人工恢复交付不能证明后续自动交付稳定。P1 工作流职责划分继续不实施。[验收](docs/validation/2026-11-04-test-clock-implementation.md)。
 
 - 新配置已上线，等待 11 月 9 日周报（北京 14:00／15:00）及 12 月 1 日月报（15:00／16:00）的实际首跑；本期旧刊保留，周报 8 小时过渡窗口不补发、不自动移入下一自然周。本次没有新采集或模型请求。[施工与边界](docs/plans/2026-11-02-periodical-calendar-trial.md)。
 
@@ -29,6 +29,8 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 15 个研究入口仍有访问或发现障碍；31／46 可读是此前本机探针结果，不代表生产已全部覆盖。Vercel CLI 现有 token 无效，未独立读取账号套餐和线上 cron 注册表；部署已接受仓库 cron 配置，Actions 补偿配置已上线。
 
 ## 最近完成
+
+- 2026-11-04 22:03 发布测试时钟修复 4514369；4 号补跑生成 16 条，由 c7ba641 推送、f98420b 恢复交付。线上四路数据一致，Vercel success；生成使用 editor／writer 各 1 次，交付恢复零新增调用。运行因交付超时仍为 failure，未伪记全自动成功。[验收](docs/validation/2026-11-04-test-clock-implementation.md)。
 
 - 2026-11-04 21:50 修复测试固定日期与真实时钟耦合，按 URL 模拟真实正文并补齐日期／延迟／截稿上界断言。仅改测试和记录，尚在继续发布与补跑。[本地验收](docs/validation/2026-11-04-test-clock-implementation.md)。
 
@@ -60,9 +62,10 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 2026-10-29 16:59 经用户明确授权，提交 fcf48b8 并推送 main，Vercel 部署成功。短编号映射、有界重试与诊断、拒稿规范化、金额连字符修复及 29 号 20 条补稿已上线；advisor 复验通过，保持数字与连续引文校验。65／77 源成功，degraded 和历史覆盖缺口保留。[施工与范围](docs/plans/2026-10-29-model-recovery.md)。
 - 2026-10-28 23:07 发布代码 0010673，Vercel 报告部署成功；生产 HTML／JS／CSS 与隔离发布版逐项 SHA-256 一致，最新日报仍为 10 月 28 日。原工作区及无关 CSS、截图、lock 未改写。发布证据见 [生产验收](docs/validation/production-deployment.json)。
 - 2026-10-28 23:00 采纳 advisor 意见：05:00 日报、07:00 周报及 08:00 补偿；周报固定北京上周一 05:00 至本周一 05:00，不等待日报模型成功。生成工作流取消 push 触发，独立只读 CI 运行离线测试。
-- 2026-10-28 22:37 完成逐源水位、原料指纹恢复、补采标记、周月补查原料持久化；配置 77 个入口（含 46 个研究入口），采用 medium 编辑／low 写作和约 180 字速读摘要。实现及限制见 [详细验收](docs/validation/2026-10-28-morning-deadline.md)。
 
 ## 最近验证
+
+- 2026-11-04 22:03 Node.js v22.23.4 CI 249／249、0 失败；本次生产生成前 249 项通过。最终附件全部阶段散列及原规则通过，r1／原截止点保持；16 条严格合格、174 字符摘要、65／77 来源正常，原 ledger 1＋1 次。Vercel success，首页／latest／归档／索引逐项匹配候选，209 个非目标原文件保持。[证据](docs/validation/2026-11-04-test-clock-implementation.json)。
 
 - 2026-11-04 21:50 定向 8 项、主工作区及隔离发布副本各 249／249、0 失败；规则模块散列与来源／标签组合散列均保持，生产代码／工作流不变，语法检查通过。[结果](docs/validation/2026-11-04-test-clock-implementation.json)。
 
@@ -95,7 +98,6 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 2026-10-29 19:06 最终代码 c9be26c 的 Node.js 22.23.4 CI 166 项通过、0 失败；Vercel 部署成功。线上首页／JS／CSS／latest／29 号归档／日期列表与候选 SHA-256 全部一致，页面实际引用 /app.js?v=2026-10-29-editorial 内容匹配；FOMC 1 条、BTR 1 条、20 条总数及固定截止点通过。未执行浏览器视觉验收或付费生成。[结构化证据](docs/validation/2026-10-29-editorial-production.json)。
 - 2026-10-29 18:56 主工作区和隔离发布候选在 Node.js v25.8.0 各通过 166 项测试；17 个运行脚本语法及 JSON 检查通过，首页内嵌／latest／归档一致。实际 57 条保存决策回放 19 条、FOMC 1 条；人工补查修订 20 条的数字及连续引文通过。两源本机实采 2／2 可读，advisor 独立复审通过；55 个正式文件和原 CSS／水位／pending 未变。不是远端 CI、生产采集或新模型全链路验收。[范围与限制](docs/validation/2026-10-29-editorial-coverage.md)。
 - 2026-10-29 16:59 生产首页、latest、29 号 JSON 及日期索引均返回 HTTP 200，SHA-256 与候选逐项一致，日期为 2026-10-29、20 条。[Node.js 22 CI](https://github.com/Freza00/us-housing-daily/actions/runs/40845600776) 127 项通过、0 失败；[Vercel 部署](https://vercel.com/freza00s-projects/news-agent/ChAbePwZpDBsK8fkG9RhpEzJaeUe) 成功。本地 127 项、5 个 YAML、脚本语法及 diff 检查通过，完整补稿与 advisor 复验通过；固定截止点和 14 条截稿后 pending 保留，根工作区 59 个正式文件及无关资源未改。[结构化证据](docs/validation/2026-10-29-production.json)。
-- 2026-10-28 23:07 [生产 CI](https://github.com/Freza00/us-housing-daily/actions/runs/40712118581) 在 Node.js 22.23.3 完成 103 项测试，0 失败；生产静态文件和最新数据内容比对通过，周报接口无授权请求返回预期 401，未触发生成。Vercel 部署 [J4XSdDEF2RJ5QyNUZi4fY5EBTqzG](https://vercel.com/freza00s-projects/news-agent/J4XSdDEF2RJ5QyNUZi4fY5EBTqzG) 成功。
 
 ## 已定位问题
 

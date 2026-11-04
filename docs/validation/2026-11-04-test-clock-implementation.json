@@ -1,6 +1,6 @@
 {
-  "checked_at_beijing": "2026-11-04 22:00",
-  "scope": "Approved P0 test-clock plan implementation; production rules and workflows unchanged",
+  "checked_at_beijing": "2026-11-04 22:03",
+  "scope": "Approved P0 implementation, publication and same-day recovery",
   "tests": {
     "targeted": 8,
     "workspace": 249,
@@ -23,10 +23,10 @@
   ],
   "protected_original_files": 209,
   "production_data_untouched": true,
-  "production_generation_requests": 0,
+  "production_generation_requests": 2,
   "commit_status": "pushed",
-  "deployment_status": "fix_deployed_daily_delivery_pending",
-  "nov4_recovery_status": "generated_and_pushed_but_online_verification_timed_out",
+  "deployment_status": "success",
+  "nov4_recovery_status": "online_verified_after_delivery_only_recovery",
   "fix_commit": "4514369d37b5c9d21a5d6a3414eaba51fcb96dbe",
   "fix_verification": {
     "commit": "4514369d37b5c9d21a5d6a3414eaba51fcb96dbe",
@@ -210,5 +210,52 @@
     }
   },
   "daily_data_commit": "c7ba641112d4897e1bdcf273786021e58c527a11",
-  "additional_model_calls_after_generation": 0
+  "additional_model_calls_after_generation": 0,
+  "final_delivery": {
+    "schema_version": 1,
+    "ok": true,
+    "host": "https://news-agent-mu.vercel.app",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-04",
+      "cutoff_upper": 1793739600000,
+      "revision": 1
+    },
+    "payload_sha256": "0b3ad7a1b4ec4406c24d8f4b8181d3d186b73b04762d5385adff3898c02bfed5",
+    "commit": "f98420b95d194bb8eacbb2d1a7bc5ce95f6cd0ea",
+    "checked_at": 1793800891149,
+    "files": [
+      {
+        "route": "/data/latest.json",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-04.json",
+        "ok": true
+      },
+      {
+        "route": "/data/dates.json",
+        "ok": true
+      },
+      {
+        "route": "/",
+        "ok": true
+      }
+    ],
+    "deployment": {
+      "commit": "f98420b95d194bb8eacbb2d1a7bc5ce95f6cd0ea",
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "url": "https://vercel.com/freza00s-projects/news-agent/EAiiBqCeNMkZzDTERa4yBqeUaTf1"
+        }
+      ]
+    },
+    "data_commit": "c7ba641112d4897e1bdcf273786021e58c527a11",
+    "delivery_recovery_model_calls": 0
+  },
+  "automatic_delivery_followup": "Data commit had no deployment record at check; exact cause unconfirmed; delivery-only recovery succeeded",
+  "original_frozen_ledger_unchanged": true
 }
