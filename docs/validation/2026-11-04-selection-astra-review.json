@@ -1,0 +1,93 @@
+{
+  "checked_at_beijing": "2026-11-04 23:32",
+  "advisor": {
+    "agent": "/root/astra_max_selection_review",
+    "requested_model": "gpt-6-astra",
+    "reasoning_effort": "max",
+    "status": "completed",
+    "scope": "Read-only review, source comparison, frozen replay and spillover probe"
+  },
+  "counts": {
+    "normalized": 203,
+    "eligibility": 87,
+    "excluded": {
+      "insufficient_evidence": 15,
+      "outside_publication_window": 101
+    },
+    "pre_dedupe": 87,
+    "post_dedupe": 85,
+    "pre_enrichment": 44,
+    "post_enrichment": 35,
+    "keep": 19,
+    "qualified": 16,
+    "selected": 16,
+    "source_cap_999": 16,
+    "duplicates": 0
+  },
+  "phase_digests": {
+    "prepared": true,
+    "editor": true,
+    "cards": true,
+    "metadata": true,
+    "ready": true
+  },
+  "source_parity": {
+    "editorial.mjs": true,
+    "pipeline.mjs": true,
+    "news-core.mjs": true,
+    "editorial-coverage.mjs": true,
+    "issue-store.mjs": true,
+    "model-references.mjs": true,
+    "llm-client.mjs": true,
+    "sources.mjs": true,
+    "issue-contract.mjs": true,
+    "event-groups.mjs": true
+  },
+  "ledger": {
+    "editor": {
+      "count": 1,
+      "ms": 48516
+    },
+    "writer": {
+      "count": 1,
+      "ms": 89987
+    }
+  },
+  "identity": {
+    "kind": "daily",
+    "period_key": "2026-11-04",
+    "cutoff_upper": 1793739600000,
+    "revision": 1
+  },
+  "findings": [
+    "No final loss of model-qualified stories; 16 is not a market-wide count",
+    "Publisher candidate cap prevents the fifth HousingWire story despite unused total capacity",
+    "All four admitted HousingWire stories have article bodies after hydration; evidence-failure refill alone does not fix this example",
+    "BTR section contains two multifamily stories without independent BTR/SFR qualification"
+  ],
+  "spillover_probe": {
+    "baseline": 44,
+    "after_spillover": 72,
+    "additional_candidates": 28,
+    "los_angeles_extra_rank": 2,
+    "los_angeles_id": "2b333e9fc5b09acd",
+    "los_angeles_would_be_evaluated": true,
+    "los_angeles_editor_rating": "unknown; no new model call"
+  },
+  "clarifications": [
+    "NYC $231M office conversion story likely covered by already-published Connect CRE story; not established independent omission",
+    "Zero btr-sfr asset labels is not the same as no original BTR-related candidate; Pretium event was reviewed and rejected",
+    "Failed sources do not prove those sources carried additional qualifying news",
+    "Changing candidate publisher limits is a selection-policy change, not proof the current code violates its existing contract"
+  ],
+  "recommended_scope": [
+    "Candidate spillover within existing 72 bound before prepared freeze",
+    "Bounded enrichment attempts and refill before editor; no post-editor repair loop",
+    "Narrow BTR/asset consistency validation; preserve positive BTR cases",
+    "Keep final publisher cap, dedup, minimum quality and existing per-stage/global budgets"
+  ],
+  "implementation_changes": false,
+  "issue_changes": false,
+  "new_production_model_calls": 0,
+  "published": false
+}

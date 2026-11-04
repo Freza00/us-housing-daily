@@ -1,0 +1,545 @@
+{
+  "raw_materials": 203,
+  "initial_eligibility": {
+    "eligible": 87,
+    "excluded_by_reason": {
+      "insufficient_evidence": 15,
+      "outside_publication_window": 101
+    }
+  },
+  "eligible_after_seen_and_dedupe": 85,
+  "dropped_before_dedupe": 0,
+  "deduplicated": 2,
+  "pre_enrichment_candidates": 44,
+  "post_enrichment_candidates": 35,
+  "evidence_removed_after_enrichment": [
+    {
+      "id": "2e5529667197e615",
+      "title": "Local cidery partners with Giant Texas Distillers, Tejas Brewery to expand - The Business Journals",
+      "source": "Houston Business Journal — Commercial RE",
+      "reason": "insufficient_evidence"
+    },
+    {
+      "id": "f4f8c300af1e744a",
+      "title": "What real estate power players want to see from the Midterms - Inman Real Estate News",
+      "source": "Inman News",
+      "reason": "insufficient_evidence"
+    },
+    {
+      "id": "e2fc3d983ac88ea9",
+      "title": "NYC Office-to-Resi Conversion Secures $231M - Multifamily Housing News",
+      "source": "Multi-Housing News",
+      "reason": "insufficient_evidence"
+    },
+    {
+      "id": "215286421c02c225",
+      "title": "Leader of Houston arts nonprofit departs after 15 years with organization - The Business Journals",
+      "source": "Houston Business Journal — Commercial RE",
+      "reason": "insufficient_evidence"
+    },
+    {
+      "id": "54e5eb9cf1da6722",
+      "title": "Delta adds direct route from Austin to Arkansas - The Business Journals",
+      "source": "Austin Business Journal — Commercial RE",
+      "reason": "insufficient_evidence"
+    },
+    {
+      "id": "bd47450b92f82309",
+      "title": "Sysco names Brandon Sewell executive vice president and CFO - The Business Journals",
+      "source": "Houston Business Journal — Commercial RE",
+      "reason": "insufficient_evidence"
+    },
+    {
+      "id": "60315c5f3ca811c5",
+      "title": "Door knocks and AI: How smart agents run open houses in 2026 - Inman Real Estate News",
+      "source": "Inman News",
+      "reason": "insufficient_evidence"
+    },
+    {
+      "id": "0a833b04d480195d",
+      "title": "NAR’s McGahn on what’s next after the midterms - Inman Real Estate News",
+      "source": "Inman News",
+      "reason": "insufficient_evidence"
+    },
+    {
+      "id": "55141cdb0b19c7c7",
+      "title": "You don't need a 37-step business plan. You need these 3 things - Inman Real Estate News",
+      "source": "Inman News",
+      "reason": "insufficient_evidence"
+    }
+  ],
+  "decisions": {
+    "total": 35,
+    "rejected": 16,
+    "kept": 19,
+    "importance_below_3": [
+      {
+        "id": "73ec677547712c50",
+        "title": "Fannie Mae, Freddie Mac rally as Ackman presses for conservatorship exit",
+        "importance": 2,
+        "reason": "涉及房利美和房地美退出托管的市场预期及股价大幅上涨，但核心判断来自单一投资者观点，政策进展证据有限。"
+      },
+      {
+        "id": "154a60ef9b47a958",
+        "title": "Lowe’s Locating in Booming Willis",
+        "importance": 2,
+        "reason": "报道休斯顿周边约9.5万平方英尺零售店开业及其所在购物中心93%出租率，具有限度的地方零售供给参考价值。"
+      },
+      {
+        "id": "8b9eb3c64df389af",
+        "title": "San Diego Accountant Tricked Investors Into Sinking $8.2 Million Into Phony ADU Venture",
+        "importance": 2,
+        "reason": "ADU投资诈骗案判刑，涉及820万美元投资损失但属于单一刑事案件，对行业层面的参考价值有限。"
+      }
+    ],
+    "qualified": 16,
+    "selected": 16,
+    "qualified_but_not_selected": []
+  },
+  "candidate_cap_losses": [
+    {
+      "id": "2b333e9fc5b09acd",
+      "title": "A $20M fine stalks Los Angeles over delay of a new housing project",
+      "source": "HousingWire",
+      "family": "housingwire",
+      "link": "https://www.housingwire.com/articles/mountain-lion-housing-law-fight/",
+      "evidence_status": "article",
+      "description_length": 3119
+    },
+    {
+      "id": "a2d1e9fec8adf738",
+      "title": "New York Knicks Star Josh Hart Takes Another Shot at Selling Florida Home for $5.7 Million",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/sports/new-york-knicks-josh-hart-relists-florida-home/",
+      "evidence_status": "article",
+      "description_length": 4499
+    },
+    {
+      "id": "4faec99958886949",
+      "title": "Austin entrepreneur ID'd as victim of Florida plane crash - The Business Journals",
+      "source": "Austin Business Journal — Commercial RE",
+      "family": "bizjournals",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWWhvV3B6VjdCU0tySEJOZURIblUxdndaZDE2NGJST3ZnUVNxWnAwOHRLd1YzY2NoZUI3X2NHMktLbWJpQjVWclBUdDlfSDVVemFfMzlqXzVEakJsTXRoTXBVazZoQmJFcFFubTN6UTlLSElkRnJ4QUhwTy1nUFEzU1o1ZWQyQ0VzOTJoMWJJU2RVN1o3TWhNWHRB?oc=5",
+      "description_length": 92
+    },
+    {
+      "id": "52904f63db4fcfb9",
+      "title": "We tried Real's Private Label for a year. Independence still wins - Inman Real Estate News",
+      "source": "Inman News",
+      "family": "inman",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5BcUxMMXJmZlBYdnFBamVaa3Qtd3hibTNQNFZXdzVqNlFlYThFNWFOYkJ1M09yNzhkZ2lpX0tta2laV3VreEJ2UlhFTmFHQVVqeFpPaUs3MmxkT1FESWR5SHdsR1lyTWY1aHNtZGxmQQ?oc=5",
+      "description_length": 101
+    },
+    {
+      "id": "9262fab32eccf1d0",
+      "title": "How Newrez, Bayview and Onity are managing their MSRs",
+      "source": "National Mortgage News",
+      "family": "national-mortgage-news",
+      "link": "https://www.nationalmortgagenews.com/news/how-newrez-bayview-and-onity-are-managing-their-msrs",
+      "description_length": 159
+    },
+    {
+      "id": "2f643012df40c26d",
+      "title": "Tracking the biggest IMB talent shifts in 2026",
+      "source": "National Mortgage News",
+      "family": "national-mortgage-news",
+      "link": "https://www.nationalmortgagenews.com/list/crosscountry-rate-nexa-lead-lo-recruiting-whos-next",
+      "description_length": 143
+    },
+    {
+      "id": "a2c35fa7958fbff8",
+      "title": "10-Acre Florida Ranch With NBA-Level Facility Is Listed for $38.9 Million in Celebrity Enclave Where Gisele Bündchen Lives",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/unique-homes/a-latin-pop-stars-10-acre-florida-ranch-with-an-nba-facility-lists-for-38-9m-near-gisele-bundchen/",
+      "description_length": 139
+    },
+    {
+      "id": "2da56e88ff5b08b0",
+      "title": "Designer Ken Fulk Finds a Buyer for Midcentury Modern San Francisco ‘Tree House’—as Fully-Furnished Napa Valley Ranch Remains Up For Grabs",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/unique-homes/designer-ken-fulk-san-francisco-tree-house-finds-buyer/",
+      "description_length": 123
+    },
+    {
+      "id": "8a5600e84df259d4",
+      "title": "Prince Harry and Meghan Markle Find a New Home Base in the Cotswolds",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/celebrity-real-estate/prince-harry-meghan-markle-move-to-new-cotswolds-home-uk/",
+      "description_length": 125
+    },
+    {
+      "id": "2e73f9220c8b5c0a",
+      "title": "Trump Remains ‘Laser-Focused’ on Housing Affordability Despite Final Midterm Speech on DC Reflecting Pool, White House Says",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/real-estate-news/donald-trump-housing-affordability-midterm-elections-reflecting-pool/",
+      "description_length": 121
+    },
+    {
+      "id": "365e0f1cd6cfafc7",
+      "title": "Rebecca Gayheart Reveals Shock of Eric Dane’s Death—and How They Made His Hospital Room Feel Like Home in His Final Moments",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/celebrity-real-estate/rebecca-gayheart-eric-danes-hospital-room-before-death/",
+      "description_length": 125
+    },
+    {
+      "id": "0527f3afaf400720",
+      "title": "‘Homestead’ Actor Bailey Chase Reveals the ‘Final Straw’ That Inspired a Move to a North Carolina Home That Wouldn’t Have Been ‘Affordable’ in L.A.",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/celebrity-real-estate/bailey-chase-quits-los-angeles-moves-to-north-carolina/",
+      "description_length": 119
+    },
+    {
+      "id": "2300345e619fd3c5",
+      "title": "HGTV’s Alison Victoria Reveals the Most Haunting Part of Transforming the ‘Scariest House in America’ on a $150K Budget",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/reality-tv/hgtv-scariest-house-america-harrisburg-pennsylvania-renovation/",
+      "description_length": 129
+    },
+    {
+      "id": "494e2fde41ba039b",
+      "title": "EXCLUSIVE: Jim Carrey Lands a Buyer for His $35 Million Hawaii Home—One Month After Putting It on the Market",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/celebrity-real-estate/jim-carrey-sells-hawaii-home-one-month-wedding/",
+      "description_length": 101
+    },
+    {
+      "id": "923d1954035805a1",
+      "title": "Pregnant Savannah Chrisley Announces She’s Expecting a Baby Boy With Husband Jason Galanis: ‘Our Sweet Miracle’",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/reality-tv/pregnant-savannah-chrisley-expecting-baby-boy-jason-galanis/",
+      "description_length": 139
+    },
+    {
+      "id": "2828e0baff84ba56",
+      "title": "Why a Long Island Town’s Crackdown on Vacation Rentals May Not Fix Its Housing Crisis",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/trends/southold-airbnb-crackdown-second-homes-housing-shortage/",
+      "description_length": 128
+    },
+    {
+      "id": "b1a4943f8bc7ca57",
+      "title": "Wall Street’s AI Sell-Off Exposes a Weak Spot in the Bank of Mom and Dad",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/trends/ai-stock-sell-off-bank-of-mom-and-dad-homebuyers/",
+      "description_length": 137
+    },
+    {
+      "id": "3724ba8ac1a2c89d",
+      "title": "Beverly Hills Mansion With Private Nightclub, DJ Booth, and Dance Floor Is Listed for an Astonishing $70 Million",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/unique-homes/beverly-hills-mansion-private-nightclub-dance-floor-most-expensive/",
+      "description_length": 129
+    },
+    {
+      "id": "d6cef69d25e2753d",
+      "title": "Nicolas Cage Says He’s a ‘Bit Homeless’ and ‘Living in Hotels’ After Sinkhole Damaged $10.5 Million Malibu Home",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/celebrity-real-estate/nicolas-cage-homeless-sinkhole-malibu-mansion/",
+      "description_length": 134
+    },
+    {
+      "id": "f71911cb6d82f65c",
+      "title": "Immigration Slowdown To Sharply Reduce Renter Household Growth, Study Says",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/real-estate-news/immigration-slowdown-enter-household-growth-jchs/",
+      "description_length": 137
+    },
+    {
+      "id": "5bd90c2c08231a50",
+      "title": "Miami Cash4Keys Execs Accused of Stealing Vulnerable Senior’s Home in Brazen Scheme",
+      "source": "Realtor.com News",
+      "family": "realtor-com",
+      "link": "https://www.realtor.com/news/trends/cash4keys-kidnapping-plot-stolen-florida-home/",
+      "description_length": 115
+    },
+    {
+      "id": "0138354a8d299b9d",
+      "title": "Newmark Arranges $130M Sale of NorthBay Healthcare Portfolio in Northern California",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/newmark-arranges-130m-sale-of-northbay-healthcare-portfolio-in-northern-california/",
+      "description_length": 600
+    },
+    {
+      "id": "3fcd781c984fe770",
+      "title": "Colliers Secures $8.5M Sale of Industrial Building in Denver",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/colliers-secures-8-5m-sale-of-industrial-building-in-denver/",
+      "description_length": 600
+    },
+    {
+      "id": "29ecea40c4e7f8cd",
+      "title": "Pacific Coast Commercial Brokers Sale of 30,887 SF Office Building in San Diego",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/pacific-coast-commercial-brokers-sale-of-30887-sf-office-building-in-san-diego/",
+      "description_length": 600
+    },
+    {
+      "id": "db17ddbe0e808099",
+      "title": "Progressive Negotiates $6M Sale of Retail Center in Rancho Cucamonga, California",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/progressive-negotiates-6m-sale-of-retail-center-in-rancho-cucamonga-california/",
+      "description_length": 600
+    },
+    {
+      "id": "50a6df6d2454c86a",
+      "title": "Cushman & Wakefield Brokers $109.5M Sale of Northern New Jersey Shopping Center",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/cushman-wakefield-brokers-109-5m-sale-of-northern-new-jersey-shopping-center/",
+      "description_length": 600
+    },
+    {
+      "id": "197c7829187431e8",
+      "title": "Cronheim Mortgage Arranges $70M Acquisition Loan for Long Island Shopping Center",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/cronheim-mortgage-arranges-70m-acquisition-loan-for-long-island-shopping-center/",
+      "description_length": 600
+    },
+    {
+      "id": "db250f931885a6c1",
+      "title": "Partnership Acquires Student Housing Property in Manhattan’s East Village for $28M",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/partnership-acquires-student-housing-property-in-manhattans-east-village-for-28m/",
+      "description_length": 600
+    },
+    {
+      "id": "9ce7b248c6ead498",
+      "title": "JLL Brokers $23.5M Sale of Mixed-Use Development Site in Brooklyn",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/jll-brokers-23-5m-sale-of-mixed-use-development-site-in-brooklyn/",
+      "description_length": 600
+    },
+    {
+      "id": "08a12e7a5f55aa38",
+      "title": "Howard University, Developers Break Ground on 11-Story Multifamily Development in D.C.",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/howard-university-developers-break-ground-on-11-story-multifamily-development-in-d-c/",
+      "description_length": 600
+    },
+    {
+      "id": "69840e1d945d2209",
+      "title": "High Street Delivers 370-Unit Apartment Community in Apex, North Carolina",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/high-street-delivers-370-unit-apartment-community-in-apex-north-carolina/",
+      "description_length": 600
+    },
+    {
+      "id": "f4e57c7d137f5aeb",
+      "title": "City of Coral Gables Acquires Downtown Medical Office Building from ShareMD for $24M",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/city-of-coral-gables-acquires-downtown-medical-office-building-from-sharemd-for-24m/",
+      "description_length": 600
+    },
+    {
+      "id": "884c4bcc276dd893",
+      "title": "Colliers Negotiates $14M Sale of Shopping Center in Gulf Breeze, Florida",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/colliers-negotiates-14m-sale-of-shopping-center-in-gulf-breeze-florida/",
+      "description_length": 600
+    },
+    {
+      "id": "5526b78affbc4af1",
+      "title": "Eastham Capital, Bender Cos. Acquire 204-Unit Multifamily Community in Omaha",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/eastham-capital-bender-cos-acquire-204-unit-multifamily-community-in-omaha/",
+      "description_length": 600
+    },
+    {
+      "id": "dd48e557fd8daac8",
+      "title": "Marcus & Millichap Brokers Sale of 164-Room Radisson RED Hotel in Minneapolis",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/marcus-millichap-brokers-sale-of-164-room-radisson-red-hotel-in-minneapolis/",
+      "description_length": 600
+    },
+    {
+      "id": "c88f1b781e287cec",
+      "title": "Kraus-Anderson Completes Conversion of Wisconsin Hotel into 146 Affordable Housing Units",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/kraus-anderson-completes-conversion-of-wisconsin-hotel-into-146-affordable-housing-units/",
+      "description_length": 600
+    },
+    {
+      "id": "2411629c24910973",
+      "title": "CBRE Arranges $8M Sale of Flex Industrial Property in Southwest Ohio",
+      "source": "REBusiness Online",
+      "family": "rebusiness-online",
+      "link": "https://rebusinessonline.com/cbre-arranges-8m-sale-of-flex-industrial-property-in-southwest-ohio/",
+      "description_length": 600
+    },
+    {
+      "id": "579a49a62d9e326f",
+      "title": "Hobby Center unveils $45M capital campaign, plans new jazz-bar-style venue (GALLERY) - The Business Journals",
+      "source": "Houston Business Journal — Commercial RE",
+      "family": "bizjournals",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPS0NwcmQtRGhKeHdSZHVac2xtY1JVSUdLT0xHUDltYWVDVGI1RWE3OXlmaGxYRWtqZ0R4dWJLVDA3SjYyRFFFazBLemFBMF9pNjVJUGpBZFNXNTJ3aURRakhPaHcwOGNka3BKSGRWN3pId3NDemo4d1ZxX0M1V0xFZmZvelRhZDg3V01fS3B4UnVmZVJzQjJzUzhXV3BDNnFhX1dGV1pXYmw3azA?oc=5",
+      "description_length": 119
+    },
+    {
+      "id": "ac390c0c69b9085a",
+      "title": "Italian airline ITA Airways lands Rockets partnership after launching first Houston route - The Business Journals",
+      "source": "Houston Business Journal — Commercial RE",
+      "family": "bizjournals",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPYVlBLU9WbEEycTZocElKTXFubmZhZWVneHZTQXRlMW90T19VZm9CMzByc0tsSHl4TnowRmVTV1dwbUVSZURCSmZVUlgtbXBucEFwY2lza3k1S1NiTlo1SkRMd1NrN2RZTkR3VHJUT1k5d2RoS2Q0UTF1OUtWbFozT19ERWxlMXJpVkVuUlVoWlQxX0lDR3Flb3pEY092YWRkMVhDVA?oc=5",
+      "description_length": 124
+    },
+    {
+      "id": "cc4a828d81033a04",
+      "title": "CVR Energy to acquire 2 refineries from Marathon Petroleum in $4.2B deal - The Business Journals",
+      "source": "Houston Business Journal — Commercial RE",
+      "family": "bizjournals",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOVVyZVlfc2V4bFpJX1A2cEhfV0pZa1BmNnlDT3A5ZDlzakNoSjY0d3hPRmRQSGJvamU3S1gybm1rZzU2WWFJRUltamdfYVR2aGo1c1hoeEc5SHFYYWpBemRCSDVCYUg5Qk1URlNZcVpGLVJxeWNjTGxrbEstb1ZSNlVyUW1lY0NYbl9CTlp6Uk4yN0J0UnQyOG4zMG5kQnMweUo0Uzhlcw?oc=5",
+      "description_length": 107
+    },
+    {
+      "id": "e4c682150e67f173",
+      "title": "What longtime local attorney Bret Strong sees for The Woodlands' future - The Business Journals",
+      "source": "Houston Business Journal — Commercial RE",
+      "family": "bizjournals",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQT0Y1M1ZNV25Ka1ItYWZiZktPNllPZHI0aUxOUnFzUjUzd2VoRE42dk5ibTcwTG82MC1xd2twT3RNVUV1ZG1PZFZXeG5kUGw4SHkyR3phbi1zS3VNRERwczJTNzJfdERtTkZaZzBJMWZNQVNJcHVKWnM5OWx1Q3RGZzZhVjZWZWJnZHVVYl93d3FlRmgwQ0hhR2JOcmxOUk1taWdlNkJ4cjVYdEU?oc=5",
+      "description_length": 106
+    }
+  ],
+  "failures": [
+    {
+      "id": "trd-national",
+      "name": "The Real Deal (National)",
+      "status": "error",
+      "error": "Directory contained no matching links"
+    },
+    {
+      "id": "miami-agent",
+      "name": "Miami Agent Magazine",
+      "status": "error",
+      "error": "fetch failed (ERR_TLS_CERT_ALTNAME_INVALID)"
+    },
+    {
+      "id": "pere-news",
+      "name": "PERE News",
+      "status": "error",
+      "error": "HTTP 404"
+    },
+    {
+      "id": "btrlist",
+      "name": "BTR List (via Google News)",
+      "status": "unreadable",
+      "recent": 1
+    },
+    {
+      "id": "fannie-esr",
+      "name": "Fannie Mae ESR",
+      "status": "error",
+      "error": "HTTP 403"
+    },
+    {
+      "id": "harvard-jchs",
+      "name": "Harvard JCHS",
+      "status": "error",
+      "error": "HTTP 403"
+    },
+    {
+      "id": "uli-pwc",
+      "name": "ULI/PwC Emerging Trends",
+      "status": "error",
+      "error": "Directory contained no matching links"
+    },
+    {
+      "id": "john-burns",
+      "name": "John Burns Research",
+      "status": "error",
+      "error": "HTTP 403"
+    },
+    {
+      "id": "arbor-research",
+      "name": "Arbor/Chandan Research",
+      "status": "error",
+      "error": "HTTP 404"
+    },
+    {
+      "id": "newmark-research",
+      "name": "Newmark Research",
+      "status": "error",
+      "error": "HTTP 403"
+    },
+    {
+      "id": "mba-research",
+      "name": "MBA Research",
+      "status": "error",
+      "error": "HTTP 403"
+    },
+    {
+      "id": "apartmentlist-research",
+      "name": "Apartment List Research",
+      "status": "error",
+      "error": "Directory contained no matching links"
+    }
+  ],
+  "btr_selected": [
+    {
+      "id": "d65f3c31de48d07c",
+      "title": "Realpage rent-pricing case wraps with nearly $360M to renters",
+      "title_zh": "RealPage 租金定价诉讼达成近 $360M 和解",
+      "tags": [
+        "multifamily",
+        "regulation",
+        "distress"
+      ],
+      "link": "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553/",
+      "selector_reason": "联邦法院批准近3.6亿美元租客和解，涉及多户租金算法定价诉讼及其后续法律风险。"
+    },
+    {
+      "id": "256be9ff86ff003c",
+      "title": "Walker & Dunlop Arranges $117.3M Refinancing of Texas Apartment Portfolio",
+      "title_zh": "德州 960 套公寓组合获 $117.3M 再融资",
+      "tags": [
+        "multifamily",
+        "texas",
+        "deals"
+      ],
+      "link": "https://rebusinessonline.com/walker-dunlop-arranges-117-3m-refinancing-of-texas-apartment-portfolio/",
+      "selector_reason": "披露德州三处共960套公寓的1.173亿美元再融资，涉及奥斯汀北郊和达拉斯北部资产。"
+    }
+  ],
+  "counterfactual": {
+    "sourceCap_999": 16,
+    "sourceCap_999_qualification_relaxed_by_changing_2_to_3": 19
+  },
+  "checked_at_beijing": "2026-11-04 22:32",
+  "scope": "Read-only frozen-production selection replay; no new model calls, recollection or issue changes",
+  "candidate_cap_losses_count": 41,
+  "interpretation": "All 16 model-qualified stories were published, but preliminary publisher caps, no refill after enrichment rejection and 12 failed source checks prevent concluding that only 16 qualifying stories existed in the market.",
+  "subsequent_astra_clarifications": [
+    "NYC $231M office conversion story likely covered by already-published Connect CRE story; not established independent omission",
+    "Zero btr-sfr asset labels is not the same as no original BTR-related candidate; Pretium event was reviewed and rejected",
+    "Failed sources do not prove those sources carried additional qualifying news",
+    "Changing candidate publisher limits is a selection-policy change, not proof the current code violates its existing contract"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "checked_at_beijing": "2026-11-05 00:49",
+  "status": "publishing",
+  "scope": "Explicitly authorized code commit, open-source sync and deployment; leave Nov4 archive and Nov5 automatic generation unchanged",
+  "base_commit": "81a7043615cd17bc6a75352d635fc032e78197ff",
+  "local_tests": {
+    "workspace": 255,
+    "release_checkout": 255,
+    "failed": 0
+  },
+  "new_model_calls": 0,
+  "new_collection_calls": 0,
+  "manual_generation_dispatches": 0,
+  "generation_rules": "ae75b2a0184df3eaed2a60a863986d2b8f5183e3815b577d10e48b4183a467ed",
+  "old_issue_rewritten": false
+}

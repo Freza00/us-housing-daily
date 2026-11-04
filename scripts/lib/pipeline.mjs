@@ -134,15 +134,22 @@ export async function runPipeline(kind = 'daily', options = {}) {
   eligibility = kind === 'daily' ? dailyPublicationEligibility(normalized, window, legacySnapshots) : { eligible: normalized, excluded: [] };
   const candidateWindow = kind === 'daily' ? { ...window, lower: eligibility.eligible.reduce((n,it)=>Math.min(n,it.published_at),window.lower) } : window;
   prepared = prepareCandidates(eligibility.eligible, candidateWindow, kind === 'daily' ? seen : []);
-  candidates = prepared.candidates;
-  if (collector) candidates = await collector.enrich(candidates);
-  if (kind === 'daily') {
-    const enriched = dailyPublicationEligibility(candidates, window);
-    candidates = enriched.eligible; eligibility.excluded.push(...enriched.excluded);
+  candidates = [];
+  let attempted = 0;
+  while (attempted < prepared.candidates.length && attempted < prepared.limit && candidates.length < prepared.limit) {
+    const slots = attempted === 0 ? prepared.initial_count : prepared.limit - candidates.length;
+    const batch = prepared.candidates.slice(attempted, attempted + Math.min(slots, prepared.limit - attempted));
+    attempted += batch.length;
+    const enriched = collector ? await collector.enrich(batch) : batch;
+    if (kind === 'daily') {
+      const checked = dailyPublicationEligibility(enriched, window);
+      candidates.push(...checked.eligible); eligibility.excluded.push(...checked.excluded);
+    } else candidates.push(...enriched);
   }
+  const candidatePreparation = { limit: prepared.limit, initial_count: prepared.initial_count, attempted, accepted: candidates.length, rejected: attempted - candidates.length };
   if (collector) await writeJson(path.join(stateDir, 'source-cache.json'), collector.cache);
   if (!candidates.length) throw new Error('No eligible dated candidates; refusing to replace last successful issue');
-  snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, initial_seen: seen, source_health: health, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: uniqueSourceHealth(s.source_health || []) })), pipeline_version: '3.0' };
+  snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, candidate_preparation: candidatePreparation, initial_seen: seen, source_health: health, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: uniqueSourceHealth(s.source_health || []) })), pipeline_version: '3.0' };
   await writeJson(path.join(stateDir, 'inputs', kind + '-' + label + '.json'), snapshot);
   collectionFinishedAt = Date.now();
   if (store) await store.put('prepared', { snapshot, normalized, checkpoint, base, eligible_count: prepared.eligible_count, collection_finished_at: collectionFinishedAt });

@@ -1,0 +1,136 @@
+{
+  "old_pool": 44,
+  "new_pool": 72,
+  "unchanged_diversity_prefix": 44,
+  "unique_pool": 85,
+  "los_angeles_new_rank": 46,
+  "los_angeles_added_rank": 2,
+  "los_angeles_has_original_full_evidence": true,
+  "btr_actual_errors_detected": [
+    {
+      "id": "256be9ff86ff003c",
+      "title": "Walker & Dunlop Arranges $117.3M Refinancing of Texas Apartment Portfolio",
+      "error": "BTR section requires btr-sfr asset, not multifamily: 256be9ff86ff003c"
+    },
+    {
+      "id": "d65f3c31de48d07c",
+      "title": "Realpage rent-pricing case wraps with nearly $360M to renters",
+      "error": "BTR section requires btr-sfr asset, not multifamily: d65f3c31de48d07c"
+    }
+  ],
+  "other_original_decisions_valid": 33,
+  "candidate_prompt_characters": {
+    "original_enriched_35": 41703,
+    "new_pre_enrichment_72": 49863
+  },
+  "new_rule_digest": "1e394ead11cead0bb5118110bba6150b7cf315bfa03a3cfb33f89e6094f27702",
+  "new_combined_rules": "ae75b2a0184df3eaed2a60a863986d2b8f5183e3815b577d10e48b4183a467ed",
+  "old_rule_digest": "ca8828f673cb3924039ec23a814a514c410a8956802ed8fa780ecbdaf04708e4",
+  "original_identity": {
+    "kind": "daily",
+    "period_key": "2026-11-04",
+    "cutoff_upper": 1793739600000,
+    "revision": 1
+  },
+  "original_ledger": {
+    "editor": [
+      {
+        "label": "editor",
+        "model": "gpt-6.1-sol",
+        "effort": "medium",
+        "attempt": 1,
+        "request_id": "e53026a8-0a96-473d-b9a3-2f909f5c97de",
+        "request_hash": "90e3b4ad5e5592ea901e1927a16c97b4a6c5817439bad5e68f79ca54359c4155",
+        "started_at": "2026-11-04T13:53:02.533Z",
+        "reserved_ms": 240000,
+        "cache_hit": false,
+        "repairs": 0,
+        "response_model": "gpt-6.1-sol",
+        "ms": 48516,
+        "first_byte_ms": 12960,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_0883960d549792b9016aeb38bfe65c87d085727919d230d4ab",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 17719,
+          "completion_tokens": 2510,
+          "total_tokens": 20229,
+          "completion_tokens_details": {
+            "reasoning_tokens": 516
+          }
+        },
+        "response_characters": 4940
+      }
+    ],
+    "writer": [
+      {
+        "label": "writer",
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "attempt": 1,
+        "request_id": "44865e45-9ecd-4355-a9ae-c24ae5b7c7ad",
+        "request_hash": "b8d082adb20deeddc6e2db547eb5c8f2124b849578c2c60abb6bc9f56b407bea",
+        "started_at": "2026-11-04T13:53:53.370Z",
+        "reserved_ms": 240000,
+        "cache_hit": false,
+        "repairs": 0,
+        "response_model": "gpt-6.1-sol",
+        "ms": 89987,
+        "first_byte_ms": 23873,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_0d0d968670e50d06016aeb3900a18487d0b7399fc4fc22fa07",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 11933,
+          "completion_tokens": 2308,
+          "total_tokens": 14241,
+          "completion_tokens_details": {
+            "reasoning_tokens": 60
+          }
+        },
+        "response_characters": 6064
+      }
+    ]
+  },
+  "original_ready_sha256": "0b3ad7a1b4ec4406c24d8f4b8181d3d186b73b04762d5385adff3898c02bfed5",
+  "original_frozen_files_unchanged": true,
+  "new_collection_requests": 0,
+  "new_model_requests": 0,
+  "scope": "Offline candidate and contract replay; no new quality ratings, no claim of 20 final stories",
+  "checked_at_beijing": "2026-11-04 23:48",
+  "tests": {
+    "workspace": 255,
+    "isolated_checkout": 255,
+    "failed": 0
+  },
+  "test_runtime": "v25.8.0",
+  "source_or_production_network_requests": 0,
+  "implementation_scope": [
+    "AGENTS.md",
+    "README.md",
+    "docs/RECOVERY.md",
+    "scripts/lib/editorial.mjs",
+    "scripts/lib/pipeline.mjs",
+    "scripts/test/reliability.test.mjs",
+    "scripts/test/candidate-recall.test.mjs",
+    "ROADMAP.md"
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": false,
+  "old_issue_rewritten": false,
+  "protected_original_files": 211,
+  "changed_original_files": [
+    "AGENTS.md",
+    "README.md",
+    "ROADMAP.md",
+    "docs/RECOVERY.md",
+    "scripts/lib/editorial.mjs",
+    "scripts/lib/pipeline.mjs",
+    "scripts/test/reliability.test.mjs"
+  ]
+}

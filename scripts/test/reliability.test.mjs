@@ -64,7 +64,9 @@ test('balanced candidates reserve rare required research before prolific media',
   const items = Array.from({ length: 100 }, (_, i) => item(String(i), { source_family: 'prolific' }));
   items.push(item('har', { source_family: 'har', is_research: true, required_source: true }));
   const r = prepareCandidates(items, { lower: Date.parse('2026-10-27'), upper: Date.parse('2026-10-28') });
-  assert.ok(r.candidates.some(x => x.id === 'har')); assert.ok(r.candidates.filter(x => x.source_family === 'prolific').length <= 4);
+  assert.ok(r.candidates.slice(0, r.initial_count).some(x => x.id === 'har'));
+  assert.ok(r.candidates.slice(0, r.initial_count).filter(x => x.source_family === 'prolific').length <= 4);
+  assert.equal(r.candidates.length, 72);
 });
 test('decision schema rejects missing, duplicate, unknown IDs and circular duplicate references', () => {
   const items = [item('a'), item('b')], d = items.map(decision);
