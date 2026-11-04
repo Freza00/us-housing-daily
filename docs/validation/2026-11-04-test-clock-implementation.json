@@ -1,5 +1,5 @@
 {
-  "checked_at_beijing": "2026-11-04 21:50",
+  "checked_at_beijing": "2026-11-04 22:00",
   "scope": "Approved P0 test-clock plan implementation; production rules and workflows unchanged",
   "tests": {
     "targeted": 8,
@@ -24,7 +24,191 @@
   "protected_original_files": 209,
   "production_data_untouched": true,
   "production_generation_requests": 0,
-  "commit_status": "pending",
-  "deployment_status": "pending",
-  "nov4_recovery_status": "pending"
+  "commit_status": "pushed",
+  "deployment_status": "fix_deployed_daily_delivery_pending",
+  "nov4_recovery_status": "generated_and_pushed_but_online_verification_timed_out",
+  "fix_commit": "4514369d37b5c9d21a5d6a3414eaba51fcb96dbe",
+  "fix_verification": {
+    "commit": "4514369d37b5c9d21a5d6a3414eaba51fcb96dbe",
+    "status": "success",
+    "statuses": [
+      {
+        "context": "Vercel",
+        "state": "success",
+        "url": "https://vercel.com/freza00s-projects/news-agent/7tbnrBfJxp2u5BxXRsEAxdDPQ4kj"
+      }
+    ],
+    "runs": [
+      {
+        "id": 41841834666,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41841834666"
+      }
+    ]
+  },
+  "ci": {
+    "run_id": 41841834666,
+    "node": "22.23.4",
+    "passed": 249,
+    "failed": 0
+  },
+  "recovery": {
+    "run": {
+      "id": 41842020832,
+      "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41842020832",
+      "head_sha": "4514369d37b5c9d21a5d6a3414eaba51fcb96dbe",
+      "conclusion": "failure",
+      "created_at": "2026-11-04T13:52:02Z",
+      "updated_at": "2026-11-04T13:57:37Z"
+    },
+    "artifact": {
+      "id": 13329417502,
+      "name": "news-issue-daily-2026-11-04-r1-41842020832-1-writer"
+    },
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-04",
+      "cutoff_upper": 1793739600000,
+      "revision": 1
+    },
+    "rules": "ca8828f673cb3924039ec23a814a514c410a8956802ed8fa780ecbdaf04708e4",
+    "rule_hash_unchanged": true,
+    "source_commit": "4514369d37b5c9d21a5d6a3414eaba51fcb96dbe",
+    "items": 16,
+    "publication_status": "complete",
+    "sources_ok": 65,
+    "sources_attempted": 77,
+    "summary_characters": 174,
+    "tests_passed": 249,
+    "tests_failed": 0,
+    "model_attempts": {
+      "editor": 1,
+      "writer": 1
+    },
+    "model_ms": 138503,
+    "production_events": [
+      {
+        "event": "request_started",
+        "label": "editor",
+        "model": "***",
+        "effort": "medium",
+        "attempt": 1,
+        "request_id": "e53026a8-0a96-473d-b9a3-2f909f5c97de",
+        "request_hash": "90e3b4ad5e5592ea901e1927a16c97b4a6c5817439bad5e68f79ca54359c4155",
+        "started_at": "2026-11-04T13:53:02.533Z",
+        "reserved_ms": 240000
+      },
+      {
+        "event": "request_finished",
+        "label": "editor",
+        "model": "***",
+        "effort": "medium",
+        "attempt": 1,
+        "request_id": "e53026a8-0a96-473d-b9a3-2f909f5c97de",
+        "request_hash": "90e3b4ad5e5592ea901e1927a16c97b4a6c5817439bad5e68f79ca54359c4155",
+        "started_at": "2026-11-04T13:53:02.533Z",
+        "reserved_ms": 240000,
+        "cache_hit": false,
+        "repairs": 0,
+        "response_model": "***",
+        "ms": 48516,
+        "first_byte_ms": 12960,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_0883960d549792b9016aeb38bfe65c87d085727919d230d4ab",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 17719,
+          "completion_tokens": 2510,
+          "total_tokens": 20229,
+          "completion_tokens_details": {
+            "reasoning_tokens": 516
+          }
+        },
+        "response_characters": 4940
+      },
+      {
+        "event": "request_started",
+        "label": "writer",
+        "model": "***",
+        "effort": "low",
+        "attempt": 1,
+        "request_id": "44865e45-9ecd-4355-a9ae-c24ae5b7c7ad",
+        "request_hash": "b8d082adb20deeddc6e2db547eb5c8f2124b849578c2c60abb6bc9f56b407bea",
+        "started_at": "2026-11-04T13:53:53.370Z",
+        "reserved_ms": 240000
+      },
+      {
+        "event": "request_finished",
+        "label": "writer",
+        "model": "***",
+        "effort": "low",
+        "attempt": 1,
+        "request_id": "44865e45-9ecd-4355-a9ae-c24ae5b7c7ad",
+        "request_hash": "b8d082adb20deeddc6e2db547eb5c8f2124b849578c2c60abb6bc9f56b407bea",
+        "started_at": "2026-11-04T13:53:53.370Z",
+        "reserved_ms": 240000,
+        "cache_hit": false,
+        "repairs": 0,
+        "response_model": "***",
+        "ms": 89987,
+        "first_byte_ms": 23873,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_0d0d968670e50d06016aeb3900a18487d0b7399fc4fc22fa07",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 11933,
+          "completion_tokens": 2308,
+          "total_tokens": 14241,
+          "completion_tokens_details": {
+            "reasoning_tokens": 60
+          }
+        },
+        "response_characters": 6064
+      }
+    ],
+    "online": {
+      "schema_version": 1,
+      "ok": false,
+      "host": "https://news-agent-mu.vercel.app",
+      "identity": {
+        "kind": "daily",
+        "period_key": "2026-11-04",
+        "cutoff_upper": 1793739600000,
+        "revision": 1
+      },
+      "payload_sha256": "0b3ad7a1b4ec4406c24d8f4b8181d3d186b73b04762d5385adff3898c02bfed5",
+      "commit": null,
+      "checked_at": 1793800773494,
+      "files": [
+        {
+          "route": "/data/latest.json",
+          "ok": false,
+          "error": "Production issue differs from candidate"
+        },
+        {
+          "route": "/data/2026-11-04.json",
+          "ok": false,
+          "error": "HTTP 404"
+        },
+        {
+          "route": "/data/dates.json",
+          "ok": false,
+          "error": "Issue absent from date index"
+        },
+        {
+          "route": "/",
+          "ok": false,
+          "error": "Production issue differs from candidate"
+        }
+      ]
+    }
+  },
+  "daily_data_commit": "c7ba641112d4897e1bdcf273786021e58c527a11",
+  "additional_model_calls_after_generation": 0
 }
