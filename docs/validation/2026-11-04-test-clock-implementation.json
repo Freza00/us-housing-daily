@@ -1,0 +1,30 @@
+{
+  "checked_at_beijing": "2026-11-04 21:50",
+  "scope": "Approved P0 test-clock plan implementation; production rules and workflows unchanged",
+  "tests": {
+    "targeted": 8,
+    "workspace": 249,
+    "isolated_checkout": 249,
+    "failed": 0
+  },
+  "rules": {
+    "module_rules": "108a111acc593c148a105db9946e8e68869b63997f2486e5adb7901f5022167b",
+    "combined_rules": "ca8828f673cb3924039ec23a814a514c410a8956802ed8fa780ecbdaf04708e4"
+  },
+  "runtime_and_combined_rule_hashes_unchanged": true,
+  "implemented_cases": [
+    "blocked 403",
+    "fixed fixture clock with actual article hydration",
+    "default horizon before boundary",
+    "default horizon on boundary",
+    "default horizon after boundary +1ms",
+    "delayed observation with explicit fixed window",
+    "upper boundary preserves raw evidence but rejects candidate"
+  ],
+  "protected_original_files": 209,
+  "production_data_untouched": true,
+  "production_generation_requests": 0,
+  "commit_status": "pending",
+  "deployment_status": "pending",
+  "nov4_recovery_status": "pending"
+}

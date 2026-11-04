@@ -110,13 +110,50 @@ test('research discovery keeps HAR query identifiers and rejects navigation', ()
   const links = discoverLinks('<a href="?pid=2248">Houston rental report</a><a href="/login">Login</a>', 'https://www.har.com/content/department/newsroom?pid=640', { include: 'newsroom\\?pid=' });
   assert.equal(links.length, 1); assert.match(links[0].link, /pid=2248/);
 });
-test('blocked research is explicit, while an empty parsed feed tries the alternate', async () => {
+test('blocked research is explicit', async () => {
   const blocked = createCollector({ fetchImpl: async () => new Response('', { status: 403 }) });
   const [r] = await blocked.collect([{ id: 'nar', name: 'NAR', url: 'https://example.com', required: true, is_research: true }]);
   assert.equal(r.health.status, 'error'); assert.match(r.health.error, /403/);
-  let calls = 0; const fallback = createCollector({ fetchImpl: async () => { calls++; return new Response(calls === 1 ? '<rss></rss>' : '<rss><item><title>Important housing market research</title><link>https://example.com/report</link><description>Evidence about housing inventory, mortgage financing and market conditions based on verified original data.</description><pubDate>Tue, 27 Oct 2026 14:00:00 GMT</pubDate></item></rss>'); } });
-  const [ok] = await fallback.collect([{ id: 'z', name: 'Zillow', url: 'https://example.com/feed', alternates: ['https://example.com/other'], tags: [], is_research: true }]);
-  assert.equal(calls, 3); assert.equal(ok.health.status, 'ok');
+});
+test('empty research feed uses its alternate and hydrates only within the lower date horizon', async t => {
+  const published = Date.parse('2026-10-27T14:00:00Z'), week = 7 * 86400000;
+  const title = 'Important housing market research';
+  const excerpt = 'Evidence about housing inventory, mortgage financing and market conditions based on verified original data.';
+  const body = 'The original research documents housing inventory, financing and affordability with verified market evidence. '.repeat(4).trim();
+  const fixedUpper = published + 86400000, fixedLower = published - 86400000;
+  const cases = [
+    { name: 'fixed sample clock', now: fixedUpper, lower: fixedLower, upper: fixedUpper, hydrate: true, recent: 1 },
+    { name: 'default horizon before boundary', now: published + week - 1, hydrate: true, recent: 1 },
+    { name: 'default horizon on boundary', now: published + week, hydrate: true, recent: 1 },
+    { name: 'default horizon after boundary', now: published + week + 1, hydrate: false, recent: 0 },
+    { name: 'delayed observation keeps explicit window', now: Date.parse('2027-01-01T12:00:00Z'), lower: fixedLower, upper: fixedUpper, hydrate: true, recent: 1 },
+    { name: 'upper boundary preserves raw article without admitting it', now: fixedUpper, lower: fixedLower, upper: published, hydrate: true, recent: 0 }
+  ];
+  for (const row of cases) await t.test(row.name, async () => {
+    const calls = [];
+    const documents = new Map([
+      ['https://example.com/feed', '<rss></rss>'],
+      ['https://example.com/other', `<rss><item><title>${title}</title><link>https://example.com/report</link><description>${excerpt}</description><pubDate>Tue, 27 Oct 2026 14:00:00 GMT</pubDate></item></rss>`],
+      ['https://example.com/report', '<script type="application/ld+json">' + JSON.stringify({ '@type': 'NewsArticle', headline: 'Article page headline', datePublished: '2026-10-27T14:00:00Z', articleBody: body }) + '</script>']
+    ]);
+    const unexpected = [];
+    const collector = createCollector({ now: row.now, ...(row.lower === undefined ? {} : { lower: row.lower, upper: row.upper }), fetchImpl: async url => {
+      calls.push(url);
+      if (!documents.has(url)) { unexpected.push(url); throw new Error('Unexpected fixture URL: ' + url); }
+      return new Response(documents.get(url));
+    } });
+    const [result] = await collector.collect([{ id: 'z', name: 'Zillow', url: 'https://example.com/feed', alternates: ['https://example.com/other'], tags: [], is_research: true }]);
+    assert.deepEqual(unexpected, []);
+    assert.deepEqual(calls, ['https://example.com/feed', 'https://example.com/other', ...(row.hydrate ? ['https://example.com/report'] : [])]);
+    assert.deepEqual(result.health.attempted_urls, ['https://example.com/feed', 'https://example.com/other']);
+    assert.equal(result.health.status, 'ok'); assert.equal(result.health.recent, row.recent);
+    assert.equal(result.items.length, 1);
+    const [article] = result.items;
+    assert.equal(article.link, 'https://example.com/report'); assert.equal(article.title, title); assert.equal(article.published_at, published);
+    assert.equal(article.description, row.hydrate ? body : excerpt);
+    assert.equal(article.evidence_status, row.hydrate ? 'article' : undefined);
+    assert.equal(prepareCandidates(result.items, { lower: row.lower ?? row.now - week, upper: row.upper ?? row.now }).candidates.length, row.recent);
+  });
 });
 test('coverage gaps remain visible instead of treating missing days as complete', () => {
   assert.deepEqual(coverageGaps([{ window: { lower: 10, upper: 20 }, coverage_status: 'observed' }], { lower: 0, upper: 30 }), [{ lower: 0, upper: 10 }, { lower: 20, upper: 30 }]);

@@ -1,0 +1,184 @@
+{
+  "checked_at_beijing": "2026-11-04 18:05",
+  "scope": "Read-only diagnosis; no implementation, rerun, push or deployment",
+  "source_commit": "6a99667b1c4d65531dcd363c5007fcdc9f8f5452",
+  "runs": [
+    {
+      "id": 41723389616,
+      "created_at_beijing": "2026-11-04 05:36:52",
+      "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41723389616",
+      "error": "Test expected 3 simulated requests; actual 2",
+      "production_llm_events": 0,
+      "tests_passed": 241,
+      "tests_failed": 1
+    },
+    {
+      "id": 41754201426,
+      "created_at_beijing": "2026-11-04 09:27:38",
+      "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41754201426",
+      "error": "Test expected 3 simulated requests; actual 2",
+      "production_llm_events": 0,
+      "tests_passed": 241,
+      "tests_failed": 1
+    },
+    {
+      "id": 41786158542,
+      "created_at_beijing": "2026-11-04 14:32:05",
+      "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41786158542",
+      "error": "Test expected 3 simulated requests; actual 2",
+      "production_llm_events": 0,
+      "tests_passed": 241,
+      "tests_failed": 1
+    }
+  ],
+  "online": {
+    "date": "2026-11-03",
+    "items": 17
+  },
+  "failing_test": "scripts/test/reliability.test.mjs:113",
+  "failure_location": "scripts/test/reliability.test.mjs:119",
+  "root_cause": "Fixed 2026-10-27T14:00:00Z fixture uses real Date.now; collector default lower is now minus 7 days; simulated hydration request disappears after 2026-11-03T14:00:00Z",
+  "clock_reproduction": [
+    {
+      "now": "2026-11-03T06:15:00Z",
+      "default_lower": "2026-10-27T06:15:00.000Z",
+      "fixture_date": "2026-10-27T14:00:00Z",
+      "calls": [
+        "https://example.com/feed",
+        "https://example.com/other",
+        "https://example.com/report"
+      ],
+      "status": "ok",
+      "recent": 1
+    },
+    {
+      "now": "2026-11-03T14:00:00Z",
+      "default_lower": "2026-10-27T14:00:00.000Z",
+      "fixture_date": "2026-10-27T14:00:00Z",
+      "calls": [
+        "https://example.com/feed",
+        "https://example.com/other",
+        "https://example.com/report"
+      ],
+      "status": "ok",
+      "recent": 1
+    },
+    {
+      "now": "2026-11-03T14:00:00.001Z",
+      "default_lower": "2026-10-27T14:00:00.001Z",
+      "fixture_date": "2026-10-27T14:00:00Z",
+      "calls": [
+        "https://example.com/feed",
+        "https://example.com/other"
+      ],
+      "status": "ok",
+      "recent": 0
+    },
+    {
+      "now": "2026-11-04T10:00:00Z",
+      "default_lower": "2026-10-28T10:00:00.000Z",
+      "fixture_date": "2026-10-27T14:00:00Z",
+      "calls": [
+        "https://example.com/feed",
+        "https://example.com/other"
+      ],
+      "status": "ok",
+      "recent": 0
+    }
+  ],
+  "latest_steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/checkout@v5",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/setup-node@v5",
+      "conclusion": "success"
+    },
+    {
+      "name": "Calendar and complete-issue guard",
+      "conclusion": "success"
+    },
+    {
+      "name": "Restore acquisition and model checkpoints",
+      "conclusion": "success"
+    },
+    {
+      "name": "Restore frozen issue stages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Ensure PDF text extraction",
+      "conclusion": "success"
+    },
+    {
+      "name": "Validate pipeline",
+      "conclusion": "failure"
+    },
+    {
+      "name": "Freeze issue input",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Save prepared issue",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Select frozen issue",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Save editorial progress",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Write and validate frozen issue",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Save validated cards and publication candidate",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Publish candidate and verify production",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Save delivery receipt",
+      "conclusion": "success"
+    },
+    {
+      "name": "Preserve acquisition and model caches",
+      "conclusion": "success"
+    },
+    {
+      "name": "Preserve failed-run acquisition evidence",
+      "conclusion": "success"
+    },
+    {
+      "name": "Preserve model attempt diagnostics",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/setup-node@v5",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Post Run actions/checkout@v5",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "local_targeted_test_reproduced": true,
+  "new_model_calls": 0,
+  "production_reruns": 0,
+  "business_code_changed": false,
+  "ci_cd_changed": false
+}
