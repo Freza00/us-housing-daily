@@ -54,3 +54,22 @@ test('sector coverage renders zero counts and historical gaps without claiming c
  assert.match(ids.researchStatus.children[2].textContent,/INVH：关键来源尚未取全/);
  assert.match(ids.researchStatus.children[3].textContent,/不能视为完整行业覆盖/);
 });
+
+test('all digest modes choose bilingual overviews on first render and both language switches, including legacy archives', async () => {
+ const app=await fs.readFile(new URL('../../public/app.js',import.meta.url),'utf8');
+ for(const mode of ['daily','weekly','monthly']) for(const legacy of [false,true]) {
+  const ids=Object.fromEntries(['briefBlock','briefText','briefTitle','coverageNote','researchCoverage','researchStatus','researchTitle'].map(id=>[id,new Element()]));
+  const ul=new Element(),title=new Element(),themesBlock={hidden:false,querySelector:selector=>selector==='.themes-list'?ul:title};
+  ul.appendChild=node=>ul.append(node);
+  const ctx={document:{createElement:()=>new Element()},$:id=>ids[id],currentLang:'en',currentMode:mode,themesBlock,t:()=>({themes_weekly_title:'Weekly themes',themes_monthly_title:'Monthly themes'})};
+  vm.createContext(ctx);vm.runInContext(app.slice(app.indexOf('function renderThemes(data)')),ctx);
+  const data={kind:mode,items:[],executive_summary:{sentences:[{text:'住宅市场分化。',...(!legacy?{text_en:'Housing markets diverge.'}:{}),item_ids:[]}]},themes:[{title:'库存压力',...(!legacy?{title_en:'Inventory pressure'}:{}),item_ids:[]}]};
+  for(const lang of ['en','zh','en']) {
+   ctx.currentLang=lang;ctx.renderBrief(data);ctx.renderThemes(data);
+   assert.equal(ids.briefTitle.textContent,lang==='en'?'Executive summary':'速读摘要');
+   assert.equal(ids.briefText.children[0].textContent,lang==='zh'?'住宅市场分化。':legacy?'English summary is unavailable for this archive.':'Housing markets diverge.');
+   assert.equal(themesBlock.hidden,mode==='daily');
+   if(mode!=='daily')assert.equal(ul.children[0].textContent,lang==='zh'?'库存压力':legacy?'English themes are unavailable for this archive.':'Inventory pressure');
+  }
+ }
+});

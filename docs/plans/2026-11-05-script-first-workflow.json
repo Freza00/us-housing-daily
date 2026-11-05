@@ -1,0 +1,149 @@
+{
+  "reviewed_at_beijing": "2026-11-05 15:57",
+  "advisor": {
+    "agent": "/root/astra_max_workflow_script_review",
+    "requested_model": "gpt-6-astra",
+    "reasoning_effort": "max",
+    "status": "completed",
+    "scope": "Read-only source/log/artifact review and bounded offline probes"
+  },
+  "recommendation": "One deterministic section router before selection and final verification; reuse existing semantic tags; no additional model stage",
+  "other_architecture_option": "Classification only after final selection requires explicitly changing section soft balancing policy; not a behavior-neutral move",
+  "writer_recovery": {
+    "selection_matches_final": true,
+    "invalid_cards": [
+      {
+        "id": "9",
+        "title": "凤凰城 2026 年新增公寓约 1.73 万套",
+        "error": "Output contains a number absent from its evidence: 17300"
+      },
+      {
+        "id": "19",
+        "title": "UDR Q3 超预期并上调指引",
+        "error": "Evidence quote is not present in source for 19"
+      }
+    ],
+    "valid_cards": 18,
+    "metadata_error": "Executive summary exceeds 250 characters: actual=278, limit=250, over_by=28, target=200 (all non-whitespace Unicode characters after normalization)",
+    "metadata_initial_characters": 278,
+    "metadata_final_characters": 154,
+    "request_hash": "aeec0b6d0fceaf2ca9bb4c85dc89b8757c9302b943ff959dda2b981ad7825deb",
+    "recorded_hash": "aeec0b6d0fceaf2ca9bb4c85dc89b8757c9302b943ff959dda2b981ad7825deb",
+    "request_hash_matches": true,
+    "changed_cards": [
+      {
+        "id": "9",
+        "fields": [
+          "title_zh"
+        ],
+        "old_title": "凤凰城 2026 年新增公寓约 1.73 万套",
+        "new_title": "凤凰城都市区 2026 年新增公寓 17,293 套"
+      },
+      {
+        "id": "19",
+        "fields": [
+          "evidence_quote"
+        ],
+        "old_title": "UDR Q3 超预期并上调指引",
+        "new_title": "UDR Q3 超预期并上调指引"
+      }
+    ],
+    "unchanged_valid_card_count": 18,
+    "selection_importances": {
+      "3": 12,
+      "4": 8
+    },
+    "final_summary_sources": [
+      {
+        "id": "f2c6674cff606947",
+        "title": "Phoenix among top metros for new apartment construction in 2026",
+        "importance": 3
+      },
+      {
+        "id": "46ad5137cf385f3d",
+        "title": "UDR beats Q3 estimates and raises guidance, after Apollo deal",
+        "importance": 3
+      }
+    ],
+    "initial_summary_source_count": 12
+  },
+  "original_metadata_retention_probe": {
+    "strict_validation": "passed",
+    "summary": {
+      "text": "美国住房交易和融资需求继续承压：10 月住宅签约量同比下降 10.5%，按揭申请量同比下降 39.8%，30 年期固定利率平均达到 7.33%；Realtor.com 预计短期利率仍高于 7%，市场需关注冬季进一步降温风险。商业地产分化延续，酒店 Q3 RevPAR 增长 7%，休斯敦零售净吸纳量改善，办公资产则更多依赖改造和高入住率支撑交易；同时，得州数据中心可能面临暂停开发及水电监管收紧。",
+      "sentences": [
+        {
+          "text": "美国住房交易和融资需求继续承压：10 月住宅签约量同比下降 10.5%，按揭申请量同比下降 39.8%，30 年期固定利率平均达到 7.33%；Realtor.com 预计短期利率仍高于 7%，市场需关注冬季进一步降温风险。",
+          "item_ids": [
+            "1",
+            "5",
+            "11"
+          ]
+        },
+        {
+          "text": "商业地产分化延续，酒店 Q3 RevPAR 增长 7%，休斯敦零售净吸纳量改善，办公资产则更多依赖改造和高入住率支撑交易；同时，得州数据中心可能面临暂停开发及水电监管收紧。",
+          "item_ids": [
+            "2",
+            "4",
+            "7",
+            "10",
+            "14"
+          ]
+        }
+      ]
+    },
+    "shortening": {
+      "method": "whole_sentence_prefix",
+      "original_characters": 278,
+      "final_characters": 187,
+      "original_sentence_count": 3,
+      "kept_sentence_count": 2
+    },
+    "original_sentence_lengths": [
+      105,
+      82,
+      91
+    ],
+    "cards_unchanged_from_production": true
+  },
+  "without_section_balance": {
+    "added": [],
+    "removed": [],
+    "same_order": false
+  },
+  "request_character_probe": {
+    "offline_only": true,
+    "production_repair_user_characters": 45421,
+    "proposed_cards_only_repair_user_characters": 4892,
+    "proposed_primary_item_ids": [
+      "9",
+      "19"
+    ],
+    "proposed_has_original_evidence": false,
+    "proposed_has_previous_metadata": false,
+    "measured_tokens": false,
+    "phase_hashes": {
+      "prepared": true,
+      "editor": true,
+      "cards": true,
+      "metadata": true,
+      "ready": true
+    },
+    "selected_digest_matches": true,
+    "payload_matches_online": true
+  },
+  "tag_semantics_issue": {
+    "file": "scripts/lib/pipeline.mjs:67",
+    "actual_input": "Flat tag ID allowlist",
+    "missing": "Dimension definitions, uses, most-specific-geography and HQ exclusion guidance"
+  },
+  "proposed_focus_field": {
+    "name": "capital_focus",
+    "purpose": "Distinguish the main fund/platform capital event from background deals without an extra model call",
+    "status": "Proposed, not implemented"
+  },
+  "new_production_requests": 0,
+  "business_code_changes": false,
+  "issue_changes": false,
+  "published": false
+}

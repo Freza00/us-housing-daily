@@ -1,0 +1,233 @@
+{
+  "checked_at_beijing": "2026-11-05 15:34",
+  "scope": "Read-only production/log/frontend/classification review; no fixes, generation or publication",
+  "run": {
+    "id": 41917732652,
+    "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41917732652",
+    "source_commit": "211cb34615029085ca87d3b920ade34e60b16fe6",
+    "created_at_beijing": "2026-11-05 05:36:52",
+    "online_verified_at_beijing": "2026-11-05 05:41:10",
+    "conclusion": "success"
+  },
+  "counts": {
+    "normalized": 183,
+    "eligible": 145,
+    "candidate_preparation": {
+      "limit": 72,
+      "initial_count": 51,
+      "attempted": 72,
+      "accepted": 57,
+      "rejected": 15
+    },
+    "model_candidates": 57,
+    "model_kept": 31,
+    "model_qualified": 25,
+    "published": 20,
+    "sources_ok": 65,
+    "sources_attempted": 77
+  },
+  "model": {
+    "editor_attempts": 1,
+    "writer_attempts": 2,
+    "request_ms": 165253,
+    "failed_writer_error": "Output contains a number absent from its evidence: 17300",
+    "recovered_within_original_budget": true
+  },
+  "delivery_receipt": {
+    "schema_version": 1,
+    "ok": true,
+    "host": "https://news-agent-mu.vercel.app",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-05",
+      "cutoff_upper": 1793826000000,
+      "revision": 1
+    },
+    "payload_sha256": "e77cd6008025606b6f360cae616591e450480b4477299db8583e864e1138b511",
+    "commit": "77dfb85a9a45845229a7113eda7b7c6235356c6e",
+    "checked_at": 1793828470230,
+    "files": [
+      {
+        "route": "/data/latest.json",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-05.json",
+        "ok": true
+      },
+      {
+        "route": "/data/dates.json",
+        "ok": true
+      },
+      {
+        "route": "/",
+        "ok": true
+      }
+    ],
+    "pushed": {
+      "commit": "77dfb85a9a45845229a7113eda7b7c6235356c6e",
+      "already_pushed": false
+    }
+  },
+  "english_render": {
+    "engine": "isolated headless Chromium",
+    "network": "GET only to this site; API and external origins blocked",
+    "results": [
+      {
+        "kind": "daily",
+        "initial": {
+          "lang": "en-US",
+          "brief_title": "Executive summary (Chinese)",
+          "brief": [
+            "凤凰城都市区 2026 年新增公寓供应预计达 17,293 套，在全美主要都市区中位居前列；与此同时，全美公寓建设量较 2025 年下降 27%，区域供给分化仍是观察重点。 [Phoenix Agent Magazine]",
+            "UDR 第三季度调整后每股 FFO 为 0.65 美元并超过分析师预期，公司上调同店 NOI 和调整后 FFO 指引，住户留存率达到创纪录的 52%，显示其经营表现改善。 [Multifamily Dive]"
+          ],
+          "themes": [],
+          "chinese_lines": [
+            "凤凰城都市区 2026 年新增公寓供应预计达 17,293 套，在全美主要都市区中位居前列；与此同时，全美公寓建设量较 2025 年下降 27%，区域供给分化仍是观察重点。 [Phoenix Agent Magazine]",
+            "UDR 第三季度调整后每股 FFO 为 0.65 美元并超过分析师预期，公司上调同店 NOI 和调整后 FFO 指引，住户留存率达到创纪录的 52%，显示其经营表现改善。 [Multifamily Dive]"
+          ],
+          "section_headers": [
+            "National Residential",
+            "Sunbelt Residential",
+            "BTR / SFR",
+            "National CRE",
+            "Institutional Capital"
+          ]
+        },
+        "switched": {
+          "lang": "en-US",
+          "brief": [
+            "凤凰城都市区 2026 年新增公寓供应预计达 17,293 套，在全美主要都市区中位居前列；与此同时，全美公寓建设量较 2025 年下降 27%，区域供给分化仍是观察重点。 [Phoenix Agent Magazine]",
+            "UDR 第三季度调整后每股 FFO 为 0.65 美元并超过分析师预期，公司上调同店 NOI 和调整后 FFO 指引，住户留存率达到创纪录的 52%，显示其经营表现改善。 [Multifamily Dive]"
+          ],
+          "themes": []
+        },
+        "page_errors": []
+      },
+      {
+        "kind": "weekly",
+        "initial": {
+          "lang": "en-US",
+          "brief_title": "Executive summary (Chinese)",
+          "brief": [
+            "美国租赁市场出现分化：Apartment List 估计全国租金年增幅于 10 月转正至 0.1%，但月租环比下降 0.3%；CBRE 报告 Q3 多户住宅空置率升至 4.7%，租金同比仅增 1%，供需与租金表现仍需观察。 [Apartment List Research] [CBRE Research]",
+            "办公楼市场在 Q3 延续修复，Colliers 报告全国空置率降至 17.7%，净吸纳连续 9 个季度为正；生命科学空置率则在连续 4 年上升后首次季度回落，但租金仍下跌，复苏持续性尚待验证。 [Colliers Research] [Cushman & Wakefield Research]"
+          ],
+          "themes": [
+            "租赁市场呈现租金、空置率与供给调整并行的分化走势",
+            "办公楼与生命科学出现需求或空置率改善信号，复苏程度不一",
+            "房价上涨与通胀、利率压力交织，区域及住房可负担性值得关注"
+          ],
+          "chinese_lines": [
+            "美国租赁市场出现分化：Apartment List 估计全国租金年增幅于 10 月转正至 0.1%，但月租环比下降 0.3%；CBRE 报告 Q3 多户住宅空置率升至 4.7%，租金同比仅增 1%，供需与租金表现仍需观察。 [Apartment List Research] [CBRE Research]",
+            "办公楼市场在 Q3 延续修复，Colliers 报告全国空置率降至 17.7%，净吸纳连续 9 个季度为正；生命科学空置率则在连续 4 年上升后首次季度回落，但租金仍下跌，复苏持续性尚待验证。 [Colliers Research] [Cushman & Wakefield Research]",
+            "租赁市场呈现租金、空置率与供给调整并行的分化走势",
+            "办公楼与生命科学出现需求或空置率改善信号，复苏程度不一",
+            "房价上涨与通胀、利率压力交织，区域及住房可负担性值得关注"
+          ],
+          "section_headers": [
+            "National Residential",
+            "Sunbelt Residential",
+            "BTR / SFR",
+            "National CRE",
+            "Institutional Capital"
+          ]
+        },
+        "switched": {
+          "lang": "en-US",
+          "brief": [
+            "美国租赁市场出现分化：Apartment List 估计全国租金年增幅于 10 月转正至 0.1%，但月租环比下降 0.3%；CBRE 报告 Q3 多户住宅空置率升至 4.7%，租金同比仅增 1%，供需与租金表现仍需观察。 [Apartment List Research] [CBRE Research]",
+            "办公楼市场在 Q3 延续修复，Colliers 报告全国空置率降至 17.7%，净吸纳连续 9 个季度为正；生命科学空置率则在连续 4 年上升后首次季度回落，但租金仍下跌，复苏持续性尚待验证。 [Colliers Research] [Cushman & Wakefield Research]"
+          ],
+          "themes": [
+            "租赁市场呈现租金、空置率与供给调整并行的分化走势",
+            "办公楼与生命科学出现需求或空置率改善信号，复苏程度不一",
+            "房价上涨与通胀、利率压力交织，区域及住房可负担性值得关注"
+          ]
+        },
+        "page_errors": []
+      },
+      {
+        "kind": "monthly",
+        "initial": {
+          "lang": "en-US",
+          "brief_title": "Executive summary (Chinese)",
+          "brief": [
+            "住房交易端承压：9 月住宅签约量同比下降 11.3%，新房销售同比下降 5.3%；Zillow 预计第四季度成屋销售下滑或加快，利率与可负担性仍是关键制约。 [Zillow Research] [Texas Real Estate Research Center (TRERC)] [NAR Research] [Census New Residential Sales]",
+            "租赁与商业地产呈现分化。美国多户住宅空置率回落、租金同比转正，但优惠仍普遍；工业吸纳增强，写字楼改善集中于优质资产，拉斯维加斯租金仍降。 [Northmarq Research] [Cushman & Wakefield Research] [Colliers Research] [Cushman & Wakefield Research] [Apartment List Research]",
+            "抵押贷款利率虽从前一周回落，仍高于一年前；房价名义涨幅扩大但实际连续下跌。后续应关注利率变化能否缓解购房压力，以及租赁市场空置和优惠是否持续改善。 [S&P Cotality Case-Shiller] [Freddie Mac PMMS] [Texas Real Estate Research Center (TRERC)] [Apartment List Research]"
+          ],
+          "themes": [
+            "高利率与可负担性继续压制住宅交易",
+            "租赁基本面缓慢改善，但区域与供需表现分化",
+            "商业地产部分板块走强，改善集中于工业与优质办公资产"
+          ],
+          "chinese_lines": [
+            "住房交易端承压：9 月住宅签约量同比下降 11.3%，新房销售同比下降 5.3%；Zillow 预计第四季度成屋销售下滑或加快，利率与可负担性仍是关键制约。 [Zillow Research] [Texas Real Estate Research Center (TRERC)] [NAR Research] [Census New Residential Sales]",
+            "租赁与商业地产呈现分化。美国多户住宅空置率回落、租金同比转正，但优惠仍普遍；工业吸纳增强，写字楼改善集中于优质资产，拉斯维加斯租金仍降。 [Northmarq Research] [Cushman & Wakefield Research] [Colliers Research] [Cushman & Wakefield Research] [Apartment List Research]",
+            "抵押贷款利率虽从前一周回落，仍高于一年前；房价名义涨幅扩大但实际连续下跌。后续应关注利率变化能否缓解购房压力，以及租赁市场空置和优惠是否持续改善。 [S&P Cotality Case-Shiller] [Freddie Mac PMMS] [Texas Real Estate Research Center (TRERC)] [Apartment List Research]",
+            "高利率与可负担性继续压制住宅交易",
+            "租赁基本面缓慢改善，但区域与供需表现分化",
+            "商业地产部分板块走强，改善集中于工业与优质办公资产"
+          ],
+          "section_headers": [
+            "National Residential",
+            "Sunbelt Residential",
+            "BTR / SFR",
+            "National CRE",
+            "Institutional Capital"
+          ]
+        },
+        "switched": {
+          "lang": "en-US",
+          "brief": [
+            "住房交易端承压：9 月住宅签约量同比下降 11.3%，新房销售同比下降 5.3%；Zillow 预计第四季度成屋销售下滑或加快，利率与可负担性仍是关键制约。 [Zillow Research] [Texas Real Estate Research Center (TRERC)] [NAR Research] [Census New Residential Sales]",
+            "租赁与商业地产呈现分化。美国多户住宅空置率回落、租金同比转正，但优惠仍普遍；工业吸纳增强，写字楼改善集中于优质资产，拉斯维加斯租金仍降。 [Northmarq Research] [Cushman & Wakefield Research] [Colliers Research] [Cushman & Wakefield Research] [Apartment List Research]",
+            "抵押贷款利率虽从前一周回落，仍高于一年前；房价名义涨幅扩大但实际连续下跌。后续应关注利率变化能否缓解购房压力，以及租赁市场空置和优惠是否持续改善。 [S&P Cotality Case-Shiller] [Freddie Mac PMMS] [Texas Real Estate Research Center (TRERC)] [Apartment List Research]"
+          ],
+          "themes": [
+            "高利率与可负担性继续压制住宅交易",
+            "租赁基本面缓慢改善，但区域与供需表现分化",
+            "商业地产部分板块走强，改善集中于工业与优质办公资产"
+          ]
+        },
+        "page_errors": []
+      }
+    ]
+  },
+  "frontend_source_matches_live": true,
+  "classification_examples": [
+    {
+      "id": "46ad5137cf385f3d",
+      "case": "UDR apartment REIT operating earnings classified national",
+      "assessment": "Unspecified earnings/asset/actor routing boundary; more appropriate CRE/operating lane under existing labels, final contract must be explicit"
+    },
+    {
+      "id": "d33574d3cf26346f",
+      "case": "Finance of America earnings tagged Texas",
+      "assessment": "Full captured article mentions Texas only in Plano headquarters; this does not establish Texas market/asset scope; model internal inference cannot be proven from output"
+    },
+    {
+      "id": "40742474855f7e67",
+      "case": "Mortgage platform merger classified national",
+      "assessment": "Corporate M&A versus national mortgage-industry lane is not explicitly prioritized"
+    }
+  ],
+  "classification_root_causes": [
+    "Primary sections mix geography, asset, actor/event axes without exhaustive precedence",
+    "Live pipeline accepts LLM sections; validator checks enums/tag limits and a narrow BTR tag rule, not general routing or geography relevance",
+    "Legacy classify helper and prompt/display labels are not one enforced classification contract"
+  ],
+  "protected_original_files": 222,
+  "new_model_calls_for_review": 0,
+  "production_changes": false,
+  "subsequent_astra_review": {
+    "reviewed_at_beijing": "2026-11-05 15:57",
+    "plan": "docs/plans/2026-11-05-script-first-workflow.md",
+    "actual_repair_scope": "Two bad cards plus metadata; 18 valid cards preserved",
+    "summary_drift_confirmed": true,
+    "pure_length_metadata_retention_validated": true,
+    "tag_semantics_missing_from_actual_prompt": true
+  }
+}

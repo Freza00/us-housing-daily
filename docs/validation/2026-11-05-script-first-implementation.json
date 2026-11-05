@@ -1,0 +1,93 @@
+{
+  "checked_at_beijing": "2026-11-05 16:34",
+  "status": "local_implementation_verified",
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "runtime": "v25.8.0",
+  "tests": {
+    "root": {
+      "pass": 269,
+      "fail": 0
+    },
+    "isolated": {
+      "base": "211cb34615029085ca87d3b920ade34e60b16fe6",
+      "pass": 269,
+      "fail": 0
+    }
+  },
+  "ui": {
+    "engine": "isolated headless Chromium",
+    "network": "All responses fulfilled from local fixture files; external requests blocked",
+    "scenarios": 12,
+    "language_checks": 36,
+    "english_overview_han_leaks": 0,
+    "page_errors": 0,
+    "horizontal_overflows": 0
+  },
+  "replay": {
+    "historical_ready_unchanged": "e77cd6008025606b6f360cae616591e450480b4477299db8583e864e1138b511",
+    "cards": 20,
+    "invalid_cards": [
+      "9",
+      "19"
+    ],
+    "retained_cards": 18,
+    "old_request_characters": 45421,
+    "new_request_characters": 4892,
+    "original_summary_characters": 278,
+    "final_summary_characters": 187,
+    "summary_shortening": {
+      "method": "whole_sentence_prefix",
+      "original_characters": 278,
+      "final_characters": 187,
+      "original_sentence_count": 3,
+      "kept_sentence_count": 2
+    },
+    "all_cards_identical_to_production": true,
+    "requests_to_model": 0,
+    "source_requests": 0
+  },
+  "protected": {
+    "baseline_files": 302,
+    "unchanged_original_files": 286,
+    "changed_original_files": [
+      "README.md",
+      "ROADMAP.md",
+      "AGENTS.md",
+      "docs/RECOVERY.md",
+      "public/index.html",
+      "public/app.js",
+      "scripts/test/periodical-calendar.test.mjs",
+      "scripts/test/model-recovery.test.mjs",
+      "scripts/test/helpers.mjs",
+      "scripts/test/hardening.test.mjs",
+      "scripts/test/frontend.test.mjs",
+      "scripts/test/summary-contract.test.mjs",
+      "scripts/lib/pipeline.mjs",
+      "scripts/lib/editorial.mjs",
+      "scripts/lib/issue-contract.mjs",
+      "docs/plans/2026-11-05-script-first-workflow.md"
+    ],
+    "formal_data_state_changed": false,
+    "html_only_app_version_changed": true,
+    "production_stage_checksums": {
+      "prepared": "ee842bdb6ccb1b5f03989d0ab793f961d902102841fc4eae1af7db9b50744b97",
+      "editor": "76011ab66edf602cc62aa0621494284849f12a9a2c8d31dd75c22a774d66b85e",
+      "cards": "3373608de264bf406e68e357c95d325052f218baa695cf607d5a7610a5bd32df",
+      "metadata": "83bb6bd5e6d66a0c35bc8d011ba3875d1ea9574b5a764eaf30d605b499e2cf0e",
+      "ready": "837b51c4e9c44d0e0cc130e05a9ae3b79a1482aec0a37485d584d80f4cd2eeaa"
+    }
+  },
+  "model_requests": 0,
+  "source_requests": 0,
+  "remote_ci_run": false,
+  "limitations": [
+    "Semantic tags and main events still require model judgment; not a complete fact checker.",
+    "New bilingual/model contract has not yet run against the real model.",
+    "Request character reduction is not measured token or cost savings.",
+    "Old archive English availability notices are not translations."
+  ]
+}

@@ -619,22 +619,7 @@ function applyLoadedData(data) {
     windowBanner.hidden = !windowBanner.textContent;
   }
 
-  // Themes block — weekly / monthly only
-  const ul = themesBlock.querySelector('.themes-list');
-  while (ul.firstChild) ul.removeChild(ul.firstChild); // safe clear, no innerHTML
-  if ((currentMode === 'weekly' || currentMode === 'monthly')
-      && Array.isArray(data.themes) && data.themes.length > 0) {
-    for (const theme of data.themes) {
-      const li = document.createElement('li');
-      li.textContent = formatChinese(theme.title); // textContent — XSS-safe even if LLM emits HTML
-      ul.appendChild(li);
-    }
-    themesBlock.querySelector('.themes-title').textContent =
-      currentMode === 'weekly' ? t().themes_weekly_title : t().themes_monthly_title;
-    themesBlock.hidden = false;
-  } else {
-    themesBlock.hidden = true;
-  }
+  renderThemes(data);
 
   applyFilter();
   if (currentMode === 'daily') renderDateStrip();
@@ -877,11 +862,7 @@ function applyLanguage() {
     renderBrief(currentData);
     applyFilter();         // 重新渲染卡片 + filter chip 用新语言
     if (currentMode === 'daily') renderDateStrip(); // 重新渲染 weekday header
-    // Re-render themes title if visible
-    if (!themesBlock.hidden) {
-      themesBlock.querySelector('.themes-title').textContent =
-        currentMode === 'weekly' ? t().themes_weekly_title : t().themes_monthly_title;
-    }
+    renderThemes(currentData);
     // Re-render window banner if visible
     if (currentMode !== 'daily') {
       windowBanner.textContent = periodWindowText(currentData);
@@ -918,13 +899,30 @@ langSeg.addEventListener('click', (e) => {
   await setDigestMode(startMode);
 })();
 
+function renderThemes(data) {
+  const ul = themesBlock.querySelector('.themes-list');
+  ul.replaceChildren();
+  const themes = data.themes || [];
+  themesBlock.hidden = currentMode === 'daily' || !themes.length;
+  if (themesBlock.hidden) return;
+  const available = currentLang === 'zh' || themes.every(row => typeof row.title_en === 'string' && row.title_en.trim() && !/\p{Script=Han}/u.test(row.title_en));
+  for (const theme of available ? themes : [{ title_en: 'English themes are unavailable for this archive.' }]) {
+    const li = document.createElement('li');
+    li.textContent = currentLang === 'zh' ? formatChinese(theme.title) : theme.title_en;
+    ul.appendChild(li);
+  }
+  themesBlock.querySelector('.themes-title').textContent = currentMode === 'weekly' ? t().themes_weekly_title : t().themes_monthly_title;
+}
+
 function renderBrief(data) {
   const block=$('briefBlock'), text=$('briefText');
   if(!block||!text)return;
   text.replaceChildren();
   const sentences=data.executive_summary?.sentences||[];
-  $('briefTitle').textContent=currentLang==='zh'?'速读摘要':'Executive summary (Chinese)';
-  for(const sentence of sentences){const p=document.createElement('p');p.textContent=formatChinese(sentence.text);for(const id of sentence.item_ids||[]){const i=(data.items||[]).findIndex(x=>x.id===id);if(i<0)continue;const a=document.createElement('a');a.href=data.items[i].link;a.target='_blank';a.rel='noopener noreferrer';a.textContent=' ['+(data.items[i].source_name||'来源')+']';p.append(a);}text.append(p);}
+  $('briefTitle').textContent=currentLang==='zh'?'速读摘要':'Executive summary';
+  const available = currentLang === 'zh' || sentences.every(row => typeof row.text_en === 'string' && row.text_en.trim() && !/\p{Script=Han}/u.test(row.text_en));
+  if (sentences.length && !available) { const p=document.createElement('p'); p.textContent='English summary is unavailable for this archive.'; text.append(p); }
+  for(const sentence of available ? sentences : []){const p=document.createElement('p');p.textContent=currentLang==='zh'?formatChinese(sentence.text):sentence.text_en;for(const id of sentence.item_ids||[]){const i=(data.items||[]).findIndex(x=>x.id===id);if(i<0)continue;const a=document.createElement('a');a.href=data.items[i].link;a.target='_blank';a.rel='noopener noreferrer';a.textContent=' ['+(data.items[i].source_name||(currentLang==='zh'?'来源':'Source'))+']';p.append(a);}text.append(p);}
   block.hidden=!sentences.length;
   const note=$('coverageNote');
   if(note){note.hidden=data.publication_status!=='degraded';note.textContent=currentLang==='zh'?'本期部分研究来源或历史材料暂未取全，补齐后可更新。':'Some research sources or historical inputs are incomplete; this issue can be updated.';}

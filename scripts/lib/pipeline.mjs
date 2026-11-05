@@ -8,7 +8,7 @@ import { createCollector } from './sources.mjs';
 import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint, uniqueSourceHealth } from './collection-checkpoint.mjs';
 import { createLlmClient, LlmError } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
-import { dailyPublicationEligibility, prepareCandidates, decisionSystem, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, validateWritingMetadata, dryDecisions } from './editorial.mjs';
+import { dailyPublicationEligibility, prepareCandidates, editorInstructions, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, validateWritingMetadata, prepareWritingMetadata, dryDecisions } from './editorial.mjs';
 import { createModelBatch } from './model-references.mjs';
 import { editorialCoverage, coverageDates } from './editorial-coverage.mjs';
 import { validArchive, periodKey, validateIssue, assertExpectedIssue } from './issue-contract.mjs';
@@ -64,7 +64,9 @@ export async function runPipeline(kind = 'daily', options = {}) {
   }
   const frozen = store && await store.get('prepared');
   const base = frozen?.base || { archive_sha256: existing ? fingerprint(existing) : null, latest_sha256: latest ? fingerprint(latest) : null, producer_commit: env.GITHUB_SHA || null };
-  const editorSystem = decisionSystem + (tagConfig ? '\n标签仅可使用：' + Object.values(tagConfig.dimensions).flatMap(d => d.tags.map(t => t.id)).join(',') : '');
+  const editorSystem = editorInstructions(tagConfig);
+  const writingContext = { requireEnglish: true };
+  const decisionContext = { scriptRouting: true };
   const rawSeen = await readJson(path.join(stateDir, 'seen.json'), []);
   let seen = (Array.isArray(rawSeen) ? rawSeen : []).filter(x => x.shown_date !== window.date);
   let allItems = [], health = [], snapshots = [], inputProvenance = 'live', collector;
@@ -164,9 +166,9 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const editorBatch = createModelBatch(candidates);
   let decisions = store && await store.get('editor');
   if (dry) decisions = dryDecisions(candidates);
-  else if (decisions) decisions = validateDecisions({ decisions }, candidates, tagConfig).decisions;
+  else if (decisions) decisions = validateDecisions({ decisions }, candidates, tagConfig, decisionContext).decisions;
   else decisions = (await client.call(editorSystem, candidatePrompt(editorBatch.items), { effort: 'medium', label: 'editor', maxTokens: 12000,
-    validate: (data, context = {}) => validateDecisions(context.cacheHit ? data : editorBatch.decisions(validateDecisions(data, editorBatch.items, tagConfig)), candidates, tagConfig) })).decisions;
+    validate: (data, context = {}) => validateDecisions(context.cacheHit ? data : editorBatch.decisions(validateDecisions(data, editorBatch.items, tagConfig, decisionContext)), candidates, tagConfig, decisionContext) })).decisions;
   if (store) await store.put('editor', decisions);
   if (until === 'editor') return boundary('editor');
   await options.onCheckpoint?.('editor', store);
@@ -192,7 +194,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
       await store.put('cards', savedCards);
     }
     if (savedMetadata) {
-      try { validateWritingMetadata(structuredClone(savedMetadata), selection.items, kind); }
+      try { validateWritingMetadata(structuredClone(savedMetadata), selection.items, kind, writingContext); }
       catch (error) {
         if (!(error instanceof LlmError)) throw error;
         savedMetadata = null;
@@ -212,7 +214,10 @@ export async function runPipeline(kind = 'daily', options = {}) {
         await store.put('cards', savedCards);
       }
       let metadata;
-      try { metadata = validateWritingMetadata(structuredClone(data), inputs, kind); } catch (error) { if (error instanceof LlmError) return; throw error; }
+      try {
+        metadata = prepareWritingMetadata(structuredClone(data), inputs, kind, writingContext);
+        summaryShortening ||= metadata.summary_shortening;
+      } catch (error) { if (error instanceof LlmError) return; throw error; }
       if (!context.cacheHit) metadata = writerBatch.writing({ items: [], ...metadata });
       await store.put('metadata', { selected_digest: selectedDigest, executive_summary: metadata.executive_summary, themes: metadata.themes, ...(summaryShortening ? { summary_shortening: summaryShortening } : {}) });
     };
@@ -221,9 +226,9 @@ export async function runPipeline(kind = 'daily', options = {}) {
       completeAnswer = structuredClone(data);
       let preparedWriting, result;
       try {
-        preparedWriting = prepareWriting(structuredClone(data), context.cacheHit ? selection.items : writerBatch.items, kind, context);
+        preparedWriting = prepareWriting(structuredClone(data), context.cacheHit ? selection.items : writerBatch.items, kind, { ...context, ...writingContext });
         const mapped = context.cacheHit ? preparedWriting : writerBatch.writing({ ...data, executive_summary: preparedWriting.executive_summary, themes: preparedWriting.themes });
-        result = validateWriting(mapped, selection.items, kind, context);
+        result = validateWriting(mapped, selection.items, kind, { ...context, ...writingContext });
       } catch (error) { await persistParts(data, context); throw error; }
       const summaryShortening = preparedWriting.validation_notes?.summary_shortening || (context.cacheHit && data.validation_notes?.summary_shortening) || context.summaryShortening;
       if (summaryShortening) result.validation_notes.summary_shortening = summaryShortening;
@@ -235,9 +240,9 @@ export async function runPipeline(kind = 'daily', options = {}) {
     const saved = { items: (savedCards?.items || []).map(it => ({ ...it, id: shortIds.get(it.id) })), executive_summary: shortMetadata(savedMetadata?.executive_summary), themes: savedMetadata?.themes?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) };
     if (savedCards?.items.length === selection.items.length && savedMetadata) written = await validate(saved, { summaryShortening: savedMetadata.summary_shortening });
     else {
-      const resume = saved.items.length && createWritingRepair(saved, writerBatch.items, kind, validate);
+      const resume = saved.items.length && createWritingRepair(saved, writerBatch.items, kind, validate, { ...writingContext, summaryShortening: savedMetadata?.summary_shortening });
       written = await client.call(resume?.system || writingSystem, resume?.user || writingPrompt(kind, writerBatch.items),
-        { effort: 'low', label: 'writer', maxTokens: 10000, validate: resume?.validate || validate, repair: (data, error) => /Invalid repair reference|Metadata repair cannot replace cards|Repair coverage mismatch/.test(error?.message || '') ? null : createWritingRepair(completeAnswer || data, writerBatch.items, kind, validate) });
+        { effort: 'low', label: 'writer', maxTokens: 10000, validate: resume?.validate || validate, repair: (data, error) => /Invalid repair reference|Metadata repair cannot replace cards|Repair coverage mismatch/.test(error?.message || '') ? null : createWritingRepair(completeAnswer || data, writerBatch.items, kind, validate, writingContext) });
     }
   }
   const { validation_notes: validationNotes, ...publicWritten } = written;
@@ -251,7 +256,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const requiredProblems = health.filter(s => s.required && (s.status !== 'ok' || s.undated === s.articles));
   const sectionProblems = Object.values(editorialAudit.sections).some(section => section.source_failures.length);
   const status = dry ? 'dry_run' : gaps.length || requiredProblems.length || sectionProblems ? 'degraded' : 'complete';
-  const payload = { schema_version: 2, kind, date: kind === 'daily' ? label : undefined, publish_date: beijingDateStr(now.getTime()), generated_at: (env.PUBLISH_NOW || options.now) ? now.getTime() : Date.now(),
+  const payload = { schema_version: 2, ...(!dry ? { editorial_schema: 2 } : {}), kind, date: kind === 'daily' ? label : undefined, publish_date: beijingDateStr(now.getTime()), generated_at: (env.PUBLISH_NOW || options.now) ? now.getTime() : Date.now(),
     period_start: window.periodStart, period_end: window.periodEnd, period_label: window.label, window, publication_status: status, coverage_status: status, content_status: dry ? 'dry_run' : 'passed', delivery_state: 'ready', edition: store?.identity,
     sections: SECTIONS, ...publicWritten, sources_attempted: health.length, sources_ok: health.filter(h => h.status === 'ok').length,
     errors: health.filter(h => h.status !== 'ok').map(h => ({ source: h.name, error: h.error || h.status })),

@@ -13,7 +13,7 @@ const evidence = 'The research records price growth of 2.1% and 2.4%, new home s
 const selected = Array.from({length:20},(_,i)=>({...sample(String(i+1),1793400000000),description:evidence}));
 const cards = selected.map(it=>({id:it.id,title_zh:'住宅市场研究',summary_zh:'研究显示住宅市场分化。',impact:'neutral',evidence_quote:'The research records price growth of 2.1% and 2.4%'}));
 const dataFor = metadata => ({items:structuredClone(cards),...structuredClone(metadata)});
-const shortMetadata = sentences => ({executive_summary:{sentences},themes:[]});
+const shortMetadata = sentences => ({executive_summary:{sentences:sentences.map(row=>({...row,text_en:'Housing market research remains relevant.'}))},themes:[]});
 
 for (const row of fixture.cases) test('captured '+row.name+' keeps the complete prefix and all 20 cards',()=>{
   const data=dataFor(row.metadata),original=structuredClone(data);
@@ -40,7 +40,7 @@ test('counting uses normalized Unicode code points and one prompt metric',()=>{
 test('prefix does not skip a middle sentence or split an entry',()=>{
   const sentences=[{text:'甲'.repeat(200),item_ids:['1']},{text:'乙'.repeat(100),item_ids:['2']},{text:'短句。',item_ids:['3']}];
   const result=prepareWriting(dataFor(shortMetadata(sentences)),selected);
-  assert.deepEqual(result.executive_summary.sentences,sentences.slice(0,1));
+  assert.deepEqual(result.executive_summary.sentences,shortMetadata(sentences.slice(0,1)).executive_summary.sentences);
 });
 
 for (const corruption of ['trailing-number','trailing-reference','theme-reference','theme-number','card-number','missing-card']) test('prefix cannot hide '+corruption,()=>{
@@ -86,7 +86,7 @@ test('pipeline normalizes once without correction and keeps the audit through co
   const requests=[];
   const llmOptions={fetchImpl:async(_url,request)=>{
     const input=JSON.parse(JSON.parse(request.body).messages[1].content);requests.push(input);
-    if(Array.isArray(input))return response({decisions:input.map(it=>({id:it.id,keep:true,importance:4,section:'national',tags:[],duplicate_of:null}))});
+    if(Array.isArray(input))return response({decisions:input.map(it=>({id:it.id,keep:true,importance:4,section:'national',capital_focus:false,tags:[],duplicate_of:null}))});
     assert.equal(requests.length,2,'No metadata correction should be requested');
     return response({items:input.items.map(it=>({id:it.id,title_zh:'住宅销售研究',summary_zh:'住宅销售增长 5%。',impact:'neutral',evidence_quote:it.evidence.slice(0,70)})),...shortMetadata([{text:'甲'.repeat(150),item_ids:['1']},{text:'乙'.repeat(120),item_ids:['2']},{text:'丙'.repeat(30),item_ids:['3']}])});
   }};

@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { validateWriting } from './editorial.mjs';
+import { validateWriting, routeSection } from './editorial.mjs';
 
 export const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function periodKey(kind, window) { return kind === 'daily' ? window.date : kind === 'weekly' ? window.periodStart : window.label; }
@@ -16,7 +16,9 @@ export function validateIssue(issue, { kind = issue?.kind || 'daily', upper, per
   if (!label || periodKey(kind, issue.window) !== label || (period !== undefined && label !== period)) throw new Error('Issue period mismatch');
   if (!Array.isArray(issue.items) || !issue.items.length || issue.items.some(x => typeof x?.id !== 'string') || new Set(issue.items.map(x => x.id)).size !== issue.items.length) throw new Error('Invalid issue cards');
   if (issue.items.some(it => !Number.isFinite(it.published_at) || it.published_at >= issue.window.upper)) throw new Error('Invalid card publication date');
-  validateWriting(structuredClone(issue), issue.items, kind);
+  if (issue.editorial_schema !== undefined && issue.editorial_schema !== 2) throw new Error('Unsupported editorial schema');
+  if (issue.editorial_schema === 2 && issue.items.some(it => typeof it.capital_focus !== 'boolean' || it.section !== routeSection(it))) throw new Error('Script section mismatch');
+  validateWriting(structuredClone(issue), issue.items, kind, { requireEnglish: issue.editorial_schema === 2 });
   return issue;
 }
 

@@ -27,14 +27,14 @@ async function setup(t, configured = sources) {
 const stageDir = root => path.join(root,'state/issues/daily/2026-10-28/r1');
 const response = value => new Response(JSON.stringify({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify(value) } }] }), { headers: { 'content-type': 'application/json' } });
 function answer(input, bad = false) {
-  return { items: input.items.map(it => ({ id: it.id, title_zh: '住宅销售研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', evidence_quote: it.evidence.slice(0,70) })), executive_summary: { sentences: [{ text: `住宅销售增长 ${bad ? 99 : 5}%。`, item_ids: input.items.map(it => it.id) }] }, themes: [] };
+  return { items: input.items.map(it => ({ id: it.id, title_zh: '住宅销售研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', evidence_quote: it.evidence.slice(0,70) })), executive_summary: { sentences: [{ text: `住宅销售增长 ${bad ? 99 : 5}%。`, text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] };
 }
 
 for (const mode of ['card-and-metadata', 'metadata-only', 'all-cards', 'exhausted']) test('invalid complete frozen writing resumes safely: ' + mode, async t => {
   const opts = await setup(t), env = { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid', PIPELINE_UNTIL: 'ready' };
   const seed = { retryDelays: [0,0], fetchImpl: async (_url, request) => {
     const input = JSON.parse(JSON.parse(request.body).messages[1].content);
-    return response(Array.isArray(input) ? { decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', tags: [], duplicate_of: null })) } : answer(input));
+    return response(Array.isArray(input) ? { decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', capital_focus: false, tags: [], duplicate_of: null })) } : answer(input));
   } };
   await runPipeline('daily', { ...opts, env, llmOptions: seed });
   const manifest = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'manifest.json')));
@@ -113,10 +113,10 @@ test('a bad shared summary repairs metadata only and persists all validated card
   const opts = await setup(t), calls = []; let writers = 0;
   const llmOptions = { retryDelays: [0,0], sleep: async () => {}, fetchImpl: async (_url, request) => {
     const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content); calls.push(body);
-    if (Array.isArray(input)) return response({ decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', tags: [], duplicate_of: null })) });
+    if (Array.isArray(input)) return response({ decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', capital_focus: false, tags: [], duplicate_of: null })) });
     if (++writers === 1) return response(answer(input, true));
     assert.match(body.messages[0].content, /仅纠正 executive_summary/);
-    return response({ executive_summary: { sentences: [{ text: '住宅销售增长 5%。', item_ids: input.items.map(it => it.id) }] }, themes: [] });
+    return response({ executive_summary: { sentences: [{ text: '住宅销售增长 5%。', text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] });
   } };
   const result = await runPipeline('daily', { ...opts, env: { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid' }, llmOptions });
   assert.equal(calls.length, 3); assert.equal(result.items.length, 3);
@@ -130,7 +130,7 @@ test('valid cards survive a failed metadata repair and only metadata is requeste
   let firstWriter = true;
   const initial = { retryDelays: [0,0], sleep: async () => {}, fetchImpl: async (_url, request) => {
     const input = JSON.parse(JSON.parse(request.body).messages[1].content);
-    if (Array.isArray(input)) return response({ decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', tags: [], duplicate_of: null })) });
+    if (Array.isArray(input)) return response({ decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', capital_focus: false, tags: [], duplicate_of: null })) });
     if (firstWriter) { firstWriter = false; return response(answer(input, true)); }
     return new Response('model_not_found', { status: 503 });
   } };
@@ -140,7 +140,7 @@ test('valid cards survive a failed metadata repair and only metadata is requeste
   const llmOptions = { retryDelays: [0,0], fetchImpl: async (_url, request) => {
     const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content); retries.push(body);
     assert.match(body.messages[0].content, /仅纠正 executive_summary/);
-    return response({ executive_summary: { sentences: [{ text: '住宅销售增长 5%。', item_ids: input.items.map(it => it.id) }] }, themes: [] });
+    return response({ executive_summary: { sentences: [{ text: '住宅销售增长 5%。', text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] });
   } };
   const result = await runPipeline('daily', { ...opts, env, llmOptions, collector: { collect() { throw Error('recollection'); } } });
   assert.equal(retries.length, 1); assert.equal(result.items.length, 3);
@@ -163,7 +163,7 @@ test('repairing a missing card then bad metadata never asks to rewrite the saved
     const body=JSON.parse(request.body),input=JSON.parse(body.messages[1].content);calls.push(body);
     if(calls.length===1){assert.deepEqual(input.items.map(it=>it.id),['3']);return response({...answer(input,true),executive_summary:{sentences:[{text:'住宅销售增长 99%。',item_ids:input.original_item_ids}]}});}
     assert.match(body.messages[0].content,/仅纠正 executive_summary/);
-    return response({executive_summary:{sentences:[{text:'住宅销售增长 5%。',item_ids:input.items.map(it=>it.id)}]},themes:[]});
+    return response({executive_summary:{sentences:[{text:'住宅销售增长 5%。',text_en:'Housing sales rose 5%.',item_ids:input.items.map(it=>it.id)}]},themes:[]});
   }}});
   assert.equal(calls.length,2);assert.equal(result.items.length,3);
 });

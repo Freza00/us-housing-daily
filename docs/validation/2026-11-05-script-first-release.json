@@ -1,0 +1,23 @@
+{
+  "checked_at_beijing": "2026-11-05 16:38",
+  "status": "release_prepared",
+  "authorization": "提交吧，明天看看 6 号",
+  "base_commit": "77dfb85a9a45845229a7113eda7b7c6235356c6e",
+  "scope": "script routing, bilingual overview/themes, safe metadata preservation and tests/docs",
+  "manual_generation_dispatches": 0,
+  "new_model_calls": 0,
+  "new_collection_calls": 0,
+  "nov5_rewritten": false,
+  "nov6_automatic_generation": "pending",
+  "local_tests": {
+    "release_checkout": 269,
+    "failed": 0,
+    "node": "v25.8.0"
+  },
+  "preflight": {
+    "whitelist_files": 24,
+    "protected_files_checked": 228,
+    "data_and_state_preserved": true,
+    "html_only_app_version_changed": true
+  }
+}

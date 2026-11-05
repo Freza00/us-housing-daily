@@ -10,9 +10,9 @@ import { sandbox, sample, replayEnv } from './helpers.mjs';
 
 const date = Date.parse('2026-10-28T14:00:00Z');
 const items = ['ee97eb3b7b51bf8f', '8f51e30b0b1f3098', 'third'].map(id => sample(id, date));
-const decision = id => ({ id, keep: true, importance: 4, section: 'national', tags: [], duplicate_of: null });
+const decision = id => ({ id, keep: true, importance: 4, section: 'national', capital_focus: false, tags: [], duplicate_of: null });
 const card = item => ({ id: item.id, title_zh: '住宅研究', summary_zh: '销售增长 5%。', impact: 'neutral', evidence_quote: item.description });
-const writing = selected => ({ items: selected.map(card), executive_summary: { sentences: [{ text: '销售增长 5%，可负担性仍是约束。', item_ids: selected.map(x => x.id) }] }, themes: [] });
+const writing = selected => ({ items: selected.map(card), executive_summary: { sentences: [{ text: '销售增长 5%，可负担性仍是约束。', text_en: 'Sales rose 5%, while affordability remains a constraint.', item_ids: selected.map(x => x.id) }] }, themes: [] });
 
 test('numeric ranges and narrative dashes survive formatting without inventing negative claims', () => {
   for (const range of ['30–40', '30--40', '30-40', '30 - 40', '30%–40%', '30%-40%', '预期--30 至 40']) {
