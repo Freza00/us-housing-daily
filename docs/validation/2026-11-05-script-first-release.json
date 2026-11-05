@@ -1,23 +1,137 @@
 {
-  "checked_at_beijing": "2026-11-05 16:38",
-  "status": "release_prepared",
+  "checked_at_beijing": "2026-11-05 16:43",
+  "status": "deployed",
   "authorization": "提交吧，明天看看 6 号",
   "base_commit": "77dfb85a9a45845229a7113eda7b7c6235356c6e",
-  "scope": "script routing, bilingual overview/themes, safe metadata preservation and tests/docs",
-  "manual_generation_dispatches": 0,
-  "new_model_calls": 0,
-  "new_collection_calls": 0,
-  "nov5_rewritten": false,
-  "nov6_automatic_generation": "pending",
+  "code_commit": "d5cc9dae060479922731b616fdc57db53ce28bed",
   "local_tests": {
     "release_checkout": 269,
     "failed": 0,
     "node": "v25.8.0"
   },
-  "preflight": {
-    "whitelist_files": 24,
-    "protected_files_checked": 228,
-    "data_and_state_preserved": true,
-    "html_only_app_version_changed": true
-  }
+  "ci": {
+    "run": 41996277901,
+    "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41996277901",
+    "node": "22.23.4",
+    "passed": 269,
+    "failed": 0
+  },
+  "verification": {
+    "checked_at": "2026-11-05T08:41:08.569Z",
+    "commit": "d5cc9dae060479922731b616fdc57db53ce28bed",
+    "github_status": "success",
+    "vercel": [
+      {
+        "context": "Vercel",
+        "state": "success",
+        "url": "https://vercel.com/freza00s-projects/news-agent/2dBUbtZff3LdRFtRMj9xFuSLUj1W"
+      }
+    ],
+    "runs": [
+      {
+        "id": 41996277901,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/41996277901"
+      }
+    ],
+    "files": [
+      {
+        "route": "/",
+        "status": 200,
+        "sha256": "34a2c1afeaf6ee1328b24f9992f36a321249e40c41259bba31cd36feb4728bfa",
+        "expected_sha256": "34a2c1afeaf6ee1328b24f9992f36a321249e40c41259bba31cd36feb4728bfa",
+        "ok": true
+      },
+      {
+        "route": "/app.js",
+        "status": 200,
+        "sha256": "6ac559b775965b9f55df93e444bbc87eb7a14b177dec50b82165948740156bc7",
+        "expected_sha256": "6ac559b775965b9f55df93e444bbc87eb7a14b177dec50b82165948740156bc7",
+        "ok": true
+      },
+      {
+        "route": "/style.css",
+        "status": 200,
+        "sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7",
+        "expected_sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7",
+        "ok": true
+      },
+      {
+        "route": "/data/latest.json",
+        "status": 200,
+        "sha256": "669acbc9f26b97cd29cd83777822b77edb743952d3584237cc9b5510228ab9fe",
+        "expected_sha256": "669acbc9f26b97cd29cd83777822b77edb743952d3584237cc9b5510228ab9fe",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-05.json",
+        "status": 200,
+        "sha256": "669acbc9f26b97cd29cd83777822b77edb743952d3584237cc9b5510228ab9fe",
+        "expected_sha256": "669acbc9f26b97cd29cd83777822b77edb743952d3584237cc9b5510228ab9fe",
+        "ok": true
+      },
+      {
+        "route": "/data/dates.json",
+        "status": 200,
+        "sha256": "36cbf1f25450ffdbe6f8085453c1c31504d10cf871c1a45f70ce7f6ed8de3c55",
+        "expected_sha256": "36cbf1f25450ffdbe6f8085453c1c31504d10cf871c1a45f70ce7f6ed8de3c55",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/latest.json",
+        "status": 200,
+        "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "expected_sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/dates.json",
+        "status": 200,
+        "sha256": "86b1c150dc7cf3cce1a1009788a195ada1c4049b6b9fb685842e9d9ab2c1e822",
+        "expected_sha256": "86b1c150dc7cf3cce1a1009788a195ada1c4049b6b9fb685842e9d9ab2c1e822",
+        "ok": true
+      },
+      {
+        "route": "/data/monthly/latest.json",
+        "status": 200,
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "ok": true
+      },
+      {
+        "route": "/data/monthly/dates.json",
+        "status": 200,
+        "sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+        "expected_sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+        "ok": true
+      }
+    ],
+    "all_online_match": true,
+    "nov5": {
+      "date": "2026-11-05",
+      "items": 20,
+      "payload_sha256": "e77cd6008025606b6f360cae616591e450480b4477299db8583e864e1138b511"
+    },
+    "new_model_calls": 0,
+    "manual_generation_dispatches": 0
+  },
+  "protected_original_files": 304,
+  "protected_release_files": 228,
+  "nov5_rewritten": false,
+  "new_model_calls": 0,
+  "new_collection_calls": 0,
+  "manual_generation_dispatches": 0,
+  "nov6_automatic_generation": {
+    "status": "pending",
+    "configured_first_trigger_beijing": "2026-11-06 05:00",
+    "readable_target_beijing": "2026-11-06 09:00",
+    "calendar_eligible": true,
+    "new_external_observer_or_notification": false
+  },
+  "limitations": [
+    "New semantic and bilingual model contract awaits the next real automatic generation.",
+    "A configured trigger and passing calendar probe do not guarantee punctual platform execution."
+  ]
 }
