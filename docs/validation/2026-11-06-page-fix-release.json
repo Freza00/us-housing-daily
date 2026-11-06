@@ -1,10 +1,247 @@
 {
-  "status": "publishing",
+  "status": "deployed_verified",
+  "checked_at_beijing": "2026-11-06 11:14",
   "authorized_action": "commit_sync_open_source_and_deploy",
   "base": "040df8003a7cf3691f4a34973294d66fea0f93ce",
-  "local_validation": "docs/validation/2026-11-06-page-fix.json",
-  "published_data_modified": false,
+  "code_commit": "5a00784e2f9177ffbd434b59daa557ddd67e9f2f",
+  "code_commit_url": "https://github.com/Freza00/us-housing-daily/commit/5a00784e2f9177ffbd434b59daa557ddd67e9f2f",
+  "site": "https://news-agent-mu.vercel.app",
+  "whitelist": [
+    "AGENTS.md",
+    "README.md",
+    "ROADMAP.md",
+    "public/app.js",
+    "public/index.html",
+    "public/style.css",
+    "scripts/lib/editorial.mjs",
+    "scripts/test/frontend-content.test.mjs",
+    "scripts/test/frontend-navigation.test.mjs",
+    "scripts/test/periodical-calendar.test.mjs",
+    "docs/plans/2026-11-06-page-fix.md",
+    "docs/validation/2026-11-06-whole-page-acceptance.md",
+    "docs/validation/2026-11-06-whole-page-acceptance.json",
+    "docs/validation/2026-11-06-page-fix.md",
+    "docs/validation/2026-11-06-page-fix.json",
+    "docs/validation/2026-11-06-page-fix-release.md",
+    "docs/validation/2026-11-06-page-fix-release.json"
+  ],
+  "tests": {
+    "release_copy": {
+      "passed": 298,
+      "failed": 0
+    },
+    "ci": {
+      "passed": 298,
+      "failed": 0,
+      "node": "v22.23.4",
+      "run": {
+        "id": 42155099270,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/42155099270"
+      }
+    }
+  },
+  "vercel": [
+    {
+      "state": "success",
+      "url": "https://vercel.com/freza00s-projects/news-agent/EdzjDSS3LfgbjjNhytGNGoBsqFGX"
+    }
+  ],
+  "online_files": [
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "f0c91df7bea903a944fff610524f0a14b981484e1d0bc2bcfa099747ec774155",
+      "expected_sha256": "f0c91df7bea903a944fff610524f0a14b981484e1d0bc2bcfa099747ec774155",
+      "ok": true
+    },
+    {
+      "route": "/app.js",
+      "status": 200,
+      "sha256": "ffe47719a876be3b47e8a021da418c6b3af112196ffd0f78271c7a500884435f",
+      "expected_sha256": "ffe47719a876be3b47e8a021da418c6b3af112196ffd0f78271c7a500884435f",
+      "ok": true
+    },
+    {
+      "route": "/style.css",
+      "status": 200,
+      "sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30",
+      "expected_sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30",
+      "ok": true
+    },
+    {
+      "route": "/data/latest.json",
+      "status": 200,
+      "sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+      "expected_sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+      "ok": true
+    },
+    {
+      "route": "/data/2026-11-06.json",
+      "status": 200,
+      "sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+      "expected_sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+      "ok": true
+    },
+    {
+      "route": "/data/2026-11-05.json",
+      "status": 200,
+      "sha256": "669acbc9f26b97cd29cd83777822b77edb743952d3584237cc9b5510228ab9fe",
+      "expected_sha256": "669acbc9f26b97cd29cd83777822b77edb743952d3584237cc9b5510228ab9fe",
+      "ok": true
+    },
+    {
+      "route": "/data/dates.json",
+      "status": 200,
+      "sha256": "eab4cce07ae0c7b939e9aef8fabf510fc0049aa267ad18d44fb8b4acd33c51d3",
+      "expected_sha256": "eab4cce07ae0c7b939e9aef8fabf510fc0049aa267ad18d44fb8b4acd33c51d3",
+      "ok": true
+    },
+    {
+      "route": "/data/weekly/latest.json",
+      "status": 200,
+      "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+      "expected_sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+      "ok": true
+    },
+    {
+      "route": "/data/weekly/dates.json",
+      "status": 200,
+      "sha256": "86b1c150dc7cf3cce1a1009788a195ada1c4049b6b9fb685842e9d9ab2c1e822",
+      "expected_sha256": "86b1c150dc7cf3cce1a1009788a195ada1c4049b6b9fb685842e9d9ab2c1e822",
+      "ok": true
+    },
+    {
+      "route": "/data/monthly/latest.json",
+      "status": 200,
+      "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+      "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+      "ok": true
+    },
+    {
+      "route": "/data/monthly/dates.json",
+      "status": 200,
+      "sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+      "expected_sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+      "ok": true
+    },
+    {
+      "route": "/data/weekly/2026-10-26.json",
+      "status": 200,
+      "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+      "expected_sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+      "ok": true
+    },
+    {
+      "route": "/data/monthly/2026-10.json",
+      "status": 200,
+      "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+      "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+      "ok": true
+    }
+  ],
+  "all_online_match": true,
+  "live_browser": {
+    "passed": true,
+    "network": "Live production GET only; controlled failures and delays are marked in test names; no user browser access",
+    "scenarios": 15,
+    "language_states": 39,
+    "widths": [
+      1440,
+      768,
+      390,
+      360
+    ],
+    "boundary_checks": [
+      {
+        "name": "Rapid weekly → monthly: stale content cannot overwrite active tab",
+        "passed": true
+      },
+      {
+        "name": "Startup daily index cannot return user from weekly",
+        "passed": true
+      },
+      {
+        "name": "Refresh daily index cannot return user from monthly",
+        "passed": true
+      },
+      {
+        "name": "Late weekly index cannot replace monthly period buttons",
+        "passed": true
+      },
+      {
+        "name": "Rapid Nov5 → Nov6 date selection keeps Nov6",
+        "passed": true
+      },
+      {
+        "name": "Fetch failure remains empty after language changes and recovers on retry",
+        "passed": true
+      },
+      {
+        "name": "Archived month 404 names requested period; latest month 404 says unpublished",
+        "passed": true
+      },
+      {
+        "name": "Index failure preserves known dates and readable body, then retry clears warning",
+        "passed": true
+      },
+      {
+        "name": "Zero-match filter resets across issues; matching filter persists",
+        "passed": true
+      },
+      {
+        "name": "Nov5 Sun Belt includes Phoenix; archive refresh and calendar work",
+        "passed": true
+      },
+      {
+        "name": "Malformed 200 and wrong issue cannot leave partial cards or freeze Chinese errors",
+        "passed": true
+      },
+      {
+        "name": "Beijing before/after midnight and early morning date strip reaches issue day",
+        "passed": true
+      },
+      {
+        "name": "Open calendar refreshes when current date index arrives",
+        "passed": true
+      },
+      {
+        "name": "Holiday banner keeps holiday and recovery date across languages",
+        "passed": true
+      },
+      {
+        "name": "Older weekly/monthly archives remain readable in English",
+        "passed": true
+      }
+    ],
+    "page_errors": [],
+    "horizontal_overflows": 0,
+    "visual_review": "Desktop and mobile compressed contact sheets reviewed",
+    "user_browser_accessed": false
+  },
+  "issue": {
+    "date": "2026-11-06",
+    "items": 20,
+    "btr": 1,
+    "payload_sha256": "223c80b9c01057b634b3b9b713e704e129c9a589c9b914370406243637c2550a"
+  },
+  "preservation": {
+    "remote_non_target_files": 391,
+    "local_baseline_files": 317,
+    "local_changed_existing_files": [
+      "ROADMAP.md"
+    ],
+    "local_data_and_state_unchanged": true,
+    "production_inline_preserved": true,
+    "existing_user_mobile_styles_preserved": true
+  },
   "new_model_calls": 0,
   "new_collection_calls": 0,
-  "manual_dispatches": 0
+  "manual_generation_dispatches": 0,
+  "published_cfpb_reclassified": false,
+  "source_coverage_gaps_resolved": false,
+  "continuous_automatic_publication_proven": false,
+  "evidence_directory": ".tmp/page-release-20261106/"
 }
