@@ -1,13 +1,11 @@
 {
-  "checked_at_beijing": "2026-11-06 10:06",
-  "status": "daily_published_code_pending",
+  "checked_at_beijing": "2026-11-06 10:13",
+  "status": "deployed",
   "authorization": "上线，更新",
+  "data_commit": "0716b4ca3874de79be2b84a0af3cb27345150bd3",
+  "code_commit": "2e91563465ba1765e073c5e2247b5040602427ed",
   "candidate_sha256": "223c80b9c01057b634b3b9b713e704e129c9a589c9b914370406243637c2550a",
   "revision": 1,
-  "new_model_calls": 0,
-  "new_collection_calls": 0,
-  "old_issues_rewritten": false,
-  "data_commit": "0716b4ca3874de79be2b84a0af3cb27345150bd3",
   "delivery": {
     "schema_version": 1,
     "ok": true,
@@ -44,16 +42,149 @@
       "already_pushed": false
     }
   },
+  "verification": {
+    "checked_at": "2026-11-06T02:10:44.132Z",
+    "commit": "2e91563465ba1765e073c5e2247b5040602427ed",
+    "github_status": "success",
+    "vercel": [
+      {
+        "state": "success",
+        "url": "https://vercel.com/freza00s-projects/news-agent/3BpMcdSa5vC2irPGqyQJRf9B9sdo"
+      }
+    ],
+    "runs": [
+      {
+        "id": 42148592614,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/42148592614"
+      }
+    ],
+    "data_deployment": [
+      {
+        "state": "success",
+        "url": "https://vercel.com/freza00s-projects/news-agent/7aYicXu63NauhdGJ5b3Hun66yaNm"
+      }
+    ],
+    "files": [
+      {
+        "route": "/",
+        "status": 200,
+        "sha256": "fc98ee44cb06ee377991f83ee72efc796f1bd1155bfc7199f189c26a6dcc1225",
+        "expected_sha256": "fc98ee44cb06ee377991f83ee72efc796f1bd1155bfc7199f189c26a6dcc1225",
+        "ok": true
+      },
+      {
+        "route": "/app.js",
+        "status": 200,
+        "sha256": "6ac559b775965b9f55df93e444bbc87eb7a14b177dec50b82165948740156bc7",
+        "expected_sha256": "6ac559b775965b9f55df93e444bbc87eb7a14b177dec50b82165948740156bc7",
+        "ok": true
+      },
+      {
+        "route": "/style.css",
+        "status": 200,
+        "sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7",
+        "expected_sha256": "64bc44a1131c97f1e9d4c6cfb3dce0709219f79bc0fa01ae17ff6a988e5f32f7",
+        "ok": true
+      },
+      {
+        "route": "/data/latest.json",
+        "status": 200,
+        "sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+        "expected_sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-06.json",
+        "status": 200,
+        "sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+        "expected_sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-05.json",
+        "status": 200,
+        "sha256": "669acbc9f26b97cd29cd83777822b77edb743952d3584237cc9b5510228ab9fe",
+        "expected_sha256": "669acbc9f26b97cd29cd83777822b77edb743952d3584237cc9b5510228ab9fe",
+        "ok": true
+      },
+      {
+        "route": "/data/dates.json",
+        "status": 200,
+        "sha256": "eab4cce07ae0c7b939e9aef8fabf510fc0049aa267ad18d44fb8b4acd33c51d3",
+        "expected_sha256": "eab4cce07ae0c7b939e9aef8fabf510fc0049aa267ad18d44fb8b4acd33c51d3",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/latest.json",
+        "status": 200,
+        "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "expected_sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/dates.json",
+        "status": 200,
+        "sha256": "86b1c150dc7cf3cce1a1009788a195ada1c4049b6b9fb685842e9d9ab2c1e822",
+        "expected_sha256": "86b1c150dc7cf3cce1a1009788a195ada1c4049b6b9fb685842e9d9ab2c1e822",
+        "ok": true
+      },
+      {
+        "route": "/data/monthly/latest.json",
+        "status": 200,
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "ok": true
+      },
+      {
+        "route": "/data/monthly/dates.json",
+        "status": 200,
+        "sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+        "expected_sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+        "ok": true
+      }
+    ],
+    "all_online_match": true,
+    "issue": {
+      "date": "2026-11-06",
+      "items": 20,
+      "btr": 1,
+      "payload_sha256": "223c80b9c01057b634b3b9b713e704e129c9a589c9b914370406243637c2550a"
+    },
+    "new_model_calls": 0,
+    "new_collection_calls": 0,
+    "manual_dispatches": 0
+  },
+  "ci": {
+    "run": 42148592614,
+    "url": "https://github.com/Freza00/us-housing-daily/actions/runs/42148592614",
+    "node": "22.23.4",
+    "passed": 282,
+    "failed": 0
+  },
   "local_tests": {
     "workspace": 282,
     "isolated": 282,
-    "failed": 0,
-    "node": "v25.8.0",
-    "release_checkout": 282
+    "release_checkout": 282,
+    "failed": 0
   },
-  "preflight": {
-    "whitelist_files": 13,
-    "protected_non_target_files": 386,
-    "data_state_html_preserved": true
-  }
+  "protection": {
+    "non_target_release_files": 386,
+    "non_target_original_workspace_files": 312,
+    "old_data_state_and_public_html_preserved_in_code_release": true,
+    "old_nov5_and_periodicals_unchanged": true,
+    "frozen_manifest_and_ledger_preserved": true
+  },
+  "new_model_calls_during_release": 0,
+  "new_collection_calls_during_release": 0,
+  "recovery_before_release": {
+    "editor_calls": 0,
+    "writer_calls": 1,
+    "counted_budget_ms": 269859
+  },
+  "manual_generation_dispatches": 0,
+  "publication_classification": "Late manual recovery; not punctual automatic publication",
+  "next_automatic_generation": "Pending observation; no new scheduler or notification enabled"
 }
