@@ -1,0 +1,687 @@
+{
+  "checked_at_beijing": "2026-11-06 10:31",
+  "scope": "Read-only whole-page acceptance; live production GETs and isolated headless browser; no user Chrome access",
+  "site": "https://news-agent-mu.vercel.app",
+  "overall": "not_passed",
+  "findings": [
+    {
+      "id": "QA-1",
+      "severity": "P1",
+      "title": "Late response can display the wrong digest kind under the active tab",
+      "location": "public/app.js:655 / 740",
+      "evidence": {
+        "test": "Rapid weekly→monthly with weekly GET delayed 1200ms",
+        "state": {
+          "mode": "monthly",
+          "kind": "weekly",
+          "period": "2026-10-26",
+          "lang": "zh",
+          "cards": 20,
+          "total": 20,
+          "overflow": false,
+          "brief": "美国租赁市场出现分化：Apartment List 估计全国租金年增幅于 10 月转正至 0.1%，但月租环比下降 0.3%；CBRE 报告 Q3 多户住宅空置率升至 4.7%，租金同比仅增 1%，供需与租金表现仍需观察。 [Apartment List Research] [CBRE Research]\n\n办公楼市场在 Q3 延续修复，Colliers 报告全国空置率降至 17.7%，净吸纳连续 9 个季度为正；生命科学空置率则在连续 4 年上升后首次季度回落，但租金仍下跌，复苏持续性尚待验证。 [Colliers Research] [Cushman & Wakefield Research]",
+          "period_labels": [
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周"
+          ],
+          "han_lines": [
+            "美国住宅地产工作日精选",
+            "更新于 11/02 16:20 (北京)",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "日报",
+            "周报",
+            "月报",
+            "覆盖：2026-10-26 05:00 至 2026-11-02 05:00（北京）",
+            "速读摘要",
+            "美国租赁市场出现分化：Apartment List 估计全国租金年增幅于 10 月转正至 0.1%，但月租环比下降 0.3%；CBRE 报告 Q3 多户住宅空置率升至 4.7%，租金同比仅增 1%，供需与租金表现仍需观察。 [Apartment List Research] [CBRE Research]",
+            "办公楼市场在 Q3 延续修复，Colliers 报告全国空置率降至 17.7%，净吸纳连续 9 个季度为正；生命科学空置率则在连续 4 年上升后首次季度回落，但租金仍下跌，复苏持续性尚待验证。 [Colliers Research] [Cushman & Wakefield Research]",
+            "本期部分研究来源或历史材料暂未取全，补齐后可更新。",
+            "来源与行业覆盖",
+            "本月主线",
+            "租赁市场呈现租金、空置率与供给调整并行的分化走势",
+            "办公楼与生命科学出现需求或空置率改善信号，复苏程度不一",
+            "房价上涨与通胀、利率压力交织，区域及住房可负担性值得关注",
+            "全部 20",
+            "多户 6",
+            "办公 1",
+            "工业 0",
+            "数据中心 0",
+            "机构 2",
+            "利率 1",
+            "政策 1",
+            "全国住宅市场",
+            "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk",
+            "1Zillow 预计住房通胀短期维持高位",
+            "Zillow 预测 2026 年 10 月租金通胀为 2.8%、业主等价租金通胀为 3.3%，并认为住房通胀短期已基本停滞，或延续至 2027 年。",
+            "短期利空",
+            "公开摘要",
+            "住宅市场",
+            "数据",
+            "宏观",
+            "2美国租金同比结束连续多年下跌",
+            "Apartment List Research 称，美国全国租金 10 月同比上涨 0.1% 至 1,384 美元，但环比下降 0.3%；多户住宅空置率为 7%，优惠率仍达 32%。",
+            "中性",
+            "多户",
+            "数据",
+            "趋势",
+            "3新屋销售略降，开发商继续管理库存",
+            "Zillow Research 称，9 月新屋销售下降 0.6% 至年化 676,000 套，同比下降 5.3%；市场新屋库存同比下降 2.3%，开发商仍将库存管理置于首位。",
+            "短期利空",
+            "住宅市场",
+            "数据",
+            "建造商",
+            "4美国房价同比涨幅升至 2.1%",
+            "S&P Cotality Case-Shiller 指数显示，美国全国房价 8 月同比上涨 2.1%，高于前月的 1.9%；实际房价已连续 15 个月下降，区域分化明显。",
+            "中性",
+            "住宅市场",
+            "数据",
+            "宏观",
+            "5美联储 10 月维持联邦基金利率不变",
+            "Realtor.com Research 称，FOMC 将联邦基金利率维持在 3.75% 至 4.0%，但市场预计未来 6 至 8 个月还会加息 2 至 3 次。",
+            "短期利空",
+            "宏观",
+            "利率",
+            "6FHFA 房价 8 月环比上涨 0.3%",
+            "FHFA 房价指数显示，美国房价 8 月环比上涨 0.3%，同比上涨 2.4%，反映名义房价仍在增长，但涨幅保持温和。",
+            "中性",
+            "住宅市场",
+            "数据",
+            "7气候风险开始重塑房产与保险定价",
+            "Cotality Research 称，历史气候模式已难以作为未来风险基准，保险续保和自然灾害暴露正影响房屋安全成本及房产价值。",
+            "短期利空",
+            "住宅市场",
+            "数据",
+            "趋势",
+            "8美国门户城市多户住宅审批明显回升",
+            "RealPage Analytics 称，纽约、洛杉矶、华盛顿特区及波士顿等门户市场多户住宅许可增长明显；相比之下，达拉斯、休斯敦、奥斯汀和迈阿密许可量下降。",
+            "中性",
+            "多户",
+            "数据",
+            "9多户住宅租金小幅上涨但空置率升高",
+            "CBRE Research 称，美国多户住宅第三季度空置率升至 4.7%，平均月租同比上涨 1% 至 2,268 美元；竣工量同比下降 11%。",
+            "中性",
+            "多户",
+            "数据",
+            "109 月 PCE 通胀加速至 3.6%",
+            "NAHB Eye on Housing 称，9 月总体 PCE 价格指数同比上涨 3.6%，核心 PCE 上涨 3.1%；消费增长超过收入增长，储蓄率降至 3.8%。",
+            "短期利空",
+            "数据",
+            "宏观",
+            "11白宫住房行政令涉及按揭与产权保险",
+            "报道显示，行政令要求推动提前取消按揭保险及部分再融资免除贷款人产权保险，但目前未设定权益门槛、启动时间或适用贷款规模。",
+            "中性",
+            "公开摘要",
+            "住宅市场",
+            "政策",
+            "Sunbelt 住宅",
+            "Sun Belt 各州住宅与租赁市场",
+            "12拉斯维加斯多户住宅租金压力延续",
+            "Northmarq Research 称，拉斯维加斯多户住宅第三季度稳定空置率为 9.1%，平均挂牌租金同比下降 1.4% 至 1,479 美元，吸纳改善尚未转化为租金增长。",
+            "短期利空",
+            "多户",
+            "数据",
+            "交易",
+            "13坦帕湾多户住宅吸纳改善但入住率下降",
+            "Cushman & Wakefield Research 称，坦帕湾前三季度吸纳量超过 1,700 套，但稳定入住率降至 91.6%；第三季度在建项目为 6,806 套，新开工降至 672 套。",
+            "中性",
+            "多户",
+            "数据",
+            "14休斯敦单户住宅供应或分流多户需求",
+            "RealPage Analytics 称，休斯敦第三季度租金未增长，整体租金降幅约 2%；大量单户住宅供应可能分流多户住宅需求，B 类和 C 类租金压力更大。",
+            "短期利空",
+            "多户",
+            "德州",
+            "数据",
+            "全国 BTR / SFR",
+            "15Invitation Homes 第三季度收入增长 6.3%",
+            "Invitation Homes 第三季度收入同比增长 6.3% 至 7.31 亿美元，核心 FFO 每股增长 2.4%；同店入住率降至 96.4%，新租约租金增长为负。",
+            "中性",
+            "德州",
+            "业绩",
+            "机构",
+            "16Berkadia 为佛州 232 套 BTR 融资",
+            "补采材料标题显示，Berkadia 为佛罗里达州一项包含 232 套住宅的 BTR 项目安排 6,550 万美元融资，材料未披露更多交易细节。",
+            "中性",
+            "补采",
+            "交易",
+            "机构",
+            "全国 CRE",
+            "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE",
+            "17美国办公楼空置率降至 17.7%",
+            "Colliers Research 称，美国办公楼市场 2026 年第三季度走强，空置率降至 17.7%，净吸纳连续第 9 个季度为正，但需求集中于优质资产。",
+            "长期利好",
+            "办公",
+            "办公",
+            "数据",
+            "趋势",
+            "18迈阿密零售空置率升至 3.1%",
+            "Cushman & Wakefield Research 称，迈阿密--戴德县第三季度零售空置率升至 3.1%，租赁成交面积同比下降 18.0%，平均挂牌租金同比上涨 1.8%。",
+            "中性",
+            "零售",
+            "零售",
+            "数据",
+            "交易",
+            "19生命科学办公市场出现初步复苏信号",
+            "Cushman & Wakefield Research 称，生命科学市场第三季度吸纳转正、空置率四年来首次环比下降，但租金同比下降 5.6%，年内净吸纳仍为负。",
+            "中性",
+            "生命科学",
+            "生命科学",
+            "数据",
+            "趋势",
+            "全国机构资本",
+            "PE / REIT 募资、并购、IPO、机构持仓",
+            "20Rocket 第三季度扭亏但按揭发放量下降",
+            "Rocket Companies 第三季度净利润为 7.09 亿美元，去年同期亏损 1.24 亿美元；净发放规模降至 436 亿美元，低于第二季度的 491 亿美元。",
+            "中性",
+            "数据",
+            "业绩",
+            "北京可读目标：日报 09:00；周报周一 15:00；月报月初首个工作日 16:00",
+            "信源：66/77个 OK"
+          ],
+          "window": "覆盖：2026-10-26 05:00 至 2026-11-02 05:00（北京）",
+          "aria": [
+            {
+              "id": "datestrip",
+              "label": "最近 14 天"
+            },
+            {
+              "id": "digestTabs",
+              "label": "Digest mode"
+            },
+            {
+              "id": "briefBlock",
+              "label": "速读摘要"
+            },
+            {
+              "id": "calPrev",
+              "label": "prev"
+            },
+            {
+              "id": "calNext",
+              "label": "next"
+            }
+          ],
+          "unnamed_buttons": 0,
+          "unresolved_tags": []
+        },
+        "active_tab": "monthly"
+      },
+      "impact": "Monthly tab may show weekly cards, summary and coverage window.",
+      "recommendation": "Use a single load identity across kind/period requests; apply success/failure and final rendering only if it is still the active request. Abort superseded loads as appropriate."
+    },
+    {
+      "id": "QA-2",
+      "severity": "P1",
+      "title": "Load failure leaves the previous issue summary visible under a different digest mode",
+      "location": "public/app.js:664",
+      "evidence": {
+        "test": "Monthly fetch failure after daily is readable",
+        "state": {
+          "mode": "monthly",
+          "kind": "daily",
+          "period": "2026-11-06",
+          "lang": "zh",
+          "cards": 0,
+          "total": 20,
+          "overflow": false,
+          "brief": "Zillow 初步估算，10 月成屋销售同比下降 8.7%，新待签挂牌下降 16.8%，为 2023 年 8 月以来最大降幅；与此同时，Freddie Mac 30 年期按揭利率周度回落至 7.18%，但仍高于一年前的 6.22%。 [Zillow Research] [Freddie Mac PMMS]\n\n多户住宅信心承压：NAHB 两项指数第 3 季度均同比下降 5 点，并预测 2027 年多户住宅开工将下降；CBRE 数据则显示公寓净吸纳量降至 8,747 套、空置率升至 4.7%，后续供给放缓能否改善吸纳仍待观察。 [NAHB Eye on Housing] [Connect CRE]",
+          "period_labels": [],
+          "han_lines": [
+            "美国住宅地产工作日精选",
+            "更新于 11/06 10:00 (北京)",
+            "暂无历史",
+            "日报",
+            "周报",
+            "月报",
+            "速读摘要",
+            "Zillow 初步估算，10 月成屋销售同比下降 8.7%，新待签挂牌下降 16.8%，为 2023 年 8 月以来最大降幅；与此同时，Freddie Mac 30 年期按揭利率周度回落至 7.18%，但仍高于一年前的 6.22%。 [Zillow Research] [Freddie Mac PMMS]",
+            "多户住宅信心承压：NAHB 两项指数第 3 季度均同比下降 5 点，并预测 2027 年多户住宅开工将下降；CBRE 数据则显示公寓净吸纳量降至 8,747 套、空置率升至 4.7%，后续供给放缓能否改善吸纳仍待观察。 [NAHB Eye on Housing] [Connect CRE]",
+            "来源与行业覆盖",
+            "全部 20",
+            "多户 2",
+            "办公 1",
+            "工业 1",
+            "数据中心 1",
+            "机构 2",
+            "利率 2",
+            "政策 3",
+            "加载失败: Failed to fetch",
+            "如果首次部署还没有数据，请手动触发一次 GitHub Actions workflow，或等明早 9 点 cron 自动跑。",
+            "北京可读目标：日报 09:00；周报周一 15:00；月报月初首个工作日 16:00",
+            "信源：64/77个 OK"
+          ],
+          "window": "",
+          "aria": [
+            {
+              "id": "datestrip",
+              "label": "最近 14 天"
+            },
+            {
+              "id": "digestTabs",
+              "label": "Digest mode"
+            },
+            {
+              "id": "briefBlock",
+              "label": "速读摘要"
+            },
+            {
+              "id": "calPrev",
+              "label": "prev"
+            },
+            {
+              "id": "calNext",
+              "label": "next"
+            }
+          ],
+          "unnamed_buttons": 0,
+          "unresolved_tags": []
+        },
+        "error": "加载失败: Failed to fetch\n如果首次部署还没有数据，请手动触发一次 GitHub Actions workflow，或等明早 9 点 cron 自动跑。",
+        "brief_visible": true
+      },
+      "impact": "A visible daily summary can be mistaken for the failed monthly issue; error hint also recommends irrelevant generation actions.",
+      "recommendation": "Keep kind/period/data/overview state coherent on failure; either explicitly retain the old issue and its identity or clear all dependent content for the requested issue."
+    },
+    {
+      "id": "QA-3",
+      "severity": "P1",
+      "title": "English card previews contain newsletter, navigation and byline text",
+      "location": "public/app.js:358",
+      "evidence": {
+        "test": "Daily English preview rendered",
+        "number": "11",
+        "summary": "National CRE News In Your Inbox. Sign up for Connect emails to stay informed with CRE stories that are 150 words or less. National + Apartments | November 5, 2026 By: Greg Isaacson US Apartment Rents Inch Higher in Q3 as Supply Wave Subside…"
+      },
+      "examples": [
+        {
+          "kind": "daily",
+          "id": "2c4781f1fb5313cf",
+          "title": "US Apartment Rents Inch Higher in Q3 as Supply Wave Subsides",
+          "preview": "National CRE News In Your Inbox. Sign up for Connect emails to stay informed with CRE stories that are 150 words or less. National + Apartments | November 5, 2026 By: Greg Isaacson US Apartment Rents Inch Higher in Q3 as Supply Wave Subside",
+          "link": "https://www.connectcre.com/stories/us-apartment-rents-inch-higher-in-q3-as-supply-wave-subsides/"
+        },
+        {
+          "kind": "daily",
+          "id": "f0fc2a39f7d2f5f4",
+          "title": "AMH Reports Third Quarter 2026 Financial and Operating Results",
+          "preview": "AMH Reports Third Quarter 2026 Financial and Operating Results November 4, 2026 Download (opens in new window) Raises Full Year 2026 Guidance LAS VEGAS , Nov. 4, 2026 /PRNewswire/ -- AMH (NYSE: AMH) (the \"Company\"), a leading large-scale in",
+          "link": "https://investors.amh.com/events-and-presentations/press-releases/news-details/2026/AMH-Reports-Third-Quarter-2026-Financial-and-Operating-Results/default.aspx"
+        },
+        {
+          "kind": "daily",
+          "id": "02dd0e53f413bc4b",
+          "title": "Ellington eyes non-QM servicing growth in new acquisition",
+          "preview": "Ellington eyes non-QM servicing growth in new acquisition By Spencer Lee CloseText About Spencer twitter Spencer_NYC linkedin spencer-lee-journo Published November 05, 2026, 2:56 p.m. EST | Updated November 05, 2026, 3:52 p.m. EST 3 Min Rea",
+          "link": "https://www.nationalmortgagenews.com/news/ellington-eyes-non-qm-servicing-growth-in-new-acquisition"
+        },
+        {
+          "kind": "monthly",
+          "id": "357a01bb",
+          "title": "Build-to-rent communities now eligible for FHA financing",
+          "preview": "Politics and policy Build-to-rent communities now eligible for FHA financing By Brad Finkelstein CloseText About Brad twitter nmnbrad mailto bradley.finkelstein@arizent.com linkedin brad-finkelstein-8b2b9a5/ Published October 15, 2026, 4:56",
+          "link": "https://www.nationalmortgagenews.com/news/build-to-rent-communities-now-eligible-for-fha-financing"
+        },
+        {
+          "kind": "monthly",
+          "id": "7ef0cbe0af1fcbf5",
+          "title": "Federal Reserve issues FOMC statement",
+          "preview": "Skip to main content An official website of the United States Government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A loc",
+          "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+        }
+      ],
+      "impact": "Reader sees source chrome rather than the reported news facts; language checks alone miss this.",
+      "recommendation": "Prefer already-validated English evidence_quote as a labeled source excerpt; avoid raw description-prefix fallback, and use a truthful legacy fallback when no clean excerpt is available. No separate translation call is required for this minimum repair."
+    },
+    {
+      "id": "QA-4",
+      "severity": "P1",
+      "title": "CFPB industry regulation article is misrouted to Institutional Capital by semantic input",
+      "location": "scripts/lib/editorial.mjs:70 / 77",
+      "evidence": {
+        "id": "c913ef6c4ac014f4",
+        "title": "CFPB 关闭约 86% 既有监管行动",
+        "section": "institutional",
+        "tags": [
+          "housing",
+          "national",
+          "regulation",
+          "regulator"
+        ],
+        "capital_focus": true,
+        "link": "https://www.housingwire.com/articles/cfpb-closes-supervisory-actions/",
+        "finding": "Main event is broad housing-finance regulatory supervision, not a fund/platform capital or capital-governance event; institutional routing follows an incorrect semantic flag."
+      },
+      "visible": {
+        "test": "CFPB visible routing",
+        "number": "17",
+        "section": "全国机构资本",
+        "title": "17CFPB 关闭约 86% 既有监管行动"
+      },
+      "impact": "Under the documented PE/REIT fundraising/M&A/IPO/holdings scope, broad housing-finance regulation belongs to national housing finance. Script route consistency does not prove capital_focus semantics.",
+      "recommendation": "Clarify broad industry regulation versus a specific fund/platform capital-governance event, add contrasting gold cases and evidence review; do not route all regulator articles by a blanket keyword rule."
+    },
+    {
+      "id": "QA-5",
+      "severity": "P2",
+      "title": "Weekly/monthly period labels remain Chinese after switching from Chinese to English",
+      "location": "public/app.js:843 / 864",
+      "evidence": [
+        {
+          "mode": "weekly",
+          "width": 1440,
+          "period_labels": [
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周"
+          ]
+        },
+        {
+          "mode": "monthly",
+          "width": 1440,
+          "period_labels": [
+            "月",
+            "月",
+            "月",
+            "月",
+            "月",
+            "月"
+          ]
+        },
+        {
+          "mode": "weekly",
+          "width": 768,
+          "period_labels": [
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周"
+          ]
+        },
+        {
+          "mode": "monthly",
+          "width": 768,
+          "period_labels": [
+            "月",
+            "月",
+            "月",
+            "月",
+            "月",
+            "月"
+          ]
+        },
+        {
+          "mode": "weekly",
+          "width": 390,
+          "period_labels": [
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周"
+          ]
+        },
+        {
+          "mode": "monthly",
+          "width": 390,
+          "period_labels": [
+            "月",
+            "月",
+            "月",
+            "月",
+            "月",
+            "月"
+          ]
+        },
+        {
+          "mode": "weekly",
+          "width": 360,
+          "period_labels": [
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周",
+            "周"
+          ]
+        },
+        {
+          "mode": "monthly",
+          "width": 360,
+          "period_labels": [
+            "月",
+            "月",
+            "月",
+            "月",
+            "月",
+            "月"
+          ]
+        }
+      ],
+      "impact": "Visible 周/月 labels leak into the English edition in eight mode/width switching scenarios; fresh EN loads are correct.",
+      "recommendation": "Re-render the mode-aware period strip on every language change, and include aria/title labels in language coverage."
+    },
+    {
+      "id": "QA-6",
+      "severity": "P2",
+      "title": "Sun Belt filter and badge omit Phoenix-tagged articles",
+      "location": "public/app.js:252 / 473",
+      "evidence": {
+        "test": "Nov5 Sun Belt filter completeness",
+        "archive_cards": 20,
+        "expected": 6,
+        "actual": 5,
+        "missing": [
+          {
+            "id": "f2c6674cff606947",
+            "title": "Phoenix among top metros for new apartment construction in 2026",
+            "tags": [
+              "multifamily",
+              "phoenix",
+              "construction",
+              "data"
+            ],
+            "link": "https://phoenixagentmagazine.com/2026/11/04/rentcafe-phoenix-new-apartment-construction-2026/?utm_source=rss&utm_medium=rss&utm_campaign=rentcafe-phoenix-new-apartment-construction-2026"
+          }
+        ]
+      },
+      "impact": "Nov5 has six matching geographic articles under the documented Sun Belt tags but only five appear; Phoenix apartment construction is silently excluded.",
+      "recommendation": "Use one region-membership helper for both badge counts and filtering, aligned with all supported Sun Belt geographies."
+    }
+  ],
+  "passed": {
+    "matrix_configurations": 15,
+    "language_states": 39,
+    "viewport_widths": [
+      1440,
+      768,
+      390,
+      360
+    ],
+    "page_errors": [],
+    "horizontal_overflows": 0,
+    "latest_issue_counts": [
+      {
+        "kind": "daily",
+        "items": 20,
+        "contract": "pass"
+      },
+      {
+        "kind": "weekly",
+        "items": 20,
+        "contract": "pass"
+      },
+      {
+        "kind": "monthly",
+        "items": 20,
+        "contract": "pass"
+      }
+    ],
+    "duplicate_ids_or_links": 0,
+    "invalid_article_urls": 0,
+    "calendar_navigation": true,
+    "daily_archive_and_refresh": true,
+    "older_weekly_monthly_archives": true,
+    "language_persists": true,
+    "readable_coverage_disclosure": true
+  },
+  "known_legacy_limits": {
+    "weekly_monthly_english_overview": "Missing in existing archives; English unavailable notices are intentional compatibility behavior, not silent Chinese fallback.",
+    "old_period_routing": "Existing archives retain historic semantics; router counterfactuals without new semantic fields are not automatic corrections.",
+    "weekly_cutoff": "Latest weekly retains its documented old Beijing cutoff; not silently rewritten by the later ET policy."
+  },
+  "link_checks": {
+    "unique": 54,
+    "counts": {
+      "access_limited": 11,
+      "http_ok": 42,
+      "unverified": 1
+    },
+    "not_found": 0,
+    "limitation": "HTTP 200 proves reachability only; access-limited/fetch-failed links and all original article facts have not been fully verified."
+  },
+  "visual_review": {
+    "screenshots": "Actual production top/middle/bottom samples; compressed JPEG contacts were inspected",
+    "contact_files": [
+      ".tmp/page-acceptance-20261106/thumbnails/contact.jpg",
+      ".tmp/page-acceptance-20261106/thumbnails/body-contact.jpg"
+    ],
+    "no_general_layout_defect_detected": true
+  },
+  "accessibility_followup": "EN aria-label/title strings still include Chinese in several controls; not a full screen-reader/WCAG audit.",
+  "mutations": {
+    "code": false,
+    "data": false,
+    "state": false,
+    "new_model_calls": 0,
+    "new_collection_calls": 0,
+    "production_writes": 0
+  },
+  "limitations": [
+    "Request race and load failure were reproduced with controlled GET latency/abort, not claimed as an always-on server incident.",
+    "Content review covers the 60 latest cards plus representative older archives; it is not full historical archive certification or an independent fact-check of every source.",
+    "Previously passing deployment/contract tests did not cover these user-flow and editorial-quality defects."
+  ]
+}

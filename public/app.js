@@ -27,7 +27,7 @@ function digestDataUrl(mode, period) {
   // Without period, return /latest.json which always points to the most recent published period.
   if (mode === 'weekly')  return period ? `/data/weekly/${period}.json`  : '/data/weekly/latest.json';
   if (mode === 'monthly') return period ? `/data/monthly/${period}.json` : '/data/monthly/latest.json';
-  return '/data/latest.json';
+  return period ? `/data/${encodeURIComponent(period)}.json` : '/data/latest.json';
 }
 
 function initialMode() {
@@ -48,7 +48,13 @@ const I18N = {
     section_empty: '本期暂无已入选内容',
     no_filter_match: '该 filter 下暂无新闻',
     load_failed: '加载失败',
-    load_failed_hint: '如果首次部署还没有数据，请手动触发一次 GitHub Actions workflow，或等明早 9 点 cron 自动跑。',
+    load_failed_hint: '请重试，或选择其他日期／期刊。',
+    history_unavailable: '目录读取失败',
+    history_unavailable_hint: '保留已知日期，点击刷新可重试。',
+    archive_missing: p => `该期归档暂不可读取：${p}`,
+    source_excerpt: '原文节选',
+    excerpt_unavailable: '本条暂无可核验原文节选，请查看原文。',
+    invalid_data: '期刊数据与所选类型或日期不符',
     cal_more: '更早',
     cal_close: '关闭',
     cal_legend_has: '有报告',
@@ -104,7 +110,13 @@ const I18N = {
     section_empty: 'No selected items in this issue',
     no_filter_match: 'No items matching filter',
     load_failed: 'Failed to load',
-    load_failed_hint: 'If this is the first deploy with no data yet, manually trigger the GitHub Actions workflow or wait for the daily cron.',
+    load_failed_hint: 'Try again or choose another date or digest.',
+    history_unavailable: 'History unavailable',
+    history_unavailable_hint: 'Known dates are retained. Refresh to try again.',
+    archive_missing: p => `This archive is unavailable: ${p}`,
+    source_excerpt: 'Source excerpt',
+    excerpt_unavailable: 'No verified excerpt is available. Read the original article.',
+    invalid_data: 'The issue does not match the requested type or period',
     cal_more: 'More',
     cal_close: 'Close',
     cal_legend_has: 'Has data',
@@ -157,6 +169,8 @@ const t = () => I18N[currentLang]; // 当前语言字典快捷方式
 
 const STORAGE_KEY = 'us-housing-active-tag';
 let currentData = null;
+let loadSerial = 0, activeLoad = null, loadStatus = 'loading', loadFailure = null;
+const indexFailures = { daily: false, weekly: false, monthly: false };
 let activeTag = sessionStorage.getItem(STORAGE_KEY) || '__all';
 let availableDates = new Set();
 let selectedDate = null;
@@ -169,7 +183,7 @@ let selectedMonthly = null; // currently displayed YYYY-MM (monthly mode)
 
 // ========== 工具 ==========
 const pad2 = (n) => (n < 10 ? '0' + n : '' + n);
-const todayUTCKey = () => new Date().toISOString().slice(0, 10);
+const todayBeijingKey = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 const dateKey = (y, m0, d) => `${y}-${pad2(m0 + 1)}-${pad2(d)}`;
 const parseKey = (k) => {
   const [y, m, d] = k.split('-').map(Number);
@@ -240,6 +254,17 @@ const FIXED_FILTERS = [
   { id: 'policy',        label: '政策' },
 ];
 
+const SUNBELT_GEOS = new Set(['sun-belt', 'texas', 'dfw', 'houston', 'austin', 'phoenix', 'florida', 'atlanta', 'carolinas', 'nashville', 'las-vegas']);
+function filterItems(items, tag) {
+  if (tag === '__all') return items;
+  return items.filter(it => tag === 'sun-belt' ? (it.tags || []).some(id => SUNBELT_GEOS.has(id)) : (it.tags || []).includes(tag));
+}
+function retainMatchingFilter(items) {
+  if (activeTag !== '__all' && !filterItems(items, activeTag).length) {
+    activeTag = '__all'; sessionStorage.setItem(STORAGE_KEY, activeTag);
+  }
+}
+
 function renderTags(items) {
   // 先算每个 tag 在当天 items 里的频次
   const counter = new Map();
@@ -248,12 +273,7 @@ function renderTags(items) {
       counter.set(t, (counter.get(t) || 0) + 1);
     }
   }
-  // sun-belt 兼容：item 的 tags 没主动加 sun-belt 但有 texas/houston/dfw/austin → 视为 sun-belt
-  const sunBeltCount = items.filter(it => {
-    const t = it.tags || [];
-    return t.includes('sun-belt') || t.includes('texas') || t.includes('dfw') ||
-           t.includes('houston') || t.includes('austin') || t.includes('florida');
-  }).length;
+  const sunBeltCount = filterItems(items, 'sun-belt').length;
 
   filterbar.innerHTML = '';
   for (const f of FIXED_FILTERS) {
@@ -285,44 +305,68 @@ function renderStars(n) {
   return '★'.repeat(v) + '☆'.repeat(5 - v);
 }
 
-// Tag 体系 — 4 维度 canonical IDs → 中文 label (与 src/tags.ts 对应)
-const TAG_LABEL = {
-  // 资产
-  'housing':'住宅市场','multifamily':'多户','btr-sfr':'BTR/SFR',
-  'office':'办公','industrial':'工业','data-center':'数据中心',
-  'retail':'零售','hotel':'酒店','mixed-asset':'跨资产',
-  'self-storage':'自存储','senior-housing':'老年住房','life-sciences':'生命科学',
-  // 地理
-  'texas':'德州','dfw':'DFW','houston':'Houston','austin':'Austin',
-  'sun-belt':'Sun Belt','nyc':'NYC','california':'California',
-  // 主题
-  'policy':'政策','rates':'利率','macro':'宏观','deals':'交易',
-  'data':'数据','trend':'趋势','earnings':'业绩',
-  // 主体
-  'institutional':'机构','homebuilder':'建造商','landlord':'业主',
-  'brokerage':'经纪','regulator':'监管',
+// Canonical UI tags; coverage and dimensions are checked against config/tags.json.
+const TAG_DEFINITIONS = {
+  "housing": ["asset", "住宅市场", "Housing"],
+  "multifamily": ["asset", "多户", "Multifamily"],
+  "btr-sfr": ["asset", "BTR/SFR", "BTR/SFR"],
+  "office": ["asset", "办公", "Office"],
+  "industrial": ["asset", "工业", "Industrial"],
+  "data-center": ["asset", "数据中心", "Data Center"],
+  "hotel": ["asset", "酒店", "Hotel"],
+  "retail": ["asset", "零售", "Retail"],
+  "self-storage": ["asset", "自存储", "Self Storage"],
+  "senior-housing": ["asset", "老年住房", "Senior Housing"],
+  "life-sciences": ["asset", "生命科学", "Life Sciences"],
+  "mixed-asset": ["asset", "跨资产", "Mixed-Asset"],
+  "national": ["geo", "全国", "National"],
+  "sun-belt": ["geo", "Sun Belt", "Sun Belt"],
+  "texas": ["geo", "德州", "Texas"],
+  "dfw": ["geo", "DFW", "DFW"],
+  "houston": ["geo", "Houston", "Houston"],
+  "austin": ["geo", "Austin", "Austin"],
+  "phoenix": ["geo", "Phoenix", "Phoenix"],
+  "florida": ["geo", "佛州", "Florida"],
+  "atlanta": ["geo", "Atlanta", "Atlanta"],
+  "carolinas": ["geo", "Carolinas", "Carolinas"],
+  "nashville": ["geo", "Nashville", "Nashville"],
+  "las-vegas": ["geo", "Las Vegas", "Las Vegas"],
+  "nyc": ["geo", "NYC", "NYC"],
+  "california": ["geo", "California", "California"],
+  "rates": ["topic", "利率", "Rates"],
+  "macro": ["topic", "宏观", "Macro"],
+  "policy": ["topic", "政策", "Policy"],
+  "data": ["topic", "数据", "Data"],
+  "deals": ["topic", "交易", "Deals"],
+  "earnings": ["topic", "业绩", "Earnings"],
+  "fundraising": ["topic", "募资", "Fundraising"],
+  "ipo": ["topic", "IPO", "IPO"],
+  "trend": ["topic", "趋势", "Trend"],
+  "construction": ["topic", "新建", "Construction"],
+  "distress": ["topic", "违约 / 困境", "Distress"],
+  "tech-adoption": ["topic", "技术应用", "Technology Adoption"],
+  "regulation": ["topic", "监管动作", "Regulation"],
+  "institutional": ["actor", "机构", "Institutional"],
+  "homebuilder": ["actor", "建造商", "Homebuilder"],
+  "lender": ["actor", "贷款方", "Lender"],
+  "landlord": ["actor", "业主", "Landlord"],
+  "brokerage": ["actor", "经纪", "Brokerage"],
+  "regulator": ["actor", "监管", "Regulator"],
+  "developer": ["actor", "开发商", "Developer"],
+  "btr-operator": ["actor", "BTR/SFR 运营商", "BTR Operator"],
 };
+const TAG_LABEL = Object.fromEntries(Object.entries(TAG_DEFINITIONS).map(([id, row]) => [id, row[1]]));
+const TAG_LABEL_EN = Object.fromEntries(Object.entries(TAG_DEFINITIONS).map(([id, row]) => [id, row[2]]));
+const TAG_DIM = Object.fromEntries(Object.entries(TAG_DEFINITIONS).map(([id, row]) => [id, row[0]]));
 const HEAT_TAGS = new Set([
   'btr-sfr','texas','dfw','houston','austin','sun-belt',
   'institutional','policy','rates',
 ]);
 const TAG_DIM_ORDER = ['asset','geo','topic','actor'];
-const TAG_DIM = {
-  // asset
-  'housing':'asset','multifamily':'asset','btr-sfr':'asset','office':'asset',
-  'industrial':'asset','data-center':'asset','retail':'asset','hotel':'asset','mixed-asset':'asset',
-  'self-storage':'asset','senior-housing':'asset','life-sciences':'asset',
-  // geo
-  'texas':'geo','dfw':'geo','houston':'geo','austin':'geo','sun-belt':'geo','nyc':'geo','california':'geo',
-  // topic
-  'policy':'topic','rates':'topic','macro':'topic','deals':'topic','data':'topic','trend':'topic','earnings':'topic',
-  // actor
-  'institutional':'actor','homebuilder':'actor','landlord':'actor','brokerage':'actor','regulator':'actor',
-};
 function tagLabel(id) { return TAG_LABEL[id] || id; }
 function sortTags(ids) {
   // 先 asset → geo → topic → actor，每组内按字母序
-  return [...ids].filter(t => TAG_LABEL[t]).sort((a, b) => {
+  return [...ids].filter(t => t !== 'national' && TAG_LABEL[t]).sort((a, b) => {
     const da = TAG_DIM_ORDER.indexOf(TAG_DIM[a] || 'topic');
     const db = TAG_DIM_ORDER.indexOf(TAG_DIM[b] || 'topic');
     if (da !== db) return da - db;
@@ -355,10 +399,11 @@ function renderCard(it, i) {
     // en mode 或 zh 模式但无 title_zh → EN 主标
     titleBlock = `<div class="card-title-zh">${numHtml}${escapeHtml(it.title)}</div>`;
   }
-  // summary：zh 显示 LLM 中文摘要；en 模式从 description 取前 200 字（fallback，无 LLM EN summary）
-  const summary = currentLang === 'zh'
-    ? formatChinese(it.summary_zh || '')
-    : (it.description || '').slice(0, 240) + ((it.description || '').length > 240 ? '…' : '');
+  // Never present source navigation or bylines as an English news summary.
+  const quote = typeof it.evidence_quote === 'string' ? it.evidence_quote.trim() : '';
+  const summary = currentLang === 'zh' ? formatChinese(it.summary_zh || '')
+    : quote && /[A-Za-z]/.test(quote) && !/\p{Script=Han}/u.test(quote)
+      ? `${t().source_excerpt}: ${quote}` : t().excerpt_unavailable;
 
   const stars = `<span class="card-stars" title="${t().importance_title} ${it.importance ?? 3}/5">${renderStars(it.importance)}</span>`;
   const impactLabel = (t().impact[it.impact] || t().impact.neutral);
@@ -389,18 +434,6 @@ function renderCard(it, i) {
 }
 
 // EN 模式下的 tag label (英文、首字母大写)
-const TAG_LABEL_EN = {
-  'housing': 'Housing', 'multifamily': 'Multifamily', 'btr-sfr': 'BTR/SFR',
-  'office': 'Office', 'industrial': 'Industrial', 'data-center': 'Data Center',
-  'retail': 'Retail', 'hotel': 'Hotel', 'mixed-asset': 'Mixed-Asset',
-  'self-storage': 'Self Storage', 'senior-housing': 'Senior Housing', 'life-sciences': 'Life Sciences',
-  'texas': 'Texas', 'dfw': 'DFW', 'houston': 'Houston', 'austin': 'Austin',
-  'sun-belt': 'Sun Belt', 'nyc': 'NYC', 'california': 'California',
-  'policy': 'Policy', 'rates': 'Rates', 'macro': 'Macro', 'deals': 'Deals',
-  'data': 'Data', 'trend': 'Trend', 'earnings': 'Earnings',
-  'institutional': 'Institutional', 'homebuilder': 'Homebuilder',
-  'landlord': 'Landlord', 'brokerage': 'Brokerage', 'regulator': 'Regulator',
-};
 function tagLabelEn(id) { return TAG_LABEL_EN[id] || id; }
 function creSubcategoryEn(zh) {
   return ({ '数据中心': 'Data Center', '生命科学': 'Life Sciences',
@@ -467,26 +500,14 @@ function sectionEmptyMessage(data, sectionId) {
 function applyFilter() {
   if (!currentData) return;
   const items = currentData.items || [];
-  let filtered;
-  if (activeTag === '__all') {
-    filtered = items;
-  } else if (activeTag === 'sun-belt') {
-    // Sun Belt 兼容：含 sun-belt / texas / dfw / houston / austin / florida
-    filtered = items.filter(it => {
-      const t = it.tags || [];
-      return t.includes('sun-belt') || t.includes('texas') || t.includes('dfw') ||
-             t.includes('houston') || t.includes('austin') || t.includes('florida');
-    });
-  } else {
-    filtered = items.filter(it => (it.tags || []).includes(activeTag));
-  }
+  const filtered = filterItems(items, activeTag);
   renderTags(items);
   renderItems(filtered);
 }
 
 // ========== 渲染：顶部 14 天 date strip ==========
 function renderDateStrip() {
-  const todayKey = todayUTCKey();
+  const todayKey = todayBeijingKey();
   const today = parseKey(todayKey);
   const cells = [];
   for (let i = 13; i >= 0; i--) {
@@ -510,13 +531,14 @@ function renderDateStrip() {
   }
   cells.push(`<button class="ds-more" id="dsMore" title="${currentLang === 'zh' ? '查看更早历史' : 'View older history'}">${t().cal_more}</button>`);
   datestrip.innerHTML = cells.join('');
+  appendIndexWarning('daily');
   datestrip.scrollLeft = datestrip.scrollWidth;
 }
 
 // ========== 渲染：日历 modal ==========
 function openCalendar() {
   if (!calendarMonth) {
-    const t = parseKey(selectedDate || todayUTCKey());
+    const t = parseKey(selectedDate || todayBeijingKey());
     calendarMonth = { year: t.getUTCFullYear(), month: t.getUTCMonth() };
   }
   renderCalendar();
@@ -534,7 +556,7 @@ function renderCalendar() {
   let firstWeekday = first.getUTCDay();             // 0 = Sun
   firstWeekday = firstWeekday === 0 ? 6 : firstWeekday - 1; // 转成 Mon=0...Sun=6
   const lastDate = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
-  const todayKey = todayUTCKey();
+  const todayKey = todayBeijingKey();
   const cells = [];
   for (let i = 0; i < firstWeekday; i++) {
     cells.push(`<div class="cal-cell cal-empty"></div>`);
@@ -579,8 +601,11 @@ function readInlineInitialData() {
   } catch { return null; }
 }
 function applyLoadedData(data) {
+  currentData = data; loadStatus = 'ready'; loadFailure = null;
+  retainMatchingFilter(data.items || []);
+  filterbar.hidden = false;
+  rememberLoadedPeriod(data, currentMode);
   renderBrief(data);
-  currentData = data;
   selectedDate = currentData.date || null;
   updatedEl.textContent = formatUpdated(currentData.generated_at);
   const sc = document.getElementById('sourcesCount');
@@ -594,6 +619,15 @@ function applyLoadedData(data) {
   datestrip.hidden = false;
   renderPeriodStrip(currentMode);
 
+  renderWindowBanner(data);
+
+  renderThemes(data);
+
+  applyFilter();
+  if (currentMode === 'daily') renderDateStrip();
+}
+
+function renderWindowBanner(data) {
   // Holiday / sparse-window banner — daily only.
   // Triggers on: explicit US federal holiday today/yesterday OR pool auto-expand.
   // Copy is picked by priority: today's holiday > yesterday's > generic weekend/sparse.
@@ -619,78 +653,111 @@ function applyLoadedData(data) {
     windowBanner.hidden = !windowBanner.textContent;
   }
 
-  renderThemes(data);
-
-  applyFilter();
-  if (currentMode === 'daily') renderDateStrip();
 }
 
-async function loadNews(date) {
-  if (!date && !initialDataConsumed) {
-    initialDataConsumed = true;
-    const inline = readInlineInitialData();
-    if (inline) { applyLoadedData(inline); return; }
-  }
-  newsList.replaceChildren(Object.assign(document.createElement('div'), { className: 'loader', textContent: t().loading }));
-  try {
-    const url = date ? `/data/${encodeURIComponent(date)}.json` : '/data/latest.json';
-    const r = await fetch(url, { cache: 'no-store' });
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    applyLoadedData(await r.json());
-  } catch (e) {
-    newsList.innerHTML = `<div class="empty">${t().load_failed}: ${escapeHtml(e.message)}<br><br>${t().load_failed_hint}</div>`;
-  }
+function isCurrentLoad(request) { return activeLoad === request && currentMode === request.mode; }
+function rememberLoadedPeriod(data, mode) {
+  const period = mode === 'daily' ? data.date : mode === 'weekly' ? data.period_start : data.period_label;
+  if (!period) return;
+  if (mode === 'daily') availableDates.add(period);
+  else if (mode === 'weekly' && !weeklyPeriods.includes(period)) weeklyPeriods = [...weeklyPeriods, period].sort();
+  else if (mode === 'monthly' && !monthlyPeriods.includes(period)) monthlyPeriods = [...monthlyPeriods, period].sort();
 }
-
-async function loadAvailableDates() {
+function clearIssueView() {
+  currentData = null;
+  for (const id of ['briefBlock', 'coverageNote', 'researchCoverage']) $(id).hidden = true;
+  $('briefText').replaceChildren(); $('researchStatus').replaceChildren();
+  themesBlock.hidden = true; themesBlock.querySelector('.themes-list').replaceChildren();
+  windowBanner.hidden = true; windowBanner.textContent = '';
+  filterbar.replaceChildren(); filterbar.hidden = true;
+  const count = $('sourcesCount'); if (count) count.textContent = '--';
+}
+function renderLoadStatus() {
+  if (currentData) return;
+  updatedEl.textContent = loadStatus === 'error' ? t().load_failed : t().loading;
+  const message = document.createElement('div');
+  message.className = loadStatus === 'error' ? 'empty' : 'loader';
+  if (loadStatus !== 'error') { message.textContent = t().loading; newsList.replaceChildren(message); return; }
+  const missingLatestMonth = loadFailure?.missing && activeLoad?.mode === 'monthly' && !activeLoad.period;
+  message.textContent = loadFailure?.missing && activeLoad?.period ? t().archive_missing(activeLoad.period)
+    : missingLatestMonth ? t().monthly_not_yet : `${t().load_failed}: ${loadFailure?.code === 'invalid_data' ? t().invalid_data : loadFailure?.detail || ''}`;
+  const hint = document.createElement('div');
+  hint.textContent = missingLatestMonth ? t().monthly_not_yet_hint : t().load_failed_hint;
+  newsList.replaceChildren(message, hint);
+}
+function appendIndexWarning(mode) {
+  if (!indexFailures[mode]) return;
+  const warning = document.createElement('span'); warning.className = 'ds-empty';
+  warning.textContent = t().history_unavailable; warning.title = t().history_unavailable_hint;
+  warning.setAttribute('role', 'status'); datestrip.appendChild(warning);
+}
+async function loadIssueIndex(request) {
+  const mode = request.mode, prefix = mode === 'daily' ? '/data' : `/data/${mode}`;
   try {
-    const r = await fetch('/data/dates.json', { cache: 'no-store' });
-    const dates = await r.json();
-    availableDates = new Set(Array.isArray(dates) ? dates : []);
+    const response = await fetch(prefix + '/dates.json', { cache: 'no-store', signal: request.controller.signal });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const rows = await response.json();
+    if (!Array.isArray(rows)) throw new Error('Invalid period index');
+    if (!isCurrentLoad(request)) return;
+    const pattern = mode === 'monthly' ? /^\d{4}-\d{2}$/ : /^\d{4}-\d{2}-\d{2}$/;
+    const periods = [...new Set(rows.filter(row => typeof row === 'string' && pattern.test(row)))].sort();
+    if (mode === 'daily') availableDates = new Set(periods);
+    else if (mode === 'weekly') weeklyPeriods = periods;
+    else monthlyPeriods = periods;
+    indexFailures[mode] = false;
   } catch {
-    availableDates = new Set();
+    if (!isCurrentLoad(request)) return;
+    indexFailures[mode] = true; // Preserve known dates; unreadable does not mean absent.
   }
+  if (!isCurrentLoad(request)) return;
+  if (currentData) rememberLoadedPeriod(currentData, mode);
+  renderPeriodStrip(mode);
+  if (mode === 'daily' && calendarDialog.open) renderCalendar();
 }
-
-async function loadDigest(url, period) {
-  newsList.replaceChildren(Object.assign(document.createElement('div'), { className: 'loader', textContent: t().loading }));
+async function loadIssue(mode, period = null, { useInline = false } = {}) {
+  if (!['daily', 'weekly', 'monthly'].includes(mode)) mode = 'daily';
+  activeLoad?.controller.abort();
+  const request = { id: ++loadSerial, mode, period: period || null, controller: new AbortController() };
+  activeLoad = request; currentMode = mode; loadStatus = 'loading'; loadFailure = null;
+  if (mode === 'daily') selectedDate = period || null;
+  else if (mode === 'weekly') selectedWeekly = period || null;
+  else selectedMonthly = period || null;
+  for (const button of digestTabs.querySelectorAll('.tab')) {
+    const active = button.dataset.tab === mode;
+    button.classList.toggle('active', active); button.setAttribute('aria-selected', String(active));
+  }
+  const hash = mode === 'daily' ? '' : `#${mode}`;
+  if (location.hash !== hash) history.replaceState(null, '', location.pathname + hash);
+  clearIssueView(); renderPeriodStrip(mode); renderLoadStatus();
+  const indexTask = loadIssueIndex(request);
   try {
-    const r = await fetch(url, { cache: 'no-store' });
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    const data = await r.json();
-    if (data.kind === 'weekly')  selectedWeekly  = data.period_start || period || null;
-    if (data.kind === 'monthly') selectedMonthly = data.period_label || period || null;
+    let data;
+    if (mode === 'daily' && !period && useInline && !initialDataConsumed) {
+      initialDataConsumed = true; data = readInlineInitialData();
+    }
+    if (!data) {
+      const response = await fetch(digestDataUrl(mode, period), { cache: 'no-store', signal: request.controller.signal });
+      if (!response.ok) { const error = new Error('HTTP ' + response.status); error.status = response.status; throw error; }
+      data = await response.json();
+    }
+    if (!isCurrentLoad(request)) return;
+    const actualPeriod = mode === 'daily' ? data?.date : mode === 'weekly' ? data?.period_start : data?.period_label;
+    if (!data || !Array.isArray(data.items) || (data.kind || 'daily') !== mode || (period && actualPeriod !== period)) {
+      const error = new Error('Invalid issue data'); error.code = 'invalid_data'; throw error;
+    }
+    if (mode === 'daily') selectedDate = actualPeriod || null;
+    else if (mode === 'weekly') selectedWeekly = actualPeriod || null;
+    else selectedMonthly = actualPeriod || null;
     applyLoadedData(data);
-  } catch (e) {
-    const isMissing = /HTTP 404/.test(e.message);
-    const msgKey = isMissing && currentMode === 'monthly' ? 'monthly_not_yet' : 'load_failed';
-    const hintKey = isMissing && currentMode === 'monthly' ? 'monthly_not_yet_hint' : 'load_failed_hint';
-    const errDiv = document.createElement('div');
-    errDiv.className = 'empty';
-    errDiv.textContent = isMissing ? t()[msgKey] : `${t().load_failed}: ${e.message}`;
-    const hintDiv = document.createElement('div');
-    hintDiv.textContent = t()[hintKey];
-    newsList.replaceChildren(errDiv, hintDiv);
-    renderPeriodStrip(currentMode);
-    themesBlock.hidden = true;
-    windowBanner.hidden = true;
+  } catch (error) {
+    if (!isCurrentLoad(request)) return;
+    clearIssueView();
+    loadStatus = 'error'; loadFailure = { missing: error.status === 404, code: error.code, detail: error.message };
+    renderLoadStatus();
   }
+  await indexTask;
 }
-
-async function loadPeriodList(mode) {
-  if (mode !== 'weekly' && mode !== 'monthly') return;
-  const url = mode === 'weekly' ? '/data/weekly/dates.json' : '/data/monthly/dates.json';
-  try {
-    const r = await fetch(url, { cache: 'no-store' });
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    const arr = await r.json();
-    if (mode === 'weekly')  weeklyPeriods  = Array.isArray(arr) ? arr.slice().sort() : [];
-    if (mode === 'monthly') monthlyPeriods = Array.isArray(arr) ? arr.slice().sort() : [];
-  } catch {
-    if (mode === 'weekly')  weeklyPeriods  = [];
-    if (mode === 'monthly') monthlyPeriods = [];
-  }
-}
+async function loadNews(date) { return loadIssue('daily', date, { useInline: !date }); }
 
 // Render the period strip into the datestrip element. Mode-aware:
 //   daily   → 14-day strip (existing renderDateStrip)
@@ -708,7 +775,8 @@ function renderPeriodStrip(mode) {
   if (periods.length === 0) {
     const empty = document.createElement('span');
     empty.className = 'ds-empty';
-    empty.textContent = t().period_empty;
+    empty.textContent = indexFailures[mode] ? t().history_unavailable : t().period_empty;
+    if (indexFailures[mode]) empty.title = t().history_unavailable_hint;
     datestrip.appendChild(empty);
     return;
   }
@@ -717,6 +785,7 @@ function renderPeriodStrip(mode) {
     btn.className = 'ds-day ds-has';
     if (p === selected) btn.classList.add('ds-active');
     btn.dataset.period = p;
+    btn.title = p; btn.setAttribute('aria-label', `${mode === 'weekly' ? t().period_label_week : t().period_label_month} ${p}`);
     const wd = document.createElement('span');
     wd.className = 'ds-wd';
     const num = document.createElement('span');
@@ -734,31 +803,11 @@ function renderPeriodStrip(mode) {
     btn.appendChild(num);
     datestrip.appendChild(btn);
   }
+  appendIndexWarning(mode);
   datestrip.scrollLeft = datestrip.scrollWidth;
 }
 
-async function setDigestMode(mode) {
-  if (!['daily', 'weekly', 'monthly'].includes(mode)) mode = 'daily';
-  currentMode = mode;
-  for (const btn of digestTabs.querySelectorAll('.tab')) {
-    const active = btn.dataset.tab === mode;
-    btn.classList.toggle('active', active);
-    btn.setAttribute('aria-selected', String(active));
-  }
-  const hash = mode === 'daily' ? '' : `#${mode}`;
-  if (location.hash !== hash) history.replaceState(null, '', location.pathname + hash);
-  if (mode === 'daily') {
-    if (availableDates.size === 0) {
-      loadAvailableDates();
-    }
-    await loadNews();
-  } else {
-    // Load period list + latest-period digest in parallel
-    await Promise.all([loadPeriodList(mode), loadDigest(digestDataUrl(mode))]);
-    // Re-render the strip so the active period highlight matches the loaded latest
-    renderPeriodStrip(mode);
-  }
-}
+async function setDigestMode(mode) { return loadIssue(mode, null, { useInline: mode === 'daily' }); }
 
 digestTabs.addEventListener('click', (e) => {
   const btn = e.target.closest('.tab');
@@ -776,18 +825,9 @@ filterbar.addEventListener('click', (e) => {
   applyFilter();
 });
 
-refreshBtn.addEventListener('click', async () => {
-  if (currentMode === 'daily') {
-    await loadAvailableDates();
-    await loadNews(selectedDate || undefined);
-  } else {
-    const selected = currentMode === 'weekly' ? selectedWeekly : selectedMonthly;
-    await Promise.all([
-      loadPeriodList(currentMode),
-      loadDigest(digestDataUrl(currentMode, selected), selected),
-    ]);
-    renderPeriodStrip(currentMode);
-  }
+refreshBtn.addEventListener('click', () => {
+  const period = currentMode === 'daily' ? selectedDate : currentMode === 'weekly' ? selectedWeekly : selectedMonthly;
+  loadIssue(currentMode, period);
 });
 
 datestrip.addEventListener('click', (e) => {
@@ -802,7 +842,7 @@ datestrip.addEventListener('click', (e) => {
     const p = btn.dataset.period;
     if (currentMode === 'weekly')  selectedWeekly  = p;
     if (currentMode === 'monthly') selectedMonthly = p;
-    loadDigest(digestDataUrl(currentMode, p), p);
+    loadIssue(currentMode, p);
     return;
   }
   // Daily: existing data-date click
@@ -842,6 +882,14 @@ calClose.addEventListener('click', () => calendarDialog.close());
 // 切语言时刷新 UI chrome (header / footer / calendar / cards / filter)
 function applyLanguage() {
   document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en-US';
+  document.title = 'US Housing Daily -- ' + t().tagline;
+  langSeg.title = currentLang === 'zh' ? '切换语言' : 'Switch language';
+  refreshBtn.title = currentLang === 'zh' ? '重新加载' : 'Reload';
+  datestrip.setAttribute('aria-label', currentLang === 'zh' ? '选择期刊日期' : 'Choose an issue date');
+  $('briefBlock').setAttribute('aria-label', currentLang === 'zh' ? '速读摘要' : 'Executive summary');
+  calPrev.setAttribute('aria-label', currentLang === 'zh' ? '上个月' : 'Previous month');
+  calNext.setAttribute('aria-label', currentLang === 'zh' ? '下个月' : 'Next month');
+  if (calendarDialog.open) renderCalendar();
   // 高亮当前激活的语言按钮
   for (const btn of langSeg.querySelectorAll('.lang-btn')) {
     btn.classList.toggle('active', btn.dataset.lang === currentLang);
@@ -861,19 +909,11 @@ function applyLanguage() {
     updatedEl.textContent = formatUpdated(currentData.generated_at);
     renderBrief(currentData);
     applyFilter();         // 重新渲染卡片 + filter chip 用新语言
-    if (currentMode === 'daily') renderDateStrip(); // 重新渲染 weekday header
+    renderPeriodStrip(currentMode);
     renderThemes(currentData);
-    // Re-render window banner if visible
-    if (currentMode !== 'daily') {
-      windowBanner.textContent = periodWindowText(currentData);
-      windowBanner.hidden = !windowBanner.textContent;
-    } else if (!windowBanner.hidden && currentData._diagnostics?.window_hours > 24) {
-      const h = currentData._diagnostics.window_hours;
-      const extCount = (currentData.items || []).filter(it => it.extended_window).length;
-      windowBanner.textContent = t().window_banner(h, extCount);
-    }
+    renderWindowBanner(currentData);
   } else {
-    updatedEl.textContent = t().loading;
+    renderLoadStatus(); renderPeriodStrip(currentMode);
   }
 }
 
@@ -892,10 +932,6 @@ langSeg.addEventListener('click', (e) => {
   applyLanguage();           // 先按保存的语言设 UI chrome
   const startMode = initialMode();
   currentMode = startMode;
-  if (startMode === 'daily') {
-    // For daily, load dates index first so date strip is populated
-    await loadAvailableDates();
-  }
   await setDigestMode(startMode);
 })();
 
@@ -927,7 +963,7 @@ function renderBrief(data) {
   const note=$('coverageNote');
   if(note){note.hidden=data.publication_status!=='degraded';note.textContent=currentLang==='zh'?'本期部分研究来源或历史材料暂未取全，补齐后可更新。':'Some research sources or historical inputs are incomplete; this issue can be updated.';}
   const research=(data._diagnostics?.source_health||[]).filter(s=>s.research);const details=$('researchCoverage'), list=$('researchStatus');
-  if(details&&list){list.replaceChildren();details.hidden=!research.length;$('researchTitle').textContent=(currentLang==='zh'?'研究来源覆盖：':'Research coverage: ')+research.filter(s=>s.status==='ok').length+'/'+research.length;for(const source of research){const li=document.createElement('li');const labels={ok:'已检查',empty_listing:'目录未发现有效条目',unreadable:'正文暂不可读',error:'抓取失败'};li.textContent=source.name+'：'+(currentLang==='zh'?(labels[source.status]||source.status):source.status)+(source.undated?' · '+source.undated+(currentLang==='zh'?' 条日期待核实':' date(s) unverified'):'');list.append(li);}}
+  if(details&&list){list.replaceChildren();details.hidden=!research.length;$('researchTitle').textContent=(currentLang==='zh'?'研究来源覆盖：':'Research coverage: ')+research.filter(s=>s.status==='ok').length+'/'+research.length;for(const source of research){const li=document.createElement('li');const labels={ok:'已检查',empty_listing:'目录未发现有效条目',unreadable:'正文暂不可读',error:'抓取失败'};li.textContent=source.name+(currentLang==='zh'?'：':': ')+(currentLang==='zh'?(labels[source.status]||source.status):source.status)+(source.undated?' · '+source.undated+(currentLang==='zh'?' 条日期待核实':' date(s) unverified'):'');list.append(li);}}
 
   const audit = data._diagnostics?.editorial_coverage;
   if (audit && details && list) {

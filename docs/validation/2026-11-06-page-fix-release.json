@@ -1,0 +1,10 @@
+{
+  "status": "publishing",
+  "authorized_action": "commit_sync_open_source_and_deploy",
+  "base": "040df8003a7cf3691f4a34973294d66fea0f93ce",
+  "local_validation": "docs/validation/2026-11-06-page-fix.json",
+  "published_data_modified": false,
+  "new_model_calls": 0,
+  "new_collection_calls": 0,
+  "manual_dispatches": 0
+}

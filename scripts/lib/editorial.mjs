@@ -74,7 +74,7 @@ export function routeSection(item) {
 }
 export function editorInstructions(tagConfig) {
   const vocabulary = tagConfig ? Object.entries(tagConfig.dimensions).map(([dim, value]) => `${dim}（${value._desc}）：${value.tags.map(t => `${t.id}=${t.applies_to}`).join('；')}`).join('\n') : '';
-  return decisionSystem + '\n保留稿必须输出 capital_focus 布尔值；仅当主事件是基金募资／资本配置／平台或公司级并购／IPO／机构资本治理或监管风险时为 true。普通公司经营财报、物业买卖或再融资为 false，背景交易不改变主事件。\n必须提供实际资产标签；地域按新闻主题选最具体层级，排除总部、人物和 source_region（来源所在地）。非 national 地域必须附 geo_evidence，为给定标题或 evidence 中逐字连续的主题地域证据，不可只摘总部介绍。无主题地域证据用 national。\n' + vocabulary + '\n' + (tagConfig ? JSON.stringify(tagConfig.constraints) : '');
+  return decisionSystem + '\n保留稿必须输出 capital_focus 布尔值；仅当主事件是基金募资／资本配置／平台或公司级并购／IPO／机构资本治理或监管风险时为 true。普通公司经营财报、物业买卖或再融资为 false，背景交易不改变主事件。监管风险为 true 仅限主事件直接针对可识别基金、资管／投资平台或公司资本主体的资金管理、受托责任、资本运作或治理风险。行业普适规则、监管机构自身预算／裁员／监管范围或行动收缩、按揭及消费者金融行业政策均为 false；regulator 标签或机构名称不能单独推出 true。例：CFPB 缩小全行业监管范围、关闭既有监管行动为 false；Deutsche Finance／BVK 的特定资本治理调查可为 true。\n必须提供实际资产标签；地域按新闻主题选最具体层级，排除总部、人物和 source_region（来源所在地）。非 national 地域必须附 geo_evidence，为给定标题或 evidence 中逐字连续的主题地域证据，不可只摘总部介绍。无主题地域证据用 national。\n' + vocabulary + '\n' + (tagConfig ? JSON.stringify(tagConfig.constraints) : '');
 }
 export function geographyEvidenceMatches(source, evidence) {
   if (typeof evidence !== 'string' || !evidence.trim()) return [];

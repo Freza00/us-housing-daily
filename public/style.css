@@ -135,6 +135,8 @@ a { color: inherit; text-decoration: none; }
   display: flex; flex-wrap: wrap; gap: 8px;
 }
 
+.filterbar[hidden] { display: none; }
+
 .chip {
   padding: 5px 12px; border-radius: 999px;
   background: var(--tag-bg); color: var(--tag-text);

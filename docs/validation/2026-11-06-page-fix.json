@@ -1,0 +1,348 @@
+{
+  "checked_at_beijing": "2026-11-06 10:57",
+  "status": "passed_locally_not_released",
+  "production_base": "040df8003a7cf3691f4a34973294d66fea0f93ce",
+  "tests": {
+    "workspace": {
+      "passed": 298,
+      "failed": 0
+    },
+    "clean_production_copy": {
+      "passed": 298,
+      "failed": 0
+    },
+    "advisor_independent_frontend": {
+      "passed": 21,
+      "failed": 0
+    }
+  },
+  "browser": {
+    "workspace": {
+      "passed": true,
+      "scenario_count": 15,
+      "language_states": 39,
+      "boundary_checks": [
+        {
+          "name": "Rapid weekly → monthly: stale content cannot overwrite active tab",
+          "passed": true
+        },
+        {
+          "name": "Startup daily index cannot return user from weekly",
+          "passed": true
+        },
+        {
+          "name": "Refresh daily index cannot return user from monthly",
+          "passed": true
+        },
+        {
+          "name": "Late weekly index cannot replace monthly period buttons",
+          "passed": true
+        },
+        {
+          "name": "Rapid Nov5 → Nov6 date selection keeps Nov6",
+          "passed": true
+        },
+        {
+          "name": "Fetch failure remains empty after language changes and recovers on retry",
+          "passed": true
+        },
+        {
+          "name": "Archived month 404 names requested period; latest month 404 says unpublished",
+          "passed": true
+        },
+        {
+          "name": "Index failure preserves known dates and readable body, then retry clears warning",
+          "passed": true
+        },
+        {
+          "name": "Zero-match filter resets across issues; matching filter persists",
+          "passed": true
+        },
+        {
+          "name": "Nov5 Sun Belt includes Phoenix; archive refresh and calendar work",
+          "passed": true
+        },
+        {
+          "name": "Malformed 200 and wrong issue cannot leave partial cards or freeze Chinese errors",
+          "passed": true
+        },
+        {
+          "name": "Beijing before/after midnight and early morning date strip reaches issue day",
+          "passed": true
+        },
+        {
+          "name": "Open calendar refreshes when current date index arrives",
+          "passed": true
+        },
+        {
+          "name": "Holiday banner keeps holiday and recovery date across languages",
+          "passed": true
+        },
+        {
+          "name": "Older weekly/monthly archives remain readable in English",
+          "passed": true
+        }
+      ],
+      "page_errors": [],
+      "horizontal_overflows": 0
+    },
+    "clean_production_copy": {
+      "passed": true,
+      "scenario_count": 15,
+      "language_states": 39,
+      "boundary_checks": [
+        {
+          "name": "Rapid weekly → monthly: stale content cannot overwrite active tab",
+          "passed": true
+        },
+        {
+          "name": "Startup daily index cannot return user from weekly",
+          "passed": true
+        },
+        {
+          "name": "Refresh daily index cannot return user from monthly",
+          "passed": true
+        },
+        {
+          "name": "Late weekly index cannot replace monthly period buttons",
+          "passed": true
+        },
+        {
+          "name": "Rapid Nov5 → Nov6 date selection keeps Nov6",
+          "passed": true
+        },
+        {
+          "name": "Fetch failure remains empty after language changes and recovers on retry",
+          "passed": true
+        },
+        {
+          "name": "Archived month 404 names requested period; latest month 404 says unpublished",
+          "passed": true
+        },
+        {
+          "name": "Index failure preserves known dates and readable body, then retry clears warning",
+          "passed": true
+        },
+        {
+          "name": "Zero-match filter resets across issues; matching filter persists",
+          "passed": true
+        },
+        {
+          "name": "Nov5 Sun Belt includes Phoenix; archive refresh and calendar work",
+          "passed": true
+        },
+        {
+          "name": "Malformed 200 and wrong issue cannot leave partial cards or freeze Chinese errors",
+          "passed": true
+        },
+        {
+          "name": "Beijing before/after midnight and early morning date strip reaches issue day",
+          "passed": true
+        },
+        {
+          "name": "Open calendar refreshes when current date index arrives",
+          "passed": true
+        },
+        {
+          "name": "Holiday banner keeps holiday and recovery date across languages",
+          "passed": true
+        },
+        {
+          "name": "Older weekly/monthly archives remain readable in English",
+          "passed": true
+        }
+      ],
+      "page_errors": [],
+      "horizontal_overflows": 0
+    },
+    "mode": "offline_saved_production_data_with_local_code",
+    "user_browser_accessed": false,
+    "thumbnail_visual_review": true
+  },
+  "semantic_probe": {
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "requests": 1,
+    "checks": [
+      {
+        "name": "cfpb",
+        "id": "c913ef6c4ac014f4",
+        "keep": true,
+        "capital_focus": false,
+        "section": "national",
+        "expected_capital": false,
+        "expected_section": "national",
+        "passed": true
+      },
+      {
+        "name": "bvk",
+        "id": "ea62ed6f589e4a0a",
+        "keep": true,
+        "capital_focus": true,
+        "section": "institutional",
+        "expected_capital": true,
+        "expected_section": "institutional",
+        "passed": true
+      },
+      {
+        "name": "platform-merger",
+        "id": "40742474855f7e67",
+        "keep": true,
+        "capital_focus": true,
+        "section": "institutional",
+        "expected_capital": true,
+        "expected_section": "institutional",
+        "passed": true
+      },
+      {
+        "name": "reit-earnings",
+        "id": "46ad5137cf385f3d",
+        "keep": true,
+        "capital_focus": false,
+        "section": "cre",
+        "expected_capital": false,
+        "expected_section": "cre",
+        "passed": true
+      },
+      {
+        "name": "property-refi",
+        "id": "93f749ac6ea7f24e",
+        "keep": true,
+        "capital_focus": false,
+        "section": "cre",
+        "expected_capital": false,
+        "expected_section": "cre",
+        "passed": true
+      },
+      {
+        "name": "btr-earnings",
+        "id": "f0fc2a39f7d2f5f4",
+        "keep": true,
+        "capital_focus": false,
+        "section": "btr",
+        "expected_capital": false,
+        "expected_section": "btr",
+        "passed": true
+      }
+    ],
+    "elapsed_ms": 48518,
+    "usage": {
+      "prompt_tokens": 12227,
+      "completion_tokens": 844,
+      "total_tokens": 13071,
+      "completion_tokens_details": {
+        "reasoning_tokens": 354
+      }
+    },
+    "production_state_changed": false,
+    "production_model_attempts_changed": false
+  },
+  "preservation": {
+    "baseline_files": 317,
+    "unchanged_files": 309,
+    "changed_existing_paths": [
+      "README.md",
+      "ROADMAP.md",
+      "AGENTS.md",
+      "public/index.html",
+      "public/style.css",
+      "public/app.js",
+      "scripts/test/periodical-calendar.test.mjs",
+      "scripts/lib/editorial.mjs"
+    ],
+    "missing_paths": [],
+    "data_files_unchanged": 49,
+    "state_files_unchanged": 13,
+    "frozen_issue_files_unchanged": 8,
+    "published_data_modified": false,
+    "environment_ci_sources_modified": false,
+    "existing_mobile_style_preserved": true
+  },
+  "advisor": {
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "final_review": "no_blocking_defects",
+    "additional_fixes": [
+      "localized_invalid_data_error",
+      "clear_partial_render_on_error",
+      "shared_holiday_banner_render",
+      "refresh_open_calendar_after_current_index",
+      "filterbar_hidden_css"
+    ]
+  },
+  "scope": {
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "published_cfpb_reclassified": false,
+    "new_dependencies": false
+  },
+  "evidence": {
+    "task_directory": ".tmp/page-fix-20261106/",
+    "tests": [
+      "full-tests.log",
+      "clean-tests.log"
+    ],
+    "browser": [
+      "browser-regression.json",
+      "clean-browser/browser-regression.json"
+    ],
+    "semantic": "semantic-probe.json"
+  },
+  "limitations": [
+    "Not a production deployment acceptance",
+    "Existing published CFPB classification retained",
+    "Six semantic cases do not guarantee every future classification",
+    "Existing source coverage gaps remain"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "d7e7e4a61d9ec8bcaea7d1bc098b0fe3e8c5ad79d52b9a360a1a91d8df455b6d"
+    },
+    {
+      "path": "ROADMAP.md",
+      "sha256": "3c6c1fe752eed1f971c32c95a9fc69d2caff609fa22126a67f24635dd1b733bc"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "ca57028ee72081d5389e1b9a88041890b7fc929481f0f2e9de66d820ccc1e815"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "de6b6534afe987ea5d068826c2556314d4c495cbfa96a37f650fa2eda7dd3ba4"
+    },
+    {
+      "path": "public/style.css",
+      "sha256": "eccec386de89ece8696f6fb31e62610d53ae0ba7a6dc33b89d0663de98bc2fa4"
+    },
+    {
+      "path": "public/app.js",
+      "sha256": "ffe47719a876be3b47e8a021da418c6b3af112196ffd0f78271c7a500884435f"
+    },
+    {
+      "path": "scripts/test/periodical-calendar.test.mjs",
+      "sha256": "2287e76964cf6e598ffcedb9d2452c2af73d1f7d62cb76fa0f65ec5a6b64ed74"
+    },
+    {
+      "path": "scripts/lib/editorial.mjs",
+      "sha256": "50f8b44d428d99c02a309ed407c06e8345aa6c94f2019b4efca3d11f5ff1926f"
+    },
+    {
+      "path": "scripts/test/frontend-content.test.mjs",
+      "sha256": "65bd53c26177e60533cbdf7aab0bbb2019ac78e063fbe8244d207a9a140d448f"
+    },
+    {
+      "path": "scripts/test/frontend-navigation.test.mjs",
+      "sha256": "a86f61397f5e1f7fb1df860a2c6d06620b65f6f6a338a326ed80f079c83ba394"
+    },
+    {
+      "path": "docs/plans/2026-11-06-page-fix.md",
+      "sha256": "491bc89794c038e834b8267ead6a0a0b941b35aeb3dc1becd7d67a2d0b4c0d03"
+    },
+    {
+      "path": "docs/validation/2026-11-06-page-fix.md",
+      "sha256": "1c8cfd3b6affa8c22011bee22e2d0e50e6a7a93195f763ccbabb039cd5e9a1f3"
+    }
+  ]
+}

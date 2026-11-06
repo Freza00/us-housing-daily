@@ -114,7 +114,8 @@ test('period banner preserves real legacy Beijing cutoff and shows new ET calend
 
 test('language switch keeps periodic coverage instead of replacing it with the daily window message',async()=>{
  const app=await fs.readFile(new URL('../../public/app.js',import.meta.url),'utf8');
- const ctx={currentLang:'en',currentMode:'monthly',currentData:{kind:'monthly',generated_at:1,window:buildWindow('monthly',new Date('2026-11-02T07:00:00Z')),_diagnostics:{window_hours:744}},document:{documentElement:{}},langSeg:{querySelectorAll:()=>[]},digestTabs:{querySelectorAll:()=>[]},$:()=>({}),t:()=>({window_banner:()=> 'daily-window-fallback'}),updatedEl:{},renderBrief:()=>{},renderThemes:()=>{},applyFilter:()=>{},themesBlock:{hidden:true},windowBanner:{hidden:false,textContent:''},formatUpdated:()=>''};
+ const ctx={currentLang:'en',currentMode:'monthly',currentData:{kind:'monthly',generated_at:1,window:buildWindow('monthly',new Date('2026-11-02T07:00:00Z')),_diagnostics:{window_hours:744}},document:{documentElement:{}},langSeg:{querySelectorAll:()=>[]},digestTabs:{querySelectorAll:()=>[]},$:()=>({setAttribute:()=>{}}),t:()=>({window_banner:()=> 'daily-window-fallback'}),updatedEl:{},refreshBtn:{},datestrip:{setAttribute:()=>{}},calPrev:{setAttribute:()=>{}},calNext:{setAttribute:()=>{}},calendarDialog:{open:false},renderPeriodStrip:()=>{},renderBrief:()=>{},renderThemes:()=>{},applyFilter:()=>{},themesBlock:{hidden:true},windowBanner:{hidden:false,textContent:''},formatUpdated:()=>''};
  vm.createContext(ctx);vm.runInContext(app.slice(app.indexOf('function articleDate('),app.indexOf('// "2026-05-28"')),ctx);
+ vm.runInContext(app.slice(app.indexOf('function renderWindowBanner('),app.indexOf('function isCurrentLoad(')),ctx);
  vm.runInContext(app.slice(app.indexOf('function applyLanguage()'),app.indexOf("langSeg.addEventListener('click'")),ctx);ctx.applyLanguage();assert.match(ctx.windowBanner.textContent,/Coverage:.*2026-10-01.*ET/);
 });
