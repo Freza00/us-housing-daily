@@ -1,0 +1,190 @@
+{
+  "checked_at_beijing": "2026-11-06 10:04",
+  "status": "fixed_and_local_ready",
+  "authorization": "让 advisor 看一眼，然后修复",
+  "advisor": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "max",
+    "task": "/root/astra_max_geo_recovery_review",
+    "final_review": "passed; no blocking issues",
+    "independent_probes": {
+      "typography_combinations": 120,
+      "regex_literal_characters": 18,
+      "rejected_counterexamples": 8,
+      "fort_worth_whitespace_cases": 3
+    }
+  },
+  "code_scope": {
+    "changed_module": "scripts/lib/editorial.mjs",
+    "equivalences": [
+      "case",
+      "straight/curly single and double quotes",
+      "whitespace runs"
+    ],
+    "unchanged": [
+      "words and punctuation",
+      "separate title/body boundary",
+      "HQ rejection and office exception",
+      "section priority",
+      "model request/time limits",
+      "CI/scheduling/secrets"
+    ]
+  },
+  "tests": {
+    "workspace": {
+      "passed": 282,
+      "failed": 0,
+      "node": "v25.8.0"
+    },
+    "isolated": {
+      "base": "1b9696f584b611a5c1a19871c5ec3ffa341c8425",
+      "passed": 282,
+      "failed": 0,
+      "node": "v25.8.0"
+    }
+  },
+  "production_answers": {
+    "raw_answers": 2,
+    "decisions_each": 55,
+    "selected_each": 20,
+    "same_selected_order": true,
+    "idempotent": true
+  },
+  "recovery": {
+    "status": "ready_local",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-06",
+      "cutoff_upper": 1793912400000,
+      "revision": 1
+    },
+    "rules": "aeea9b0bca3a58dafc70862b8fc71893bffaf46f67b79858d4ec2aa8b7736f85",
+    "payload_sha256": "223c80b9c01057b634b3b9b713e704e129c9a589c9b914370406243637c2550a",
+    "items": 20,
+    "sections": {
+      "national": 6,
+      "cre": 7,
+      "institutional": 4,
+      "btr": 1,
+      "sunbelt": 2
+    },
+    "request_hashes_verified": [
+      "181a6fde918261099e0389ab687da90162b5c5ee00d9553b6d199ad25a5f89ba",
+      "03a5f86d37dd20313a49c3056bc19af0838b969e73f8330e87fc61a368dc8ba7"
+    ],
+    "evidence_changes": [
+      {
+        "id": "37",
+        "from": "California’s newly passed Proposition 37",
+        "to": "California's newly passed Proposition 37"
+      }
+    ],
+    "editor_attempts_preserved": 3,
+    "new_editor_calls": 0,
+    "new_collection_calls": 0,
+    "writer_requests": 1,
+    "writer_attempts": 1,
+    "counted_budget_ms": 269859,
+    "max_budget_ms": 660000,
+    "source_health": {
+      "ok": 64,
+      "total": 77
+    },
+    "publication_status": "complete",
+    "publication_status_meaning": "Internal complete does not mean every source succeeded",
+    "summary_shortening": {
+      "method": "whole_sentence_prefix",
+      "original_characters": 299,
+      "final_characters": 201,
+      "original_sentence_count": 3,
+      "kept_sentence_count": 2,
+      "original_english_words": 131,
+      "final_english_words": 86
+    },
+    "writer_usage": [
+      {
+        "attempt": 1,
+        "failed": false,
+        "usage": {
+          "prompt_tokens": 14371,
+          "completion_tokens": 3250,
+          "total_tokens": 17621
+        },
+        "error": null
+      }
+    ],
+    "ready_file": ".tmp/daily-20261106-geo-fix/recovery/state/issues/daily/2026-11-06/r1/ready.json"
+  },
+  "recovery_audit": {
+    "stage_checksums": [
+      "prepared",
+      "editor",
+      "cards",
+      "metadata",
+      "ready"
+    ],
+    "old_rule_cold_resume": "ready; zero requests",
+    "new_rule_with_old_freeze": "rejected as incompatible; zero requests",
+    "editor_ledger_unchanged": true,
+    "prepared_unchanged": true,
+    "identity_rules_unchanged": true,
+    "writer_attempts": 1,
+    "source_cap_passed": true,
+    "summary_characters": 201,
+    "payload_sha256": "223c80b9c01057b634b3b9b713e704e129c9a589c9b914370406243637c2550a",
+    "source_counts": {
+      "zillow-research": 1,
+      "nahb-eyeonhousing": 1,
+      "housingwire": 3,
+      "connect-cre": 1,
+      "houston-agent": 1,
+      "rebusiness-online": 1,
+      "cnbc-realestate": 1,
+      "sec-amh-8k": 1,
+      "har-research": 1,
+      "attom": 1,
+      "bisnow": 3,
+      "freddie-mac": 1,
+      "national-mortgage-news": 1,
+      "realtor-com": 1,
+      "cotality": 1,
+      "redfin-news": 1
+    },
+    "source_exceptions": [],
+    "remaining_writer_attempts": 2
+  },
+  "ui": {
+    "engine": "isolated headless Chromium",
+    "network": "All content fulfilled locally; external requests blocked",
+    "scenarios": 4,
+    "language_checks": 12,
+    "cards": 20,
+    "english_han_leaks": 0,
+    "page_errors": 0,
+    "horizontal_overflows": 0
+  },
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false,
+    "published_nov6": false,
+    "required_order": "Publish the compatible old-rule Nov6 candidate before releasing the generic rule change"
+  },
+  "limitations": [
+    "Semantic and numeric checks are not a complete source fact-check.",
+    "No remote Node.js 22 CI has run for this uncommitted patch.",
+    "The upstream stream failure itself is not fixed; no extra retries or budget were added.",
+    "The local candidate is a recovery result, not punctual automatic publication."
+  ],
+  "protection": {
+    "unchanged_original_files": 304,
+    "changed_original_files": [
+      "README.md",
+      "ROADMAP.md",
+      "AGENTS.md",
+      "docs/RECOVERY.md",
+      "scripts/lib/editorial.mjs"
+    ],
+    "original_data_state_unchanged": true
+  }
+}

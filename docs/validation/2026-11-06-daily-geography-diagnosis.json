@@ -1,0 +1,193 @@
+{
+  "checked_at_beijing": "2026-11-06 09:48",
+  "scope": "Read-only production diagnosis and offline probes; no fixes, retries or publication",
+  "code_commit": "d5cc9dae060479922731b616fdc57db53ce28bed",
+  "source_head": "1b9696f584b611a5c1a19871c5ec3ffa341c8425",
+  "online_checked_at": "2026-11-06 09:43",
+  "online_latest_date": "2026-11-05",
+  "nov6_archive_http_status": 404,
+  "runs": [
+    {
+      "id": 42114233695,
+      "url": "https://github.com/Freza00/us-housing-daily/actions/runs/42114233695",
+      "started_beijing": "2026-11-06 05:36:52",
+      "failed_stage": "Select frozen issue",
+      "conclusion": "failure",
+      "attempts": [
+        {
+          "number": 1,
+          "error": "Missing subject geography evidence: 35",
+          "http_status": 200,
+          "done": true
+        },
+        {
+          "number": 2,
+          "error": "Missing subject geography evidence: 37",
+          "http_status": 200,
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": 42144973216,
+      "url": "https://github.com/Freza00/us-housing-daily/actions/runs/42144973216",
+      "started_beijing": "2026-11-06 09:36:36",
+      "failed_stage": "Select frozen issue",
+      "conclusion": "failure",
+      "restored_phases": [
+        "prepared"
+      ],
+      "attempts": [
+        {
+          "number": 3,
+          "error": "Upstream HTTP/2 stream failed",
+          "http_status": 200,
+          "done": false,
+          "usage": null
+        }
+      ]
+    }
+  ],
+  "root_cause": "New geography validator uses raw case-sensitive String.includes and rejects equivalent casing/apostrophe spelling; one bad geo field blocks the complete editor batch",
+  "secondary_cause": "Third and last allowed editor request encountered an upstream stream failure",
+  "test_gap": "Existing 269 tests did not cover equivalent source casing and curly versus straight apostrophes in geographic evidence",
+  "offline": {
+    "checked_at": "2026-11-06T01:47:13.696Z",
+    "scope": "Offline diagnosis only; no code, frozen production artifact or public data changes",
+    "prepared_candidates": 55,
+    "candidate_preparation": {
+      "limit": 72,
+      "initial_count": 58,
+      "attempted": 72,
+      "accepted": 55,
+      "rejected": 17
+    },
+    "sources": {
+      "ok": 64,
+      "total": 77
+    },
+    "phases": [
+      "prepared"
+    ],
+    "original_identity": {
+      "kind": "daily",
+      "period_key": "2026-11-06",
+      "cutoff_upper": 1793912400000,
+      "revision": 1
+    },
+    "latest_identity": {
+      "kind": "daily",
+      "period_key": "2026-11-06",
+      "cutoff_upper": 1793912400000,
+      "revision": 1
+    },
+    "prepared_unchanged": true,
+    "stage_checksums_passed": true,
+    "editor_attempts": 3,
+    "writer_attempts": 0,
+    "model_ms": 193411,
+    "retry_delay_ms": 15000,
+    "counted_budget_ms": 208411,
+    "remaining_budget_ms": 451589,
+    "known_usage_tokens": 57858,
+    "unknown_usage_attempts": 1,
+    "probes": [
+      {
+        "request": "a82be15c-66e1-4bfc-b022-defdad2e31d2",
+        "original_errors": [
+          {
+            "id": "35",
+            "title": "Provident Industrial Completes 497,280 SF Project in El Paso",
+            "geo_evidence": "El Paso, Texas",
+            "error": "Missing subject geography evidence: 35",
+            "canonical_match": true
+          },
+          {
+            "id": "37",
+            "title": "Court Calif. new-build buyers: Prop 37 funds up to 17% down",
+            "geo_evidence": "California’s newly passed Proposition 37",
+            "error": "Missing subject geography evidence: 37",
+            "canonical_match": true
+          }
+        ],
+        "only_exact_source_spelling_changed": [
+          {
+            "id": "35",
+            "from": "El Paso, Texas",
+            "to": "EL PASO, TEXAS"
+          },
+          {
+            "id": "37",
+            "from": "California’s newly passed Proposition 37",
+            "to": "California's newly passed Proposition 37"
+          }
+        ],
+        "all_55_decisions_strictly_pass_after_spelling_restoration": true,
+        "keep": 34,
+        "qualified": 34,
+        "selected": 20,
+        "sections": {
+          "national": 6,
+          "cre": 7,
+          "institutional": 4,
+          "btr": 1,
+          "sunbelt": 2
+        }
+      },
+      {
+        "request": "6f087039-4f65-40d1-add3-761e9a8526fe",
+        "original_errors": [
+          {
+            "id": "37",
+            "title": "Court Calif. new-build buyers: Prop 37 funds up to 17% down",
+            "geo_evidence": "California’s newly passed Proposition 37",
+            "error": "Missing subject geography evidence: 37",
+            "canonical_match": true
+          }
+        ],
+        "only_exact_source_spelling_changed": [
+          {
+            "id": "37",
+            "from": "California’s newly passed Proposition 37",
+            "to": "California's newly passed Proposition 37"
+          }
+        ],
+        "all_55_decisions_strictly_pass_after_spelling_restoration": true,
+        "keep": 34,
+        "qualified": 34,
+        "selected": 20,
+        "sections": {
+          "national": 6,
+          "cre": 7,
+          "institutional": 4,
+          "btr": 1,
+          "sunbelt": 2
+        }
+      }
+    ],
+    "rerun_probe": {
+      "error": "Issue stage request budget exhausted: editor",
+      "network_calls": 0
+    }
+  },
+  "production_mutations": {
+    "code": false,
+    "data": false,
+    "frozen_artifacts": false,
+    "ledger_reset": false,
+    "new_model_calls": 0,
+    "new_collection_calls": 0,
+    "manual_dispatch": 0
+  },
+  "recommended_next_steps": [
+    "Canonicalize geography comparisons for case, apostrophes and whitespace while preserving contiguous source evidence and HQ/subject exclusions.",
+    "Add regression cases from both actual editor answers.",
+    "Recover a complete saved editor answer with exact source spelling and validate under the frozen contract, retaining revision/input/budget; proceed only with remaining writer budget.",
+    "Do not clear counters or rerun the exhausted editor."
+  ],
+  "limitations": [
+    "Offline strict selection validation does not mean the issue has been written or published.",
+    "English writing and production language behavior have not run for Nov6.",
+    "The third stream failure returned no usage; total charged tokens are unknown."
+  ]
+}

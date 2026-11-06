@@ -76,6 +76,21 @@ export function editorInstructions(tagConfig) {
   const vocabulary = tagConfig ? Object.entries(tagConfig.dimensions).map(([dim, value]) => `${dim}（${value._desc}）：${value.tags.map(t => `${t.id}=${t.applies_to}`).join('；')}`).join('\n') : '';
   return decisionSystem + '\n保留稿必须输出 capital_focus 布尔值；仅当主事件是基金募资／资本配置／平台或公司级并购／IPO／机构资本治理或监管风险时为 true。普通公司经营财报、物业买卖或再融资为 false，背景交易不改变主事件。\n必须提供实际资产标签；地域按新闻主题选最具体层级，排除总部、人物和 source_region（来源所在地）。非 national 地域必须附 geo_evidence，为给定标题或 evidence 中逐字连续的主题地域证据，不可只摘总部介绍。无主题地域证据用 national。\n' + vocabulary + '\n' + (tagConfig ? JSON.stringify(tagConfig.constraints) : '');
 }
+export function geographyEvidenceMatches(source, evidence) {
+  if (typeof evidence !== 'string' || !evidence.trim()) return [];
+  // Keep words and punctuation literal; only typography and whitespace may vary.
+  const pattern = evidence.trim().split(/(\s+|['’‘]|["“”])/u).map(part =>
+    /^\s+$/u.test(part) ? '\\s+' : /['’‘]/u.test(part) ? "['’‘]" : /["“”]/u.test(part) ? '["“”]' : part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  ).join('');
+  const text = String(source || ''), matches = [...text.matchAll(new RegExp(pattern, 'gi'))];
+  const sentences = []; let start = 0;
+  for (const boundary of text.matchAll(/(?<=[.!?])\s+/g)) {
+    sentences.push({ start, end: boundary.index }); start = boundary.index + boundary[0].length;
+  }
+  sentences.push({ start, end: text.length });
+  return matches.map(match => ({ text: match[0], index: match.index,
+    contexts: sentences.filter(sentence => sentence.start < match.index + match[0].length && sentence.end > match.index).map(sentence => text.slice(sentence.start, sentence.end)) }));
+}
 export function validateDecisions(data, items, tagConfig = null, { scriptRouting = false } = {}) {
   if (!Array.isArray(data?.decisions) || data.decisions.length !== items.length) throw new LlmError('Decision coverage mismatch');
   const ids = new Set(items.map(it => it.id)), received = new Set(), byId = new Map(data.decisions.map(d => [d?.id, d]));
@@ -109,13 +124,15 @@ export function validateDecisions(data, items, tagConfig = null, { scriptRouting
         if (geos.length !== 1) throw new LlmError('Expected one subject geography: ' + d.id);
         if (geos[0] !== 'national') {
           const item = items.find(it => it.id === d.id), evidence = typeof d.geo_evidence === 'string' ? d.geo_evidence.trim() : '';
-          if (evidence.length < 4 || !(item.title + ' ' + item.description).includes(evidence)) throw new LlmError('Missing subject geography evidence: ' + d.id);
-          const contexts = [item.title, item.description].flatMap(text => String(text || '').split(/(?<=[.!?\n])\s+/)).filter(sentence => sentence.includes(evidence));
-          if (!d.tags.includes('office') && [evidence, ...contexts].some(text => /\b(headquarter(?:s|ed)?|based in)\b/i.test(text))) throw new LlmError('Headquarters is not subject geography: ' + d.id);
+          const matches = [item.title, item.description].flatMap(text => geographyEvidenceMatches(text, evidence));
+          if (evidence.length < 4 || !matches.length) throw new LlmError('Missing subject geography evidence: ' + d.id);
+          const contexts = matches.flatMap(match => match.contexts);
+          if (!d.tags.includes('office') && [evidence, ...contexts].some(text => /\b(headquarter(?:s|ed)?|based in)\b/i.test(text.replace(/\s+/g, ' ')))) throw new LlmError('Headquarters is not subject geography: ' + d.id);
           // Refine a broad region only from the supplied subject snippet, never publisher metadata.
-          const cities = [['houston', /\bHouston\b/i], ['dfw', /\b(Dallas|Fort Worth|DFW)\b/i], ['austin', /\bAustin\b/i]].filter(([, re]) => re.test(evidence));
+          const geography = matches[0].text.replace(/\s+/g, ' ');
+          const cities = [['houston', /\bHouston\b/i], ['dfw', /\b(Dallas|Fort Worth|DFW)\b/i], ['austin', /\bAustin\b/i]].filter(([, re]) => re.test(geography));
           if (['texas', 'sun-belt'].includes(geos[0]) && cities.length === 1) d.tags = d.tags.map(tag => tag === geos[0] ? cities[0][0] : tag);
-          d.geo_evidence = evidence;
+          d.geo_evidence = matches[0].text;
         }
       }
       d.section = routeSection(d);

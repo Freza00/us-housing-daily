@@ -1,0 +1,59 @@
+{
+  "checked_at_beijing": "2026-11-06 10:06",
+  "status": "daily_published_code_pending",
+  "authorization": "上线，更新",
+  "candidate_sha256": "223c80b9c01057b634b3b9b713e704e129c9a589c9b914370406243637c2550a",
+  "revision": 1,
+  "new_model_calls": 0,
+  "new_collection_calls": 0,
+  "old_issues_rewritten": false,
+  "data_commit": "0716b4ca3874de79be2b84a0af3cb27345150bd3",
+  "delivery": {
+    "schema_version": 1,
+    "ok": true,
+    "host": "https://news-agent-mu.vercel.app",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-06",
+      "cutoff_upper": 1793912400000,
+      "revision": 1
+    },
+    "payload_sha256": "223c80b9c01057b634b3b9b713e704e129c9a589c9b914370406243637c2550a",
+    "commit": "0716b4ca3874de79be2b84a0af3cb27345150bd3",
+    "checked_at": 1793930816642,
+    "files": [
+      {
+        "route": "/data/latest.json",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-06.json",
+        "ok": true
+      },
+      {
+        "route": "/data/dates.json",
+        "ok": true
+      },
+      {
+        "route": "/",
+        "ok": true
+      }
+    ],
+    "pushed": {
+      "commit": "0716b4ca3874de79be2b84a0af3cb27345150bd3",
+      "already_pushed": false
+    }
+  },
+  "local_tests": {
+    "workspace": 282,
+    "isolated": 282,
+    "failed": 0,
+    "node": "v25.8.0",
+    "release_checkout": 282
+  },
+  "preflight": {
+    "whitelist_files": 13,
+    "protected_non_target_files": 386,
+    "data_state_html_preserved": true
+  }
+}

@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-脚本优先三项修复已提交 d5cc9da、同步开源 main 并上线：统一脚本归栏、双语概览／主线、坏卡修复保留可裁剪 metadata。发布副本及 Node.js 22 CI 各 269 项通过，Vercel success；线上 10 个资源／数据入口逐项匹配，5 号及周月旧刊保持。6 号按原工作日 05:00 首触发、09:00 可读目标，真实新模型契约和自动首跑待观察；无手动生成或新增调度／通知。[发布验收](docs/validation/2026-11-05-script-first-release.md)。
+地域证据误拒已按 Astra-max 复审修复，根目录及干净副本各 282 项通过；6 号在兼容旧规则下恢复了 20 条本地 ready，只新增 writer 1 次、零新采集／editor，原 r1／截止点／规则和三次 editor 账本保持。双语摘要、栏目、来源 cap 及桌面／手机中英文 12 次检查通过。6 号已以 0716b4c 补发并通过四路线上核验，通用修复正在隔离副本提交上线。[验收](docs/validation/2026-11-06-geography-fix-and-recovery.md)。
 
 5 号首跑已验证候选增补生效：05:36:52 自动启动、05:41:10 完成 20 条线上四路核验；51 条初始候选、检查 72、复验后送审 57，editor 1 次／writer 2 次。后续补偿没有再次生成。英文摘要／主线泄漏和分类缺口已复现并完成本地修复，通用修复已上线，5 号仍为原稿。[运行与产品复核](docs/validation/2026-11-05-run-language-classification-review.md)。
 
@@ -22,7 +22,7 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 ## 进行中
 
-- 脚本归栏、双语概览与 metadata 保留已上线；等待 6 号真实自动首跑，核查语义标签、英文概览、栏目分布与模型调用次数。未手动生成或重写已刊稿，来源限额、质量门槛及模型预算保持。[发布记录](docs/validation/2026-11-05-script-first-release.md)。
+- 地域比较与总部上下文修复、本地 6 号 20 条 ready 已验收，已获提交和生产发布授权，发布进行中。旧规则候选先发、通用代码后推；冻结规则和调用账本不得重签或清零。恢复属于人工介入，后续自动稳定性仍待观察。[记录](docs/validation/2026-11-06-geography-fix-and-recovery.md)。
 
 - 11 月 4 日 P0 修复和 16 条补发均已完成，自动数据提交未建部署记录的具体原因待查；本次人工恢复交付不能证明后续自动交付稳定。P1 工作流职责划分继续不实施。[验收](docs/validation/2026-11-04-test-clock-implementation.md)。
 
@@ -35,6 +35,8 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 15 个研究入口仍有访问或发现障碍；31／46 可读是此前本机探针结果，不代表生产已全部覆盖。Vercel CLI 现有 token 无效，未独立读取账号套餐和线上 cron 注册表；部署已接受仓库 cron 配置，Actions 补偿配置已上线。
 
 ## 最近完成
+
+- 2026-11-06 10:04 按 Astra-max 复审修复地域大小写／引号／空白误拒、总部跨句上下文及 Fort Worth 幂等问题；兼容旧规则恢复 6 号 20 条 ready，原 editor 账本保持、仅新增 writer 1 次。未提交或发布。[验收](docs/validation/2026-11-06-geography-fix-and-recovery.md)。
 
 - 2026-11-05 16:43 提交 d5cc9da、同步开源 main 并上线脚本归栏、双语概览及局部恢复修复。CI 269 项通过，Vercel success，5 号和周月数据保持；6 号正常自动首跑待观察。[发布验收](docs/validation/2026-11-05-script-first-release.md)。
 
@@ -73,9 +75,12 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 2026-10-30 17:27 完成 P0 固定版本、冻结阶段、局部写作恢复、跨运行额度账本、候选发布与线上核验，以及三类工作流接入；隔离／主工作区各 205 项及 Astra max 独立 79 项通过。只读截止观察已实现，外部调度／通知未启用；未提交、推送或部署。[施工与交付](docs/plans/2026-10-30-automation-hardening-implementation.md)。
 
 - 2026-10-30 12:51 完成 Astra max 自动出刊只读审查与强化方案；确认 degraded 已刊重建、补文导致编辑缓存漂移、摘要错误扩大写稿失败等缺口，明确阶段附件、候选包与线上确认。官方缓存源码排除了“常见保存服务错误直接阻断”作为主要根因。方案复审可定稿，未改代码／配置／生产，未提交或推送。[审查](docs/validation/2026-10-30-automation-hardening-review.md)。
-- 2026-10-30 12:24 经用户明确授权，提交 ca5f11f 并推送开源 main，Vercel 部署成功。30 号 19 条修订稿及出版资格／月份修复上线；生产首页、JS、CSS、latest、30／29 号归档和日期列表逐项 SHA-256 一致。原工作区 56 个受保护文件未变。[生产证据](docs/validation/2026-10-30-publication-production.json)。
 
 ## 最近验证
+
+- 2026-11-06 10:04 根目录／干净副本各 282／282；两份实际 55 决定原答直接严格通过且选 20 条顺序一致。新旧请求散列及 5 阶段通过，旧规则冷恢复零请求、新规则拒旧附件；本地候选 20 卡、双语／来源 cap／预算、桌面手机 12 次语言检查通过，尚未生产发布。[证据](docs/validation/2026-11-06-geography-fix-and-recovery.json)。
+
+- 2026-11-06 09:48 核对 6 号首跑及补偿日志／四个附件，阶段散列、r1 和 prepared 一致；真实 editor 三次／writer 零次。两份 55 条回答分别仅恢复两处／一处地域原文拼写，完整校验及 20 条选择通过；同版额度探针零网络请求即拒绝。只诊断，未改代码或补发。[结构化证据](docs/validation/2026-11-06-daily-geography-diagnosis.json)。
 
 - 2026-11-05 16:43 发布副本及 Node.js v22.23.4 CI 各 269／269、0 失败；Vercel success。线上首页／JS／CSS 与 7 个数据入口共 10 路逐项散列匹配，远端 228 个保护文件与主工作区 304 个非目标起始文件保持；无新模型、采集或手动 dispatch。[证据](docs/validation/2026-11-05-script-first-release.json)。
 
@@ -112,10 +117,6 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 2026-11-02 15:51 Astra 14 组独立探针与 6 组比较探针通过，主 agent 复跑后确认三稿前缀 171／171／188 的完整写稿校验、全部 20 卡不变、250 边界及原始阶段散列／规则匹配。报告前 121 个受保护文件不变，无新增 House Daily 调用或外部写入；只更新审查记录与进度。[证据](docs/validation/2026-11-02-advisor-comparison.json)。
 
 - 2026-10-30 17:59 [本轮 CI](https://github.com/Freza00/us-housing-daily/actions/runs/41037034837) 在 Node.js v22.23.4 通过 205 项、0 失败；[Vercel](https://vercel.com/freza00s-projects/news-agent/FNDBn9fXLLtFvxFdPMAzFn97u5Kx) success。生产 7 个路由内容散列匹配候选，首页／latest／归档一致，只读观察返回 online_verified；原工作区 112 个受保护文件不变，无生成工作流或浏览器视觉验收。[结构化证据](docs/validation/2026-10-30-automation-hardening-production.json)。
-
-- 2026-10-30 17:27 Node.js v25.8.0 隔离／主工作区 205／205、Astra max 独立 79／79；5 个 YAML、51 个 ESM 和工作流身份／附件／顺序断言通过，git diff --check 通过。29／30 号已有 20／19 条内容恢复及保存回答离线检查通过，97 个非目标起始文件不变；没有新模型生成、远端 CI、生产部署或连续 SLA 验收。[本地证据及限制](docs/validation/2026-10-30-automation-hardening-implementation.md)。
-
-- 2026-10-30 12:51 核对 Astra max 四个离线 stub 探针的源码、断言与结果：degraded 重入、完成守卫空刊反例、同 ID 证据变化重做编辑、3 张好卡片因坏摘要整阶段失败。核对 GitHub／Vercel 官方平台约束；16 个运行／配置／前端及 56 个受保护数据／前端文件未变，发布目录干净。未新增真实模型调用，未重跑全套或做新生产验收。[结构化证据](docs/validation/2026-10-30-automation-hardening-review.json)。
 
 ## 已定位问题
 
