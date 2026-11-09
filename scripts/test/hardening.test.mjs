@@ -6,6 +6,7 @@ import { runPipeline, materializeIssue } from '../lib/pipeline.mjs';
 import { digest, validateIssue, reusableIssue } from '../lib/issue-contract.mjs';
 import { openIssueStore, ruleDigest } from '../lib/issue-store.mjs';
 import { createLlmClient } from '../lib/llm-client.mjs';
+import { selectItems, validateWritingCard } from '../lib/editorial.mjs';
 import { mergeCheckpoints } from '../lib/collection-checkpoint.mjs';
 import { loadCurrentCandidate } from '../publish.mjs';
 import { installCheckpoint, trustedArtifactRun } from '../lib/artifact-recovery.mjs';
@@ -28,6 +29,52 @@ const stageDir = root => path.join(root,'state/issues/daily/2026-10-28/r1');
 const response = value => new Response(JSON.stringify({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify(value) } }] }), { headers: { 'content-type': 'application/json' } });
 function answer(input, bad = false) {
   return { items: input.items.map(it => ({ id: it.id, title_zh: '住宅销售研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', evidence_quote: it.evidence.slice(0,70) })), executive_summary: { sentences: [{ text: `住宅销售增长 ${bad ? 99 : 5}%。`, text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] };
+}
+
+for (const offsetMs of [180001, 180000, 120000, 1, 0, -60000, null]) {
+  for (const spentMs of [267026, 660000, 660001]) test(`frozen writer recovery shares the total budget: deadline offset=${offsetMs}, spent=${spentMs}`, async t => {
+    const opts = await setup(t);
+    await runPipeline('daily', { ...opts, env: { ...opts.env, PIPELINE_UNTIL: 'editor' }, client: fakeClient() });
+    const manifest = JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'manifest.json')));
+    const store = await openIssueStore(opts.env.NEWS_STATE_DIR, { ...manifest.identity, period: '2026-10-28', upper, rules: manifest.rules, model: manifest.model });
+    const selected = selectItems((await store.get('prepared')).snapshot.items, await store.get('editor')).items;
+    const valid = answer({ items: selected.map(it => ({ ...it, evidence: it.description })) });
+    const originalAttempts = {
+      editor: [{ request_id: 'editor-1', ms: 87904, retry_delay_ms: 15000 }, { request_id: 'editor-2', ms: 91343 }],
+      writer: [{ request_id: 'writer-1', ms: 49316, retry_delay_ms: 15000 }, { request_id: 'writer-2', ms: spentMs - 258563 }]
+    };
+    store.manifest.attempts = structuredClone(originalAttempts);
+    store.manifest.model_ms = spentMs - 30000;
+    await store.put('metadata', { selected_digest: digest(selected), executive_summary: valid.executive_summary, themes: [] });
+    await store.put('cards', { selected_digest: digest(selected), items: valid.items.slice(0, 2).map((card, i) => validateWritingCard(card, selected[i])) });
+    const clock = Date.parse('2026-11-09T00:58:00Z');
+    t.mock.method(Date, 'now', () => clock);
+    let requests = 0;
+    const env = { ...opts.env, PIPELINE_UNTIL: 'ready', LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid',
+      ...(offsetMs === null ? {} : { PUBLICATION_DEADLINE_MS: String(clock + offsetMs) }) };
+    const options = { ...opts, env, collector: { collect() { throw Error('Unexpected recollection'); } }, llmOptions: { fetchImpl: async (_url, request) => {
+      requests++;
+      const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content);
+      assert.equal(input.items.length, 1);
+      assert.match(body.messages[0].content, /仅修复/);
+      return response({ items: answer(input).items });
+    } } };
+    if (spentMs >= 660000) {
+      await assert.rejects(runPipeline('daily', options), /LLM run time budget exhausted/);
+      assert.equal(requests, 0);
+      assert.deepEqual(JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'manifest.json'))).attempts, originalAttempts);
+    } else {
+      assert.equal((await runPipeline('daily', options)).stage, 'ready');
+      assert.equal(requests, 1);
+      const after = JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'manifest.json')));
+      assert.deepEqual(after.attempts.editor, originalAttempts.editor);
+      assert.deepEqual(after.attempts.writer.slice(0, 2), originalAttempts.writer);
+      assert.equal(after.attempts.writer.length, 3);
+      const expectedRemaining = offsetMs !== null && offsetMs > 180000 ? offsetMs - 180000 : 660000 - spentMs;
+      assert.equal(after.attempts.writer[2].reserved_ms, Math.min(240000, expectedRemaining));
+      assert.equal(JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'ready.json'))).payload.items.length, 3);
+    }
+  });
 }
 
 for (const mode of ['card-and-metadata', 'metadata-only', 'all-cards', 'exhausted']) test('invalid complete frozen writing resumes safely: ' + mode, async t => {

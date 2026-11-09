@@ -2,7 +2,7 @@ name: Daily News Build
 on:
   schedule:
     - cron: '17 21,22,23 * * 0-4'
-    - cron: '17 0 * * 1-5'
+    - cron: '17 0,1 * * 1-5'
   workflow_dispatch:
     inputs:
       force:

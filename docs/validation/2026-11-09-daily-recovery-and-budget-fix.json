@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "completed_at_beijing": "2026-11-09 10:42",
+  "scope": "User-authorized phased production release: pinned-rule data first, generic fix second; post-push acceptance stored in release-summary.json.",
+  "workspace": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent",
+  "task_dir": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix",
+  "node_version": "v25.8.0",
+  "status": {
+    "T1_local": "passed_legacy_contract_with_two_preserved_raw_quote_differences",
+    "T2": "passed",
+    "T3_review": "approve_after_F1_fix; blocking_findings=0",
+    "committed": false,
+    "pushed": false,
+    "deployed": false,
+    "data_committed": true,
+    "data_pushed": true,
+    "data_deployed": true,
+    "generic_release": "ready_to_commit; post-push checks pending"
+  },
+  "worktree_protection": {
+    "head_unchanged": "863d05d16b310fec0d08d1ee8b926e172f474710",
+    "origin_main_ref_unchanged": "fb7f130982aa87beff34d40d2f4b98e25641d770",
+    "start_manifest": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/baseline.json",
+    "start_manifest_sha256": "9e20807a5bbbabc11dd0fd8c020787b9e46849eec5b02840fcf18114ce27bc29",
+    "baseline_files": 250,
+    "non_target_files_checked": 243,
+    "non_target_files_unchanged": true,
+    "business_files_checked": 62,
+    "business_files_unchanged": true,
+    "business_baseline_note": "Supplementary data/state hashes collected after read-only artifact recovery and isolated tests; main data/state have not been written by this task.",
+    "initial_target_files_changed": [
+      ".github/workflows/daily.yml",
+      "README.md",
+      "ROADMAP.md",
+      "docs/plans/2026-11-09-daily-recovery-and-budget-fix.md",
+      "scripts/lib/editorial.mjs",
+      "scripts/lib/pipeline.mjs",
+      "scripts/test/hardening.test.mjs"
+    ],
+    "new_target_files": [
+      "scripts/test/daily-recovery-fix.test.mjs",
+      "scripts/test/fixtures/2026-11-09-writer-card18.json",
+      "docs/validation/2026-11-09-daily-recovery-and-budget-fix.md",
+      "docs/validation/2026-11-09-daily-recovery-and-budget-fix.json"
+    ]
+  },
+  "recovery": {
+    "restored": {
+      "restored": true,
+      "revision": 1,
+      "phases": [
+        "prepared",
+        "editor",
+        "cards",
+        "metadata"
+      ],
+      "budget_unknown": []
+    },
+    "pinned_commit": "20a99547d8feb4f0dfc3be80b7089326eaa2b131",
+    "original_rules": "3019051b3f4978d18bf9be1a052140f1b2f24608dc64a343d035157e8347b8a2",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-09",
+      "cutoff_upper": 1794171600000,
+      "revision": 1
+    },
+    "original_phases": {
+      "prepared": {
+        "sha256": "62996b916dd907e637495dc6768a5a1ac4761433577dbef00a7d763a803c4191",
+        "saved_at": 1794173857755
+      },
+      "editor": {
+        "sha256": "6e98f3077bc33c650ae654bb89bd1c4531724d47b20c4a11a3bddcdbad62c676",
+        "saved_at": 1794185958393
+      },
+      "cards": {
+        "sha256": "815bfd8309f00df48ec45a879b63cb36b2e26c7cf0ba073f095b33720dc8fe6f",
+        "saved_at": 1794185958429
+      },
+      "metadata": {
+        "sha256": "66451a8528da2ffa6fdde870bc0549ab6b50e0e2590e485a8ca3fe9823f2ea20",
+        "saved_at": 1794174127518
+      }
+    },
+    "final_phases": {
+      "prepared": {
+        "sha256": "62996b916dd907e637495dc6768a5a1ac4761433577dbef00a7d763a803c4191",
+        "saved_at": 1794173857755
+      },
+      "editor": {
+        "sha256": "6e98f3077bc33c650ae654bb89bd1c4531724d47b20c4a11a3bddcdbad62c676",
+        "saved_at": 1794189553656
+      },
+      "cards": {
+        "sha256": "39e7f2f04d747a3fdaf7685dc33a73eab40408ace72641a5be460509b36ccb48",
+        "saved_at": 1794189553705
+      },
+      "metadata": {
+        "sha256": "66451a8528da2ffa6fdde870bc0549ab6b50e0e2590e485a8ca3fe9823f2ea20",
+        "saved_at": 1794189553710
+      },
+      "ready": {
+        "sha256": "e7948d7805d1fd561ec73b985e8703ee26a064c24c66bfa43c6f82bbfa6e1315",
+        "saved_at": 1794189553743
+      }
+    },
+    "payload_sha256": "626dbb0a17a9b38841e867a0950057f3dfe4f76c6396f83d2cd91b299c9e70e0",
+    "ready_file_sha256": "508ee41b0e26b6aaca0b4ad1779832abeda0cd1286906506117672e051482a2a",
+    "requests": {
+      "model": 0,
+      "source": 0,
+      "cold_reentry": "passed"
+    },
+    "request_hash_reconstructed": "6ba21c165de45aa938d2a8ef5a8aef6dc5b06d7ab252ffc380f5e653efd0046e",
+    "model_ms": 237026,
+    "spentMs": 267026,
+    "editor_calls": 2,
+    "writer_calls": 2,
+    "preserved_cards": 19,
+    "final_cards": 20,
+    "source_counts": {
+      "housingwire": 3,
+      "zillow-research": 1,
+      "realpage-research": 1,
+      "bisnow": 3,
+      "connect-cre": 2,
+      "nahb-eyeonhousing": 1,
+      "rebusiness-online": 2,
+      "multifamily-dive": 1,
+      "atlanta-agent": 1,
+      "houston-agent": 2,
+      "attom": 1,
+      "cushman-research": 1,
+      "national-mortgage-news": 1
+    },
+    "source_exceptions": [],
+    "section_counts": {
+      "btr": 1,
+      "national": 5,
+      "cre": 6,
+      "institutional": 4,
+      "sunbelt": 4
+    },
+    "summary_characters": 181,
+    "summary_english_words": 69,
+    "raw_exact_quote_count": 18,
+    "legacy_valid_quote_count": 20,
+    "raw_quote_differences": [
+      {
+        "id": "8304d88890577563",
+        "quote": "The analysis found that outside Opportunity Zones, typical home prices increased year over year in 51.6 percent (28,212) of the 54,704 census tracts with sufficient data.",
+        "note": "Existing saved card passes unchanged legacy normalization, but is not a byte-exact source substring; preserved as required."
+      },
+      {
+        "id": "b6dc848a8b6abf78",
+        "quote": "The plan calls for reserving just over half of the site from development, including wetlands, conservation areas and shared green space.",
+        "note": "Existing saved card passes unchanged legacy normalization, but is not a byte-exact source substring; preserved as required."
+      }
+    ],
+    "checks": [
+      "old validateWritingCard",
+      "old validateWriting",
+      "corrected Dallas quote is exact raw substring",
+      "all quotes pass unchanged legacy contract",
+      "bilingual metadata unchanged",
+      "19 saved cards unchanged",
+      "ledger unchanged",
+      "r1 identity unchanged",
+      "routing",
+      "publisher cap",
+      "5 phase checksums",
+      "cold offline reentry"
+    ],
+    "ready_path": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/recovery/state/issues/daily/2026-11-09/r1/ready.json",
+    "cold_process": {
+      "pid": 40052,
+      "new_node_process": true,
+      "result": {
+        "checkpointed": true,
+        "stage": "ready",
+        "identity": {
+          "kind": "daily",
+          "period_key": "2026-11-09",
+          "cutoff_upper": 1794171600000,
+          "revision": 1
+        },
+        "issue_dir": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/cold-recovery/state/issues/daily/2026-11-09/r1"
+      },
+      "modelRequests": 0,
+      "sourceRequests": 0,
+      "manifest_unchanged": true,
+      "ready_sha256": "e7948d7805d1fd561ec73b985e8703ee26a064c24c66bfa43c6f82bbfa6e1315",
+      "payload_sha256": "626dbb0a17a9b38841e867a0950057f3dfe4f76c6396f83d2cd91b299c9e70e0"
+    },
+    "frozen_checkout_clean": true,
+    "trusted_writer_artifact": {
+      "id": 13641957373,
+      "name": "news-issue-daily-2026-11-09-r1-42543059356-1-writer"
+    },
+    "downloaded_artifact_files": 30,
+    "artifact_inventory": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/artifact-file-hashes.json",
+    "restore_api_evidence": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/restore-api/index.json",
+    "quote_correction": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/quote-correction.json",
+    "preservation": "Only the second writer answer card 9 quote prefix was changed. All other answer fields, saved 19 cards, bilingual metadata, r1, cutoff and 4 attempts remain unchanged."
+  },
+  "fixes": {
+    "pipeline": "Shrink budget only if deadline - now - 180000 > 0; otherwise use the existing 660000 ms shared cap. spentMs >= cap still fails.",
+    "months": "Date prepositions plus constrained month possessives; excludes personal names, housing-policy contexts and parenthesized proper names; month evidence never licenses percentages.",
+    "repair": "Quote mismatch adds the exact requested verbatim-copy and no-expansion instruction.",
+    "daily_cron": "17 0,1 * * 1-5",
+    "new_regressions": 26,
+    "budget_matrix": {
+      "deadline_offsets_ms": [
+        180001,
+        180000,
+        120000,
+        1,
+        0,
+        -60000,
+        null
+      ],
+      "spentMs": [
+        267026,
+        660000,
+        660001
+      ]
+    },
+    "new_rules_digest": "e6c82f4bba5e4b6b397fbf8d3e16d1c8340b0e8ff1d16572a40770c0975a83e2"
+  },
+  "tests": {
+    "before": {
+      "tests": 298,
+      "pass": 298,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "log": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/test-before.log",
+      "sha256": "b68ab8d59b825272e560e7168f216b94feaf8e0213564ded6f909eb8fd6134f1"
+    },
+    "main": {
+      "tests": 324,
+      "pass": 324,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "log": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/test-release-main.log",
+      "sha256": "df52a75cb85cd538eb201022263841f68c5735fe6d17d32144ec6254982f80b8"
+    },
+    "clean": {
+      "tests": 324,
+      "pass": 324,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "log": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/test-release-clean-f1.log",
+      "sha256": "7728f7475931ee52734265ee6acf7a5007c018000f51718e254fe29e9e927a36"
+    },
+    "old_code_regressions": {
+      "tests": 43,
+      "pass": 35,
+      "fail": 8,
+      "cancelled": 0,
+      "skipped": 0,
+      "log": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/test-old-code-regression.log",
+      "sha256": "02b90cf0f94306f7cbf4cd696abe9d66f40447d141382009b67b356826af449b"
+    },
+    "clean_on_data_commit": {
+      "tests": 324,
+      "pass": 324,
+      "fail": 0,
+      "base_commit": "eac3fe873ed9da3798899a51efd64f8fd0e94e3c",
+      "log": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/test-release-clean-final.log",
+      "sha256": "00eb2640bd4a466862201d253d2c8e9609b91431d8ee8beaaad240eb0aa81798"
+    }
+  },
+  "modified_files": [
+    "scripts/lib/pipeline.mjs",
+    "scripts/lib/editorial.mjs",
+    ".github/workflows/daily.yml",
+    "scripts/test/hardening.test.mjs",
+    "scripts/test/daily-recovery-fix.test.mjs",
+    "scripts/test/fixtures/2026-11-09-writer-card18.json",
+    "README.md",
+    "ROADMAP.md",
+    "docs/plans/2026-11-09-daily-recovery-and-budget-fix.md",
+    "docs/validation/2026-11-09-daily-recovery-and-budget-fix.md",
+    "docs/validation/2026-11-09-daily-recovery-and-budget-fix.json"
+  ],
+  "file_sha256": {
+    "scripts/lib/pipeline.mjs": "dba396a5b552d5d1a7b3dc725dcbe6bef2610436120e390fe527bf702bade1a2",
+    "scripts/lib/editorial.mjs": "303d4a1b8b65702e449170fe8da0823d5af995da63b9ba5cffa891b2f10b340a",
+    ".github/workflows/daily.yml": "8998c2d488687fd3a008c42fd8b07f394614193ad09cb1b31284fc0927c66689",
+    "scripts/test/hardening.test.mjs": "02ef2790ec168d607ede768c087b17c6ec461c5a8de1491fbd798572b787a575",
+    "scripts/test/daily-recovery-fix.test.mjs": "4fed0ef7c7e109675404916eb231d951631f24f0a32aafc2cbdc75fa82ce2c48",
+    "scripts/test/fixtures/2026-11-09-writer-card18.json": "fe475e13b505a9e28df21e227f7ea4424ec9fcea0a224cc57747d8eabe4d927a",
+    "README.md": "ddbfd86406df3afa44962e8787f326d810dc40a0ca00592d79eab67bd5be6ce3",
+    "ROADMAP.md": "11175df8974b034f3887458b8a189a382a713c6ae6d8fea4a1e93ee72e9a33c9",
+    "docs/plans/2026-11-09-daily-recovery-and-budget-fix.md": "58b3445c3438f26ca513f77da7f3cff8543fc9ac6fe32af0621440953b58b426",
+    "docs/validation/2026-11-09-daily-recovery-and-budget-fix.md": "a48a98759255e81c179cde8c0757923f3c9586d20c58f7c0ff33a818d5884b38"
+  },
+  "limitations": [
+    "O1：预留窗前仍按既定方案保留 3 分钟发布窗口，不另设最小窗口阈值；距截止 180001 ms 时可能仅余 1 ms，真实时钟推进后仍可能耗尽，不能声称所有时间点均可完成请求。O2：20／20 卡通过 validateWritingCard，其中 18／20 引文为逐字连续子串，2 张首轮保留卡通过既有规范化引文匹配，未改写或放宽门禁。",
+    "Generic code CI, Vercel and independent production/browser verification pending code push; final results in release-summary.json.",
+    "Manual late recovery is not evidence of on-time automatic delivery or sustained SLA."
+  ],
+  "evidence_links": {
+    "validation": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/docs/validation/2026-11-09-daily-recovery-and-budget-fix.md",
+    "plan": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/docs/plans/2026-11-09-daily-recovery-and-budget-fix.md"
+  },
+  "release": {
+    "data_commit": "eac3fe873ed9da3798899a51efd64f8fd0e94e3c",
+    "data_receipt_path": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/frozen-checkout/state/delivery-receipts/daily-2026-11-09-r1.json",
+    "data_online_receipt": {
+      "schema_version": 1,
+      "ok": true,
+      "host": "https://news-agent-mu.vercel.app",
+      "identity": {
+        "kind": "daily",
+        "period_key": "2026-11-09",
+        "cutoff_upper": 1794171600000,
+        "revision": 1
+      },
+      "payload_sha256": "626dbb0a17a9b38841e867a0950057f3dfe4f76c6396f83d2cd91b299c9e70e0",
+      "commit": "eac3fe873ed9da3798899a51efd64f8fd0e94e3c",
+      "checked_at": 1794192013703,
+      "files": [
+        {
+          "route": "/data/latest.json",
+          "ok": true
+        },
+        {
+          "route": "/data/2026-11-09.json",
+          "ok": true
+        },
+        {
+          "route": "/data/dates.json",
+          "ok": true
+        },
+        {
+          "route": "/",
+          "ok": true
+        }
+      ],
+      "pushed": {
+        "commit": "eac3fe873ed9da3798899a51efd64f8fd0e94e3c",
+        "already_pushed": false
+      }
+    },
+    "data_deployment_statuses": [
+      {
+        "url": "https://api.github.com/repos/Freza00/us-housing-daily/deployments/7645688237/statuses/21732702409",
+        "id": 21732702409,
+        "node_id": "DES_kwDOSWc8g88AAAAFD164yQ",
+        "state": "success",
+        "creator": {
+          "login": "vercel[bot]",
+          "id": 35613825,
+          "node_id": "MDM6Qm90MzU2MTM4MjU=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/8329?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/vercel%5Bbot%5D",
+          "html_url": "https://github.com/apps/vercel",
+          "followers_url": "https://api.github.com/users/vercel%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/vercel%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/vercel%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/vercel%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/vercel%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/vercel%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/vercel%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/vercel%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/vercel%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "description": "Deployment has completed",
+        "environment": "Production",
+        "target_url": "https://news-agent-6zi3nz6yt-freza00s-projects.vercel.app",
+        "created_at": "2026-11-09T02:40:06Z",
+        "updated_at": "2026-11-09T02:40:06Z",
+        "deployment_url": "https://api.github.com/repos/Freza00/us-housing-daily/deployments/7645688237",
+        "repository_url": "https://api.github.com/repos/Freza00/us-housing-daily",
+        "environment_url": "https://news-agent-6zi3nz6yt-freza00s-projects.vercel.app",
+        "log_url": "https://news-agent-6zi3nz6yt-freza00s-projects.vercel.app",
+        "performed_via_github_app": null
+      }
+    ],
+    "final_evidence": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/release-summary.json",
+    "code_ci_and_browser": "pending after code push"
+  },
+  "review": {
+    "reviewer": "sol6.1-xh",
+    "rounds": 2,
+    "first_round": "F1: personal-name possessive and parenthesized organization false month detection",
+    "second_round": {
+      "overall": "approve",
+      "recovery": "passes_pinned_legacy_contract_with_two_preserved_literal_quote_exceptions",
+      "generic_patch": "approve_after_F1_fix",
+      "blocking_findings": 0,
+      "summary": "F1 已关闭。收紧后的姓名所有格、句首 May's housing policy 及带括号机构名均拒绝无依据月份；三类要求的 October 所有格正例（含句首 With）继续通过，月份证据仍不能放行 10%。定向测试 5／5，独立矩阵 129 组、258 次卡片／metadata 校验全部通过；基线 243 个非目标文件与补充业务基线 62 个文件散列均一致。上一轮非阻塞观察保留。"
+    },
+    "probe_groups": 129,
+    "validations": 258,
+    "review_path": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261109-fix/xh-review.json",
+    "observations": [
+      {
+        "id": "O1",
+        "severity": "P2",
+        "blocking": false,
+        "type": "explicit_plan_policy_limitation",
+        "title": "预留窗之前仍存在极小预算，不能承诺所有时间点都不会秒退",
+        "location": {
+          "file": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/scripts/lib/pipeline.mjs",
+          "line": 163,
+          "end_line": 165
+        },
+        "evidence": {
+          "deadline_minus_now_ms": 180001,
+          "spentMs": 267026,
+          "total_cap_ms": 660000,
+          "calculated_budgetMs": 267027,
+          "calculated_remaining_ms": 1,
+          "elapsed_after_client_creation_ms": 2,
+          "actual_writer_requests": 0,
+          "error": "LLM run time budget exhausted",
+          "contrast": {
+            "deadline_minus_now_ms": 180000,
+            "requests": 1,
+            "reserved_ms": 240000
+          }
+        },
+        "explanation": "已彻底消除 0 < deadline - now <= 180000 区间因 Math.max(spentMs, ...) 把预算压成 spentMs 的原死区。更早时 remaining = min(660000 - spentMs, deadline - now - 180000)，可以任意接近 0；例如 08:56:59.999 只余 1 ms，读取／验证／保存 editor 后即耗尽。08:56:59.000 的请求预算也只有约 1 秒。",
+        "plan_consistency": "施工清单明确规定 remainingBeforeReserve > 0 时按原公式收缩，且不另设最小请求窗口阈值。因此这是遵循既定决策后保留的边界，不能单方面视为实施偏离并要求加阈值。",
+        "test_gap": {
+          "file": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/scripts/test/hardening.test.mjs",
+          "line": 51,
+          "description": "Date.now 恒定、模型立即返回，offset=180001 的测试虽通过，却不能证明实际时钟下可请求或可完成。"
+        },
+        "recommendation": "保留此限制的准确说明，并增加推进时钟的回归以防误称边界已消失。如后续要求合理预算下限，须先变更当前不设最小窗口阈值的明确方案。",
+        "evidence_round": "previous_review",
+        "follow_up_disposition": "保留上一轮非阻塞观察，本轮未重跑该项。"
+      },
+      {
+        "id": "O2",
+        "severity": "P3",
+        "blocking": false,
+        "type": "preserved_preexisting_contract_limit",
+        "title": "两张旧卡通过规范化引文门禁，但不是逐字原文连续子串",
+        "location": {
+          "file": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/scripts/lib/editorial.mjs",
+          "line": 253,
+          "end_line": 255
+        },
+        "raw_exact_quotes": 18,
+        "total_quotes": 20,
+        "examples": [
+          {
+            "id": "8304d88890577563",
+            "quote": "The analysis found that outside Opportunity Zones, typical home prices increased year over year in 51.6 percent (28,212) of the 54,704 census tracts with sufficient data.",
+            "source_excerpt": "The analysis found that outside Opportunity Zones, typical home prices increased year over year in 51.6 percent (28,212) of the 54,704 census tracts with sufficient data for both third quarters. That made annual price growth sligh"
+          },
+          {
+            "id": "b6dc848a8b6abf78",
+            "quote": "The plan calls for reserving just over half of the site from development, including wetlands, conservation areas and shared green space.",
+            "source_excerpt": " its conservation focus, the plan calls for reserving just over half of the site from development, including wetlands, conservation areas and shared green space. The Grow offers a potential case study in balancing growth and conservati"
+          }
+        ],
+        "explanation": "validateWritingCard 的函数内容与固定旧版逐字一致，先转小写并去掉大部分标点后做 includes。ATTOM 引文在 data 后新增句号并省略后续限定词；Pulte 引文将原文 the plan 首字母改为大写。两者在本轮前已经冻结，原样保留，未发生新篡改或放宽。",
+        "disposition": "按本轮保持原 19 卡和旧规则的约束，不把它们算作恢复篡改；T1 只能记为旧契约通过。若验收口径要求所有引文逐字一致，则本候选不能宣称满足 20／20，需要另行决定兼容恢复与字面引文要求的优先级。",
+        "evidence_round": "previous_review",
+        "follow_up_disposition": "保留上一轮非阻塞观察，本轮未重跑该项。"
+      }
+    ]
+  }
+}

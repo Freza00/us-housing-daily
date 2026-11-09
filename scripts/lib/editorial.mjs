@@ -217,16 +217,24 @@ function groundedNumbers(text, evidence) {
   const available = numericValues(evidence);
   const months = ['Jan(?:uary)?','Feb(?:ruary)?','Mar(?:ch)?','Apr(?:il)?','May','Jun(?:e)?','Jul(?:y)?','Aug(?:ust)?','Sep(?:t(?:ember)?)?','Oct(?:ober)?','Nov(?:ember)?','Dec(?:ember)?'];
   const fullMonths = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const possessivePrepositions = new Set(['in','since','during','for','of','until','through','from','last','this','next','with','by','before','after','while','although','though','despite','because','when','as','and','but','yet','if','whether']);
+  const possessiveMetricNoun = /^\s+(?:[a-z]+(?:-[a-z]+)*\s+){0,3}(?:jobs|employment|payrolls?|unemployment|labor|report|data|figures|numbers|statistics|reading|print|release|index|survey|gain|gains|growth|increase|rise|surge|jump|rebound|uptick|decline|drop|fall|dip|slide|slump|slowdown|pullback|decrease|sales|starts|permits|completions|construction|inventory|supply|listings|prices|pricing|values|rent|rents|rates?|yields?|spreads?|inflation|cpi|ppi|pce|gdp|originations|applications|refinanc(?:ing|es)|delinquenc(?:y|ies)|foreclosures?|issuance|volume|activity|transactions|deals|leasing|absorption|occupancy|vacancy|deliveries|pipeline|sentiment|confidence|optimism|outlook|forecast|estimate|revision|benchmark|average|median|total|level|pace|low|high|peak|trough|meeting|cut|hike|pause|decision|results|performance)\b/;
   const datedMonths = new Set(months.flatMap((month, i) => {
     const name = '\\b' + month + '\\.?';
     const date = new RegExp(name + '\\s+(?:\\d{4}\\b|(?:0?[1-9]|[12]\\d|3[01])(?:st|nd|rd|th)?\\b)|\\b(?:0?[1-9]|[12]\\d|3[01])(?:st|nd|rd|th)?\\s+' + name + '(?![A-Za-z])', 'i');
-    const context = new RegExp('\\b(?:in|since|during|for|of|until|through|from|last|this|next)\\s+' + fullMonths[i] + '\\b', 'gi');
-    // A capitalized following word may be part of a company name, e.g. May Capital.
-    const fullMonth = [...String(evidence).matchAll(context)].some(match => !/^[A-Z]/.test(evidence.slice(match.index + match[0].length).trimStart()));
+    const context = new RegExp('\\b(?:in|since|during|for|of|until|through|from|last|this|next|with|by|before|after|ahead of)\\s+' + fullMonths[i] + '\\b(?![’\']s\\b)', 'gi');
+    // A capitalized or parenthesized following token may be part of a company name, e.g. May Capital or May (Capital Partners).
+    const fullMonth = [...String(evidence).matchAll(context)].some(match => /^(?:$|[,.;:!?)\]]|\s+[a-z\d])/.test(evidence.slice(match.index + match[0].length)));
+    const possessive = new RegExp('\\b' + fullMonths[i] + '[’\']s\\b', 'gi');
+    const possessiveMonth = [...String(evidence).matchAll(possessive)].some(match => {
+      const prevCap = evidence.slice(0, match.index).match(/([A-Z][A-Za-z.'’-]*)\s+$/);
+      if (prevCap && !possessivePrepositions.has(prevCap[1].toLowerCase())) return false;
+      return possessiveMetricNoun.test(evidence.slice(match.index + match[0].length));
+    });
     const scheduledEvent = new RegExp('\\b(?:[Aa]n?|[Tt]he)\\s+' + fullMonths[i] + '\\s+(?:increase|hike|cut|meeting)\\b');
     const commitment = new RegExp('\\bcommit(?:s|ted|ting)?\\s+on\\s+' + fullMonths[i] + '\\b', 'g');
-    const commitMonth = [...String(evidence).matchAll(commitment)].some(match => !/^[A-Z]/.test(evidence.slice(match.index + match[0].length).trimStart()));
-    return date.test(evidence) || fullMonth || scheduledEvent.test(evidence) || commitMonth ? [i + 1] : [];
+    const commitMonth = [...String(evidence).matchAll(commitment)].some(match => /^(?:$|[,.;:!?)\]]|\s+[a-z\d])/.test(evidence.slice(match.index + match[0].length)));
+    return date.test(evidence) || fullMonth || possessiveMonth || scheduledEvent.test(evidence) || commitMonth ? [i + 1] : [];
   }));
   // Translate calendar months only in month positions; October cannot license a 10% claim.
   const claims = String(text).replace(/(?<![\d.])(1[0-2]|0?[1-9])\s*月/g, (match, month) => datedMonths.has(Number(month)) ? '月' : match);
@@ -355,7 +363,12 @@ export function createWritingRepair(data, selected, kind, validate, validationCo
   const errors = new Map();
   const invalid = selected.filter(it => {
     if (!cards.has(it.id)) { errors.set(it.id, 'Missing writing card'); return true; }
-    try { validateWritingCard(cards.get(it.id), it); return false; } catch (error) { if (error instanceof LlmError) { errors.set(it.id, error.message); return true; } throw error; }
+    try { validateWritingCard(cards.get(it.id), it); return false; } catch (error) {
+      if (!(error instanceof LlmError)) throw error;
+      const hint = /Evidence quote is not present in source/.test(error.message)
+        ? '（请逐字复制 title 或 evidence 中的连续原文，不得将简称或代词改写为全称，例如原文为 Dallas’ 时不得写为 Dallas-Fort Worth’s）' : '';
+      errors.set(it.id, error.message + hint); return true;
+    }
   });
   let metadataError, metadata, summaryShortening;
   try {

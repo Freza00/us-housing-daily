@@ -160,7 +160,8 @@ export async function runPipeline(kind = 'daily', options = {}) {
   await options.onCheckpoint?.('prepared', store);
   const targetDeadline = Number(env.PUBLICATION_DEADLINE_MS);
   const spentMs = store ? Object.values(store.manifest.attempts).flat().reduce((sum, event) => sum + (event.ms ?? event.reserved_ms ?? 240000) + (event.retry_delay_ms || 0), 0) : 0;
-  const budgetMs = targetDeadline > Date.now() ? Math.max(spentMs, Math.min(660000, targetDeadline - Date.now() - 180000 + spentMs)) : 660000;
+  const remainingBeforeReserve = targetDeadline - Date.now() - 180000;
+  const budgetMs = remainingBeforeReserve > 0 ? Math.min(660000, remainingBeforeReserve + spentMs) : 660000;
   const client = options.client || createLlmClient({ ...options.llmOptions, endpoint: env.LLM_ENDPOINT, apiKey: env.LLM_API_KEY, model: env.LLM_MODEL || 'gpt-6.1-sol', budgetMs, cacheDir: path.join(stateDir, 'llm-cache'),
     diagnosticsDir: path.join(stateDir, 'llm-diagnostics'), onEvent: event => console.log('LLM ' + JSON.stringify(event)), ledger: store && { attempts: store.manifest.attempts, spentMs, blockedStages: store.manifest.budget_unknown || [], recordAttempt: store.recordAttempt, recordOutcome: store.recordOutcome, recordDelay: store.recordDelay } });
   const editorBatch = createModelBatch(candidates);
