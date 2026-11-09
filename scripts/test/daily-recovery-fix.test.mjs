@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import { createWritingRepair, validateWritingCard, validateWriting } from '../lib/editorial.mjs';
+import { createWritingRepair, validateWritingCard, validateWriting, writingSystem } from '../lib/editorial.mjs';
+import { validateIssue } from '../lib/issue-contract.mjs';
 
 const card = (id, quote, summary = '研究指出市场仍受约束。') => ({ id, title_zh: '市场研究', summary_zh: summary, impact: 'neutral', evidence_quote: quote });
 
@@ -74,4 +75,24 @@ test('daily fallback schedule includes Beijing 09:17 and keeps the earlier slots
   const workflow = await fs.readFile(new URL('../../.github/workflows/daily.yml', import.meta.url), 'utf8');
   assert.match(workflow, /cron: '17 21,22,23 \* \* 0-4'/);
   assert.match(workflow, /cron: '17 0,1 \* \* 1-5'/);
+});
+
+test('writingSystem anchors impact to institutional real estate owners and 2026-11-09 card #6 is neutral', async () => {
+  assert.match(writingSystem, /impact 判断框架：锚定美国住宅／BTR-SFR／多户及 CRE 机构资产持有者与投资人/);
+  assert.match(writingSystem, /不能机械判负，更不能直接推定租金或资产价值上涨/);
+  assert.match(writingSystem, /①供给：.*②成本：.*③融资与资本：.*④需求与运营：.*⑤宏观：/);
+  const selected = [{ id: 'bad', title: 'Housing', description: 'Housing demand remains constrained.' }, { id: 'good', title: 'Housing', description: 'Housing supply remains stable.' }];
+  const data = { items: [card('bad', 'Quote absent from source.'), card('good', selected[1].description)], executive_summary: { sentences: [{ text: '住房需求仍受约束。', item_ids: ['bad'] }] }, themes: [] };
+  for (const kind of ['daily', 'weekly', 'monthly']) {
+    const repair = createWritingRepair(data, selected, kind, answer => validateWriting(answer, selected, kind));
+    assert(repair.system.startsWith(writingSystem));
+    assert.equal(JSON.parse(repair.user).kind, kind);
+    const result = repair.validate({ items: [card('bad', selected[0].description)] });
+    assert.equal(result.items[0].impact, 'neutral');
+  }
+  // Only the fixed archive is permanent; latest and initial-data advance each issue.
+  const archive = JSON.parse(await fs.readFile(new URL('../../data/2026-11-09.json', import.meta.url), 'utf8'));
+  validateIssue(archive, { kind: 'daily', period: '2026-11-09', upper: archive.window.upper });
+  const card6 = archive.items.find(it => it.id === '5256d67a543953a1');
+  assert.equal(card6?.impact, 'neutral');
 });
