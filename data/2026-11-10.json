@@ -1,0 +1,4084 @@
+{
+  "schema_version": 2,
+  "editorial_schema": 2,
+  "kind": "daily",
+  "date": "2026-11-10",
+  "publish_date": "2026-11-10",
+  "generated_at": 1794285858049,
+  "window": {
+    "lower": 1794171600000,
+    "upper": 1794258000000,
+    "hours": 24,
+    "date": "2026-11-10",
+    "timezone": "Asia/Shanghai",
+    "lower_basis": "collection_checkpoint"
+  },
+  "publication_status": "complete",
+  "coverage_status": "complete",
+  "content_status": "passed",
+  "delivery_state": "ready",
+  "edition": {
+    "kind": "daily",
+    "period_key": "2026-11-10",
+    "cutoff_upper": 1794258000000,
+    "revision": 1
+  },
+  "sections": [
+    {
+      "id": "national",
+      "label": "全国住宅市场",
+      "emoji": "🏠",
+      "desc": "全国住宅市场、宏观利率、政策、NAR / Realtor / Zillow / Calculated Risk",
+      "quota": 5,
+      "maxPerSource": 2,
+      "extendedWindow": false
+    },
+    {
+      "id": "sunbelt",
+      "label": "Sunbelt 住宅",
+      "emoji": "🌵",
+      "desc": "Sun Belt 各州住宅与租赁市场",
+      "quota": 4,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "btr",
+      "label": "全国 BTR / SFR",
+      "emoji": "🏘",
+      "desc": "Build-to-Rent / Single-Family Rental",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    },
+    {
+      "id": "cre",
+      "label": "全国 CRE",
+      "emoji": "🏢",
+      "desc": "办公 / 工业 / 数据中心 / 仓储 / 多户 / 酒店等 CRE",
+      "quota": 5,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": false
+    },
+    {
+      "id": "institutional",
+      "label": "全国机构资本",
+      "emoji": "💰",
+      "desc": "PE / REIT 募资、并购、IPO、机构持仓",
+      "quota": 3,
+      "maxPerSource": 2,
+      "texasCityRequired": true,
+      "extendedWindow": true
+    }
+  ],
+  "items": [
+    {
+      "source_id": "cbre-research",
+      "source_name": "CBRE Research",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Puget Sound Multifamily Figures Report Q3 2026",
+      "link": "https://cbre.com/insights/figures/puget-sound-multifamily-figures-report-q3-2026",
+      "description": "Puget Sound Multifamily Figures Report Q3 2026 November 6, 2026 7 Minute Read Looking for a PDF of this content? Download The Seattle multifamily market closed Q3 2026 with an occupancy rate of 95.1%, a marginal 10 basis-point (bps) decline from 95.2% in Q2 2026. Deliveries reached 2,578 units, up from 2,189 units in Q2 2026, and continued a steady trend of new construction supply. Net absorption reached 1,945 units in Q3 2026, up 139% year-over-year (YoY) despite a quarter-over-quarter (QoQ) decline from a recent high in Q2 2026. The average monthly rent per unit in Seattle ended Q3 2026 at $2,265, up 0.5% from Q2 2026, a difference of roughly $10 per unit per month. Investment sales rose to $1.5 billion in Q3 2026, up from $570.4 million in Q2 2026, marking the strongest quarter for transaction volume since Q4 2025.",
+      "published_at": 1793984400000,
+      "date_precision": "day",
+      "published_date": "2026-11-06",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://cbre.com/insights/figures/puget-sound-multifamily-figures-report-q3-2026",
+      "content_hash": "e6cf877add99a2d35a4f210aecdde6915fb8bf41e74ce8af177bde78f91d4e04",
+      "access": "public",
+      "source_family": "cbre-research",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794205331178,
+      "id": "29d442e4ca5933be",
+      "acquisition_window": {
+        "lower": 1793180442798,
+        "upper": 1794200400000
+      },
+      "late_discovery": true,
+      "score": 18,
+      "tags": [
+        "multifamily",
+        "national",
+        "data",
+        "trend"
+      ],
+      "heat_signals": [
+        "trend",
+        "year-over-year",
+        "occupancy"
+      ],
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "cre",
+      "capital_focus": false,
+      "geo_evidence": "Seattle multifamily market",
+      "duplicate_of": null,
+      "selector_reason": "Q3报告提供西雅图都会区出租公寓入住率、交付、吸纳、租金及投资销售数据；地域证据明确，但标签表未设西雅图专属geo，故用national。",
+      "title_zh": "西雅图多户住宅 Q3 交易额升至 15 亿美元",
+      "summary_zh": "CBRE Research 称，西雅图多户住宅 Q3 2026 入住率为 95.1%，交付 2,578 套，净吸收 1,945 套，平均月租为 2,265 美元，投资销售额升至 15 亿美元。",
+      "impact": "short-pos",
+      "evidence_quote": "Investment sales rose to $1.5 billion in Q3 2026, up from $570.4 million in Q2 2026, marking the strongest quarter for transaction volume since Q4 2025.",
+      "evidence_basis": "body",
+      "cre_subcategory": "多户"
+    },
+    {
+      "source_id": "nahb-eyeonhousing",
+      "source_name": "NAHB Eye on Housing",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "data",
+        "trend",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Remodeling Activity Holds Flat in Second Quarter Amid Housing Slowdown",
+      "link": "https://eyeonhousing.org/2026/11/remodeling-activity-holds-flat-in-second-quarter-amid-housing-slowdown/",
+      "description": "Remodeling Activity Holds Flat in Second Quarter Amid Housing Slowdown November 9, 2026 Eric Lynch No Comments The National Association of Home Builders (NAHB) has released its State Projections of Remodeling (SPR) for the second quarter of 2026. As a reminder, the SPR provides on a quarterly basis a state-level estimation of the market share and total dollar value of remodeling spending. The SPR is a statistical model designed to use national quarterly improvement spending data and estimate remodeling market share by state using multiple indicators and NAHB’s annual state remodeling forecast. Q2 2026 Results During the second quarter of 2026, remodeling spending at the national level came in at $271.2 billion on a seasonally adjusted annualized rate (SAAR), falling 2.3% from the previous quarter. Remodeling spending has decreased in five out of the past six quarters and is at its lowest level in two years. Nevertheless, remodeling spending has been larger than single-family construction spending for five straight quarters and accounts for 45.0% of residential construction spending. California had the largest market share of remodeling spending at 7.9%, or $21.4 billion, followed closely by Texas (7.3%, or $19.7 billion). Florida is third at 5.5%, or $14.8 billion, with New York (4.0%, or $10.8 billion) and North Carolina (3.0%, or $8.2 billion) rounding out the top five. When looking at the top ten states by the change in remodeling spending in the second quarter of 2026 (on a four-quarter moving average basis or 4QMA), Michigan saw its volume increase by $217.1 million, followed by Alabama (up $158.3 million), West Viriginia (up $140.6 million), Virginia (up $115.0 million), and Alaska (up $113.0 million). Except for the Northeast, all regions were represented within the top ten by change in spending. All ten experienced a growth rate of at least 1.7% year-over-year with a large concentration in smaller states. Only two of the top ten states by market share had a positive growth rate for the quarter (North Carolina and Illinois). Additionally, there was a fairly even split between states that had a negative growth rate (26) and those that had a positive growth rate (24) for the quarter, resulting in 0.0% average across all states. This corroborates NAHB’s forecast for the industry which expects inflation-adjusted spending to be flat-to-down for 2026. To learn more about this resource and its methodology, please visit NAHB’s SPR web page . state data , State Projections of Remodeling (SPR) Prev Previous Hiring Rebounds in October, but Residential Construction Employment Declines Next Residential Building Worker Wage Growth Rebounds, but Real Wages Continue to Decline Next Leave a Reply Cancel reply Your email address will not be published. Required fields are marked * Comment * Name * Email * Website Yes, add me to your mailing list Share this Page Subscribe to Blog Subscribe Search by Category Video Updates View Please leave this field empty Subscribe to Blog via Email Email Frequency * Instant Daily Weekly Check your inbox or spam folder to confirm your subscription. Construction Statistics Single-Family Multifamily Remodeling Labor Force Construction Wages Employment Data Job Openings Finance Builder Loans Consumer Finance Mortgages Home Sales and Prices Housing Affordability Housing Prices Housing Sales Macroeconomics Federal Reserve GDP Inflation Market Trends Housing Characteristics Housing Demand Industry Demographics Policy Research Building Materials Homeownership Tax Policy Local Data NAHB Indices Research Studies",
+      "published_at": 1794236700000,
+      "source_family": "nahb-eyeonhousing",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "015040106deec42d",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 14,
+      "tags": [
+        "housing",
+        "national",
+        "data",
+        "trend"
+      ],
+      "heat_signals": [],
+      "date_precision": "day",
+      "published_date": "2026-11-09",
+      "modified_at": 0,
+      "extraction": "body_fallback",
+      "canonical": "https://eyeonhousing.org/2026/11/remodeling-activity-holds-flat-in-second-quarter-amid-housing-slowdown",
+      "content_hash": "99148ee90ecc60178a3d4be98f07dc47d77eb6207b6841061227bf41b98a3670",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "capital_focus": false,
+      "geo_evidence": "California had the largest market share of remodeling spending",
+      "duplicate_of": null,
+      "selector_reason": "NAHB季度装修支出模型显示全国支出连续多季走弱，并提供州级份额估算；属于有独立统计价值的住宅改善市场数据。",
+      "title_zh": "美国住宅改造支出连续走弱",
+      "summary_zh": "NAHB 的州级改造支出估算显示，Q2 2026 全国住宅改造支出按季节调整年率计为 2,712 亿美元，较前季下降 2.3%，过去六个季度有五季减少。",
+      "impact": "short-neg",
+      "evidence_quote": "During the second quarter of 2026, remodeling spending at the national level came in at $271.2 billion on a seasonally adjusted annualized rate (SAAR), falling 2.3% from the previous quarter.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Macerich In Default On Almost $400M In Mall Debt",
+      "link": "https://www.bisnow.com/news/national/retail/macerich-defaults-on-nearly-400m-in-mall-debt",
+      "description": "Wikimedia Commons/Charlie Brewer Macerich has defaulted on $399M in mall loans across two properties, the company announced in its third-quarter earnings call. On Oct. 6, it defaulted on a $74M loan on the 691K SF Fashion Outlets of Niagara Falls in New York. On Nov. 2, it defaulted on a $325M loan on the 974K SF Fresno Fashion Fair mall in California. Macerich had previously announced a $76M default on Twenty Ninth Street, an open-air lifestyle center in Boulder, Colorado. Macerich executives did not offer additional details on the defaults. “I can't really talk too much about these mortgages that are in default,” Macerich CEO Jackson Hsieh said on the call. “Lenders are listening or whatever, it's not very fair. So let's just say we are in default. We're still having conversations, and we'll let you know when we got more to say, but that's what it is.” Macerich is in the midst of a multiquarter plan to rebalance its portfolio and improve its balance sheet by offloading a number of underperforming properties, with a goal of selling or giving back $300M to $400M in assets and land. The company is on track to achieve that objective this year and has sold about $290M worth of dispositions this year to date, Macerich Chief Financial Officer Daniel Swanstrom said on the call. Macerich reported a $16.7M loss in the quarter, though that was an improvement from the same period last year, when it reported an approximately $90M loss, according to filings with the Securities and Exchange Commission . The Niagara outlet mall is on the disposition list. Its loan has been modified twice already, including a three-year extension when it originally matured in 2020 and another after missing its 2023 maturity date, CoStar News reported. Its occupancy has dropped as low as 60% in recent years. The Fresno mall is not on the list of properties for sale. There, Macerich is in the middle of large-scale renovations to public spaces and is adding new tenants, including a $22M Dick's House of Sport, which is expected to open by mid-2028. The mall's special servicer is negotiating terms that would temporarily hold off enforcement of the loan default. Macerich is also still acquiring properties. On its earnings call, Hsieh teased an off-market mall purchase that is under contract now and should close by the end of the year. Malls broadly have been on a rebound. Values were up 13% over the past year, more than double the increase in all CRE prices, The Wall Street Journal reported in September . Continue reading this story with a free account Log in or register Related Topics: Macerich , Malls",
+      "published_at": 1794254906000,
+      "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1794254913000,
+      "extraction": "semantic",
+      "canonical": "https://bisnow.com/news/national/retail/macerich-defaults-on-nearly-400m-in-mall-debt",
+      "content_hash": "503f64917e9d250b4f96497392fe673517968a4ef41ac7e2a29718dd794c9398",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "e981a73045bfb385",
+      "source_family": "bisnow",
+      "is_research": false,
+      "required_source": false,
+      "first_seen_at": 1794260239293,
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 17,
+      "tags": [
+        "retail",
+        "national",
+        "distress",
+        "institutional"
+      ],
+      "heat_signals": [
+        "occupancy"
+      ],
+      "keep": true,
+      "importance": 4,
+      "section": "cre",
+      "capital_focus": false,
+      "geo_evidence": "Fashion Outlets of Niagara Falls in New York",
+      "duplicate_of": null,
+      "selector_reason": "Macerich披露多笔大型购物中心贷款违约，涉及近4亿美元且处于资产负债表调整背景，属于显著零售CRE压力信号。",
+      "title_zh": "Macerich 两处商场贷款违约近 4 亿美元",
+      "summary_zh": "Macerich 宣布两处商场贷款违约，合计 3.99 亿美元；公司同时推进出售或交还 3 亿至 4 亿美元资产，以调整投资组合和改善资产负债表。",
+      "impact": "long-neg",
+      "evidence_quote": "Macerich has defaulted on $399M in mall loans across two properties, the company announced in its third-quarter earnings call.",
+      "evidence_basis": "body",
+      "cre_subcategory": "零售"
+    },
+    {
+      "source_id": "redfin-news",
+      "source_name": "Redfin News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "For Every Condo Buyer in the U.S., There Are More Than Two Sellers. That Gives Condo Buyers Strong Negotiating Power.",
+      "link": "https://www.redfin.com/news/condo-fall-2026/",
+      "description": "For Every Condo Buyer in the U.S., There Are More Than Two Sellers. That Gives Condo Buyers Strong Negotiating Power. Published on November 9th, 2026 by Dian Zhang and Asad Khan There were 123% more condo sellers than buyers nationwide in September, the widest gap since 2013, giving buyers extraordinary negotiating power. The number of condo buyers fell to its lowest level in 13 years, while the number of sellers ticked up. San Antonio had the country’s widest seller surplus, with more than five times as many condo sellers as buyers. Houston ranked second, followed by Miami at 274%. Only three metros had more condo buyers than sellers, led by Nassau County, NY, Newark, NJ and Milwaukee, WI. Condo buyers today have more negotiating power than they’ve had in at least 13 years. There were an estimated 123% more condo sellers than buyers nationwide in September, the largest gap in records dating back to 2013. The gap widened from 95.5% a year earlier. Redfin estimates the number of buyers using proprietary data on the typical time between a buyer’s first home tour and the closing of a purchase, along with MLS data on active listings and pending sales. The estimated number of sellers is based on active listings in the MLS. The figures in this report are national estimates. See the full methodology and explore the interactive dashboard . Redfin defines a buyer’s market as one with more than 10% more sellers than buyers, and a seller’s market as one with more than 10% more buyers than sellers. A market is considered balanced when the difference between sellers and buyers is within 10%. Other housing-market statistics, including median sale price, are based on Redfin’s analysis of MLS data. A buyer’s market doesn’t necessarily mean condos are affordable for buyers. The Number of Condo Buyers Fell to a Record Low The condo market has undergone a dramatic reversal since the pandemic-era homebuying boom. In September 2021, there were 25.1% fewer sellers than buyers. Five years later, the number of buyers fell 54%, while the number of sellers rose 36%. The shift has left sellers competing for a much smaller pool of potential buyers. The number of condo buyers fell to an estimated 88,460 in September, down 2.5 % from August and the lowest level in at least 13 years. Meanwhile, condo sellers totaled 197,248, up 0.9 % from the prior month. Several factors are weighing more heavily on the condo market than on the single-family home market. Rising insurance premiums, HOA fees and special assessments are making condos increasingly expensive to own, particularly in Florida and Texas , where hurricane risks and other natural disasters have contributed to higher insurance costs. That’s a problem for first-time buyers, who often turn to condos as a more affordable entry point into the housing market but lack equity from a previous home sale. While the condo market is challenging for buyers, those who can afford housing costs will have more power in negotiations. “For renters who have saved for a down payment and are ready to build equity, these buyer-friendly conditions are an opportunity,” said Asad Khan , a senior economist at Redfin. “Buyers have more options and a better chance of finding a place they like. Although condo prices and HOA fees remain relatively high, buyers have more room to negotiate price cuts, and condos are still generally more affordable than single-family homes.” The single-family market saw a similar trend in September, with the number of buyers dropping to a record low since 2013. Sellers outnumbered buyers by 53.7%–a wide gap, but less than half as wide as what we’re seeing in the condo market. The huge surplus of condo sellers over buyers is contributing to the record-breaking buyer's market in the overall housing market, which encompasses condos, townhouses and single-family homes Falling Condo Prices Offer Buyers Opportunities The national median condo sale price fell 0.8% to about $339,000 in September, the first year-over-year decline in five months. House hunters should keep in mind that the costs of buying and owning a condo extend beyond its purchase price, and those ongoing expenses can put additional pressure on buyers’ budgets. Rising homeowners association (HOA) fees and insurance premiums can push up the total monthly cost of ownership. Buyers should also consider the possibility of special assessments to cover major repairs or improvements to a building’s common areas. But for buyers who can afford the upfront costs of a condo and plan to stay put for several years, today’s buyer’s market may offer an opportunity. “Find a motivated seller and there are a lot of them,” said Cecilia Cordova , a Redfin Premier agent in Miami, who lives in a condominium herself. Researching the buildings you’d like to live in is the key to finding a financially healthy community and avoiding surprise assessment bills later, she said. Condo buyers have more options than they did years ago. “We have enough inventory for the next three to four years,” said Cordova. For prospective sellers? Cordova suggests considering renting their condo out for the time being. “If you really need to sell, the strategy is to list it lower than anybody else in the same building. It’s not time for you to try to experiment with a higher price,” she said. Today’s home prices and mortgage rates have made it harder for first-time homebuyers to enter the market, reducing demand for condos, which have traditionally served as an entry point to homeownership. The weekly average mortgage rate is 7.18% as of November 5, and home prices remain near historic highs. Sellers are increasingly dropping their asking prices to attract buyers, Redfin data shows. About 37% of condos that sold in September had a price reduction, compared with 16% during the pandemic-era housing boom five years earlier. The typical condo that sold in September spent 63 days on the market before going under contract, up from 35 days five years earli",
+      "published_at": 1794229228000,
+      "source_family": "redfin-news",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "85de194ad1e37fde",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 12,
+      "tags": [
+        "housing",
+        "national",
+        "data",
+        "trend"
+      ],
+      "heat_signals": [],
+      "date_precision": "timestamp",
+      "modified_at": 1794233935000,
+      "extraction": "semantic",
+      "canonical": "https://redfin.com/news/condo-fall-2026",
+      "content_hash": "c368bab27d4c3589d4b33e688159755b22b1d328ef39cdb7ab8124bc0a2e97fa",
+      "access": "preview",
+      "evidence_status": "preview",
+      "keep": true,
+      "importance": 4,
+      "section": "national",
+      "capital_focus": false,
+      "geo_evidence": "Houston ranked second",
+      "duplicate_of": null,
+      "selector_reason": "Redfin估算全国公寓买卖双方失衡达到2013年以来最大，并列出休斯敦等市场差异，提供独立供需指标。",
+      "title_zh": "全国公寓卖家数量较买家多 123%",
+      "summary_zh": "Redfin 估计，9 月全国公寓卖家数量较买家多 123%，为 2013 年以来最大差距；公寓买家数量降至 13 年低位，买方议价能力显著增强。",
+      "impact": "short-neg",
+      "evidence_quote": "There were 123% more condo sellers than buyers nationwide in September, the widest gap since 2013, giving buyers extraordinary negotiating power.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Crescent Completes 146-Unit Melissa BTR Community",
+      "link": "https://www.connectcre.com/stories/crescent-completes-146-unit-melissa-btr-community/",
+      "description": "Crescent Completes 146-Unit Melissa BTR Community Crescent Communities opened HARMON Melissa, a new 146-unit rental community offering townhome living in Melissa, Texas, one of North Dallas’ fastest-growing towns. Residents can choose from nine distinct three- and four-bedroom townhome floor plans ranging from 1,798 to 2,168 square feet. Every home includes an attached two-car garage. Rents range from $2,500 to $3,190 a month. Community amenities include a resident clubhouse with an open-air pavilion and a rsaltwater pool. Residents also have access to an on-site dog park, game lawn, and outdoor grilling and dining stations featuring a Big Green Egg smoker. Partners on the project include Kimley-Horn (civil engineer and landscape architect), NRP Group (general contractor), and Vinyet (townhome architect). HARMON Melissa is part of Crescent Communities’ expanding HARMON portfolio, supported through its second joint venturepartnership with an account managed by Heitman LLC. The venture will continue to make investments in high-quality, intentionally crafted communities in key growth markets including Arizona, Florida, Georgia, North Carolina, Tennessee, and Texas. Connect Inside The Story Crescent Communities About Mike Boyd Mike covers our Texas and Phoenix/Southwest regions. He is a veteran news reporter who spent 10 years in radio and television news, mostly in Tucson, Arizona. Following his career in the media, he spent ten years as a communications executive for a publicly traded development company. Mike is married with three boys and three Huskies. Order Reprints ◦ Development Apartment buildings for sale Check out the latest properties available on apartmentbuildings.com REO: Iconic at the Station | Stabilization Upside San Antonio, TX Texas + Affordable Housing Listing Status: Available Listing Type: Auction Price: $800,000 No. of Units: 75 Average Occupancy: 81 Year Built: 1964 Year Renovated: 2018 Opportunity Zone: No Price per unit: $10,666 Learn More 707 Kihekah Avenue Pawhuska, OK Texas + Apartment Buildings Listing Status: Available Listing Type: Call for offers Price: $900,000 No. of Units: 28 Opportunity Zone: No Price per unit: $32,142 Learn More View all apartments |Development Texas | Dallas-Fort Worth Apartments Crescent Completes 146-Unit Melissa BTR Community Mike Boyd November 9, 2026 Load More",
+      "published_at": 1794243926000,
+      "source_family": "connect-cre",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "5dc4898c1f5821bb",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 20,
+      "tags": [
+        "btr-sfr",
+        "dfw",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "btr",
+        "texas",
+        "dallas"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 1794243933000,
+      "extraction": "semantic",
+      "canonical": "https://connectcre.com/stories/crescent-completes-146-unit-melissa-btr-community",
+      "content_hash": "31c44e69cefa65f3451f4320669e932a9a82e5f66be8cbc8ebcf7bc3b274991b",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "btr",
+      "capital_focus": false,
+      "geo_evidence": "Melissa, Texas",
+      "duplicate_of": null,
+      "selector_reason": "北达拉斯Melissa一项146户BTR社区完工并开租，属有明确单位数、租金及项目进展的新增交付。",
+      "title_zh": "Crescent 完成德州 146 户 BTR 社区",
+      "summary_zh": "Crescent Communities 在得州 Melissa 开放 146 户 HARMON Melissa 租赁社区，月租为 2,500 至 3,190 美元，并由 Heitman 管理账户支持的合资企业参与投资。",
+      "impact": "short-pos",
+      "evidence_quote": "Crescent Communities opened HARMON Melissa, a new 146-unit rental community offering townhome living in Melissa, Texas, one of North Dallas’ fastest-growing towns.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Trademark And Morgan To Build Luxury Apartments In Oak Lawn: The DFW Deal Sheet",
+      "link": "https://www.bisnow.com/news/dallas-ft-worth/deal-sheet/trademark-and-morgan-to-build-luxury-apartments-in-oak-lawn-the-dfw-deal-sheet",
+      "description": "Two major commercial real estate firms began work on a luxury multifamily project that will occupy a full city block near Uptown. Courtesy of Trademark Property Co. A rendering of the multifamily community being built at 3900 Lemmon Ave. in Dallas Trademark Property Co. and Morgan Group broke ground on their 362-unit community at 3900 Lemmon Ave. in Dallas’ Oak Lawn neighborhood. The first apartments are expected to be completed in fall 2028, with full delivery to follow during the second quarter of 2029. “The opportunity to develop a full city block in Oak Lawn, adjacent to Turtle Creek, is rare, and Trademark put in the time and care to build a plan this neighborhood could support,” Stephen Frazee, Morgan’s DFW city development partner, said in a statement. Trademark led the site’s rezoning process, working with the Oak Lawn Committee, neighborhood stakeholders and the city of Dallas. Morgan will serve as the project’s developer, general contractor and property manager. The project team also includes GFF as architect, SJL Design Group as interior designer and LandDesign as landscape architect. SALES Ascent Real Estate Advisors acquired the 10-story Hillcrest Tower in Dallas from Albany Road Real Estate Partners. The building’s sale price was not disclosed, but the Dallas Central Appraisal District lists the property as being worth $16.3M for tax purposes. Hillcrest Tower was built in 1982 and renovated in 2022. The 168K SF office building at 12720 Hillcrest Road was 97% leased at the time of the deal. Ascent plans to build upon prior upgrades by refreshing the common areas and continuing to invest in move-in-ready spec-suites. Newmark represented the seller in the transaction. Dallas-based Sunwest Real Estate Group will provide property management services, and CBRE’s Trey Smith, Julee Amparo and Alix Kirby will lead leasing. *** Courtesy of Newmark The Colonnade at 15301, 15303 and 15305 North Dallas Parkway in Addison Cross Ocean Partners and Lincoln Property Co. acquired The Colonnade, a 1M SF office campus on nearly 12.5 acres along the Dallas North Tollway in Addison. The three-tower asset was sold through a receivership process on behalf of Trigild and CWCapital. The joint venture is committing $100M to reposition the property as a premier commercial hub for the market. Initial property improvements are underway, with the first phase of upgrades expected to be delivered throughout 2027. Newmark’s Stephen Schwalb, Chris Murphy, Robert Hill, Gary Carr and Austin Sheahan represented the seller in the transaction. Lincoln will provide management for the project, and the firm’s Jake Young, Christian Munoz and Hudson Dozier will lease the property. *** Mac Haik Auto Group purchased around 25 acres near the corner of Frontier Parkway and the Dallas North Tollway in Celina for a new 100K SF Chevrolet dealership. Mac Haik purchased the land from the family trust of Tom Mosey. Davidson Bogel Real Estate’s Ryan Turner, David Davidson Jr. and Edward Bogel represented the seller in the transaction. Mac Haik was represented by Sam Clayton and Adam Sheriff of Brown & Griffin Real Estate. *** California-based investor David Reid Properties purchased the nearly 38K SF Greenview Tech Centre Building E at 830 Greenview Drive in Grand Prairie. Built in 1981, the building offers flex industrial and office space. Marcus & Millichap’s Brad Mills marketed the property on behalf of the seller, a Florida-based investor, and procured the buyer. *** Dallas-based Paceline Equity Partners LLC and its joint venture partner, Aravest, sold the 308-key Renaissance Dallas at Plano Legacy West Hotel to Host Hotels & Resorts Inc. as part of a $374M deal that included another hotel in Brooklyn. Paceline and Aravest acquired Renaissance Plano in June 2023 and executed a strategy that added more rooms, reconfigured food and beverage outlets, and drove growth in room revenue and net operating income. CBRE Hotels served as exclusive adviser, while King & Spalding served as legal counsel to Paceline on the transaction. LEASES Denso International America Inc. renewed nearly 24K SF of flex space in the Plano Parkway Business Center I at 2701 W. Plano Parkway in Plano. Bradford Commercial Real Estate Services’ Brian Pafford and Jared Laake represented the landlord, 2701 Plano Parkway Ltd. Colliers’ Allyson Yost represented the tenant in the deal. CONSTRUCTION AND DEVELOPMENT Courtesy of Cadence McShane Construction The Flynn at Live Oak at 4931 Live Oak St. in Dallas Conor Commercial Real Estate completed development of The Flynn at Live Oak, a 327-unit luxury multifamily project at 4931 Live Oak St. in Dallas. The five-story building was developed as a joint venture investment between Conor Commercial, Globe Corp. and Origin Investments. JLL’s Dallas office assisted with the capital raise, while Wintrust Bank provided the construction loan. The development was designed by Merriman Anderson Architects and built by Cadence McShane Construction. The property will be managed by Greystar. *** Peachtree Group opened the 264-room, dual-branded AC Hotel Dallas Uptown and Moxy Dallas Uptown, offering two Marriott hospitality experiences at 2910 N. Hall St. Developed in conjunction with Phoenix Development Partners and operated by Peachtree’s hospitality management division, the property features 110 rooms at AC Hotel and 154 at Moxy. *** NewcrestImage opened The Clara Hotel Plano as part of the Tapestry Collection by Hilton following a complete renovation and rebranding. The company acquired the 176-room property at 8201 Preston Road in Plano last year as the NYLO Dallas Plano. PEOPLE District Development Partners added Carrie Bobb Shope as a partner. Shope brings more than 20 years of experience to the Dallas-based firm. Shope will lead retail strategy, merchandising and leasing execution for District Development Partners' portfolio of mixed-use and sports- and entertainment-anchored destinations nationwide. *** Affinius Capital LL",
+      "published_at": 1794256101000,
+      "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1794256141000,
+      "extraction": "semantic",
+      "canonical": "https://bisnow.com/news/dallas-ft-worth/deal-sheet/trademark-and-morgan-to-build-luxury-apartments-in-oak-lawn-the-dfw-deal-sheet",
+      "content_hash": "0e44fa5b4e13c3cf3c8511125f74ff4ce31caac2cf8470099cb5f2db9dc69c1a",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "c550e8463de998f7",
+      "source_family": "bisnow",
+      "is_research": false,
+      "required_source": false,
+      "first_seen_at": 1794260239293,
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 17,
+      "tags": [
+        "multifamily",
+        "dfw",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "dallas",
+        "dfw",
+        "austin"
+      ],
+      "keep": true,
+      "importance": 3,
+      "section": "sunbelt",
+      "capital_focus": false,
+      "geo_evidence": "Dallas’ Oak Lawn neighborhood",
+      "duplicate_of": null,
+      "selector_reason": "达拉斯Oak Lawn 362户公寓项目开工，提供规模、选址及预计交付时间，具有本地开发跟踪价值。",
+      "title_zh": "达拉斯 Oak Lawn 启动 362 户豪华公寓项目",
+      "summary_zh": "Trademark Property Co. 与 Morgan Group 在达拉斯 Oak Lawn 破土建设 362 户多户住宅项目，首批公寓预计于 2028 年秋季完成，全部交付预计在 2029 年第二季度。",
+      "impact": "short-pos",
+      "evidence_quote": "Trademark Property Co. and Morgan Group broke ground on their 362-unit community at 3900 Lemmon Ave. in Dallas’ Oak Lawn neighborhood.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "houston-agent",
+      "source_name": "Houston Agent Magazine",
+      "source_tier": "D",
+      "source_weight": 6,
+      "source_tags": [
+        "houston",
+        "brokerage"
+      ],
+      "region": "texas",
+      "title": "Grange MPC begins second phase of development",
+      "link": "https://houstonagentmagazine.com/2026/11/09/grange-second-phase-of-development/?utm_source=rss&utm_medium=rss&utm_campaign=grange-second-phase-of-development",
+      "description": "Grange MPC begins second phase of development by Emily Marek November 09, 2026 The second phase includes Ricestead, Grange’s 20-acre amenity center. (via Johnson Development) Johnson Development’s Grange master-planned community in Katy has entered its second phase, with construction and sitework underway on an additional 500 homesites and a 20-acre amenity center. The new lots range from 40 feet wide up to 85 feet wide. The larger lots, which are new to the MPC, are suited for alley-access garages. Builders in this second phrase — including Highland Homes , J. Patrick Homes, David Weekley Homes, Newmark Homes, Chesmar Homes, Perry Homes, Drees Custom Homes, Westin Homes and Partners in Building — will receive 483 lots before the end of the year. “This is an exciting new chapter and a natural progression in our development of Grange,” the community’s vice president and general manager, Jacob Rice, said in a press release. “The demand is there for larger homesites which will allow our residents to move into more spacious homes in the community as their family needs dictate.” Construction is also underway on Ricestead , Grange’s 20-acre amenity center. Plans for the project include a resort-style pool, lap pool, pickleball and basketball courts and the Harvest Hall clubhouse, which will feature a fitness center and a co-working area. Space is also reserved for future retail offerings and a village green. “We view Ricestead as a modern-day town square where businesses and residents become true partners,” Rice added. “We envision people meeting for coffee, shopping local merchants and attending a concert or farmers market at the village green. Ricestead will move Grange from being a neighborhood to becoming a hometown.” Grange is currently home to over 500 residents in hundreds of new homes. Pricing in the community starts in the $300,000s. Read More Related to This Post New Jubilee homes earn IWBI WELL Residence certification InTown Homes building Avondale community in Spring Branch Tri Pointe begins construction, presales at 2 northwest Houston MPCs 1st Choice Development to add whole-home air quality system to new homes Houston homebuilders and developers honored at GHBA Houston’s Best PRISM Awards Lovett Homes to build gated community in Mid Lane New master-planned community, Peachtree, coming to Brazoria County The Trails expands builder lineup, announces new retail, amenity additions Join the conversation Cancel reply Save my name, email, and website in this browser for the next time I comment.",
+      "published_at": 1794248415000,
+      "source_family": "houston-agent",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "3b5406433eb986f7",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 13,
+      "tags": [
+        "housing",
+        "houston",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "houston"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://houstonagentmagazine.com/2026/11/09/grange-second-phase-of-development",
+      "content_hash": "5fba40694257bb2d0527a99710f9317445e59593a5cf541b41918cd355198f92",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "sunbelt",
+      "capital_focus": false,
+      "geo_evidence": "in Katy",
+      "duplicate_of": null,
+      "selector_reason": "Katy大型总体规划社区进入第二期，新增500个住宅地块及配套设施，提供明确开发进度。",
+      "title_zh": "Katy Grange 二期新增 500 个住宅地块",
+      "summary_zh": "Johnson Development 的 Katy Grange 进入二期，施工覆盖新增 500 个住宅地块及 20 英亩配套中心；开发商称，对更大住宅地块的需求存在。",
+      "impact": "short-pos",
+      "evidence_quote": "Johnson Development’s Grange master-planned community in Katy has entered its second phase, with construction and sitework underway on an additional 500 homesites and a 20-acre amenity center.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "redfin-news",
+      "source_name": "Redfin News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "Mortgage Rates Dip Ahead of a Big Week for Inflation Data",
+      "link": "https://www.redfin.com/news/economic-update-november-9/",
+      "description": "Mortgage Rates Dip Ahead of a Big Week for Inflation Data Published on November 9th, 2026 by Chen Zhao In A Nutshell: Mortgage rates are coming down as investors dial back expectations for rate hikes. But that could change: Key inflation data comes out this week. Last Week’s Highlights Two highlights from a busy election week: The landslide win for Democrats could impact markets in two ways. One, markets are starting to price in some political risk to the AI boom because Democratic officials are expected to limit the buildout of data centers. Two, there’s now a higher likelihood of stalemates during budget negotiations and debt limit increases. Friday’s jobs report barely made a splash, even though it was significantly stronger than expected. The economy is now adding about 100,000 jobs per month, likely a bit above the breakeven rate given the low rate of immigration. The unemployment rate remains at historical lows and wages are still increasing 3.1% annually. Upcoming Attractions This week’s economics highlight is the CPI inflation data coming Tuesday, coupled with Friday’s PPI data. Together, the two will form a complete picture of the core PCE inflation measure the Fed uses. The consensus forecast has core CPI coming in at 0.2% month-over-month, down slightly from last month. Forecasters are expecting a small statistical distortion in the data due to last year’s government shutdown. A very low read for inflation might convince the Fed to hold off on hiking rates at the December meeting, but they could just as easily write it off as one data point. They would evaluate how broader financial conditions have changed since the last meeting, including any further improvement in rates. Many Fed officials are holding speaking engagements this week. The ones to watch are Dallas Fed President Lorie Logan on Tuesday; Vice Chair Michelle Bowman on Monday, Tuesday, and Friday; Cleveland Fed President Beth Hammack on Thursday; and New York Fed President John Williams on Thursday. Latest Housing Market Reports Weekly Housing Market Update: Homebuyers Get Some Relief as Prices Decline For Third Straight Week, Monthly Payments Dip For Every Condo Buyer in the U.S., There Are More Than Two Sellers. That Gives Condo Buyers Strong Negotiating Power. Chen Zhao Chen Zhao is the head of economics research, where she produces research on the housing market for public and internal audiences. Previously, she was an executive director leading housing finance and financial markets research at the JPMorgan Chase Institute. Prior to joining JPMCI, Chen was an economics consultant at Analysis Group, Inc., where she worked on financial litigation cases and led teams conducting health economics and outcomes research on behalf of pharmaceutical companies. While in graduate school, Chen was with the Center for Economic Studies and the Social Economic and Housing Statistics Division at the US Census Bureau, where she conducted applied microeconomics research using large scale restricted-access linked survey-administrative data. She started her career at the White House Council of Economic Advisers, where she focused on labor and health economics. Email Chen Get a home loan that helps you win Get prequalified Join us on X for more #housingmarket updates Follow Us You Might Also Like Mortgage Rates Drop From September Highs as Midterms and Jobs Data Loom Fed Holds Rates Steady, But Sets Up a December Hike Geopolitics and AI to Drive Mortgage Rates This Week as an October Fed Rate Hike Appears Unlikely Core Inflation Tops Forecasts, Making an October Fed Rate Hike a Close Call All Eyes on Wednesday’s Inflation Report as Markets Weigh How Many More Fed Hikes Are Left Mortgage Rates Tick Up Even as the Odds of a Fed Rate Hike Decline Soft September Jobs Report May Give Fed Reason to Pause Rate Hikes, Slowing Ascent of Mortgage Rates Be the first to see the latest real estate news: Facebook This field is for validation purposes and should be left unchanged. Email * Sign up By submitting your email you agree to Redfin’s Terms of Use and Privacy Policy Add Redfin as a preferred source on Google &times; Scroll to Top",
+      "published_at": 1794244836000,
+      "source_family": "redfin-news",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "b0ef92d71d0c4b25",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 20,
+      "tags": [
+        "housing",
+        "national",
+        "rates",
+        "macro",
+        "lender"
+      ],
+      "heat_signals": [
+        "rate hike",
+        "inflation",
+        "mortgage rate"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://redfin.com/news/economic-update-november-9",
+      "content_hash": "84a2b2b1ceb846196f4d73587a6c5feb21b85d44af48bd803a2486a8a50eac81",
+      "access": "preview",
+      "evidence_status": "preview",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "capital_focus": false,
+      "geo_evidence": null,
+      "duplicate_of": null,
+      "selector_reason": "报道按揭利率回落及即将公布的通胀数据，并提供就业、工资和市场定价背景；属有参考价值的全国利率与宏观观察。",
+      "title_zh": "抵押贷款利率回落但通胀数据成关键变量",
+      "summary_zh": "Redfin 表示，投资者降低对加息的预期推动抵押贷款利率下行，但本周 CPI 和 PPI 数据可能改变判断；美国经济每月新增就业约 100,000 个。",
+      "impact": "neutral",
+      "evidence_quote": "Mortgage rates are coming down as investors dial back expectations for rate hikes. But that could change: Key inflation data comes out this week.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Pro-housing coalition presses Senate on BAAJA permitting reforms",
+      "link": "https://www.housingwire.com/articles/pro-housing-coalition-baaja-reforms/",
+      "description": "A coalition of national housing organizations, homebuilders and 58 local pro-housing groups is urging Senate leaders to pass the Bipartisan American Affordability and Jobs Act (BAAJA), arguing its permitting reforms could sharply cut timelines and costs for federally supported housing. In a letter to key Senate committee leaders, co-led by Inclusive Abundance Action and summarized in a public statement Monday, the coalition backs the housing provisions in BAAJA (S. 5653), the Senate’s bipartisan permitting reform package. The groups say the bill could “transform how quickly federally supported housing gets built,” even though most public attention on BAAJA has focused on its energy and infrastructure impacts rather than its potential to accelerate affordable and multifamily projects. What BAAJA could change for housing Today, federally assisted affordable and multifamily housing typically faces National Environmental Policy Act (NEPA) reviews and National Historic Preservation Act (NHPA) reviews that do not apply to most private-market projects. Affordable housing developers report delays of a year or more to clear environmental review and up to three months just to document that a project is exempt, according to the letter. The coalition highlights several housing-specific changes in BAAJA that it says would help the following areas: Streamlined federal reviews: Projects using federal grants, loans or loan guarantees that are not primarily preservation-focused would no longer automatically trigger a federal historic preservation review, the groups say. The bill would also narrow and streamline when NEPA applies, allow qualified state or Tribal reviews to substitute for federal review, expand categorical exclusions and set clearer timelines. Potential savings per project: Streamlined Clean Water Act reviews could save up to an estimated $425,000 per project, according to materials cited by the coalition. Faster deployment of HUD dollars: At least $10 billion a year in U.S. Department of Housing and Urban Development funding could move more quickly under the bill’s changes, including Community Development Block Grants (CDBG), HOME funds, public housing capital and operating funds, and HUD loan programs, the coalition says. Building on prior reforms: BAAJA would extend and expand permitting reforms already enacted in the 21st Century ROAD to Housing Act , which Congress passed earlier this year with bipartisan majorities. For developers and public housing agencies that rely on layered federal funds, the changes would primarily affect front-end approvals rather than long-term compliance. But the groups argue that shaving months off NEPA and related reviews would materially improve feasibility for marginal projects and reduce soft costs. Who is backing the bill? The signatories span national trade groups, think tanks and local YIMBY organizations. Organizations named in the public statement include: National Association of Home Builders National Community Development Association Council of State Community Development Agencies National Housing &amp; Rehabilitation Association National Association of Home Builders Institute for Progress Niskanen Center Center for Public Enterprise Action Fund Up for Growth Action YIMBY Action They are joined by 58 local pro-housing or “Yes In My Backyard” (YIMBY) groups from across the country, according to the coalition’s announcement. The attached letter, addressed to Senate committee leadership, urges lawmakers to preserve and enact the housing-related provisions as part of any final permitting package. Why this matters The push around BAAJA highlights a growing focus on federal permitting as a bottleneck for subsidized housing, separate from local zoning and entitlement risk. For developers and public agencies, the proposed changes could mean: Shorter and more predictable federal review timelines on projects using HUD and other federal funds. Greater ability to rely on state or Tribal environmental review processes instead of duplicative federal NEPA reviews. Lower predevelopment and legal costs tied to environmental and historic preservation compliance. Related More: Homebuilders Housing Policy",
+      "published_at": 1794244374000,
+      "source_family": "housingwire",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "dea65628e41aec1a",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 17,
+      "tags": [
+        "mixed-asset",
+        "national",
+        "policy",
+        "developer"
+      ],
+      "heat_signals": [
+        "fed"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 1794244376000,
+      "extraction": "semantic",
+      "canonical": "https://housingwire.com/articles/pro-housing-coalition-baaja-reforms",
+      "content_hash": "6d814e3a95e719692a99af6487c50c84ca75a2e8ad32b04269e5c72915b090c7",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "capital_focus": false,
+      "geo_evidence": null,
+      "duplicate_of": null,
+      "selector_reason": "全国住房组织及开发商联盟推动联邦许可改革，所述提案可能影响联邦支持的可负担及多户住宅审批时长。",
+      "title_zh": "住房组织推动 BAAJA 简化联邦审批",
+      "summary_zh": "住房组织、建商及 58 个地方团体敦促参议院通过 BAAJA，称其中的许可改革可缩短联邦支持住房项目的审批时间并降低成本，但法案影响仍属倡议方判断。",
+      "impact": "neutral",
+      "evidence_quote": "The groups say the bill could “transform how quickly federally supported housing gets built,” even though most public attention on BAAJA has focused on its energy and infrastructure impacts rather than its potential to accelerate affordable and multifamily projects.",
+      "evidence_basis": "body",
+      "cre_subcategory": "跨资产"
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Larkspur Capital Begins Leasing 219-Unit Multifamily Project in Dallas",
+      "link": "https://rebusinessonline.com/larkspur-capital-begins-leasing-219-unit-multifamily-project-in-dallas/",
+      "description": "Larkspur Capital Begins Leasing 219-Unit Multifamily Project in Dallas by Taylor Williams November 9, 2026 November 9, 2026 4 DALLAS — Locally based developer Larkspur Capital has begun leasing The Juniper , a 219-unit multifamily project in Dallas. The site is located within a Qualified Opportunity Zone at 4003 Commerce St. in the Exposition Park area of Dallas. The site spans 1.4 acres, and the property feature studio, one- and two-bedroom units in addition to townhomes, penthouses and ground-floor retail space. Amenities include a pool, dog park, fitness center, multiple lounges, pickleball courts, outdoor grilling and dining stations and a clubhouse. Corgan designed the project, with Faulkner Design Group handling interior architecture. OHT Partners served as the general contractor. Rents start at roughly $1,600 per month for a studio apartment. Facebook Twitter Linkedin Email previous post Logistics Property Co. Breaks Ground on 217,758 SF Industrial Project in Metro Houston next post Marcus & Millichap Brokers Sale of 950-Unit Self-Storage Portfolio in Metro Fort Worth You may also like Marcus & Millichap Brokers Sale of 950-Unit Self-Storage... November 9, 2026 Logistics Property Co. Breaks Ground on 217,758 SF... November 9, 2026 Lee & Associates Negotiates 87,730 SF Industrial Lease... November 9, 2026 Berkadia Provides $219M in Agency Permanent Loan for... November 9, 2026 IPA Negotiates Sale of 71-Unit Apartment Building in... November 9, 2026 Walker & Dunlop Arranges $110M Financing for Multifamily... November 9, 2026 Blue Steel Acquires 309 Acres Near Louisville, Plans... November 9, 2026 Northmarq Negotiates Sale of 350-Unit Apartment Community in... November 9, 2026 TruAmerica Multifamily Breaks Ground on 154-Unit Townhome Community... November 9, 2026",
+      "published_at": 1794240125000,
+      "source_family": "rebusiness-online",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "dd3333ba31b69c93",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 13,
+      "tags": [
+        "multifamily",
+        "dfw",
+        "construction",
+        "developer"
+      ],
+      "heat_signals": [
+        "dallas"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 1794240126000,
+      "extraction": "semantic",
+      "canonical": "https://rebusinessonline.com/larkspur-capital-begins-leasing-219-unit-multifamily-project-in-dallas",
+      "content_hash": "33be52c1ff18f0d35901f395c65342768aa97f23c3141039170dc2164ebb6c6b",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "sunbelt",
+      "capital_focus": false,
+      "geo_evidence": "Multifamily Project in Dallas",
+      "duplicate_of": null,
+      "selector_reason": "达拉斯219户公寓项目启动出租，提供新交付、户型及起租水平等本地供给信息。",
+      "title_zh": "达拉斯 219 户 The Juniper 开始招租",
+      "summary_zh": "Larkspur Capital 开始出租达拉斯 Exposition Park 的 The Juniper，共 219 户，含住宅、联排、顶层公寓及底层零售空间，单间户型起租约 1,600 美元。",
+      "impact": "short-pos",
+      "evidence_quote": "Locally based developer Larkspur Capital has begun leasing The Juniper , a 219-unit multifamily project in Dallas.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "nahb-eyeonhousing",
+      "source_name": "NAHB Eye on Housing",
+      "source_tier": "B",
+      "source_weight": 8,
+      "source_tags": [
+        "data",
+        "trend",
+        "policy"
+      ],
+      "region": "national",
+      "title": "Residential Building Worker Wage Growth Rebounds, but Real Wages Continue to Decline",
+      "link": "https://eyeonhousing.org/2026/11/residential-building-worker-wage-growth-rebounds-but-real-wages-continue-to-decline/",
+      "description": "Residential Building Worker Wage Growth Rebounds, but Real Wages Continue to Decline November 9, 2026 Jing Fu No Comments Wage growth for residential building workers showed signs of a modest rebound in September 2026 following a sharp slowdown earlier in the year. According to the latest data from the U.S. Bureau of Labor Statistics , nominal wage growth picked up from its June pace, although it remained relatively modest. After adjusting for inflation, real wages continued to decline, indicating persistent pressure on workers’ purchasing power. In nominal terms, average hourly earnings (AHE) for residential building workers increased 2.8% year-over-year in September 2026, reaching $40.69 per hour. This marked an acceleration from the 1.2% year-over-year increase recorded in June 2026. After accounting for inflation, real wages declined 0.9% year-over-year in September 2026 to $12.1 per hour. Real wage growth strengthened temporarily during parts of 2024, reaching a peak of 6.2%, but has since weakened as nominal wage gains moderated and inflation continued to erode purchasing power. Meanwhile, the number of open, and unfilled construction sector jobs increased in September. Continued strength in construction-related activity, including data center construction, is supporting demand for construction workers. Despite the recent moderation in wage growth, residential building workers continue to earn relatively competitive wages compared with workers in other industries: 9.8% higher than the manufacturing sector ($37.06 per hour) 24.5% higher than the transportation and warehousing sector ($32.68 per hour) 3.6% lower than the mining and logging sector ($42.23 per hour) Note: Data used in this post relates to all employees in the residential building industry. This group includes both new single-family housing construction (excluding for-sale builders) and residential remodelers but does not include specialty trade contractors. average hourly earnings , Bureau of Labor Statistics (BLS) , residential building workers , wage growth Prev Previous Remodeling Activity Holds Flat in Second Quarter Amid Housing Slowdown Leave a Reply Cancel reply Your email address will not be published. Required fields are marked * Comment * Name * Email * Website Yes, add me to your mailing list Share this Page Subscribe to Blog Subscribe Search by Category Video Updates View Please leave this field empty Subscribe to Blog via Email Email Frequency * Instant Daily Weekly Check your inbox or spam folder to confirm your subscription. Construction Statistics Single-Family Multifamily Remodeling Labor Force Construction Wages Employment Data Job Openings Finance Builder Loans Consumer Finance Mortgages Home Sales and Prices Housing Affordability Housing Prices Housing Sales Macroeconomics Federal Reserve GDP Inflation Market Trends Housing Characteristics Housing Demand Industry Demographics Policy Research Building Materials Homeownership Tax Policy Local Data NAHB Indices Research Studies",
+      "published_at": 1794242513000,
+      "source_family": "nahb-eyeonhousing",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "d39617207091e64f",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 16,
+      "tags": [
+        "housing",
+        "national",
+        "data",
+        "homebuilder"
+      ],
+      "heat_signals": [
+        "inflation"
+      ],
+      "date_precision": "day",
+      "published_date": "2026-11-09",
+      "modified_at": 0,
+      "extraction": "body_fallback",
+      "canonical": "https://eyeonhousing.org/2026/11/residential-building-worker-wage-growth-rebounds-but-real-wages-continue-to-decline",
+      "content_hash": "522cb77f799dc250985109fba7c4790046e28ab16ff77df8fb5fb0897d64e978",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "capital_focus": false,
+      "geo_evidence": null,
+      "duplicate_of": null,
+      "selector_reason": "住宅建筑工人工资的独立统计分析显示名义工资回升而实际工资继续下降，并指出建筑业空缺增加。",
+      "title_zh": "住宅建筑工人实际工资继续下降",
+      "summary_zh": "NAHB 引用美国劳工统计局数据称，住宅建筑工人 9 月名义时薪同比增长 2.8% 至 40.69 美元，但实际工资同比下降 0.9% 至 12.1 美元。",
+      "impact": "neutral",
+      "evidence_quote": "In nominal terms, average hourly earnings (AHE) for residential building workers increased 2.8% year-over-year in September 2026, reaching $40.69 per hour. This marked an acceleration from the 1.2% year-over-year increase recorded in June 2026. After accounting for inflation, real wages declined 0.9% year-over-year in September 2026 to $12.1 per hour.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "bisnow",
+      "source_name": "Bisnow",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "'Certainty Will Be The Buzzword': Stability, Not Sea Change, For CRE Post-Midterm",
+      "link": "https://www.bisnow.com/news/national/commercial-real-estate/-certainty-will-be-the-buzzword-stability-not-sea-change-for-cre-post-midterm",
+      "description": "The implications of an overwhelming Democratic midterm victory reverberated through markets in the second half of last week, reflecting skittishness among investors and business leaders over fears about the impact on the largest driver of today's economy: data center growth. Despite these initial shocks, there is a quiet expectation that a Democratic Congress will help bring calm to a period of significant economic volatility stemming in part from the unpredictable policymaking that has emerged during President Donald Trump 's second term. “Maybe ‘uncertainty’ was the buzzword of the last year, and hopefully ‘certainty’ will be the buzzword going forward,” said Jeff DeBoer , CEO of the Washington, D.C.-based trade group The Real Estate Roundtable . “We're much more certain that we're not going to wake up every day and have another wild fluctuation in some sort of policy.” Unsplash/Sebastian Schuster That semblance of certainty won't be a panacea, however. Major relief from the ubiquitous issues for commercial real estate today, including higher costs, low labor availability and expensive debt, is unlikely to come from the new Congress because those issues are closely tied to Trump's executive actions and powers. But housing affordability, the economy more generally and data centers were on the ballot in races around the country, where the results have set the stage for a string of policy debates that will hit landlords and investors. “If you look back in history, there are a number of examples where a great amount of very positive legislation has been done when there's divided government,” DeBoer said. “I'm not one who says, ‘Put your feet up, nothing's going to happen, we're in for gridlock.’ I think there's going to be some significant legislation.” Stock traders initially reacted positively to the midterm results, with all three major indexes climbing, but the mood changed Thursday. A massive sell-off focused on tech stocks but spread marketwide sucked $2.5T in market value out of the Nasdaq and pushed the index into correction territory. By Friday, the dust had settled and markets opened by gaining back some of Thursday’s losses. Investors are trying to reprice their bets on the pace of the artificial intelligence infrastructure build-out as they weigh the prospect of a Congress that is more skeptical of the major tech firms’ plans and a wave of local fervor against data centers that drove voters to the polls. AI and data centers emerged as a key political flashpoint, with more than half of respondents telling an NBC exit poll that it was a crucial or major factor in their decision to vote in the midterms. Across statewide races and referendums, voters roundly supported measures putting limits on data center development in more than 40 local ballot measures . “This election, whether federally or on the local level, was influenced by data centers,” said Commercial Real Estate Development Association CEO Marc Selvitelli. “This was the rare bipartisan issue that was out there right now.” The economy emerged as the top issue for voters headed into the election after the U.S. war with Iran drove up energy costs and added to already elevated inflation. The president’s tariffs are also contributing to the rising costs, but the Democratic sweep in Congress still has limited reach into trade policy that’s coming directly from the White House. \"The swing in Congress, the results of the election, are very unlikely to have a significant impact on the president's trade agenda and the tariffs that are in place,\" Blake Harden, managing director for trade policy at ​ Ernst & Young 's Washington Council office, told Reuters . \"This is because there is so much trade authority within the executive branch that's been delegated by Congress.\" Unsplash/Jesse Paul Democrats have floated the idea of changing the tariff laws the president is relying on to impose his protectionist trade regime, but the party would need to win over some Republicans because it remains short of a veto-proof majority. They’re also working on a plan to roll back Trump’s tariffs directed at Canada, The Wall Street Journal reported Thursday. “The midterm election results are unlikely to materially influence commercial real estate performance,” Cushman & Wakefield analysts wrote in a postelection report . A divided government adds some degree of fiscal policy stability that “should be calming for markets,” although the U.S. war in Iran and the downstream impacts on prices and inflation remain the greatest “swing factor for inflation and rates,” they wrote. The election was at least in part a referendum on the war in Iran, according to Hans Nordby , executive managing director of research and investment analytics at Transwestern . “And it was a ‘no’ vote,” Nordby wrote in an email to Bisnow on Friday. “The new Congress could defund the war or otherwise force a withdrawal. If that were to happen, it would seem likely that oil prices could retreat to prewar levels, which would put downward pressure on inflation.” The war and its economic fallout, particularly on the price of oil, has been a thorn in CRE's side since it broke out in February. The rising cost of oil has contributed to overall inflation remaining elevated, which in turn has kept borrowing rates higher. Yields for 10-year U.S. Treasury bonds , a key benchmark rate for all sorts of debt costs, notched lower following the midterms after climbing above 5% in October before retreating, shedding 6 basis points Wednesday and continuing to trade below 4.9% through Friday. The shift in Congress likely sets the stage for bitter political fights between Trump and Democrats, some of whom have pledged to launch investigations into the White House. But an expectation in policymaking circles is that there’s room for some legislation to be passed. Trump has shown a willingness to adopt bipartisan deals even if they don’t carry his own legislative priorities, with the 21st Century Road to H",
+      "published_at": 1794174492000,
+      "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1794191495000,
+      "extraction": "semantic",
+      "canonical": "https://bisnow.com/news/national/commercial-real-estate/-certainty-will-be-the-buzzword-stability-not-sea-change-for-cre-post-midterm",
+      "content_hash": "05b0807d3334bbcd7c8de85168a3b2c82757058b1f094b01c5d011324dac800f",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "24e07136f99ce848",
+      "source_family": "bisnow",
+      "is_research": false,
+      "required_source": false,
+      "first_seen_at": 1794205331178,
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 16,
+      "tags": [
+        "mixed-asset",
+        "national",
+        "macro",
+        "trend"
+      ],
+      "heat_signals": [
+        "fed",
+        "inflation"
+      ],
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "capital_focus": false,
+      "geo_evidence": null,
+      "duplicate_of": null,
+      "selector_reason": "报道选举后CRE市场对政策确定性、数据中心投资及融资环境的看法，属有参考价值的行业情绪综述，但无独立量化研究。",
+      "title_zh": "中期选举后 CRE 关注政策确定性",
+      "summary_zh": "The Real Estate Roundtable 首席执行官预计，分裂政府可能带来立法机会，但新国会不太可能迅速缓解 CRE 面临的高成本、劳动力短缺和高融资成本。",
+      "impact": "neutral",
+      "evidence_quote": "Major relief from the ubiquitous issues for commercial real estate today, including higher costs, low labor availability and expensive debt, is unlikely to come from the new Congress because those issues are closely tied to Trump's executive actions and powers.",
+      "evidence_basis": "body",
+      "cre_subcategory": "跨资产"
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "loanDepot's Q3 loss grows while it chases 2027 break-even",
+      "link": "https://www.housingwire.com/articles/loandepot-q3-2026/",
+      "description": "loanDepot widened its net loss in the third quarter of 2026 as it sold mortgage servicing rights (MSRs), repurchased debt and leaned into higher-margin products. The California-based nonbank lender reported a $29 million net loss in Q3, compared with a $7 million loss in the prior quarter, according to its earnings release Monday. Founder and CEO Anthony Hsieh told analysts that the quarter was challenged by unexpectedly higher interest rates but said the company remains focused on gaining market share despite depressed volumes. “Getting over the seasonality of Q4 and Q1, and of course not knowing where the market will end up next year, but if it stays at this level, we are very confident that we'll get to a break even of profitability by first half or mid next year,” Hsieh said. loanDepot originated $7.05 billion in mortgages in the third quarter, down 12% from the prior quarter but up 7.8% year over year. Purchase loans made up more than 61% of total volume. On a unit basis, originations rose 7% quarter over quarter, helped by the company’s expansion into home equity products. Management said loanDepot estimates it ranked among the top three nonbank home equity lenders in the third quarter based on volume, a shift that helped push gain-on-sale margin to 399 basis points, up 54 basis points from the second quarter. “Since my return last year, we increased origination volume by 8%, grew unit volume by 33%, increased purchase volume by 10%, improved return on marketing by 14%, and reduced our cost to produce by 16%,” Hsieh said. “These results reflect the success of our ongoing efforts to diversify revenue sources, increase operating efficiency, and improve the scalability of our platform.” The company now expects its productivity and efficiency initiatives to deliver $25 million in annualized cost savings through the remainder of 2026, more than double the previous estimate of $12 million. MSR sales fund deleveraging push loanDepot continued to shrink its balance sheet and reduce debt through MSR sales in the quarter. The company closed the sale of $10 billion in agency MSRs and agreed to sell an additional $9 billion in government MSRs, a transaction expected to close in October. After these moves, loanDepot’s servicing portfolio stood at $115.7 billion at the end of the quarter. Proceeds were used to repurchase $87 million of senior notes at an average price of 88% of par. Chief Financial Officer David Hayes said the combination of MSR sales and debt repurchases reduced net debt obligations by about $114 million, strengthened liquidity and improved financial flexibility. Even with those steps, leverage remains elevated. Debt obligations, net to total equity, were 6.5x at the end of the quarter, up from 4.8x a year earlier. Hayes said the company is working “actively” to address nearing debt maturities and is pursuing financing options to refinance or extend with financing counterparties ahead of 2027 bond maturities. He did not provide more details during the calls with analysts. Guidance Looking to the fourth quarter of 2026, loanDepot guided to origination volume between $4.5 billion and $6.5 billion, implying potentially lower production than Q3. However, it expects gain-on-sale margin between 315 basis points and 355 basis points. Management framed the outlook as a continuation of the pivot toward more profitable products, a larger purchase footprint and a leaner cost base in the face of persistent rate pressure. “While elevated interest rates remain a headwind for mortgage demand, we believe the actions we have taken to diversify our product offerings, expand our purchase market presence, improve efficiency, strengthen margins, and optimize our balance sheet have positioned loanDepot to emerge from this cycle as a stronger and more competitive company,” Hsieh said in a statement. “We remain focused on growing market share, improving profitability, and creating long-term value for our shareholders.” Related More: Earnings loanDepot",
+      "published_at": 1794251331000,
+      "source_family": "housingwire",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "4859c61f966ef9a9",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 15,
+      "tags": [
+        "housing",
+        "national",
+        "earnings",
+        "lender"
+      ],
+      "heat_signals": [],
+      "date_precision": "timestamp",
+      "modified_at": 1794251333000,
+      "extraction": "semantic",
+      "canonical": "https://housingwire.com/articles/loandepot-q3-2026",
+      "content_hash": "5fe01f84b55e1ca8b7fe056ac9929ab61bc0de8f9c86fd0db19d2f0b6b6ab75c",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "capital_focus": false,
+      "geo_evidence": null,
+      "duplicate_of": null,
+      "selector_reason": "loanDepot季度业绩披露亏损扩大、贷款发放量变化及盈利目标，提供按揭贷款机构经营数据；常规经营财报不标记capital_focus。",
+      "title_zh": "loanDepot Q3 净亏损扩大至 2,900 万美元",
+      "summary_zh": "loanDepot Q3 净亏损由前季 700 万美元扩大至 2,900 万美元，抵押贷款发放额为 70.5 亿美元；管理层仍预计最早明年上半年实现盈亏平衡。",
+      "impact": "short-neg",
+      "evidence_quote": "The California-based nonbank lender reported a $29 million net loss in Q3, compared with a $7 million loss in the prior quarter, according to its earnings release Monday.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
+      "source_tags": [
+        "housing",
+        "rates",
+        "policy"
+      ],
+      "region": "national",
+      "title": "NAR membership proves more resilient than expected, topping 1.46 million",
+      "link": "https://www.housingwire.com/articles/nar-membership-revenue-budget-2026/",
+      "description": "It is no secret that the National Association of Realtors (NAR) had a challenging few years. From facing a sexual harassment scandal , navigating the commission lawsuits and the implementation of the resulting settlement, to looking to create a more accountable and responsible version of the trade group , NAR has experienced its fair share of growing pains. But, when it comes to the association’s financials, 2026 was far better than anticipated. In an update at NAR’s 2026 NXT Board of Directors meeting by NAR’s 2026 Treasurer Craig Sanford, it was revealed that at the end of September, the association had 1,469,127 members, 22% better than the 1.2 million members the association had budgeted for and just 1.5% lower than membership a year ago. In addition, Sanford said membership renewals for 2027 are tracking in line with where they were in 2026. Revenue from membership dues accounted for roughly $220 million of the more than $250 million in revenue NAR had reported as of the end of September. Sanford also noted that NAR’s expenses as of late September had come in roughly $7 million better than budgeted, but that he expected some of those savings to be diminished by fourth quarter advocacy spending due to the recent midterm elections. Despite this, Sanford said that NAR’s cash and investments remain strong, allowing the trade group to meet its upcoming settlement payments while still investing in new products and services for its members. “In my two years as treasurer, I have seen the start of one of the greatest financial modernization in transformation in NAR's history,” Sanford said. “We have implemented a new accounting system along with accounting and budgeting tools, moved to monthly accrual accounting, selected and onboarded the new auditor, managed through massive personnel changes, implemented zero-based budgeting and now we are minutes away from voting to send our third consecutive balanced budget to the Board for approval.” Despite this progress, Sanford said that the work is not done, instead it's just getting started. 2027 Budget votes The next stage of this work kicked off with the approval of three budgetary members by the board of directors. Sanford noted that this budget was created after stringent review of each department, resulting in a budget “that is more intentional, more strategically aligned and better positioned to support [NAR’s] core mission while maintaining financial discipline.” During the meeting, the board overwhelmingly approved a 2027 operating and advocacy budget of $280,169,801 in gross revenue, and $246,952,390 in gross expenses. Over 90% of the directors also approved a 2027 consumer advertising campaign budget of $12 million in gross revenue and $13.696 million in program expenses. Additionally, over 95% of the directors approved a recommendation that found that the capital expenditure needs identified for 2027 technology total $2.42 million and that the capital expenditure needs identified for 2027 building needs total $3.06 million. Other measures approved In addition to approving budgetary measures, the board also voted on proposed amendments to the bylaws of the institutes, societies and councils. During the meeting, Brown noted that the amendments were reviewed by NAR’s general counsel and were deemed to be “not inconsistent with the policies and constitution” of NAR. The proposed amendments were approved by 864 directors voting in favor and six opposed. Beyond voting on these measures, the meeting also saw the installation of the 2027 leadership team, including 2027 NAR President Christine Hansen, a HousingWire Woman of Influence , President-elect Colin Mullane , First Vice President Pete Kopf and Treasurer Patti Fitzgerald. The leaders were approved by the board of directors back in May at NAR’s Realtors Legislative Meetings. Related More: Commission Lawsuit National Association of Realtors",
+      "published_at": 1794246194000,
+      "source_family": "housingwire",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "bcfe6346b748685b",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 15,
+      "tags": [
+        "mixed-asset",
+        "national",
+        "data",
+        "brokerage"
+      ],
+      "heat_signals": [],
+      "date_precision": "timestamp",
+      "modified_at": 1794246381000,
+      "extraction": "semantic",
+      "canonical": "https://housingwire.com/articles/nar-membership-revenue-budget-2026",
+      "content_hash": "a0b19012bf355f5e38f43b4083e6fed94213aef6d1a8799e6580b8602fbab460",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "capital_focus": false,
+      "geo_evidence": null,
+      "duplicate_of": null,
+      "selector_reason": "NAR披露会员数高于预算、会费收入及续会趋势，提供全国经纪行业组织的独立财务与会员数据。",
+      "title_zh": "NAR 会员数超 146 万，财务表现好于预算",
+      "summary_zh": "NAR 透露，截至 9 月会员数为 1,469,127 人，较预算高 22%，且现金与投资保持稳健，可满足即将到期的和解付款并继续投入会员产品服务。",
+      "impact": "neutral",
+      "evidence_quote": "At the end of September, the association had 1,469,127 members, 22% better than the 1.2 million members the association had budgeted for and just 1.5% lower than membership a year ago.",
+      "evidence_basis": "body",
+      "cre_subcategory": "跨资产"
+    },
+    {
+      "source_id": "rebusiness-online",
+      "source_name": "REBusiness Online",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "Berkadia Provides $219M in Agency Permanent Loan for Upper Manhattan Affordable Housing Community",
+      "link": "https://rebusinessonline.com/berkadia-provides-219m-in-agency-permanent-loan-for-upper-manhattan-affordable-housing-community/",
+      "description": "Berkadia Provides $219M in Agency Permanent Loan for Upper Manhattan Affordable Housing Community by Taylor Williams November 9, 2026 November 9, 2026 2 NEW YORK CITY — Berkadia has provided a $219 million Fannie Mae permanent loan for the rehabilitation and preservation of Rangel Houses, a 984-unit affordable housing community in Upper Manhattan. Rangel Houses was originally built on 11 acres in 1951 as Colonial Park Houses and was renamed in 1977 in honor of tenant association president Ralph Rangel. Today, the community comprises eight high-rise buildings that are home to roughly 1,800 people. All units are reserved for households earning 80 percent or less of the area median income, with the majority (954 units) designated for “very low-income” residents. Rangel Houses also features playgrounds and open space, commercial space and specialized centers for seniors and children of varying ages. Matthew Baptiste and Heather Olson of Berkadia originated the financing in partnership with the New York City Housing Authority, the New York City Housing Development Corp. and Goldman Sachs on behalf of the owner, Genesis Cos. The loan was structured with a 15-year term, five years of interest-only payments and a 40-year amortization schedule. Facebook Twitter Linkedin Email previous post Marcus Partners Buys 155,000 SF Industrial Building in Salem, New Hampshire next post Lee & Associates Negotiates 87,730 SF Industrial Lease in Lewisville, Texas You may also like Larkspur Capital Begins Leasing 219-Unit Multifamily Project in... November 9, 2026 Marcus Partners Buys 155,000 SF Industrial Building in... November 9, 2026 IPA Negotiates Sale of 71-Unit Apartment Building in... November 9, 2026 Marcus & Millichap Brokers $14.6M Sale of Shopping... November 9, 2026 Walker & Dunlop Arranges $110M Financing for Multifamily... November 9, 2026 RED Development Receives $69.3M Refinancing for Offices at... November 9, 2026 Arrow Real Estate Secures $16.9M in Acquisition Financing... November 9, 2026 Northmarq Negotiates Sale of 350-Unit Apartment Community in... November 9, 2026 TruAmerica Multifamily Breaks Ground on 154-Unit Townhome Community... November 9, 2026",
+      "published_at": 1794238150000,
+      "source_family": "rebusiness-online",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "373611da84388c24",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 14,
+      "tags": [
+        "multifamily",
+        "nyc",
+        "deals",
+        "lender"
+      ],
+      "heat_signals": [
+        "fannie mae"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 1794238151000,
+      "extraction": "semantic",
+      "canonical": "https://rebusinessonline.com/berkadia-provides-219m-in-agency-permanent-loan-for-upper-manhattan-affordable-housing-community",
+      "content_hash": "89bab595049bb44be21f6ba3439ae25b869659cf17b96d2940b7cc47488836ae",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "capital_focus": false,
+      "geo_evidence": "Upper Manhattan Affordable Housing Community",
+      "duplicate_of": null,
+      "selector_reason": "为曼哈顿984户可负担住房提供2.19亿美元长期贷款，交易规模大且涉及住房保全；物业融资本身不构成capital_focus。",
+      "title_zh": "Berkadia 提供 2.19 亿美元保障性住房贷款",
+      "summary_zh": "Berkadia 为纽约上曼哈顿 984 户保障性住房社区提供 2.19 亿美元 Fannie Mae 永久贷款，用于修缮和保留，贷款期限 15 年并含 5 年只付息期。",
+      "impact": "long-pos",
+      "evidence_quote": "Berkadia has provided a $219 million Fannie Mae permanent loan for the rehabilitation and preservation of Rangel Houses, a 984-unit affordable housing community in Upper Manhattan.",
+      "evidence_basis": "body",
+      "cre_subcategory": "多户"
+    },
+    {
+      "source_id": "realtor-news",
+      "source_name": "Realtor.com News",
+      "source_tier": "A",
+      "source_weight": 6,
+      "source_tags": [
+        "housing"
+      ],
+      "region": "national",
+      "title": "The Latest Shift in How Appraisals Are Handled Could Save Homebuyers Hundreds in Closing Costs—Eventually",
+      "link": "https://www.realtor.com/news/trends/appraisals-uad-36-closing-costs-money-monday/",
+      "description": "It’s typically the last hurdle for homebuyers—and the process is about to get a face-lift. Last week, the Uniform Appraisal Dataset (UAD) 3.6 , a major update to property valuation standards introduced by Fannie Mae and Freddie Mac , became mandatory for all new UCDP appraisal report submissions. UAD 3.6 is a new, digital form that appraisers will use to evaluate homes . Now, rather than the appraiser meticulously jotting down notes in longform paragraphs, the new system will allow appraisers to use extensive drop-down menus and checkboxes to make their evaluations. A proper appraisal can determine not only whether a buyer can qualify for a loan , but also whether they can save significant money at closing. Understanding the Uniform Appraisal Dataset 3.6 After a buyer makes an offer, their mortgage lender will order an independent appraisal to confirm the home is worth at least what's being borrowed against it. If the appraised value comes in at or above the purchase price, the process moves forward as planned. But if it comes in low, that gap has to be resolved before the loan can close. The logic behind the UAD 3.6 update, according to Fannie and Freddie, is to create a “data-driven, dynamic reporting structure to capture property and market information.” This new form includes significantly more data fields, helping lenders and buyers better understand the property’s characteristics. But with more detail comes a longer commitment. “Be prepared for a lot more questions from the appraiser during the inspection,” explains Michael Mignogna , president of the Appraisal Institute . “There’s a lot more data to include, so be prepared to answer questions about renovations, repairs, new systems like heating and air conditioning, appliances, etc., or have that information ready if no one with that type of information can be at the inspection.” To that end, with UAD 3.6, appraisers will now not only grade individual rooms, but they can also highlight upgrades and features that might’ve been lost in the old system. So, features of a newly remodeled kitchen or new bathroom flooring get specifically noted, which will aid in the ease of deciding the home’s value. Still, Mignogna is skeptical that this will have much of an impact on the final value. “Not as much information is always known about the comparables, so expectations about condition/quality adjustments to the comps on a room-by-room basis should be tempered,” he adds. Loading... Appraisers are different from inspectors, as they establish the home's value, not it's condition. Getty Images How these new appraisals can save buyers money The buyer almost always pays for the appraisal. The cost is typically a few hundred dollars, and it’s often rolled into closing costs. This is the case even though the appraiser is hired by the lender, not the buyer. The hope is that because this new appraisal process is a clean, digital checklist, banks can review and approve it much faster, reducing delays. For example, under the former process, lenders had the option to kick back the report for corrections if anything about the report was unclear, which could happen if the appraiser’s report didn’t cover every facet necessary. When that happens, buyers may find themselves having to pay for expensive mortgage rate-lock extensions to keep their rates while they wait for the appraisal to clear. Extension fees typically range from 0.125% to 0.250% (or up to 0.500% or more) of the buyer's total loan balance per extension period, often broken into 15-day increments. On a $450,000 mortgage, a 15-day extension would usually cost between $500 and $1,000. Given that closing costs already run a buyer anywhere from 2% to 5% of the total loan amount, or about $8,000 to $20,000 for a $400,000 loan, according to Bankrate , another couple hundred to a thousand dollars is nothing to scoff at. The flip side But as the saying goes, all good things come with time, and right now, this new digital infrastructure may actually be coming at a cost to buyers as it finds its footing. Clear Capital, a real estate valuation technology company, reported via National Mortgage Professional an average $65 increase in appraisal fees in markets where it has enough production volume to compare UAD 3.6 with the older UAD 2.6 format. Additionally, Michael Farrell , president of the National Association of Mortgage Brokers, said that the number of field appraisers equipped to do UAD 3.6 is so limited at this point, demand bottlenecks are driving up prices for modernized reports. While older appraisals are being priced at around $550, modernized reports may cost borrowers closer to $850. “It’s basically all roads lead to chaos,” Farrell explained to Scotsman Guide . “From an originator standpoint, it's a delay. Delays cost money. Delays cost the consumer money.” Mignogna, meanwhile, says it’s important to remember that fees are affected by far more than just the process. “Appraisal fees are very specific to markets and are affected by the number of appraisers in a market, the demand for appraisals in that market, interest rates, and a host of other factors,” he says. Having said that, the transition to the UAD 3.6 format continues to be slow and Mignogna concedes that lenders may bid up prices for the few field appraisers who are fully onboarded like in any “supply-demand situation.” But while delays are happening as appraisers go through a “transition mode,” Mignogna says this won’t affect buyers' need for expensive mortgage rate-lock extensions. “This is really only meaningful or significant in times of interest rate uncertainty or expected rate increases,” he says. “The overall UAD 3.6 process is longer right now for the reasons above, but as the learning curve flattens, turnaround times will improve. It remains to be seen if the increased data requirements offset by UAD 3.6 familiarity gets us to the turnaround times seen before UAD 3.6 or faster turn times.” With that in mind, it’s a good id",
+      "published_at": 1794217620000,
+      "source_family": "realtor-com",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "ae934bc0a5d89d73",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 14,
+      "tags": [
+        "housing",
+        "national",
+        "policy",
+        "lender"
+      ],
+      "heat_signals": [
+        "freddie mac",
+        "fannie mae"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 1794217620000,
+      "extraction": "semantic",
+      "canonical": "https://realtor.com/news/trends/appraisals-uad-36-closing-costs-money-monday",
+      "content_hash": "ac0c00694b1f12b2ae013f7cca1a7f0796e150dbb97a9e41ad5de0f4a34eb8d3",
+      "access": "public",
+      "evidence_status": "article",
+      "keep": true,
+      "importance": 3,
+      "section": "national",
+      "capital_focus": false,
+      "geo_evidence": null,
+      "duplicate_of": null,
+      "selector_reason": "Fannie Mae与Freddie Mac要求采用新版统一估价数据格式，构成全国房屋估价流程的实质性制度变更。",
+      "title_zh": "UAD 3.6 评估表格正式强制使用",
+      "summary_zh": "Fannie Mae 和 Freddie Mac 推出的 UAD 3.6 已对新的 UCDP 评估报告提交强制使用，增加房产与市场数据字段，可能改善贷款评估信息，但评估环节将收集更多资料。",
+      "impact": "neutral",
+      "evidence_quote": "Last week, the Uniform Appraisal Dataset (UAD) 3.6 , a major update to property valuation standards introduced by Fannie Mae and Freddie Mac , became mandatory for all new UCDP appraisal report submissions.",
+      "evidence_basis": "body",
+      "cre_subcategory": null
+    },
+    {
+      "source_id": "connect-cre",
+      "source_name": "Connect CRE",
+      "source_tier": "A",
+      "source_weight": 7,
+      "source_tags": [
+        "mixed-asset",
+        "deals"
+      ],
+      "region": "national",
+      "title": "CRE Lending Enters Period of Transition as Q3 2026 Ends",
+      "link": "https://www.connectcre.com/stories/cre-lending-enters-period-of-transition-as-q3-2026-ends/",
+      "description": "National CRE News In Your Inbox. Sign up for Connect emails to stay informed with CRE stories that are 150 words or less. National + Finance | November 9, 2026 By: Paul Bubny CRE Lending Enters Period of Transition as Q3 2026 Ends Commercial real estate lending activity in the third quarter of 2026 reflected a market in transition as interest rates moved higher in September, CBRE said Monday. The latest CBRE Lending Momentum Index stood at 0.7 at the end of Q3, unchanged from a year ago but down from 1.0 at the end of Q2. As interest rates and Treasury yields both moved higher in September following the business-as-usual financing market in July and August, “The result was a repricing across both debt and equity markets for acquisitions, refinancings and recapitalizations, as investors weighed a wider range of potential outcomes amid continued inflation concerns and geopolitical uncertainty,” said James Millon, president & co-head of capital markets, U.S. & Canada, for CBRE. He continued, “Despite that volatility, capital remained available and credit continues to attract investor demand because of its yield and income characteristics. That ongoing appetite for credit should support capital availability even as markets work through near-term uncertainty.” Commercial loan-to-value ratios averaged 64.3% in Q3 2026, down from 66.9% a year ago, while multifamily LTV ratios increased to 66.3% from 64.9%. Read More News Stories About: CBRE Connect Inside The Story CBRE's Millon About Paul Bubny Paul Bubny serves as Senior Content Director for Connect Commercial Real Estate, a role to which he brings 19-plus years’ experience covering the commercial real estate industry and 35-plus years in business-to-business journalism. In this capacity, he oversees daily operations while also reporting on both local/regional markets and national trends, covering individual transactions across all property types, as well as delving into broader subject matter. He produces 11-15 daily news stories per day and works with the Connect team and clients to develop longer-form content, ranging from Q&As to thought-leadership pieces. Prior to joining Connect, Paul was Managing Editor for both Real Estate Forum and GlobeSt.com at American Lawyer Media, where he oversaw operations at both publications while also producing daily news and feature-length articles. His tenure in B2B publishing stretches back into the print era, and he has served as Editor in Chief on four national trade publications. Since 1999, Paul has volunteered as the newsletter editor of passenger rail advocacy groups (one national, one local). Order Reprints ◦ Financing |Financing National Finance CRE Lending Enters Period of Transition as Q3 2026 Ends Paul Bubny November 9, 2026 Load More",
+      "published_at": 1794249500000,
+      "source_family": "connect-cre",
+      "is_research": false,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794260239293,
+      "id": "49ec44fd9c48f236",
+      "acquisition_window": {
+        "lower": 1794171600000,
+        "upper": 1794258000000
+      },
+      "score": 13,
+      "tags": [
+        "mixed-asset",
+        "national",
+        "rates",
+        "data"
+      ],
+      "heat_signals": [],
+      "date_precision": "day",
+      "published_date": "2026-11-09",
+      "modified_at": 1794253491000,
+      "extraction": "semantic",
+      "canonical": "https://connectcre.com/stories/cre-lending-enters-period-of-transition-as-q3-2026-ends",
+      "content_hash": "c9583484b055e5a093f3fedf2c26592fc3bd8b69d4fe0a6651a1c66a8b8c7326",
+      "access": "preview",
+      "evidence_status": "preview",
+      "keep": true,
+      "importance": 3,
+      "section": "cre",
+      "capital_focus": false,
+      "geo_evidence": null,
+      "duplicate_of": null,
+      "selector_reason": "CBRE Q3贷款动能指数及融资市场评论反映利率上升后收购、再融资和资本重组重新定价，提供全国CRE融资参考。",
+      "title_zh": "Q3 CRE 融资进入重新定价阶段",
+      "summary_zh": "CBRE 表示，利率和美国国债收益率在 9 月上升，推动债务与股权市场重新定价；Q3 商业贷款 LTV 均值降至 64.3%，多户住宅 LTV 升至 66.3%。",
+      "impact": "neutral",
+      "evidence_quote": "The result was a repricing across both debt and equity markets for acquisitions, refinancings and recapitalizations, as investors weighed a wider range of potential outcomes amid continued inflation concerns and geopolitical uncertainty.",
+      "evidence_basis": "body",
+      "cre_subcategory": "跨资产"
+    }
+  ],
+  "executive_summary": {
+    "text": "美国住宅需求与改造活动仍显疲弱：Redfin 估计 9 月公寓卖家较买家多 123%，NAHB 则称 Q2 住宅改造支出按季节调整年率计下降 2.3%；抵押贷款利率虽回落，通胀数据仍可能改变市场预期。多户住宅运营与资本市场表现分化：西雅图 Q3 投资销售额升至 15 亿美元，达拉斯和得州持续新增租赁及住宅供应；但 CRE 融资面临重新定价，Macerich 的 3.99 亿美元商场贷款违约凸显资产负债表压力。",
+    "text_en": "U.S. housing demand and remodeling remain weak: Redfin estimated 123% more condo sellers than buyers in September, while NAHB reported a 2.3% quarterly decline in Q2 remodeling spending; mortgage rates eased, but inflation data remains a key risk. Multifamily operations and capital markets diverged: Seattle investment sales reached $1.5 billion in Q3, while Dallas and Texas added rental and residential supply; CRE repricing and Macerich's $399 million mall-loan defaults highlight balance-sheet pressure.",
+    "sentences": [
+      {
+        "text": "美国住宅需求与改造活动仍显疲弱：Redfin 估计 9 月公寓卖家较买家多 123%，NAHB 则称 Q2 住宅改造支出按季节调整年率计下降 2.3%；抵押贷款利率虽回落，通胀数据仍可能改变市场预期。",
+        "text_en": "U.S. housing demand and remodeling remain weak: Redfin estimated 123% more condo sellers than buyers in September, while NAHB reported a 2.3% quarterly decline in Q2 remodeling spending; mortgage rates eased, but inflation data remains a key risk.",
+        "item_ids": [
+          "015040106deec42d",
+          "85de194ad1e37fde",
+          "b0ef92d71d0c4b25"
+        ]
+      },
+      {
+        "text": "多户住宅运营与资本市场表现分化：西雅图 Q3 投资销售额升至 15 亿美元，达拉斯和得州持续新增租赁及住宅供应；但 CRE 融资面临重新定价，Macerich 的 3.99 亿美元商场贷款违约凸显资产负债表压力。",
+        "text_en": "Multifamily operations and capital markets diverged: Seattle investment sales reached $1.5 billion in Q3, while Dallas and Texas added rental and residential supply; CRE repricing and Macerich's $399 million mall-loan defaults highlight balance-sheet pressure.",
+        "item_ids": [
+          "29d442e4ca5933be",
+          "e981a73045bfb385",
+          "5dc4898c1f5821bb",
+          "c550e8463de998f7",
+          "3b5406433eb986f7",
+          "dd3333ba31b69c93",
+          "49ec44fd9c48f236"
+        ]
+      }
+    ]
+  },
+  "themes": [],
+  "sources_attempted": 77,
+  "sources_ok": 66,
+  "errors": [
+    {
+      "source": "The Real Deal (National)",
+      "error": "Directory contained no matching links"
+    },
+    {
+      "source": "Miami Agent Magazine",
+      "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)"
+    },
+    {
+      "source": "PERE News",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "Fannie Mae ESR",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "Harvard JCHS",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "ULI/PwC Emerging Trends",
+      "error": "Directory contained no matching links"
+    },
+    {
+      "source": "John Burns Research",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "Arbor/Chandan Research",
+      "error": "HTTP 404"
+    },
+    {
+      "source": "Newmark Research",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "MBA Research",
+      "error": "HTTP 403"
+    },
+    {
+      "source": "Apartment List Research",
+      "error": "Directory contained no matching links"
+    }
+  ],
+  "_diagnostics": {
+    "timings": {
+      "cutoff": 1794258000000,
+      "job_started_at": 1794285857975,
+      "collection_finished_at": 1794260266258,
+      "generation_finished_at": 1794285858049
+    },
+    "collection_watermarks": {
+      "inman": 1794258000000,
+      "multi-housing-news": 1794258000000,
+      "national-mortgage-news": 1793221200000,
+      "cnbc-realestate": 1794258000000,
+      "d-magazine": 1793826000000,
+      "houston-agent": 1794258000000,
+      "phoenix-agent": 1794258000000,
+      "atlanta-agent": 1794258000000,
+      "google-news-sunbelt": 1794258000000,
+      "nahb-eyeonhousing": 1794258000000,
+      "calculated-risk": 1794258000000,
+      "lance-lambert": 1794258000000,
+      "logan-mohtashami": 1794258000000,
+      "yardi-matrix": 1794258000000,
+      "realtor-research": 1794258000000,
+      "realtor-news": 1793307600000,
+      "redfin-news": 1794258000000,
+      "fed-press": 1794258000000,
+      "brookings-housing": 1794258000000,
+      "multifamily-dive": 1794258000000,
+      "nrhc": 1794258000000,
+      "pretium-partners": 1794258000000,
+      "btrlist": 1794258000000,
+      "google-news-btr": 1794258000000,
+      "houston-bj-cre": 1794258000000,
+      "houston-bj-resi": 1794258000000,
+      "dallas-bj-cre": 1794258000000,
+      "dallas-bj-resi": 1794258000000,
+      "austin-bj-cre": 1794258000000,
+      "austin-bj-resi": 1794258000000,
+      "har-research": 1794258000000,
+      "zillow-research": 1794258000000,
+      "nar-research": 1794258000000,
+      "census-construction": 1794258000000,
+      "census-sales": 1794258000000,
+      "fhfa-research": 1794258000000,
+      "freddie-pmms": 1793221200000,
+      "unlock-research": 1794258000000,
+      "urban-housing": 1794258000000,
+      "realpage-research": 1794258000000,
+      "msci-research": 1794258000000,
+      "northmarq-research": 1793307600000,
+      "cotality-research": 1794258000000,
+      "ice-research": 1794258000000,
+      "attom-research": 1794258000000,
+      "apartmentlist-research": 1793653200000,
+      "costar-research": 1794258000000,
+      "sp-case-shiller": 1794258000000,
+      "zonda-research": 1794258000000,
+      "zonda-lot-supply": 1794258000000,
+      "sec-invh-8k": 1794258000000,
+      "sec-amh-8k": 1794258000000,
+      "colliers-research": 1794258000000
+    },
+    "writer_validation": {
+      "discarded_output_ids": []
+    },
+    "pipeline_version": "3.0",
+    "provenance": "live",
+    "window_hours": 24,
+    "candidate_pool_size": 56,
+    "eligible_count": 103,
+    "backlog_before_window": [
+      "29d442e4ca5933be"
+    ],
+    "publication_exclusions": [
+      {
+        "id": "5334163addf138b2",
+        "published_at": 1794011220000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "120d13b57c621fb3",
+        "published_at": 1790751600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "7414f96bfacbef4d",
+        "published_at": 1793908645000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "2e54afb3d73e8c70",
+        "published_at": 1790060400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "6c56f19f18800148",
+        "published_at": 1776937510000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "58f7d1997f5f37c6",
+        "published_at": 1753945200000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "4af0b59ae013821c",
+        "published_at": 1786518000000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "0e9c2d1f108ae3d3",
+        "published_at": 1769673600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "fa5a02e92802d3c0",
+        "published_at": 1790233200000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "d992c23522ee4e99",
+        "published_at": 1780556400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "e80b6e67375091fe",
+        "published_at": 1720681200000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "3e0253fdc7b8b3a6",
+        "published_at": 1794242733000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "2a67b785c7a97afc",
+        "published_at": 1794218818000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "f2151b400607426e",
+        "published_at": 1793976988000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "ee4f91ccc618e73a",
+        "published_at": 1794234395000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "7d52d7354bc04ceb",
+        "published_at": 1794232889000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "9376d9cec3c5a368",
+        "published_at": 1794237093000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "6b388ec72ffd5b1b",
+        "published_at": 1794255540000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "d859966a4fb3dca6",
+        "published_at": 1794226394000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "aa6181d74e672fd6",
+        "published_at": 1794235315000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "fb1724193fcd3e26",
+        "published_at": 1794253581000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "4dc81efd12db2592",
+        "published_at": 1794225600000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "d64f1d3de4594556",
+        "published_at": 1793915520000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "459b478e1ccbfe85",
+        "published_at": 1786690800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "2c4ae7ee755cf986",
+        "published_at": 1651302000000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "c569ebb558f40196",
+        "published_at": 1744700400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "45b1b88410edf882",
+        "published_at": 1785308400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "fabda4859546413f",
+        "published_at": 1688108400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "0b897c6b133736c6",
+        "published_at": 1776937510000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "31198053017d3155",
+        "published_at": 1730271600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "faaf3f89aafcb789",
+        "published_at": 1794233340000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "2597619cd2ac6634",
+        "published_at": 1794239880000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "aaba261c4e6ba4c9",
+        "published_at": 1793994060000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "8cddda76c69baec9",
+        "published_at": 1793955600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "59f5fc8c1b508906",
+        "published_at": 1793991480000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "3698975838e2d3fa",
+        "published_at": 1781852400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "8aa91f8caaf4bd89",
+        "published_at": 1794117600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "106fc1748a70d836",
+        "published_at": 1794153600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "44314b177ddf4b8b",
+        "published_at": 1793962800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "9e758013b3f3986d",
+        "published_at": 1618431585000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "f3fc408cd5022050",
+        "published_at": 1637308800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "f98b42da5fa2056e",
+        "published_at": 1794117600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "6f53edef79681d67",
+        "published_at": 1793972640000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "ac3b7369c7709351",
+        "published_at": 1793916900000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "62762571e75a38b5",
+        "published_at": 1794222000000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "e8b0f66142a1b99f",
+        "published_at": 1793988840000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "b507345876801262",
+        "published_at": 1794157500000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "9d52ca00f24244c4",
+        "published_at": 1793921760000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "5d05735c28ee07cc",
+        "published_at": 1794256380000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "473f59e25582aeae",
+        "published_at": 1794198240000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "e2c95c4b4693dfa9",
+        "published_at": 1737446400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "445a8f3802feb208",
+        "published_at": 1779346800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "137365e4c8414a77",
+        "published_at": 1776841200000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "9caa138c4193768c",
+        "published_at": 1794239880000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "2d251236fdfcb59b",
+        "published_at": 1793998020000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "bb23b71eea15163c",
+        "published_at": 1793952000000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "f05ac1e1bea12b41",
+        "published_at": 1793995860000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "2d50f4578a3a0de8",
+        "published_at": 1793969880000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "feed5bf88c9f8537",
+        "published_at": 1793672400000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "68dbf06d11afe2f3",
+        "published_at": 1793968920000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "36a8401e17015b4f",
+        "published_at": 1794254520000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "a4abc01e54fec7de",
+        "published_at": 1793911680000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "17bb417de7eeb322",
+        "published_at": 1793994060000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "61da5b3b93aba087",
+        "published_at": 1794238680000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "fa6fdf531d023649",
+        "published_at": 1793832300000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "59861c40b2bc5bd9",
+        "published_at": 1794250860000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "20e9cfca974643fa",
+        "published_at": 1741161600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "aeaea246e7a007c2",
+        "published_at": 1744354800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "fc1acd7fa39d9b26",
+        "published_at": 1784185200000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "df72e42216357c66",
+        "published_at": 1741762800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "57365d3cd53b2ba9",
+        "published_at": 1794246120000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "8b4b8d4d0f9c7d68",
+        "published_at": 1794239880000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "9c8186e68f75fcd4",
+        "published_at": 1794085260000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "5675e5cd33806ec7",
+        "published_at": 1793944800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "2f2695e2c0a9158b",
+        "published_at": 1793830164000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "c856ad61b1df0865",
+        "published_at": 1793994180000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "274005037fd942b3",
+        "published_at": 1794146100000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "b9b2b17f180319d4",
+        "published_at": 1649401200000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "4823acb2e0e97f27",
+        "published_at": 1661151600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "2e238b8d47a50385",
+        "published_at": 1753254000000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "58c24b089dc5d9d9",
+        "published_at": 1742367600000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "907f592cc0f6e1eb",
+        "published_at": 1744732800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "9c8f3b194db193ed",
+        "published_at": 1780876800000,
+        "reason": "outside_publication_window"
+      },
+      {
+        "id": "98d405923a474afc",
+        "published_at": 1794257153000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "888aac82c2ed8c9f",
+        "published_at": 1794254382000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "e4a88b0573bee276",
+        "published_at": 1794254732000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "d2a8424d4d589336",
+        "published_at": 1794254249000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "9c08a590df3af7b8",
+        "published_at": 1794253740000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "aeb8a55674b78a2a",
+        "published_at": 1794248340000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "25dc0a618f89baf7",
+        "published_at": 1794245494000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "7da793285d5259b6",
+        "published_at": 1794256800000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "87b72118c56acb0a",
+        "published_at": 1794256740000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "bb0b5426e4d61681",
+        "published_at": 1794255826000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "35ca54911f4f9c3c",
+        "published_at": 1794255780000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "a3db417a7865d0e6",
+        "published_at": 1794255600000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "207096a534c9d6db",
+        "published_at": 1794255480000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "aa078fa5293025d6",
+        "published_at": 1794251700000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "d602390a294caf4e",
+        "published_at": 1794250800000,
+        "reason": "insufficient_evidence"
+      },
+      {
+        "id": "e572a4c8e59cea9e",
+        "published_at": 1794236940000,
+        "reason": "insufficient_evidence"
+      }
+    ],
+    "source_health": [
+      {
+        "id": "housingwire",
+        "name": "HousingWire",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.housingwire.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794243356000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "inman",
+        "name": "Inman News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.inman.com/feed/",
+          "https://news.google.com/rss/search?q=site:inman.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 9,
+        "unreadable_recent": 2,
+        "earliest_dated": 1416088164000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "trd-national",
+        "name": "The Real Deal (National)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://therealdeal.com/national/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "bisnow",
+        "name": "Bisnow",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.bisnow.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 7,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794004713000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "multi-housing-news",
+        "name": "Multi-Housing News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.multihousingnews.com/feed/",
+          "https://news.google.com/rss/search?q=site:multihousingnews.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 70,
+        "articles": 70,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 4,
+        "unreadable_recent": 1,
+        "earliest_dated": 1398469263000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "national-mortgage-news",
+        "name": "National Mortgage News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.nationalmortgagenews.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 9,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793914762000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "cnbc-realestate",
+        "name": "CNBC Realty Check",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000115"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 2,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792419338000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "d-magazine",
+        "name": "D Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.dmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 12,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793995200000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "houston-agent",
+        "name": "Houston Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://houstonagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793739604000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "phoenix-agent",
+        "name": "Phoenix Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://phoenixagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793623520000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "atlanta-agent",
+        "name": "Atlanta Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://atlantaagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793621744000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "miami-agent",
+        "name": "Miami Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://miamiagentmagazine.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)"
+      },
+      {
+        "id": "google-news-sunbelt",
+        "name": "Google News — Sun Belt Housing Market",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=%22housing+market%22+(Phoenix+OR+Tampa+OR+Atlanta+OR+Charlotte+OR+Nashville+OR+%22Las+Vegas%22+OR+Jacksonville+OR+Orlando+OR+Raleigh+OR+Memphis)&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 57,
+        "articles": 57,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1627196400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "nahb-eyeonhousing",
+        "name": "NAHB Eye on Housing",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://eyeonhousing.org/feed/"
+        ],
+        "status": "ok",
+        "discovered": 18,
+        "articles": 18,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793107200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "calculated-risk",
+        "name": "Calculated Risk (Bill McBride)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://feeds.feedburner.com/CalculatedRisk"
+        ],
+        "status": "ok",
+        "discovered": 25,
+        "articles": 25,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1767714840001,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "lance-lambert",
+        "name": "Lance Lambert / ResiClub",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://lancelambert.substack.com/feed",
+          "https://news.google.com/rss/search?q=%22Lance+Lambert%22+OR+%22ResiClub%22&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 56,
+        "articles": 56,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1453881600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "logan-mohtashami",
+        "name": "Logan Mohtashami (HousingWire)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.housingwire.com/author/logan-mohtashami/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792269062000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "yardi-matrix",
+        "name": "Yardi Matrix Blog",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.yardimatrix.com/publications/"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793491200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "realtor-research",
+        "name": "Realtor.com Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.realtor.com/research/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793268210000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "realtor-news",
+        "name": "Realtor.com News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.realtor.com/news/feed/"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 29,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794051000000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "redfin-news",
+        "name": "Redfin News",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.redfin.com/news/feed/"
+        ],
+        "status": "ok",
+        "discovered": 6,
+        "articles": 6,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793361620000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "trerc",
+        "name": "Texas Real Estate Research Center (TRERC)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://trerc.tamu.edu/texas-housing-insight/"
+        ],
+        "status": "ok",
+        "discovered": 69,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1743523903000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "fed-press",
+        "name": "Federal Reserve Press",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.federalreserve.gov/feeds/press_all.xml"
+        ],
+        "status": "ok",
+        "discovered": 20,
+        "articles": 20,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1789743600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "brookings-housing",
+        "name": "Brookings Institution",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.brookings.edu/topics/housing/"
+        ],
+        "status": "ok",
+        "discovered": 4,
+        "articles": 4,
+        "discovery_truncated": false,
+        "article_budget": 4,
+        "fetched_articles": 4,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1789058190000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "pere-news",
+        "name": "PERE News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.perenews.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "multifamily-dive",
+        "name": "Multifamily Dive",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.multifamilydive.com/feeds/news/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793737020000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "connect-cre",
+        "name": "Connect CRE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.connectcre.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 10,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794243926000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "rebusiness-online",
+        "name": "REBusiness Online",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://rebusinessonline.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 20,
+        "articles": 20,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 20,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794233206000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "nrhc",
+        "name": "National Rental Home Council (NRHC)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.rentalhomecouncil.org/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793374823000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "pretium-partners",
+        "name": "Pretium Partners",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://pretium.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1781021804000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "sec-invh-8k",
+        "name": "Invitation Homes (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://www.invh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1781261100000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "sec-amh-8k",
+        "name": "AMH (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://investors.amh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1775679300000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "btrlist",
+        "name": "BTR List (via Google News)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site:news.btrlist.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 58,
+        "articles": 58,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1722134745000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "google-news-btr",
+        "name": "Google News — BTR / SFR keywords",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=%22build-to-rent%22+OR+%22single-family+rental%22+OR+%22Invitation+Homes%22+OR+%22American+Homes+4+Rent%22+OR+Tricon+OR+Pretium+OR+%22Progress+Residential%22+OR+Roofstock+OR+%22Main+Street+Renewal%22+OR+%22FirstKey+Homes%22+OR+%22Home+Partners%22&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 3,
+        "unreadable_recent": 1,
+        "earliest_dated": 1579075200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "houston-bj-cre",
+        "name": "Houston Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 7,
+        "unreadable_recent": 1,
+        "earliest_dated": 1478466013000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "houston-bj-resi",
+        "name": "Houston Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 7,
+        "unreadable_recent": 2,
+        "earliest_dated": 1478462047000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "dallas-bj-cre",
+        "name": "Dallas Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 12,
+        "unreadable_recent": 4,
+        "earliest_dated": 1478442790000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "dallas-bj-resi",
+        "name": "Dallas Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 11,
+        "unreadable_recent": 4,
+        "earliest_dated": 1478442790000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "austin-bj-cre",
+        "name": "Austin Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 95,
+        "articles": 95,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 10,
+        "unreadable_recent": 1,
+        "earliest_dated": 1270450800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "austin-bj-resi",
+        "name": "Austin Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 99,
+        "articles": 99,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 10,
+        "unreadable_recent": 1,
+        "earliest_dated": 1270450800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "har-research",
+        "name": "HAR Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.har.com/content/department/newsroom?pid=640"
+        ],
+        "status": "ok",
+        "discovered": 132,
+        "articles": 2,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 2,
+        "stop_reason": "date_horizon",
+        "fallback_bodies": 2,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793030400000,
+        "coverage_basis": "ordered_date_horizon",
+        "coverage": {
+          "lower": 1793912400000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "zillow-research",
+        "name": "Zillow Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.zillow.com/research/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792065600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "nar-research",
+        "name": "NAR Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.nar.realtor/research-and-statistics/research-reports/research-update"
+        ],
+        "status": "ok",
+        "discovered": 13,
+        "articles": 13,
+        "discovery_truncated": false,
+        "article_budget": 13,
+        "fetched_articles": 13,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1325243280000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "census-construction",
+        "name": "Census New Residential Construction",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.census.gov/construction/nrc/current/index.html"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792512000000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://census.gov/construction/nrc/current/index.html": "32a3768fcced69a73a044289c3d73c3550311fcd8e4990cb51c57ccfb352375d"
+        },
+        "last_success": 1794260239293
+      },
+      {
+        "id": "census-sales",
+        "name": "Census New Residential Sales",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.census.gov/construction/nrs/current/index.html"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793116800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://census.gov/construction/nrs/current/index.html": "c03a0fa38527aa533c777b78bcff1e34902417a91673053b2d16e0b2dee2051a"
+        },
+        "last_success": 1794260239293
+      },
+      {
+        "id": "fhfa-research",
+        "name": "FHFA House Price Index",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.fhfa.gov/data/hpi"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793116800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "fannie-esr",
+        "name": "Fannie Mae ESR",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.fanniemae.com/data-and-insights/forecast"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "freddie-pmms",
+        "name": "Freddie Mac PMMS",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.freddiemac.com/pmms"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793898000000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {
+          "https://freddiemac.com/pmms": "379158fbc72c917b42c9caca9640bfd76e1807aed9718c2649feda4fc67f426f"
+        },
+        "last_success": 1794260239293
+      },
+      {
+        "id": "freddie-research",
+        "name": "Freddie Mac Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.freddiemac.com/research-and-perspectives"
+        ],
+        "status": "ok",
+        "discovered": 6,
+        "articles": 6,
+        "discovery_truncated": false,
+        "article_budget": 6,
+        "fetched_articles": 6,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1687363200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "texas-realtors",
+        "name": "Texas REALTORS Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.texasrealestate.com/research/quarterly-housing-report"
+        ],
+        "status": "ok",
+        "discovered": 36,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "metrotex-research",
+        "name": "MetroTex Market Reports",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.mymetrotex.com/market-reports/"
+        ],
+        "status": "ok",
+        "discovered": 165,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "unlock-research",
+        "name": "Unlock MLS Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.unlockmls.com/news"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1786406400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "harvard-jchs",
+        "name": "Harvard JCHS",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.jchs.harvard.edu/blog"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "urban-housing",
+        "name": "Urban Institute Housing Finance",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.urban.org/expertise/housing-finance"
+        ],
+        "status": "ok",
+        "discovered": 2,
+        "articles": 2,
+        "discovery_truncated": false,
+        "article_budget": 2,
+        "fetched_articles": 2,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1751284800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "cbre-research",
+        "name": "CBRE Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.cbre.com/services/property-types/multifamily"
+        ],
+        "status": "ok",
+        "discovered": 15,
+        "articles": 15,
+        "discovery_truncated": false,
+        "article_budget": 15,
+        "fetched_articles": 15,
+        "fallback_bodies": 0,
+        "undated": 2,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1744732800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "jll-research",
+        "name": "JLL Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.jll.com/en-us/insights"
+        ],
+        "status": "ok",
+        "discovered": 15,
+        "articles": 15,
+        "discovery_truncated": false,
+        "article_budget": 15,
+        "fetched_articles": 15,
+        "fallback_bodies": 0,
+        "undated": 7,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1719426600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "cushman-research",
+        "name": "Cushman & Wakefield Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
+        ],
+        "status": "ok",
+        "discovered": 85,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 12,
+        "unreadable_recent": 0,
+        "earliest_dated": 1791979200000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "colliers-research",
+        "name": "Colliers Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.colliers.com/en/research"
+        ],
+        "status": "ok",
+        "discovered": 2,
+        "articles": 2,
+        "discovery_truncated": false,
+        "article_budget": 2,
+        "fetched_articles": 2,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792587720000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "realpage-research",
+        "name": "RealPage Analytics",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.realpage.com/analytics/feed/"
+        ],
+        "status": "ok",
+        "discovered": 1104,
+        "articles": 1104,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1680193015000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "nmhc-research",
+        "name": "NMHC Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.nmhc.org/research-insight/quarterly-survey/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 10,
+        "fetched_articles": 10,
+        "fallback_bodies": 0,
+        "undated": 10,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "naa-research",
+        "name": "NAA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://naahq.org/research"
+        ],
+        "status": "ok",
+        "discovered": 8,
+        "articles": 8,
+        "discovery_truncated": false,
+        "article_budget": 8,
+        "fetched_articles": 8,
+        "fallback_bodies": 0,
+        "undated": 2,
+        "recent": 4,
+        "unreadable_recent": 0,
+        "earliest_dated": 1785952132000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "uli-pwc",
+        "name": "ULI/PwC Emerging Trends",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
+          "https://www.pwc.com/us/en/about-us/newsroom.html"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "msci-research",
+        "name": "MSCI Real Assets Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792684800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi": "bca6c6c9dd06a44e08d18d85a6ff5b833a9a5d830d12de16226484a149d5c757"
+        },
+        "last_success": 1794260239293
+      },
+      {
+        "id": "john-burns",
+        "name": "John Burns Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://jbrec.com/resources/insights/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "northmarq-research",
+        "name": "Northmarq Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.northmarq.com/insights"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793376000000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "berkadia-research",
+        "name": "Berkadia Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.berkadia.com/multifamily-reports/"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 7,
+        "fetched_articles": 7,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787068800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "arbor-research",
+        "name": "Arbor/Chandan Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://arbor.com/research/reports/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "newmark-research",
+        "name": "Newmark Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.nmrk.com/insights/market-report"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "cotality-research",
+        "name": "Cotality / CoreLogic Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.cotality.com/insights/all-insights"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 12,
+        "fetched_articles": 12,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787587200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "ice-research",
+        "name": "ICE Mortgage Monitor",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://mortgagetech.ice.com/resources/data-reports"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1780588800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "attom-research",
+        "name": "ATTOM Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.attomdata.com/news/category/market-trends/"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 7,
+        "fetched_articles": 7,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1791566740000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "mba-research",
+        "name": "MBA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "apartmentlist-research",
+        "name": "Apartment List Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.apartmentlist.com/research"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "costar-research",
+        "name": "CoStar / Apartments.com Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://www.apartments.com/grow/learning-center/market-trends"
+        ],
+        "status": "ok",
+        "discovered": 13,
+        "articles": 13,
+        "discovery_truncated": false,
+        "article_budget": 13,
+        "fetched_articles": 13,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1770638400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "sp-case-shiller",
+        "name": "S&P Cotality Case-Shiller",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://press.spglobal.com/index.php?l=50&s=2429"
+        ],
+        "status": "ok",
+        "discovered": 4,
+        "articles": 4,
+        "discovery_truncated": false,
+        "article_budget": 4,
+        "fetched_articles": 4,
+        "fallback_bodies": 4,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1785254400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794260239293
+      },
+      {
+        "id": "zonda-research",
+        "name": "Zonda Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://zondahome.com/new-home-market-update/"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792670400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://zondahome.com/new-home-market-update": "472389cbb3863416bd9389f5284bfbf753323d3dcb748402a562f70f854f24df"
+        },
+        "last_success": 1794260239293
+      },
+      {
+        "id": "zonda-lot-supply",
+        "name": "Zonda Lot Supply Index",
+        "research": true,
+        "required": false,
+        "checked_at": 1794260239293,
+        "attempted_urls": [
+          "https://zondahome.com/new-home-lot-supply-index-2/"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1786622400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794171600000,
+          "upper": 1794258000000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://zondahome.com/new-home-lot-supply-index-2": "1e27e1aaa61d30025009eb6adf8b8bf7d6fb75a859a0c453543d7bae47151a15"
+        },
+        "last_success": 1794260239293
+      }
+    ],
+    "research_audit": [
+      {
+        "id": "d39617207091e64f",
+        "source": "NAHB Eye on Housing",
+        "title": "Residential Building Worker Wage Growth Rebounds, but Real Wages Continue to Decline",
+        "link": "https://eyeonhousing.org/2026/11/residential-building-worker-wage-growth-rebounds-but-real-wages-continue-to-decline/",
+        "disposition": "selected"
+      },
+      {
+        "id": "015040106deec42d",
+        "source": "NAHB Eye on Housing",
+        "title": "Remodeling Activity Holds Flat in Second Quarter Amid Housing Slowdown",
+        "link": "https://eyeonhousing.org/2026/11/remodeling-activity-holds-flat-in-second-quarter-amid-housing-slowdown/",
+        "disposition": "selected"
+      },
+      {
+        "id": "69a8d9a1cf236cba",
+        "source": "Realtor.com Research",
+        "title": "Video: November 9, 2026, Economic and Housing Market Outlook",
+        "link": "https://www.realtor.com/research/video-economic-and-housing-market-update-november-9-2026/",
+        "disposition": "editorial_not_selected"
+      },
+      {
+        "id": "74165c978ac0fa5f",
+        "source": "Realtor.com Research",
+        "title": "October 2026 Luxury Housing Report: Where Luxury Prices Are Rising the Fastest",
+        "link": "https://www.realtor.com/research/october-2026-luxury/",
+        "disposition": "editorial_not_selected"
+      },
+      {
+        "id": "b0ef92d71d0c4b25",
+        "source": "Redfin News",
+        "title": "Mortgage Rates Dip Ahead of a Big Week for Inflation Data",
+        "link": "https://www.redfin.com/news/economic-update-november-9/",
+        "disposition": "selected"
+      },
+      {
+        "id": "85de194ad1e37fde",
+        "source": "Redfin News",
+        "title": "For Every Condo Buyer in the U.S., There Are More Than Two Sellers. That Gives Condo Buyers Strong Negotiating Power.",
+        "link": "https://www.redfin.com/news/condo-fall-2026/",
+        "disposition": "selected"
+      },
+      {
+        "id": "4c34313d21f2d8e6",
+        "source": "Cushman & Wakefield Research",
+        "title": "Cushman & Wakefield Brokers $44 Million Sale of 240-Unit Apartment Community in Sheboygan, Wisconsin to Axiom Properties",
+        "link": "https://cushmanwakefield.com/en/united-states/news/2026/11/the-corridor_sheboygan_nov-2026",
+        "disposition": "editorial_not_selected"
+      }
+    ],
+    "editorial_coverage": {
+      "sections": {
+        "national": {
+          "candidates": 27,
+          "qualified": 6,
+          "selected": 6,
+          "required_sources": 0,
+          "source_failures": [],
+          "status": "selected"
+        },
+        "sunbelt": {
+          "candidates": 3,
+          "qualified": 3,
+          "selected": 3,
+          "required_sources": 0,
+          "source_failures": [],
+          "status": "selected"
+        },
+        "btr": {
+          "candidates": 2,
+          "qualified": 1,
+          "selected": 1,
+          "required_sources": 2,
+          "source_failures": [],
+          "status": "selected"
+        },
+        "cre": {
+          "candidates": 24,
+          "qualified": 8,
+          "selected": 7,
+          "required_sources": 0,
+          "source_failures": [],
+          "status": "selected"
+        },
+        "institutional": {
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "required_sources": 0,
+          "source_failures": [],
+          "status": "no_candidates"
+        }
+      },
+      "assets": [
+        {
+          "id": "housing",
+          "label": "住宅市场",
+          "candidates": 7,
+          "qualified": 7,
+          "selected": 7,
+          "recent_selected": 7,
+          "last_selected_date": "2026-11-10"
+        },
+        {
+          "id": "multifamily",
+          "label": "多户公寓",
+          "candidates": 4,
+          "qualified": 4,
+          "selected": 4,
+          "recent_selected": 4,
+          "last_selected_date": "2026-11-10"
+        },
+        {
+          "id": "btr-sfr",
+          "label": "BTR / SFR",
+          "candidates": 1,
+          "qualified": 1,
+          "selected": 1,
+          "recent_selected": 1,
+          "last_selected_date": "2026-11-10"
+        },
+        {
+          "id": "office",
+          "label": "办公",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "industrial",
+          "label": "工业 / 仓储",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "data-center",
+          "label": "数据中心",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "hotel",
+          "label": "酒店",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "retail",
+          "label": "零售",
+          "candidates": 1,
+          "qualified": 1,
+          "selected": 1,
+          "recent_selected": 1,
+          "last_selected_date": "2026-11-10"
+        },
+        {
+          "id": "self-storage",
+          "label": "自存储",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "senior-housing",
+          "label": "养老地产",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "life-sciences",
+          "label": "生命科学",
+          "candidates": 0,
+          "qualified": 0,
+          "selected": 0,
+          "recent_selected": 0,
+          "last_selected_date": null
+        },
+        {
+          "id": "mixed-asset",
+          "label": "混合资产",
+          "candidates": 5,
+          "qualified": 5,
+          "selected": 4,
+          "recent_selected": 4,
+          "last_selected_date": "2026-11-10"
+        }
+      ],
+      "unclassified_selected": 0,
+      "history": {
+        "expected_dates": [
+          "2026-11-10",
+          "2026-11-09",
+          "2026-11-06",
+          "2026-11-05",
+          "2026-11-04"
+        ],
+        "observed_dates": [
+          "2026-11-10"
+        ],
+        "missing_dates": [
+          "2026-11-09",
+          "2026-11-06",
+          "2026-11-05",
+          "2026-11-04"
+        ]
+      }
+    },
+    "source_counts": {
+      "cbre-research": 1,
+      "nahb-eyeonhousing": 2,
+      "bisnow": 3,
+      "redfin-news": 2,
+      "connect-cre": 2,
+      "houston-agent": 1,
+      "housingwire": 3,
+      "rebusiness-online": 2,
+      "realtor-com": 1
+    },
+    "source_exceptions": [],
+    "coverage_gaps": [],
+    "required_source_problems": [],
+    "llm": [
+      {
+        "label": "editor",
+        "model": "gpt-6.1-sol",
+        "effort": "medium",
+        "attempt": 1,
+        "request_id": "f83db993-32af-41ca-b439-a12fb8336b37",
+        "request_hash": "c3acacb2abf6c25a19a7ed4e8f3bfcbfa483a5ecaf400d979652c2abafb899e8",
+        "started_at": "2026-11-09T21:37:47.587Z",
+        "reserved_ms": 240000,
+        "failed": true,
+        "retryable": true,
+        "error": "Missing subject geography evidence: 13",
+        "error_name": "Error",
+        "error_code": null,
+        "causes": [],
+        "ms": 54144,
+        "first_byte_ms": 2219,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_058e4314a14f9db0016af23d2cfc6487d19133f8a4e529eab5",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 23598,
+          "completion_tokens": 2888,
+          "total_tokens": 26486
+        },
+        "response_characters": 7461,
+        "retry_delay_ms": 15000
+      },
+      {
+        "label": "editor",
+        "model": "gpt-6.1-sol",
+        "effort": "medium",
+        "attempt": 2,
+        "request_id": "d19f0350-0b28-43cd-ad29-4af17f0eb426",
+        "request_hash": "d46d26e3dd72111b12b17355ca2f04624ceb266601420433fc21318c9787bab5",
+        "started_at": "2026-11-09T21:38:56.735Z",
+        "reserved_ms": 240000,
+        "cache_hit": false,
+        "repairs": 1,
+        "response_model": "gpt-6.1-sol",
+        "ms": 58356,
+        "first_byte_ms": 7294,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_0b05f40418f2947c016af23d73ee7087d0a7733fa6d250f824",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 26531,
+          "completion_tokens": 2958,
+          "total_tokens": 29489,
+          "completion_tokens_details": {
+            "reasoning_tokens": 75
+          }
+        },
+        "response_characters": 7427
+      },
+      {
+        "label": "writer",
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "attempt": 1,
+        "request_id": "0a41a0b0-beb9-46ea-8b77-90354f57c797",
+        "request_hash": "ab4b34f9420002e62e06bae857043b3a473aab740b215d13723a74ab22ca31c5",
+        "started_at": "2026-11-09T21:39:56.353Z",
+        "reserved_ms": 240000,
+        "failed": true,
+        "retryable": true,
+        "error": "Evidence quote is not present in source for 11",
+        "error_name": "Error",
+        "error_code": null,
+        "causes": [],
+        "ms": 52827,
+        "first_byte_ms": 5300,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_02b59f2aa9ef0935016af23dafa52887d08d4370891ff4fc6c",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 13492,
+          "completion_tokens": 2704,
+          "total_tokens": 16196,
+          "completion_tokens_details": {
+            "reasoning_tokens": 60
+          }
+        },
+        "response_characters": 7627,
+        "retry_delay_ms": 15000
+      },
+      {
+        "label": "writer",
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "attempt": 2,
+        "request_id": "df1f0d74-efff-40ee-ba84-fd1038336709",
+        "request_hash": "ce1be8a90bfb57dacdf972507fcdfd4b3e0c8a397d05623b03b337da85d37e1a",
+        "started_at": "2026-11-09T21:41:04.186Z",
+        "reserved_ms": 240000,
+        "failed": true,
+        "retryable": false,
+        "error": "Evidence quote is not present in source for 11",
+        "error_name": "Error",
+        "error_code": null,
+        "causes": [],
+        "ms": 8247,
+        "first_byte_ms": 2944,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_0072ebb02572188a016af23df0e8e487d08b84b3ca61c1567c",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 7740,
+          "completion_tokens": 380,
+          "total_tokens": 8120,
+          "completion_tokens_details": {
+            "reasoning_tokens": 73
+          }
+        },
+        "response_characters": 814
+      },
+      {
+        "label": "writer",
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "attempt": 3,
+        "request_id": "a89c9036-bc3b-442f-9e26-5b5fefe1bdc9",
+        "request_hash": "fe59491c5c7899137837f3281575ca9326e876db4bc6b24aefeafeddf5226a61",
+        "started_at": "2026-11-10T03:38:07.966Z",
+        "reserved_ms": 240000,
+        "failed": true,
+        "retryable": false,
+        "error": "Evidence quote is not present in source for 11",
+        "error_name": "Error",
+        "error_code": null,
+        "causes": [],
+        "ms": 23965,
+        "first_byte_ms": 1328,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_0449eb7173b8f316016af291a1c83087d2b67cff8f9d2418bd",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 9612,
+          "completion_tokens": 385,
+          "total_tokens": 9997,
+          "completion_tokens_details": {
+            "reasoning_tokens": 77
+          }
+        },
+        "response_characters": 812
+      }
+    ],
+    "input_fingerprint": "d20178b93024650b5dffcb1c168dfd3f77834e0fac017ebad18bceac24c58ac0",
+    "summary_characters": 189
+  }
+}
