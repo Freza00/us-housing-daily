@@ -1,7 +1,10 @@
 {
-  "status": "daily_and_weekly_published_code_pending",
-  "authorized_action": "publish_and_sync_open_source",
+  "status": "deployed_verified",
+  "checked_at": "2026-11-10T04:51:56.113Z",
+  "checked_at_beijing": "2026-11-10 12:50",
   "base": "395091f9f33d9ce4adc3feb229764157b847a38c",
+  "code_commit": "6641efad172fc1a7d2f96f22366f5ae3dcde7e45",
+  "site": "https://news-agent-mu.vercel.app",
   "daily": {
     "schema_version": 1,
     "ok": true,
@@ -70,19 +73,206 @@
       "already_pushed": false
     }
   },
+  "tests": {
+    "release_copy": {
+      "passed": 332,
+      "failed": 0
+    },
+    "ci": {
+      "passed": 332,
+      "failed": 0,
+      "node": "v22.23.4",
+      "run": {
+        "id": 42758046179,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/42758046179"
+      }
+    }
+  },
+  "vercel": [
+    {
+      "state": "success",
+      "url": "https://vercel.com/freza00s-projects/news-agent/9FtTR1i477j8RuSZE7cL1yNJiFq4"
+    }
+  ],
+  "online_files": [
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "39cc087fef0a999c22cc3b966acb34e5f85da63105fd9bb451baff4177c0f4b3",
+      "expected_sha256": "39cc087fef0a999c22cc3b966acb34e5f85da63105fd9bb451baff4177c0f4b3",
+      "ok": true
+    },
+    {
+      "route": "/app.js",
+      "status": 200,
+      "sha256": "ffe47719a876be3b47e8a021da418c6b3af112196ffd0f78271c7a500884435f",
+      "expected_sha256": "ffe47719a876be3b47e8a021da418c6b3af112196ffd0f78271c7a500884435f",
+      "ok": true
+    },
+    {
+      "route": "/style.css",
+      "status": 200,
+      "sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30",
+      "expected_sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30",
+      "ok": true
+    },
+    {
+      "route": "/data/latest.json",
+      "status": 200,
+      "sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd",
+      "expected_sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd",
+      "ok": true
+    },
+    {
+      "route": "/data/2026-11-10.json",
+      "status": 200,
+      "sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd",
+      "expected_sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd",
+      "ok": true
+    },
+    {
+      "route": "/data/2026-11-09.json",
+      "status": 200,
+      "sha256": "6bd895043dbbb09fcfdf3d38870c3f0b4b4e857c0233924c8c561c4c382ce617",
+      "expected_sha256": "6bd895043dbbb09fcfdf3d38870c3f0b4b4e857c0233924c8c561c4c382ce617",
+      "ok": true
+    },
+    {
+      "route": "/data/2026-11-06.json",
+      "status": 200,
+      "sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+      "expected_sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+      "ok": true
+    },
+    {
+      "route": "/data/dates.json",
+      "status": 200,
+      "sha256": "0d6de1ab5450b7b19c154cbf80139fdce8b77b9ecf063f1ee9b3a5f5bd412fbd",
+      "expected_sha256": "0d6de1ab5450b7b19c154cbf80139fdce8b77b9ecf063f1ee9b3a5f5bd412fbd",
+      "ok": true
+    },
+    {
+      "route": "/data/weekly/latest.json",
+      "status": 200,
+      "sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+      "expected_sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+      "ok": true
+    },
+    {
+      "route": "/data/weekly/2026-11-02.json",
+      "status": 200,
+      "sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+      "expected_sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+      "ok": true
+    },
+    {
+      "route": "/data/weekly/2026-10-26.json",
+      "status": 200,
+      "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+      "expected_sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+      "ok": true
+    },
+    {
+      "route": "/data/weekly/dates.json",
+      "status": 200,
+      "sha256": "1ccf3f20395526469b4a667e8b58e1206536a493fbbeae544314f33a36c913f2",
+      "expected_sha256": "1ccf3f20395526469b4a667e8b58e1206536a493fbbeae544314f33a36c913f2",
+      "ok": true
+    },
+    {
+      "route": "/data/monthly/latest.json",
+      "status": 200,
+      "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+      "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+      "ok": true
+    },
+    {
+      "route": "/data/monthly/2026-10.json",
+      "status": 200,
+      "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+      "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+      "ok": true
+    },
+    {
+      "route": "/data/monthly/dates.json",
+      "status": 200,
+      "sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+      "expected_sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+      "ok": true
+    }
+  ],
+  "all_15_routes_match": true,
+  "live_browser": {
+    "passed": true,
+    "scenarios": 15,
+    "language_states": 39,
+    "widths": [
+      1440,
+      768,
+      390,
+      360
+    ],
+    "page_errors": [],
+    "horizontal_overflows": 0,
+    "interactions": [
+      "Refresh retains Nov10",
+      "Old Oct26 weekly archive remains readable",
+      "Monthly issue retained"
+    ],
+    "user_browser_accessed": false
+  },
+  "issues": {
+    "daily": {
+      "date": "2026-11-10",
+      "items": 17,
+      "payload_sha256": "a0f810a60593efafe48674f4b00e33336b25bfc89cb9a048ec7224dd723b30a2"
+    },
+    "weekly": {
+      "period_start": "2026-11-02",
+      "period_end": "2026-11-08",
+      "items": 20,
+      "payload_sha256": "23878e60968ad82306b357bdcbb0923df4f758f3959af2635876735f55920a83"
+    }
+  },
   "late_schedule_run": {
     "id": 42750662199,
+    "event": "schedule",
     "started_at": "2026-11-10T03:37:34Z",
+    "ended_at": "2026-11-10T03:38:41Z",
     "conclusion": "failure",
     "writer_error": "Evidence quote is not present in source for 11",
+    "snapshot_query_at_1128_had_no_later_run": true,
+    "publication_recovery_based_on_latest_artifact": 13733510922,
     "latest_attempts": {
       "editor": 2,
       "writer": 3
     },
-    "latest_spent_ms": 227539,
-    "latest_saved_cards_preserved": 16
+    "spent_ms": 227539,
+    "preserved_latest_cards": 16
   },
-  "new_model_calls": 0,
-  "new_source_calls": 0,
-  "manual_generation_dispatches": 0
+  "preservation": {
+    "remote_non_target_files": 409,
+    "original_workspace_paths": 513,
+    "original_workspace_changed_existing_files": [
+      "ROADMAP.md",
+      "docs/plans/2026-11-10-daily-reliability-fix.md",
+      "docs/validation/2026-11-10-reliability-fix.md"
+    ],
+    "data_and_state_unchanged": true,
+    "preexisting_missing_files_preserved": true,
+    "user_styles_preserved": true,
+    "both_recovery_manifests_and_attempts_unchanged": true
+  },
+  "scope": {
+    "new_model_calls": 0,
+    "new_source_calls": 0,
+    "manual_generation_dispatches": 0,
+    "ci_or_scheduler_changes": false,
+    "external_scheduler_or_notifications_enabled": false,
+    "automatic_on_time_publication_proven": false
+  },
+  "evidence_directory": ".tmp/reliability-release-20261110/"
 }
