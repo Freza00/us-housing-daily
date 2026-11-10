@@ -6,7 +6,7 @@ import { routeSection, validateDecisions, editorInstructions, candidatePrompt, p
 import { createModelBatch } from '../lib/model-references.mjs';
 import { validateIssue } from '../lib/issue-contract.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
-import { sandbox, sample, fakeClient } from './helpers.mjs';
+import { modelEvidence, sandbox, sample, fakeClient } from './helpers.mjs';
 
 const tags = JSON.parse(await fs.readFile(new URL('../../config/tags.json', import.meta.url)));
 const semantic = { scriptRouting: true }, bilingual = { requireEnglish: true };
@@ -60,7 +60,7 @@ test('headquarters, missing evidence, unconfigured tags and excess dimensions ca
 });
 
 const selected = Array.from({ length: 20 }, (_, i) => ({ ...sample(String(i + 1), 1793820000000), section: 'national', tags: ['housing', 'national'], capital_focus: false }));
-const card = it => ({ id: it.id, title_zh: '住宅市场研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', evidence_quote: it.description });
+const card = it => ({ id: it.id, title_zh: '住宅市场研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', ...(it.evidence_options ? modelEvidence(it) : { evidence_quote: it.description }) });
 const metadata = () => ({ executive_summary: { sentences: [
   { text: '住宅市场分化。'.repeat(15), text_en: 'Housing sales rose 5%, with affordability remaining a constraint.', item_ids: ['1'] },
   { text: '需要关注库存。'.repeat(12), text_en: 'Inventory remains an important constraint.', item_ids: ['2'] },

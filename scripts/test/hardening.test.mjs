@@ -12,7 +12,7 @@ import { loadCurrentCandidate } from '../publish.mjs';
 import { installCheckpoint, trustedArtifactRun } from '../lib/artifact-recovery.mjs';
 import { verifyOnline, recoveryDecision, triggerRedeploy } from '../lib/delivery.mjs';
 import { checkPublication } from '../check-publication.mjs';
-import { sandbox, sample, fakeClient } from './helpers.mjs';
+import { modelDecision, modelEvidence, sandbox, sample, fakeClient } from './helpers.mjs';
 
 const now = new Date('2026-10-28T00:30:00Z'), lower = Date.parse('2026-10-26T21:00:00Z'), upper = lower + 86400000;
 const sources = [{ id: 'a', required: true }];
@@ -28,7 +28,7 @@ async function setup(t, configured = sources) {
 const stageDir = root => path.join(root,'state/issues/daily/2026-10-28/r1');
 const response = value => new Response(JSON.stringify({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify(value) } }] }), { headers: { 'content-type': 'application/json' } });
 function answer(input, bad = false) {
-  return { items: input.items.map(it => ({ id: it.id, title_zh: '住宅销售研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', evidence_quote: it.evidence.slice(0,70) })), executive_summary: { sentences: [{ text: `住宅销售增长 ${bad ? 99 : 5}%。`, text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] };
+  return { items: input.items.map(it => ({ id: it.id, title_zh: '住宅销售研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', ...(it.evidence_options ? modelEvidence(it) : { evidence_quote: it.evidence.slice(0,70) }) })), executive_summary: { sentences: [{ text: `住宅销售增长 ${bad ? 99 : 5}%。`, text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] };
 }
 
 for (const offsetMs of [180001, 180000, 120000, 1, 0, -60000, null]) {
@@ -81,7 +81,7 @@ for (const mode of ['card-and-metadata', 'metadata-only', 'all-cards', 'exhauste
   const opts = await setup(t), env = { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid', PIPELINE_UNTIL: 'ready' };
   const seed = { retryDelays: [0,0], fetchImpl: async (_url, request) => {
     const input = JSON.parse(JSON.parse(request.body).messages[1].content);
-    return response(Array.isArray(input) ? { decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', capital_focus: false, tags: [], duplicate_of: null })) } : answer(input));
+    return response(Array.isArray(input) ? { decisions: input.map(it => modelDecision(it.id)) } : answer(input));
   } };
   await runPipeline('daily', { ...opts, env, llmOptions: seed });
   const manifest = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'manifest.json')));
@@ -160,7 +160,7 @@ test('a bad shared summary repairs metadata only and persists all validated card
   const opts = await setup(t), calls = []; let writers = 0;
   const llmOptions = { retryDelays: [0,0], sleep: async () => {}, fetchImpl: async (_url, request) => {
     const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content); calls.push(body);
-    if (Array.isArray(input)) return response({ decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', capital_focus: false, tags: [], duplicate_of: null })) });
+    if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id)) });
     if (++writers === 1) return response(answer(input, true));
     assert.match(body.messages[0].content, /仅纠正 executive_summary/);
     return response({ executive_summary: { sentences: [{ text: '住宅销售增长 5%。', text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] });
@@ -177,7 +177,7 @@ test('valid cards survive a failed metadata repair and only metadata is requeste
   let firstWriter = true;
   const initial = { retryDelays: [0,0], sleep: async () => {}, fetchImpl: async (_url, request) => {
     const input = JSON.parse(JSON.parse(request.body).messages[1].content);
-    if (Array.isArray(input)) return response({ decisions: input.map(it => ({ id: it.id, keep: true, importance: 4, section: 'national', capital_focus: false, tags: [], duplicate_of: null })) });
+    if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id)) });
     if (firstWriter) { firstWriter = false; return response(answer(input, true)); }
     return new Response('model_not_found', { status: 503 });
   } };

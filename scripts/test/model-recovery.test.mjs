@@ -6,12 +6,12 @@ import { createLlmClient } from '../lib/llm-client.mjs';
 import { createModelBatch } from '../lib/model-references.mjs';
 import { createWritingRepair, validateDecisions, validateWriting, writingPrompt, writingSystem, selectItems, numericValues, normalizeChinese } from '../lib/editorial.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
-import { sandbox, sample, replayEnv } from './helpers.mjs';
+import { modelDecision, modelEvidence, sandbox, sample, replayEnv } from './helpers.mjs';
 
 const date = Date.parse('2026-10-28T14:00:00Z');
 const items = ['ee97eb3b7b51bf8f', '8f51e30b0b1f3098', 'third'].map(id => sample(id, date));
 const decision = id => ({ id, keep: true, importance: 4, section: 'national', capital_focus: false, tags: [], duplicate_of: null });
-const card = item => ({ id: item.id, title_zh: '住宅研究', summary_zh: '销售增长 5%。', impact: 'neutral', evidence_quote: item.description });
+const card = item => ({ id: item.id, title_zh: '住宅研究', summary_zh: '销售增长 5%。', impact: 'neutral', ...(item.evidence_options ? modelEvidence(item) : { evidence_quote: item.description }) });
 const writing = selected => ({ items: selected.map(card), executive_summary: { sentences: [{ text: '销售增长 5%，可负担性仍是约束。', text_en: 'Sales rose 5%, while affordability remains a constraint.', item_ids: selected.map(x => x.id) }] }, themes: [] });
 
 test('numeric ranges and narrative dashes survive formatting without inventing negative claims', () => {
@@ -63,7 +63,7 @@ test('normal pipeline uses exactly two calls and never publishes batch reference
   const client = createLlmClient({ endpoint: 'https://example.com', apiKey: 'test', retryDelays: [], fetchImpl: async (url, options) => {
     const body = JSON.parse(options.body); requests.push(body);
     const input = JSON.parse(body.messages[1].content);
-    if (Array.isArray(input)) return response({ decisions: input.map(x => decision(x.id)) });
+    if (Array.isArray(input)) return response({ decisions: input.map(x => modelDecision(x.id)) });
     return response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
   } });
   const env = await replayEnv(root, { items }, '2026-10-29T01:00:00Z');
@@ -158,7 +158,7 @@ test('recovered pipeline public diagnostics redact nested causes and upstream id
     calls++;
     if (calls === 1) throw new TypeError('terminated', { cause: new Error('server echoed ' + key) });
     const input = JSON.parse(JSON.parse(options.body).messages[1].content);
-    const res = Array.isArray(input) ? response({ decisions: input.map(x => decision(x.id)) }) : response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
+    const res = Array.isArray(input) ? response({ decisions: input.map(x => modelDecision(x.id)) }) : response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
     res.headers.set('x-request-id', 'upstream-' + key); return res;
   } });
   const result = await runPipeline('daily', { root, client, env: await replayEnv(root, { items }, '2026-10-29T01:00:00Z') });
@@ -173,7 +173,7 @@ test('full editorial correction reports short references rather than internal st
     const body = JSON.parse(options.body); requests.push(body);
     const input = JSON.parse(body.messages[1].content);
     if (Array.isArray(input)) {
-      editorCalls++; const decisions = input.map(x => decision(x.id));
+      editorCalls++; const decisions = input.map(x => modelDecision(x.id));
       if (editorCalls === 1) decisions[0].importance = 2.5;
       return response({ decisions });
     }
@@ -307,7 +307,7 @@ test('writer transport recovery does not call the completed editor again', async
   const root = await sandbox(t); let editors = 0, writers = 0;
   const client = createLlmClient({ endpoint: 'https://example.com', apiKey: 'test', sleep: async () => {}, fetchImpl: async (url, options) => {
     const input = JSON.parse(JSON.parse(options.body).messages[1].content);
-    if (Array.isArray(input)) { editors++; return response({ decisions: input.map(x => decision(x.id)) }); }
+    if (Array.isArray(input)) { editors++; return response({ decisions: input.map(x => modelDecision(x.id)) }); }
     writers++; if (writers === 1) throw new TypeError('terminated');
     return response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
   } });

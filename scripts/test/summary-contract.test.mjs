@@ -5,7 +5,7 @@ import path from 'node:path';
 import { prepareWriting, validateWriting, summaryCharacterCount, writingSystem } from '../lib/editorial.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
 import { validateIssue } from '../lib/issue-contract.mjs';
-import { sandbox, sample, fakeClient } from './helpers.mjs';
+import { modelDecision, modelEvidence, sandbox, sample, fakeClient } from './helpers.mjs';
 
 const fixture = JSON.parse(await fs.readFile(new URL('./fixtures/2026-11-02-summary-responses.json', import.meta.url)));
 // Synthetic grounding isolates the captured metadata's length and reference contracts.
@@ -68,7 +68,7 @@ test('fresh model output still rejects extra IDs outside its short-reference bat
     const client=fakeClient(),original=client.call;
     client.call=async(system,user,options)=>{
       if(options.label==='editor')return original(system,user,options);
-      const input=JSON.parse(user),items=input.items.map(it=>({id:it.id,title_zh:'住宅销售研究',summary_zh:'住宅销售增长 5%。',impact:'neutral',evidence_quote:it.evidence.slice(0,70)}));
+      const input=JSON.parse(user),items=input.items.map(it=>({id:it.id,title_zh:'住宅销售研究',summary_zh:'住宅销售增长 5%。',impact:'neutral',...modelEvidence(it)}));
       return options.validate({items:[...items,{...items[0],id:extra}],...shortMetadata([{text:'住宅销售增长 5%。',item_ids:input.items.map(it=>it.id)}])});
     };
     await assert.rejects(runPipeline('daily',{root,env,collector,client}),/Unknown model reference/);
@@ -86,9 +86,9 @@ test('pipeline normalizes once without correction and keeps the audit through co
   const requests=[];
   const llmOptions={fetchImpl:async(_url,request)=>{
     const input=JSON.parse(JSON.parse(request.body).messages[1].content);requests.push(input);
-    if(Array.isArray(input))return response({decisions:input.map(it=>({id:it.id,keep:true,importance:4,section:'national',capital_focus:false,tags:[],duplicate_of:null}))});
+    if(Array.isArray(input))return response({decisions:input.map(it=>modelDecision(it.id))});
     assert.equal(requests.length,2,'No metadata correction should be requested');
-    return response({items:input.items.map(it=>({id:it.id,title_zh:'住宅销售研究',summary_zh:'住宅销售增长 5%。',impact:'neutral',evidence_quote:it.evidence.slice(0,70)})),...shortMetadata([{text:'甲'.repeat(150),item_ids:['1']},{text:'乙'.repeat(120),item_ids:['2']},{text:'丙'.repeat(30),item_ids:['3']}])});
+    return response({items:input.items.map(it=>({id:it.id,title_zh:'住宅销售研究',summary_zh:'住宅销售增长 5%。',impact:'neutral',...modelEvidence(it)})),...shortMetadata([{text:'甲'.repeat(150),item_ids:['1']},{text:'乙'.repeat(120),item_ids:['2']},{text:'丙'.repeat(30),item_ids:['3']}])});
   }};
   await runPipeline('daily',{root,env,collector,llmOptions});
   const issuePath='issues/daily/2026-11-02/r1',dir=path.join(root,'state',issuePath),ready=JSON.parse(await fs.readFile(path.join(dir,'ready.json'))),note=ready.payload._diagnostics.writer_validation.summary_shortening;

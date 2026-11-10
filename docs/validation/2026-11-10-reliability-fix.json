@@ -1,0 +1,490 @@
+{
+  "status": "locally_verified_not_committed_or_published",
+  "checked_at": "2026-11-10T04:09:45.529Z",
+  "checked_at_beijing": "2026-11-10 12:05",
+  "base_commit": "395091f9f33d9ce4adc3feb229764157b847a38c",
+  "advisor": {
+    "model": "gpt-6-astra",
+    "effort": "max",
+    "final_review": "no_explicit_blocking_defects",
+    "independent_continuous_options": 609,
+    "independent_weekly_ready_verified": true
+  },
+  "tests": {
+    "baseline": {
+      "passed": 325,
+      "failed": 0
+    },
+    "workspace": {
+      "passed": 332,
+      "failed": 0
+    },
+    "clean_copy": {
+      "passed": 332,
+      "failed": 0
+    },
+    "new_boundary_tests": 7,
+    "all_continuous_options": 609
+  },
+  "protocol_probe": {
+    "checked_at": "2026-11-10T04:06:39.815433+00:00",
+    "status": "passed_after_two_local_repairs",
+    "kind": "isolated_protocol_probe_not_production_generation",
+    "cases": [
+      {
+        "id": "d39617207091e64f",
+        "title": "Residential Building Worker Wage Growth Rebounds, but Real Wages Continue to Decline"
+      },
+      {
+        "id": "bcfe6346b748685b",
+        "title": "NAR membership proves more resilient than expected, topping 1.46 million"
+      },
+      {
+        "id": "8181c0ddd3b02dbf",
+        "title": "Beyond Insights"
+      }
+    ],
+    "editor_rows": 3,
+    "usage": [
+      {
+        "label": "probe-editor",
+        "model": "gpt-6.1-sol",
+        "effort": "medium",
+        "attempt": 1,
+        "request_id": "dc25c32a-f521-4962-93db-235f3ba73deb",
+        "request_hash": "e03210419fa6f0b2044033f740e63a59b7a26d359cf017df3d99fcc0fe5d0339",
+        "started_at": "2026-11-10T03:57:55.911Z",
+        "reserved_ms": 90000,
+        "cache_hit": false,
+        "repairs": 0,
+        "response_model": "gpt-6.1-sol",
+        "ms": 10322,
+        "first_byte_ms": 7404,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_092490255503901c016af29645b3f087d0b145394ca6e2f325",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 9090,
+          "completion_tokens": 407,
+          "total_tokens": 9497,
+          "completion_tokens_details": {
+            "reasoning_tokens": 157
+          }
+        },
+        "response_characters": 612
+      },
+      {
+        "label": "probe-writer",
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "attempt": 1,
+        "request_id": "563604a2-1182-4f57-ae65-70ee320d29c9",
+        "request_hash": "3b110f07d409a834e41580b8d0e5826195a101cb3a5eb728ec80f6be63695dc4",
+        "started_at": "2026-11-10T03:58:06.245Z",
+        "reserved_ms": 90000,
+        "failed": true,
+        "retryable": false,
+        "error": "Invalid evidence_id; choose an option for item 3, do not supply evidence_quote",
+        "error_name": "Error",
+        "error_code": null,
+        "causes": [],
+        "ms": 17786,
+        "first_byte_ms": 4940,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_019101945065606d016af296526c0c87d08bc93a190c448b9e",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 9572,
+          "completion_tokens": 719,
+          "total_tokens": 10291
+        },
+        "response_characters": 1595,
+        "response_file": "563604a2-1182-4f57-ae65-70ee320d29c9.response.json"
+      },
+      {
+        "label": "probe-writer",
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "attempt": 2,
+        "request_id": "63db9f34-3640-4cf7-8070-40e20ffcf519",
+        "request_hash": "c61b547d71d2ba618d12fe81d00b747cb41153c27dc0079f9cc566755eecd940",
+        "started_at": "2026-11-10T04:00:54.239Z",
+        "reserved_ms": 90000,
+        "failed": true,
+        "retryable": false,
+        "error": "Invalid evidence_id; choose an option for item 3, do not supply evidence_quote",
+        "error_name": "Error",
+        "error_code": null,
+        "causes": [],
+        "ms": 4182,
+        "first_byte_ms": 2239,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_03f761672bf7072e016af296f7c2e887d184249594257d3cd1",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 9000,
+          "completion_tokens": 329,
+          "total_tokens": 9329
+        },
+        "response_characters": 191,
+        "response_file": "63db9f34-3640-4cf7-8070-40e20ffcf519.response.json"
+      },
+      {
+        "label": "probe-writer",
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "attempt": 3,
+        "request_id": "299c5015-bd38-45ed-965b-8536fc724abb",
+        "request_hash": "c9bfee2615c1e7362042e3a9560a3995099a2c9f69fd3713a039903b3ef49a8f",
+        "started_at": "2026-11-10T04:03:34.557Z",
+        "reserved_ms": 90000,
+        "cache_hit": false,
+        "repairs": 0,
+        "response_model": "gpt-6.1-sol",
+        "ms": 4190,
+        "first_byte_ms": 2203,
+        "http_status": 200,
+        "upstream_request_id": null,
+        "response_id": "resp_08b23411273b8fc7016af29797b9cc87d0b5890d19e8985f05",
+        "finish_reason": "stop",
+        "done": true,
+        "usage": {
+          "prompt_tokens": 10270,
+          "completion_tokens": 115,
+          "total_tokens": 10385
+        },
+        "response_characters": 191
+      }
+    ],
+    "production_attempts_changed": false,
+    "public_data_changed": false,
+    "prompt_chars_for_actual_17": {
+      "old": 33087,
+      "new": 45734,
+      "ratio": 1.382,
+      "uses_actual_short_model_ids": true,
+      "not_token_measurement": true
+    },
+    "first_rejection": "Invalid evidence_id; choose an option for item 3, do not supply evidence_quote",
+    "repair_ids": [
+      "3"
+    ],
+    "second_rejection": "Invalid evidence_id; choose an option for item 3, do not supply evidence_quote",
+    "writer_cards": 3,
+    "started_at": "2026-11-10T03:57:55.911Z",
+    "completed_at": "2026-11-10T04:03:38.747000+00:00",
+    "cumulative_model_ms": 36480,
+    "measured_tokens": 39502,
+    "not_first_attempt_success": true,
+    "first_two_cards_preserved": true
+  },
+  "recovery": {
+    "daily": {
+      "checked_at": "2026-11-10T03:34:16.369Z",
+      "installed": {
+        "restored": true,
+        "revision": 1,
+        "phases": [
+          "prepared",
+          "editor",
+          "cards",
+          "metadata"
+        ]
+      },
+      "result": {
+        "checkpointed": true,
+        "stage": "ready",
+        "identity": {
+          "kind": "daily",
+          "period_key": "2026-11-10",
+          "cutoff_upper": 1794258000000,
+          "revision": 1
+        },
+        "issue_dir": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/daily-20261110-fix/recovery/state/issues/daily/2026-11-10/r1"
+      },
+      "source_run": "https://github.com/Freza00/us-housing-daily/actions/runs/42704166560",
+      "source_artifact": 13713676154,
+      "original_rules": "c00665a8a11d86dad0820a2fd04b885cab1e4b4b87fb8b00868f8cd9951fe3e1",
+      "items": 17,
+      "payload_sha256": "7dae899cf19c5f2257270573b09bbf4f0c86cd5302aa05097f84cd663a37ba5f",
+      "repairs": [
+        {
+          "short_id": "11",
+          "stable_id": "d39617207091e64f",
+          "field": "evidence_quote",
+          "method": "restore_original_continuous_three_sentence_span"
+        },
+        {
+          "short_id": "14",
+          "stable_id": "bcfe6346b748685b",
+          "field": "title_zh",
+          "method": "replace_rounded_count_with_exact_source_integer"
+        }
+      ],
+      "preserved_cards": 15,
+      "metadata_preserved": true,
+      "attempts_preserved": true,
+      "original_frozen_preserved": true,
+      "model_calls": 0,
+      "source_calls": 0,
+      "published": false
+    },
+    "weekly": {
+      "checked_at": "2026-11-10T03:55:42.392Z",
+      "source_run": "https://github.com/Freza00/us-housing-daily/actions/runs/42650091015",
+      "source_artifact": 13688974102,
+      "old_rules": "c00665a8a11d86dad0820a2fd04b885cab1e4b4b87fb8b00868f8cd9951fe3e1",
+      "identity": {
+        "kind": "weekly",
+        "period_key": "2026-11-02",
+        "cutoff_upper": 1794200400000,
+        "revision": 1
+      },
+      "explicit_tag_repair": {
+        "short_id": "16",
+        "old": "miami",
+        "new": "florida",
+        "evidence": "Sunny Isles Beach, Miami"
+      },
+      "ready": true,
+      "editor_attempts_preserved": true,
+      "writer_calls": 1,
+      "usage": [
+        {
+          "label": "writer",
+          "model": "gpt-6.1-sol",
+          "effort": "low",
+          "attempt": 1,
+          "request_id": "53644155-ca6a-455a-b05d-9067458c263e",
+          "request_hash": "8a86f19576b3db4d3c3ae2d803c8d46f98e47f215e352e8406e1d710f107c348",
+          "started_at": "2026-11-10T03:54:43.686Z",
+          "reserved_ms": 170455,
+          "failed": true,
+          "retryable": false,
+          "error": "Invalid writing ID/fields",
+          "error_name": "Error",
+          "error_code": null,
+          "causes": [],
+          "ms": 58705,
+          "first_byte_ms": 4118,
+          "http_status": 200,
+          "upstream_request_id": null,
+          "response_id": "resp_017c15f223dd1e02016af295856dc487d09088e412a5f6f69c",
+          "finish_reason": "stop",
+          "done": true,
+          "usage": {
+            "prompt_tokens": 14960,
+            "completion_tokens": 3064,
+            "total_tokens": 18024,
+            "completion_tokens_details": {
+              "reasoning_tokens": 41
+            }
+          },
+          "response_characters": 8341
+        }
+      ],
+      "published": false,
+      "writer_error_before_explicit_schema_fix": "Invalid writing ID/fields",
+      "items": 20,
+      "payload_sha256": "23878e60968ad82306b357bdcbb0923df4f758f3959af2635876735f55920a83",
+      "saved_cards_preserved": 17,
+      "explicit_schema_repairs": [
+        {
+          "short_id": "3",
+          "stable_id": "1946ecb6a50b1648",
+          "field": "summary → summary_zh",
+          "content_unchanged": true
+        },
+        {
+          "short_id": "10",
+          "stable_id": "4112df4bb1a55042",
+          "field": "summary → summary_zh",
+          "content_unchanged": true
+        },
+        {
+          "short_id": "11",
+          "stable_id": "35f59ac410523ae8",
+          "field": "summary → summary_zh",
+          "content_unchanged": true
+        }
+      ],
+      "metadata_preserved": true,
+      "final_attempts_preserved": true,
+      "additional_model_calls_after_first_writer": 0
+    }
+  },
+  "candidate_preview": {
+    "passed": true,
+    "scenarios": [
+      {
+        "width": 1440,
+        "lang": "zh",
+        "kind": "daily",
+        "date": "2026-11-10",
+        "cards": 17,
+        "overflow": false
+      },
+      {
+        "width": 1440,
+        "lang": "en",
+        "kind": "daily",
+        "date": "2026-11-10",
+        "cards": 17,
+        "overflow": false
+      },
+      {
+        "width": 1440,
+        "lang": "zh",
+        "kind": "weekly",
+        "date": "2026-11-02",
+        "cards": 20,
+        "overflow": false
+      },
+      {
+        "width": 1440,
+        "lang": "en",
+        "kind": "weekly",
+        "date": "2026-11-02",
+        "cards": 20,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "lang": "zh",
+        "kind": "daily",
+        "date": "2026-11-10",
+        "cards": 17,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "lang": "en",
+        "kind": "daily",
+        "date": "2026-11-10",
+        "cards": 17,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "lang": "zh",
+        "kind": "weekly",
+        "date": "2026-11-02",
+        "cards": 20,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "lang": "en",
+        "kind": "weekly",
+        "date": "2026-11-02",
+        "cards": 20,
+        "overflow": false
+      }
+    ],
+    "page_errors": [],
+    "visual_review": true,
+    "not_production_deployment": true
+  },
+  "preservation": {
+    "baseline_paths": 509,
+    "present_at_start": 335,
+    "already_missing_at_start": 174,
+    "changed_existing_paths": [
+      "AGENTS.md",
+      "README.md",
+      "ROADMAP.md",
+      "docs/plans/2026-11-10-daily-reliability-fix.md",
+      "scripts/lib/editorial.mjs",
+      "scripts/lib/llm-client.mjs",
+      "scripts/lib/pipeline.mjs",
+      "scripts/test/geography-evidence.test.mjs",
+      "scripts/test/hardening.test.mjs",
+      "scripts/test/helpers.mjs",
+      "scripts/test/model-recovery.test.mjs",
+      "scripts/test/script-first.test.mjs",
+      "scripts/test/summary-contract.test.mjs"
+    ],
+    "no_new_deletions": true,
+    "data_or_state_changes": [],
+    "existing_user_styles_preserved": true,
+    "environment_ci_sources_unchanged": true,
+    "original_frozen_artifacts_preserved": true
+  },
+  "scope": {
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "new_dependency": false,
+    "scheduler_changed": false,
+    "external_scheduler_or_notification_enabled": false,
+    "live_schedule_root_cause": "unproven",
+    "new_source_calls": 0,
+    "weekly_recovery_writer_calls": 1,
+    "protocol_probe_calls": 4,
+    "total_new_model_calls": 5,
+    "total_known_tokens": 57526
+  },
+  "limitations": [
+    "Manual old-rule candidate recovery is not proof of automatic on-time publication",
+    "New writer probe needed two local corrections; do not report first-attempt success",
+    "Writer input character count grew 38.2%; no demonstrated total-token saving",
+    "Platform schedule startup cause remains unproven",
+    "Existing source-coverage gaps and published issues remain unchanged"
+  ],
+  "files": [
+    {
+      "path": "scripts/lib/editorial.mjs"
+    },
+    {
+      "path": "scripts/lib/llm-client.mjs"
+    },
+    {
+      "path": "scripts/lib/pipeline.mjs"
+    },
+    {
+      "path": "scripts/test/helpers.mjs"
+    },
+    {
+      "path": "scripts/test/hardening.test.mjs"
+    },
+    {
+      "path": "scripts/test/model-recovery.test.mjs"
+    },
+    {
+      "path": "scripts/test/summary-contract.test.mjs"
+    },
+    {
+      "path": "scripts/test/geography-evidence.test.mjs"
+    },
+    {
+      "path": "scripts/test/script-first.test.mjs"
+    },
+    {
+      "path": "scripts/test/model-boundary.test.mjs"
+    },
+    {
+      "path": "scripts/test/fixtures/2026-11-10-writing-boundary.json"
+    },
+    {
+      "path": "AGENTS.md"
+    },
+    {
+      "path": "README.md"
+    },
+    {
+      "path": "ROADMAP.md"
+    },
+    {
+      "path": "docs/plans/2026-11-10-daily-reliability-fix.md"
+    },
+    {
+      "path": "docs/validation/2026-11-10-reliability-fix.md"
+    }
+  ]
+}

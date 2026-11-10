@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { geographyEvidenceMatches, validateDecisions } from '../lib/editorial.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
-import { sandbox, sample, fakeClient } from './helpers.mjs';
+import { modelDecision, sandbox, sample, fakeClient } from './helpers.mjs';
 
 const tags = JSON.parse(await fs.readFile(new URL('../../config/tags.json', import.meta.url)));
 const decision = (evidence, asset = 'housing', geo = 'texas') => ({ id: 'a', keep: true, importance: 4, capital_focus: false, duplicate_of: null, tags: [asset, geo], geo_evidence: evidence });
@@ -67,7 +67,7 @@ test('equivalent source spelling survives editor freezing and cold writer resume
   let editorCalls = 0;
   await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'editor' }, collector, client: { async call(system, user, options) {
     editorCalls++; assert.equal(options.label, 'editor');
-    return options.validate({ decisions: JSON.parse(user).map(it => ({ ...decision('california’s housing market', 'housing', 'california'), id: it.id })) });
+    return options.validate({ decisions: JSON.parse(user).map(it => modelDecision(it.id, { geo: 'california', geo_evidence: 'california’s housing market' })) });
   } } });
   const saved = JSON.parse(await fs.readFile(path.join(root, 'state/issues/daily/2026-11-06/r1/editor.json')));
   assert(saved.every(row => row.geo_evidence === "California's housing market"));

@@ -1,0 +1,88 @@
+{
+  "status": "daily_and_weekly_published_code_pending",
+  "authorized_action": "publish_and_sync_open_source",
+  "base": "395091f9f33d9ce4adc3feb229764157b847a38c",
+  "daily": {
+    "schema_version": 1,
+    "ok": true,
+    "host": "https://news-agent-mu.vercel.app",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-10",
+      "cutoff_upper": 1794258000000,
+      "revision": 1
+    },
+    "payload_sha256": "a0f810a60593efafe48674f4b00e33336b25bfc89cb9a048ec7224dd723b30a2",
+    "commit": "263864ff137ca41a620ac3b8ca7a8b23cab42e33",
+    "checked_at": 1794285880159,
+    "files": [
+      {
+        "route": "/data/latest.json",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-10.json",
+        "ok": true
+      },
+      {
+        "route": "/data/dates.json",
+        "ok": true
+      },
+      {
+        "route": "/",
+        "ok": true
+      }
+    ],
+    "pushed": {
+      "commit": "263864ff137ca41a620ac3b8ca7a8b23cab42e33",
+      "already_pushed": false
+    }
+  },
+  "weekly": {
+    "schema_version": 1,
+    "ok": true,
+    "host": "https://news-agent-mu.vercel.app",
+    "identity": {
+      "kind": "weekly",
+      "period_key": "2026-11-02",
+      "cutoff_upper": 1794200400000,
+      "revision": 1
+    },
+    "payload_sha256": "23878e60968ad82306b357bdcbb0923df4f758f3959af2635876735f55920a83",
+    "commit": "b5769c25f2e2975fc0485b48d20e8cc0fc7b785b",
+    "checked_at": 1794285924754,
+    "files": [
+      {
+        "route": "/data/weekly/latest.json",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/2026-11-02.json",
+        "ok": true
+      },
+      {
+        "route": "/data/weekly/dates.json",
+        "ok": true
+      }
+    ],
+    "pushed": {
+      "commit": "b5769c25f2e2975fc0485b48d20e8cc0fc7b785b",
+      "already_pushed": false
+    }
+  },
+  "late_schedule_run": {
+    "id": 42750662199,
+    "started_at": "2026-11-10T03:37:34Z",
+    "conclusion": "failure",
+    "writer_error": "Evidence quote is not present in source for 11",
+    "latest_attempts": {
+      "editor": 2,
+      "writer": 3
+    },
+    "latest_spent_ms": 227539,
+    "latest_saved_cards_preserved": 16
+  },
+  "new_model_calls": 0,
+  "new_source_calls": 0,
+  "manual_generation_dispatches": 0
+}

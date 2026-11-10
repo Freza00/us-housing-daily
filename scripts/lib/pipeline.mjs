@@ -8,7 +8,7 @@ import { createCollector } from './sources.mjs';
 import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint, uniqueSourceHealth } from './collection-checkpoint.mjs';
 import { createLlmClient, LlmError } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
-import { dailyPublicationEligibility, prepareCandidates, editorInstructions, candidatePrompt, validateDecisions, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, validateWritingMetadata, prepareWritingMetadata, dryDecisions } from './editorial.mjs';
+import { dailyPublicationEligibility, prepareCandidates, editorInstructions, candidatePrompt, validateDecisions, prepareModelDecisions, createDecisionRepair, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, prepareWritingCard, validateWritingMetadata, prepareWritingMetadata, dryDecisions } from './editorial.mjs';
 import { createModelBatch } from './model-references.mjs';
 import { editorialCoverage, coverageDates } from './editorial-coverage.mjs';
 import { validArchive, periodKey, validateIssue, assertExpectedIssue } from './issue-contract.mjs';
@@ -65,7 +65,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const frozen = store && await store.get('prepared');
   const base = frozen?.base || { archive_sha256: existing ? fingerprint(existing) : null, latest_sha256: latest ? fingerprint(latest) : null, producer_commit: env.GITHUB_SHA || null };
   const editorSystem = editorInstructions(tagConfig);
-  const writingContext = { requireEnglish: true };
+  const writingContext = { requireEnglish: true, requireEvidenceIds: true };
   const decisionContext = { scriptRouting: true };
   const rawSeen = await readJson(path.join(stateDir, 'seen.json'), []);
   let seen = (Array.isArray(rawSeen) ? rawSeen : []).filter(x => x.shown_date !== window.date);
@@ -168,8 +168,16 @@ export async function runPipeline(kind = 'daily', options = {}) {
   let decisions = store && await store.get('editor');
   if (dry) decisions = dryDecisions(candidates);
   else if (decisions) decisions = validateDecisions({ decisions }, candidates, tagConfig, decisionContext).decisions;
-  else decisions = (await client.call(editorSystem, candidatePrompt(editorBatch.items), { effort: 'medium', label: 'editor', maxTokens: 12000,
-    validate: (data, context = {}) => validateDecisions(context.cacheHit ? data : editorBatch.decisions(validateDecisions(data, editorBatch.items, tagConfig, decisionContext)), candidates, tagConfig, decisionContext) })).decisions;
+  else {
+    let completeDecisions;
+    const validate = (data, context = {}) => {
+      if (!context.cacheHit) completeDecisions = structuredClone(data);
+      const mapped = context.cacheHit ? data : editorBatch.decisions(validateDecisions(prepareModelDecisions(data, editorBatch.items, tagConfig), editorBatch.items, tagConfig, decisionContext));
+      return validateDecisions(mapped, candidates, tagConfig, decisionContext);
+    };
+    decisions = (await client.call(editorSystem, candidatePrompt(editorBatch.items), { effort: 'medium', label: 'editor', maxTokens: 12000,
+      validate, repair: () => completeDecisions && createDecisionRepair(completeDecisions, editorBatch.items, tagConfig, validate) })).decisions;
+  }
   if (store) await store.put('editor', decisions);
   if (until === 'editor') return boundary('editor');
   await options.onCheckpoint?.('editor', store);
@@ -204,11 +212,12 @@ export async function runPipeline(kind = 'daily', options = {}) {
     }
     const persistParts = async (data, context, summaryShortening) => {
       if (!store || !Array.isArray(data?.items)) return;
+      summaryShortening ||= context.summaryShortening;
       const inputs = context.cacheHit ? selection.items : writerBatch.items;
       const byId = new Map(inputs.map(it => [it.id, it]));
       if (data.items.some(it => !byId.has(it?.id)) || new Set(data.items.map(it => it.id)).size !== data.items.length) return;
       const valid = [];
-      for (const card of data.items) { try { valid.push(validateWritingCard(card, byId.get(card.id))); } catch (error) { if (!(error instanceof LlmError)) throw error; } }
+      for (const card of data.items) { try { valid.push(prepareWritingCard(card, byId.get(card.id), { ...writingContext, ...context })); } catch (error) { if (!(error instanceof LlmError)) throw error; } }
       const mapped = context.cacheHit ? valid : writerBatch.writing({ items: valid }).items;
       if (mapped.length) {
         savedCards = { selected_digest: selectedDigest, items: [...new Map([...(savedCards?.items || []), ...mapped].map(it => [it.id, it])).values()] };
@@ -222,13 +231,15 @@ export async function runPipeline(kind = 'daily', options = {}) {
       if (!context.cacheHit) metadata = writerBatch.writing({ items: [], ...metadata });
       await store.put('metadata', { selected_digest: selectedDigest, executive_summary: metadata.executive_summary, themes: metadata.themes, ...(summaryShortening ? { summary_shortening: summaryShortening } : {}) });
     };
-    let completeAnswer;
+    let completeAnswer, completeContext;
     const validate = async (data, context = {}) => {
       completeAnswer = structuredClone(data);
+      completeContext = context;
       let preparedWriting, result;
       try {
+        if (!context.cacheHit) writerBatch.writing({ items: data.items });
         preparedWriting = prepareWriting(structuredClone(data), context.cacheHit ? selection.items : writerBatch.items, kind, { ...context, ...writingContext });
-        const mapped = context.cacheHit ? preparedWriting : writerBatch.writing({ ...data, executive_summary: preparedWriting.executive_summary, themes: preparedWriting.themes });
+        const mapped = context.cacheHit ? preparedWriting : writerBatch.writing(preparedWriting);
         result = validateWriting(mapped, selection.items, kind, { ...context, ...writingContext });
       } catch (error) { await persistParts(data, context); throw error; }
       const summaryShortening = preparedWriting.validation_notes?.summary_shortening || (context.cacheHit && data.validation_notes?.summary_shortening) || context.summaryShortening;
@@ -239,11 +250,12 @@ export async function runPipeline(kind = 'daily', options = {}) {
     const shortIds = new Map(selection.items.map((it, i) => [it.id, String(i + 1)]));
     const shortMetadata = value => value && ({ ...value, sentences: value.sentences?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) });
     const saved = { items: (savedCards?.items || []).map(it => ({ ...it, id: shortIds.get(it.id) })), executive_summary: shortMetadata(savedMetadata?.executive_summary), themes: savedMetadata?.themes?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) };
-    if (savedCards?.items.length === selection.items.length && savedMetadata) written = await validate(saved, { summaryShortening: savedMetadata.summary_shortening });
+    const canonicalIds = new Set(saved.items.map(it => it.id));
+    if (savedCards?.items.length === selection.items.length && savedMetadata) written = await validate(saved, { canonicalIds, summaryShortening: savedMetadata.summary_shortening });
     else {
-      const resume = saved.items.length && createWritingRepair(saved, writerBatch.items, kind, validate, { ...writingContext, summaryShortening: savedMetadata?.summary_shortening });
+      const resume = saved.items.length && createWritingRepair(saved, writerBatch.items, kind, validate, { ...writingContext, canonicalIds, summaryShortening: savedMetadata?.summary_shortening });
       written = await client.call(resume?.system || writingSystem, resume?.user || writingPrompt(kind, writerBatch.items),
-        { effort: 'low', label: 'writer', maxTokens: 10000, validate: resume?.validate || validate, repair: (data, error) => /Invalid repair reference|Metadata repair cannot replace cards|Repair coverage mismatch/.test(error?.message || '') ? null : createWritingRepair(completeAnswer || data, writerBatch.items, kind, validate, writingContext) });
+        { effort: 'low', label: 'writer', maxTokens: 10000, validate: (data, context) => context?.cacheHit ? validate(data, context) : (resume?.validate || validate)(data, context), repair: (data, error) => /Invalid repair reference|Metadata repair cannot replace cards|Repair coverage mismatch/.test(error?.message || '') ? null : createWritingRepair(completeAnswer || data, writerBatch.items, kind, validate, { ...writingContext, ...completeContext }) });
     }
   }
   const { validation_notes: validationNotes, ...publicWritten } = written;

@@ -106,7 +106,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
         if (ctrl.signal.aborted) error = ctrl.signal.reason;
         error.message = redact(error.message);
         let retryable = error.retryable ?? !(error instanceof LlmError);
-        if (error.validation && repairs === 0 && attempt < delays.length) {
+        if (error.validation && attempt < delays.length) {
           repairs++; retryable = true;
           const correction = parsed && await repair?.(parsed, error);
           if (correction) {
