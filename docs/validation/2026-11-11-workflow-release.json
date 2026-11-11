@@ -1,5 +1,5 @@
 {
-  "status": "daily_published_code_pending",
+  "status": "published_and_verified",
   "date": "2026-11-11 10:18",
   "base": "0cdcaf246b0317a6f1b67362d44764637d89b08c",
   "latest_run": 42937893905,
@@ -380,5 +380,171 @@
   },
   "tests": {
     "root": 340
-  }
+  },
+  "checked_at_beijing": "2026-11-11 10:25",
+  "code_commit": "fbfaae3d492f4fffb1528734b1ebdc70645205e3",
+  "ci": {
+    "id": 42945657534,
+    "node": "22.23.4",
+    "tests": 340,
+    "pass": 340,
+    "fail": 0
+  },
+  "production": {
+    "checked_at": "2026-11-11T02:24:19.943Z",
+    "commit": "fbfaae3d492f4fffb1528734b1ebdc70645205e3",
+    "vercel": [
+      {
+        "state": "success",
+        "url": "https://vercel.com/freza00s-projects/news-agent/9Z6ayEyTaaUwgGWEpZBdpfHm4nfF"
+      }
+    ],
+    "runs": [
+      {
+        "id": 42945657534,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/42945657534"
+      }
+    ],
+    "files": [
+      {
+        "route": "/",
+        "status": 200,
+        "ok": true,
+        "sha256": "cdd55f56502a3d3ec4656e72dbb953a81318c168cb6a5461bd54a119629f5cb7",
+        "expected_sha256": "cdd55f56502a3d3ec4656e72dbb953a81318c168cb6a5461bd54a119629f5cb7"
+      },
+      {
+        "route": "/app.js",
+        "status": 200,
+        "ok": true,
+        "sha256": "0bde5cb30e407c542a74d8b3abc8659eac6f2bde3b751dea47c23a59c0b1d924",
+        "expected_sha256": "0bde5cb30e407c542a74d8b3abc8659eac6f2bde3b751dea47c23a59c0b1d924"
+      },
+      {
+        "route": "/style.css",
+        "status": 200,
+        "ok": true,
+        "sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30",
+        "expected_sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30"
+      },
+      {
+        "route": "/data/latest.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "b34da520fe4f77e1fda296221e89783effbe1a928c653875dbd17a8dd1647c23",
+        "expected_sha256": "b34da520fe4f77e1fda296221e89783effbe1a928c653875dbd17a8dd1647c23"
+      },
+      {
+        "route": "/data/2026-11-11.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "b34da520fe4f77e1fda296221e89783effbe1a928c653875dbd17a8dd1647c23",
+        "expected_sha256": "b34da520fe4f77e1fda296221e89783effbe1a928c653875dbd17a8dd1647c23"
+      },
+      {
+        "route": "/data/2026-11-10.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd",
+        "expected_sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd"
+      },
+      {
+        "route": "/data/2026-11-09.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "6bd895043dbbb09fcfdf3d38870c3f0b4b4e857c0233924c8c561c4c382ce617",
+        "expected_sha256": "6bd895043dbbb09fcfdf3d38870c3f0b4b4e857c0233924c8c561c4c382ce617"
+      },
+      {
+        "route": "/data/2026-11-06.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+        "expected_sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d"
+      },
+      {
+        "route": "/data/dates.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "d39df8dabe232c8fcdf4716248ad3ffa4344d802afefdceada55d4155c1ead57",
+        "expected_sha256": "d39df8dabe232c8fcdf4716248ad3ffa4344d802afefdceada55d4155c1ead57"
+      },
+      {
+        "route": "/data/weekly/latest.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+        "expected_sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e"
+      },
+      {
+        "route": "/data/weekly/2026-11-02.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+        "expected_sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e"
+      },
+      {
+        "route": "/data/weekly/2026-10-26.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "expected_sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd"
+      },
+      {
+        "route": "/data/weekly/dates.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "1ccf3f20395526469b4a667e8b58e1206536a493fbbeae544314f33a36c913f2",
+        "expected_sha256": "1ccf3f20395526469b4a667e8b58e1206536a493fbbeae544314f33a36c913f2"
+      },
+      {
+        "route": "/data/monthly/latest.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d"
+      },
+      {
+        "route": "/data/monthly/2026-10.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d"
+      },
+      {
+        "route": "/data/monthly/dates.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+        "expected_sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db"
+      }
+    ],
+    "all_match": true,
+    "daily": {
+      "date": "2026-11-11",
+      "items": 20,
+      "revision": 2,
+      "payload_sha256": "184fc12daa08f42295c1ec58a9553d54d213f4cef8ce57353ff694a522e2cb7d"
+    }
+  },
+  "browser": {
+    "scenarios": 15,
+    "language_states": 39,
+    "passed": true,
+    "errors": [],
+    "interactions": [
+      "Refresh retains Nov11",
+      "Old Oct26 weekly archive remains readable",
+      "Monthly issue retained"
+    ]
+  },
+  "protected_files": 415,
+  "original_workspace_protected": {
+    "paths": 252,
+    "mismatches": []
+  },
+  "manual_recovery_not_automatic_sla": true
 }
