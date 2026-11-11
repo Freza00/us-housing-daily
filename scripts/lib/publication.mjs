@@ -7,6 +7,8 @@ import { readJson, readDerivedJson, writeJson } from './issue-store.mjs';
 import { materializeIssue } from './pipeline.mjs';
 import { shouldRun, buildWindow } from './calendar.mjs';
 import { waitForDelivery, triggerRedeploy } from './delivery.mjs';
+import { coverageDates } from './editorial-coverage.mjs';
+import { assertFreshDailyReports } from './editorial.mjs';
 
 const exec = promisify(execFile);
 export function gitEnvironment(token, env = process.env) {
@@ -66,6 +68,14 @@ export async function pushCandidate(bundle, { root, now = new Date(), force = fa
       await git(checkout, ['switch', '--detach', 'origin/main']);
       const archiveFile = publicationFiles(issue)[0];
       const remoteIssue = await readJson(path.join(checkout, archiveFile));
+      if (kind === 'daily') {
+        const recent = [];
+        for (const date of coverageDates(label).slice(1)) {
+          const prior = await readJson(path.join(checkout, 'data', date + '.json'));
+          if (prior?.date === date && Array.isArray(prior.items)) recent.push(...prior.items.map(item => ({ ...item, date })));
+        }
+        assertFreshDailyReports(issue, recent);
+      }
       const archiveMatches = remoteIssue && digest(remoteIssue) === digest(issue);
       if (archiveMatches && await projectionMatches(checkout, issue)) return { commit: await git(checkout, ['rev-parse', 'HEAD']), already_pushed: true };
       if (!archiveMatches && (!bundle.base || (remoteIssue ? digest(remoteIssue) : null) !== bundle.base.archive_sha256)) throw new Error('Published issue changed while candidate was prepared');

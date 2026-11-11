@@ -1,0 +1,98 @@
+{
+  "verified_at_bjt": "2026-11-11 11:21",
+  "status": "local_verified_not_published",
+  "tests": {
+    "workspace": {
+      "pass": 360,
+      "fail": 0
+    },
+    "isolated_production_base": {
+      "pass": 360,
+      "fail": 0
+    },
+    "new_regressions": 20
+  },
+  "baseline": "3ad519d9eeffa0478441cecd6436846f8e1b5c4f",
+  "scope": [
+    {
+      "name": "valid Phoenix property",
+      "expected": true,
+      "before": false,
+      "after": true
+    },
+    {
+      "name": "valid US spelling",
+      "expected": true,
+      "before": false,
+      "after": true
+    },
+    {
+      "name": "foreign asset with domestic headquarters",
+      "expected": false,
+      "before": true,
+      "after": false
+    }
+  ],
+  "acquisition": {
+    "before": [
+      {
+        "title": "MarketBeat Seattle Multifamily Q3 2026",
+        "bucket": "cre:industrial"
+      },
+      {
+        "title": "Power Scarcity Poses Problems For Charlotte Industrial Developers",
+        "bucket": "cre:data-center"
+      },
+      {
+        "title": "3 multifamily groundbreakings you may have missed",
+        "bucket": "cre:office"
+      }
+    ],
+    "after": [
+      {
+        "title": "The Next Dollar: How Generational Spending Shifts Are Reshaping Retail Real Estate",
+        "bucket": "cre:retail"
+      },
+      {
+        "title": "Power Scarcity Poses Problems For Charlotte Industrial Developers",
+        "bucket": "cre:industrial"
+      },
+      {
+        "title": "Cushman & Wakefield Completes Sale of 41-Story Chicago Office Tower",
+        "bucket": "cre:office"
+      }
+    ],
+    "attempted_limit": 72,
+    "candidates": 72
+  },
+  "publication_preflight": {
+    "original_rejected": "Repeated employment report without evidenced new data: f62c752ab4a24516",
+    "corrected_passed": true,
+    "corrected_count": 20
+  },
+  "paid_model_calls": 0,
+  "production_writes": 0,
+  "protected_workspace": {
+    "checked": 253,
+    "preexisting_absent": 174,
+    "changed": []
+  },
+  "correction": {
+    "items": 20,
+    "revision": 3,
+    "removed": "f62c752ab4a24516",
+    "replacement": "166e40c5788f8821",
+    "replacement_published_at": 1794001367000,
+    "payload_sha256": "86e7630f6f9718a74e2e0627cfff44b1939cd2e685691e49704bcd0c92ac22b8",
+    "recent_report_gate": "passed",
+    "external_write": false
+  },
+  "files_sha256": {
+    "scripts/lib/news-core.mjs": "59584915f06fdb92f708ed9f7a0b61a8059f1893cffcee0407b796708412c146",
+    "scripts/lib/editorial.mjs": "cd7aff1bfcb37a83b0136caafed8b1026ddb97abdac0561cf7b98fb05dadc7da",
+    "scripts/lib/daily-edition.mjs": "b861e983a7aab5074b50e97808bff18175a5cd630f732229788602d1068afc8b",
+    "scripts/lib/pipeline.mjs": "5896cae61db18d968bcd1fdac74a47dfced9c48ea07bf30819073334573ac1c6",
+    "scripts/lib/publication.mjs": "e8289ce3fb466a23cf70be7500ef4a8e36651f12dbcac5cbb463102b02758127",
+    "scripts/test/review-regressions.test.mjs": "950f44be807e970e3a0f88734d468c0ba6d57894bc85c3d7978e44ed304260cf"
+  }
+}

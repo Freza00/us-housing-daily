@@ -233,6 +233,26 @@ function classify(item) {
   return "national";
 }
 
+export function headlineAsset(item) {
+  const title = String(item.title || '');
+  // A conversion headline mentions both the old and the intended use.
+  if (/(?:retail|office|hotel)[-\s]+to[-\s]+residential|(?:convert|demolish|redevelop).*(?:residential|apartments?)/i.test(title)) return null;
+  const patterns = [
+    ['btr-sfr', /\b(?:BTR|SFR|build[-\s]to[-\s]rent|single[-\s]family\s+rental|Invitation Homes|American Homes 4 Rent|Progress Residential)\b/i],
+    ['multifamily', /\b(?:multifamily|multi-family|apartments?)\b/i],
+    ['office', /\boffice\b/i],
+    ['industrial', /\b(?:industrial|warehous(?:es?|ing)|logistics)\b/i],
+    ['data-center', /\bdata[-\s]centers?\b/i],
+    ['retail', /\b(?:retail|shopping\s+centers?)\b/i],
+    ['hotel', /\b(?:hotels?|hospitality|lodging)\b/i],
+    ['self-storage', /\b(?:self[-\s]?storage|mini\s+storage)\b/i],
+    ['senior-housing', /\b(?:senior\s+(?:housing|living)|assisted\s+living)\b/i],
+    ['life-sciences', /\blife[-\s]sciences?\b/i]
+  ];
+  const assets = patterns.filter(([, pattern]) => pattern.test(title));
+  return assets.length === 1 ? assets[0][0] : null;
+}
+
 function detectCreSubcategory(it) {
   const assetLabels = {
     "multifamily": "多户", "office": "办公", "industrial": "工业",

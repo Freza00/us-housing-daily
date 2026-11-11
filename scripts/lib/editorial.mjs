@@ -1,4 +1,4 @@
-import { dedupe, scoreItem, classify, SECTIONS, detectCreSubcategory, itemId } from './news-core.mjs';
+import { dedupe, scoreItem, classify, SECTIONS, detectCreSubcategory, itemId, headlineAsset } from './news-core.mjs';
 import { LlmError } from './llm-client.mjs';
 import { policyEventKeys } from './event-groups.mjs';
 
@@ -34,10 +34,51 @@ export function dailyPublicationEligibility(items, window, snapshots = [], { def
 }
 
 export function candidateSector(item) {
-  const section = classify(item);
-  if (section === 'btr' || section === 'institutional') return section;
-  const asset = (item.tags || []).find(tag => commercialAssets.has(tag) && tag !== 'mixed-asset');
-  return section === 'cre' && asset ? 'cre:' + asset : 'other';
+  const asset = headlineAsset(item);
+  if (asset === 'btr-sfr') return 'btr';
+  if (/\bfundrais(?:e|es|ing)|\bIPO\b|\bcapital\s+rais(?:e|es|ing)|\brais(?:e[sd]?|ing)\b.{0,35}(?:\$|capital|fund|million|billion)/i.test(item.title)) return 'institutional';
+  return commercialAssets.has(asset) ? 'cre:' + asset : 'other';
+}
+
+// Only generic monthly employment releases share this key. Sector-specific
+// research keeps its own editorial identity.
+export function employmentReportKey(item) {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const match = String(item.title || '').match(new RegExp('\\b(' + months.join('|') + ')\\s+(?:(20\\d{2})\\s+)?(?:jobs|employment)\\s+report\\b', 'i'));
+  if (!match) return null;
+  const focus = String(item.title).slice(match.index + match[0].length);
+  if (/\b(?:construction|residential|mortgage|housing|BTR|SFR|survey|study)\b/i.test(focus)) return null;
+  const month = months.findIndex(value => value.toLowerCase() === match[1].toLowerCase()) + 1;
+  const published = Number(item.published_at);
+  if (!match[2] && !Number.isFinite(published)) return null;
+  const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', year: 'numeric', month: 'numeric' }).formatToParts(new Date(published || 0));
+  const date = Object.fromEntries(parts.map(part => [part.type, part.value]));
+  const year = match[2] || Number(date.year) - (month > Number(date.month) ? 1 : 0);
+  return 'employment:' + year + '-' + String(month).padStart(2, '0');
+}
+
+export function repeatedEmploymentReport(item, recent, { requireWrittenFact = false } = {}) {
+  const key = employmentReportKey(item);
+  const prior = key && recent.filter(row => (row.report_key || employmentReportKey(row)) === key);
+  if (!prior?.length) return null;
+  const quote = item.novelty_evidence;
+  const allowed = [item.title, String(item.description || '').slice(0, item.is_research ? 1200 : 1000)];
+  const matches = typeof quote === 'string' && quote.trim().length >= 20 && quote.length <= 500 &&
+    allowed.some(text => geographyEvidenceMatches(text, quote).length);
+  const stripDates = text => String(text).replace(/\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+20\d{2}\b/gi, '')
+    .replace(/\b20\d{2}\b/g, '');
+  const known = numericValues(stripDates(prior.map(row => [row.title, row.summary_zh, row.report_evidence ?? row.description].join(' ')).join(' ')));
+  const fresh = matches ? [...numericValues(stripDates(quote))].filter(value => !known.has(value)) : [];
+  const written = requireWrittenFact ? numericValues(stripDates(item.title_zh + ' ' + item.summary_zh)) : null;
+  if (fresh.length && /\b(?:jobs?|payroll|employment|unemployment|wages?|earnings|participation)\b/i.test(quote) &&
+      (!written || fresh.some(value => written.has(value)))) return null;
+  return { id: item.id, report_key: key, prior_dates: [...new Set(prior.map(row => row.date))], reason: 'covered_employment_release_without_new_data' };
+}
+
+export function assertFreshDailyReports(issue, recent) {
+  if (issue.kind !== 'daily') return;
+  const repeated = issue.items.map(item => repeatedEmploymentReport(item, recent, { requireWrittenFact: true })).filter(Boolean);
+  if (repeated.length) throw new LlmError('Repeated employment report without evidenced new data: ' + repeated.map(row => row.id).join(','));
 }
 
 export function prepareCandidates(items, window, seen = [], limit = 72, { sectorOpportunities = false } = {}) {
@@ -230,6 +271,7 @@ export function validateDecisions(data, items, tagConfig = null, { scriptRouting
 export function selectItems(items, decisions, { limit = 20, sourceCap = 3 } = {}) {
   const byId = new Map(decisions.map(d => [d.id, d]));
   const pool = items.map(it => { const d = byId.get(it.id) || {}; return { ...it, keep: d.keep, importance: d.importance, section: d.section, tags: d.tags, ...(typeof d.capital_focus === 'boolean' ? { capital_focus: d.capital_focus, geo_evidence: d.geo_evidence } : {}),
+    ...(d.novelty_evidence !== undefined ? { novelty_evidence: d.novelty_evidence } : {}),
     ...(d.market_scope !== undefined ? { market_scope: d.market_scope, market_evidence: d.market_evidence ?? null } : {}), duplicate_of: d.duplicate_of, selector_reason: d.reason }; })
     .filter(it => it.keep && !it.duplicate_of && it.importance >= 3);
   const picked = [], family = new Map(), section = new Map(), assets = new Map(), exceptions = [];
@@ -334,7 +376,7 @@ impact 判断框架：锚定美国住宅／BTR-SFR／多户及 CRE 机构资产�
 同时生成 executive_summary.sentences，通常 2～3 句、合计目标 200 个非空白 Unicode 字符，上限 250；中文 text 内包含的英文字母、数字、符号和标点都计入，不另按汉字数计量。按重要性排序，每句独立完整，必要限定条件跟随对应事实，不只放在末句；只提最重要变化、对相关市场的含义与待观察项，不罗列目录，不硬凑结论。每句附 item_ids，只能引用输入 id。
 返回严格JSON：{"items":[{"id":"输入id","title_zh":"...","summary_zh":"...","impact":"neutral"${evidenceOutput}}],"executive_summary":{"sentences":[{"text":"...","text_en":"...","item_ids":["id"]}]},"themes":[{"title":"主线判断","title_en":"...","item_ids":["id"]}]}。items逐条覆盖输入且无重复。每句同时提供英文 text_en，每项主线提供英文 title_en，与对应中文表达同一事实和限定条件，共用 item_ids，不含中文。英文摘要合计最多 150 个空白分隔词；不得套用中文字符上限。themes仅周/月报输出最多3项，日报为空数组。中文全角标点，中英文/数字间加空格，破折号用--。`;
 export const writingSystem = writingInstructions('、evidence_id（只能选择该条evidence_options中最能支持摘要的一项ID，优先正文；ID中的body-A-B表示evidence_segments第A至B段（两端包含），body-A为单段，title为标题；只能逐字选择列表中的完整ID，最多连续3段，禁止自行构造ID；不抄写evidence_quote，不拼句或改写原文）', ',"evidence_id":"该条选项ID"');
-export const dailyWritingSystem = writingInstructions('，只用本条标题和 evidence 的冻结原文，引用由程序绑定，无需输出引文或段号', '');
+export const dailyWritingSystem = writingInstructions('，只用本条标题和 evidence 的冻结原文，引用由程序绑定，无需输出引文或段号；如有 novelty_evidence，摘要必须实际呈现这段原文中的新增就业数据', '');
 
 const writingEvidenceWindow = it => String(it.description || '').slice(0, 1800);
 const writingSource = (it, fixedEvidence) => it.title + ' ' + (fixedEvidence ? writingEvidenceWindow(it) : it.description);
@@ -397,6 +439,9 @@ export function validateWritingCard(card, it, context = {}) {
   if (context.fixedEvidence && card.evidence_quote !== boundWritingExcerpt(it)) throw new LlmError('Writing excerpt differs from the frozen source for ' + card.id);
   const title_zh = normalizeChinese(card.title_zh), summary_zh = normalizeChinese(card.summary_zh);
   validateWritingNumbers(title_zh + ' ' + summary_zh, writingSource(it, context.fixedEvidence), context.fixedEvidence);
+  if (context.recentReports && repeatedEmploymentReport({ ...it, title_zh, summary_zh }, context.recentReports, { requireWrittenFact: true })) {
+    throw new LlmError('Summary must present the evidenced new employment data for ' + card.id);
+  }
   return { ...it, title_zh, summary_zh, impact: card.impact,
     evidence_quote: card.evidence_quote, evidence_basis: bodyMatch ? 'body' : 'title', cre_subcategory: it.section === 'cre' ? detectCreSubcategory(it) : null };
 }
@@ -492,6 +537,7 @@ export function prepareWriting(data, selected, kind = 'daily', context = {}) {
 export function writingPrompt(kind, items, { fixedEvidence = false } = {}) {
   return JSON.stringify({ kind, items: items.map(it => ({ id: it.id, title: it.title, source: it.source_name, section: it.section,
     published_at: it.published_at, late_discovery: !!it.late_discovery,
+    ...(it.novelty_evidence ? { novelty_evidence: it.novelty_evidence } : {}),
     ...(fixedEvidence ? { evidence: writingEvidenceWindow(it) } : {
       evidence_segments: writingEvidenceSegments(it).map((row, i) => ({ id: i + 1, text: row.segment })),
       evidence_options: writingEvidenceOptions(it).map(option => option.id)
