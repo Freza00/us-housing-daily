@@ -959,9 +959,25 @@ function renderBrief(data) {
   const available = currentLang === 'zh' || sentences.every(row => typeof row.text_en === 'string' && row.text_en.trim() && !/\p{Script=Han}/u.test(row.text_en));
   if (sentences.length && !available) { const p=document.createElement('p'); p.textContent='English summary is unavailable for this archive.'; text.append(p); }
   for(const sentence of available ? sentences : []){const p=document.createElement('p');p.textContent=currentLang==='zh'?formatChinese(sentence.text):sentence.text_en;for(const id of sentence.item_ids||[]){const i=(data.items||[]).findIndex(x=>x.id===id);if(i<0)continue;const a=document.createElement('a');a.href=data.items[i].link;a.target='_blank';a.rel='noopener noreferrer';a.textContent=' ['+(data.items[i].source_name||(currentLang==='zh'?'来源':'Source'))+']';p.append(a);}text.append(p);}
-  block.hidden=!sentences.length;
+  const summaryMissing = data.summary_status === 'unavailable';
+  if (summaryMissing) {
+    const p = document.createElement('p');
+    p.textContent = currentLang === 'zh' ? '本期暂无速读摘要。' : 'No executive summary for this issue.';
+    text.append(p);
+  }
+  block.hidden = !sentences.length && !summaryMissing;
   const note=$('coverageNote');
-  if(note){note.hidden=data.publication_status!=='degraded';note.textContent=currentLang==='zh'?'本期部分研究来源或历史材料暂未取全，补齐后可更新。':'Some research sources or historical inputs are incomplete; this issue can be updated.';}
+  if (note) {
+    const messages = [];
+    if (data.content_status === 'partial') messages.push(currentLang === 'zh'
+      ? `本期刊出 ${data.items.length}／${data.content_target} 条，部分入选稿暂缓刊出。`
+      : `This issue includes ${data.items.length} of ${data.content_target} planned stories. Some stories were held back.`);
+    if ((data.coverage_status ?? data.publication_status) === 'degraded') messages.push(currentLang === 'zh'
+      ? '本期部分研究来源或历史材料暂未取全，补齐后可更新。'
+      : 'Some research sources or historical inputs are incomplete; this issue can be updated.');
+    note.textContent = messages.join(' ');
+    note.hidden = !messages.length;
+  }
   const research=(data._diagnostics?.source_health||[]).filter(s=>s.research);const details=$('researchCoverage'), list=$('researchStatus');
   if(details&&list){list.replaceChildren();details.hidden=!research.length;$('researchTitle').textContent=(currentLang==='zh'?'研究来源覆盖：':'Research coverage: ')+research.filter(s=>s.status==='ok').length+'/'+research.length;for(const source of research){const li=document.createElement('li');const labels={ok:'已检查',empty_listing:'目录未发现有效条目',unreadable:'正文暂不可读',error:'抓取失败'};li.textContent=source.name+(currentLang==='zh'?'：':': ')+(currentLang==='zh'?(labels[source.status]||source.status):source.status)+(source.undated?' · '+source.undated+(currentLang==='zh'?' 条日期待核实':' date(s) unverified'):'');list.append(li);}}
 

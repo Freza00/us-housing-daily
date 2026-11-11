@@ -48,7 +48,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
       const total = setTimeout(() => ctrl.abort(new Error(remaining <= totalMs ? 'LLM run time budget exhausted' : 'LLM total timeout')), Math.min(totalMs, remaining));
       const first = setTimeout(() => ctrl.abort(new Error('LLM first response timeout')), firstByteMs);
       let tokenUsage, responseModel, responseText = '', finish, done = false, parsed, upstreamRequestId, responseId, firstByteAt, httpStatus;
-      let outcome;
+      let outcome, transportActive = false;
       const requestHash = createHash('sha256').update(JSON.stringify(body)).digest('hex');
       const request = { label, model, effort, attempt: attempt + 1, request_id: requestId, request_hash: requestHash, started_at: new Date(started).toISOString(), reserved_ms: Math.min(totalMs, remaining) };
       const heartbeat = () => { clearTimeout(idle); idle = setTimeout(() => ctrl.abort(new Error('LLM stream idle timeout')), idleMs); };
@@ -64,6 +64,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
       try {
         await ledger?.recordAttempt(label, request);
         await record({ event: 'request_started', ...request });
+        transportActive = true;
         const res = await fetchImpl(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + apiKey }, body: JSON.stringify(body), signal: ctrl.signal });
         httpStatus = res.status;
         upstreamRequestId = res.headers.get('x-request-id') || res.headers.get('request-id') || null;
@@ -96,6 +97,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
           }
           if (buffer.trim() === 'data: [DONE]') done = true;
         }
+        transportActive = false;
         if (!done || finish !== 'stop' || !responseText.trim()) throw new LlmError(`Incomplete response: done=${done}, finish=${finish}`, true);
         let result;
         try { parsed = parseJson(responseText); result = await validateResponse(parsed, { cacheHit: false }); } catch (error) { if (error instanceof LlmError) error.validation = true; throw error; }
@@ -104,6 +106,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
         return result;
       } catch (error) {
         if (ctrl.signal.aborted) error = ctrl.signal.reason;
+        if (transportActive && (error instanceof TypeError || ctrl.signal.aborted)) error.llmTransport = true;
         error.message = redact(error.message);
         let retryable = error.retryable ?? !(error instanceof LlmError);
         if (error.validation && attempt < delays.length) {

@@ -51,7 +51,8 @@ test('failed hydration uses a bounded attempt budget before one complete frozen 
   const dir = path.join(root, 'state/issues/daily/2026-11-04/r1');
   const frozen = JSON.parse(await fs.readFile(path.join(dir, 'prepared.json')));
   assert.equal(frozen.snapshot.items.length, 67);
-  assert.deepEqual(frozen.snapshot.candidate_preparation, { limit: 72, initial_count: 5, attempted: 72, accepted: 67, rejected: 5 });
+  assert.deepEqual(frozen.snapshot.candidate_preparation, { limit: 72, initial_count: 5, attempted: 72, accepted: 67, rejected: 5,
+    sectors: { other: { available: 81, attempted: 72, accepted: 67 } } });
   assert.equal(new Set(batches.flat()).size, 72);
   assert.equal(frozen.snapshot.publication_exclusions.filter(it => it.reason === 'insufficient_evidence').length, 5);
   const frozenBytes = await fs.readFile(path.join(dir, 'prepared.json'));
@@ -99,4 +100,58 @@ test('candidate spillover preserves the single major-research publication except
   const decisions = items.map(it => ({ id: it.id, keep: true, importance: 5, section: 'national', tags: ['housing'], duplicate_of: null }));
   const selected = selectItems(result.candidates, decisions);
   assert.equal(selected.items.length, 4); assert.equal(selected.exceptions.length, 1);
+});
+
+test('daily acquisition reserves bounded opportunities for thin sectors before crowded research', () => {
+  const crowded = rows(40).map((item, index) => ({ ...item, source_family: 'research-' + index, required_source: true }));
+  const thin = [
+    { ...sample('btr', upper - 700000), title: 'Build-to-rent developer opens single-family rental community', is_research: false, source_weight: 0 },
+    { ...sample('capital', upper - 700000), title: 'Pension fund completes real estate fundraising', is_research: false, source_weight: 0 },
+    { ...sample('office', upper - 700000), title: 'Office building transaction in Chicago completes', is_research: false, source_weight: 0 },
+    { ...sample('storage', upper - 700000), title: 'Self-storage properties report leasing improvement', is_research: false, source_weight: 0 }
+  ];
+  const baseline = prepareCandidates([...crowded, ...thin], { lower, upper }, [], 12);
+  const reserved = prepareCandidates([...crowded, ...thin], { lower, upper }, [], 12, { sectorOpportunities: true });
+  assert(!baseline.candidates.some(item => thin.some(lead => lead.id === item.id)));
+  assert(thin.every(lead => reserved.candidates.some(item => item.id === lead.id)));
+  assert.equal(reserved.candidates.length, 12);
+  assert(reserved.candidates.filter(item => item.required_source).length > 0);
+});
+
+test('an insufficient but dated daily lead can be hydrated before the final evidence check', async t => {
+  const root = await sandbox(t);
+  const lead = { ...sample('btr', upper - 1000), title: 'Build-to-rent townhomes begin construction',
+    evidence_status: 'insufficient', description: 'The local publication reports a new build-to-rent community under construction in the Charlotte area.' };
+  const env = { NEWS_DATA_DIR: path.join(root, 'data'), NEWS_STATE_DIR: path.join(root, 'state'), PUBLISH_NOW: now.toISOString(), PIPELINE_UNTIL: 'prepared' };
+  let tried = 0;
+  const collector = { cache: {}, collect: async () => [{ items: [lead], health: { id: 'btr', status: 'ok', articles: 1, coverage: { lower, upper } } }],
+    enrich: async batch => {
+      tried += batch.length;
+      return batch.map(item => ({ ...item, evidence_status: 'article', description: item.description + ' The developer has received notice to proceed with the project.' }));
+    } };
+  const result = await runPipeline('daily', { root, env, now, collector });
+  const frozen = JSON.parse(await fs.readFile(path.join(result.issue_dir, 'prepared.json')));
+  assert.equal(tried, 1);
+  assert.equal(frozen.snapshot.items.length, 1);
+  assert.equal(frozen.snapshot.items[0].evidence_status, 'article');
+  assert.equal(frozen.snapshot.candidate_preparation.sectors.btr.accepted, 1);
+});
+
+test('recent event context is frozen with prepared inputs and reused on editor resume', async t => {
+  const root = await sandbox(t), item = sample('new', upper - 1000);
+  const oldFile = path.join(root, 'data/2026-11-03.json');
+  await fs.writeFile(oldFile, JSON.stringify({ date: '2026-11-03', items: [{ title: 'Progress Residential FTC settlement', summary_zh: '已刊监管和解事件。' }] }));
+  const env = { NEWS_DATA_DIR: path.join(root, 'data'), NEWS_STATE_DIR: path.join(root, 'state'), PUBLISH_NOW: now.toISOString(), PIPELINE_UNTIL: 'prepared' };
+  const collector = { cache: {}, collect: async () => [{ items: [item], health: { id: item.id, status: 'ok', articles: 1 } }], enrich: async items => items };
+  const stage = await runPipeline('daily', { root, env, now, collector });
+  const frozen = JSON.parse(await fs.readFile(path.join(stage.issue_dir, 'prepared.json')));
+  assert.equal(frozen.snapshot.recent_coverage.length, 1);
+  await fs.writeFile(oldFile, JSON.stringify({ date: '2026-11-03', items: [{ title: 'Changed after freeze', summary_zh: '不可替换冻结上下文。' }] }));
+  const client = fakeClient(), originalCall = client.call;
+  client.call = async (system, user, options) => {
+    assert.match(system, /Progress Residential FTC settlement/);
+    assert.doesNotMatch(system, /Changed after freeze/);
+    return originalCall(system, user, options);
+  };
+  await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'editor' }, now, collector: { collect() { throw Error('Recollection'); } }, client });
 });

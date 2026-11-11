@@ -1,0 +1,384 @@
+{
+  "status": "daily_published_code_pending",
+  "date": "2026-11-11 10:18",
+  "base": "0cdcaf246b0317a6f1b67362d44764637d89b08c",
+  "latest_run": 42937893905,
+  "candidate": {
+    "ready": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/release-20261111/recovery/state/issues/daily/2026-11-11/r2/ready.json",
+    "state": "/Users/freddiezhang/Documents/Claude/Projects/美国住宅房地产报告/news-agent/.tmp/release-20261111/recovery/state",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-11",
+      "cutoff_upper": 1794344400000,
+      "revision": 2
+    },
+    "payload_sha256": "184fc12daa08f42295c1ec58a9553d54d213f4cef8ce57353ff694a522e2cb7d",
+    "manifest_sha256": "b2ca65e0119d0b18adb4c318d4bf5dcaa9a12c2d8c5f0a4a92ff938ff39c3689",
+    "items": 20,
+    "counts": {
+      "national": 7,
+      "sunbelt": 4,
+      "btr": 0,
+      "cre": 8,
+      "institutional": 1
+    },
+    "audit": {
+      "parent_identity": {
+        "kind": "daily",
+        "period_key": "2026-11-11",
+        "cutoff_upper": 1794344400000,
+        "revision": 1
+      },
+      "parent_run": 42937893905,
+      "parent_manifest_sha256": "ea26930bbd6eef6bf63dbffbad8ba18471870bd5a0638313458bc2b510255e41",
+      "excluded": [
+        {
+          "id": "ed0023a87a431cbe",
+          "reason": "London assets are outside the US issue scope"
+        },
+        {
+          "id": "a6068794478b1873",
+          "reason": "FTC settlement and no-admission statement were already covered on November 9"
+        }
+      ],
+      "supplemental_drafts": [
+        "3c7a176d0203286b",
+        "0d104e5546356107"
+      ],
+      "changed_quotes": [
+        {
+          "id": "e5a70ee16a734672",
+          "original_id": "17",
+          "range": "17:body-6-8"
+        },
+        {
+          "id": "3e662092579a4e04",
+          "original_id": "18",
+          "range": "18:body-2-4"
+        },
+        {
+          "id": "4461da2fd4a90e94",
+          "original_id": "20",
+          "range": "20:body-4-6"
+        }
+      ],
+      "original_valid_us_cards_preserved": 16,
+      "new_model_requests": 0,
+      "new_source_collection": 0,
+      "reason": "Explicit manual r2 under the original rules; inherited exhausted ledger; US scope and cross-issue duplicate correction, accepted original reserve replacements"
+    }
+  },
+  "source_probe": {
+    "checked_at": "2026-11-11T02:10:57.125Z",
+    "sources": [
+      {
+        "id": "nrhc",
+        "name": "National Rental Home Council (NRHC)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794363044888,
+        "attempted_urls": [
+          "https://www.rentalhomecouncil.org/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 7,
+        "unreadable_recent": 4,
+        "earliest_dated": 1793374823000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793758244888,
+          "upper": 1794363044888
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794363044888,
+        "samples": [
+          {
+            "title": "SFR/BTR in 2027: Less Supply, More Opportunity? – MultiHousing News",
+            "url": "https://www.multihousingnews.com/whats-on-the-horizon-for-the-sfr-market/",
+            "published_at": 1793987771000,
+            "body_length": 0,
+            "access": "feed_excerpt"
+          },
+          {
+            "title": "U.S. home prices are falling for the first time in 3 years – The Washington Post",
+            "url": "https://www.washingtonpost.com/business/2026/11/03/us-home-prices-are-falling-first-time-3-years/",
+            "published_at": 1793987760000,
+            "body_length": 327,
+            "access": "preview"
+          },
+          {
+            "title": "The midterms are shaping the housing policy landscape. What real estate pros should watch. – HousingWire",
+            "url": "https://www.housingwire.com/articles/2026-midterms-housing-policy/",
+            "published_at": 1793987734000,
+            "body_length": 6000,
+            "access": "public"
+          }
+        ]
+      },
+      {
+        "id": "sec-invh-8k",
+        "name": "Invitation Homes (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1794363044888,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://www.invh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1781261100000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793758244888,
+          "upper": 1794363044888
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794363044888,
+        "samples": [
+          {
+            "title": "Invitation Homes Reports Third Quarter 2026 Results",
+            "url": "https://www.invh.com/files/doc_earnings/2026/q3/earnings-result/Q3-2026-Press_Release.pdf",
+            "published_at": 1793218500000,
+            "body_length": 0,
+            "access": "feed_excerpt"
+          },
+          {
+            "title": "Invitation Homes Announces Dates for Third Quarter 2026 Earnings Release and Webcast",
+            "url": "https://www.invh.com/news-events/news/news-details/2026/Invitation-Homes-Announces-Dates-for-Third-Quarter-2026-Earnings-Release-and-Webcast/default.aspx",
+            "published_at": 1791405000000,
+            "body_length": 0,
+            "access": "feed_excerpt"
+          },
+          {
+            "title": "Invitation Homes Announces Cash Dividend",
+            "url": "https://www.invh.com/news-events/news/news-details/2026/Invitation-Homes-Announces-Cash-Dividend-9a0209acb/default.aspx",
+            "published_at": 1789123500000,
+            "body_length": 0,
+            "access": "feed_excerpt"
+          }
+        ]
+      },
+      {
+        "id": "sec-amh-8k",
+        "name": "AMH (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1794363044888,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://investors.amh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1775679300000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793758244888,
+          "upper": 1794363044888
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794363044888,
+        "samples": [
+          {
+            "title": "AMH Reports Third Quarter 2026 Financial and Operating Results",
+            "url": "https://investors.amh.com/events-and-presentations/press-releases/news-details/2026/AMH-Reports-Third-Quarter-2026-Financial-and-Operating-Results/default.aspx",
+            "published_at": 1793826480000,
+            "body_length": 6000,
+            "access": "preview"
+          },
+          {
+            "title": "AMH Announces Dates of Third Quarter 2026 Earnings Release and Conference Call",
+            "url": "https://investors.amh.com/events-and-presentations/press-releases/news-details/2026/AMH-Announces-Dates-of-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx",
+            "published_at": 1791490500000,
+            "body_length": 0,
+            "access": "feed_excerpt"
+          },
+          {
+            "title": "AMH to Participate in BofA Securities 2026 Global Real Estate Conference",
+            "url": "https://investors.amh.com/events-and-presentations/press-releases/news-details/2026/AMH-to-Participate-in-BofA-Securities-2026-Global-Real-Estate-Conference/default.aspx",
+            "published_at": 1788984900000,
+            "body_length": 0,
+            "access": "feed_excerpt"
+          }
+        ]
+      },
+      {
+        "id": "btrlist",
+        "name": "BTR List (via Google News)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794363044888,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site:news.btrlist.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 58,
+        "articles": 58,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1722134745000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793758244888,
+          "upper": 1794363044888
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794363044888,
+        "samples": [
+          {
+            "title": "BTR List - BTR List",
+            "url": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE1JME1oeTl0RzBQOU5kU2J3YWJ5NmdmcXdNS3hfT3dxekdfdVEyYTNqV0l1NTVORDZMNDdCTVln?oc=5",
+            "published_at": 1722134745000,
+            "body_length": 30,
+            "access": "feed_excerpt"
+          },
+          {
+            "title": "Cushman & Wakefield brokers sale of 601-unit portfolio - BTR List",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOUm5LSzBFaUJZdl9GU3pWeDNQQ1MtQTZMOHBoc2N3cVU2WTUzd1pBWjRfbkh1ZEtNLXVZQTV3Mzh2ZXNsYnd6TkdETnFDLS1CZXNCUlFLSDFvLVNQUHZmc0RiUlNFSzd0V1VWcE00S2xuZFQ2VTlFb0h0blZtVUVmWWtqNEo3cjlISFpYSg?oc=5",
+            "published_at": 1742540400000,
+            "body_length": 76,
+            "access": "feed_excerpt"
+          },
+          {
+            "title": "BTR Daily - November 9, 2026 - Mandrake stabilizes 134-home BTR community in Jacksonville - BTR List",
+            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZWljaHBNYTYxTmRsajBNSzlVRksyNmdaVzFEMkhGR1JIbzRZR1BGSDR0MEgySFJuM0F6dVlwSkM4TFVDTXVlNlhKdHgtc1poTXRYY1FfcFhsUGhBVFRvTFVwWGxPS2tUb01DYXBpVENNczFVOVF0X29Oa0d4WXl4cldjRk1sMDQybXZHOVFDVFdFcDBPUFE?oc=5",
+            "published_at": 1794226394000,
+            "body_length": 111,
+            "access": "feed_excerpt"
+          }
+        ]
+      }
+    ]
+  },
+  "supplement_verification": [
+    {
+      "id": "3c7a176d0203286b",
+      "url": "https://houstonagentmagazine.com/2026/11/10/nar-mls-policy-changes/?utm_source=rss&utm_medium=rss&utm_campaign=nar-mls-policy-changes",
+      "status": 200,
+      "title": "NAR recommends new MLS policy changes amid Compass private-listings kerfuffle",
+      "date": 1794333445000,
+      "body_length": 3884,
+      "checks": [
+        [
+          "four MLS policy recommendations",
+          true
+        ],
+        [
+          "copyright",
+          true
+        ],
+        [
+          "local data-feed",
+          true
+        ],
+        [
+          "Committee",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "0d104e5546356107",
+      "url": "https://rebusinessonline.com/mdh-partners-acquires-129301-sf-industrial-building-in-laredo-texas/",
+      "status": 200,
+      "title": "MDH Partners Acquires 129,301 SF Industrial Building in Laredo, Texas",
+      "date": 1794325112000,
+      "body_length": 1612,
+      "checks": [
+        [
+          "129,301",
+          true
+        ],
+        [
+          "Laredo",
+          true
+        ],
+        [
+          "fully leased",
+          true
+        ],
+        [
+          "DHL",
+          true
+        ]
+      ]
+    }
+  ],
+  "new_model_calls_this_release": 0,
+  "data_delivery": {
+    "schema_version": 1,
+    "ok": true,
+    "host": "https://news-agent-mu.vercel.app",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-11",
+      "cutoff_upper": 1794344400000,
+      "revision": 2
+    },
+    "payload_sha256": "184fc12daa08f42295c1ec58a9553d54d213f4cef8ce57353ff694a522e2cb7d",
+    "commit": "955517523275b4256eb59c5454e0e227c5a795f8",
+    "checked_at": 1794363593849,
+    "files": [
+      {
+        "route": "/data/latest.json",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-11.json",
+        "ok": true
+      },
+      {
+        "route": "/data/dates.json",
+        "ok": true
+      },
+      {
+        "route": "/",
+        "ok": true
+      }
+    ],
+    "pushed": {
+      "commit": "955517523275b4256eb59c5454e0e227c5a795f8",
+      "already_pushed": false
+    }
+  },
+  "source_entry_checks": {
+    "ok": 4,
+    "attempted": 4,
+    "btrlist_direct_origin_http": 403,
+    "aggregator_body_still_insufficient": true
+  },
+  "tests": {
+    "root": 340
+  }
+}

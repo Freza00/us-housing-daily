@@ -1,0 +1,409 @@
+{
+  "checked_at_beijing": "2026-11-11 10:01",
+  "status": "local_implementation_verified",
+  "publications": 0,
+  "tests": {
+    "root": 337,
+    "production_based_clean_copy": 337,
+    "specific_new_regressions": 6
+  },
+  "browser": {
+    "states": 24,
+    "ok": true,
+    "errors": []
+  },
+  "real_probe": {
+    "ok": true,
+    "editor_cases": 3,
+    "writer_cards": 4,
+    "model_requests": 2,
+    "tokens": 20524,
+    "model_ms": 33490
+  },
+  "historical_replay": {
+    "source_run": 42906754027,
+    "modes": [
+      {
+        "mode": "original-copy",
+        "editorCalls": 1,
+        "writerCalls": 1,
+        "pool": 26,
+        "items": 20,
+        "published": [
+          {
+            "id": "2be648cc673a840f",
+            "title": "October 2026 CPI: Inflation Firms, December Fed Hike Looms",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "a6068794478b1873",
+            "title": "Pretium Statement Regarding Agreement with the Federal Trade Commission",
+            "source": "captured_valid_card",
+            "section": "btr",
+            "asset": "btr-sfr"
+          },
+          {
+            "id": "b46d684187a7a822",
+            "title": "October Marks the First Month in 3 Years With a Decline in U.S. Home-Sale Prices",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "f62c752ab4a24516",
+            "title": "October Jobs Report: Surging Payrolls and Hiring Uptick Means Fed Hawks Can Exhale",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "db75f6ce7a47794a",
+            "title": "MarketBeat Seattle Multifamily Q3 2026",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "multifamily"
+          },
+          {
+            "id": "85898cd9fe2382d3",
+            "title": "Former Trump Admin Officials Raise $130M For Modular Data Center Startup",
+            "source": "captured_valid_card",
+            "section": "institutional",
+            "asset": "data-center"
+          },
+          {
+            "id": "405c9e7e58c0fd0f",
+            "title": "Montclair Scottsdale retail-to-residential conversion now complete",
+            "source": "captured_valid_card",
+            "section": "sunbelt",
+            "asset": "multifamily"
+          },
+          {
+            "id": "52071080a5a5febc",
+            "title": "The Next Dollar: How Generational Spending Shifts Are Reshaping Retail Real Estate",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "retail"
+          },
+          {
+            "id": "e586f99818329973",
+            "title": "Genesis, KTGY Complete 54-Story Austin Tower",
+            "source": "captured_valid_card",
+            "section": "sunbelt",
+            "asset": "multifamily"
+          },
+          {
+            "id": "0516c89f7fcbd5e6",
+            "title": "Cushman & Wakefield Announces Sale of Historic 121 W. Wacker to Chicago-Based Investor Group",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "office"
+          },
+          {
+            "id": "ab1fea1e5b4d09ae",
+            "title": "Greybrook Picks Up 334-Unit Mansfield Rental Community",
+            "source": "captured_valid_card",
+            "section": "sunbelt",
+            "asset": "multifamily"
+          },
+          {
+            "id": "fb035ef381450e91",
+            "title": "Power Scarcity Poses Problems For Charlotte Industrial Developers",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "industrial"
+          },
+          {
+            "id": "c3fc4509049cfd35",
+            "title": "VA Loans in a High-Rate Market: Lower Down Payments, Lower Costs",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "e56a3eb2c2e586a9",
+            "title": "Maryland firm purchases Legacy at West Cobb in Marietta",
+            "source": "captured_valid_card",
+            "section": "sunbelt",
+            "asset": "multifamily"
+          },
+          {
+            "id": "3e662092579a4e04",
+            "title": "San Diego apartment supply is about to peak",
+            "source": "captured_repair_text",
+            "section": "cre",
+            "asset": "multifamily"
+          },
+          {
+            "id": "e5a70ee16a734672",
+            "title": "ARMs hit record 17% of locks: Pitch beyond the 30-year",
+            "source": "captured_repair_text",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "92a431b5b06a7ec7",
+            "title": "Cushman & Wakefield Brokers $44 Million Sale of 240-Unit Apartment Community in Sheboygan, Wisconsin to Axiom Properties",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "multifamily"
+          },
+          {
+            "id": "5adbd82f95b75dc8",
+            "title": "Mortgage rates ease as buyers gain leverage with concessions, ARMs",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "4461da2fd4a90e94",
+            "title": "Camden lowers guidance after September concession resurgence",
+            "source": "captured_repair_text",
+            "section": "cre",
+            "asset": "multifamily"
+          },
+          {
+            "id": "166e40c5788f8821",
+            "title": "Opendoor says it's behind schedule but plans to catch up by 2027",
+            "source": "hand_written_fixture",
+            "section": "national",
+            "asset": "housing"
+          }
+        ],
+        "sections": {
+          "national": 7,
+          "sunbelt": 4,
+          "btr": 1,
+          "cre": 7,
+          "institutional": 1
+        },
+        "writingPlan": {
+          "planned": 20,
+          "pool_size": 26,
+          "shortfall": 0,
+          "deferred": [],
+          "replacements": []
+        },
+        "summaryCount": 2,
+        "marketExclusions": [
+          "ed0023a87a431cbe"
+        ]
+      },
+      {
+        "mode": "reserves",
+        "editorCalls": 1,
+        "writerCalls": 2,
+        "pool": 26,
+        "items": 20,
+        "published": [
+          {
+            "id": "2be648cc673a840f",
+            "title": "October 2026 CPI: Inflation Firms, December Fed Hike Looms",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "a6068794478b1873",
+            "title": "Pretium Statement Regarding Agreement with the Federal Trade Commission",
+            "source": "captured_valid_card",
+            "section": "btr",
+            "asset": "btr-sfr"
+          },
+          {
+            "id": "b46d684187a7a822",
+            "title": "October Marks the First Month in 3 Years With a Decline in U.S. Home-Sale Prices",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "f62c752ab4a24516",
+            "title": "October Jobs Report: Surging Payrolls and Hiring Uptick Means Fed Hawks Can Exhale",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "db75f6ce7a47794a",
+            "title": "MarketBeat Seattle Multifamily Q3 2026",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "multifamily"
+          },
+          {
+            "id": "85898cd9fe2382d3",
+            "title": "Former Trump Admin Officials Raise $130M For Modular Data Center Startup",
+            "source": "captured_valid_card",
+            "section": "institutional",
+            "asset": "data-center"
+          },
+          {
+            "id": "405c9e7e58c0fd0f",
+            "title": "Montclair Scottsdale retail-to-residential conversion now complete",
+            "source": "captured_valid_card",
+            "section": "sunbelt",
+            "asset": "multifamily"
+          },
+          {
+            "id": "52071080a5a5febc",
+            "title": "The Next Dollar: How Generational Spending Shifts Are Reshaping Retail Real Estate",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "retail"
+          },
+          {
+            "id": "e586f99818329973",
+            "title": "Genesis, KTGY Complete 54-Story Austin Tower",
+            "source": "captured_valid_card",
+            "section": "sunbelt",
+            "asset": "multifamily"
+          },
+          {
+            "id": "0516c89f7fcbd5e6",
+            "title": "Cushman & Wakefield Announces Sale of Historic 121 W. Wacker to Chicago-Based Investor Group",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "office"
+          },
+          {
+            "id": "ab1fea1e5b4d09ae",
+            "title": "Greybrook Picks Up 334-Unit Mansfield Rental Community",
+            "source": "captured_valid_card",
+            "section": "sunbelt",
+            "asset": "multifamily"
+          },
+          {
+            "id": "fb035ef381450e91",
+            "title": "Power Scarcity Poses Problems For Charlotte Industrial Developers",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "industrial"
+          },
+          {
+            "id": "c3fc4509049cfd35",
+            "title": "VA Loans in a High-Rate Market: Lower Down Payments, Lower Costs",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "e56a3eb2c2e586a9",
+            "title": "Maryland firm purchases Legacy at West Cobb in Marietta",
+            "source": "captured_valid_card",
+            "section": "sunbelt",
+            "asset": "multifamily"
+          },
+          {
+            "id": "848e1439cfc40e2f",
+            "title": "3 multifamily groundbreakings you may have missed",
+            "source": "hand_written_fixture",
+            "section": "cre",
+            "asset": "multifamily"
+          },
+          {
+            "id": "48ef80630ee015af",
+            "title": "NAR sees pent-up demand waiting on lower mortgage rates, better sentiment",
+            "source": "hand_written_fixture",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "92a431b5b06a7ec7",
+            "title": "Cushman & Wakefield Brokers $44 Million Sale of 240-Unit Apartment Community in Sheboygan, Wisconsin to Axiom Properties",
+            "source": "captured_valid_card",
+            "section": "cre",
+            "asset": "multifamily"
+          },
+          {
+            "id": "5adbd82f95b75dc8",
+            "title": "Mortgage rates ease as buyers gain leverage with concessions, ARMs",
+            "source": "captured_valid_card",
+            "section": "national",
+            "asset": "housing"
+          },
+          {
+            "id": "6734284313581c36",
+            "title": "TruAmerica expands into ground-up development with California project",
+            "source": "hand_written_fixture",
+            "section": "cre",
+            "asset": "multifamily"
+          },
+          {
+            "id": "166e40c5788f8821",
+            "title": "Opendoor says it's behind schedule but plans to catch up by 2027",
+            "source": "hand_written_fixture",
+            "section": "national",
+            "asset": "housing"
+          }
+        ],
+        "sections": {
+          "national": 7,
+          "sunbelt": 4,
+          "btr": 1,
+          "cre": 7,
+          "institutional": 1
+        },
+        "writingPlan": {
+          "planned": 20,
+          "pool_size": 26,
+          "shortfall": 0,
+          "deferred": [
+            {
+              "id": "3e662092579a4e04",
+              "section": "cre",
+              "reason": "writing_unvalidated"
+            },
+            {
+              "id": "e5a70ee16a734672",
+              "section": "national",
+              "reason": "writing_unvalidated"
+            },
+            {
+              "id": "4461da2fd4a90e94",
+              "section": "cre",
+              "reason": "writing_unvalidated"
+            }
+          ],
+          "replacements": [
+            {
+              "deferred_id": "3e662092579a4e04",
+              "published_id": "848e1439cfc40e2f"
+            },
+            {
+              "deferred_id": "e5a70ee16a734672",
+              "published_id": "48ef80630ee015af"
+            },
+            {
+              "deferred_id": "4461da2fd4a90e94",
+              "published_id": "6734284313581c36"
+            }
+          ]
+        },
+        "summaryCount": 0,
+        "marketExclusions": [
+          "ed0023a87a431cbe"
+        ]
+      }
+    ],
+    "historical_calls": 0
+  },
+  "protected_workspace": {
+    "checked": 253,
+    "missing": 174,
+    "mismatches": []
+  },
+  "choices": {
+    "daily_writer": "one bounded batch, at most 26",
+    "partial_policy": "at least 80%, at most 3 missing, all important primary and populated sections retained",
+    "evidence": "script-bound display excerpt and frozen first 1800 characters for numeric checks",
+    "publication_scope": "implementation only"
+  },
+  "limitations": [
+    "Replay replacements include explicitly hand-written test fixtures, not newly model-generated production stories.",
+    "The source crawl and sector-target algorithm have not changed.",
+    "Direction, entity, measurement-period and bilingual semantic equivalence are not proved by numeric guards.",
+    "No production CI or deployment was run; the new protocol is incompatible with old frozen rules."
+  ]
+}

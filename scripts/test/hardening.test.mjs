@@ -6,7 +6,7 @@ import { runPipeline, materializeIssue } from '../lib/pipeline.mjs';
 import { digest, validateIssue, reusableIssue } from '../lib/issue-contract.mjs';
 import { openIssueStore, ruleDigest } from '../lib/issue-store.mjs';
 import { createLlmClient } from '../lib/llm-client.mjs';
-import { selectItems, validateWritingCard } from '../lib/editorial.mjs';
+import { selectItems, prepareWritingCard } from '../lib/editorial.mjs';
 import { mergeCheckpoints } from '../lib/collection-checkpoint.mjs';
 import { loadCurrentCandidate } from '../publish.mjs';
 import { installCheckpoint, trustedArtifactRun } from '../lib/artifact-recovery.mjs';
@@ -28,7 +28,7 @@ async function setup(t, configured = sources) {
 const stageDir = root => path.join(root,'state/issues/daily/2026-10-28/r1');
 const response = value => new Response(JSON.stringify({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify(value) } }] }), { headers: { 'content-type': 'application/json' } });
 function answer(input, bad = false) {
-  return { items: input.items.map(it => ({ id: it.id, title_zh: '住宅销售研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', ...(it.evidence_options ? modelEvidence(it) : { evidence_quote: it.evidence.slice(0,70) }) })), executive_summary: { sentences: [{ text: `住宅销售增长 ${bad ? 99 : 5}%。`, text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] };
+  return { items: input.items.map(it => ({ id: it.id, title_zh: '住宅销售研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', ...modelEvidence(it) })), executive_summary: { sentences: [{ text: `住宅销售增长 ${bad ? 99 : 5}%。`, text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] };
 }
 
 for (const offsetMs of [180001, 180000, 120000, 1, 0, -60000, null]) {
@@ -46,7 +46,7 @@ for (const offsetMs of [180001, 180000, 120000, 1, 0, -60000, null]) {
     store.manifest.attempts = structuredClone(originalAttempts);
     store.manifest.model_ms = spentMs - 30000;
     await store.put('metadata', { selected_digest: digest(selected), executive_summary: valid.executive_summary, themes: [] });
-    await store.put('cards', { selected_digest: digest(selected), items: valid.items.slice(0, 2).map((card, i) => validateWritingCard(card, selected[i])) });
+    await store.put('cards', { selected_digest: digest(selected), items: valid.items.slice(0, 2).map((card, i) => prepareWritingCard(card, selected[i], { fixedEvidence: true })) });
     const clock = Date.parse('2026-11-09T00:58:00Z');
     t.mock.method(Date, 'now', () => clock);
     let requests = 0;
@@ -98,10 +98,7 @@ for (const mode of ['card-and-metadata', 'metadata-only', 'all-cards', 'exhauste
   const options = { ...opts, env, collector: { collect() { throw Error('recollection'); } }, llmOptions: { retryDelays: [0,0], fetchImpl: async (_url, request) => {
     const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content); requests.push(body);
     assert(!Array.isArray(input), 'editor must not run again');
-    if (mode === 'metadata-only') {
-      assert.match(body.messages[0].content, /仅纠正 executive_summary/);
-      return response({ executive_summary: answer(input).executive_summary, themes: [] });
-    }
+    assert.notEqual(mode, 'metadata-only', 'an optional invalid summary must not request a model');
     assert.equal(input.items.length, mode === 'all-cards' ? 3 : 1);
     const result = answer(input); result.executive_summary.sentences[0].item_ids = input.original_item_ids || input.items.map(it => it.id);
     return response(result);
@@ -114,12 +111,17 @@ for (const mode of ['card-and-metadata', 'metadata-only', 'all-cards', 'exhauste
     assert.equal(JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'cards.json'))).items.length, 2);
   } else {
     assert.equal((await runPipeline('daily', options)).stage, 'ready');
-    assert.equal(requests.length, 1);
+    assert.equal(requests.length, mode === 'metadata-only' ? 0 : 1);
     const restored = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'cards.json')));
     for (const card of restored.items) if (mode === 'metadata-only' || mode !== 'all-cards' && card.id !== originalCards[0].id) assert.deepEqual(card, originalCards.find(it => it.id === card.id));
     const after = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'manifest.json')));
     assert.deepEqual(after.attempts.editor, attemptsBefore.editor);
-    assert.equal(after.attempts.writer.length, 2);
+    assert.equal(after.attempts.writer.length, mode === 'metadata-only' ? 1 : 2);
+    if (mode === 'metadata-only') {
+      const { payload } = JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'ready.json')));
+      assert.equal(payload.executive_summary, null);
+      assert.equal(payload.summary_status, 'unavailable');
+    }
   }
 });
 
@@ -156,63 +158,54 @@ test('stage invocations freeze evidence and reuse editor after writer failure ev
   assert.equal(result.items.length, 3);
 });
 
-test('a bad shared summary repairs metadata only and persists all validated cards', async t => {
-  const opts = await setup(t), calls = []; let writers = 0;
-  const llmOptions = { retryDelays: [0,0], sleep: async () => {}, fetchImpl: async (_url, request) => {
-    const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content); calls.push(body);
-    if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id)) });
-    if (++writers === 1) return response(answer(input, true));
-    assert.match(body.messages[0].content, /仅纠正 executive_summary/);
-    return response({ executive_summary: { sentences: [{ text: '住宅销售增长 5%。', text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] });
-  } };
-  const result = await runPipeline('daily', { ...opts, env: { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid' }, llmOptions });
-  assert.equal(calls.length, 3); assert.equal(result.items.length, 3);
-  assert(result.items.every(it => it.summary_zh === '住宅销售增长 5%。'));
-  const manifest = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'manifest.json')));
-  assert.equal(manifest.attempts.writer.length, 2);
-});
-
-test('valid cards survive a failed metadata repair and only metadata is requested on the next run', async t => {
-  const opts = await setup(t), env = { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid' };
-  let firstWriter = true;
-  const initial = { retryDelays: [0,0], sleep: async () => {}, fetchImpl: async (_url, request) => {
+test('a bad daily summary leaves the validated cards ready, including on cold resume', async t => {
+  const opts = await setup(t), calls = [];
+  const env = { ...opts.env, PIPELINE_UNTIL: 'ready', LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid' };
+  const llmOptions = { fetchImpl: async (_url, request) => {
     const input = JSON.parse(JSON.parse(request.body).messages[1].content);
-    if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id)) });
-    if (firstWriter) { firstWriter = false; return response(answer(input, true)); }
-    return new Response('model_not_found', { status: 503 });
+    calls.push(input);
+    return response(Array.isArray(input) ? { decisions: input.map(it => modelDecision(it.id)) } : answer(input, true));
   } };
-  await assert.rejects(runPipeline('daily', { ...opts, env, llmOptions: initial }), /model_not_found/);
-  const cards = await fs.readFile(path.join(stageDir(opts.root),'cards.json'));
-  const retries = [];
-  const llmOptions = { retryDelays: [0,0], fetchImpl: async (_url, request) => {
-    const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content); retries.push(body);
-    assert.match(body.messages[0].content, /仅纠正 executive_summary/);
-    return response({ executive_summary: { sentences: [{ text: '住宅销售增长 5%。', text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] });
-  } };
-  const result = await runPipeline('daily', { ...opts, env, llmOptions, collector: { collect() { throw Error('recollection'); } } });
-  assert.equal(retries.length, 1); assert.equal(result.items.length, 3);
-  assert.equal(JSON.parse(cards).items.length, 3);
-  const manifest = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'manifest.json')));
-  assert.equal(manifest.attempts.writer.length, 3);
+  await runPipeline('daily', { ...opts, env, llmOptions });
+  const dir = stageDir(opts.root), file = path.join(dir, 'manifest.json');
+  const before = JSON.parse(await fs.readFile(path.join(dir, 'ready.json'))).payload;
+  assert.equal(before.items.length, 3);
+  assert.equal(before.executive_summary, null);
+  assert.equal(before.summary_status, 'unavailable');
+  assert.equal(calls.length, 2);
+  const manifest = JSON.parse(await fs.readFile(file));
+  assert.equal(manifest.attempts.writer.length, 1);
+  delete manifest.phases.ready;
+  await fs.writeFile(file, JSON.stringify(manifest));
+  const restored = await runPipeline('daily', { ...opts, env, client: { call() { throw Error('unexpected model'); } }, collector: { collect() { throw Error('recollection'); } } });
+  assert.equal(restored.stage, 'ready');
+  const after = JSON.parse(await fs.readFile(path.join(dir, 'ready.json'))).payload;
+  assert.deepEqual(after.items, before.items);
+  assert.equal(after.executive_summary, null);
 });
 
-test('repairing a missing card then bad metadata never asks to rewrite the saved cards',async t=>{
-  const opts=await setup(t),seed=fakeClient(),original=seed.call;
-  seed.call=async(system,user,options)=>{
-    if(options.label==='editor')return original(system,user,options);
-    const result=answer(JSON.parse(user),true);result.items[2].summary_zh='住宅销售增长 99%。';
+test('repairing a missing daily card finishes even if the summary fails', async t => {
+  const opts = await setup(t), seed = fakeClient(), original = seed.call;
+  seed.call = async (system, user, options) => {
+    if (options.label === 'editor') return original(system, user, options);
+    const result = answer(JSON.parse(user), true);
+    result.items[2].summary_zh = '住宅销售增长 99%。';
     return options.validate(result);
   };
-  await assert.rejects(runPipeline('daily',{...opts,client:seed}),/number absent/);
-  assert.equal(JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'cards.json'))).items.length,2);
-  const calls=[];
-  const result=await runPipeline('daily',{...opts,env:{...opts.env,LLM_API_KEY:'offline-key',LLM_ENDPOINT:'https://offline.invalid'},llmOptions:{retryDelays:[0,0],sleep:async()=>{},fetchImpl:async(_url,request)=>{
-    const body=JSON.parse(request.body),input=JSON.parse(body.messages[1].content);calls.push(body);
-    if(calls.length===1){assert.deepEqual(input.items.map(it=>it.id),['3']);return response({...answer(input,true),executive_summary:{sentences:[{text:'住宅销售增长 99%。',item_ids:input.original_item_ids}]}});}
-    assert.match(body.messages[0].content,/仅纠正 executive_summary/);
-    return response({executive_summary:{sentences:[{text:'住宅销售增长 5%。',text_en:'Housing sales rose 5%.',item_ids:input.items.map(it=>it.id)}]},themes:[]});
-  }}});
-  assert.equal(calls.length,2);assert.equal(result.items.length,3);
+  await assert.rejects(runPipeline('daily', { ...opts, client: seed }), /number absent/);
+  assert.equal(JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'cards.json'))).items.length, 2);
+  const calls = [];
+  const result = await runPipeline('daily', { ...opts, env: { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid' },
+    llmOptions: { retryDelays: [0, 0], sleep: async () => {}, fetchImpl: async (_url, request) => {
+      const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+      calls.push(input);
+      assert.equal(calls.length, 1);
+      assert.deepEqual(input.items.map(it => it.id), ['3']);
+      return response({ items: answer(input).items });
+    } } });
+  assert.equal(calls.length, 1);
+  assert.equal(result.items.length, 3);
+  assert.equal(result.executive_summary, null);
 });
 
 test('unknown or exhausted durable budgets forbid new requests but allow validated cache reuse',async t=>{

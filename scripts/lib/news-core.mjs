@@ -138,6 +138,9 @@ function scoreItem(item, now) {
   if (hc.length) tags.add("btr-sfr");
   if (/hotel|hospitality|lodging/.test(tlow)) tags.add("hotel");
   if (/retail\s+center|shopping\s+center/.test(tlow)) tags.add("retail");
+  if (/self[-\s]?storage|mini\s+storage/.test(tlow)) tags.add("self-storage");
+  if (/senior\s+(?:housing|living)|assisted\s+living/.test(tlow)) tags.add("senior-housing");
+  if (/life[-\s]sciences?/.test(tlow)) tags.add("life-sciences");
   if (/\b(housing\s+market|new\s+home\s+sales|existing\s+home\s+sales|home\s+sales|homebuyer|home\s+price|residential\s+market|housing\s+starts|mortgage\s+rate|home\s+inventory)\b/.test(tlow)) tags.add("housing");
   if (hr.length) tags.add("texas");
   if (tlow.includes("houston")) tags.add("houston");
@@ -159,7 +162,7 @@ function scoreItem(item, now) {
   if (/\b(broker|brokerage|realtor|mls)\b/.test(tlow)) tags.add("brokerage");
   if (/\b(federal\s+reserve|fomc|hud|fhfa|treasury\s+department|cfpb)\b/.test(tlow)) tags.add("regulator");
   // 资产维度收尾
-  const SPECIFIC = ["multifamily","btr-sfr","office","industrial","data-center","hotel","retail","housing"];
+  const SPECIFIC = ["multifamily","btr-sfr","office","industrial","data-center","hotel","retail","self-storage","senior-housing","life-sciences","housing"];
   if (SPECIFIC.some(a => tags.has(a)) && tags.has("mixed-asset")) tags.delete("mixed-asset");
   const ASSETS = [...SPECIFIC, "mixed-asset"];
   if (!ASSETS.some(a => tags.has(a))) tags.add(item.region === "texas" ? "housing" : "mixed-asset");
@@ -205,6 +208,7 @@ function isBtrItem(item) {
 function classify(item) {
   const t = item.title.toLowerCase();
   if (isBtrItem(item)) return "btr";
+  if (/self[-\s]?storage|mini\s+storage|senior\s+(?:housing|living)|assisted\s+living|life[-\s]sciences?/.test(t)) return "cre";
   // 移除 source_id === "pere-news" 强制规则：PERE 偶尔发具体物业项目（如 multifamily redev），
   // 让内容关键词决定，避免污染 institutional section（典型反例 — Richmond Greyhound 改造被错归）
   if (RE_INST.test(t)) return "institutional";

@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { validateWriting, routeSection } from './editorial.mjs';
+import { DAILY_WRITING_POLICY, isDailyUSStory } from './daily-edition.mjs';
 
 export const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function periodKey(kind, window) { return kind === 'daily' ? window.date : kind === 'weekly' ? window.periodStart : window.label; }
@@ -18,7 +19,16 @@ export function validateIssue(issue, { kind = issue?.kind || 'daily', upper, per
   if (issue.items.some(it => !Number.isFinite(it.published_at) || it.published_at >= issue.window.upper)) throw new Error('Invalid card publication date');
   if (issue.editorial_schema !== undefined && issue.editorial_schema !== 2) throw new Error('Unsupported editorial schema');
   if (issue.editorial_schema === 2 && issue.items.some(it => typeof it.capital_focus !== 'boolean' || it.section !== routeSection(it))) throw new Error('Script section mismatch');
-  validateWriting(structuredClone(issue), issue.items, kind, { requireEnglish: issue.editorial_schema === 2 });
+  const fixedEvidence = issue.writing_policy === DAILY_WRITING_POLICY;
+  if (issue.writing_policy !== undefined && (!fixedEvidence || kind !== 'daily' || issue.editorial_schema !== 2)) throw new Error('Unsupported issue writing policy');
+  if (fixedEvidence) {
+    if (issue.items.some(item => !isDailyUSStory(item, item))) throw new Error('Daily issue contains a story outside its verified US scope');
+    const target = issue.content_target, shortfall = target - issue.items.length;
+    if (!Number.isInteger(target) || target < issue.items.length || target > 20 || shortfall > 3 || issue.items.length < Math.ceil(target * 0.8) ||
+        issue.content_status !== (shortfall ? 'partial' : 'passed') || (shortfall && issue.publication_status !== 'degraded')) throw new Error('Invalid daily content status');
+    if (issue.summary_status !== (issue.executive_summary === null ? 'unavailable' : 'available')) throw new Error('Invalid daily summary status');
+  }
+  validateWriting(structuredClone(issue), issue.items, kind, { requireEnglish: issue.editorial_schema === 2, fixedEvidence, allowMissingSummary: fixedEvidence });
   return issue;
 }
 

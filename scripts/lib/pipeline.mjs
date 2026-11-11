@@ -8,7 +8,8 @@ import { createCollector } from './sources.mjs';
 import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint, uniqueSourceHealth } from './collection-checkpoint.mjs';
 import { createLlmClient, LlmError } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
-import { dailyPublicationEligibility, prepareCandidates, editorInstructions, candidatePrompt, validateDecisions, prepareModelDecisions, createDecisionRepair, selectItems, writingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, prepareWritingCard, validateWritingMetadata, prepareWritingMetadata, dryDecisions } from './editorial.mjs';
+import { dailyPublicationEligibility, prepareCandidates, candidateSector, editorInstructions, candidatePrompt, validateDecisions, prepareModelDecisions, createDecisionRepair, selectItems, writingSystem, dailyWritingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, prepareWritingCard, validateWritingMetadata, prepareWritingMetadata, dryDecisions } from './editorial.mjs';
+import { assembleDailyEdition, isDailyUSStory, DAILY_WRITING_LIMIT, DAILY_WRITING_POLICY } from './daily-edition.mjs';
 import { createModelBatch } from './model-references.mjs';
 import { editorialCoverage, coverageDates } from './editorial-coverage.mjs';
 import { validArchive, periodKey, validateIssue, assertExpectedIssue } from './issue-contract.mjs';
@@ -64,9 +65,10 @@ export async function runPipeline(kind = 'daily', options = {}) {
   }
   const frozen = store && await store.get('prepared');
   const base = frozen?.base || { archive_sha256: existing ? fingerprint(existing) : null, latest_sha256: latest ? fingerprint(latest) : null, producer_commit: env.GITHUB_SHA || null };
-  const editorSystem = editorInstructions(tagConfig);
-  const writingContext = { requireEnglish: true, requireEvidenceIds: true };
-  const decisionContext = { scriptRouting: true };
+  const dailyPool = kind === 'daily' && !dry;
+  const editorSystem = editorInstructions(tagConfig, { usOnly: dailyPool });
+  const writingContext = { requireEnglish: true, requireEvidenceIds: !dailyPool, fixedEvidence: dailyPool };
+  const decisionContext = { scriptRouting: true, requireMarketScope: dailyPool };
   const rawSeen = await readJson(path.join(stateDir, 'seen.json'), []);
   let seen = (Array.isArray(rawSeen) ? rawSeen : []).filter(x => x.shown_date !== window.date);
   let allItems = [], health = [], snapshots = [], inputProvenance = 'live', collector;
@@ -133,25 +135,42 @@ export async function runPipeline(kind = 'daily', options = {}) {
       if (saved?.provenance === 'live' && saved.window?.upper <= window.upper) legacySnapshots.push(saved);
     }
   }
-  eligibility = kind === 'daily' ? dailyPublicationEligibility(normalized, window, legacySnapshots) : { eligible: normalized, excluded: [] };
+  eligibility = kind === 'daily' ? dailyPublicationEligibility(normalized, window, legacySnapshots, { deferEvidence: true }) : { eligible: normalized, excluded: [] };
   const candidateWindow = kind === 'daily' ? { ...window, lower: eligibility.eligible.reduce((n,it)=>Math.min(n,it.published_at),window.lower) } : window;
-  prepared = prepareCandidates(eligibility.eligible, candidateWindow, kind === 'daily' ? seen : []);
+  prepared = prepareCandidates(eligibility.eligible, candidateWindow, kind === 'daily' ? seen : [], 72, { sectorOpportunities: kind === 'daily' });
   candidates = [];
   let attempted = 0;
+  const sectorCounts = {};
+  if (kind === 'daily') for (const [bucket, available] of Object.entries(prepared.sector_counts)) {
+    sectorCounts[bucket] = { available, attempted: 0, accepted: 0 };
+  }
   while (attempted < prepared.candidates.length && attempted < prepared.limit && candidates.length < prepared.limit) {
     const slots = attempted === 0 ? prepared.initial_count : prepared.limit - candidates.length;
     const batch = prepared.candidates.slice(attempted, attempted + Math.min(slots, prepared.limit - attempted));
     attempted += batch.length;
+    if (kind === 'daily') for (const item of batch) sectorCounts[candidateSector(item)].attempted++;
     const enriched = collector ? await collector.enrich(batch) : batch;
     if (kind === 'daily') {
       const checked = dailyPublicationEligibility(enriched, window);
+      const originalSectors = new Map(batch.map(item => [item.id, candidateSector(item)]));
+      for (const item of checked.eligible) sectorCounts[originalSectors.get(item.id)].accepted++;
       candidates.push(...checked.eligible); eligibility.excluded.push(...checked.excluded);
     } else candidates.push(...enriched);
   }
-  const candidatePreparation = { limit: prepared.limit, initial_count: prepared.initial_count, attempted, accepted: candidates.length, rejected: attempted - candidates.length };
+  const candidatePreparation = { limit: prepared.limit, initial_count: prepared.initial_count, attempted, accepted: candidates.length, rejected: attempted - candidates.length,
+    ...(kind === 'daily' ? { sectors: sectorCounts } : {}) };
   if (collector) await writeJson(path.join(stateDir, 'source-cache.json'), collector.cache);
   if (!candidates.length) throw new Error('No eligible dated candidates; refusing to replace last successful issue');
-  snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, candidate_preparation: candidatePreparation, initial_seen: seen, source_health: health, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: uniqueSourceHealth(s.source_health || []) })), pipeline_version: '3.0' };
+  const recentCoverage = [];
+  if (kind === 'daily') for (const date of coverageDates(label).slice(1)) {
+    const issue = await readJson(path.join(dataDir, date + '.json'), null);
+    if (issue?.date === date && Array.isArray(issue.items)) for (const item of issue.items) {
+      recentCoverage.push({ date, title: item.title, summary_zh: String(item.summary_zh || '').slice(0, 160) });
+    }
+  }
+  snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, candidate_preparation: candidatePreparation,
+    ...(kind === 'daily' ? { recent_coverage: recentCoverage.slice(0, 80) } : {}),
+    initial_seen: seen, source_health: health, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: uniqueSourceHealth(s.source_health || []) })), pipeline_version: '3.0' };
   await writeJson(path.join(stateDir, 'inputs', kind + '-' + label + '.json'), snapshot);
   collectionFinishedAt = Date.now();
   if (store) await store.put('prepared', { snapshot, normalized, checkpoint, base, eligible_count: prepared.eligible_count, collection_finished_at: collectionFinishedAt });
@@ -175,20 +194,33 @@ export async function runPipeline(kind = 'daily', options = {}) {
       const mapped = context.cacheHit ? data : editorBatch.decisions(validateDecisions(prepareModelDecisions(data, editorBatch.items, tagConfig), editorBatch.items, tagConfig, decisionContext));
       return validateDecisions(mapped, candidates, tagConfig, decisionContext);
     };
-    decisions = (await client.call(editorSystem, candidatePrompt(editorBatch.items), { effort: 'medium', label: 'editor', maxTokens: 12000,
-      validate, repair: () => completeDecisions && createDecisionRepair(completeDecisions, editorBatch.items, tagConfig, validate) })).decisions;
+    const recentCoverage = snapshot.recent_coverage?.length
+      ? '\n以下是冻结的近期已刊事件台账，不是新稿。候选与已刊属于同一事件时，只有独立新增事实或实质后续行动才可 keep=true，并在 reason 明确新增；更换来源、重复声明或立场重述均不另占条数。\n' + JSON.stringify(snapshot.recent_coverage) : '';
+    decisions = (await client.call(editorSystem + recentCoverage, candidatePrompt(editorBatch.items), { effort: 'medium', label: 'editor', maxTokens: 12000,
+      validate, repair: () => completeDecisions && createDecisionRepair(completeDecisions, editorBatch.items, tagConfig, validate, decisionContext) })).decisions;
   }
   if (store) await store.put('editor', decisions);
   if (until === 'editor') return boundary('editor');
   await options.onCheckpoint?.('editor', store);
-  const selection = selectItems(candidates, decisions);
+  const marketExclusions = new Set();
+  if (dailyPool) {
+    const source = new Map(candidates.map(item => [item.id, item]));
+    decisions = decisions.map(row => {
+      if (!row.keep || isDailyUSStory(source.get(row.id), row)) return row;
+      marketExclusions.add(row.id);
+      return { ...row, keep: false };
+    });
+  }
+  const selection = selectItems(candidates, decisions, dailyPool ? { limit: DAILY_WRITING_LIMIT } : {});
   if (!selection.items.length) throw new Error('No stories met the editorial quality threshold');
+  const primary = dailyPool ? selection.items.slice(0, 20) : selection.items;
   let written;
   if (dry) written = { items: selection.items.map(it => ({ ...it, title_zh: '', summary_zh: '(离线验证，未调用模型)', impact: 'neutral' })), themes: [], executive_summary: null };
   else {
     const writerBatch = createModelBatch(selection.items);
     const selectedDigest = fingerprint(selection.items);
     let savedCards = store && await store.get('cards'), savedMetadata = store && await store.get('metadata');
+    const assemble = options => assembleDailyEdition(primary, selection.items, savedCards?.items || [], savedMetadata, options);
     if ((savedCards && savedCards.selected_digest !== selectedDigest) || (savedMetadata && savedMetadata.selected_digest !== selectedDigest)) throw new Error('Writing checkpoint selection mismatch');
     // Presence and checksums do not establish content validity. Retain only parts
     // that pass the current contract before choosing a no-request resume path.
@@ -197,7 +229,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
       if (savedCards.items.some(it => !byId.has(it?.id)) || new Set(savedCards.items.map(it => it.id)).size !== savedCards.items.length) throw new LlmError('Invalid saved writing references');
       const items = [];
       for (const card of savedCards.items) {
-        try { items.push(validateWritingCard(card, byId.get(card.id))); } catch (error) { if (!(error instanceof LlmError)) throw error; }
+        try { items.push(validateWritingCard(card, byId.get(card.id), writingContext)); } catch (error) { if (!(error instanceof LlmError)) throw error; }
       }
       savedCards = { selected_digest: selectedDigest, items };
       await store.put('cards', savedCards);
@@ -207,7 +239,6 @@ export async function runPipeline(kind = 'daily', options = {}) {
       catch (error) {
         if (!(error instanceof LlmError)) throw error;
         savedMetadata = null;
-        await store.put('metadata', null);
       }
     }
     const persistParts = async (data, context, summaryShortening) => {
@@ -220,21 +251,39 @@ export async function runPipeline(kind = 'daily', options = {}) {
       for (const card of data.items) { try { valid.push(prepareWritingCard(card, byId.get(card.id), { ...writingContext, ...context })); } catch (error) { if (!(error instanceof LlmError)) throw error; } }
       const mapped = context.cacheHit ? valid : writerBatch.writing({ items: valid }).items;
       if (mapped.length) {
-        savedCards = { selected_digest: selectedDigest, items: [...new Map([...(savedCards?.items || []), ...mapped].map(it => [it.id, it])).values()] };
+        const previous = savedCards?.items || [];
+        const combined = dailyPool ? [...mapped, ...previous] : [...previous, ...mapped];
+        savedCards = { selected_digest: selectedDigest, items: [...new Map(combined.map(it => [it.id, it])).values()] };
         await store.put('cards', savedCards);
       }
+      if (dailyPool && savedMetadata) return;
       let metadata;
       try {
         metadata = prepareWritingMetadata(structuredClone(data), inputs, kind, writingContext);
         summaryShortening ||= metadata.summary_shortening;
       } catch (error) { if (error instanceof LlmError) return; throw error; }
       if (!context.cacheHit) metadata = writerBatch.writing({ items: [], ...metadata });
-      await store.put('metadata', { selected_digest: selectedDigest, executive_summary: metadata.executive_summary, themes: metadata.themes, ...(summaryShortening ? { summary_shortening: summaryShortening } : {}) });
+      savedMetadata = { selected_digest: selectedDigest, executive_summary: metadata.executive_summary, themes: metadata.themes, ...(summaryShortening ? { summary_shortening: summaryShortening } : {}) };
+      await store.put('metadata', savedMetadata);
     };
     let completeAnswer, completeContext;
     const validate = async (data, context = {}) => {
       completeAnswer = structuredClone(data);
       completeContext = context;
+      if (dailyPool) {
+        if (!context.cacheHit) writerBatch.writing({ items: data?.items });
+        const ids = new Set((context.cacheHit ? selection.items : writerBatch.items).map(item => item.id));
+        if (!Array.isArray(data?.items) || data.items.some(card => !ids.has(card?.id)) || new Set(data.items.map(card => card.id)).size !== data.items.length) throw new LlmError('Invalid daily writing references');
+        await persistParts(data, context, data.validation_notes?.summary_shortening);
+        if (!assemble()) {
+          // Keep the original per-card diagnostic for the existing repair path.
+          for (const card of data.items) prepareWritingCard(card, (context.cacheHit ? selection.items : writerBatch.items).find(it => it.id === card.id), { ...writingContext, ...context });
+          throw new LlmError('Daily writing pool cannot yet fill the planned issue');
+        }
+        // Cache the verified pool and unprojected metadata for cold resume.
+        return { items: savedCards.items, executive_summary: savedMetadata?.executive_summary ?? null, themes: savedMetadata?.themes || [],
+          validation_notes: savedMetadata?.summary_shortening ? { summary_shortening: savedMetadata.summary_shortening } : {} };
+      }
       let preparedWriting, result;
       try {
         if (!context.cacheHit) writerBatch.writing({ items: data.items });
@@ -251,14 +300,23 @@ export async function runPipeline(kind = 'daily', options = {}) {
     const shortMetadata = value => value && ({ ...value, sentences: value.sentences?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) });
     const saved = { items: (savedCards?.items || []).map(it => ({ ...it, id: shortIds.get(it.id) })), executive_summary: shortMetadata(savedMetadata?.executive_summary), themes: savedMetadata?.themes?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) };
     const canonicalIds = new Set(saved.items.map(it => it.id));
-    if (savedCards?.items.length === selection.items.length && savedMetadata) written = await validate(saved, { canonicalIds, summaryShortening: savedMetadata.summary_shortening });
+    const preassembled = dailyPool && (assemble() || (targetDeadline > Date.now() && remainingBeforeReserve <= 0 && assemble({ allowPartial: true })));
+    if (preassembled) written = preassembled;
+    else if (!dailyPool && savedCards?.items.length === selection.items.length && savedMetadata) written = await validate(saved, { canonicalIds, summaryShortening: savedMetadata.summary_shortening });
     else {
       const resume = saved.items.length && createWritingRepair(saved, writerBatch.items, kind, validate, { ...writingContext, canonicalIds, summaryShortening: savedMetadata?.summary_shortening });
-      written = await client.call(resume?.system || writingSystem, resume?.user || writingPrompt(kind, writerBatch.items),
-        { effort: 'low', label: 'writer', maxTokens: 10000, validate: (data, context) => context?.cacheHit ? validate(data, context) : (resume?.validate || validate)(data, context), repair: (data, error) => /Invalid repair reference|Metadata repair cannot replace cards|Repair coverage mismatch/.test(error?.message || '') ? null : createWritingRepair(completeAnswer || data, writerBatch.items, kind, validate, { ...writingContext, ...completeContext }) });
+      try {
+        written = await client.call(resume?.system || (dailyPool ? dailyWritingSystem : writingSystem), resume?.user || writingPrompt(kind, writerBatch.items, writingContext),
+          { effort: 'low', label: 'writer', maxTokens: 10000, validate: (data, context) => context?.cacheHit ? validate(data, context) : (resume?.validate || validate)(data, context), repair: (data, error) => /Invalid repair reference|Metadata repair cannot replace cards|Repair coverage mismatch/.test(error?.message || '') ? null : createWritingRepair(completeAnswer || data, writerBatch.items, kind, validate, { ...writingContext, ...completeContext }) });
+        if (dailyPool) written = assemble();
+      } catch (error) {
+        if (!dailyPool || !(error instanceof LlmError || error.llmTransport)) throw error;
+        written = assemble({ allowPartial: true });
+        if (!written) throw error;
+      }
     }
   }
-  const { validation_notes: validationNotes, ...publicWritten } = written;
+  const { validation_notes: validationNotes, writing: writingPlan, ...publicWritten } = written;
   const history = [];
   if (kind === 'daily') for (const date of coverageDates(label).slice(1)) {
     const issue = await readJson(path.join(dataDir, date + '.json'), null);
@@ -269,14 +327,24 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const requiredProblems = health.filter(s => s.required && (s.status !== 'ok' || s.undated === s.articles));
   const sectionProblems = Object.values(editorialAudit.sections).some(section => section.source_failures.length);
   const status = dry ? 'dry_run' : gaps.length || requiredProblems.length || sectionProblems ? 'degraded' : 'complete';
+  const sourceCounts = Object.create(null);
+  for (const item of written.items) sourceCounts[item.source_family] = (sourceCounts[item.source_family] || 0) + 1;
+  const publishedIds = new Set(written.items.map(item => item.id));
+  const deferredIds = new Set(writingPlan?.deferred.map(item => item.id));
   const payload = { schema_version: 2, ...(!dry ? { editorial_schema: 2 } : {}), kind, date: kind === 'daily' ? label : undefined, publish_date: beijingDateStr(now.getTime()), generated_at: (env.PUBLISH_NOW || options.now) ? now.getTime() : Date.now(),
-    period_start: window.periodStart, period_end: window.periodEnd, period_label: window.label, window, publication_status: status, coverage_status: status, content_status: dry ? 'dry_run' : 'passed', delivery_state: 'ready', edition: store?.identity,
+    period_start: window.periodStart, period_end: window.periodEnd, period_label: window.label, window,
+    ...(dailyPool ? { writing_policy: DAILY_WRITING_POLICY, content_target: writingPlan.planned, summary_status: publicWritten.executive_summary ? 'available' : 'unavailable' } : {}),
+    publication_status: writingPlan?.shortfall ? 'degraded' : status, coverage_status: status,
+    content_status: dry ? 'dry_run' : writingPlan?.shortfall ? 'partial' : 'passed', delivery_state: 'ready', edition: store?.identity,
     sections: SECTIONS, ...publicWritten, sources_attempted: health.length, sources_ok: health.filter(h => h.status === 'ok').length,
     errors: health.filter(h => h.status !== 'ok').map(h => ({ source: h.name, error: h.error || h.status })),
     _diagnostics: { timings: { cutoff: window.upper, job_started_at: now.getTime(), collection_finished_at: collectionFinishedAt, generation_finished_at: Date.now() }, collection_watermarks: kind === 'daily' ? checkpoint.source_upper || {} : undefined, writer_validation: validationNotes || null, pipeline_version: '3.0', provenance: inputProvenance, window_hours: window.hours, candidate_pool_size: candidates.length, eligible_count: prepared.eligible_count, backlog_before_window: candidates.filter(it=>it.published_at<window.lower).map(it=>it.id),
       publication_exclusions: eligibility.excluded, source_health: health, research_audit: normalized.filter(x => x.is_research && x.published_at >= window.lower && x.published_at < window.upper).map(x => ({ id: x.id, source: x.source_name, title: x.title, link: x.link,
-        disposition: written.items.some(it => it.id === x.id) ? 'selected' : eligibility.excluded.find(it => it.id === x.id)?.reason || (decisions.find(d => d.id === x.id)?.duplicate_of ? 'merged' : candidates.some(it => it.id === x.id) ? 'editorial_not_selected' : 'candidate_budget') })),
-      editorial_coverage: editorialAudit, source_counts: selection.source_counts, source_exceptions: selection.exceptions, coverage_gaps: gaps, required_source_problems: requiredProblems.map(x => x.id),
+        disposition: publishedIds.has(x.id) ? 'selected' : deferredIds.has(x.id) ? 'writing_unvalidated' : marketExclusions.has(x.id) ? 'not_verified_us' : eligibility.excluded.find(it => it.id === x.id)?.reason || (decisions.find(d => d.id === x.id)?.duplicate_of ? 'merged' : candidates.some(it => it.id === x.id) ? 'editorial_not_selected' : 'candidate_budget') })),
+      ...(dailyPool ? { writing_plan: writingPlan, market_exclusions: [...marketExclusions] } : {}),
+      editorial_coverage: editorialAudit, source_counts: dailyPool ? sourceCounts : selection.source_counts,
+      source_exceptions: selection.exceptions.filter(row => !dailyPool || publishedIds.has(row.id) && sourceCounts[row.family] > 3),
+      coverage_gaps: gaps, required_source_problems: requiredProblems.map(x => x.id),
       llm: store && Object.values(store.manifest.attempts).flat().length ? [...Object.values(store.manifest.attempts).flat(), ...(client.usage || []).filter(event => event.cache_hit)].sort((a,b) => String(a.started_at || '').localeCompare(String(b.started_at || ''))) : client.usage, input_fingerprint: fingerprint(snapshot.items), summary_characters: summaryCharacterCount(written.executive_summary?.text || '') } };
   const bundle = { schema_version: 1, identity: store?.identity, payload, checkpoint, snapshot, base };
   if (store) { validateIssue(payload, { kind, upper: window.upper, period: label }); await store.put('ready', bundle); }

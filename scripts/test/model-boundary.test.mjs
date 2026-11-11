@@ -147,7 +147,7 @@ test('failed second card repair preserves trimmed metadata and cold resume spend
     if (writerCalls === 1) {
       ids.push(...input.items.map(it => it.id)); badId = input.items[2].id;
       rawCards.push(...input.items.map(it => ({ ...modelCard({ ...it, description: '' }), ...modelEvidence(it) })));
-      const first = structuredClone(rawCards); first[2].evidence_id = badId + ':missing';
+      const first = structuredClone(rawCards); first[2].summary_zh = '销售增长 99%。';
       return response({ items: first, executive_summary: { sentences: [{ text: '甲'.repeat(150), text_en: 'Housing markets remain constrained.', item_ids: [ids[0]] }, { text: '乙'.repeat(140), text_en: 'Inventory remains a constraint.', item_ids: [ids[1]] }] }, themes: [] });
     }
     assert.deepEqual(input.items.map(it => it.id), [badId]);
@@ -179,9 +179,9 @@ test('failed second card repair preserves trimmed metadata and cold resume spend
   assert.deepEqual((await read('ready')).payload.items, ready.payload.items);
 });
 
-test('metadata-only cold repair cache uses full canonical validation even when no model budget remains', async t => {
+test('weekly metadata-only cold repair cache uses full canonical validation even when no model budget remains', async t => {
   const root = await sandbox(t), rows = ['alpha', 'beta'].map(id => sample(id, Date.parse('2026-10-28T14:00:00Z')));
-  const env = { ...await replayEnv(root, { items: rows }, '2026-10-29T01:00:00Z'), LLM_ENDPOINT: 'https://fixture.invalid', LLM_API_KEY: 'fixture', PIPELINE_UNTIL: 'ready' };
+  const env = { ...await replayEnv(root, { items: rows }, '2026-11-02T06:30:00Z'), LLM_ENDPOINT: 'https://fixture.invalid', LLM_API_KEY: 'fixture', PIPELINE_UNTIL: 'ready' };
   let calls = 0, ids;
   const fetchImpl = async (_url, options) => {
     const input = JSON.parse(JSON.parse(options.body).messages[1].content);
@@ -190,14 +190,14 @@ test('metadata-only cold repair cache uses full canonical validation even when n
     if (calls === 1) { ids = input.items.map(it => it.id); return response({ items: input.items.map(it => ({ id: it.id, title_zh: '住宅研究', summary_zh: '销售增长 5%。', impact: 'neutral', ...modelEvidence(it) })), executive_summary: { sentences: [{ text: '销售增长 99%。', text_en: 'Sales rose 99%.', item_ids: ids }] }, themes: [] }); }
     return response(metadata(ids));
   };
-  await assert.rejects(runPipeline('daily', { root, env, llmOptions: { fetchImpl, retryDelays: [] } }), /number absent/);
-  const dir = path.join(root, 'state/issues/daily/2026-10-29/r1'), read = async name => JSON.parse(await fs.readFile(path.join(dir, name + '.json')));
+  await assert.rejects(runPipeline('weekly', { root, env, llmOptions: { fetchImpl, retryDelays: [] } }), /number absent/);
+  const dir = path.join(root, 'state/issues/weekly/2026-10-26/r1'), read = async name => JSON.parse(await fs.readFile(path.join(dir, name + '.json')));
   const originalCards = await read('cards'); assert.equal(originalCards.items.length, 2);
-  await runPipeline('daily', { root, env, llmOptions: { fetchImpl } });
+  await runPipeline('weekly', { root, env, llmOptions: { fetchImpl } });
   const ready = await read('ready'), manifest = await read('manifest');
   delete manifest.phases.ready; delete manifest.phases.metadata;
   manifest.attempts.writer.at(-1).ms = 660000; manifest.budget_unknown = ['writer'];
   await fs.writeFile(path.join(dir, 'metadata.json'), 'null'); await fs.writeFile(path.join(dir, 'manifest.json'), JSON.stringify(manifest));
-  await runPipeline('daily', { root, env, llmOptions: { fetchImpl() { throw new Error('Metadata cache must not request a model'); } } });
+  await runPipeline('weekly', { root, env, llmOptions: { fetchImpl() { throw new Error('Metadata cache must not request a model'); } } });
   const cached = (await read('ready')).payload; assert.deepEqual(cached.items, ready.payload.items); assert.deepEqual(cached.executive_summary, ready.payload.executive_summary); assert.equal(calls, 2);
 });
