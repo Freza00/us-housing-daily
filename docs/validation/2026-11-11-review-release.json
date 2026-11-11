@@ -1,0 +1,256 @@
+{
+  "verified_at_bjt": "2026-11-11 11:33",
+  "status": "published_verified",
+  "data_commit": {
+    "commit": "aadaef399055e35d2eb3c9a2a3a9634f8c8fef2f",
+    "files": [
+      "data/2026-11-11.json",
+      "data/latest.json",
+      "public/index.html",
+      "state/seen.json"
+    ],
+    "baseline": "3ad519d9eeffa0478441cecd6436846f8e1b5c4f",
+    "protected": 428,
+    "payload_sha256": "86e7630f6f9718a74e2e0627cfff44b1939cd2e685691e49704bcd0c92ac22b8"
+  },
+  "code_commit": {
+    "commit": "b1b02dc03780833bc614bc6dcfff140aba36590d",
+    "base": "aadaef399055e35d2eb3c9a2a3a9634f8c8fef2f",
+    "files": [
+      "AGENTS.md",
+      "README.md",
+      "ROADMAP.md",
+      "docs/RECOVERY.md",
+      "docs/validation/2026-11-11-review-prevention.md",
+      "docs/validation/2026-11-11-review-prevention.json",
+      "scripts/lib/news-core.mjs",
+      "scripts/lib/editorial.mjs",
+      "scripts/lib/daily-edition.mjs",
+      "scripts/lib/pipeline.mjs",
+      "scripts/lib/publication.mjs",
+      "scripts/test/review-regressions.test.mjs"
+    ],
+    "tests": 360,
+    "protected": 428
+  },
+  "ci": {
+    "url": "https://github.com/Freza00/us-housing-daily/actions/runs/42953267980",
+    "id": 42953267980,
+    "node": "v22.23.4",
+    "pass": 360,
+    "fail": 0
+  },
+  "tests": {
+    "workspace": 360,
+    "release_checkout": 360
+  },
+  "delivery": {
+    "schema_version": 1,
+    "ok": true,
+    "host": "https://news-agent-mu.vercel.app",
+    "identity": {
+      "kind": "daily",
+      "period_key": "2026-11-11",
+      "cutoff_upper": 1794344400000,
+      "revision": 3
+    },
+    "payload_sha256": "86e7630f6f9718a74e2e0627cfff44b1939cd2e685691e49704bcd0c92ac22b8",
+    "commit": "aadaef399055e35d2eb3c9a2a3a9634f8c8fef2f",
+    "checked_at": 1794367758027,
+    "files": [
+      {
+        "route": "/data/latest.json",
+        "ok": true
+      },
+      {
+        "route": "/data/2026-11-11.json",
+        "ok": true
+      },
+      {
+        "route": "/data/dates.json",
+        "ok": true
+      },
+      {
+        "route": "/",
+        "ok": true
+      }
+    ],
+    "pushed": {
+      "commit": "aadaef399055e35d2eb3c9a2a3a9634f8c8fef2f",
+      "already_pushed": false
+    },
+    "original_ledger_unchanged": true
+  },
+  "production": {
+    "checked_at": "2026-11-11T03:31:20.231Z",
+    "commit": "b1b02dc03780833bc614bc6dcfff140aba36590d",
+    "vercel": [
+      {
+        "state": "success",
+        "url": "https://vercel.com/freza00s-projects/news-agent/Bix3p9hpq2tWYAdC48kvP9Dw6tpZ"
+      }
+    ],
+    "runs": [
+      {
+        "id": 42953267980,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/42953267980"
+      }
+    ],
+    "files": [
+      {
+        "route": "/",
+        "status": 200,
+        "ok": true,
+        "sha256": "837f7a92296f7b78e96a1267318c950581fb2b6d45497ee879d20c2a298a4d7c",
+        "expected_sha256": "837f7a92296f7b78e96a1267318c950581fb2b6d45497ee879d20c2a298a4d7c"
+      },
+      {
+        "route": "/app.js",
+        "status": 200,
+        "ok": true,
+        "sha256": "0bde5cb30e407c542a74d8b3abc8659eac6f2bde3b751dea47c23a59c0b1d924",
+        "expected_sha256": "0bde5cb30e407c542a74d8b3abc8659eac6f2bde3b751dea47c23a59c0b1d924"
+      },
+      {
+        "route": "/style.css",
+        "status": 200,
+        "ok": true,
+        "sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30",
+        "expected_sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30"
+      },
+      {
+        "route": "/data/latest.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "e80fd7f094d5fc5a49abc9ff670b2a291c85c5c355a4ecd5ca40d9e03e1b1ffe",
+        "expected_sha256": "e80fd7f094d5fc5a49abc9ff670b2a291c85c5c355a4ecd5ca40d9e03e1b1ffe"
+      },
+      {
+        "route": "/data/2026-11-11.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "e80fd7f094d5fc5a49abc9ff670b2a291c85c5c355a4ecd5ca40d9e03e1b1ffe",
+        "expected_sha256": "e80fd7f094d5fc5a49abc9ff670b2a291c85c5c355a4ecd5ca40d9e03e1b1ffe"
+      },
+      {
+        "route": "/data/2026-11-10.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd",
+        "expected_sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd"
+      },
+      {
+        "route": "/data/2026-11-09.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "6bd895043dbbb09fcfdf3d38870c3f0b4b4e857c0233924c8c561c4c382ce617",
+        "expected_sha256": "6bd895043dbbb09fcfdf3d38870c3f0b4b4e857c0233924c8c561c4c382ce617"
+      },
+      {
+        "route": "/data/2026-11-06.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+        "expected_sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d"
+      },
+      {
+        "route": "/data/dates.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "d39df8dabe232c8fcdf4716248ad3ffa4344d802afefdceada55d4155c1ead57",
+        "expected_sha256": "d39df8dabe232c8fcdf4716248ad3ffa4344d802afefdceada55d4155c1ead57"
+      },
+      {
+        "route": "/data/weekly/latest.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+        "expected_sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e"
+      },
+      {
+        "route": "/data/weekly/2026-11-02.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+        "expected_sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e"
+      },
+      {
+        "route": "/data/weekly/2026-10-26.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "expected_sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd"
+      },
+      {
+        "route": "/data/weekly/dates.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "1ccf3f20395526469b4a667e8b58e1206536a493fbbeae544314f33a36c913f2",
+        "expected_sha256": "1ccf3f20395526469b4a667e8b58e1206536a493fbbeae544314f33a36c913f2"
+      },
+      {
+        "route": "/data/monthly/latest.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d"
+      },
+      {
+        "route": "/data/monthly/2026-10.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d"
+      },
+      {
+        "route": "/data/monthly/dates.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+        "expected_sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db"
+      }
+    ],
+    "all_match": true,
+    "daily": {
+      "date": "2026-11-11",
+      "items": 20,
+      "revision": 3,
+      "payload_sha256": "86e7630f6f9718a74e2e0627cfff44b1939cd2e685691e49704bcd0c92ac22b8"
+    }
+  },
+  "browser": {
+    "passed": true,
+    "scenarios": 15,
+    "language_states": 39,
+    "errors": [],
+    "interactions": [
+      "Refresh retains Nov11",
+      "Old Oct26 weekly archive remains readable",
+      "Monthly issue retained"
+    ]
+  },
+  "content_diff": {
+    "removed": [
+      "f62c752ab4a24516"
+    ],
+    "added": [
+      "166e40c5788f8821"
+    ],
+    "same_cards": 19,
+    "budget_unchanged": true
+  },
+  "protected_workspace": {
+    "checked": 253,
+    "preexisting_absent": 174,
+    "changed": []
+  },
+  "new_model_requests": 0,
+  "limits": [
+    "人工修正不计为自动准时出刊",
+    "BTR 原站正文障碍未解决",
+    "新通用规则的真实自动首跑与连续稳定性待观察"
+  ]
+}
