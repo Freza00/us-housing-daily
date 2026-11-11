@@ -4,7 +4,7 @@
   "kind": "daily",
   "date": "2026-11-11",
   "publish_date": "2026-11-11",
-  "generated_at": 1794363370758,
+  "generated_at": 1794366730750,
   "window": {
     "lower": 1794258000000,
     "upper": 1794344400000,
@@ -21,7 +21,7 @@
     "kind": "daily",
     "period_key": "2026-11-11",
     "cutoff_upper": 1794344400000,
-    "revision": 2
+    "revision": 3
   },
   "sections": [
     {
@@ -191,59 +191,64 @@
       "cre_subcategory": null
     },
     {
-      "source_id": "realtor-research",
-      "source_name": "Realtor.com Research",
-      "source_tier": "B",
-      "source_weight": 8,
+      "source_id": "housingwire",
+      "source_name": "HousingWire",
+      "source_tier": "A",
+      "source_weight": 9,
       "source_tags": [
         "housing",
-        "data"
+        "rates",
+        "policy"
       ],
       "region": "national",
-      "title": "October Jobs Report: Surging Payrolls and Hiring Uptick Means Fed Hawks Can Exhale",
-      "link": "https://www.realtor.com/research/october-2026-employment-report/",
-      "description": "October Jobs Report: Surging Payrolls and Hiring Uptick Means Fed Hawks Can Exhale By Jake Krimmel Nov 06, 2026 October Payrolls Jump 165,000, More Than Double Expectations, With 84,000 Jobs Revised Up Today’s October jobs report was impressive. Coming in, we would have been happy with the forecasted 65,000, more than double last month’s. Instead we got more than double those expectations, with payrolls up 165,000. Revisions added another 84,000 jobs to August and September, lifting the three-month average to 137,000 from about 51,000 a month ago. The unemployment rate slipped to 4.1%, just as the Chicago Fed predicted , while labor force participation rose to 61.9%, above the 61.8% expected. Both moved just a smidge, but together they are notable. Wages firmed too, up 0.4% in the month and 3.1% from a year ago, versus 3.0% in September. This is still a low hire, low fire market overall, but we could be seeing some green shoots on the hiring side. The numbers could still be revised, of course, and the trend matters more than any one point; but you don’t get a good trend without a good month. A Strong Report Clears the Way for the Fed’s Next Hike For the Fed, this clears the way for a hike. After last month’s hot inflation print put the next increase in ‘when’ not ‘if’ territory, a soft jobs report was the one thing that could have complicated December. If Fed hawks were waiting to exhale, they can do so now. CME FedWatch saw Fed hike odds increase, as anticipated. The 10-year yield edged up on the announcement, and yields and hike odds remain the two things to watch for mortgage rates. Midterms or Not, Housing Needs Real Wage Gains and Cooler Inflation One question that keeps coming up is whether the midterms changed anything for the housing market. In the short run, not much – the Iran War and its impact on inflation and mortgage rates remain the major wildcard. Getting back to “normal” in many metros takes more activity, which depends on improved buying power to bring buyers off the sidelines. Mortgage rates have declined for three straight weeks, to 7.18% , after a massive 74 basis point surge from late August to mid-October, but wages are the other half of buying power. That 3.1% annual wage growth is nominal, and it trails September’s 3.7% inflation and likely won’t keep up with where inflation is headed. Nominal wage growth is necessary but not sufficient for real wage gains in this environment, so inflation has to come back down too. A more dynamic labor market and cooling inflation are sorely needed for demand.",
-      "published_at": 1793974093000,
-      "source_family": "realtor-com",
-      "is_research": true,
-      "required_source": true,
+      "title": "Opendoor says it's behind schedule but plans to catch up by 2027",
+      "link": "https://www.housingwire.com/articles/opendoor-q3-2026-losses/",
+      "description": "Opendoor is behind schedule. Since taking over the company a little over a year ago, CEO Kaz Nejatian has promised that the firm would achieve adjusted net income positive status on a 12-month go-forward basis by the end of 2026. But the recent housing market downturn, triggered by the rapid rise in mortgage rates , has proven to be a bit of a roadblock. “We are currently behind but we intend to catch up,” the iBuyer’s third quarter 2026 earnings report explained. During the quarter, Opendoor recorded an adjusted net loss of $66 million and an actual net loss of $218 million, up from a $90 million net loss a year ago. This comes even as the company reported a 12% annual increase in revenue to $1.022 billion. “A year ago, I told you we would build a different Opendoor — faster, stronger, fully committed to our mission of tilting the world in favor of homeowners,” Nejatian said during his firm’s earnings call with investors and analysts on Thursday. “We have spent the past year building a machine, and that machine is getting better every single day. We are not done yet. It is not perfect, but it is getting better every single day. The question is this: Is Opendoor in a better economic condition than it was a year ago? The answer is obviously yes.” A more resilient Opendoor Nejatian’s confidence comes from his belief that Opendoor has become more resilient over the past year. This includes ways in which the company has worked to serve more sellers without adding more homes to the company’s balance sheet. “This past week, around half of the first offers our direct-to-consumer sellers accepted were listing or Cash Now, More Later. That lets us serve more sellers with less of our capital exposed to changes in the market,” Nejatian said. In the past 12 months, the company has done over $1 billion in Cash Now, More Later volume. “We have built more ways to meet sellers' needs and have made it easier for them to understand their options and make the choice they want for their own lives,” Nejatian said. “Sellers can now adjust the offer slides and make the choice that is good for their families.” Scaling without buying more homes? Nejatian noted that every other time Opendoor has tried to scale, it has done so by purchasing more properties, but that isn’t the case this time. “We proved that we can grow without buying growth. That's the single most important thing that has happened over the last year. We're changing that with our capital-light products,” Nejatian said. Still, Opendoor did purchase far more homes in Q3 2026 than it did in Q3 2025, with a 316% year-over-year increase to 4,865 homes. The company’s signed acquisition volume represented an estimated 0.56% of market share in the addressable U.S. market in Q3 2026 — more than four times higher than a year ago. On the sales side, Opendoor sold 2,728 homes, an increase of 160 homes compared to a year ago. At the end of the quarter, the iBuyer had 7,596 homes in its inventory, up from 3,139 homes a year ago. While the increase in inventory could be seen as cause for concern, especially heading into the slower winter housing market, Opendoor noted that homes listed for sale for 120 days represented just 18% of inventory at the end of the quarter, down from 50% a year ago. Despite the progress, Nejatian said the company still has work left to do on unit economics and resale velocity, something it needs to focus on as it strives for more resiliency. “We're not as good as we want to be, but we're in a much better place,\" he said. \"When the market moves against you and you own homes, there's two things you can do. You can sell fast, or you can hold and wait and pray for the market to recover. We choose to clear. \"The decline in late August and September knocked us off track on execution a little bit because we turned our attention to clearance rather than margin improvement. It costs something real in a quarter like this, but that's the right way to run this company for the long run.” To help with some of these challenges, Nejatian said Opendoor has turned to AI to help improve speed while still scaling. Some of these tools include an AI model that determines repair plans for every home to hit the market. The company said the system has been outperforming the old process of following a standard repair manual. Opendoor said it also built a system to help price homes. While humans still have final judgment, the software does the work of pulling applicable, comparable homes. Ancillary services and the future Nejatian also said that Opendoor is focusing on its mortgage division . In Q3, Opendoor said originations from its in-house lender were up 400% year over year. This comes as the iBuyer's lender is now licensed in 25 states, compared to none a year ago. In addition, the company also launched a beta test of Buy with Opendoor in the San Francisco Bay Area this week. The product allows the company to earn mortgage revenue on properties not affiliated with Opendoor in anyway. Looking to the future, Nejatian said Opendoor is hoping to build out title and escrow services — not only to add more efficiencies to Opendoor’s in-house transactions but to add additional revenue streams by serving consumers not in its ecosystem. “We need to grow, use less capital per transaction, and sell homes faster. Those are things we can control, and that is what we are focused on. What matters to us is solving the core problems of our business, and those are what we need to focus on,” Nejatian said. Related More: Earnings iBuying Opendoor",
+      "published_at": 1794001367000,
       "mutable": false,
+      "date_precision": "timestamp",
+      "modified_at": 1794001369000,
+      "extraction": "semantic",
+      "canonical": "https://housingwire.com/articles/opendoor-q3-2026-losses",
+      "content_hash": "c633ba3302082f02f7f4397798de82688a4c5239d8c22aeda185d29482c83600",
+      "access": "public",
+      "evidence_status": "article",
+      "id": "166e40c5788f8821",
+      "source_family": "housingwire",
+      "is_research": false,
+      "required_source": false,
       "first_seen_at": 1794173831876,
-      "id": "f62c752ab4a24516",
       "acquisition_window": {
         "lower": 1793912400000,
         "upper": 1794171600000
       },
       "late_discovery": true,
-      "score": 12,
+      "score": 23,
       "tags": [
         "housing",
         "national",
-        "macro",
-        "data"
+        "earnings",
+        "trend",
+        "institutional"
       ],
       "heat_signals": [
-        "fed",
-        "inflation"
+        "mortgage rate",
+        "annual",
+        "year over year",
+        "year-over-year",
+        "housing market"
       ],
-      "date_precision": "timestamp",
-      "modified_at": 1793980375000,
-      "extraction": "semantic",
-      "canonical": "https://realtor.com/research/october-2026-employment-report",
-      "content_hash": "5d34b42b9a51d93a27ce8d0dc9a4dcb1392ab986091566738b038283a68414d7",
-      "access": "public",
-      "evidence_status": "article",
       "keep": true,
-      "importance": 4,
+      "importance": 3,
       "section": "national",
       "capital_focus": false,
       "geo_evidence": null,
       "duplicate_of": null,
-      "selector_reason": "October payrolls rose 165,000 and prior months were revised up by 84,000, materially strengthening the labor-market picture and influencing Fed expectations.",
-      "title_zh": "10 月就业新增 165,000 个，支持再加息预期",
-      "summary_zh": "Realtor.com Research 称，10 月非农就业增加 165,000 个，失业率降至 4.1%，工资同比增长 3.1%；报告认为数据为美联储下一次加息扫清道路。",
-      "impact": "short-neg",
-      "evidence_quote": "October Jobs Report: Surging Payrolls and Hiring Uptick Means Fed Hawks Can Exhale By Jake Krimmel Nov 06, 2026 October Payrolls Jump 165,000, More Than Double Expectations, With 84,000 Jobs Revised Up Today’s October jobs report was impressive. Coming in, we would have been happy with the forecasted 65,000, more than double last month’s. Instead we got more than double those expectations, with payrolls up 165,000.",
+      "selector_reason": "Opendoor reported a $66 million adjusted quarterly loss and $218 million net loss despite revenue growth, and acknowledged it is behind its profitability target.",
+      "title_zh": "Opendoor 第三季度净亏损扩大",
+      "summary_zh": "Opendoor 第三季度净亏损为 2.18 亿美元，上年同期为 9,000 万美元；营收同比增长 12% 至 10.22 亿美元。公司表示盈利目标进度落后于计划。",
+      "impact": "neutral",
+      "evidence_quote": "During the quarter, Opendoor recorded an adjusted net loss of $66 million and an actual net loss of $218 million, up from a $90 million net loss a year ago. This comes even as the company reported a 12% annual increase in revenue to $1.022 billion.",
       "evidence_basis": "body",
       "cre_subcategory": null
     },
@@ -1226,16 +1231,15 @@
     }
   ],
   "executive_summary": {
-    "text": "美国住宅市场的融资压力仍是主线：10 月通胀偏热、就业强于预期，推高 12 月加息预期并使按揭利率继续处于高位，买方转向 ARM 和卖方让步，但成屋售价同比已出现三年来首次下降。多户住宅表现分化：西雅图需求、吸纳和租金保持稳定，圣迭戈供应将在 2027 年第一季度见顶；Camden 则因 9 月客流和优惠压力下调收入指引，显示运营环境仍不均衡。",
-    "text_en": "U.S. housing financing pressure remains central: hotter inflation and stronger-than-expected jobs lifted December hike expectations and kept mortgage rates high, while buyers turned to ARMs and concessions as home prices posted their first annual decline in three years. Multifamily conditions are mixed: Seattle demand, absorption and rents remained stable, San Diego supply is expected to peak in Q1 2027, while Camden cut revenue guidance amid weaker traffic and persistent concessions.",
+    "text": "美国住宅市场的融资压力仍是主线：10 月通胀偏热推高 12 月加息预期并使按揭利率继续处于高位，买方转向 ARM 和卖方让步，但成屋售价同比已出现三年来首次下降。多户住宅表现分化：西雅图需求、吸纳和租金保持稳定，圣迭戈供应将在 2027 年第一季度见顶；Camden 则因 9 月客流和优惠压力下调收入指引，显示运营环境仍不均衡。",
+    "text_en": "U.S. housing financing pressure remains central: hotter inflation lifted December hike expectations and kept mortgage rates high, while buyers turned to ARMs and concessions as home prices posted their first annual decline in three years. Multifamily conditions are mixed: Seattle demand, absorption and rents remained stable, San Diego supply is expected to peak in Q1 2027, while Camden cut revenue guidance amid weaker traffic and persistent concessions.",
     "sentences": [
       {
-        "text": "美国住宅市场的融资压力仍是主线：10 月通胀偏热、就业强于预期，推高 12 月加息预期并使按揭利率继续处于高位，买方转向 ARM 和卖方让步，但成屋售价同比已出现三年来首次下降。",
-        "text_en": "U.S. housing financing pressure remains central: hotter inflation and stronger-than-expected jobs lifted December hike expectations and kept mortgage rates high, while buyers turned to ARMs and concessions as home prices posted their first annual decline in three years.",
+        "text": "美国住宅市场的融资压力仍是主线：10 月通胀偏热推高 12 月加息预期并使按揭利率继续处于高位，买方转向 ARM 和卖方让步，但成屋售价同比已出现三年来首次下降。",
+        "text_en": "U.S. housing financing pressure remains central: hotter inflation lifted December hike expectations and kept mortgage rates high, while buyers turned to ARMs and concessions as home prices posted their first annual decline in three years.",
         "item_ids": [
           "2be648cc673a840f",
           "b46d684187a7a822",
-          "f62c752ab4a24516",
           "e5a70ee16a734672",
           "5adbd82f95b75dc8"
         ]
@@ -3510,8 +3514,9 @@
       }
     },
     "source_counts": {
-      "realtor-com": 3,
+      "realtor-com": 2,
       "redfin-news": 1,
+      "housingwire": 2,
       "cushman-research": 3,
       "bisnow": 2,
       "connect-cre": 2,
@@ -3520,7 +3525,6 @@
       "atlanta-agent": 1,
       "national-mortgage-news": 1,
       "realpage-research": 1,
-      "housingwire": 1,
       "multifamily-dive": 1,
       "houston-agent": 1,
       "rebusiness-online": 1
@@ -3698,6 +3702,21 @@
       "new_model_requests": 0,
       "new_source_collection": 0,
       "reason": "Explicit manual r2 under the original rules; inherited exhausted ledger; US scope and cross-issue duplicate correction, accepted original reserve replacements"
+    },
+    "review_correction": {
+      "parent_identity": {
+        "kind": "daily",
+        "period_key": "2026-11-11",
+        "cutoff_upper": 1794344400000,
+        "revision": 2
+      },
+      "removed": "f62c752ab4a24516",
+      "replacement": "166e40c5788f8821",
+      "reason": "Already-covered October employment release without evidenced new data",
+      "source_http": 200,
+      "source_date_preserved": true,
+      "prior_four_workdays_reviewed": true,
+      "new_model_requests": 0
     }
   }
 }
