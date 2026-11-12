@@ -21,7 +21,7 @@ export async function writeJson(file, data) {
   await fs.writeFile(file + '.tmp', JSON.stringify(data, null, 2)); await fs.rename(file + '.tmp', file);
 }
 export async function ruleDigest() {
-  const names = ['pipeline.mjs', 'editorial.mjs', 'daily-edition.mjs', 'llm-client.mjs', 'model-references.mjs', 'issue-contract.mjs', 'issue-store.mjs', 'news-core.mjs', 'event-groups.mjs', 'collection-checkpoint.mjs', 'calendar.mjs', 'dates.mjs', 'editorial-coverage.mjs', 'sources.mjs', 'source-http.mjs'];
+  const names = ['pipeline.mjs', 'editorial.mjs', 'editor-evidence.mjs', 'daily-edition.mjs', 'llm-client.mjs', 'model-references.mjs', 'issue-contract.mjs', 'issue-store.mjs', 'news-core.mjs', 'event-groups.mjs', 'collection-checkpoint.mjs', 'calendar.mjs', 'dates.mjs', 'editorial-coverage.mjs', 'sources.mjs', 'source-http.mjs'];
   const h = createHash('sha256');
   for (const name of names) h.update(name).update(await fs.readFile(fileURLToPath(new URL(name, import.meta.url))));
   return h.digest('hex');

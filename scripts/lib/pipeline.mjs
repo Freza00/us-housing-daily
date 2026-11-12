@@ -11,6 +11,7 @@ import { SECTIONS, dedupe, itemId } from './news-core.mjs';
 import { dailyPublicationEligibility, prepareCandidates, candidateSector, employmentReportKey, repeatedEmploymentReport, assertFreshDailyReports, editorInstructions, candidatePrompt, validateDecisions, prepareModelDecisions, createDecisionRepair, selectItems, writingSystem, dailyWritingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, prepareWritingCard, validateWritingMetadata, prepareWritingMetadata, dryDecisions } from './editorial.mjs';
 import { assembleDailyEdition, isDailyUSStory, DAILY_WRITING_LIMIT, DAILY_WRITING_POLICY } from './daily-edition.mjs';
 import { createModelBatch } from './model-references.mjs';
+import { EDITORIAL_PROTOCOL, freezeEditorEvidence } from './editor-evidence.mjs';
 import { editorialCoverage, coverageDates } from './editorial-coverage.mjs';
 import { validArchive, periodKey, validateIssue, assertExpectedIssue } from './issue-contract.mjs';
 import { openIssueStore, ruleDigest, revisionSeed, readDerivedJson } from './issue-store.mjs';
@@ -66,9 +67,10 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const frozen = store && await store.get('prepared');
   const base = frozen?.base || { archive_sha256: existing ? fingerprint(existing) : null, latest_sha256: latest ? fingerprint(latest) : null, producer_commit: env.GITHUB_SHA || null };
   const dailyPool = kind === 'daily' && !dry;
-  const editorSystem = editorInstructions(tagConfig, { usOnly: dailyPool });
+  const editorSystem = editorInstructions(tagConfig, { usOnly: dailyPool, evidenceRefs: dailyPool });
   const writingContext = { requireEnglish: true, requireEvidenceIds: !dailyPool, fixedEvidence: dailyPool };
-  const decisionContext = { scriptRouting: true, requireMarketScope: dailyPool };
+  const decisionContext = { scriptRouting: true, requireMarketScope: dailyPool, evidenceRefs: dailyPool };
+  const runStartedAt = frozen?.run_started_at || store?.manifest.created_at || Date.now();
   const rawSeen = await readJson(path.join(stateDir, 'seen.json'), []);
   let seen = (Array.isArray(rawSeen) ? rawSeen : []).filter(x => x.shown_date !== window.date);
   let allItems = [], health = [], snapshots = [], inputProvenance = 'live', collector;
@@ -142,7 +144,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
   let attempted = 0;
   const sectorCounts = {};
   if (kind === 'daily') for (const [bucket, available] of Object.entries(prepared.sector_counts)) {
-    sectorCounts[bucket] = { available, attempted: 0, accepted: 0 };
+    sectorCounts[bucket] = { available, attempted: 0, accepted: 0, readable: 0, rejected_reasons: {} };
   }
   while (attempted < prepared.candidates.length && attempted < prepared.limit && candidates.length < prepared.limit) {
     const slots = attempted === 0 ? prepared.initial_count : prepared.limit - candidates.length;
@@ -153,7 +155,12 @@ export async function runPipeline(kind = 'daily', options = {}) {
     if (kind === 'daily') {
       const checked = dailyPublicationEligibility(enriched, window);
       const originalSectors = new Map(batch.map(item => [item.id, candidateSector(item)]));
+      for (const item of enriched) if (item.evidence_status !== 'insufficient') sectorCounts[originalSectors.get(item.id)].readable++;
       for (const item of checked.eligible) sectorCounts[originalSectors.get(item.id)].accepted++;
+      for (const item of checked.excluded) {
+        const reasons = sectorCounts[originalSectors.get(item.id)].rejected_reasons;
+        reasons[item.reason] = (reasons[item.reason] || 0) + 1;
+      }
       candidates.push(...checked.eligible); eligibility.excluded.push(...checked.excluded);
     } else candidates.push(...enriched);
   }
@@ -161,6 +168,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
     ...(kind === 'daily' ? { sectors: sectorCounts } : {}) };
   if (collector) await writeJson(path.join(stateDir, 'source-cache.json'), collector.cache);
   if (!candidates.length) throw new Error('No eligible dated candidates; refusing to replace last successful issue');
+  if (dailyPool) candidates = candidates.map(freezeEditorEvidence);
   const recentCoverage = [];
   if (kind === 'daily') for (const date of coverageDates(label).slice(1)) {
     const issue = await readJson(path.join(dataDir, date + '.json'), null);
@@ -171,11 +179,11 @@ export async function runPipeline(kind = 'daily', options = {}) {
     }
   }
   snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, candidate_preparation: candidatePreparation,
-    ...(kind === 'daily' ? { recent_coverage: recentCoverage.slice(0, 80) } : {}),
+    ...(kind === 'daily' ? { recent_coverage: recentCoverage.slice(0, 80), ...(dailyPool ? { editorial_protocol: EDITORIAL_PROTOCOL } : {}) } : {}),
     initial_seen: seen, source_health: health, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: uniqueSourceHealth(s.source_health || []) })), pipeline_version: '3.0' };
   await writeJson(path.join(stateDir, 'inputs', kind + '-' + label + '.json'), snapshot);
   collectionFinishedAt = Date.now();
-  if (store) await store.put('prepared', { snapshot, normalized, checkpoint, base, eligible_count: prepared.eligible_count, collection_finished_at: collectionFinishedAt });
+  if (store) await store.put('prepared', { snapshot, normalized, checkpoint, base, eligible_count: prepared.eligible_count, collection_finished_at: collectionFinishedAt, run_started_at: runStartedAt });
   }
   if (until === 'prepared') return boundary('prepared');
   await options.onCheckpoint?.('prepared', store);
@@ -193,12 +201,12 @@ export async function runPipeline(kind = 'daily', options = {}) {
     let completeDecisions;
     const validate = (data, context = {}) => {
       if (!context.cacheHit) completeDecisions = structuredClone(data);
-      const mapped = context.cacheHit ? data : editorBatch.decisions(validateDecisions(prepareModelDecisions(data, editorBatch.items, tagConfig), editorBatch.items, tagConfig, decisionContext));
+      const mapped = context.cacheHit ? data : editorBatch.decisions(validateDecisions(prepareModelDecisions(data, editorBatch.items, tagConfig, decisionContext), editorBatch.items, tagConfig, decisionContext));
       return validateDecisions(mapped, candidates, tagConfig, decisionContext);
     };
     const recentCoverage = snapshot.recent_coverage?.length
       ? '\n以下是冻结的近期已刊事件台账，不是新稿。候选与已刊属于同一事件时，只有独立新增事实或实质后续行动才可 keep=true，并在 reason 明确新增；更换来源、重复声明或立场重述均不另占条数。同一统计月的通用 Jobs/Employment Report 已刊时，仅有新的就业数据才保留，并输出 novelty_evidence 为当前输入中包含新增数据的逐字原句（20至500字符），否则 keep=false。新数据必须进入成品摘要，不能仅在内部 reason 提及。\n' + JSON.stringify(snapshot.recent_coverage) : '';
-    decisions = (await client.call(editorSystem + recentCoverage, candidatePrompt(editorBatch.items), { effort: 'medium', label: 'editor', maxTokens: 12000,
+    decisions = (await client.call(editorSystem + recentCoverage, candidatePrompt(editorBatch.items, decisionContext), { effort: 'medium', label: 'editor', maxTokens: 12000,
       validate, repair: () => completeDecisions && createDecisionRepair(completeDecisions, editorBatch.items, tagConfig, validate, decisionContext) })).decisions;
   }
   if (store) await store.put('editor', decisions);
@@ -206,6 +214,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
   await options.onCheckpoint?.('editor', store);
   const marketExclusions = new Set();
   const reportExclusions = [];
+  const marketExclusionReasons = new Map();
   if (dailyPool) writingContext.recentReports = snapshot.recent_coverage || [];
   if (dailyPool) {
     const source = new Map(candidates.map(item => [item.id, item]));
@@ -214,6 +223,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
       const item = source.get(row.id);
       if (!isDailyUSStory(item, row)) {
         marketExclusions.add(row.id);
+        marketExclusionReasons.set(row.id, row.market_scope === 'non-us' ? 'non_us_subject' : 'scope_unverified');
         return { ...row, keep: false };
       }
       const repeated = repeatedEmploymentReport({ ...item, novelty_evidence: row.novelty_evidence }, snapshot.recent_coverage || []);
@@ -335,10 +345,10 @@ export async function runPipeline(kind = 'daily', options = {}) {
     const issue = await readJson(path.join(dataDir, date + '.json'), null);
     if (issue?.date === date && Array.isArray(issue.items)) history.push(issue);
   }
-  const editorialAudit = editorialCoverage({ candidates, decisions, selected: written.items, health, sources, tagConfig, date: beijingDateStr(now.getTime()), history });
+  const editorialAudit = editorialCoverage({ candidates, decisions, selected: written.items, health, sources, tagConfig, candidatePreparation: snapshot.candidate_preparation, date: beijingDateStr(now.getTime()), history });
   const gaps = coverageGaps(snapshots, window);
   const requiredProblems = health.filter(s => s.required && (s.status !== 'ok' || s.undated === s.articles));
-  const sectionProblems = Object.values(editorialAudit.sections).some(section => section.source_failures.length);
+  const sectionProblems = Object.values(editorialAudit.sections).some(section => section.source_failures.length || section.evidence_gap || section.qualification_gap);
   const status = dry ? 'dry_run' : gaps.length || requiredProblems.length || sectionProblems ? 'degraded' : 'complete';
   const sourceCounts = Object.create(null);
   for (const item of written.items) sourceCounts[item.source_family] = (sourceCounts[item.source_family] || 0) + 1;
@@ -346,15 +356,19 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const deferredIds = new Set(writingPlan?.deferred.map(item => item.id));
   const payload = { schema_version: 2, ...(!dry ? { editorial_schema: 2 } : {}), kind, date: kind === 'daily' ? label : undefined, publish_date: beijingDateStr(now.getTime()), generated_at: (env.PUBLISH_NOW || options.now) ? now.getTime() : Date.now(),
     period_start: window.periodStart, period_end: window.periodEnd, period_label: window.label, window,
-    ...(dailyPool ? { writing_policy: DAILY_WRITING_POLICY, content_target: writingPlan.planned, summary_status: publicWritten.executive_summary ? 'available' : 'unavailable' } : {}),
+    ...(dailyPool ? { editorial_protocol: EDITORIAL_PROTOCOL, selection_target: 20, selection_count: primary.length, selection_shortfall: 20 - primary.length, writing_policy: DAILY_WRITING_POLICY, content_target: writingPlan.planned, summary_status: publicWritten.executive_summary ? 'available' : 'unavailable' } : {}),
     publication_status: writingPlan?.shortfall ? 'degraded' : status, coverage_status: status,
     content_status: dry ? 'dry_run' : writingPlan?.shortfall ? 'partial' : 'passed', delivery_state: 'ready', edition: store?.identity,
     sections: SECTIONS, ...publicWritten, sources_attempted: health.length, sources_ok: health.filter(h => h.status === 'ok').length,
     errors: health.filter(h => h.status !== 'ok').map(h => ({ source: h.name, error: h.error || h.status })),
-    _diagnostics: { timings: { cutoff: window.upper, job_started_at: now.getTime(), collection_finished_at: collectionFinishedAt, generation_finished_at: Date.now() }, collection_watermarks: kind === 'daily' ? checkpoint.source_upper || {} : undefined, writer_validation: validationNotes || null, pipeline_version: '3.0', provenance: inputProvenance, window_hours: window.hours, candidate_pool_size: candidates.length, eligible_count: prepared.eligible_count, backlog_before_window: candidates.filter(it=>it.published_at<window.lower).map(it=>it.id),
+    _diagnostics: { timings: { cutoff: window.upper, job_started_at: runStartedAt, editor_started_at: store?.manifest.attempts.editor?.[0]?.started_at ? Date.parse(store.manifest.attempts.editor[0].started_at) : undefined, editor_finished_at: store?.manifest.phases.editor?.saved_at, writer_started_at: store?.manifest.attempts.writer?.[0]?.started_at ? Date.parse(store.manifest.attempts.writer[0].started_at) : undefined, collection_finished_at: collectionFinishedAt, generation_finished_at: Date.now() }, collection_watermarks: kind === 'daily' ? checkpoint.source_upper || {} : undefined, writer_validation: validationNotes || null, pipeline_version: '3.0', provenance: inputProvenance, window_hours: window.hours, candidate_pool_size: candidates.length, eligible_count: prepared.eligible_count, backlog_before_window: candidates.filter(it=>it.published_at<window.lower).map(it=>it.id),
       publication_exclusions: eligibility.excluded, source_health: health, research_audit: normalized.filter(x => x.is_research && x.published_at >= window.lower && x.published_at < window.upper).map(x => ({ id: x.id, source: x.source_name, title: x.title, link: x.link,
         disposition: publishedIds.has(x.id) ? 'selected' : deferredIds.has(x.id) ? 'writing_unvalidated' : marketExclusions.has(x.id) ? 'not_verified_us' : eligibility.excluded.find(it => it.id === x.id)?.reason || (decisions.find(d => d.id === x.id)?.duplicate_of ? 'merged' : candidates.some(it => it.id === x.id) ? 'editorial_not_selected' : 'candidate_budget') })),
-      ...(dailyPool ? { writing_plan: writingPlan, market_exclusions: [...marketExclusions], report_exclusions: reportExclusions } : {}),
+      ...(dailyPool ? { writing_plan: writingPlan, market_exclusions: [...marketExclusions], report_exclusions: reportExclusions, selection_exclusions: selection.exclusions, editorial_dispositions: candidates.map(item => {
+        const row = decisions.find(d => d.id === item.id);
+        const reason = publishedIds.has(item.id) ? 'published' : marketExclusionReasons.get(item.id) || (reportExclusions.some(x => x.id === item.id) ? 'covered_report' : row.duplicate_of ? 'duplicate_event' : !row.keep || row.importance < 3 ? 'editorial_rejected' : selection.exclusions.find(x => x.id === item.id)?.reason || (deferredIds.has(item.id) ? 'writing_unvalidated' : 'reserve_not_needed'));
+        return { id: item.id, disposition: reason, ...(reason === 'editorial_rejected' ? { reason: row.reason } : {}) };
+      }) } : {}),
       editorial_coverage: editorialAudit, source_counts: dailyPool ? sourceCounts : selection.source_counts,
       source_exceptions: selection.exceptions.filter(row => !dailyPool || publishedIds.has(row.id) && sourceCounts[row.family] > 3),
       coverage_gaps: gaps, required_source_problems: requiredProblems.map(x => x.id),

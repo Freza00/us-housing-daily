@@ -1,0 +1,100 @@
+[
+  {
+    "id": "ee69f2827cd9e959",
+    "title": "HLCI Breaks Ground on 191,768 SF Industrial Project in Northwest Houston",
+    "description": "Holt Lunsford Commercial Investments (HLCI), the investment and development arm of the Dallas-based brokerage firm of the same name, has broken ground on The Bend at 249, a 191,768-square-foot industrial project in northwest Houston.",
+    "is_research": false,
+    "source_family": "rebusiness-online",
+    "link": "https://rebusinessonline.com/hlci-breaks-ground-on-191768-sf-industrial-project-in-northwest-houston/",
+    "published_at": 1794414499000,
+    "tags": [
+      "industrial",
+      "houston",
+      "construction",
+      "deals",
+      "developer"
+    ],
+    "geo_evidence": "northwest Houston",
+    "old_market_evidence": "HLCI, the investment and development arm of the Dallas-based brokerage firm of the same name, has broken ground on The Bend at 249, a 191,768-square-foot industrial project in northwest Houston.",
+    "primary_event": "property_development_leasing",
+    "market_role": "asset_location"
+  },
+  {
+    "id": "feffe8856ebf10ef",
+    "title": "Vimeo Relocating NYC Headquarters within Penn District",
+    "description": "Vimeo is relocating its New York City headquarters to Haymes Investment Company's 5 Penn Plaza from 330 W. 34th St.",
+    "is_research": false,
+    "source_family": "connect-cre",
+    "link": "https://www.connectcre.com/stories/vimeo-relocating-nyc-headquarters-within-penn-district/",
+    "published_at": 1794430566000,
+    "tags": [
+      "office",
+      "nyc",
+      "deals",
+      "developer"
+    ],
+    "geo_evidence": "New York City",
+    "old_market_evidence": "Vimeo is relocating its New York City headquarters within Penn District",
+    "primary_event": "property_development_leasing",
+    "market_role": "headquarters_event"
+  },
+  {
+    "id": "84e0277581c8786f",
+    "title": "Amazon to Open Data Center Campus in Glen Rose, Texas, Create 550 Jobs",
+    "description": "Amazon plans to open a data center campus in Glen Rose, about 55 miles southwest of Fort Worth, an initiative that the Seattle-based conglomerate says will create about 550 new full-time jobs.",
+    "is_research": false,
+    "source_family": "rebusiness-online",
+    "link": "https://rebusinessonline.com/amazon-to-open-data-center-campus-in-glen-rose-texas-create-550-jobs/",
+    "published_at": 1794414775000,
+    "tags": [
+      "data-center",
+      "texas",
+      "construction",
+      "deals",
+      "developer"
+    ],
+    "geo_evidence": "Glen Rose",
+    "old_market_evidence": "Amazon plans to open a data center campus in Glen Rose, Texas, an initiative that the Seattle-based conglomerate says will create about 550 new full-time jobs.",
+    "primary_event": "property_development_leasing",
+    "market_role": "asset_location"
+  },
+  {
+    "id": "e07708c5bd2e90c4",
+    "title": "Third spaces perform a star turn in this new Florida master plan",
+    "description": "Wyld Oaks, an upcoming mixed-use community near Orlando, Florida , where construction is now underway, will put that thesis to the test.",
+    "is_research": false,
+    "source_family": "housingwire",
+    "link": "https://www.housingwire.com/articles/third-spaces-perform-a-star-turn-in-this-new-florida-master-plan/",
+    "published_at": 1794346618000,
+    "tags": [
+      "mixed-asset",
+      "florida",
+      "construction",
+      "trend",
+      "developer"
+    ],
+    "geo_evidence": "near Orlando, Florida",
+    "old_market_evidence": "Wyld Oaks, an upcoming mixed-use community near Orlando, Florida, where construction is now underway",
+    "primary_event": "property_development_leasing",
+    "market_role": "asset_location"
+  },
+  {
+    "id": "35196e24eed9c445",
+    "title": "BWE Arranges $240M Recapitalization of Midwest Seniors Housing Portfolio",
+    "description": "BWE arranged an approximately $240 million recapitalization of a multi-property seniors housing portfolio located across three major metropolitan markets in the Midwest.",
+    "is_research": false,
+    "source_family": "connect-cre",
+    "link": "https://www.connectcre.com/stories/bwe-arranges-240m-recapitalization-of-midwest-seniors-housing-portfolio/",
+    "published_at": 1794419386000,
+    "tags": [
+      "senior-housing",
+      "national",
+      "deals",
+      "institutional"
+    ],
+    "geo_evidence": "Midwest",
+    "old_market_evidence": "Midwest Seniors Housing Portfolio",
+    "primary_event": "property_transaction_financing",
+    "market_role": "asset_location"
+  }
+]

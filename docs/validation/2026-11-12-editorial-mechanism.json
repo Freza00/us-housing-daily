@@ -1,0 +1,467 @@
+{
+  "verified_at_bjt": "2026-11-12 15:50",
+  "status": "local_verified_not_committed_or_published",
+  "baseline_code": "ecbe6bac720a66aa898dd29da14ac270b35d7fb3",
+  "observed_production_data_commit": "37cefa86de3afa1ebaa9bcd93e9830db30823938",
+  "tests": {
+    "workspace": {
+      "pass": 381,
+      "fail": 0
+    },
+    "isolated_production_code": {
+      "pass": 381,
+      "fail": 0
+    },
+    "new_regressions": 21
+  },
+  "replay": {
+    "fixture_only": true,
+    "production_writes": 0,
+    "paid_requests": 0,
+    "source_candidates": 50,
+    "original_keep": 25,
+    "requests": [
+      {
+        "label": "editor",
+        "input_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50"
+        ]
+      },
+      {
+        "label": "editor",
+        "input_ids": [
+          "3",
+          "33",
+          "41",
+          "43",
+          "50"
+        ]
+      },
+      {
+        "label": "writer",
+        "input_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19"
+        ]
+      }
+    ],
+    "selected": 19,
+    "selection_target": 20,
+    "selection_shortfall": 1,
+    "writing_target": 19,
+    "writing_shortfall": 0,
+    "dispositions": [
+      {
+        "id": "a1da2f936e339acb",
+        "disposition": "published"
+      },
+      {
+        "id": "a4e53576c5e8e2a5",
+        "disposition": "published"
+      },
+      {
+        "id": "ee69f2827cd9e959",
+        "disposition": "published"
+      },
+      {
+        "id": "c3cc97f8557be71e",
+        "disposition": "editorial_rejected",
+        "reason": "酒店再融资的单笔交易，缺乏足够规模或市场层面的新增信息。"
+      },
+      {
+        "id": "6078b64bf3056f9f",
+        "disposition": "published"
+      },
+      {
+        "id": "b1066252eab59bf9",
+        "disposition": "published"
+      },
+      {
+        "id": "c48ea9f802bfbe60",
+        "disposition": "published"
+      },
+      {
+        "id": "7362bfe2311dc99c",
+        "disposition": "published"
+      },
+      {
+        "id": "985cd447d547e5a4",
+        "disposition": "published"
+      },
+      {
+        "id": "157b37c8cbeb2695",
+        "disposition": "editorial_rejected",
+        "reason": "房地产经纪营销渠道合作，主要是产品推广和分销，不构成结构性行业变化。"
+      },
+      {
+        "id": "d09c88a3c22e5294",
+        "disposition": "published"
+      },
+      {
+        "id": "f36679578fcb5d68",
+        "disposition": "source_limit"
+      },
+      {
+        "id": "44e92c839a36e8f5",
+        "disposition": "editorial_rejected",
+        "reason": "按揭利率走势与近期已刊按揭和CPI报道重复，未提供独立新数据。"
+      },
+      {
+        "id": "29b7d086e9effc38",
+        "disposition": "editorial_rejected",
+        "reason": "慈善活动和人物花絮，不属于住宅或CRE市场研究。"
+      },
+      {
+        "id": "fc3c1d003af4f309",
+        "disposition": "editorial_rejected",
+        "reason": "MLS订阅营销产品扩张，属于经纪业务推广，缺乏结构性市场证据。"
+      },
+      {
+        "id": "3f13d55343353ce8",
+        "disposition": "published"
+      },
+      {
+        "id": "08611022f4c47765",
+        "disposition": "editorial_rejected",
+        "reason": "八套豪宅项目销售和营销激励，属于豪宅挂牌及经纪营销内容。"
+      },
+      {
+        "id": "1ddc207c465fbf63",
+        "disposition": "editorial_rejected",
+        "reason": "征集未来CRE调查问卷，尚无调查结果或实质数据。"
+      },
+      {
+        "id": "b171b34a21592578",
+        "disposition": "editorial_rejected",
+        "reason": "公司高管任命花絮，不构成市场或资本事件。"
+      },
+      {
+        "id": "8047ba387495cf6e",
+        "disposition": "editorial_rejected",
+        "reason": "反向按揭教育和行业会议观点，缺乏独立市场数据或实质政策行动。"
+      },
+      {
+        "id": "90a0e692f0756afe",
+        "disposition": "editorial_rejected",
+        "reason": "退伍军人纪念日企业公益活动和促销，属于宣传内容。"
+      },
+      {
+        "id": "4c8617088f2f743d",
+        "disposition": "published"
+      },
+      {
+        "id": "97a0478c8649f3d3",
+        "disposition": "editorial_rejected",
+        "reason": "零售连锁加盟扩张，未提供有明确房地产交易或开发结果的证据。"
+      },
+      {
+        "id": "6719d4088e02c217",
+        "disposition": "editorial_rejected",
+        "reason": "节日评论文章，缺乏住宅、CRE或资本市场的独立证据。"
+      },
+      {
+        "id": "e322bcf7c2aaca99",
+        "disposition": "editorial_rejected",
+        "reason": "对近期CPI导致按揭利率上升事件的重复视频评论，未提供独立新增数据。"
+      },
+      {
+        "id": "ac22afe9a019bf64",
+        "disposition": "editorial_rejected",
+        "reason": "交易标的均在英国，属于非美国市场。"
+      },
+      {
+        "id": "23adf7ad4a47bcfe",
+        "disposition": "published"
+      },
+      {
+        "id": "82aed0c7b12b810b",
+        "disposition": "published"
+      },
+      {
+        "id": "db8e7805ef6b947c",
+        "disposition": "editorial_rejected",
+        "reason": "富豪购房及HOA纠纷，属于个人豪宅花絮，不纳入市场日报。"
+      },
+      {
+        "id": "61c3cd5b9a5efa1d",
+        "disposition": "editorial_rejected",
+        "reason": "节日用电成本消费内容，与住宅和CRE投资研究关联不足。"
+      },
+      {
+        "id": "b9285d9a42f5d491",
+        "disposition": "editorial_rejected",
+        "reason": "对通胀和12月加息预期的重复评论，未提供独立政策决定或新增数据。"
+      },
+      {
+        "id": "7163ca653aa88c31",
+        "disposition": "source_limit"
+      },
+      {
+        "id": "feffe8856ebf10ef",
+        "disposition": "source_limit"
+      },
+      {
+        "id": "f750ca386f922e26",
+        "disposition": "editorial_rejected",
+        "reason": "企业领导人榜单发布和活动报道，不属于市场研究或交易事件。"
+      },
+      {
+        "id": "c86748e0e6c0c5b4",
+        "disposition": "published"
+      },
+      {
+        "id": "d8dd726c65bf3422",
+        "disposition": "editorial_rejected",
+        "reason": "个案产权欺诈刑事新闻，虽涉及房地产但不具备市场或机构资本研究价值。"
+      },
+      {
+        "id": "2e6c8cda659a7629",
+        "disposition": "editorial_rejected",
+        "reason": "消费展会和生活方式报道，不属于房地产市场研究。"
+      },
+      {
+        "id": "948b919df18c6574",
+        "disposition": "editorial_rejected",
+        "reason": "创业公司和可穿戴设备人物报道，与住宅、CRE或机构资本主题无关。"
+      },
+      {
+        "id": "b66dccff39fe5bce",
+        "disposition": "published"
+      },
+      {
+        "id": "1c01864eefc537e5",
+        "disposition": "editorial_rejected",
+        "reason": "经纪和贷款销售建议型评论，缺乏独立新增数据或实质事件。"
+      },
+      {
+        "id": "84e0277581c8786f",
+        "disposition": "published"
+      },
+      {
+        "id": "c0a596c928c9ca74",
+        "disposition": "editorial_rejected",
+        "reason": "医疗设施扩建项目，不属于指定住宅或CRE资产研究重点。"
+      },
+      {
+        "id": "e07708c5bd2e90c4",
+        "disposition": "published"
+      },
+      {
+        "id": "143159d8530402d3",
+        "disposition": "editorial_rejected",
+        "reason": "离婚再融资个案和通用借款建议，不构成市场层面的独立研究。"
+      },
+      {
+        "id": "3a3b14a99945357b",
+        "disposition": "source_limit"
+      },
+      {
+        "id": "d64634e64b5f0acd",
+        "disposition": "source_limit"
+      },
+      {
+        "id": "e56bddbc08dc7c02",
+        "disposition": "published"
+      },
+      {
+        "id": "04aff2137ef63ec4",
+        "disposition": "editorial_rejected",
+        "reason": "工业物业再融资交易，规模虽明确但缺乏足够独立市场增量，且同类融资信息较多。"
+      },
+      {
+        "id": "4a8c433a9a921658",
+        "disposition": "source_limit"
+      },
+      {
+        "id": "35196e24eed9c445",
+        "disposition": "published"
+      }
+    ],
+    "sections": {
+      "national": 4,
+      "sunbelt": 4,
+      "btr": 0,
+      "cre": 9,
+      "institutional": 2
+    },
+    "btr_coverage": {
+      "candidates": 0,
+      "qualified": 0,
+      "selected": 0,
+      "required_sources": 2,
+      "source_failures": [],
+      "lead_acquisition": {
+        "available": 2,
+        "attempted": 2,
+        "accepted": 0,
+        "readable": 0,
+        "rejected_reasons": {
+          "insufficient_evidence": 2
+        }
+      },
+      "evidence_gap": true,
+      "qualification_gap": false,
+      "status": "evidence_gap"
+    },
+    "timings": {
+      "cutoff": 1794430800000,
+      "job_started_at": 1794469310314,
+      "editor_started_at": 1794469310340,
+      "editor_finished_at": 1794469310365,
+      "writer_started_at": 1794469310372,
+      "collection_finished_at": 1794469310315,
+      "generation_finished_at": 1794469310409
+    }
+  },
+  "development_probe": {
+    "samples": 5,
+    "initial_error": "Subject geography anchor must occur in selected evidence: 3",
+    "repaired_ids": [
+      "3"
+    ],
+    "ok": true,
+    "physical_requests": 2,
+    "usage": [
+      {
+        "prompt_tokens": 9102,
+        "completion_tokens": 1128,
+        "total_tokens": 10230,
+        "completion_tokens_details": {
+          "reasoning_tokens": 516
+        }
+      },
+      {
+        "prompt_tokens": 11433,
+        "completion_tokens": 370,
+        "total_tokens": 11803,
+        "completion_tokens_details": {
+          "reasoning_tokens": 286
+        }
+      }
+    ],
+    "preserved_keep_and_importance": true,
+    "production_ledger_untouched": true,
+    "note": "One short-source sample was rejected on quality; no claim of five retained items"
+  },
+  "browser": {
+    "states": 12,
+    "errors": [],
+    "ok": true
+  },
+  "compatibility": {
+    ".tmp/audit-20261112/online.json": {
+      "kind": "daily",
+      "items": 16,
+      "passed": true
+    },
+    ".tmp/review-fix-20261111/release/checkout/data/2026-11-11.json": {
+      "kind": "daily",
+      "items": 20,
+      "passed": true
+    },
+    ".tmp/review-fix-20261111/release/checkout/data/weekly/2026-11-02.json": {
+      "kind": "weekly",
+      "items": 20,
+      "passed": true
+    },
+    ".tmp/review-fix-20261111/release/checkout/data/monthly/2026-10.json": {
+      "kind": "monthly",
+      "items": 20,
+      "passed": true
+    },
+    "old_freeze_rejected_without_resign": true
+  },
+  "protected_workspace": {
+    "checked": 253,
+    "preexisting_absent": 174,
+    "changed": []
+  },
+  "advisor_findings_closed": [
+    "Missing protocol markers cannot downgrade new data to legacy validation",
+    "Body evidence gaps use explicit exclusion reasons, not attempted-minus-accepted",
+    "Headquarters event uses typed role and property event instead of action-word whitelist"
+  ],
+  "production_writes": 0,
+  "files_sha256": {
+    "scripts/lib/editor-evidence.mjs": "f1c4cbaa6d0968d5bf2db402aa64adca1cbd366a53495ae6deeaa685fb475035",
+    "scripts/lib/editorial.mjs": "43728d83f4d529c7999fdb71e6bc3073e28595304a675291f6142a408916f571",
+    "scripts/lib/pipeline.mjs": "d309d726787f52c1bc88ca7700e777fbf3305db504779e978824b4ca86e6553e",
+    "scripts/lib/daily-edition.mjs": "144c9febbce4663b7d72ed45e2668cee08abf31fd7d8e773868d76bad7ad652f",
+    "scripts/lib/issue-contract.mjs": "c6f611331776277b0bae41a371eedc2988938003bf67983af46c0c11f88b04d9",
+    "scripts/lib/issue-store.mjs": "c7cdca620a14757dbbbbbec923586ea78cbf1bca8af5791aca9a19980c5380cc",
+    "scripts/lib/editorial-coverage.mjs": "29c15da26cd5f0ab364db1d66842cdfabf06d49efe21e0e68f42bb4236368b4a",
+    "public/app.js": "0bb5878e2276f7c7eb2689f867eaaf63dd6e6c60ac2cd7d66edab02e618981b6",
+    "scripts/test/editor-evidence.test.mjs": "9d99821462675c0fa613385fa3fc50549fed38a1b9bf865fb7e4e9e03c648431",
+    "scripts/test/fixtures/editor-evidence-nov12.json": "71169a473d9672e2c89306c124bfa34a31aec9c116e420118fc073a0c9f974cc",
+    "scripts/test/helpers.mjs": "b8f534f8aa4bca13642d10aff3f2d4b02925a2d7ee8ce2ac01304eefacfa26aa",
+    "scripts/test/geography-evidence.test.mjs": "e475d8a769157b866a6d810d8553e5e9aeeb1f94677d3ad2c66b476ed9d0fd83",
+    "scripts/test/daily-edition.test.mjs": "2c9ff1ce995bf412a58596a8c0f977a20f3a73b89580bb30b77d520cbf8e69ec",
+    "scripts/test/candidate-recall.test.mjs": "90a4c6a80d244194e4e1d54fbc018452593c21c54680a833f90d23fb7c036048"
+  }
+}

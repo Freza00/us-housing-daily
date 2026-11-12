@@ -52,7 +52,7 @@ test('failed hydration uses a bounded attempt budget before one complete frozen 
   const frozen = JSON.parse(await fs.readFile(path.join(dir, 'prepared.json')));
   assert.equal(frozen.snapshot.items.length, 67);
   assert.deepEqual(frozen.snapshot.candidate_preparation, { limit: 72, initial_count: 5, attempted: 72, accepted: 67, rejected: 5,
-    sectors: { other: { available: 81, attempted: 72, accepted: 67 } } });
+    sectors: { other: { available: 81, attempted: 72, accepted: 67, readable: 67, rejected_reasons: { insufficient_evidence: 5 } } } });
   assert.equal(new Set(batches.flat()).size, 72);
   assert.equal(frozen.snapshot.publication_exclusions.filter(it => it.reason === 'insufficient_evidence').length, 5);
   const frozenBytes = await fs.readFile(path.join(dir, 'prepared.json'));

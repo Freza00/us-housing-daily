@@ -57,7 +57,7 @@ test('a missing market scope is corrected before editor decisions are frozen', a
       editors++;
       assert.equal(input.items.length, 1);
       return response({ decisions: input.items.map(it => ({ id: it.id, asset: 'housing', geo: 'national', topics: [], actor: null,
-        geo_evidence: null, market_scope: 'us', market_evidence: null })) });
+        geo_evidence: null, market_scope: 'us', market_evidence_id: 'body-1' })) });
     }
     return response({ items: input.items.map(it => cardFor(it.id)), executive_summary: { sentences: [summary('1')] }, themes: [] });
   };

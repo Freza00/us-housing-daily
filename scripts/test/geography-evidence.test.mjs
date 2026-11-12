@@ -67,7 +67,7 @@ test('equivalent source spelling survives editor freezing and cold writer resume
   let editorCalls = 0;
   await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'editor' }, collector, client: { async call(system, user, options) {
     editorCalls++; assert.equal(options.label, 'editor');
-    return options.validate({ decisions: JSON.parse(user).map(it => modelDecision(it.id, { geo: 'california', geo_evidence: 'california’s housing market' })) });
+    return options.validate({ decisions: JSON.parse(user).map(it => modelDecision(it.id, { geo: 'california', geo_evidence: 'california’s housing market', market_evidence_id: it.evidence_refs.find(row => row.text.includes("California's housing market")).id })) });
   } } });
   const saved = JSON.parse(await fs.readFile(path.join(root, 'state/issues/daily/2026-11-06/r1/editor.json')));
   assert(saved.every(row => row.geo_evidence === "California's housing market"));

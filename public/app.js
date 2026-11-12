@@ -969,6 +969,9 @@ function renderBrief(data) {
   const note=$('coverageNote');
   if (note) {
     const messages = [];
+    if (data.selection_shortfall > 0) messages.push(currentLang === 'zh'
+      ? `本期选出 ${data.selection_count}／${data.selection_target} 条；写稿完成 ${data.items.length}／${data.content_target} 条。`
+      : `Selected ${data.selection_count} of ${data.selection_target} target stories; writing completed for ${data.items.length} of ${data.content_target} planned stories.`);
     if (data.content_status === 'partial') messages.push(currentLang === 'zh'
       ? `本期刊出 ${data.items.length}／${data.content_target} 条，部分入选稿暂缓刊出。`
       : `This issue includes ${data.items.length} of ${data.content_target} planned stories. Some stories were held back.`);
@@ -1000,6 +1003,13 @@ function renderBrief(data) {
     for (const section of Object.values(audit.sections || {})) for (const source of section.source_failures || []) {
       const li = document.createElement('li');
       li.textContent = source.name + (currentLang === 'zh' ? '：关键来源尚未取全。' : ': key source incomplete.');
+      list.append(li);
+    }
+    for (const [id, section] of Object.entries(audit.sections || {})) if (section.evidence_gap || section.qualification_gap) {
+      const li = document.createElement('li'), acquisition = section.lead_acquisition, label = I18N[currentLang].sec[id] || id.toUpperCase();
+      li.textContent = currentLang === 'zh'
+        ? `${label}：已检查 ${acquisition.attempted} 条线索，正文可读 ${acquisition.readable} 条；${section.evidence_gap ? '正文尚未取全' : '部分线索时效尚待验证'}，不代表市场没有消息。`
+        : `${label}: checked ${acquisition.attempted} leads; ${acquisition.readable} bodies readable. ${section.evidence_gap ? 'Some bodies remain unavailable.' : 'Some dates remain unverified.'}`;
       list.append(li);
     }
     if (data.kind === 'daily' && audit.history?.missing_dates?.length) {

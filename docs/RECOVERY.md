@@ -24,6 +24,8 @@ manifest 记录身份、规则及模型指纹、阶段散列和逐次调用账�
 
 ## 新日报的写稿池与封版
 
+新日报使用 evidence-refs-v1 编辑协议：原文编号映射随 prepared 冻结，只覆盖实际提供的标题和 1,000／1,200 字符窗口。模型选择主事件与范围证据号，程序绑定原文、核对短地域锚和角色、派生资本属性；只修有问题的语义／证据字段，保留 keep、importance、reason 和去重图。字段未通过不得保存 editor，也不在选稿后静默改成拒稿。范围 non-us 和 unclear 各自保留排除／未验证原因。三次 editor 请求耗尽仍不合格时保留 prepared／诊断，不启用编辑子集封版。冷恢复与最终验收共用绑定检查；任一新协议标记存在时要求顶层和全部卡片协议一致，并且必须保留 writing_policy、美国范围和选稿／写稿门禁。旧刊继续旧契约，旧冻结附件不在新规则下改签。
+
 新日报使用 writing_policy=daily-pool-v1。editor 一次评估完整冻结候选，market_scope=us 才进入写稿池；海外主题必须有美国标的原文方可保留。写稿池最多 26 条，主选为其前 20 条，cards／metadata 的 selected_digest 绑定整个池。最终刊出集合与写稿池分别记录，不通过改变 selected_digest 为临时换稿重开额度。
 
 日报 writer 只输出卡片文本，原文引用由程序绑定。每条数字在实际提供的前 1,800 字符正文及原始标题中核对，百分比核对同值单位。短英文原文节选仅是展示片段，全部中文事实的核查窗口与其区分。周／月报维持原引文 ID 协议。
@@ -31,6 +33,8 @@ manifest 记录身份、规则及模型指纹、阶段散列和逐次调用账�
 逐卡保存后，主选好稿优先保留；合格候补按同栏目同资产、同栏目、其余次序递补。补足原主选数即可结束写稿。请求失败且已有合格成果，或进入交付预留点时，允许按门槛不足额封版：原重要稿（4／5）全部保留，有稿栏目不清空，刊出不少于主选 80%，缺口不超过 3 条。结构不明的本次回答不进入卡片缓存，已有可信成果仍可封版；文件或冻结散列故障继续阻断。
 
 metadata 从原合格版本投影到最终刊出集合，引用未刊稿的完整中英句对移除；没有合格速读时 executive_summary 为 null、summary_status 为 unavailable。该例外只适用于新日报，周月报及旧刊仍使用原必填契约。
+
+selection_target 固定为 20，selection_count／selection_shortfall 记录选稿结果；content_target／writing_plan 仍以原主选数记录写稿计划及封版缺口，不能将两个目标合并。补文漏斗按 bucket 保存 readable 和 rejected_reasons；仅 insufficient_evidence 记正文缺口，invalid_date／unverified_update 另列时效未验证，after_cutoff／outside_publication_window 不是正文故障。
 
 writing_plan 保存主选数、写稿池数、暂缓稿及替换关系，来源及栏目计数按最终刊出集合重算。暂缓稿留在原期号诊断与原料快照；封版后普通重试只核验交付，不自动补发或迁移到下一日，不自动创建新的生成额度。
 

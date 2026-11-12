@@ -9,7 +9,7 @@ export function coverageDates(date) {
   return dates;
 }
 
-export function editorialCoverage({ candidates, decisions, selected, health, sources, tagConfig, date, history = [] }) {
+export function editorialCoverage({ candidates, decisions, selected, health, sources, tagConfig, candidatePreparation, date, history = [] }) {
   const byId = new Map(decisions.map(item => [item.id, item]));
   const assets = tagConfig?.dimensions?.asset?.tags || [];
   const assetIds = new Set(assets.map(tag => tag.id));
@@ -25,9 +25,18 @@ export function editorialCoverage({ candidates, decisions, selected, health, sou
     }).map(source => ({ id: source.id, name: source.name, status: checked.get(source.id)?.status || 'unchecked' }));
     const observed = rows.filter(item => item.section === section.id), kept = selected.filter(item => item.section === section.id);
     const eligible = observed.filter(qualified);
+    const buckets = Object.entries(candidatePreparation?.sectors || {}).filter(([bucket]) => section.id === 'cre' ? bucket.startsWith('cre:') : bucket === section.id || section.id === 'institutional' && bucket === 'institutional');
+    const acquisition = buckets.length ? Object.fromEntries(['available', 'attempted', 'accepted', 'readable'].map(key => [key, buckets.reduce((sum, [, row]) => sum + (row[key] || 0), 0)])) : null;
+    if (acquisition) {
+      acquisition.rejected_reasons = {};
+      for (const [, row] of buckets) for (const [reason, count] of Object.entries(row.rejected_reasons || {})) acquisition.rejected_reasons[reason] = (acquisition.rejected_reasons[reason] || 0) + count;
+    }
+    const evidenceGap = (acquisition?.rejected_reasons.insufficient_evidence || 0) > 0;
+    const qualificationGap = ['invalid_date', 'unverified_update'].some(reason => (acquisition?.rejected_reasons[reason] || 0) > 0);
     return [section.id, { candidates: observed.length, qualified: eligible.length, selected: kept.length,
       required_sources: required.length, source_failures: failures,
-      status: kept.length ? 'selected' : failures.length ? 'source_gap' : eligible.length ? 'not_selected' : observed.length ? 'no_qualified' : 'no_candidates' }];
+      ...(acquisition ? { lead_acquisition: acquisition, evidence_gap: evidenceGap, qualification_gap: qualificationGap } : {}),
+      status: kept.length ? 'selected' : failures.length ? 'source_gap' : evidenceGap ? 'evidence_gap' : qualificationGap ? 'unverified_leads' : eligible.length ? 'not_selected' : observed.length ? 'no_qualified' : 'no_candidates' }];
   }));
   const expected = coverageDates(date), previous = history.filter(issue => expected.includes(issue.date) && issue.date !== date);
   const observedDates = [...new Set([date, ...previous.map(issue => issue.date)])];
