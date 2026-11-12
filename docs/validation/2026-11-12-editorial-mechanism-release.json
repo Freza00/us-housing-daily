@@ -1,0 +1,216 @@
+{
+  "verified_at_bjt": "2026-11-12 16:20",
+  "status": "published_verified",
+  "code_commit": {
+    "commit": "683091f846ad33f35012b7090ae9f1f5361a920c",
+    "base": "37cefa86de3afa1ebaa9bcd93e9830db30823938",
+    "files": [
+      "AGENTS.md",
+      "scripts/lib/editor-evidence.mjs",
+      "scripts/lib/editorial.mjs",
+      "scripts/lib/pipeline.mjs",
+      "scripts/lib/daily-edition.mjs",
+      "scripts/lib/issue-contract.mjs",
+      "scripts/lib/issue-store.mjs",
+      "scripts/lib/editorial-coverage.mjs",
+      "public/app.js",
+      "scripts/test/editor-evidence.test.mjs",
+      "scripts/test/fixtures/editor-evidence-nov12.json",
+      "scripts/test/helpers.mjs",
+      "scripts/test/geography-evidence.test.mjs",
+      "scripts/test/daily-edition.test.mjs",
+      "scripts/test/candidate-recall.test.mjs",
+      "README.md",
+      "ROADMAP.md",
+      "docs/RECOVERY.md",
+      "docs/validation/2026-11-12-editorial-mechanism.md",
+      "docs/validation/2026-11-12-editorial-mechanism.json"
+    ],
+    "tests": 381,
+    "protected": 430
+  },
+  "tests": {
+    "workspace": 381,
+    "release_checkout": 381,
+    "ci": {
+      "node": "v22.23.4",
+      "pass": 381,
+      "fail": 0,
+      "url": "https://github.com/Freza00/us-housing-daily/actions/runs/43181848377"
+    }
+  },
+  "production": {
+    "checked_at": "2026-11-12T08:18:50.978Z",
+    "commit": "683091f846ad33f35012b7090ae9f1f5361a920c",
+    "vercel": [
+      {
+        "state": "success",
+        "url": "https://vercel.com/freza00s-projects/news-agent/uMxf7RHtg7cbPoe1QuGTCSGWbg4q"
+      }
+    ],
+    "runs": [
+      {
+        "id": 43181848377,
+        "name": "Validate Pipeline",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Freza00/us-housing-daily/actions/runs/43181848377"
+      }
+    ],
+    "files": [
+      {
+        "route": "/",
+        "status": 200,
+        "ok": true,
+        "sha256": "4f828694cdacc6f2eedc66f8317677c6cd051f81e419f2e386440ac4c1717dd2",
+        "expected_sha256": "4f828694cdacc6f2eedc66f8317677c6cd051f81e419f2e386440ac4c1717dd2"
+      },
+      {
+        "route": "/app.js",
+        "status": 200,
+        "ok": true,
+        "sha256": "0bb5878e2276f7c7eb2689f867eaaf63dd6e6c60ac2cd7d66edab02e618981b6",
+        "expected_sha256": "0bb5878e2276f7c7eb2689f867eaaf63dd6e6c60ac2cd7d66edab02e618981b6"
+      },
+      {
+        "route": "/style.css",
+        "status": 200,
+        "ok": true,
+        "sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30",
+        "expected_sha256": "f562820b5f1cdfabe930698f0557a5f0cf4e5b68b5d4100fb0c2c05af381fb30"
+      },
+      {
+        "route": "/data/latest.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "4cf31d94d36e31df75fa100ef6fbe9f72c9d0a5cced0a90e650df1e150f0e243",
+        "expected_sha256": "4cf31d94d36e31df75fa100ef6fbe9f72c9d0a5cced0a90e650df1e150f0e243"
+      },
+      {
+        "route": "/data/2026-11-12.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "4cf31d94d36e31df75fa100ef6fbe9f72c9d0a5cced0a90e650df1e150f0e243",
+        "expected_sha256": "4cf31d94d36e31df75fa100ef6fbe9f72c9d0a5cced0a90e650df1e150f0e243"
+      },
+      {
+        "route": "/data/2026-11-11.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "e80fd7f094d5fc5a49abc9ff670b2a291c85c5c355a4ecd5ca40d9e03e1b1ffe",
+        "expected_sha256": "e80fd7f094d5fc5a49abc9ff670b2a291c85c5c355a4ecd5ca40d9e03e1b1ffe"
+      },
+      {
+        "route": "/data/2026-11-10.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd",
+        "expected_sha256": "a9efcdd3198f092ed6d68b51fdb439f2ff90b70ea32b4657c44a7e4c245301bd"
+      },
+      {
+        "route": "/data/2026-11-09.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "6bd895043dbbb09fcfdf3d38870c3f0b4b4e857c0233924c8c561c4c382ce617",
+        "expected_sha256": "6bd895043dbbb09fcfdf3d38870c3f0b4b4e857c0233924c8c561c4c382ce617"
+      },
+      {
+        "route": "/data/2026-11-06.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d",
+        "expected_sha256": "5b32d8eca8cd5a1c79448bc2f75e53c56b8189f40be4d65c4ad25fe68d86007d"
+      },
+      {
+        "route": "/data/dates.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "a52c64da1191dff4d0dbd37ae6db75209c8e39e0e3efd50390ae81a5a28bae35",
+        "expected_sha256": "a52c64da1191dff4d0dbd37ae6db75209c8e39e0e3efd50390ae81a5a28bae35"
+      },
+      {
+        "route": "/data/weekly/latest.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+        "expected_sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e"
+      },
+      {
+        "route": "/data/weekly/2026-11-02.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e",
+        "expected_sha256": "236f94537101f358464d39ebbf83f5131a7aaa8917ae4425dc7e1bddb440b32e"
+      },
+      {
+        "route": "/data/weekly/2026-10-26.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd",
+        "expected_sha256": "c88373d63492831745f340912cad83e28e567c16dff1c202d07faa29f62679dd"
+      },
+      {
+        "route": "/data/weekly/dates.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "1ccf3f20395526469b4a667e8b58e1206536a493fbbeae544314f33a36c913f2",
+        "expected_sha256": "1ccf3f20395526469b4a667e8b58e1206536a493fbbeae544314f33a36c913f2"
+      },
+      {
+        "route": "/data/monthly/latest.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d"
+      },
+      {
+        "route": "/data/monthly/2026-10.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d",
+        "expected_sha256": "b19c4cebfd71a25f2126ca151113f1e4f975fb72bc2fce72c602addff863d09d"
+      },
+      {
+        "route": "/data/monthly/dates.json",
+        "status": 200,
+        "ok": true,
+        "sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db",
+        "expected_sha256": "db0d588da573a5b95f0d05867eb86d1229c863810895e939b5a5dde8e82448db"
+      }
+    ],
+    "all_match": true,
+    "daily": {
+      "date": "2026-11-12",
+      "items": 16,
+      "revision": 1,
+      "payload_sha256": "b4708f12c26983dc43f872c637965c0d104c09340af55c0cc4fa33480278c64f"
+    }
+  },
+  "browser": {
+    "passed": true,
+    "scenarios": 15,
+    "language_states": 39,
+    "errors": [],
+    "interactions": [
+      "Refresh retains Nov12",
+      "Old Oct26 weekly archive remains readable",
+      "Monthly issue retained"
+    ]
+  },
+  "production_data_preserved": {
+    "date": "2026-11-12",
+    "items": 16,
+    "revision": 1,
+    "payload_sha256": "b4708f12c26983dc43f872c637965c0d104c09340af55c0cc4fa33480278c64f"
+  },
+  "protected_workspace": {
+    "checked": 253,
+    "preexisting_absent": 174,
+    "changed": []
+  },
+  "new_model_requests_during_release": 0,
+  "unverified": [
+    "新协议的后续真实自动首跑与连续稳定性"
+  ],
+  "local_validation": "docs/validation/2026-11-12-editorial-mechanism.json"
+}
