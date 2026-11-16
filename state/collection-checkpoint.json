@@ -1,60 +1,60 @@
 {
   "schema_version": 1,
-  "daily_upper": 1794517200000,
+  "daily_upper": 1794862800000,
   "source_upper": {
-    "inman": 1794517200000,
-    "multi-housing-news": 1794517200000,
+    "inman": 1794776400000,
+    "multi-housing-news": 1794862800000,
     "national-mortgage-news": 1793221200000,
-    "cnbc-realestate": 1794517200000,
+    "cnbc-realestate": 1794862800000,
     "d-magazine": 1793826000000,
-    "houston-agent": 1794517200000,
-    "phoenix-agent": 1794517200000,
-    "atlanta-agent": 1794517200000,
-    "google-news-sunbelt": 1794517200000,
-    "nahb-eyeonhousing": 1794517200000,
-    "calculated-risk": 1794517200000,
-    "lance-lambert": 1794517200000,
-    "logan-mohtashami": 1794517200000,
-    "yardi-matrix": 1794517200000,
-    "realtor-research": 1794517200000,
+    "houston-agent": 1794862800000,
+    "phoenix-agent": 1794862800000,
+    "atlanta-agent": 1794862800000,
+    "google-news-sunbelt": 1794862800000,
+    "nahb-eyeonhousing": 1794862800000,
+    "calculated-risk": 1794862800000,
+    "lance-lambert": 1794862800000,
+    "logan-mohtashami": 1794862800000,
+    "yardi-matrix": 1794862800000,
+    "realtor-research": 1794862800000,
     "realtor-news": 1793307600000,
-    "redfin-news": 1794517200000,
-    "fed-press": 1794517200000,
-    "brookings-housing": 1794517200000,
-    "multifamily-dive": 1794517200000,
-    "nrhc": 1794517200000,
-    "pretium-partners": 1794517200000,
-    "btrlist": 1794517200000,
-    "google-news-btr": 1794517200000,
-    "houston-bj-cre": 1794517200000,
-    "houston-bj-resi": 1794517200000,
-    "dallas-bj-cre": 1794517200000,
-    "dallas-bj-resi": 1794517200000,
-    "austin-bj-cre": 1794517200000,
-    "austin-bj-resi": 1794517200000,
-    "har-research": 1794517200000,
-    "zillow-research": 1794517200000,
-    "nar-research": 1794517200000,
-    "census-construction": 1794517200000,
-    "census-sales": 1794517200000,
-    "fhfa-research": 1794517200000,
+    "redfin-news": 1794862800000,
+    "fed-press": 1794862800000,
+    "brookings-housing": 1794862800000,
+    "multifamily-dive": 1794862800000,
+    "nrhc": 1794862800000,
+    "pretium-partners": 1794862800000,
+    "btrlist": 1794862800000,
+    "google-news-btr": 1794776400000,
+    "houston-bj-cre": 1794776400000,
+    "houston-bj-resi": 1794862800000,
+    "dallas-bj-cre": 1794776400000,
+    "dallas-bj-resi": 1794776400000,
+    "austin-bj-cre": 1794862800000,
+    "austin-bj-resi": 1794862800000,
+    "har-research": 1794862800000,
+    "zillow-research": 1794862800000,
+    "nar-research": 1794862800000,
+    "census-construction": 1794862800000,
+    "census-sales": 1794862800000,
+    "fhfa-research": 1794862800000,
     "freddie-pmms": 1793221200000,
-    "unlock-research": 1794517200000,
-    "urban-housing": 1794517200000,
-    "realpage-research": 1794517200000,
-    "msci-research": 1794517200000,
+    "unlock-research": 1794862800000,
+    "urban-housing": 1794862800000,
+    "realpage-research": 1794862800000,
+    "msci-research": 1794862800000,
     "northmarq-research": 1793307600000,
-    "cotality-research": 1794517200000,
-    "ice-research": 1794517200000,
-    "attom-research": 1794517200000,
-    "apartmentlist-research": 1794517200000,
-    "costar-research": 1794517200000,
-    "sp-case-shiller": 1794517200000,
-    "zonda-research": 1794517200000,
-    "zonda-lot-supply": 1794517200000,
-    "sec-invh-8k": 1794517200000,
-    "sec-amh-8k": 1794517200000,
-    "colliers-research": 1794517200000
+    "cotality-research": 1794862800000,
+    "ice-research": 1794862800000,
+    "attom-research": 1794862800000,
+    "apartmentlist-research": 1794862800000,
+    "costar-research": 1794862800000,
+    "sp-case-shiller": 1794862800000,
+    "zonda-research": 1794862800000,
+    "zonda-lot-supply": 1794862800000,
+    "sec-invh-8k": 1794862800000,
+    "sec-amh-8k": 1794862800000,
+    "colliers-research": 1794776400000
   },
   "source_floor": {
     "housingwire": 1793180442798,
@@ -4914,7 +4914,337 @@
     "158d7625e5bbf60b",
     "63c1d143287119fd",
     "2552d3abd4bf62f2",
-    "3b67a03e51ca6ea0"
+    "3b67a03e51ca6ea0",
+    "4cc8bdbad90e3f14",
+    "a011916a1c449593",
+    "583884d382fe2260",
+    "e2791e69b1121901",
+    "8aa5e6ab132b0949",
+    "f927a805283442e6",
+    "c40590f703b445c9",
+    "1b677ea770c227dd",
+    "899d97b6fda1f4d3",
+    "24792bd343c5b948",
+    "f983a5deb3b1b646",
+    "c00011c59ae87bbc",
+    "d092119e31e3f37e",
+    "d3d93f7c6522d012",
+    "41926bd29f50022d",
+    "45a12b5075489420",
+    "c0c25f838e00d4c2",
+    "d07c6b1bc11aad5b",
+    "d715e8f0c52baed6",
+    "3cf3a8cb2bb7e017",
+    "8e573b7c39653515",
+    "da2dde13ac6444ff",
+    "ce68f1524bdaf6a9",
+    "93be9292ae86fcf9",
+    "e4a4a68065a9e5f6",
+    "bbe1bea2a34f2547",
+    "513da6108572faf7",
+    "2a9e0833d7975edb",
+    "e1058b90ddf4bb57",
+    "3f55e2de4bf3b462",
+    "8ab9f10d67ac6d27",
+    "97f45b6e66103a74",
+    "0713fb66320f0604",
+    "49d13794845c2477",
+    "5799ce72060f2e5d",
+    "ae439c83fa7ee792",
+    "9d1638192a9d7935",
+    "cdafd498d0a7e20f",
+    "c55c93b76b157e72",
+    "eef022da53468504",
+    "558ec632dbbdc264",
+    "307bd9471d022d05",
+    "adf85da333cb38d0",
+    "fa19dab36a021914",
+    "7b0b760c0b3b0dc8",
+    "a056c06fd39c2338",
+    "a5e68cc6f0a63ff6",
+    "a264acd75ac78151",
+    "6bfedacf3e92ede7",
+    "5bf2609360c99849",
+    "d691c0827100f3df",
+    "11d437cc285243e9",
+    "e6ae7b58e2d6e048",
+    "141cebff4a1ef694",
+    "8eff9b4bc8013f0e",
+    "5e22bb820fd36838",
+    "22f875cc7927cb10",
+    "166e8145eca9f986",
+    "5fe5e07a589e6812",
+    "0094a5ea73435501",
+    "64a7e6c751757b05",
+    "9171d93a4603a73d",
+    "62f0127bc7dd52f9",
+    "6a062da69541c323",
+    "7b6111f286f78479",
+    "edc82d99228c0125",
+    "b73513993c88539b",
+    "4b0a239aeaa9a210",
+    "b9ada6636c48d1b6",
+    "486a3b514ecaebe6",
+    "fde47fd9260ed33a",
+    "840899b689d73449",
+    "f89e3e9cd02d5253",
+    "ba9052da19bb3fc2",
+    "912c20afebcda99b",
+    "8f795156eace67cd",
+    "c38fe1754104f7b0",
+    "481294413ed3fe68",
+    "3e0ac2759127379f",
+    "5bafcf49bac6f870",
+    "3749106a26b50c64",
+    "661651d4f933cc3e",
+    "dabd70b449ec0355",
+    "9410253727c24227",
+    "09d3cfb0aa6980d8",
+    "df5a719c75f22c71",
+    "89a731d01a8ef744",
+    "3d521805f5cd16de",
+    "65c5f1e25bc9f3cb",
+    "cdd2cf5b2afdc60e",
+    "1b6293dc82ca2852",
+    "a91ed441e50dfa39",
+    "804b3392542ab255",
+    "7fcfa5bac333afb9",
+    "ab7632edb9914a77",
+    "b935b56f0c6c2b6b",
+    "c683098ba14f94df",
+    "fb9ceea26da17aba",
+    "179024646d959d53",
+    "a5fa87e31861ce50",
+    "6e5518c9941ff95a",
+    "4b1d017b6a09399c",
+    "cbc927d8d3e3042b",
+    "281c29d84357f1cf",
+    "88c8b677b812748f",
+    "260bb8ef6f815c4d",
+    "be034ab692b1bf77",
+    "9d2d6ad61f6124fb",
+    "8609f8ca647c9957",
+    "69c58f88e091237a",
+    "0014cd2ef174d5f3",
+    "cd69cd429bd3856e",
+    "6f2f20d2c38782b7",
+    "97b1a4a688510030",
+    "03b9460eed1f5c95",
+    "9d9cbedb7a23d73e",
+    "4a0dd793bf53bda7",
+    "7f159c06e14be299",
+    "cfa8e735b02926b3",
+    "518f3a5b7ac51c9c",
+    "c42061c683f5878a",
+    "9c970cb788bc0dbe",
+    "0107841ff2caa84c",
+    "b1abfc2540a1b6d6",
+    "299c1ca7a7d3ad30",
+    "2de38ef25b65e6ac",
+    "9e8943a31660e955",
+    "790c1501cccd6b91",
+    "79fd3cc3ec8a1371",
+    "0b47c60f1024974d",
+    "711434fed4146a49",
+    "a7fa18d8aca604c2",
+    "0f345647edcb37aa",
+    "f4b929ed95fcc7a3",
+    "581350f602c8fc52",
+    "99a5a395a7fa06e2",
+    "b1f2ad4c1d52abc1",
+    "67b61f3ab1e04ab3",
+    "d29316b8dc442d82",
+    "2d6966a427b58b85",
+    "0c4f26f444d1836c",
+    "2db08365f9373483",
+    "d27817777e34a434",
+    "7056f7a514d5e2ca",
+    "6ee1901a31c33391",
+    "31897d53c758d76e",
+    "4ba7b4bc3710fbc1",
+    "1d624f9300d746ac",
+    "23ac1e8f90ced322",
+    "53495769297b9e39",
+    "9899f09716600e9c",
+    "3046d9aeafe2b74f",
+    "c6642f00fd24af74",
+    "90282e3d6140870f",
+    "4a7cc8565bd1e3e3",
+    "0527094eb1f2d40b",
+    "d67770b07108dde9",
+    "dc26b96384530240",
+    "b1d76fc23be4983e",
+    "98b63fb31f2d8c01",
+    "bfe7341178111cf5",
+    "f67601fb858c31b0",
+    "0bd498aa584f39d5",
+    "109a140140d76e32",
+    "4c717c8d6f9f175b",
+    "1168ae24b6725dec",
+    "a0f36168b412ba5e",
+    "ef0d24f61a702ce2",
+    "98ba3c81a0dec54c",
+    "de246a048a623372",
+    "0087a96cd5b0f0bc",
+    "472995da3c360f30",
+    "64a6a08dc96f344c",
+    "6775d4b191e5f880",
+    "4c55b116b99f001e",
+    "d8dd4d8aab525ebe",
+    "3cabf3fb92394a12",
+    "e05f6cc9afa732d7",
+    "7011be1031610663",
+    "d625274b39cb3f9d",
+    "bdde855ed259d3e8",
+    "e599a5c8f825f0ae",
+    "e75001b411953d46",
+    "3aeb5e529cc1ae47",
+    "53cfb135ccb7af8b",
+    "e765426a6eb13a54",
+    "04ddad6f631f191f",
+    "7fc7e33454a70638",
+    "154e45f48990c927",
+    "981482c295a3f534",
+    "10116a2c01af5c0b",
+    "5293a25f2f7b6b8e",
+    "b2bedd70d7fdeeec",
+    "dfdd5c245dab6360",
+    "6870be4bcbd10c8b",
+    "6b289d367831d1c1",
+    "3687ac255cd48f25",
+    "1da470e206fa5dab",
+    "2213848759ea74bf",
+    "e9c30b4582ae1232",
+    "61e4310c6f586268",
+    "35a340d3e0d0126e",
+    "42d33a4cc8f52daf",
+    "d4e2de14c51f60c9",
+    "ead800f75dd1a2cd",
+    "1887d6ff3a00e94b",
+    "0e5d3456b408bb2e",
+    "5821889ff1a3e33d",
+    "c9903e5fdcc3f393",
+    "a53648c1d92cb422",
+    "46c2ee4914f82819",
+    "2af8794702cc9947",
+    "76088d5862d76ddb",
+    "b639aa4177adca45",
+    "5d53d2d099727cf9",
+    "a1e36356ef87a7bd",
+    "c2bff282104b9051",
+    "9733accc08e3a7f5",
+    "ae8b8df9a60c277e",
+    "aa6d7357b1376bd9",
+    "5d8fb7aa5187c1cf",
+    "217ec8b16ba0050b",
+    "23bc26934c33a62b",
+    "8a24b0470ad022c7",
+    "e8514535c7206939",
+    "149b8eb3e9ef12e0",
+    "9791c61c4dc602de",
+    "32dd133521a105c3",
+    "79ef8ccb9ab86b16",
+    "ccf43ecac977bb74",
+    "a15f2e35d2e6e391",
+    "8b5566af9b10b182",
+    "4206136f5d315a47",
+    "59dbcb68da297132",
+    "d16b0ae63c64f38b",
+    "fb0280f256db22da",
+    "a2e2f5801bbc6ae1",
+    "5720f11c8bb88331",
+    "4fefcc232a7d4357",
+    "aff5d3f901e9d4e1",
+    "4449b1ed61f80b0c",
+    "3c170f3972120499",
+    "e8164e155a9b36c4",
+    "393347d4a6f892e9",
+    "fe693c0898e87fdf",
+    "6af5939bef315219",
+    "4bad7745366adf90",
+    "c11cb897025bd204",
+    "29578108200a1eea",
+    "83cd74d499b55ac8",
+    "bf094fe9399e09c8",
+    "81a61580476b43a1",
+    "4a905a8a4abd0eab",
+    "cd9c8fb93d4c934a",
+    "fc842ac16ba5c67a",
+    "8b6ffa6c6dbb283d",
+    "9107c16ee20e0d13",
+    "8f95a873ada7dd8c",
+    "7fd17797ca99d980",
+    "4ea7c73d7b7bc6b9",
+    "d64628b2e23322d4",
+    "daccfbb44cbdd28e",
+    "986ea4cdf3305390",
+    "fa864765a11d2121",
+    "5ebd02e56569514c",
+    "357357416b5293ab",
+    "fa595ea9f2bf1d6b",
+    "dea44ca7e4876967",
+    "d75fa234e68f163a",
+    "7e0f2883caed0eee",
+    "907f9640656ff55d",
+    "4f9648edc21a1c26",
+    "724b1414cdd580d0",
+    "2ffac6720925c42c",
+    "0fbe19b0f30d29b3",
+    "ff6887cd3fbc7c93",
+    "05928b4ff3c6d8c0",
+    "594ad1a313be6e02",
+    "9ad2c984ce59f0e4",
+    "4acd599d5ff7e703",
+    "19ad5f7310e0d829",
+    "a7b6ea49467b188b",
+    "81ea513f67613ec4",
+    "367ec9f6fdcfd1dd",
+    "9bd93c6b46f14688",
+    "f729b7fe1dde92ef",
+    "d82a9b8eb67b8b46",
+    "198edbafbec2634f",
+    "dd688f66378a9cbc",
+    "f888d9383302636e",
+    "f7ec5ad6d5501295",
+    "9d3591bdca312cf1",
+    "c78991a4012d0a20",
+    "ae4ee8eac47b7123",
+    "ad41d2a274572417",
+    "ec391f1160cbf29d",
+    "5beeb44c335e62d8",
+    "aa0ab9ca901d4ba4",
+    "0c7115dce4ab7878",
+    "66d2b6453a8b535e",
+    "bcb10a7eece47ffd",
+    "68ea49db1cc16908",
+    "9b7f064758714ff3",
+    "c744f1c3fc84f083",
+    "22012982adf7a4b6",
+    "16d4847077fabc4e",
+    "8a999d21867ba39e",
+    "c0857956cf0dfa0f",
+    "c308aeef7f0d0034",
+    "885d846d66f08189",
+    "23f4e24d0aae7ba6",
+    "24619013eceef232",
+    "08a8dd6a7a5779cd",
+    "168c36f5dc199b85",
+    "f926e857ee2f2de2",
+    "8bb0a61d3c211638",
+    "3c35ce6a69e02a1b",
+    "37f60f84f30119be",
+    "e1285ac2ea6d0cd8",
+    "b18033130c93af7e",
+    "f228355f54b1fa12",
+    "ae9160a755f3f3eb",
+    "2504263d787f5db1",
+    "4d397fc9f08a7a29",
+    "57389cd418e51f36",
+    "cfa24f71f13f08f7",
+    "416d949035856eaf",
+    "097c62ec773ba095",
+    "af27265a62396dfa",
+    "5c59559eebdf5698"
   ],
   "initialized_sources": [
     "housingwire",
@@ -4983,7 +5313,8 @@
     "zonda-research",
     "zonda-lot-supply",
     "sec-invh-8k",
-    "sec-amh-8k"
+    "sec-amh-8k",
+    "trd-national"
   ],
   "health": [
     {
@@ -4991,7 +5322,7 @@
       "name": "HousingWire",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.housingwire.com/feed/"
       ],
@@ -5002,66 +5333,38 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 8,
-      "unreadable_recent": 1,
-      "earliest_dated": 1794503152000,
+      "recent": 10,
+      "unreadable_recent": 3,
+      "earliest_dated": 1794845284000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "inman",
       "name": "Inman News",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.inman.com/feed/",
         "https://news.google.com/rss/search?q=site:inman.com&hl=en-US&gl=US&ceid=US:en"
       ],
-      "status": "ok",
-      "discovered": 100,
-      "articles": 100,
-      "discovery_truncated": false,
-      "article_budget": 0,
-      "fallback_bodies": 0,
-      "undated": 0,
-      "recent": 16,
-      "unreadable_recent": 2,
-      "earliest_dated": 1626944470000,
-      "coverage_basis": "full_listing",
-      "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
-      },
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794519452247
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 429"
     },
     {
       "id": "trd-national",
       "name": "The Real Deal (National)",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://therealdeal.com/national/feed/"
-      ],
-      "status": "error",
-      "discovered": 0,
-      "articles": 0,
-      "error": "Directory contained no matching links"
-    },
-    {
-      "id": "bisnow",
-      "name": "Bisnow",
-      "research": false,
-      "required": false,
-      "checked_at": 1794519452247,
-      "attempted_urls": [
-        "https://www.bisnow.com/rss"
       ],
       "status": "ok",
       "discovered": 10,
@@ -5070,50 +5373,75 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 10,
+      "recent": 9,
       "unreadable_recent": 0,
-      "earliest_dated": 1794504492000,
+      "earliest_dated": 1794506400000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
+    },
+    {
+      "id": "bisnow",
+      "name": "Bisnow",
+      "research": false,
+      "required": false,
+      "checked_at": 1794865086470,
+      "attempted_urls": [
+        "https://www.bisnow.com/rss"
+      ],
+      "status": "ok",
+      "discovered": 8,
+      "articles": 8,
+      "discovery_truncated": false,
+      "article_budget": 0,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 8,
+      "unreadable_recent": 0,
+      "earliest_dated": 1794840763000,
+      "coverage_basis": "full_listing",
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1794865086470
     },
     {
       "id": "multi-housing-news",
       "name": "Multi-Housing News",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.multihousingnews.com/feed/",
         "https://news.google.com/rss/search?q=site:multihousingnews.com&hl=en-US&gl=US&ceid=US:en"
       ],
       "status": "ok",
-      "discovered": 80,
-      "articles": 80,
+      "discovered": 68,
+      "articles": 68,
       "discovery_truncated": false,
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 5,
-      "unreadable_recent": 1,
-      "earliest_dated": 1206687600000,
+      "recent": 8,
+      "unreadable_recent": 2,
+      "earliest_dated": 1398469263000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "national-mortgage-news",
       "name": "National Mortgage News",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.nationalmortgagenews.com/rss"
       ],
@@ -5126,19 +5454,19 @@
       "undated": 0,
       "recent": 10,
       "unreadable_recent": 0,
-      "earliest_dated": 1794426088000,
+      "earliest_dated": 1794520835000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "cnbc-realestate",
       "name": "CNBC Realty Check",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000115"
       ],
@@ -5147,26 +5475,26 @@
       "articles": 30,
       "discovery_truncated": false,
       "article_budget": 0,
-      "fallback_bodies": 2,
+      "fallback_bodies": 3,
       "undated": 0,
-      "recent": 2,
+      "recent": 3,
       "unreadable_recent": 0,
-      "earliest_dated": 1792794426000,
+      "earliest_dated": 1793103659000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "d-magazine",
       "name": "D Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.dmagazine.com/feed/"
       ],
@@ -5179,19 +5507,19 @@
       "undated": 0,
       "recent": 12,
       "unreadable_recent": 0,
-      "earliest_dated": 1794323407000,
+      "earliest_dated": 1794503030000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "houston-agent",
       "name": "Houston Agent Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://houstonagentmagazine.com/feed/"
       ],
@@ -5202,24 +5530,24 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 2,
+      "recent": 1,
       "unreadable_recent": 0,
-      "earliest_dated": 1793910221000,
+      "earliest_dated": 1794248415000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "phoenix-agent",
       "name": "Phoenix Agent Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://phoenixagentmagazine.com/feed/"
       ],
@@ -5230,24 +5558,24 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 1,
+      "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1793813074000,
+      "earliest_dated": 1793917070000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "atlanta-agent",
       "name": "Atlanta Agent Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://atlantaagentmagazine.com/feed/"
       ],
@@ -5258,24 +5586,24 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 2,
+      "recent": 1,
       "unreadable_recent": 0,
-      "earliest_dated": 1793818208000,
+      "earliest_dated": 1793973947000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "miami-agent",
       "name": "Miami Agent Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://miamiagentmagazine.com/feed/"
       ],
@@ -5289,35 +5617,35 @@
       "name": "Google News — Sun Belt Housing Market",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://news.google.com/rss/search?q=%22housing+market%22+(Phoenix+OR+Tampa+OR+Atlanta+OR+Charlotte+OR+Nashville+OR+%22Las+Vegas%22+OR+Jacksonville+OR+Orlando+OR+Raleigh+OR+Memphis)&hl=en-US&gl=US&ceid=US:en"
       ],
       "status": "ok",
-      "discovered": 52,
-      "articles": 52,
+      "discovered": 48,
+      "articles": 48,
       "discovery_truncated": false,
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 1,
+      "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1627196400000,
+      "earliest_dated": 1612598400000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "nahb-eyeonhousing",
       "name": "NAHB Eye on Housing",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://eyeonhousing.org/feed/"
       ],
@@ -5328,24 +5656,24 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 2,
+      "recent": 1,
       "unreadable_recent": 0,
-      "earliest_dated": 1793293200000,
+      "earliest_dated": 1793641670000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "calculated-risk",
       "name": "Calculated Risk (Bill McBride)",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://feeds.feedburner.com/CalculatedRisk"
       ],
@@ -5361,48 +5689,48 @@
       "earliest_dated": 1767714840001,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "lance-lambert",
       "name": "Lance Lambert / ResiClub",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://lancelambert.substack.com/feed",
         "https://news.google.com/rss/search?q=%22Lance+Lambert%22+OR+%22ResiClub%22&hl=en-US&gl=US&ceid=US:en"
       ],
       "status": "ok",
-      "discovered": 58,
-      "articles": 58,
+      "discovered": 54,
+      "articles": 54,
       "discovery_truncated": false,
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
       "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1453881600000,
+      "earliest_dated": 1697007600000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "logan-mohtashami",
       "name": "Logan Mohtashami (HousingWire)",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.housingwire.com/author/logan-mohtashami/feed/"
       ],
@@ -5413,24 +5741,24 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 1,
+      "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1792511840000,
+      "earliest_dated": 1792702847000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "yardi-matrix",
       "name": "Yardi Matrix Blog",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.yardimatrix.com/publications/"
       ],
@@ -5447,19 +5775,19 @@
       "earliest_dated": 1793491200000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "realtor-research",
       "name": "Realtor.com Research",
       "research": true,
       "required": true,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.realtor.com/research/feed/"
       ],
@@ -5470,24 +5798,24 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 3,
+      "recent": 2,
       "unreadable_recent": 0,
-      "earliest_dated": 1793898173000,
+      "earliest_dated": 1794218456000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "realtor-news",
       "name": "Realtor.com News",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.realtor.com/news/feed/"
       ],
@@ -5498,21 +5826,21 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 30,
+      "recent": 29,
       "unreadable_recent": 0,
-      "earliest_dated": 1794409416000,
+      "earliest_dated": 1794604592000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "redfin-news",
       "name": "Redfin News",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.redfin.com/news/feed/"
       ],
@@ -5523,24 +5851,24 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 3,
+      "recent": 0,
       "unreadable_recent": 0,
       "earliest_dated": 1794268187000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "trerc",
       "name": "Texas Real Estate Research Center (TRERC)",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://trerc.tamu.edu/texas-housing-insight/"
       ],
@@ -5559,14 +5887,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "fed-press",
       "name": "Federal Reserve Press",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.federalreserve.gov/feeds/press_all.xml"
       ],
@@ -5575,26 +5903,26 @@
       "articles": 20,
       "discovery_truncated": false,
       "article_budget": 0,
-      "fallback_bodies": 2,
+      "fallback_bodies": 0,
       "undated": 0,
-      "recent": 3,
+      "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1790274600000,
+      "earliest_dated": 1790368200000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "brookings-housing",
       "name": "Brookings Institution",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.brookings.edu/topics/housing/"
       ],
@@ -5608,22 +5936,22 @@
       "undated": 0,
       "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1789058190000,
+      "earliest_dated": 1790610279000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "pere-news",
       "name": "PERE News",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.perenews.com/feed/"
       ],
@@ -5637,7 +5965,7 @@
       "name": "Multifamily Dive",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.multifamilydive.com/feeds/news/"
       ],
@@ -5650,22 +5978,22 @@
       "undated": 0,
       "recent": 3,
       "unreadable_recent": 0,
-      "earliest_dated": 1794255540000,
+      "earliest_dated": 1794432480000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "connect-cre",
       "name": "Connect CRE",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.connectcre.com/feed/"
       ],
@@ -5678,19 +6006,19 @@
       "undated": 0,
       "recent": 10,
       "unreadable_recent": 0,
-      "earliest_dated": 1794507979000,
+      "earliest_dated": 1794856491000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "rebusiness-online",
       "name": "REBusiness Online",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://rebusinessonline.com/feed/"
       ],
@@ -5703,19 +6031,19 @@
       "undated": 0,
       "recent": 20,
       "unreadable_recent": 0,
-      "earliest_dated": 1794494187000,
+      "earliest_dated": 1794837600000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "nrhc",
       "name": "National Rental Home Council (NRHC)",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.rentalhomecouncil.org/feed/"
       ],
@@ -5728,22 +6056,22 @@
       "undated": 0,
       "recent": 1,
       "unreadable_recent": 0,
-      "earliest_dated": 1793374847000,
+      "earliest_dated": 1793987760000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "pretium-partners",
       "name": "Pretium Partners",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://pretium.com/feed/"
       ],
@@ -5759,12 +6087,12 @@
       "earliest_dated": 1781021804000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "sec-invh-8k",
@@ -5772,7 +6100,7 @@
       "research": false,
       "required": false,
       "required_for_section": "btr",
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
         "https://www.invh.com/rss/PressRelease.aspx?LanguageId=1"
@@ -5782,19 +6110,19 @@
       "articles": 10,
       "discovery_truncated": false,
       "article_budget": 0,
-      "fallback_bodies": 1,
+      "fallback_bodies": 0,
       "undated": 0,
-      "recent": 1,
+      "recent": 0,
       "unreadable_recent": 0,
       "earliest_dated": 1782856080000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "sec-amh-8k",
@@ -5802,7 +6130,7 @@
       "research": false,
       "required": false,
       "required_for_section": "btr",
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
         "https://investors.amh.com/rss/PressRelease.aspx?LanguageId=1"
@@ -5812,32 +6140,32 @@
       "articles": 10,
       "discovery_truncated": false,
       "article_budget": 0,
-      "fallback_bodies": 1,
+      "fallback_bodies": 0,
       "undated": 0,
-      "recent": 1,
+      "recent": 0,
       "unreadable_recent": 0,
       "earliest_dated": 1778098140000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "btrlist",
       "name": "BTR List (via Google News)",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://news.google.com/rss/search?q=site:news.btrlist.com&hl=en-US&gl=US&ceid=US:en"
       ],
       "status": "ok",
-      "discovered": 51,
-      "articles": 51,
+      "discovered": 52,
+      "articles": 52,
       "discovery_truncated": false,
       "article_budget": 0,
       "fallback_bodies": 0,
@@ -5847,49 +6175,50 @@
       "earliest_dated": 1722134745000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "google-news-btr",
       "name": "Google News — BTR / SFR keywords",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://news.google.com/rss/search?q=%22build-to-rent%22+OR+%22single-family+rental%22+OR+%22Invitation+Homes%22+OR+%22American+Homes+4+Rent%22+OR+Tricon+OR+Pretium+OR+%22Progress+Residential%22+OR+Roofstock+OR+%22Main+Street+Renewal%22+OR+%22FirstKey+Homes%22+OR+%22Home+Partners%22&hl=en-US&gl=US&ceid=US:en"
       ],
-      "status": "ok",
-      "discovered": 28,
-      "articles": 28,
-      "discovery_truncated": false,
-      "article_budget": 0,
-      "fallback_bodies": 0,
-      "undated": 0,
-      "recent": 3,
-      "unreadable_recent": 0,
-      "earliest_dated": 1579075200000,
-      "coverage_basis": "full_listing",
-      "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
-      },
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794519452247
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 429"
     },
     {
       "id": "houston-bj-cre",
       "name": "Houston Business Journal — Commercial RE",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
-        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
+        "https://www.bizjournals.com/houston/news/commercial-real-estate/feed"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "id": "houston-bj-resi",
+      "name": "Houston Business Journal — Residential RE",
+      "research": false,
+      "required": false,
+      "checked_at": 1794865086470,
+      "attempted_urls": [
+        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
       ],
       "status": "ok",
       "discovered": 100,
@@ -5903,21 +6232,51 @@
       "earliest_dated": 1478462047000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
-      "id": "houston-bj-resi",
-      "name": "Houston Business Journal — Residential RE",
+      "id": "dallas-bj-cre",
+      "name": "Dallas Business Journal — Commercial RE",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
-        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
+        "https://www.bizjournals.com/dallas/news/commercial-real-estate/feed"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "id": "dallas-bj-resi",
+      "name": "Dallas Business Journal — Residential RE",
+      "research": false,
+      "required": false,
+      "checked_at": 1794865086470,
+      "attempted_urls": [
+        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en",
+        "https://www.bizjournals.com/dallas/news/residential-real-estate/feed"
+      ],
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "id": "austin-bj-cre",
+      "name": "Austin Business Journal — Commercial RE",
+      "research": false,
+      "required": false,
+      "checked_at": 1794865086470,
+      "attempted_urls": [
+        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
       ],
       "status": "ok",
       "discovered": 100,
@@ -5926,136 +6285,52 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 6,
-      "unreadable_recent": 0,
-      "earliest_dated": 1478462047000,
-      "coverage_basis": "full_listing",
-      "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
-      },
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794519452247
-    },
-    {
-      "id": "dallas-bj-cre",
-      "name": "Dallas Business Journal — Commercial RE",
-      "research": false,
-      "required": false,
-      "checked_at": 1794519452247,
-      "attempted_urls": [
-        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
-      ],
-      "status": "ok",
-      "discovered": 96,
-      "articles": 96,
-      "discovery_truncated": false,
-      "article_budget": 0,
-      "fallback_bodies": 0,
-      "undated": 0,
       "recent": 9,
-      "unreadable_recent": 1,
-      "earliest_dated": 1499383902000,
-      "coverage_basis": "full_listing",
-      "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
-      },
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794519452247
-    },
-    {
-      "id": "dallas-bj-resi",
-      "name": "Dallas Business Journal — Residential RE",
-      "research": false,
-      "required": false,
-      "checked_at": 1794519452247,
-      "attempted_urls": [
-        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
-      ],
-      "status": "ok",
-      "discovered": 96,
-      "articles": 96,
-      "discovery_truncated": false,
-      "article_budget": 0,
-      "fallback_bodies": 0,
-      "undated": 0,
-      "recent": 9,
-      "unreadable_recent": 1,
-      "earliest_dated": 1499383902000,
-      "coverage_basis": "full_listing",
-      "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
-      },
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794519452247
-    },
-    {
-      "id": "austin-bj-cre",
-      "name": "Austin Business Journal — Commercial RE",
-      "research": false,
-      "required": false,
-      "checked_at": 1794519452247,
-      "attempted_urls": [
-        "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
-      ],
-      "status": "ok",
-      "discovered": 96,
-      "articles": 96,
-      "discovery_truncated": false,
-      "article_budget": 0,
-      "fallback_bodies": 0,
-      "undated": 0,
-      "recent": 9,
-      "unreadable_recent": 1,
+      "unreadable_recent": 2,
       "earliest_dated": 1462863600000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "austin-bj-resi",
       "name": "Austin Business Journal — Residential RE",
       "research": false,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
       ],
       "status": "ok",
-      "discovered": 98,
-      "articles": 98,
+      "discovered": 100,
+      "articles": 100,
       "discovery_truncated": false,
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 9,
+      "recent": 8,
       "unreadable_recent": 1,
       "earliest_dated": 1478434862000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "har-research",
       "name": "HAR Research",
       "research": true,
       "required": true,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.har.com/content/department/newsroom?pid=640"
       ],
@@ -6073,19 +6348,19 @@
       "earliest_dated": 1793898000000,
       "coverage_basis": "ordered_date_horizon",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "zillow-research",
       "name": "Zillow Research",
       "research": true,
       "required": true,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.zillow.com/research/feed/"
       ],
@@ -6094,26 +6369,26 @@
       "articles": 10,
       "discovery_truncated": false,
       "article_budget": 0,
-      "fallback_bodies": 1,
+      "fallback_bodies": 0,
       "undated": 0,
-      "recent": 1,
+      "recent": 0,
       "unreadable_recent": 0,
       "earliest_dated": 1792670400000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "nar-research",
       "name": "NAR Research",
       "research": true,
       "required": true,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.nar.realtor/research-and-statistics/research-reports/research-update"
       ],
@@ -6125,24 +6400,24 @@
       "fetched_articles": 13,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 1,
+      "recent": 0,
       "unreadable_recent": 0,
       "earliest_dated": 1325243280000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "census-construction",
       "name": "Census New Residential Construction",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.census.gov/construction/nrc/current/index.html"
       ],
@@ -6159,21 +6434,21 @@
       "earliest_dated": 1792512000000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {
         "https://census.gov/construction/nrc/current/index.html": "32a3768fcced69a73a044289c3d73c3550311fcd8e4990cb51c57ccfb352375d"
       },
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "census-sales",
       "name": "Census New Residential Sales",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.census.gov/construction/nrs/current/index.html"
       ],
@@ -6190,21 +6465,21 @@
       "earliest_dated": 1793116800000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {
         "https://census.gov/construction/nrs/current/index.html": "c03a0fa38527aa533c777b78bcff1e34902417a91673053b2d16e0b2dee2051a"
       },
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "fhfa-research",
       "name": "FHFA House Price Index",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.fhfa.gov/data/hpi"
       ],
@@ -6221,19 +6496,19 @@
       "earliest_dated": 1793116800000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "fannie-esr",
       "name": "Fannie Mae ESR",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.fanniemae.com/data-and-insights/forecast"
       ],
@@ -6247,7 +6522,7 @@
       "name": "Freddie Mac PMMS",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.freddiemac.com/pmms"
       ],
@@ -6268,14 +6543,14 @@
       "versions": {
         "https://freddiemac.com/pmms": "c31943a782537223b1fcb017e44934e5d28dda90fbdc8ffddd8a2a2df63920f4"
       },
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "freddie-research",
       "name": "Freddie Mac Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.freddiemac.com/research-and-perspectives"
       ],
@@ -6293,18 +6568,18 @@
       "coverage_basis": "full_listing",
       "coverage": {
         "lower": 1793180442798,
-        "upper": 1794517200000
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "texas-realtors",
       "name": "Texas REALTORS Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.texasrealestate.com/research/quarterly-housing-report"
       ],
@@ -6323,14 +6598,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "metrotex-research",
       "name": "MetroTex Market Reports",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.mymetrotex.com/market-reports/"
       ],
@@ -6349,14 +6624,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "unlock-research",
       "name": "Unlock MLS Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.unlockmls.com/news"
       ],
@@ -6373,19 +6648,19 @@
       "earliest_dated": 1786406400000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "harvard-jchs",
       "name": "Harvard JCHS",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.jchs.harvard.edu/blog"
       ],
@@ -6399,7 +6674,7 @@
       "name": "Urban Institute Housing Finance",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.urban.org/expertise/housing-finance"
       ],
@@ -6416,48 +6691,35 @@
       "earliest_dated": 1751284800000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "cbre-research",
       "name": "CBRE Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
-        "https://www.cbre.com/services/property-types/multifamily"
+        "https://www.cbre.com/services/property-types/multifamily",
+        "https://www.cbre.com/shared-sitemap/figure.xml",
+        "https://www.cbre.com/insights"
       ],
-      "status": "ok",
-      "discovered": 15,
-      "articles": 15,
-      "discovery_truncated": false,
-      "article_budget": 15,
-      "fetched_articles": 15,
-      "fallback_bodies": 0,
-      "undated": 2,
-      "recent": 3,
-      "unreadable_recent": 0,
-      "earliest_dated": 1744732800000,
-      "coverage_basis": "full_listing",
-      "coverage": {
-        "lower": 1793180442798,
-        "upper": 1794517200000
-      },
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794519452247
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403"
     },
     {
       "id": "jll-research",
       "name": "JLL Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.jll.com/en-us/insights"
       ],
@@ -6469,85 +6731,70 @@
       "fetched_articles": 15,
       "fallback_bodies": 0,
       "undated": 7,
-      "recent": 1,
+      "recent": 2,
       "unreadable_recent": 0,
       "earliest_dated": 1719426600000,
       "coverage_basis": "full_listing",
       "coverage": {
         "lower": 1793180442798,
-        "upper": 1794517200000
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "cushman-research",
       "name": "Cushman & Wakefield Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
       ],
       "status": "ok",
-      "discovered": 85,
+      "discovered": 86,
       "articles": 18,
       "discovery_truncated": true,
       "article_budget": 18,
       "fetched_articles": 18,
       "fallback_bodies": 0,
-      "undated": 1,
-      "recent": 11,
+      "undated": 2,
+      "recent": 10,
       "unreadable_recent": 0,
       "earliest_dated": 1791979200000,
       "coverage_basis": "unverified",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "colliers-research",
       "name": "Colliers Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.colliers.com/en/research"
       ],
-      "status": "ok",
-      "discovered": 2,
-      "articles": 2,
-      "discovery_truncated": false,
-      "article_budget": 2,
-      "fetched_articles": 2,
-      "fallback_bodies": 0,
-      "undated": 0,
-      "recent": 1,
-      "unreadable_recent": 0,
-      "earliest_dated": 1792587720000,
-      "coverage_basis": "full_listing",
-      "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
-      },
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794519452247
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "HTTP 403"
     },
     {
       "id": "realpage-research",
       "name": "RealPage Analytics",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.realpage.com/analytics/feed/"
       ],
       "status": "ok",
-      "discovered": 1106,
-      "articles": 1106,
+      "discovered": 1108,
+      "articles": 1108,
       "discovery_truncated": false,
       "article_budget": 0,
       "fallback_bodies": 0,
@@ -6557,19 +6804,19 @@
       "earliest_dated": 1680193015000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "nmhc-research",
       "name": "NMHC Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.nmhc.org/research-insight/quarterly-survey/"
       ],
@@ -6588,14 +6835,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "naa-research",
       "name": "NAA Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://naahq.org/research"
       ],
@@ -6613,18 +6860,18 @@
       "coverage_basis": "full_listing",
       "coverage": {
         "lower": 1793180442798,
-        "upper": 1794517200000
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "uli-pwc",
       "name": "ULI/PwC Emerging Trends",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
         "https://www.pwc.com/us/en/about-us/newsroom.html"
@@ -6639,7 +6886,7 @@
       "name": "MSCI Real Assets Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi"
       ],
@@ -6656,21 +6903,21 @@
       "earliest_dated": 1792684800000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {
         "https://msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi": "bca6c6c9dd06a44e08d18d85a6ff5b833a9a5d830d12de16226484a149d5c757"
       },
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "john-burns",
       "name": "John Burns Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://jbrec.com/resources/insights/"
       ],
@@ -6684,33 +6931,33 @@
       "name": "Northmarq Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.northmarq.com/insights"
       ],
       "status": "ok",
-      "discovered": 4,
-      "articles": 4,
+      "discovered": 8,
+      "articles": 8,
       "discovery_truncated": false,
-      "article_budget": 4,
-      "fetched_articles": 4,
+      "article_budget": 8,
+      "fetched_articles": 8,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 4,
+      "recent": 8,
       "unreadable_recent": 0,
       "earliest_dated": 1793376000000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "berkadia-research",
       "name": "Berkadia Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.berkadia.com/multifamily-reports/"
       ],
@@ -6728,18 +6975,18 @@
       "coverage_basis": "full_listing",
       "coverage": {
         "lower": 1793180442798,
-        "upper": 1794517200000
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "arbor-research",
       "name": "Arbor/Chandan Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://arbor.com/research/reports/"
       ],
@@ -6753,7 +7000,7 @@
       "name": "Newmark Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.nmrk.com/insights/market-report"
       ],
@@ -6767,7 +7014,7 @@
       "name": "Cotality / CoreLogic Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.cotality.com/insights/all-insights"
       ],
@@ -6784,19 +7031,19 @@
       "earliest_dated": 1787587200000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "ice-research",
       "name": "ICE Mortgage Monitor",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://mortgagetech.ice.com/resources/data-reports"
       ],
@@ -6810,22 +7057,22 @@
       "undated": 0,
       "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1780588800000,
+      "earliest_dated": 1780876800000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "attom-research",
       "name": "ATTOM Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.attomdata.com/news/category/market-trends/"
       ],
@@ -6837,24 +7084,24 @@
       "fetched_articles": 7,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 1,
+      "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1792173097000,
+      "earliest_dated": 1792681236000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "mba-research",
       "name": "MBA Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
       ],
@@ -6868,7 +7115,7 @@
       "name": "Apartment List Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.apartmentlist.com/research"
       ],
@@ -6885,19 +7132,19 @@
       "earliest_dated": 1778482800000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "costar-research",
       "name": "CoStar / Apartments.com Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://www.apartments.com/grow/learning-center/market-trends"
       ],
@@ -6914,19 +7161,19 @@
       "earliest_dated": 1773057600000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "sp-case-shiller",
       "name": "S&P Cotality Case-Shiller",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://press.spglobal.com/index.php?l=50&s=2429"
       ],
@@ -6943,19 +7190,19 @@
       "earliest_dated": 1787673600000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "zonda-research",
       "name": "Zonda Research",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://zondahome.com/new-home-market-update/"
       ],
@@ -6972,21 +7219,21 @@
       "earliest_dated": 1792670400000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {
         "https://zondahome.com/new-home-market-update": "472389cbb3863416bd9389f5284bfbf753323d3dcb748402a562f70f854f24df"
       },
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     },
     {
       "id": "zonda-lot-supply",
       "name": "Zonda Lot Supply Index",
       "research": true,
       "required": false,
-      "checked_at": 1794519452247,
+      "checked_at": 1794865086470,
       "attempted_urls": [
         "https://zondahome.com/new-home-lot-supply-index-2/"
       ],
@@ -7003,177 +7250,194 @@
       "earliest_dated": 1786622400000,
       "coverage_basis": "full_listing",
       "coverage": {
-        "lower": 1794430800000,
-        "upper": 1794517200000
+        "lower": 1794776400000,
+        "upper": 1794862800000
       },
       "changed_without_new_date": [],
       "versions": {
         "https://zondahome.com/new-home-lot-supply-index-2": "1e27e1aaa61d30025009eb6adf8b8bf7d6fb75a859a0c453543d7bae47151a15"
       },
-      "last_success": 1794519452247
+      "last_success": 1794865086470
     }
   ],
   "processed_capture": {
-    "upper": 1794517200000,
-    "fingerprint": "2c0728b934f48023c957feea9f80a68c9afc5c811d672ba4ec427b110f43c042",
+    "upper": 1794862800000,
+    "fingerprint": "0baaf77ab504711225b11a09564fa032cc7924f6583503469cefa50bb67df108",
     "fingerprint_version": 2
   },
   "pending": {
     "schema_version": 3,
     "provenance": "live",
     "coverage_status": "unverified",
-    "cutoff_upper": 1794517200000,
+    "cutoff_upper": 1794862800000,
     "window": {
-      "lower": 1593154800000,
-      "upper": 1794519325001,
-      "hours": 55934.590278055555
+      "lower": 1530225939000,
+      "upper": 1794864354001,
+      "hours": 73510.6708336111
     },
     "items": [
       {
-        "source_id": "housingwire",
-        "source_name": "HousingWire",
-        "source_tier": "A",
-        "source_weight": 9,
-        "source_tags": [
-          "housing",
-          "rates",
-          "policy"
-        ],
-        "region": "national",
-        "title": "Why QXO sees homebuilders as its mainstay of future growth",
-        "link": "https://www.housingwire.com/articles/qxo-homebuilders-growth/",
-        "description": "QXO , which aims to have $50 billion in annual revenue within the next several years, is counting on homebuilders as a launchpad for growth. Chairman and CEO Brad Jacobs said Monday on a conference call that the company wants to supply builders with far more than lumber and trusses. QXO, which reports full Q3 2026 earnings after the market closes Thursday, has overhauled sales incentives, technology and pricing to become a primary supplier to production and custom builders. The push follows its acquisitions of TopBuild and Kodiak Building Partners this year and Beacon Roofing Supply in 2025. Collectively, these acquisitions gave QXO exposure to a wide range of building products, including residential and commercial insulation, roofing materials, waterproofing, lumber and building materials, siding and exteriors, drywall and interior finishes, installation services, and tools and equipment such as fasteners, compressors and safety gear. That broader footprint comes as the company’s core business is showing momentum. With $4.9 billion in combined revenue last quarter, the firm is well on its way to achieving Jacobs’ lofty annual revenue goal. QXO, which generates roughly 50% of its revenue from residential construction, reported preliminary Q3 2026 results earlier this week showing organic revenue per day improved for the second consecutive quarter. Companywide pricing rose 2.2% year over year, with nine of 11 business areas posting positive pricing, and daily sales were up 5.4% year over year by the end of October. Roofing and Waterproofing, QXO’s longest-held business after its April 2025 acquisition of Beacon Roofing Supply, grew daily sales 9.1%. Jacobs credited better on-time deliveries, invoice accuracy and inventory management for Beacon’s performance. Insulation was another strong performer, largely because of data center demand. Beyond those gains, Jacobs said during the conference call that homebuilders represent a big growth opportunity. He outlined how QXO plans to capture more of their business, along with several ways QXO plans to grow in 2027. Cross-selling to homebuilders offers room for growth During the call, Jacobs made it clear that QXO plans to cross-sell more to homebuilders, an important and growing customer segment. “Our strong relationships with production homebuilders are typically rooted in our truss and wall panel capabilities, as well as insulation, where we solve some of their greatest needs. At the same time, it creates an opportunity for us to expand share of wallet by becoming their primary supplier for a wider range of building materials, with the added value of scale to support their growth,” Jacobs explained. The company’s $17 billion acquisition of TopBuild , announced earlier this year, gave QXO an installation business with a presence at roughly 22,000 job sites every day. QXO, with an established distribution business, plans to leverage TopBuild’s installation services to supply more building materials, coordinate additional trades and manage more work and installations on individual job sites. QXO’s $2.25 billion acquisition of Kodiak Building Partners, announced in February, additionally gave the firm exposure to building materials like lumber, engineered wood, doors, windows, trusses and gypsum products. These materials are essential to the company’s plans to sell more to Kodiak’s many existing homebuilder customers. To incentivize cross-selling, Jacobs explained that QXO is changing its sales compensation structure to reward employees for selling customers a broader range of products across its businesses. Salespeople will have a financial incentive to introduce existing customers to other parts of QXO’s portfolio, including building materials and installation services. “Homebuilders are a big opportunity,” Jacobs said. “One of the main reasons we bought Kodiak is that they brought phenomenal relationships with the big production homebuilders and the custom builders. And they were mainly selling them lumber or trusses or engineered products. So, we’re building on those great relationships, and we’re going to sell them much more. We’ve already started talking to many of these customers about this. There’s a lot of appetite for this.” Five other margin and growth opportunities Cross-selling to homebuilders comprises just one focus area among QXO’s growth plans. Jacobs named five other areas where the company expects to improve margins and market share, including stronger supplier relationships, additional acquisitions, pricing improvements, smarter use of private-label products and technological improvements. Stronger procurement and supplier relationships As QXO continues to integrate and improve its Beacon, Kodiak and TopBuild acquisitions, the combined company intends to leverage its larger scale in negotiations with suppliers. The business has about $12 billion in combined spending, including about $11 billion in direct spending on products and materials. About $7.6 billion of that spending is with suppliers that serve at least two of QXO’s legacy businesses, including about $5 billion to suppliers serving all three. QXO plans to consolidate its supplier base to capture that overlap, which could allow the company to push for better pricing and rebates and standardize purchasing agreements across the businesses. “We want deep relationships with a smaller number of strategic supplier partners,” Jacobs said. “We want to be important partners with them and preferably their most important partner. And there’s quite a lot of overlap among the key suppliers across the three acquisitions we’ve recently done.” If QXO strengthens its supplier relationships, its homebuilder clients could see better product availability and service, making the company a more appealing primary supplier for builders, particularly as it expands its offerings through additional acquisitions. M&A as a lever for growth Jacobs sees additional acquisitions as a key way to expand i",
-        "published_at": 1794519325000,
-        "mutable": false,
-        "date_precision": "timestamp",
-        "modified_at": 1794519327000,
-        "extraction": "semantic",
-        "canonical": "https://housingwire.com/articles/qxo-homebuilders-growth",
-        "content_hash": "0913f05c2b7b70250dd0c1264f7d20310637c592e6b757617b2ec86bbc009b03",
-        "access": "public",
-        "evidence_status": "article",
-        "id": "42d81f4ac3b548bd",
-        "source_family": "housingwire",
-        "is_research": false,
-        "required_source": false,
-        "first_seen_at": 1794519452247,
-        "acquisition_window": {
-          "lower": 1793180442798,
-          "upper": 1794517200000
-        }
-      },
-      {
-        "source_id": "housingwire",
-        "source_name": "HousingWire",
-        "source_tier": "A",
-        "source_weight": 9,
-        "source_tags": [
-          "housing",
-          "rates",
-          "policy"
-        ],
-        "region": "national",
-        "title": "Reverse mortgage executives read the tea leaves to decipher the industry's next chapter",
-        "link": "https://www.housingwire.com/articles/reverse-forward-lo-distribution/",
-        "description": "At this week's National Reverse Mortgage Lenders Association (NRMLA) Annual Convention & Expo in San Antonio, executives offered their thoughts on the evolving product landscape and efforts to expand the sales force while cautioning that hurdles around consumer misperceptions remain. In a panel discussion held Tuesday and moderated by former NRMLA board member and current Texas Mortgage Bankers Association CEO Scott Norman , executives covered a wide range of topics including proprietary reverse mortgages , distribution efforts with traditional forward lenders and the potential for a broad marketing push to consumers. \"I think one of the things that's held us back is our lack of distribution,\" said Jim Cory , managing director of Guild Mortgage 's reverse division. \"It's such a sea change in our business to suddenly have to go from this beloved group that we have here and begin adding to it. And literally thousands of loan originators now have access to this product.\" Proprietary products push the envelope At a time when federally insured Home Equity Conversion Mortgages (HECMs) have dropped to their lowest levels in about 10 years , private-label loans have stepped up to fill the void. Data compiled by New View Advisors showed that proprietary products accounted for 60% of all reverse mortgage volume in September 2026 — a share that is expected to continue growing. Melissa Macerato , the newly appointed president and chief commercial officer at Longbridge Financial , said that these products have changed business for the better and that the industry would \"be in a very different place\" without them. Longbridge has been among the lenders to introduce private-label solutions in recent years through its Platinum suite and HELOC for Seniors . Macerato said she expects to see more hybrid reverse mortgage products developed soon, with a focus on giving borrowers higher proceeds alongside mandatory but flexible payments. \"In order to get that broader distribution, in order to have more exposure for our products, we're going to have to start speaking the language and developing products that more mainstream mortgage entities and loan officers really understand,\" she said. Jonathan Scarpati , chief production officer at Finance of America , told NRMLA attendees that the products \"from 10 years ago are not reverse mortgages that everyone is selling today.\" His company has also been at the forefront of product innovation with its HomeSafe suite — including a second-lien option that allows borrowers to tap into their home equity without touching their low-rate first mortgage. But Scarpati believes that new products are meant to \"cast a wider net\" rather than replace the traditional HECM that's been the industry's cornerstone since the program was authorized in 1987. Mike Kent , senior vice president of corporate development and industry relations at Onity Mortgage , agreed. \"The reason we have proprietary products is that [the HECM] set the baseline, it set the standards, it ushered in the appropriate regulation and safeguards for the product, and it kind of cleared the way for us to begin to innovate,\" Kent said. Scarpati also pushed back against the notion that more competition in reverse mortgages is a bad thing. \"I think 2027 is a very pivotal moment for the industry in general,\" he said. \"I think as the products continue to evolve, some of them are looking closer to the forward industry. … The closer we have our products look to what the forward industry is used to, the more growth and the more adoption we're going to get.\" Forward lenders could open their doors wider Cory said that lack of distribution has been a longstanding obstacle for the industry. But many of the large independent mortgage banks ( IMBs ) — including Guild, Rate , Fairway Home Mortgage and CrossCountry Mortgage — now have a visible presence in the space. According to Cory, the six largest IMBs have about 17,000 originators today, and business would expand significantly if this group alone put more resources into reverse. Jesse Allen , president of the 55+ lending division at Rate, said that while the largest IMBs have reverse mortgage options to offer borrowers, the ongoing hurdle is to get more engagement from loan officers. That work falls to reverse specialists, who must do a better job of sharing their knowledge and building relationships. \"If you want other people to trust you, you have to really know your craft,\" Allen said. \"Language matters. And so, as a reverse industry, I would encourage all of you to think about the language you use when you walk in with a traditional mortgage loan officer and a real estate agent. Use language that feels familiar to them and that will start to build trust.\" Some companies are introducing technology solutions to engage LOs who are unfamiliar with reverse products. Earlier this month, Nationwide Equities Corp. launched ReverseReach , a tool to help uncover reverse mortgage opportunities in existing customer databases and referral networks. And in July, Reverse Market Insight expanded its loan qualification tool to include Smartfi Home Loans ' proprietary products, part of Smartfi's push to get more traditional LOs involved. Scarpati said many lenders are looking for new opportunities as traditional purchase and refinance is expected to decline in 2027 . Home equity lending, including reverse mortgages, presents a massive opportunity as U.S. homeowners hold roughly $35 trillion in equity , including $15 trillion among those 62 and older. Lenders that don't diversify beyond traditional products may find tough sledding if liquidity issues and consolidation continue over the next 12 to 18 months, he added. \"Originators are starving to find new opportunities to continue to succeed in mortgages in general. I think it just makes so much sense for a forward originator to start looking back at their client base,\" Scarpati said. \"We just have to continue to double down on education and tec",
-        "published_at": 1794517694000,
-        "mutable": false,
-        "date_precision": "timestamp",
-        "modified_at": 1794517696000,
-        "extraction": "semantic",
-        "canonical": "https://housingwire.com/articles/reverse-forward-lo-distribution",
-        "content_hash": "097c167dbe9d98fc7027ba50a05098c5ac0c87c50a6d4a3b00c142b11b49654d",
-        "access": "public",
-        "evidence_status": "article",
-        "id": "079569213210a6d7",
-        "source_family": "housingwire",
-        "is_research": false,
-        "required_source": false,
-        "first_seen_at": 1794519452247,
-        "acquisition_window": {
-          "lower": 1793180442798,
-          "upper": 1794517200000
-        }
-      },
-      {
-        "source_id": "inman",
-        "source_name": "Inman News",
+        "source_id": "trd-national",
+        "source_name": "The Real Deal (National)",
         "source_tier": "A",
         "source_weight": 8,
         "source_tags": [
-          "housing",
-          "brokerage"
+          "mixed-asset",
+          "deals"
         ],
         "region": "national",
-        "title": "5 questions to ask before you tap ‘invest’ on real estate apps - Inman Real Estate News",
-        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFdzZ0hicEt0WkRydDVYTm5LUk5TUFBrQ2kyY1BHMjJtWnNwbmpYZmd6Sl82MzhtdjRWNnYyMFBKUDhQU21rNjR6RUt2SU9sWkloczFkczIzejF3SmlXei1nc29FOGZGREhrZTZCSjNOemRRUkpnT0hwQWZxLUJjb3hKMC04czZrR3hURFR1d3owdGp2M3FocGhB?oc=5",
-        "description": "5 questions to ask before you tap ‘invest’ on real estate apps &nbsp;&nbsp; Inman Real Estate News",
-        "published_at": 1794517832000,
-        "source_family": "inman",
+        "title": "Congress eyes overhaul that could pile billions in fees on data center developers",
+        "link": "https://therealdeal.com/national/2026/11/16/congress-eyes-overhaul-for-data-center-development/",
+        "description": "The data centers pacing the AI boom could get a faster path to power, but at a steep price. A sweeping congressional permitting proposal would make it easier to build data center infrastructure, while potentially saddling developers with billions of dollars in additional electricity costs, the New York Times reported. The bill would streamline federal environmental reviews for projects including transmission lines, gas pipelines and power generation facilities, potentially easing one of the biggest obstacles to data center development: securing enough electricity to operate. But it would also ",
+        "published_at": 1794862800000,
+        "source_family": "trd-national",
         "is_research": false,
         "required_source": false,
         "mutable": false,
-        "first_seen_at": 1794519452247,
-        "id": "07aa3b31a4105c89",
+        "first_seen_at": 1794865086470,
+        "id": "5d8fb7aa5187c1cf",
         "acquisition_window": {
-          "lower": 1794430800000,
-          "upper": 1794517200000
+          "lower": 1793180442798,
+          "upper": 1794862800000
         }
       },
       {
-        "source_id": "multifamily-dive",
-        "source_name": "Multifamily Dive",
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
         "source_tier": "A",
-        "source_weight": 9,
+        "source_weight": 6,
         "source_tags": [
-          "multifamily"
+          "housing"
         ],
         "region": "national",
-        "title": "Construction site next to fatal Brooklyn collapse previously violated stop-work order: DOB",
-        "link": "https://www.multifamilydive.com/news/project-fatal-brooklyn-collapse-stop-work-order/874574/",
-        "description": "The Wednesday incident killed eight people, including two construction workers, said New York City Mayor Zohran Mamdani. He vowed the city would hold the responsible parties accountable.",
-        "published_at": 1794519180000,
-        "source_family": "multifamily-dive",
-        "is_research": false,
-        "required_source": false,
+        "title": "Drake Maye Suffers Potentially Season-Ending Ankle Injury—Inside His Massachusetts Home Where He Could Recover",
+        "link": "https://www.realtor.com/news/sports/drake-maye-ankle-injury-massachusetts-home-where-he-could-recover/",
+        "description": "New England Patriots quarterback Drake Maye could miss the rest of the 2026 season after injuring his ankle against the Detroit Lions in Munich. According to reports, the athlete may have fractured his ankle. Maye was hurt on the Patriots’ first possession of the Week 10 matchup when Lions defensive end Aidan Hutchinson sacked him on third-and-goal. The third-year quarterback was evaluated on the sideline before walking to the locker room. New England later ruled him out with an ankle injury. Tommy DeVito is the Patriots' backup quarterback. Patriots coach Mike Vrabel offered few details after the game. On Monday morning, he told WEEI’s “The Greg Hill Show” that Maye had stayed in Germany as a precaution and was expected to return to the U.S. soon. Loading... New England Patriots quarterback Drake Maye could miss the rest of the 2026 season after injuring his ankle against the Detroit Lions in Munich. Matthew J. Lee/The Boston Globe via Getty Images “The update that I have is just out of caution, Drake stayed back,” Vrabel said, as quoted by the Boston Herald’s Doug Kyed . “He’ll be traveling back here shortly. But just wanted to make sure that everything was good for him to travel back and safely. The things that go around injuries, and just wanted to make sure everything was in line for him to travel, and it seems like he is. He’ll be returning here, I think, shortly.” If Maye does end the season here, he will recover at his sprawling property, which his wife, Ann Michael , previously revealed a candid glimpse of. Drake and Ann Michael, both 23, tied the knot in June 2025, having met in middle school in North Carolina . The couple purchased their first home together in Massachusetts in April—and moved in together in July, after Ann Michael graduated from the University of North Carolina at Chapel Hill, where they both attended college. At the time, Ann Michael filmed herself driving from North Carolina to Massachusetts in a car filled with her belongings. Since then, Ann Michael, who is a Pilates instructor and lifestyle influencer, shared regular updates about her new life in New England, posting candid \"day in the life\" videos on her social media accounts—including a previous clip in which she filmed herself packing for last year's Super Bowl. Ann Michael was joined at the major sporting event by Drake's parents and his siblings, with the NFL pro previously revealing that one of his favorite things about the Patriots' home games was hosting his loved ones at their house. \"My parents come to every game. They're always here; it's just special sharing these moments with them and going home and probably playing ping-pong until 1:30 or something,\" he revealed during a press conference after the Patriots won the NFL Wild Card Round over the Los Angeles Chargers . \"Having them in the house is cool, three of my best friends. And obviously, Ann Michael, so I can't forget about her.\" Since graduating, Ann Michael has been by her husband's side for almost all of his games, traveling across the U.S. to many of the Patriots' matchups—while also continuing to share insights into her experiences online, earning a legion of followers in the process. To date, Ann Michael boasts more than 1 million followers across TikTok and Instagram, where she reveals what life is really like as one of the NFL's most popular WAGs—a term that refers to the wives and girlfriends of high-profile athletes. In one previous clip, the influencer welcomed fans and followers into the primary bedroom at the couple's home as she revealed everything she was packing before she jetted off to the Super Bowl last year. Loading... According to reports, the athlete may have fractured his ankle. Maye was hurt on the Patriots’ first possession of the Week 10 matchup when Lions defensive end Aidan Hutchinson sacked him on third-and-goal. Billie Weiss/Getty Images Loading... The third-year quarterback was evaluated on the sideline before walking to the locker room. New England later ruled him out with an ankle injury. Tommy DeVito is the Patriots' backup quarterback. Thearon W. Henderson/Getty Images Loading... If Maye does end the season here, he will recover at his sprawling property, which his wife, Ann Michael, previously revealed a candid glimpse of. Maddie Meyer/Getty Images Loading... Drake and Ann Michael, both 23, tied the knot in June 2025, having met in middle school in North Carolina. The couple purchased their first home together in Massachusetts in April—and moved in together in July, after Ann Michael graduated from the University of North Carolina Chapel Hill, where they both attended college. TikTok In the clip, Ann Michael stood in their primary bedroom, which boasts a soaring ceiling, light wood flooring, and large bed. The WAG packed several outfits in her two suitcases before packing her toiletries in their primary bathroom, which features marble countertops and a glass-enclosed shower. In another video, she shared footage of herself cooking in their chef's kitchen, which boasts marble countertops and a matching marble backsplash, white cabinets, and stainless-steel appliances. It also gave a glimpse of their dining area with its large table and elegant overhead lighting, and the living room, which has a cozy fireplace. Elsewhere in their home, there is a large mirror, where Ann Michael shows off her social media-worthy ensembles. The property features large windows with automatic blinds and a massive backyard, which appears to flood into the woods. Ann Michael first rose to social media stardom for her baking skills, which she has heavily documented online. Drake has admitted that he is not blessed with the same skills as his wife in the kitchen and leaves the baking to her, confessing that the most he can whip up is a \"good bacon, egg, and cheese.\" During a press conference, Drake gushed about his wife, noting that he was grateful for her support during his career. Loading... At the time, Ann Michael filmed hersel",
+        "published_at": 1794863238000,
         "mutable": false,
-        "first_seen_at": 1794519452247,
-        "id": "21707951658c67c3",
-        "acquisition_window": {
-          "lower": 1794430800000,
-          "upper": 1794517200000
-        }
-      },
-      {
-        "source_id": "multifamily-dive",
-        "source_name": "Multifamily Dive",
-        "source_tier": "A",
-        "source_weight": 9,
-        "source_tags": [
-          "multifamily"
-        ],
-        "region": "national",
-        "title": "A look at how apartment REITs did in Q3",
-        "link": "https://www.multifamilydive.com/news/reits-concessions-rent-growth-acquisitions-dispositions/874382/",
-        "description": "A look at how apartment REITs did in Q3 Concessions continued to dampen earnings, but bright spots in San Francisco and New York City boosted a number of companies. Published Nov. 12, 2026 Leslie Shaver Senior Reporter Share Copy link Email LinkedIn X/Twitter Facebook Print Add us on Google Getty Images In the fall of 2023, apartment REITs sounded the alarm during their earnings calls. The glut of apartment deliveries in many markets across the country was driving massive concessions from merchant developers. In turn, public apartment companies had to drop prices, even on older assets that normally don’t compete with new supply. Analysts ended up downgrading some of those companies. “This dynamic and its impact on our B-quality communities, in particular, was unexpected and unprecedented in my 30 years in the multifamily industry,” UDR CEO Tom Toomey said on the Highlands Ranch, Colorado-based REIT’s third-quarter 2023 conference call. Three years later, in Q3 2026, supply pressures are still popping up in unexpected ways, especially for Sun Belt-centric REITs. For instance, Camden Property Trust lowered its 2026 same-store revenue guidance. September performance, in particular, surprised the company and set the stage for that revision, according to CEO Alex Jessett. “It was a greater decline in traffic than we had expected,” he said. “And when we had the decline in traffic, obviously, you have to reduce your prices if you’re trying to increase traffic.” Despite continued issues with concessions, there were many bright spots in the REIT Q3 2026 earnings reports, including strength in San Francisco and New York City. Read on for a look at results reported over the last couple of weeks. Camden lowers guidance after September concession resurgence By Leslie Shaver • Nov. 6, 2026 The REIT still saw improvement in expenses and new lease growth in Q3, though rising interest rates forced it to cancel property and land acquisitions. Read the full article ➔ Vivmark finds additional efficiencies after completing AVB-EQR merger By Leslie Shaver • Nov. 5, 2026 The REIT's net run-rate operating synergies increased by $10 million to $135 million, driven by increased portfolio net operating income opportunities, according to its Q3 earnings release. Read the full article ➔ UDR beats Q3 estimates and raises guidance, after Apollo deal By Leslie Shaver • Nov. 3, 2026 The REIT's executives saw rents increasing, retention hitting record highs and San Francisco thriving at the end of Q3 as they continue making stock buybacks. Read the full article ➔ MAA’s revenue dipped in Q3 from Sun Belt weakness By Julie Strupp • Oct. 29, 2026 Despite the later-than-expected bounceback in rents, \"we see a favorable foundation for the next phase of recovery,\" President and CEO Brad Hill said on the REIT's earnings call. Read the full article ➔ Essex ups 2026 guidance amid vigorous Northern California performance By Julie Strupp • Oct. 28, 2026 \"West Coast multifamily fundamentals offer a compelling case for continued growth above the U.S. average,\" CEO Angela Kleiman said on the REIT's third-quarter earnings call. Read the full article ➔ Add us on Google Share Copy link Email LinkedIn X/Twitter Facebook Print Filed Under: Capital , Rents",
-        "published_at": 1794518340000,
-        "mutable": false,
-        "date_precision": "day",
-        "published_date": "2026-11-12",
-        "modified_at": 0,
+        "date_precision": "timestamp",
+        "modified_at": 1794863242000,
         "extraction": "semantic",
-        "canonical": "https://multifamilydive.com/news/reits-concessions-rent-growth-acquisitions-dispositions/874382",
-        "content_hash": "fe06dfa5206109787222559c492aa33ded0f09b5eea4bdf958cf0259aba70397",
+        "canonical": "https://realtor.com/news/sports/drake-maye-ankle-injury-massachusetts-home-where-he-could-recover",
+        "content_hash": "4d4f826d5e63ee55680988b2b1446a6a068f4d08e24df7ad4165de201494a5f8",
         "access": "public",
         "evidence_status": "article",
-        "id": "cff9879c4aa859a3",
+        "id": "fc842ac16ba5c67a",
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794865086470,
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794862800000
+        }
+      },
+      {
+        "source_id": "multifamily-dive",
+        "source_name": "Multifamily Dive",
+        "source_tier": "A",
+        "source_weight": 9,
+        "source_tags": [
+          "multifamily"
+        ],
+        "region": "national",
+        "title": "Multifamily can buy AI. It can’t buy back the last decade of data.",
+        "link": "https://www.multifamilydive.com/news/multifamily-artificial-intelligence-apartment-data/874663/",
+        "description": "Most operators have adopted artificial intelligence in some form. Far fewer have the data foundation to make it work, and that gap gets harder to close with every passing year, according to Cortland&rsquo;s tech chief.",
+        "published_at": 1794862980000,
         "source_family": "multifamily-dive",
         "is_research": false,
         "required_source": false,
-        "first_seen_at": 1794519452247,
+        "mutable": false,
+        "first_seen_at": 1794865086470,
+        "id": "dea44ca7e4876967",
         "acquisition_window": {
-          "lower": 1794430800000,
-          "upper": 1794517200000
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        }
+      },
+      {
+        "source_id": "multifamily-dive",
+        "source_name": "Multifamily Dive",
+        "source_tier": "A",
+        "source_weight": 9,
+        "source_tags": [
+          "multifamily"
+        ],
+        "region": "national",
+        "title": "3 apartment projects broke ground last week",
+        "link": "https://www.multifamilydive.com/news/apartment-projects-broke-ground-georgia-new-york-virgina/874755/",
+        "description": "3 apartment projects broke ground last week Construction has just started on new transit-oriented multifamily developments in Georgia, New York and Virginia. Published Nov. 16, 2026 Julie Strupp Senior Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Rendering of Caldwell in Sandy Springs, Ga. Courtesy of Kennedy Wilson Listen to the article 6 min This audio is auto-generated. Please let us know if you have feedback . Several multifamily firms launched new apartment projects last week on the East Coast and in the Atlanta area. Although the rising interest rate environment is making development more difficult, market conditions vary widely, Jay Lybik, senior director of market research at Continental Properties, told Multifamily Dive. “We're seeing distinct differences depending upon the region you're in,” Lybik said, but “the Midwest and the Northeast are holding very stable.” Despite ongoing macroeconomic challenges, Beverly Hills, California-based Kennedy Wilson is among those continuing to build. Atlanta is a priority market for the firm’s multifamily development platform, John McCullough, president of Kennedy Wilson’s Multifamily Development Group, told Multifamily Dive. “The region continues to add residents and jobs, supported by a diverse economy and a large concentration of corporate headquarters,” he said in emailed comments. Read on for details about Kennedy Wilson’s new project and other multifamily developments that recently broke ground. Caldwell in Sandy Springs, Georgia The Caldwell project team broke ground last week. Courtesy of Kennedy Wilson A Kennedy Wilson and Shimizu Corp. joint venture has started building Caldwell, a 382-unit luxury apartment development in the Atlanta area, per a Tuesday press release shared with Multifamily Dive. Caldwell marks Kennedy Wilson’s first multifamily development in the state. Sandy Springs stood out because it has seen far less new apartment supply than the rest of the Atlanta metro, so demand remains strong, McCullough said in emailed comments. The development is located on a 6.9-acre site close to major highways and Metropolitan Atlanta Rapid Transit Authority transit stops. “The submarket has high household incomes, above-average occupancy, and a high cost of homeownership that supports long-term rental demand,” McCullough said. “Caldwell sits just off GA-400 and is minutes from Perimeter Center, Buckhead, and Roswell, which fits our focus on established submarkets near major employment centers.” Caldwell was designed “with a focus on wellness and functionality,” according to McCullough. The apartments, which average 937 square feet, will feature “upscale finishes” such as quartz countertops and stainless steel appliances, as well as oversized closets and smart-home technology, per the release. Amenities will include a fitness center, a wellness suite with infrared sauna and cold plunge, a pool, three courtyards with hammocks and grilling stations, an outdoor beer and wine garden as well as a terrace. Santander Bank provided a $90 million construction loan for the project, which is expected to open in mid-2028. 4600 Fairfax in Arlington, Virginia Rendering of 4600 Fairfax in Arlington, Virginia. Courtesy of 4600 Fairfax Hoffman & Associates, Snell Properties and Mitsui Fudosan America started construction Thursday on 420 new apartments in the Ballston neighborhood of Arlington, Virginia, according to a press release shared with Multifamily Dive. It’s the first part of a multiphase development. The seven-story apartment building spans more than four acres and will include 380 parking spaces. 4600 Fairfax offers residents “seamless connectivity to Metro, retail and major employment centers in one of Northern Virginia's most vibrant neighborhoods,” per the release. The project announced $195 million in financing in May, with a senior construction loan from Mitsubishi UFJ Financial Group, according to the release. Residents are expected to start moving in during the first quarter of 2029. The launch of 4600 Fairfax represents Hoffman & Associates’ ongoing expansion of its residential portfolio across the Mid-Atlantic region, per the release. The site will also be prepared for construction of a separate for-sale component, with plans for a four-story penthouse south building with 29 townhome-style multifamily units plus additional apartments, according to the project website. North White Plains Workforce Transit Hub in White Plains, New York Rendering of the North White Plains Workforce Transit Hub. Courtesy of BRP BRP Companies, The Community Preservation Corp. and Basis Investment Group broke ground Tuesday on a $178 million, 296-unit transit-oriented development in White Plains, New York, according to a press release shared with Multifamily Dive. Located directly across from the North White Plains Metro-North Station, the mixed-use project will include retail, publicly accessible open space and “thoughtfully designed amenities in one of Westchester County's fastest-growing transit corridors,” per the release. It will offer studio, one- and two-bedroom floor plans, with five homes reserved for households earning between 50% and 60% of Area Median Income and 25 homes for households earning up to 110% of AMI. Amenities will include a fitness center, a resident lounge and a co-working lounge, an event space and a landscaped courtyard, as well as a publicly accessible park with a dog run and a parking garage with 383 spaces. Its building systems will be all-electric, “supporting long-term environmental performance and operational efficiency,” according to the release. Construction financing closed in July, per the release, with about $120.6 million in financing from Merchants Capital, a $10 million loan from The Community Preservation Corp., $18 million in financing from New York State Homes and Community Renewal and $29.7 million in equity from Basis Investment Group and BRP Companies. Skycore Buil",
+        "published_at": 1794862860000,
+        "mutable": false,
+        "date_precision": "day",
+        "published_date": "2026-11-16",
+        "modified_at": 0,
+        "extraction": "semantic",
+        "canonical": "https://multifamilydive.com/news/apartment-projects-broke-ground-georgia-new-york-virgina/874755",
+        "content_hash": "29b8f311c68619240755a20ff36a94d53ac1eee904bd38b78d53b4f88f3eaa55",
+        "access": "preview",
+        "evidence_status": "preview",
+        "id": "d75fa234e68f163a",
+        "source_family": "multifamily-dive",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794865086470,
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        }
+      },
+      {
+        "source_id": "austin-bj-cre",
+        "source_name": "Austin Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "austin",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Bonnie Love, Professionally Recognized at Howden - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbm0yLWh5ejhTQ1hyRDJUWTdmTHdaU29vNDFRU3Z1SmdoekdnTEt1VXZQV1plZG0tMUFkeWJwZVhYVlRMdktVa3puVG5jOUNrYzNzVmVNQllTQWlqb3V6V19PcmtLSXZVVi00d1JLUWgzWUgtWDRWU1F5OGhNNFdkV25tNkJtUU5yQ0c0?oc=5",
+        "description": "Bonnie Love, Professionally Recognized at Howden &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794864354000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794865086470,
+        "id": "2504263d787f5db1",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        }
+      },
+      {
+        "source_id": "austin-bj-cre",
+        "source_name": "Austin Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "austin",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Ronda Brown, Professionally Recognized at Howden - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNTGxvbmdzTUZmN245eWd4ZmNvOVRvNjluVGlkRHR1bUNZZkZGREdsWmJRcUROcXpMR2V3SDZqd0hfVlFJSExJbHEySkNaTUgtYUlGalhIM0l6R2VEdl9UUk1YaTNGUHdvTVR6Q1lzd2k0aFIxdjBNUmcwTERFbUV4aUpQeV9GX2Fpbi1F?oc=5",
+        "description": "Ronda Brown, Professionally Recognized at Howden &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794864354000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794865086470,
+        "id": "4d397fc9f08a7a29",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
         }
       }
     ],
@@ -19483,6 +19747,1948 @@
           "https://zondahome.com/new-home-lot-supply-index-2": "1e27e1aaa61d30025009eb6adf8b8bf7d6fb75a859a0c453543d7bae47151a15"
         },
         "last_success": 1794519452247
+      },
+      {
+        "id": "housingwire",
+        "name": "HousingWire",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.housingwire.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 10,
+        "unreadable_recent": 3,
+        "earliest_dated": 1794845284000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "inman",
+        "name": "Inman News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.inman.com/feed/",
+          "https://news.google.com/rss/search?q=site:inman.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 429"
+      },
+      {
+        "id": "trd-national",
+        "name": "The Real Deal (National)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://therealdeal.com/national/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 9,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794506400000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "bisnow",
+        "name": "Bisnow",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.bisnow.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 8,
+        "articles": 8,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794840763000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "multi-housing-news",
+        "name": "Multi-Housing News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.multihousingnews.com/feed/",
+          "https://news.google.com/rss/search?q=site:multihousingnews.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 68,
+        "articles": 68,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 2,
+        "earliest_dated": 1398469263000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "national-mortgage-news",
+        "name": "National Mortgage News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.nationalmortgagenews.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 10,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794520835000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "cnbc-realestate",
+        "name": "CNBC Realty Check",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000115"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 3,
+        "undated": 0,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793103659000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "d-magazine",
+        "name": "D Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.dmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 12,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794503030000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "houston-agent",
+        "name": "Houston Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://houstonagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794248415000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "phoenix-agent",
+        "name": "Phoenix Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://phoenixagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793917070000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "atlanta-agent",
+        "name": "Atlanta Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://atlantaagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793973947000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "miami-agent",
+        "name": "Miami Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://miamiagentmagazine.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)"
+      },
+      {
+        "id": "google-news-sunbelt",
+        "name": "Google News — Sun Belt Housing Market",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=%22housing+market%22+(Phoenix+OR+Tampa+OR+Atlanta+OR+Charlotte+OR+Nashville+OR+%22Las+Vegas%22+OR+Jacksonville+OR+Orlando+OR+Raleigh+OR+Memphis)&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 48,
+        "articles": 48,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1612598400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "nahb-eyeonhousing",
+        "name": "NAHB Eye on Housing",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://eyeonhousing.org/feed/"
+        ],
+        "status": "ok",
+        "discovered": 18,
+        "articles": 18,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793641670000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "calculated-risk",
+        "name": "Calculated Risk (Bill McBride)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://feeds.feedburner.com/CalculatedRisk"
+        ],
+        "status": "ok",
+        "discovered": 25,
+        "articles": 25,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1767714840001,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "lance-lambert",
+        "name": "Lance Lambert / ResiClub",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://lancelambert.substack.com/feed",
+          "https://news.google.com/rss/search?q=%22Lance+Lambert%22+OR+%22ResiClub%22&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 54,
+        "articles": 54,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1697007600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "logan-mohtashami",
+        "name": "Logan Mohtashami (HousingWire)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.housingwire.com/author/logan-mohtashami/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792702847000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "yardi-matrix",
+        "name": "Yardi Matrix Blog",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.yardimatrix.com/publications/"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793491200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "realtor-research",
+        "name": "Realtor.com Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.realtor.com/research/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794218456000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "realtor-news",
+        "name": "Realtor.com News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.realtor.com/news/feed/"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 29,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794604592000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "redfin-news",
+        "name": "Redfin News",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.redfin.com/news/feed/"
+        ],
+        "status": "ok",
+        "discovered": 6,
+        "articles": 6,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794268187000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "trerc",
+        "name": "Texas Real Estate Research Center (TRERC)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://trerc.tamu.edu/texas-housing-insight/"
+        ],
+        "status": "ok",
+        "discovered": 69,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1743523903000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "fed-press",
+        "name": "Federal Reserve Press",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.federalreserve.gov/feeds/press_all.xml"
+        ],
+        "status": "ok",
+        "discovered": 20,
+        "articles": 20,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1790368200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "brookings-housing",
+        "name": "Brookings Institution",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.brookings.edu/topics/housing/"
+        ],
+        "status": "ok",
+        "discovered": 4,
+        "articles": 4,
+        "discovery_truncated": false,
+        "article_budget": 4,
+        "fetched_articles": 4,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1790610279000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "pere-news",
+        "name": "PERE News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.perenews.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "multifamily-dive",
+        "name": "Multifamily Dive",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.multifamilydive.com/feeds/news/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794432480000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "connect-cre",
+        "name": "Connect CRE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.connectcre.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 10,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794856491000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "rebusiness-online",
+        "name": "REBusiness Online",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://rebusinessonline.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 20,
+        "articles": 20,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 20,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794837600000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "nrhc",
+        "name": "National Rental Home Council (NRHC)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.rentalhomecouncil.org/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793987760000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "pretium-partners",
+        "name": "Pretium Partners",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://pretium.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1781021804000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "sec-invh-8k",
+        "name": "Invitation Homes (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://www.invh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1782856080000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "sec-amh-8k",
+        "name": "AMH (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://investors.amh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1778098140000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "btrlist",
+        "name": "BTR List (via Google News)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site:news.btrlist.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 52,
+        "articles": 52,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1722134745000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "google-news-btr",
+        "name": "Google News — BTR / SFR keywords",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=%22build-to-rent%22+OR+%22single-family+rental%22+OR+%22Invitation+Homes%22+OR+%22American+Homes+4+Rent%22+OR+Tricon+OR+Pretium+OR+%22Progress+Residential%22+OR+Roofstock+OR+%22Main+Street+Renewal%22+OR+%22FirstKey+Homes%22+OR+%22Home+Partners%22&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 429"
+      },
+      {
+        "id": "houston-bj-cre",
+        "name": "Houston Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
+          "https://www.bizjournals.com/houston/news/commercial-real-estate/feed"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "houston-bj-resi",
+        "name": "Houston Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 0,
+        "earliest_dated": 1478462047000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "dallas-bj-cre",
+        "name": "Dallas Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en",
+          "https://www.bizjournals.com/dallas/news/commercial-real-estate/feed"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "dallas-bj-resi",
+        "name": "Dallas Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en",
+          "https://www.bizjournals.com/dallas/news/residential-real-estate/feed"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "austin-bj-cre",
+        "name": "Austin Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 9,
+        "unreadable_recent": 2,
+        "earliest_dated": 1462863600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "austin-bj-resi",
+        "name": "Austin Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 1,
+        "earliest_dated": 1478434862000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "har-research",
+        "name": "HAR Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.har.com/content/department/newsroom?pid=640"
+        ],
+        "status": "ok",
+        "discovered": 133,
+        "articles": 2,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 2,
+        "stop_reason": "date_horizon",
+        "fallback_bodies": 2,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793898000000,
+        "coverage_basis": "ordered_date_horizon",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "zillow-research",
+        "name": "Zillow Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.zillow.com/research/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792670400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "nar-research",
+        "name": "NAR Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.nar.realtor/research-and-statistics/research-reports/research-update"
+        ],
+        "status": "ok",
+        "discovered": 13,
+        "articles": 13,
+        "discovery_truncated": false,
+        "article_budget": 13,
+        "fetched_articles": 13,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1325243280000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "census-construction",
+        "name": "Census New Residential Construction",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.census.gov/construction/nrc/current/index.html"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792512000000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://census.gov/construction/nrc/current/index.html": "32a3768fcced69a73a044289c3d73c3550311fcd8e4990cb51c57ccfb352375d"
+        },
+        "last_success": 1794865086470
+      },
+      {
+        "id": "census-sales",
+        "name": "Census New Residential Sales",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.census.gov/construction/nrs/current/index.html"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793116800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://census.gov/construction/nrs/current/index.html": "c03a0fa38527aa533c777b78bcff1e34902417a91673053b2d16e0b2dee2051a"
+        },
+        "last_success": 1794865086470
+      },
+      {
+        "id": "fhfa-research",
+        "name": "FHFA House Price Index",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.fhfa.gov/data/hpi"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793116800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "fannie-esr",
+        "name": "Fannie Mae ESR",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.fanniemae.com/data-and-insights/forecast"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "freddie-pmms",
+        "name": "Freddie Mac PMMS",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.freddiemac.com/pmms"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794502800000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {
+          "https://freddiemac.com/pmms": "c31943a782537223b1fcb017e44934e5d28dda90fbdc8ffddd8a2a2df63920f4"
+        },
+        "last_success": 1794865086470
+      },
+      {
+        "id": "freddie-research",
+        "name": "Freddie Mac Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.freddiemac.com/research-and-perspectives"
+        ],
+        "status": "ok",
+        "discovered": 6,
+        "articles": 6,
+        "discovery_truncated": false,
+        "article_budget": 6,
+        "fetched_articles": 6,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1687363200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "texas-realtors",
+        "name": "Texas REALTORS Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.texasrealestate.com/research/quarterly-housing-report"
+        ],
+        "status": "ok",
+        "discovered": 36,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "metrotex-research",
+        "name": "MetroTex Market Reports",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.mymetrotex.com/market-reports/"
+        ],
+        "status": "ok",
+        "discovered": 166,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "unlock-research",
+        "name": "Unlock MLS Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.unlockmls.com/news"
+        ],
+        "status": "ok",
+        "discovered": 4,
+        "articles": 4,
+        "discovery_truncated": false,
+        "article_budget": 4,
+        "fetched_articles": 4,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1786406400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "harvard-jchs",
+        "name": "Harvard JCHS",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.jchs.harvard.edu/blog"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "urban-housing",
+        "name": "Urban Institute Housing Finance",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.urban.org/expertise/housing-finance"
+        ],
+        "status": "ok",
+        "discovered": 2,
+        "articles": 2,
+        "discovery_truncated": false,
+        "article_budget": 2,
+        "fetched_articles": 2,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1751284800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "cbre-research",
+        "name": "CBRE Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.cbre.com/services/property-types/multifamily",
+          "https://www.cbre.com/shared-sitemap/figure.xml",
+          "https://www.cbre.com/insights"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "jll-research",
+        "name": "JLL Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.jll.com/en-us/insights"
+        ],
+        "status": "ok",
+        "discovered": 15,
+        "articles": 15,
+        "discovery_truncated": false,
+        "article_budget": 15,
+        "fetched_articles": 15,
+        "fallback_bodies": 0,
+        "undated": 7,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1719426600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "cushman-research",
+        "name": "Cushman & Wakefield Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
+        ],
+        "status": "ok",
+        "discovered": 86,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 2,
+        "recent": 10,
+        "unreadable_recent": 0,
+        "earliest_dated": 1791979200000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "colliers-research",
+        "name": "Colliers Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.colliers.com/en/research"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "realpage-research",
+        "name": "RealPage Analytics",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.realpage.com/analytics/feed/"
+        ],
+        "status": "ok",
+        "discovered": 1108,
+        "articles": 1108,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1680193015000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "nmhc-research",
+        "name": "NMHC Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.nmhc.org/research-insight/quarterly-survey/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 10,
+        "fetched_articles": 10,
+        "fallback_bodies": 0,
+        "undated": 10,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "naa-research",
+        "name": "NAA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://naahq.org/research"
+        ],
+        "status": "ok",
+        "discovered": 9,
+        "articles": 9,
+        "discovery_truncated": false,
+        "article_budget": 9,
+        "fetched_articles": 9,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 4,
+        "unreadable_recent": 0,
+        "earliest_dated": 1785952132000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "uli-pwc",
+        "name": "ULI/PwC Emerging Trends",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
+          "https://www.pwc.com/us/en/about-us/newsroom.html"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "msci-research",
+        "name": "MSCI Real Assets Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792684800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi": "bca6c6c9dd06a44e08d18d85a6ff5b833a9a5d830d12de16226484a149d5c757"
+        },
+        "last_success": 1794865086470
+      },
+      {
+        "id": "john-burns",
+        "name": "John Burns Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://jbrec.com/resources/insights/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "northmarq-research",
+        "name": "Northmarq Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.northmarq.com/insights"
+        ],
+        "status": "ok",
+        "discovered": 8,
+        "articles": 8,
+        "discovery_truncated": false,
+        "article_budget": 8,
+        "fetched_articles": 8,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793376000000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "berkadia-research",
+        "name": "Berkadia Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.berkadia.com/multifamily-reports/"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 7,
+        "fetched_articles": 7,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787068800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "arbor-research",
+        "name": "Arbor/Chandan Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://arbor.com/research/reports/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "newmark-research",
+        "name": "Newmark Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.nmrk.com/insights/market-report"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "cotality-research",
+        "name": "Cotality / CoreLogic Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.cotality.com/insights/all-insights"
+        ],
+        "status": "ok",
+        "discovered": 13,
+        "articles": 13,
+        "discovery_truncated": false,
+        "article_budget": 13,
+        "fetched_articles": 13,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787587200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "ice-research",
+        "name": "ICE Mortgage Monitor",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://mortgagetech.ice.com/resources/data-reports"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1780876800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "attom-research",
+        "name": "ATTOM Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.attomdata.com/news/category/market-trends/"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 7,
+        "fetched_articles": 7,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792681236000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "mba-research",
+        "name": "MBA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "apartmentlist-research",
+        "name": "Apartment List Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.apartmentlist.com/research"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1778482800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "costar-research",
+        "name": "CoStar / Apartments.com Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://www.apartments.com/grow/learning-center/market-trends"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 12,
+        "fetched_articles": 12,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1773057600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "sp-case-shiller",
+        "name": "S&P Cotality Case-Shiller",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://press.spglobal.com/index.php?l=50&s=2429"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 3,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787673600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "zonda-research",
+        "name": "Zonda Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://zondahome.com/new-home-market-update/"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792670400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://zondahome.com/new-home-market-update": "472389cbb3863416bd9389f5284bfbf753323d3dcb748402a562f70f854f24df"
+        },
+        "last_success": 1794865086470
+      },
+      {
+        "id": "zonda-lot-supply",
+        "name": "Zonda Lot Supply Index",
+        "research": true,
+        "required": false,
+        "checked_at": 1794865086470,
+        "attempted_urls": [
+          "https://zondahome.com/new-home-lot-supply-index-2/"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1786622400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794776400000,
+          "upper": 1794862800000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://zondahome.com/new-home-lot-supply-index-2": "1e27e1aaa61d30025009eb6adf8b8bf7d6fb75a859a0c453543d7bae47151a15"
+        },
+        "last_success": 1794865086470
       }
     ]
   }
