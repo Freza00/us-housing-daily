@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { validateWriting, routeSection } from './editorial.mjs';
 import { DAILY_WRITING_POLICY, isDailyUSStory } from './daily-edition.mjs';
-import { EDITORIAL_PROTOCOL, assertEditorialEvidence } from './editor-evidence.mjs';
+import { SUPPORTED_EDITORIAL_PROTOCOLS, assertEditorialEvidence } from './editor-evidence.mjs';
 
 export const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function periodKey(kind, window) { return kind === 'daily' ? window.date : kind === 'weekly' ? window.periodStart : window.label; }
@@ -22,7 +22,7 @@ export function validateIssue(issue, { kind = issue?.kind || 'daily', upper, per
   if (issue.editorial_schema === 2 && issue.items.some(it => typeof it.capital_focus !== 'boolean' || it.section !== routeSection(it))) throw new Error('Script section mismatch');
   const evidenceProtocol = issue.editorial_protocol !== undefined || issue.items.some(item => item.editorial_protocol !== undefined);
   if (evidenceProtocol) {
-    if (issue.editorial_protocol !== EDITORIAL_PROTOCOL || kind !== 'daily' || issue.editorial_schema !== 2 || issue.writing_policy !== DAILY_WRITING_POLICY || issue.items.some(item => item.editorial_protocol !== EDITORIAL_PROTOCOL)) throw new Error('Inconsistent editorial protocol');
+    if (!SUPPORTED_EDITORIAL_PROTOCOLS.has(issue.editorial_protocol) || kind !== 'daily' || issue.editorial_schema !== 2 || issue.writing_policy !== DAILY_WRITING_POLICY || issue.items.some(item => item.editorial_protocol !== issue.editorial_protocol)) throw new Error('Inconsistent editorial protocol');
     for (const item of issue.items) assertEditorialEvidence(item);
     if (issue.selection_target !== 20 || !Number.isInteger(issue.selection_count) || issue.selection_count !== issue.content_target || issue.selection_shortfall !== 20 - issue.selection_count) throw new Error('Invalid selection target');
   }

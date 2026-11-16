@@ -98,7 +98,9 @@ test('editor second correction changes only the remaining invalid semantic row a
   assert.throws(() => plan.validate({ decisions: [{ id: '2', keep: false }, { id: '3', geo: 'national' }] }), /Invalid editorial repair/);
   assert.throws(() => plan.validate({ decisions: [{ id: '2' }, { id: '2' }] }), /Invalid editorial repair/);
   const badGraph = structuredClone(initial); badGraph[0].duplicate_of = '4';
-  assert.equal(createDecisionRepair({ decisions: badGraph }, items, tags, validate), null);
+  const graphPlan = createDecisionRepair({ decisions: badGraph }, items, tags, validate);
+  assert.deepEqual(JSON.parse(graphPlan.user).corrections.map(row => row.id), ['1', '2', '3', '4']);
+  assert.throws(() => prepareModelDecisions({ decisions: badGraph }, items, tags), /Invalid duplicate reference/);
   const legacy = { ...modelDecision('1'), tags: ['housing', 'national'] };
   assert.throws(() => prepareModelDecisions({ decisions: [legacy] }, [items[0]], tags), /not tags/);
   const legacyPlan = createDecisionRepair({ decisions: [legacy] }, [items[0]], tags, validate => prepareModelDecisions(validate, [items[0]], tags));

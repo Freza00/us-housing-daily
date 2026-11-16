@@ -1,6 +1,6 @@
 import { geographyEvidenceMatches, validateWritingMetadata } from './editorial.mjs';
 import { LlmError } from './llm-client.mjs';
-import { EDITORIAL_PROTOCOL, assertEditorialEvidence } from './editor-evidence.mjs';
+import { assertEditorialEvidence } from './editor-evidence.mjs';
 
 export const DAILY_WRITING_POLICY = 'daily-pool-v1';
 export const DAILY_WRITING_LIMIT = 26;
@@ -23,7 +23,7 @@ function headquartersOverlap(source, match) {
 }
 
 export function isDailyUSStory(item, decision) {
-  if (decision.editorial_protocol === EDITORIAL_PROTOCOL) {
+  if (decision.editorial_protocol !== undefined) {
     assertEditorialEvidence(item, decision);
     return decision.market_scope === 'us';
   }

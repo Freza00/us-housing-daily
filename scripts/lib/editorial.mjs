@@ -1,7 +1,7 @@
 import { dedupe, scoreItem, classify, SECTIONS, detectCreSubcategory, itemId, headlineAsset } from './news-core.mjs';
 import { LlmError } from './llm-client.mjs';
 import { policyEventKeys } from './event-groups.mjs';
-import { EDITORIAL_PROTOCOL, PRIMARY_EVENTS, MARKET_ROLES, geographyEvidenceMatches, editorEvidenceReferences, bindEditorialEvidence, assertEditorialEvidence } from './editor-evidence.mjs';
+import { EDITORIAL_PROTOCOL, PRIMARY_EVENTS, MARKET_ROLES, geographyEvidenceMatches, editorEvidenceReferences, editorialEvidenceProblems, bindEditorialEvidence, assertEditorialEvidence } from './editor-evidence.mjs';
 export { geographyEvidenceMatches } from './editor-evidence.mjs';
 
 export function normalizeChinese(value) {
@@ -122,8 +122,8 @@ export const decisionSystem = `你是美国住宅、Texas、BTR/SFR、CRE与机�
 独立 BTR/SFR 用 btr-sfr 资产标签；普通公寓用 multifamily，不以来源或栏目配额代替实际资产判断。
 拒稿keep:false只需返回id、keep、duplicate_of和reason，不要为拒稿分类或打标签；没有指向保留稿的重复关系时duplicate_of为null，不让已排除稿互相指向。
 返回严格JSON：{"decisions":[{"id":"给定id","keep":true,"importance":4,"capital_focus":false,"geo_evidence":null,"asset":"housing","geo":"national","topics":[],"actor":null,"duplicate_of":null,"reason":"简短证据依据"}]}。逐维输出：asset、geo各恰好一个合法ID，topics为最多两个合法ID，actor为一个合法ID或null；不输出tags，不能把多个actor放在数组。例：BTR运营商用actor="btr-operator"，不同时加institutional；Miami使用词表内geo="florida"，不能新造miami。每个输入id恰好一次，不能编造id。duplicate_of仅在同一事件且无独立增量时指向另一输入id；被指向条目不可又指向第三条。`;
-export function candidatePrompt(items, { evidenceRefs = false } = {}) {
-  return JSON.stringify(items.map(it => ({ id: it.id, source: it.source_name, primary_research: it.is_research, late_discovery: !!it.late_discovery, title: it.title, published_at: new Date(it.published_at).toISOString(), source_region: it.region, ...(evidenceRefs ? { editorial_protocol: EDITORIAL_PROTOCOL, evidence_refs: editorEvidenceReferences(it).filter(row => row.id !== 'title') } : { evidence: it.description.slice(0, it.is_research ? 1200 : 1000) }) })));
+export function candidatePrompt(items, { evidenceRefs = false, editorialProtocol = EDITORIAL_PROTOCOL } = {}) {
+  return JSON.stringify(items.map(it => ({ id: it.id, source: it.source_name, primary_research: it.is_research, late_discovery: !!it.late_discovery, title: it.title, published_at: new Date(it.published_at).toISOString(), source_region: it.region, ...(evidenceRefs ? { editorial_protocol: it.editorial_protocol || editorialProtocol, evidence_refs: editorEvidenceReferences(it, it.editorial_protocol || editorialProtocol).filter(row => row.id !== 'title') } : { evidence: it.description.slice(0, it.is_research ? 1200 : 1000) }) })));
 }
 const sunbeltGeos = new Set(['sun-belt', 'texas', 'dfw', 'houston', 'austin', 'phoenix', 'florida', 'atlanta', 'carolinas', 'nashville', 'las-vegas']);
 const commercialAssets = new Set(['office', 'industrial', 'data-center', 'hotel', 'retail', 'self-storage', 'senior-housing', 'life-sciences', 'mixed-asset']);
@@ -135,13 +135,13 @@ export function routeSection(item) {
   if (tags.some(tag => ['housing', 'multifamily'].includes(tag)) && tags.some(tag => sunbeltGeos.has(tag))) return 'sunbelt';
   return tags.includes('multifamily') ? 'cre' : 'national';
 }
-export function editorInstructions(tagConfig, { usOnly = false, evidenceRefs = false } = {}) {
+export function editorInstructions(tagConfig, { usOnly = false, evidenceRefs = false, editorialProtocol = EDITORIAL_PROTOCOL } = {}) {
   const vocabulary = tagConfig ? Object.entries(tagConfig.dimensions).map(([dim, value]) => `${dim}（${value._desc}）：${value.tags.map(t => `${t.id}=${t.applies_to}`).join('；')}`).join('\n') : '';
   const market = usOnly ? '\n日报只收美国主事件。每条 keep=true 还必须输出 market_scope（us/non-us/unclear）及 market_evidence（主资产、市场或政策发生在美国的逐字连续原文；如无明确原句则为 null）。national 表示全美，不可用于海外或不明范围。看标的和主事件所在地，伦敦投资者收购德州资产仍属美国，伦敦资产交易不属美国。明显海外或范围不明用 keep=false。' : '';
-  if (evidenceRefs) return decisionSystem.replace('\"capital_focus\":false,', '') + '\n新日报使用 evidence-refs-v1。只输出 primary_event，不输出 capital_focus；程序从主事件派生资本属性。primary_event 合法值：' + JSON.stringify(PRIMARY_EVENTS) + '。property_transaction_financing 包含单物业及物业组合买卖、贷款、再融资和 recapitalization；property_development_leasing 包含开发、租赁、总部搬迁；fund_platform_capital 限基金／策略募资、平台公司并购或IPO；institutional_allocation 为机构整体配置或配置调查；capital_governance 为特定资本主体的资本治理风险；company_operations 为经营财报；market_research_policy 为其他研究或行业政策。每条保留稿返回 event_evidence_id，选择支持主事件的原文编号。title 引用原始标题，body-N 引用本条 evidence_refs 中的对应原句。不得编造编号或复写长引文。market_scope=us/non-us/unclear；market_evidence_id 为主题范围证据编号，无法确认时 scope=unclear、编号=null。market_role 合法值：' + JSON.stringify(MARKET_ROLES) + '。asset_location=主资产所在地；market_policy=主市场或政策范围；capital_subject=主资本主体范围；headquarters_event=总部搬迁本身；participant_background=参与者背景；unverified=无法验证。美国标的可有海外投资方；美国总部不能证明海外标的是美国。geo_evidence 是选中 market_evidence_id 原句内逐字连续的短主题地域锚，不超过100字符；资产所在地和总部搬迁必须有短锚。national 的市场／政策或资本主体可为null。不要跨句改写、拼接或修正标点。非全国geo也必须由该短锚支持。其余四维标签规则保持。\n' + vocabulary + '\n' + (tagConfig ? JSON.stringify(tagConfig.constraints) : '');
+  if (evidenceRefs) return decisionSystem.replace('\"capital_focus\":false,', '') + '\n新日报使用 ' + editorialProtocol + '。只输出 primary_event，不输出 capital_focus；程序从主事件派生资本属性。primary_event 合法值：' + JSON.stringify(PRIMARY_EVENTS) + '。property_transaction_financing 包含单物业及物业组合买卖、贷款、再融资和 recapitalization；property_development_leasing 包含开发、租赁、总部搬迁；fund_platform_capital 限基金／策略募资、平台公司并购或IPO；institutional_allocation 为机构整体配置或配置调查；capital_governance 为特定资本主体的资本治理风险；company_operations 为经营财报；market_research_policy 为其他研究或行业政策。每条保留稿返回 event_evidence_id，选择支持主事件的原文编号。title 引用原始标题，body-N 引用本条 evidence_refs 中的对应原句。不得编造编号或复写长引文。market_scope=us/non-us/unclear；market_evidence_id 为主题范围证据编号，无法确认时 scope=unclear、编号=null。market_role 合法值：' + JSON.stringify(MARKET_ROLES) + '。asset_location=主资产所在地；market_policy=主市场或政策范围；capital_subject=主资本主体范围；headquarters_event=总部搬迁本身；participant_background=参与者背景；unverified=无法验证。美国标的可有海外投资方；美国总部不能证明海外标的是美国。geo_evidence 是选中 market_evidence_id 原句内逐字连续的短主题地域锚，不超过100字符；资产所在地和总部搬迁必须有短锚。market_role="asset_location" 且 geo="national" 时仍必须给出命中原文的短锚，如 "across the U.S." 或 "U.S."；national 只有 market_policy／capital_subject 才允许 geo_evidence:null。不要跨句改写、拼接或修正标点。非全国geo也必须由该短锚支持。其余四维标签规则保持。\n' + vocabulary + '\n' + (tagConfig ? JSON.stringify(tagConfig.constraints) : '');
   return decisionSystem + '\n保留稿必须输出 capital_focus 布尔值；仅当主事件是基金募资／资本配置／平台或公司级并购／IPO／机构资本治理或监管风险时为 true。普通公司经营财报、物业买卖或再融资为 false，背景交易不改变主事件。监管风险为 true 仅限主事件直接针对可识别基金、资管／投资平台或公司资本主体的资金管理、受托责任、资本运作或治理风险。行业普适规则、监管机构自身预算／裁员／监管范围或行动收缩、按揭及消费者金融行业政策均为 false；regulator 标签或机构名称不能单独推出 true。例：CFPB 缩小全行业监管范围、关闭既有监管行动为 false；Deutsche Finance／BVK 的特定资本治理调查可为 true。\n必须提供实际资产标签；地域按新闻主题选最具体层级，排除总部、人物和 source_region（来源所在地）。非 national 地域必须附 geo_evidence，为给定标题或 evidence 中逐字连续的主题地域证据，不可只摘总部介绍。无主题地域证据用 national。\n' + vocabulary + '\n' + (tagConfig ? JSON.stringify(tagConfig.constraints) : '') + market;
 }
-function validateDecisionReferences(data, items) {
+function validateDecisionIdentities(data, items) {
   if (!Array.isArray(data?.decisions) || data.decisions.length !== items.length) throw new LlmError('Decision coverage mismatch');
   const ids = new Set(items.map(it => it.id)), received = new Set(), byId = new Map(data.decisions.map(d => [d?.id, d]));
   for (const d of data.decisions) {
@@ -149,12 +149,28 @@ function validateDecisionReferences(data, items) {
     if (!ids.has(d.id) || received.has(d.id) || typeof d.keep !== 'boolean') throw new LlmError('Invalid decision ID/fields: ' + JSON.stringify({ id: d.id, known_id: ids.has(d.id), repeated: received.has(d.id), keep: d.keep }));
     received.add(d.id);
   }
+  return byId;
+}
+
+function duplicateReferenceProblems(byId) {
+  const errors = new Map();
   // Check the untouched graph first: clearing rejected links during this pass
   // could otherwise hide a chain or cycle depending on traversal order.
-  for (const d of data.decisions) {
+  for (const d of byId.values()) {
     const target = byId.get(d.duplicate_of);
-    if (d.duplicate_of != null && (typeof d.duplicate_of !== 'string' || !ids.has(d.duplicate_of) || d.duplicate_of === d.id || target?.duplicate_of != null || (d.keep && !target?.keep))) throw new LlmError('Invalid duplicate reference: ' + JSON.stringify({ id: d.id, duplicate_of: d.duplicate_of, target_known: ids.has(d.duplicate_of), target_keep: target?.keep, target_duplicate_of: target?.duplicate_of }));
+    if (d.duplicate_of != null && (typeof d.duplicate_of !== 'string' || !target || d.duplicate_of === d.id || target.duplicate_of != null || (d.keep && !target.keep))) errors.set(d.id, {
+      error: 'Invalid duplicate reference: ' + JSON.stringify({ id: d.id, duplicate_of: d.duplicate_of, target_known: !!target, target_keep: target?.keep, target_duplicate_of: target?.duplicate_of }),
+      related_fields: ['keep', 'duplicate_of', 'reason'], unknown_target: !target,
+      hint: !target ? 'duplicate_of 指向未知编号；历史重复请设 keep:false、duplicate_of:null，不能清空引用后保留放行。duplicate_of 只能指向本批短编号。' : '修复自指、链式引用或拒稿根；合并后仍须通过完整去重图校验。'
+    });
   }
+  return errors;
+}
+
+function validateDecisionReferences(data, items) {
+  const byId = validateDecisionIdentities(data, items);
+  const errors = duplicateReferenceProblems(byId);
+  if (errors.size) throw new LlmError(errors.values().next().value.error);
   return byId;
 }
 
@@ -171,21 +187,33 @@ function decodeDecisionFields(d, tagConfig) {
   return { ...rest, tags: [asset, geo, ...topics, ...(actor === null ? [] : [actor])] };
 }
 
-export function prepareModelDecisions(data, items, tagConfig, { evidenceRefs = false } = {}) {
+export function prepareModelDecisions(data, items, tagConfig, { evidenceRefs = false, editorialProtocol = EDITORIAL_PROTOCOL } = {}) {
   validateDecisionReferences(data, items);
-  return { ...data, decisions: data.decisions.map(d => { const decoded = decodeDecisionFields(d, tagConfig); return evidenceRefs && d.keep ? bindEditorialEvidence(items.find(item => item.id === d.id), decoded) : decoded; }) };
+  return { ...data, decisions: data.decisions.map(d => {
+    const decoded = decodeDecisionFields(d, tagConfig), item = items.find(item => item.id === d.id);
+    return evidenceRefs && d.keep ? bindEditorialEvidence(item, decoded, item.editorial_protocol || editorialProtocol) : decoded;
+  }) };
 }
 
 export function createDecisionRepair(data, items, tagConfig, validate, decisionContext = {}) {
-  try { validateDecisionReferences(data, items); } catch (error) { if (error instanceof LlmError) return null; throw error; }
+  let decisions;
+  try { decisions = validateDecisionIdentities(data, items); } catch (error) { if (error instanceof LlmError) return null; throw error; }
+  const edgeErrors = duplicateReferenceProblems(decisions);
   const byId = new Map(items.map(it => [it.id, it])), errors = new Map();
+  for (const [id, error] of edgeErrors) errors.set(id, [error]);
   for (const d of data.decisions.filter(row => row.keep)) {
     if (!Number.isInteger(d.importance) || d.importance < 1 || d.importance > 5 || (!decisionContext.evidenceRefs && typeof d.capital_focus !== 'boolean')) return null;
+    const item = byId.get(d.id), protocol = item.editorial_protocol || decisionContext.editorialProtocol || EDITORIAL_PROTOCOL;
+    const problems = decisionContext.evidenceRefs ? editorialEvidenceProblems(item, d, protocol) : [];
     try {
       let decoded = decodeDecisionFields(d, tagConfig);
-      if (decisionContext.evidenceRefs) decoded = bindEditorialEvidence(byId.get(d.id), decoded);
+      if (decisionContext.evidenceRefs) decoded = bindEditorialEvidence(item, decoded, protocol);
       validateDecisions({ decisions: [{ ...decoded, duplicate_of: null }] }, [byId.get(d.id)], tagConfig, { scriptRouting: true, ...decisionContext });
-    } catch (error) { if (!(error instanceof LlmError)) throw error; errors.set(d.id, error.message); }
+    } catch (error) {
+      if (!(error instanceof LlmError)) throw error;
+      if (!problems.some(problem => problem.error === error.message)) problems.push({ error: error.message, related_fields: ['asset', 'geo', 'topics', 'actor', 'geo_evidence'] });
+    }
+    if (problems.length) errors.set(d.id, [...(errors.get(d.id) || []), ...problems]);
   }
   if (!errors.size) return null;
   const invalid = items.filter(it => errors.has(it.id));
@@ -193,13 +221,22 @@ export function createDecisionRepair(data, items, tagConfig, validate, decisionC
     ? ['primary_event', 'event_evidence_id', 'market_scope', 'market_evidence_id', 'market_role']
     : decisionContext.requireMarketScope ? ['market_scope', 'market_evidence'] : [])];
   return {
-    system: editorInstructions(tagConfig, { usOnly: decisionContext.requireMarketScope, evidenceRefs: decisionContext.evidenceRefs }) + '\n仅修复指定ID的' + repairFields.join('/') + '，返回{"decisions":[...]}。不得输出keep、importance、capital_focus、duplicate_of、reason或改写其他ID；原判断和全局去重图由程序保留。',
-    user: JSON.stringify({ items: JSON.parse(candidatePrompt(invalid, decisionContext)), corrections: data.decisions.filter(d => errors.has(d.id)).map(d => ({ id: d.id, error: errors.get(d.id), previous_fields: Object.fromEntries(repairFields.map(field => [field, d[field]])) })) }),
+    system: editorInstructions(tagConfig, { usOnly: decisionContext.requireMarketScope, evidenceRefs: decisionContext.evidenceRefs, editorialProtocol: decisionContext.editorialProtocol }) + '\n仅修复指定ID的 allowed_fields，返回{"decisions":[...]}。已通过校验的其他字段和条目由程序保留。纯语义／证据错误不得输出或修改 keep、importance、capital_focus、duplicate_of、reason；只有 duplicate_of 边错误条目可额外修改 keep、duplicate_of、reason，且必须显式返回这三个字段，其他权限不扩大。未知引用若改为 null 必须 keep:false，历史重复不能清空引用后保留放行。修改 geo_evidence 时必须确认它逐字连续落在本次返回的 market_evidence_id 原文内；修改 primary_event 时必须同步确保 market_role 满足约束：物业交易／开发租赁用 asset_location／headquarters_event，基金／资本治理用 capital_subject。合并后完整复验全局去重图和全部语义证据。',
+    user: JSON.stringify({ items: JSON.parse(candidatePrompt(invalid, decisionContext)), corrections: data.decisions.filter(d => errors.has(d.id)).map(d => {
+      const problems = errors.get(d.id), allowed = [...repairFields, ...(edgeErrors.has(d.id) ? ['keep', 'duplicate_of', 'reason'] : [])];
+      return { id: d.id, error: problems.map(problem => problem.error).join('; '), problems,
+        related_fields: [...new Set(problems.flatMap(problem => problem.related_fields))],
+        ...(decisionContext.evidenceRefs ? { matching_evidence_ids: editorEvidenceReferences(byId.get(d.id), byId.get(d.id).editorial_protocol || decisionContext.editorialProtocol || EDITORIAL_PROTOCOL).filter(row => geographyEvidenceMatches(row.text, d.geo_evidence).length).map(row => row.id) } : {}),
+        allowed_fields: allowed, previous_fields: Object.fromEntries(allowed.map(field => [field, d[field]])) };
+    }) }),
     validate(correction, context) {
       if (!Array.isArray(correction?.decisions) || correction.decisions.length !== errors.size) throw new LlmError('Editorial repair coverage mismatch');
-      const replacements = new Map(), fields = new Set(['id', ...repairFields]);
+      const replacements = new Map();
       for (const d of correction.decisions) {
+        const fields = new Set(['id', ...repairFields, ...(edgeErrors.has(d?.id) ? ['keep', 'duplicate_of', 'reason'] : [])]);
         if (!d || !errors.has(d.id) || replacements.has(d.id) || Object.keys(d).some(key => !fields.has(key))) throw new LlmError('Invalid editorial repair reference or field');
+        if (edgeErrors.has(d.id) && (typeof d.keep !== 'boolean' || !Object.hasOwn(d, 'duplicate_of') || !(d.duplicate_of === null || typeof d.duplicate_of === 'string') || typeof d.reason !== 'string' || !d.reason.trim())) throw new LlmError('Duplicate repair requires explicit keep/duplicate_of/reason: ' + d.id);
+        if (edgeErrors.get(d.id)?.unknown_target && d.keep && d.duplicate_of === null) throw new LlmError('Unknown duplicate target cannot be cleared to keep a story: ' + d.id);
         replacements.set(d.id, d);
       }
       return validate({ ...data, decisions: data.decisions.map(d => {
