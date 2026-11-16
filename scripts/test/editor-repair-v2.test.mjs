@@ -213,3 +213,20 @@ test('all checked-in schema-2 daily, weekly and monthly archives retain their or
     assert(archives.some(file => file.startsWith('monthly/')));
   }
 });
+
+test('evidence-refs-v2 keeps date and title abbreviations intact and orders market_evidence_id before geo_evidence in instructions', async () => {
+  const tags = JSON.parse(await fs.readFile(new URL('../../config/tags.json', import.meta.url), 'utf8'));
+  const instructions = editorInstructions(tags, { evidenceRefs: true });
+  assert.match(instructions, /"market_evidence_id":"body-1".*"geo_evidence":null/);
+  assert.match(instructions, /绝不输出 title、evidence_refs、capital_focus 或 tags/);
+  assert.match(instructions, /manufactured housing.*housing/);
+  assert.ok(!/"evidence_refs":\[/.test(instructions));
+
+  const row = sample('abbr-2026-11-16', Date.parse('2026-11-15T21:00:00Z'));
+  row.description = 'National rents edged up in October, RealPage reported Nov. 11. Reps. Maxwell Frost asked Brookfield to protect mobile home tenants.';
+  const v2Refs = editorEvidenceReferences(row, 'evidence-refs-v2');
+  const v1Refs = editorEvidenceReferences(row, 'evidence-refs-v1');
+  assert.equal(v2Refs[1].text, 'National rents edged up in October, RealPage reported Nov. 11.');
+  assert.equal(v2Refs[2].text, 'Reps. Maxwell Frost asked Brookfield to protect mobile home tenants.');
+  assert.equal(v1Refs[1].text, 'National rents edged up in October, RealPage reported Nov.');
+});

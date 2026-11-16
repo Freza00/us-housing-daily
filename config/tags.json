@@ -14,7 +14,7 @@
     "asset": {
       "_desc": "资产类型 — 住宅 / 多户 / 商业资产细分。每条最多 1 个。",
       "tags": [
-        { "id": "housing", "label_zh": "住宅市场", "applies_to": "national / sunbelt 的住宅价格 / 销量 / 库存 / 房贷 / 政策；通用住宅市场指标" },
+        { "id": "housing", "label_zh": "住宅市场", "applies_to": "national / sunbelt 的住宅价格 / 销量 / 库存 / 房贷 / 政策；通用住宅市场指标（含 manufactured housing / mobile home）" },
         { "id": "multifamily", "label_zh": "多户公寓", "applies_to": "公寓楼 / apartment community / multifamily REIT 财报 / 租赁市场" },
         { "id": "btr-sfr", "label_zh": "BTR / SFR", "applies_to": "build-to-rent + 单户出租；INVH / AMH / Tricon / Pretium / Progress 等" },
         { "id": "office", "label_zh": "办公", "applies_to": "Class A office / 办公楼 / HQ relocation" },

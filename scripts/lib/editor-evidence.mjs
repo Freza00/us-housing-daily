@@ -23,19 +23,21 @@ export function geographyEvidenceMatches(source, evidence) {
 
 const sentenceSegmenter = new Intl.Segmenter('en', { granularity: 'sentence' });
 const abbreviation = /\b(?:Rd|St|Ave|Blvd|Dr|Ste|Inc|Corp|Ltd|Co|L\.L\.C|U\.S|vs|No)\.$/i;
+const titleAbbreviation = /\b(?:Rep|Reps|Sen|Sens|Gov|Mr|Mrs|Ms)\.$/;
+const dateOrTitleAbbreviation = /\b(?:Jan|Feb|Mar|Apr|Aug|Sep|Sept|Oct|Nov|Dec|Rep|Reps|Sen|Sens|Gov|Mr|Mrs|Ms)\.$/;
 
 function evidenceSentences(body, protocol) {
   if (protocol === 'evidence-refs-v1') return body.split(/(?<=[.!?])\s+/).filter(text => text.trim());
   const sentences = [];
   for (const { segment } of sentenceSegmenter.segment(body)) {
-    const previous = sentences.at(-1);
-    // ICU can split addresses and company names at abbreviations. Merge only
+    const previous = sentences.at(-1)?.trimEnd();
+    // ICU can split addresses, dates, and titles at abbreviations. Merge only
     // continuation tokens, retaining real sentence starts and the original text.
     const continuation = /^(?:[a-z]|\d|[,;:]|[A-Z][\w'’-]*(?:\s+(?:[A-Z][\w'’-]*|\d+))*\s+(?:Rd\.|St\.|Ave\.|Blvd\.|Dr\.|Ste\.|Inc\.|Corp\.|Ltd\.|Co\.|L\.L\.C\.))/.test(segment.trimStart());
     const namedContinuation = previous && (
-      /\b(?:St|Dr|vs)\.$/i.test(previous.trimEnd()) && /^(?!(?:The|It|They|This|That|These|Those|A|An|Meanwhile|However)\b)[A-Z][a-z]/.test(segment.trimStart()) ||
-      /\bU\.S\.$/i.test(previous.trimEnd()) && /^(?:Department|Census|Bureau|Securities|Treasury|Bank|Federal|Supreme|Congress|Senate|House)\b/.test(segment.trimStart()));
-    if (previous && abbreviation.test(previous.trimEnd()) && (continuation || namedContinuation)) sentences[sentences.length - 1] += segment;
+      (/\b(?:St|Dr|vs)\.$/i.test(previous) || titleAbbreviation.test(previous)) && /^(?!(?:The|It|They|This|That|These|Those|A|An|Meanwhile|However)\b)[A-Z][a-z]/.test(segment.trimStart()) ||
+      /\bU\.S\.$/i.test(previous) && /^(?:Department|Census|Bureau|Securities|Treasury|Bank|Federal|Supreme|Congress|Senate|House)\b/.test(segment.trimStart()));
+    if (previous && (abbreviation.test(previous) || dateOrTitleAbbreviation.test(previous)) && (continuation || namedContinuation)) sentences[sentences.length - 1] += segment;
     else sentences.push(segment);
   }
   return sentences.map(text => text.trim()).filter(Boolean);
