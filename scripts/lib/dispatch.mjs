@@ -1,9 +1,10 @@
-import { shouldRun } from './calendar.mjs';
+import { shouldRun, canAttemptRecoverySchedule } from './calendar.mjs';
 
 export function makeHandler(kind, { now = () => new Date(), fetchImpl = fetch } = {}) {
   return async function handler(req, res) {
     if (process.env.CRON_SECRET && req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`) return res.status(401).json({ error: 'unauthorized' });
-    if (!shouldRun(kind, now())) return res.status(200).json({ ok: true, skipped: true, reason: 'Outside Beijing publishing schedule' });
+    const ts = now();
+    if (!shouldRun(kind, ts) && !canAttemptRecoverySchedule(kind, ts)) return res.status(200).json({ ok: true, skipped: true, reason: 'Outside Beijing publishing schedule' });
     if (!process.env.GH_PAT) return res.status(500).json({ error: 'GH_PAT not configured' });
     try {
       const r = await fetchImpl('https://api.github.com/repos/Freza00/us-housing-daily/dispatches', {

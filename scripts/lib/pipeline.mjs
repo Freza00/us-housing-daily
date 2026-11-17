@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { shouldRun, buildWindow, coverageGaps } from './calendar.mjs';
+import { shouldRun, buildWindow, coverageGaps, canAttemptRecoverySchedule, recoverableRevision } from './calendar.mjs';
 import { beijingDateStr } from './dates.mjs';
 import { createCollector } from './sources.mjs';
 import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint, uniqueSourceHealth } from './collection-checkpoint.mjs';
@@ -14,7 +14,7 @@ import { createModelBatch } from './model-references.mjs';
 import { EDITORIAL_PROTOCOL, freezeEditorEvidence } from './editor-evidence.mjs';
 import { editorialCoverage, coverageDates } from './editorial-coverage.mjs';
 import { validArchive, periodKey, validateIssue, assertExpectedIssue } from './issue-contract.mjs';
-import { openIssueStore, ruleDigest, revisionSeed, readDerivedJson } from './issue-store.mjs';
+import { openIssueStore, ruleDigest, revisionSeed, readDerivedJson, loadWindowSnapshots } from './issue-store.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 async function readJson(file, fallback) { try { return JSON.parse(await fs.readFile(file, 'utf8')); } catch (e) { if (e.code === 'ENOENT') return fallback; throw e; } }
@@ -24,8 +24,9 @@ const fingerprint = value => createHash('sha256').update(JSON.stringify(value)).
 
 export async function runPipeline(kind = 'daily', options = {}) {
   const env = options.env || process.env, now = options.now || new Date(env.PUBLISH_NOW || Date.now());
-  const calendarForce = env.FORCE_RUN === '1', force = calendarForce && !env.ISSUE_REVISION, replay = !!env.REPLAY_SNAPSHOT, dry = env.LLM_SKIP === '1';
-  if (!shouldRun(kind, now, { force: calendarForce }) && !replay) return { skipped: true, reason: 'Outside Beijing working-day publishing schedule' };
+  const calendarForce = env.FORCE_RUN === '1', replay = !!env.REPLAY_SNAPSHOT, dry = env.LLM_SKIP === '1';
+  const scheduled = shouldRun(kind, now, { force: calendarForce });
+  if (!scheduled && !replay && (calendarForce || !canAttemptRecoverySchedule(kind, now))) return { skipped: true, reason: 'Outside Beijing working-day publishing schedule' };
   const root = options.root || ROOT, dataDir = env.NEWS_DATA_DIR || path.join(root, 'data'), stateDir = env.NEWS_STATE_DIR || path.join(root, 'state');
   if ((replay || dry || env.PUBLISH_NOW) && ((!env.NEWS_DATA_DIR && !env.DIGEST_OUT_DIR) || !env.NEWS_STATE_DIR)) throw new Error('Replay, dry run and historical publish times require isolated output and state directories');
   const outDir = env.DIGEST_OUT_DIR || (kind === 'daily' ? dataDir : path.join(dataDir, kind));
@@ -46,13 +47,30 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const label = kind === 'daily' ? window.date : kind === 'weekly' ? window.periodStart : window.label;
   assertExpectedIssue(kind, window, env);
   const existing = await readJson(path.join(outDir, label + '.json'), null);
-  if (!force && !replay && (!env.ISSUE_REVISION || Number(env.ISSUE_REVISION) <= (existing?.edition?.revision || 0)) && validArchive(existing, { kind, upper: window.upper, period: label })) return { skipped: true, reason: 'Validated issue already exists; delivery can be verified without generation', delivery_pending: true, kind, period: label };
+  const isValidExisting = validArchive(existing, { kind, upper: window.upper, period: label });
+  let requestedRevision = env.ISSUE_REVISION || undefined;
+  let recoveryFromRevision = null;
+  if (!calendarForce && !replay && isValidExisting) {
+    const currentSnapshots = await loadWindowSnapshots(stateDir, window);
+    const recoverable = recoverableRevision({ kind, saved: existing, snapshots: currentSnapshots, window, now });
+    if (!scheduled) {
+      if (!recoverable || (requestedRevision && Number(requestedRevision) !== recoverable)) return { skipped: true, reason: 'Outside Beijing working-day publishing schedule' };
+      requestedRevision ||= String(recoverable);
+    } else if (!requestedRevision && recoverable) {
+      requestedRevision = String(recoverable);
+    }
+    if (recoverable && Number(requestedRevision) === recoverable) recoveryFromRevision = existing.edition.revision;
+  } else if (!scheduled && !replay) {
+    return { skipped: true, reason: 'Outside Beijing working-day publishing schedule' };
+  }
+  const force = calendarForce && !requestedRevision;
+  if (!force && !replay && (!requestedRevision || Number(requestedRevision) <= (existing?.edition?.revision || 0)) && isValidExisting) return { skipped: true, reason: 'Validated issue already exists; delivery can be verified without generation', delivery_pending: true, kind, period: label };
   const sources = JSON.parse(await fs.readFile(path.join(root, 'config/sources.json'), 'utf8')).sources;
   const tagConfig = await readJson(path.join(root, 'config/tags.json'), null);
   const until = env.PIPELINE_UNTIL;
   if (until && !['prepared', 'editor', 'ready'].includes(until)) throw new Error('Invalid pipeline stage');
   const model = env.LLM_MODEL || 'gpt-6.1-sol';
-  const store = !dry && await openIssueStore(stateDir, { kind, period: periodKey(kind, window), upper: window.upper, revision: env.ISSUE_REVISION || undefined, force, publishedRevision: existing?.edition?.revision || 0, allocationSeed: force ? revisionSeed(env) : 0, rules: fingerprint([await ruleDigest(), sources, tagConfig]), model });
+  const store = !dry && await openIssueStore(stateDir, { kind, period: periodKey(kind, window), upper: window.upper, revision: requestedRevision, force, publishedRevision: existing?.edition?.revision || 0, allocationSeed: force ? revisionSeed(env) : 0, rules: fingerprint([await ruleDigest(), sources, tagConfig]), model });
   if (store && !force && env.ISSUE_BUDGET_UNKNOWN) store.manifest.budget_unknown = [...new Set([...(store.manifest.budget_unknown || []), ...env.ISSUE_BUDGET_UNKNOWN.split(',')])];
   const boundary = async stage => {
     if (store) await options.onCheckpoint?.(stage, store);
@@ -360,8 +378,12 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const editorialAudit = editorialCoverage({ candidates, decisions, selected: written.items, health, sources, tagConfig, candidatePreparation: snapshot.candidate_preparation, date: beijingDateStr(now.getTime()), history });
   const gaps = coverageGaps(snapshots, window);
   const requiredProblems = health.filter(s => s.required && (s.status !== 'ok' || s.undated === s.articles));
-  const sectionProblems = Object.values(editorialAudit.sections).some(section => section.source_failures.length || section.evidence_gap || section.qualification_gap);
-  const status = dry ? 'dry_run' : gaps.length || requiredProblems.length || sectionProblems ? 'degraded' : 'complete';
+  const coverageReasons = dry ? [] : [
+    ...(gaps.length ? ['snapshot_gap'] : []),
+    ...((requiredProblems.length || Object.values(editorialAudit.sections).some(section => section.source_failures.length)) ? ['required_source'] : []),
+    ...(Object.values(editorialAudit.sections).some(section => section.selected === 0 && (section.evidence_gap || section.qualification_gap)) ? ['section_lead_gap'] : []),
+  ];
+  const status = dry ? 'dry_run' : coverageReasons.length ? 'degraded' : 'complete';
   const sourceCounts = Object.create(null);
   for (const item of written.items) sourceCounts[item.source_family] = (sourceCounts[item.source_family] || 0) + 1;
   const publishedIds = new Set(written.items.map(item => item.id));
@@ -369,7 +391,8 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const payload = { schema_version: 2, ...(!dry ? { editorial_schema: 2 } : {}), kind, date: kind === 'daily' ? label : undefined, publish_date: beijingDateStr(now.getTime()), generated_at: (env.PUBLISH_NOW || options.now) ? now.getTime() : Date.now(),
     period_start: window.periodStart, period_end: window.periodEnd, period_label: window.label, window,
     ...(dailyPool ? { editorial_protocol: snapshot.editorial_protocol, selection_target: 20, selection_count: primary.length, selection_shortfall: 20 - primary.length, writing_policy: DAILY_WRITING_POLICY, content_target: writingPlan.planned, summary_status: publicWritten.executive_summary ? 'available' : 'unavailable' } : {}),
-    publication_status: writingPlan?.shortfall ? 'degraded' : status, coverage_status: status,
+    publication_status: writingPlan?.shortfall ? 'degraded' : status, coverage_status: status, coverage_reasons: coverageReasons,
+    ...(recoveryFromRevision ? { recovered_from_revision: recoveryFromRevision } : {}),
     content_status: dry ? 'dry_run' : writingPlan?.shortfall ? 'partial' : 'passed', delivery_state: 'ready', edition: store?.identity,
     sections: SECTIONS, ...publicWritten, sources_attempted: health.length, sources_ok: health.filter(h => h.status === 'ok').length,
     errors: health.filter(h => h.status !== 'ok').map(h => ({ source: h.name, error: h.error || h.status })),

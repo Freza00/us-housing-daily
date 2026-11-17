@@ -70,3 +70,56 @@ export function coverageGaps(snapshots, window) {
   if (cursor < window.upper) gaps.push({ lower: cursor, upper: window.upper });
   return gaps;
 }
+
+export function withinRecoveryWindow(kind, now, window) {
+  if (kind !== 'weekly' && kind !== 'monthly') return false;
+  if (!Number.isFinite(now?.getTime?.()) || !window || !Number.isFinite(window.upper)) return false;
+  const day = beijingWeekday(now);
+  if (day === 0 || day === 6) return false;
+  if (now.getTime() < window.upper) return false;
+  const bjNow = new Date(now.getTime() + 8 * 3600000), minutes = bjNow.getUTCHours() * 60 + bjNow.getUTCMinutes();
+  if (kind === 'weekly') {
+    if (day === 1 && minutes < 840) return false;
+    return now.getTime() <= window.upper + 48 * 3600000;
+  }
+  const [year, month, dom] = beijingDateStr(now.getTime()).split('-').map(Number);
+  const wd1 = new Date(Date.UTC(year, month - 1, 1)).getUTCDay();
+  const firstWeekday = wd1 === 6 ? 3 : wd1 === 0 ? 2 : 1;
+  if (dom < firstWeekday || (dom === firstWeekday && minutes < 900)) return false;
+  let workingDays = 0;
+  for (let d = 1; d <= dom; d++) {
+    const wd = new Date(Date.UTC(year, month - 1, d)).getUTCDay();
+    if (wd !== 0 && wd !== 6) workingDays++;
+  }
+  return workingDays <= 3;
+}
+
+export function canAttemptRecoverySchedule(kind, now) {
+  if (kind !== 'weekly' && kind !== 'monthly') return false;
+  if (!Number.isFinite(now?.getTime?.())) throw new Error('Invalid publish time');
+  const day = beijingWeekday(now);
+  if (day === 0 || day === 6) return false;
+  const bjNow = new Date(now.getTime() + 8 * 3600000), minutes = bjNow.getUTCHours() * 60 + bjNow.getUTCMinutes();
+  if (kind === 'weekly' && day === 1 && minutes < 840) return false;
+  if (kind === 'monthly') {
+    const [year, month, dom] = beijingDateStr(now.getTime()).split('-').map(Number);
+    const wd1 = new Date(Date.UTC(year, month - 1, 1)).getUTCDay();
+    const firstWeekday = wd1 === 6 ? 3 : wd1 === 0 ? 2 : 1;
+    if (dom < firstWeekday || (dom === firstWeekday && minutes < 900)) return false;
+  }
+  return withinRecoveryWindow(kind, now, buildWindow(kind, now));
+}
+
+export function recoverableRevision({ kind, saved, snapshots = [], window, now }) {
+  if (!withinRecoveryWindow(kind, now, window)) return null;
+  if (!saved || saved.kind !== kind || !Array.isArray(saved.items) || !saved.items.length) return null;
+  const period = kind === 'weekly' ? window.periodStart : window.label;
+  const savedPeriod = kind === 'weekly' ? saved.period_start : saved.period_label;
+  if (savedPeriod !== period || saved.window?.upper !== window.upper) return null;
+  if (saved.edition?.revision !== 1) return null;
+  if ((saved.coverage_status ?? saved.publication_status) !== 'degraded') return null;
+  const archivedGaps = saved._diagnostics?.coverage_gaps;
+  if (!Array.isArray(archivedGaps) || archivedGaps.length === 0) return null;
+  if (coverageGaps(snapshots, window).length > 0) return null;
+  return 2;
+}

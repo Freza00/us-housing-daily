@@ -3,6 +3,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { digest } from './issue-contract.mjs';
+import { mergeCheckpoints } from './collection-checkpoint.mjs';
 
 const PHASES = new Set(['prepared', 'editor', 'cards', 'metadata', 'ready']);
 export async function readJson(file, fallback = null) {
@@ -10,6 +11,18 @@ export async function readJson(file, fallback = null) {
 }
 // Only reconstructible published projections may tolerate JSON syntax damage.
 export async function readDerivedJson(file, fallback = null) { try { return await readJson(file, fallback); } catch (error) { if (error instanceof SyntaxError) return fallback; throw error; } }
+export async function loadWindowSnapshots(stateDir, window) {
+  const snapshots = [];
+  const checkpoint = mergeCheckpoints(await readJson(path.join(stateDir, 'collection-checkpoint.json'), {}), await readDerivedJson(path.join(stateDir, 'collection-cache.json'), {}));
+  if (checkpoint.pending?.window?.lower < window.upper && checkpoint.pending.window.upper > window.lower) snapshots.push(checkpoint.pending);
+  const snapshotDir = path.join(stateDir, 'snapshots');
+  for (const name of await fs.readdir(snapshotDir).catch(e => e.code === 'ENOENT' ? [] : Promise.reject(e))) {
+    if (!name.endsWith('.json')) continue;
+    const saved = await readJson(path.join(snapshotDir, name), null);
+    if (saved?.window?.lower < window.upper && saved.window.upper > window.lower) snapshots.push(saved);
+  }
+  return snapshots;
+}
 export function revisionSeed(env = process.env) {
   if (!env.GITHUB_RUN_ID && !env.GITHUB_RUN_ATTEMPT) return 0;
   const run = Number(env.GITHUB_RUN_ID), attempt = Number(env.GITHUB_RUN_ATTEMPT), seed = run * 1000 + attempt;

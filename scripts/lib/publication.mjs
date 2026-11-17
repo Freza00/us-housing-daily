@@ -3,9 +3,9 @@ import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { validateIssue, digest, periodKey } from './issue-contract.mjs';
-import { readJson, readDerivedJson, writeJson } from './issue-store.mjs';
+import { readJson, readDerivedJson, writeJson, loadWindowSnapshots } from './issue-store.mjs';
 import { materializeIssue } from './pipeline.mjs';
-import { shouldRun, buildWindow } from './calendar.mjs';
+import { shouldRun, buildWindow, canAttemptRecoverySchedule, recoverableRevision } from './calendar.mjs';
 import { waitForDelivery, triggerRedeploy } from './delivery.mjs';
 import { coverageDates } from './editorial-coverage.mjs';
 import { assertFreshDailyReports } from './editorial.mjs';
@@ -53,7 +53,11 @@ async function projectionMatches(root, issue) {
 
 export async function pushCandidate(bundle, { root, now = new Date(), force = false, git = gitCommand, retries = 1, onBeforePush } = {}) {
   const issue = validateIssue(bundle.payload), kind = issue.kind, label = periodKey(kind, issue.window);
-  if (!shouldRun(kind, now, { force })) throw new Error('Publishing is outside the current calendar guard');
+  let recoveryPush = false;
+  if (!shouldRun(kind, now, { force })) {
+    if (force || issue.edition?.revision !== 2 || !canAttemptRecoverySchedule(kind, now)) throw new Error('Publishing is outside the current calendar guard');
+    recoveryPush = true;
+  }
   const currentWindow = buildWindow(kind, now);
   if (currentWindow.upper !== issue.window.upper || periodKey(kind, currentWindow) !== label) throw new Error('Candidate no longer matches current publication period');
   const sourceRemote = await git(root, ['remote', 'get-url', 'origin']);
@@ -78,6 +82,12 @@ export async function pushCandidate(bundle, { root, now = new Date(), force = fa
       }
       const archiveMatches = remoteIssue && digest(remoteIssue) === digest(issue);
       if (archiveMatches && await projectionMatches(checkout, issue)) return { commit: await git(checkout, ['rev-parse', 'HEAD']), already_pushed: true };
+      if (recoveryPush && !archiveMatches) {
+        const snapshots = await loadWindowSnapshots(path.join(checkout, 'state'), currentWindow);
+        if (recoverableRevision({ kind, saved: remoteIssue, snapshots, window: currentWindow, now }) !== 2) {
+          throw new Error('Publishing is outside the current calendar guard');
+        }
+      }
       if (!archiveMatches && (!bundle.base || (remoteIssue ? digest(remoteIssue) : null) !== bundle.base.archive_sha256)) throw new Error('Published issue changed while candidate was prepared');
       if (!archiveMatches && bundle.base.producer_commit) {
         const changed = await git(checkout, ['diff', '--name-only', bundle.base.producer_commit + '..HEAD', '--', 'scripts/lib', 'config']);

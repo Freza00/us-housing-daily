@@ -81,8 +81,8 @@ test('daily fallback schedule includes Beijing 09:17 and keeps the earlier slots
 
 for (const [kind, crons] of [
   ['daily', ['17 21,22,23 * * 0-4', '17 0,1 * * 1-5']],
-  ['weekly', ['7,27,47 6 * * 1']],
-  ['monthly', ['7,27,47 7 1-3 * *']]
+  ['weekly', ['7,27,47 6 * * 1', '17 10 * * 1', '17 2 * * 2-3', '17 6 * * 2']],
+  ['monthly', ['7,27,47 7 1-3 * *', '17 2 1-5 * *', '17 7 4-5 * *']]
 ]) {
   const readWorkflow = () => fs.readFile(new URL(`../../.github/workflows/${kind}.yml`, import.meta.url), 'utf8');
   const step = (workflow, name) => {

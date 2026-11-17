@@ -969,16 +969,53 @@ function renderBrief(data) {
   const note=$('coverageNote');
   if (note) {
     const messages = [];
+    const rev = data.edition?.revision || 1;
+    const recoveredFrom = data.recovered_from_revision ?? data._diagnostics?.recovered_from_revision;
+    if (recoveredFrom && rev >= 2 && (data.kind === 'weekly' || data.kind === 'monthly')) {
+      messages.push(currentLang === 'zh'
+        ? (data.coverage_status ?? data.publication_status) === 'complete'
+          ? `第 ${rev} 版：已补齐此前缺失的历史快照并完成重算。`
+          : `第 ${rev} 版：已按补全后的材料重新生成。`
+        : (data.coverage_status ?? data.publication_status) === 'complete'
+          ? `Edition ${rev}: updated after previously missing snapshot coverage was restored.`
+          : `Edition ${rev}: regenerated with updated historical inputs.`);
+    }
     if (data.selection_shortfall > 0) messages.push(currentLang === 'zh'
       ? `本期选出 ${data.selection_count}／${data.selection_target} 条；写稿完成 ${data.items.length}／${data.content_target} 条。`
       : `Selected ${data.selection_count} of ${data.selection_target} target stories; writing completed for ${data.items.length} of ${data.content_target} planned stories.`);
     if (data.content_status === 'partial') messages.push(currentLang === 'zh'
       ? `本期刊出 ${data.items.length}／${data.content_target} 条，部分入选稿暂缓刊出。`
       : `This issue includes ${data.items.length} of ${data.content_target} planned stories. Some stories were held back.`);
-    if ((data.coverage_status ?? data.publication_status) === 'degraded') messages.push(currentLang === 'zh'
-      ? '本期部分研究来源或历史材料暂未取全，补齐后可更新。'
-      : 'Some research sources or historical inputs are incomplete; this issue can be updated.');
-    note.textContent = messages.join(' ');
+    if ((data.coverage_status ?? data.publication_status) === 'degraded') {
+      const reasons = Array.isArray(data.coverage_reasons) ? data.coverage_reasons : null;
+      const fallback = currentLang === 'zh'
+        ? '本期部分研究来源、栏目线索正文或历史材料存在缺口，已按已采材料定稿，详情见来源覆盖记录。'
+        : 'Some research sources, section lead bodies, or historical inputs had gaps in this edition; see coverage details below.';
+      if (reasons) {
+        let added = 0;
+        if (reasons.includes('snapshot_gap')) {
+          const canAutoRevise = (data.kind === 'weekly' || data.kind === 'monthly') && rev === 1;
+          messages.push(currentLang === 'zh'
+            ? canAutoRevise
+              ? '本期所覆盖周期内的部分历史采集快照暂缺；若在补齐窗口内补全快照，将自动生成第 2 版。'
+              : '本期所覆盖周期内的部分历史采集快照存在缺口，已按当前已保留材料定稿，详情见来源与行业覆盖。'
+            : canAutoRevise
+              ? 'Some historical capture snapshots in this period are missing; if restored within the recovery window, Edition 2 will be generated automatically.'
+              : 'Historical capture snapshots in this period have gaps; finalized from retained inputs (see Source and sector coverage).');
+          added++;
+        }
+        if (reasons.includes('required_source') || reasons.includes('section_lead_gap')) {
+          messages.push(currentLang === 'zh'
+            ? '本期存在必需研究来源故障或重要栏目候选正文／时效缺口，详情见来源与行业覆盖。'
+            : 'Required research sources failed or key sections lacked verified leads in this issue; see Source and sector coverage.');
+          added++;
+        }
+        if (!added) messages.push(fallback);
+      } else {
+        messages.push(fallback);
+      }
+    }
+    note.textContent = messages.join(currentLang === 'zh' ? '' : ' ');
     note.hidden = !messages.length;
   }
   const research=(data._diagnostics?.source_health||[]).filter(s=>s.research);const details=$('researchCoverage'), list=$('researchStatus');
