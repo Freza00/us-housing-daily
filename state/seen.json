@@ -5547,69 +5547,6 @@
     "shown_at": 1794519658366
   },
   {
-    "id": "81a61580476b43a1",
-    "link": "https://eyeonhousing.org/2026/11/single-family-permitting-weakens-while-multifamily-activity-remains-stronger/",
-    "title": "Single-Family Permitting Weakens While Multifamily Activity Remains Stronger",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "10116a2c01af5c0b",
-    "link": "https://www.bisnow.com/news/national/data-center-development/developers-are-trying-to-lease-public-lands-to-build-data-centers",
-    "title": "Where Developers Are Trying To Lease Public Lands To Build Data Centers",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "cd9c8fb93d4c934a",
-    "link": "https://www.realtor.com/research/mortgage-status-acs-2026/",
-    "title": "Who Owns Outright? Mortgage Status, Lock-In and Senior Homeownership",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "b639aa4177adca45",
-    "link": "https://www.housingwire.com/articles/land-buildings-invitation-homes-activist-letter/",
-    "title": "Hedge fund pressures Invitation Homes to speed up home sales",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "a7fa18d8aca604c2",
-    "link": "https://natlawreview.com/article/us-treasurys-proposed-regulations-concerning-title-x-21st-century-road-housing-act",
-    "title": "U.S. Treasury’s Proposed Regulations Concerning Title X Of The 21st Century ROAD To Housing Act: What Real Estate Developers, Investors and Lenders Need to Know – National Law Review",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "c11cb897025bd204",
-    "link": "https://houstonagentmagazine.com/2026/11/16/har-among-defendants-new-compass-litigation/?utm_source=rss&utm_medium=rss&utm_campaign=har-among-defendants-new-compass-litigation",
-    "title": "HAR named among defendants in new Compass litigation",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "81ea513f67613ec4",
-    "link": "https://rebusinessonline.com/stream-realty-partners-brokers-sale-of-2-7-msf-industrial-park-in-northwest-houston/",
-    "title": "Stream Realty Partners Brokers Sale of 2.7 MSF Industrial Park in Northwest Houston",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "a5fa87e31861ce50",
-    "link": "https://www.multifamilydive.com/news/affordable-apartment-supportive-housing-multifamily-transaction/874680/",
-    "title": "Why EAH Housing moved into Oregon to buy 1K affordable units",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "907f9640656ff55d",
-    "link": "https://www.multifamilydive.com/news/realpage-new-york-lawsuit-algorithmic-rent-ban/874678/",
-    "title": "Realpage’s New York lawsuit tests the limits of algorithmic rent-pricing bans",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
     "id": "e75001b411953d46",
     "link": "https://www.realpage.com/analytics/economy-express-episode-75/",
     "title": "Realpage Economy Express Episode 75",
@@ -5748,5 +5685,138 @@
     "title": "How Training Veterans in Skilled Trades Could Speed Up Homebuilding and Ease Housing Costs",
     "shown_date": "2026-11-16",
     "shown_at": 1794791100000
+  },
+  {
+    "id": "81a61580476b43a1",
+    "link": "https://eyeonhousing.org/2026/11/single-family-permitting-weakens-while-multifamily-activity-remains-stronger/",
+    "title": "Single-Family Permitting Weakens While Multifamily Activity Remains Stronger",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "b639aa4177adca45",
+    "link": "https://www.housingwire.com/articles/land-buildings-invitation-homes-activist-letter/",
+    "title": "Hedge fund pressures Invitation Homes to speed up home sales",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "10116a2c01af5c0b",
+    "link": "https://www.bisnow.com/news/national/data-center-development/developers-are-trying-to-lease-public-lands-to-build-data-centers",
+    "title": "Where Developers Are Trying To Lease Public Lands To Build Data Centers",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "32dd133521a105c3",
+    "link": "https://www.bisnow.com/news/national/hotel/service-properties-trust-rejects-2b-cash-bid",
+    "title": "Service Properties Trust Rejects $2B Cash Bid, Claims Hotel Portfolio Could Be Worth Double",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "cd9c8fb93d4c934a",
+    "link": "https://www.realtor.com/research/mortgage-status-acs-2026/",
+    "title": "Who Owns Outright? Mortgage Status, Lock-In and Senior Homeownership",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "a15f2e35d2e6e391",
+    "link": "https://www.bisnow.com/news/national/data-center/blackstone-s-data-center-reit-makes-first-investment-with-5b-deal-with-aws",
+    "title": "Blackstone's Data Center REIT Makes First Investment With $5B AWS Deal",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "9733accc08e3a7f5",
+    "link": "https://www.housingwire.com/articles/lenders-pull-but-dont-price-with-new-credit-score-model/",
+    "title": "Lenders increasingly pull with new credit score model, but few use it for pricing",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "3c170f3972120499",
+    "link": "https://www.nationalmortgagenews.com/news/fed-warns-of-financial-risks-from-ai-driven-market-optimism",
+    "title": "Fed warns of financial risks from AI-driven market optimism",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "367ec9f6fdcfd1dd",
+    "link": "https://rebusinessonline.com/ipa-arranges-40-3m-in-financing-for-north-san-antonio-apartment-community/",
+    "title": "IPA Arranges $40.3M in Financing for North San Antonio Apartment Community",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "9b7f064758714ff3",
+    "link": "https://rentalhomecouncil.org/wp-content/uploads/2026/11/Phoenix-Survey-Release-v3-2026.11.13.pdf",
+    "title": "Nearly Two-Thirds of Phoenix-Area Residents Have Considered Moving Because of Housing Costs, New Survey Finds",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "2af8794702cc9947",
+    "link": "https://www.realtor.com/advice/finance/america-trillion-dollar-credit-card-debt-homeownership-money-monday/",
+    "title": "America’s Trillion-Dollar Credit Card Debt Threatens To Lock Millions Out of the Housing Market",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "81ea513f67613ec4",
+    "link": "https://rebusinessonline.com/stream-realty-partners-brokers-sale-of-2-7-msf-industrial-park-in-northwest-houston/",
+    "title": "Stream Realty Partners Brokers Sale of 2.7 MSF Industrial Park in Northwest Houston",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "aa6d7357b1376bd9",
+    "link": "https://www.housingwire.com/articles/tuccori-commission-settlements-delay/",
+    "title": "The Tuccori commission settlements were supposed to wrap up, then the judge asked for more",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "9bd93c6b46f14688",
+    "link": "https://rebusinessonline.com/shorenstein-acquires-300000-sf-office-tower-in-north-dallas/",
+    "title": "Shorenstein Acquires 300,000 SF Office Tower in North Dallas",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "4fefcc232a7d4357",
+    "link": "https://www.nationalmortgagenews.com/news/why-analysts-have-a-less-rosy-outlook-for-banks-in-2027",
+    "title": "Why analysts have a less rosy outlook for banks in 2027",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "7e0f2883caed0eee",
+    "link": "https://www.multifamilydive.com/news/boston-inclusionary-zoning-housing-development-wu/874792/",
+    "title": "Amid ‘economic headwinds,’ Boston looks to ease its inclusionary zoning policy",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "724b1414cdd580d0",
+    "link": "https://www.connectcre.com/stories/waterfall-originates-loan-for-disneyland-lodging-property/",
+    "title": "Waterfall Originates Loan for Disneyland Lodging Property",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "907f9640656ff55d",
+    "link": "https://www.multifamilydive.com/news/realpage-new-york-lawsuit-algorithmic-rent-ban/874678/",
+    "title": "Realpage’s New York lawsuit tests the limits of algorithmic rent-pricing bans",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
+  },
+  {
+    "id": "6af5939bef315219",
+    "link": "https://www.dmagazine.com/sponsored/2026/11/craig-hall-is-betting-on-the-future-of-office-his-next-chapter-at-hall-park-is-taking-shape/",
+    "title": "Craig Hall Is Betting on the Future of Office. His Next Chapter at HALL Park Is Taking Shape.",
+    "shown_date": "2026-11-17",
+    "shown_at": 1794905107605
   }
 ]
