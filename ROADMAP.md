@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-2026-11-17 09:36，当前工作区已合入 origin/main 的 `86daed5`，2026-11-17 日报 r1 已发布，归档为 20 条；不能再把当前日报记为停留在 11 月 13 日或等待补发 16 日。本轮补齐三类工作流手动备用开关及自动故障切换，保持主 Secrets、阶段 3 次、660000 ms、reserved_ms 和 ruleDigest 安全边界；本地 `npm test` 408／408 与 `git diff --check` 通过，改动待推送，周报及真实主备全链路待验收。本机无模型凭据，未发起真实模型探针、远端工作流或线上核验。此前 16 日网关 522 是历史故障证据，见 [状态记录](docs/validation/2026-11-16-editor-repair-status.md)。
+2026-11-17 13:40，主备 LLM 故障自动粘性切换与三类工作流单次手动开关（`use_backup=true`）已以 `bcf5cf4` 同步上线，Vercel 部署 `success`（`4FymeLKPXzMF2gWg5LBaxJV6b8xT`）；2026-11-17 日报已于晨间主通道自动发布（run `43961862058` / `86daed5`，20 条，`evidence-refs-v2`），2026-11-09 周报已通过 `weekly.yml -f force=true -f use_backup=true` 走 OpenAI 备用端点一次通过（run `44007345875` / `630cbdf`，20 条、3 条主线），CI `408 / 408`、线上 11 路 SHA-256 及 Playwright 桌面/移动端双语渲染全部通过。真实定时调度遇主通道阻塞自动切换、月报自动首跑及连续 SLA 仍待后续运行观察。[上线验收](docs/validation/2026-11-17-backup-failover-release.md)。
 
 2026-11-12 16:20，编辑证据与覆盖机制以 683091f 同步开源并上线，Vercel success；主工作区、发布副本及 Node.js 22 CI 各 381 项通过，17 路生产资源和 39 个语言状态通过。新协议冻结前集中修字段，按主事件派生资本属性，区分选稿／写稿及正文／日期缺口。今天原 16 条、周月报和原状态保持；13 号新协议真实首跑待观察。[生产验收](docs/validation/2026-11-12-editorial-mechanism-release.md)。
 
@@ -33,7 +33,7 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 ## 进行中
 
-- 2026-11-17 09:36 手动 `use_backup=true` 与自动备用切换改动待推送；周报恢复、生产主备故障切换与 editor／writer／发布／线上内容全链路待验收，月报自动首跑及连续 SLA 仍待观察。本轮不提交或推送，不触发远端运行。2026-11-17 日报已随 `86daed5` 发布，16 日补刊不在本轮范围。
+- 2026-11-17 13:40 备用 LLM 手动开关（`use_backup=true`）与主通道自动粘性切换已上线，周报（`2026-11-09`）经手动备用恢复交付，2026-11-17 日报（`86daed5`）经主通道自动出刊；真实定时任务遇主通道阻塞自动切换备用的生产触发、月报自动首跑及连续 SLA 仍待后续观察（手动备用恢复不计为全自动准时成功）。[上线验收](docs/validation/2026-11-17-backup-failover-release.md)。
 
 - 6 号补发与通用地域校验修复已提交、同步开源并上线；后续自动出刊和上游流稳定性待观察。未增加模型额度或通知，人工恢复不计为自动准时成功。[生产记录](docs/validation/2026-11-06-geography-release.md)。
 
@@ -49,9 +49,9 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 ## 最近完成
 
-- 2026-11-17 09:37 完成主通道故障后同实例粘性切备用、validation 原通道局修、双密钥完整脱敏及三类工作流自动备用环境；保留默认关闭的手动 `use_backup=true`，不修改主 Secrets、3 次阶段额度、660000 ms、reserved_ms 或 ruleDigest 安全边界。仅本地修改，待推送及真实全链路验收。[恢复规则](docs/RECOVERY.md)。
+- 2026-11-17 13:40 以 `bcf5cf4` 上线主通道故障自动粘性切换备用、切换前免污染 `invalidJson` 保护、双密钥完整脱敏及三类工作流单次手动 `use_backup=true` 开关，保持主 Secrets、3 次阶段额度、`660000 ms`、`reserved_ms` 与 `ruleDigest` 边界；并执行 `weekly.yml -f force=true -f use_backup=true`（run `44007345875` / `630cbdf`）一次性发布 `2026-11-09` 周报（20 条、3 条主线），CI 与 Vercel 部署均已通过。[上线验收](docs/validation/2026-11-17-backup-failover-release.md)。
 
-- 2026-11-17 09:36 已合入 `86daed5` 的 2026-11-17 日报 r1，仓库归档 20 条；本轮未修改正式数据，未新增生产发布或线上核验。
+- 2026-11-17 05:42 晨间自动日报（run `43961862058` / `86daed5`）通过原主通道 `aineapi.com` 自动生成并上线 `2026-11-17` 日报 r1（20 条、`evidence-refs-v2`、`editor` 2 次 + `writer` 1 次），验证 `c9ed058` 机制修复生效。[上线验收](docs/validation/2026-11-17-backup-failover-release.md)。
 
 - 2026-11-16 11:47 以 `3b7346a` 与 `c9ed058` 提交、同步开源并部署历史台账 ID 投影隔离、去重边与语义字段联合局修、`evidence-refs-v2` 缩写保护拆句及 `evidenceRefs` 专用字段顺序示例／`manufactured housing` 标签词表指引；本地与 CI `389／389`、Vercel 代码部署均已通过，今日线上出刊待上游 `aineapi.com` 恢复。[状态记录](docs/validation/2026-11-16-editor-repair-status.md)。
 
@@ -92,7 +92,7 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 ## 最近验证
 
-- 2026-11-17 09:37 本地 Node.js v25.8.0 的 `npm test` 408／408、定向 50／50 与 `git diff --check` 通过。新增 10 项模型回归并扩充三类工作流断言，覆盖 522／额度故障粘性切换、writer 复用、validation 不切换、双密钥重叠脱敏、永久错误快退、跨运行 3 次上限及 deadline／退避预算。无模型凭据，未运行真实小额探针；周报、生产自动切换及完整交付链仍待验收。未提交、推送、触发远端工作流或改动正式数据。
+- 2026-11-17 13:40 隔离发布区、主工作区及 Node.js v22.23.4 CI（run `44007122385`）`npm test` 均 `408 / 408` 通过（0 失败 / 0 跳过）；`86daed5`（2026-11-17 日报）、`bcf5cf4`（代码）与 `630cbdf`（2026-11-09 周报）Vercel 部署均为 `success`；`check-publication.mjs daily` 返回 `online_verified`，11 路生产资源 SHA-256 与 `origin/main` 完全一致，Playwright Desktop（`1440x900` ZH/EN 日/周报）与 Mobile（`390x844` ZH 日/周报）渲染均 `0` 报错、`0` 横向溢出。自动切换生产实况触发待后续观察。[上线验收](docs/validation/2026-11-17-backup-failover-release.md)。
 
 - 2026-11-16 11:47 隔离发布区、主工作区及 Node.js v22.23.4 CI（`43798958623`）各 389／389 通过，Vercel `c9ed058` 部署 `success` ；对 `43792530578` 冻结的 60 条实样复测 `evidence-refs-v2` 日期／头衔缩写合并干净生效（11 条无回退）。`43799056363` 与 11:42／11:45／11:47 CST 本机实测确认 `aineapi.com` 连续 Cloudflare `HTTP 522`／超时阻塞；2026-11-16 线上出刊及网页渲染尚未验证。[记录](docs/validation/2026-11-16-editor-repair-status.md)。
 
