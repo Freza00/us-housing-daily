@@ -2,7 +2,9 @@
 
 ## 当前状态
 
-2026-11-17 13:40，主备 LLM 故障自动粘性切换与三类工作流单次手动开关（`use_backup=true`）已以 `bcf5cf4` 同步上线，Vercel 部署 `success`（`4FymeLKPXzMF2gWg5LBaxJV6b8xT`）；2026-11-17 日报已于晨间主通道自动发布（run `43961862058` / `86daed5`，20 条，`evidence-refs-v2`），2026-11-09 周报已通过 `weekly.yml -f force=true -f use_backup=true` 走 OpenAI 备用端点一次通过（run `44007345875` / `630cbdf`，20 条、3 条主线），CI `408 / 408`、线上 11 路 SHA-256 及 Playwright 桌面/移动端双语渲染全部通过。真实定时调度遇主通道阻塞自动切换、月报自动首跑及连续 SLA 仍待后续运行观察。[上线验收](docs/validation/2026-11-17-backup-failover-release.md)。
+2026-11-17 16:52，日报速读防丢弃修复已上线（`bedc6de`，CI `419 / 419`、Vercel `success`），并已完成 `2026-11-16` 冻结原料补刊与 `11-17` 快照边界对齐（`59f79bb`，`20` 条、`summary_status: available`）及 `daily.yml -f force=true -f use_backup=true` 刷新 `2026-11-17`（run `44048928283` / `0094946`，`19` 条、含 `18` 条 `11-16` 新闻、与 `16` 号 `0` 重叠、完整双语速读）；`node scripts/check-publication.mjs daily` 返回 `online_verified`，线上 `12` 路 SHA-256 与 Playwright 桌面/移动端双语核验全部通过。真实定时调度主通道阻塞自动切换、月报自动首跑及连续 SLA 仍待观察。[上线验收](docs/validation/2026-11-17-daily-summary-and-backfill-release.md)。
+
+2026-11-17 13:40，主备 LLM 故障自动粘性切换与三类工作流单次手动开关（`use_backup=true`）已以 `bcf5cf4` 同步上线，Vercel 部署 `success`（`4FymeLKPXzMF2gWg5LBaxJV6b8xT`）；2026-11-09 周报已通过 `weekly.yml -f force=true -f use_backup=true` 走 OpenAI 备用端点一次通过（run `44007345875` / `630cbdf`，20 条、3 条主线），CI `408 / 408`、线上 11 路 SHA-256 及 Playwright 桌面/移动端双语渲染全部通过。[备用验收](docs/validation/2026-11-17-backup-failover-release.md)。
 
 2026-11-12 16:20，编辑证据与覆盖机制以 683091f 同步开源并上线，Vercel success；主工作区、发布副本及 Node.js 22 CI 各 381 项通过，17 路生产资源和 39 个语言状态通过。新协议冻结前集中修字段，按主事件派生资本属性，区分选稿／写稿及正文／日期缺口。今天原 16 条、周月报和原状态保持；13 号新协议真实首跑待观察。[生产验收](docs/validation/2026-11-12-editorial-mechanism-release.md)。
 
@@ -33,7 +35,7 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 ## 进行中
 
-- 2026-11-17 13:40 备用 LLM 手动开关（`use_backup=true`）与主通道自动粘性切换已上线，周报（`2026-11-09`）经手动备用恢复交付，2026-11-17 日报（`86daed5`）经主通道自动出刊；真实定时任务遇主通道阻塞自动切换备用的生产触发、月报自动首跑及连续 SLA 仍待后续观察（手动备用恢复不计为全自动准时成功）。[上线验收](docs/validation/2026-11-17-backup-failover-release.md)。
+- 2026-11-17 16:52 日报速读主选约束与预算内局修（`bedc6de`）、主备手动/自动切换（`bcf5cf4`）已上线，`2026-11-16` 经冻结原料手动补刊（`59f79bb`）、`2026-11-17` 经 `use_backup=true` 刷新（`0094946`）、`2026-11-09` 周报经 `use_backup=true` 恢复（`630cbdf`）；真实定时任务遇主通道阻塞自动切换备用的生产触发、月报自动首跑及连续 SLA 仍待后续观察（手动补刊与 `use_backup=true` 恢复均不计为全自动准时成功）。[上线验收](docs/validation/2026-11-17-daily-summary-and-backfill-release.md)。
 
 - 6 号补发与通用地域校验修复已提交、同步开源并上线；后续自动出刊和上游流稳定性待观察。未增加模型额度或通知，人工恢复不计为自动准时成功。[生产记录](docs/validation/2026-11-06-geography-release.md)。
 
@@ -48,6 +50,8 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 15 个研究入口仍有访问或发现障碍；31／46 可读是此前本机探针结果，不代表生产已全部覆盖。Vercel CLI 现有 token 无效，未独立读取账号套餐和线上 cron 注册表；部署已接受仓库 cron 配置，Actions 补偿配置已上线。
 
 ## 最近完成
+
+- 2026-11-17 16:52 以 `bedc6de` 上线日报写稿池 `"reserve": true` 标记与速读摘要主选限制、预算内局修及坏卡联合修复；以 `59f79bb` 从冻结原料 `14215872914` 通过备用端点补刊 `2026-11-16`（`20` 条、`176` 字速读）并按 `materialFingerprint` 对齐 `11-17` 快照边界；再以 `daily.yml -f force=true -f use_backup=true`（run `44048928283` / `0094946`）刷新 `2026-11-17`（`19` 条、含 `18` 条 `11-16` 新闻、完整双语速读）。[上线验收](docs/validation/2026-11-17-daily-summary-and-backfill-release.md)。
 
 - 2026-11-17 13:40 以 `bcf5cf4` 上线主通道故障自动粘性切换备用、切换前免污染 `invalidJson` 保护、双密钥完整脱敏及三类工作流单次手动 `use_backup=true` 开关，保持主 Secrets、3 次阶段额度、`660000 ms`、`reserved_ms` 与 `ruleDigest` 边界；并执行 `weekly.yml -f force=true -f use_backup=true`（run `44007345875` / `630cbdf`）一次性发布 `2026-11-09` 周报（20 条、3 条主线），CI 与 Vercel 部署均已通过。[上线验收](docs/validation/2026-11-17-backup-failover-release.md)。
 
@@ -88,9 +92,9 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 - 2026-11-05 00:51 提交 8cf6579 并同步开源 main、Vercel 上线。候选增补、有界补文和 BTR 标签检查生效，CI 255 项通过，既有 10 路数据／资源保持，4 号未重做；5 号正常自动生成待观察。[验收](docs/validation/2026-11-05-candidate-recall-release.md)。
 
-- 2026-11-04 23:48 按 Astra-max 复审建议修复机构候选硬截、冻结前有界递补及 BTR／资产标签不一致。保持原优先轮次、最低星级、最终机构限额及模型预算；只做本地实现与文档同步，未提交或上线。[验收](docs/validation/2026-11-04-candidate-recall-fix.md)。
-
 ## 最近验证
+
+- 2026-11-17 16:52 隔离发布区、主工作区及 Node.js v22.23.4 CI（run `44046859898`）`npm test` 均 `419 / 419` 通过（0 失败 / 0 跳过）；`bedc6de`、`59f79bb`（`2026-11-16` 补刊）与 `0094946`（`2026-11-17` 刷新）Vercel 部署均为 `success`；`check-publication.mjs daily` 返回 `online_verified`，线上 `12` 路资源 SHA-256 与 `origin/main` 完全一致，Playwright Desktop（`1440x900` ZH/EN）与 Mobile（`390x844` ZH）切换 `2026-11-16` / `2026-11-17` 渲染速读摘要均 `0` 报错、`0` 横向溢出。主工作区 `76` 个受保护文件零改动。[上线验收](docs/validation/2026-11-17-daily-summary-and-backfill-release.md)。
 
 - 2026-11-17 13:40 隔离发布区、主工作区及 Node.js v22.23.4 CI（run `44007122385`）`npm test` 均 `408 / 408` 通过（0 失败 / 0 跳过）；`86daed5`（2026-11-17 日报）、`bcf5cf4`（代码）与 `630cbdf`（2026-11-09 周报）Vercel 部署均为 `success`；`check-publication.mjs daily` 返回 `online_verified`，11 路生产资源 SHA-256 与 `origin/main` 完全一致，Playwright Desktop（`1440x900` ZH/EN 日/周报）与 Mobile（`390x844` ZH 日/周报）渲染均 `0` 报错、`0` 横向溢出。自动切换生产实况触发待后续观察。[上线验收](docs/validation/2026-11-17-backup-failover-release.md)。
 
@@ -130,8 +134,6 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 2026-11-05 16:33 主工作区及从 211cb346 建立的干净副本各 269／269、0 失败（Node.js v25.8.0）；5 号原回答 20 卡复验、2 坏卡／18 好卡保持、278→187 字符摘要及 45421→4892 请求字符重放通过。隔离无界面 Chromium 完成 12 场景／36 次语言检查，无中文概览泄漏、页面异常或横向溢出；无源站／模型请求，未运行远端 CI。[证据](docs/validation/2026-11-05-script-first-implementation.json)。
 
 - 2026-11-05 15:34 核对 5 号首跑及两轮补偿、冻结附件／交付收据；20 条自动出刊、模型 1＋2 次。独立无界面英文渲染复现三类期刊中文泄漏，确认正式页面直接采用模型 section，并找到 UDR 分类／FOA 总部地域标签语义缺口；仅审查，无新生成／修复／发布。[证据](docs/validation/2026-11-05-run-language-classification-review.json)。
-
-- 2026-11-05 00:51 Node.js v22.23.4 CI 255／255、0 失败；Vercel success。部署后首页／JS／CSS／日报三路／周月四路共 10 个入口与发布副本 SHA-256 一致，220 个非目标原文件保持，零生成／采集请求、零手动 dispatch。[证据](docs/validation/2026-11-05-candidate-recall-release.json)。
 
 ## 已定位问题
 
