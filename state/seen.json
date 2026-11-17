@@ -5547,37 +5547,9 @@
     "shown_at": 1794519658366
   },
   {
-    "id": "04ddad6f631f191f",
-    "link": "https://northmarq.com/insights/insights/rapid-absorption-continues-even-deliveries-slow-phoenix-multifamily-market-q3-2026",
-    "title": "Rapid absorption continues even as deliveries slow for the Phoenix multifamily market",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "e599a5c8f825f0ae",
-    "link": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/raleigh-marketbeats/life-sciences",
-    "title": "MarketBeat Raleigh-Durham Life Sciences Q3 2026",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
     "id": "81a61580476b43a1",
     "link": "https://eyeonhousing.org/2026/11/single-family-permitting-weakens-while-multifamily-activity-remains-stronger/",
     "title": "Single-Family Permitting Weakens While Multifamily Activity Remains Stronger",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "a011916a1c449593",
-    "link": "https://www.housingwire.com/articles/btr-legislative-uncertainty-capital/",
-    "title": "Legislative risk continues to cloud BTR’s capital outlook; here's why",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "e1058b90ddf4bb57",
-    "link": "https://www.bisnow.com/news/national/capital-markets/brookfield-quietly-buys-sprawling-mobile-home-community-portfolio-members-of-congress-have-questions",
-    "title": "Members Of Congress Have Questions For Brookfield After Its Mass Mobile Home Purchase",
     "shown_date": "2026-11-17",
     "shown_at": 1794865319597
   },
@@ -5596,51 +5568,9 @@
     "shown_at": 1794865319597
   },
   {
-    "id": "7fc7e33454a70638",
-    "link": "https://northmarq.com/insights/insights/raleigh-durham-multifamily-vacancy-tightens-deliveries-slow-q3-2026",
-    "title": "Raleigh-Durham multifamily vacancy tightens as deliveries slow",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
     "id": "b639aa4177adca45",
     "link": "https://www.housingwire.com/articles/land-buildings-invitation-homes-activist-letter/",
     "title": "Hedge fund pressures Invitation Homes to speed up home sales",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "a5e68cc6f0a63ff6",
-    "link": "https://www.cnbc.com/2026/11/14/real-estate-rental-income-industrial-storage-market.html",
-    "title": "Rising rents draw Wall Street money to industrial outdoor storage lot investments across the U.S.",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "e75001b411953d46",
-    "link": "https://www.realpage.com/analytics/economy-express-episode-75/",
-    "title": "Realpage Economy Express Episode 75",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "583884d382fe2260",
-    "link": "https://www.housingwire.com/articles/apartment-rents-diverge-2026/",
-    "title": "Apartment rents diverge: San Francisco rises, the Sun Belt falls",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "3aeb5e529cc1ae47",
-    "link": "https://www.realpage.com/analytics/reit-update-3rd-quarter-2026/",
-    "title": "Renewals Carry Apartment REIT Pricing as Coastal and Sun Belt Results Split",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
-  },
-  {
-    "id": "6a062da69541c323",
-    "link": "https://eyeonhousing.org/2026/11/no-relief-credit-conditions-for-builders-still-tightening/",
-    "title": "No Relief: Credit Conditions for Builders Still Tightening",
     "shown_date": "2026-11-17",
     "shown_at": 1794865319597
   },
@@ -5680,10 +5610,143 @@
     "shown_at": 1794865319597
   },
   {
+    "id": "e75001b411953d46",
+    "link": "https://www.realpage.com/analytics/economy-express-episode-75/",
+    "title": "Realpage Economy Express Episode 75",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "3aeb5e529cc1ae47",
+    "link": "https://www.realpage.com/analytics/reit-update-3rd-quarter-2026/",
+    "title": "Renewals Carry Apartment REIT Pricing as Coastal and Sun Belt Results Split",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "a011916a1c449593",
+    "link": "https://www.housingwire.com/articles/btr-legislative-uncertainty-capital/",
+    "title": "Legislative risk continues to cloud BTR’s capital outlook; here's why",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "a5e68cc6f0a63ff6",
+    "link": "https://www.cnbc.com/2026/11/14/real-estate-rental-income-industrial-storage-market.html",
+    "title": "Rising rents draw Wall Street money to industrial outdoor storage lot investments across the U.S.",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "62f0127bc7dd52f9",
+    "link": "https://eyeonhousing.org/2026/11/building-material-price-inflation-remains-high-despite-energy-price-declines/",
+    "title": "Building Material Price Inflation Remains High Despite Energy Price Declines",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "97f45b6e66103a74",
+    "link": "https://www.bisnow.com/news/national/data-center-development/elon-musk-spacex-unveils-74b-data-center-build-out-texas-arizona",
+    "title": "SpaceX Unveils $74B Data Center Plans In Texas, Arizona",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "6a062da69541c323",
+    "link": "https://eyeonhousing.org/2026/11/no-relief-credit-conditions-for-builders-still-tightening/",
+    "title": "No Relief: Credit Conditions for Builders Still Tightening",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "583884d382fe2260",
+    "link": "https://www.housingwire.com/articles/apartment-rents-diverge-2026/",
+    "title": "Apartment rents diverge: San Francisco rises, the Sun Belt falls",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "e1058b90ddf4bb57",
+    "link": "https://www.bisnow.com/news/national/capital-markets/brookfield-quietly-buys-sprawling-mobile-home-community-portfolio-members-of-congress-have-questions",
+    "title": "Members Of Congress Have Questions For Brookfield After Its Mass Mobile Home Purchase",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "da2dde13ac6444ff",
+    "link": "https://therealdeal.com/national/2026/11/12/compass-sues-15-mlses-over-listing-policies/",
+    "title": "Compass sues 15 MLSes over listing policies",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "04ddad6f631f191f",
+    "link": "https://northmarq.com/insights/insights/rapid-absorption-continues-even-deliveries-slow-phoenix-multifamily-market-q3-2026",
+    "title": "Rapid absorption continues even as deliveries slow for the Phoenix multifamily market",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "e765426a6eb13a54",
+    "link": "https://northmarq.com/insights/insights/tucson-multifamily-rents-push-higher-vacancy-tightens-q3-2026",
+    "title": "Tucson multifamily rents push higher as vacancy tightens",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "7fc7e33454a70638",
+    "link": "https://northmarq.com/insights/insights/raleigh-durham-multifamily-vacancy-tightens-deliveries-slow-q3-2026",
+    "title": "Raleigh-Durham multifamily vacancy tightens as deliveries slow",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "5e22bb820fd36838",
+    "link": "https://houstonagentmagazine.com/2026/11/13/har-weekly-activity-snapshot-week-45-2026/?utm_source=rss&utm_medium=rss&utm_campaign=har-weekly-activity-snapshot-week-45-2026",
+    "title": "New, pending, closed listings remain depressed in Houston",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "e599a5c8f825f0ae",
+    "link": "https://cushmanwakefield.com/en/united-states/insights/us-marketbeats/raleigh-marketbeats/life-sciences",
+    "title": "MarketBeat Raleigh-Durham Life Sciences Q3 2026",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "93be9292ae86fcf9",
+    "link": "https://therealdeal.com/national/phoenix/2026/11/12/centercal-breaks-into-arizona-with-phoenix-area-retail-buy/",
+    "title": "CenterCal makes Arizona debut with $117M retail acquisition in tight market",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
     "id": "7b6111f286f78479",
     "link": "https://www.realtor.com/research/october-2026-hottest-housing-markets/",
     "title": "October 2026 Hottest Housing Markets",
-    "shown_date": "2026-11-17",
-    "shown_at": 1794865319597
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "c42061c683f5878a",
+    "link": "https://rebusinessonline.com/oppenheimer-co-signs-220000-sf-office-headquarters-lease-in-lower-manhattan/",
+    "title": "Oppenheimer & Co. Signs 220,000 SF Office Headquarters Lease in Lower Manhattan",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "4cc8bdbad90e3f14",
+    "link": "https://www.housingwire.com/articles/inventory-seasonal-decline-rates/",
+    "title": "The seasonal decline in housing inventory is in full force",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
+  },
+  {
+    "id": "edc82d99228c0125",
+    "link": "https://www.realtor.com/news/trends/veterans-skilled-trades-construction-labor-shortage-hbi/",
+    "title": "How Training Veterans in Skilled Trades Could Speed Up Homebuilding and Ease Housing Costs",
+    "shown_date": "2026-11-16",
+    "shown_at": 1794791100000
   }
 ]
