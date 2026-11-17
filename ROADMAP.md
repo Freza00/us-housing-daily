@@ -2,6 +2,8 @@
 
 ## 当前状态
 
+2026-11-17 20:21，已按 `opus5.5-high` 方案上线覆盖降级分层与周／月报受限 `r2` 自动快照补全修订（`3860ee5`，CI run `44081597651` `423 / 423`、`Node.js v22.23.4`，Vercel `success`）：收紧 `daily` 的 `degraded` 触发边界（仅 `snapshot_gap`、`required_source` 或 0 入选栏目的 `section_lead_gap` 标为 `degraded`，已有入选稿栏目的漏斗缺口与非必需 `403` 来源留在 `_diagnostics` 与“来源与行业覆盖”明细）并记录 `coverage_reasons`；删除前端 `public/app.js` 失实的“补齐后可更新”提示并改为按原因／版本／历史兼容的真实说明；在 `calendar.mjs` 新增受 `withinRecoveryWindow`／`recoverableRevision` 严格封顶的周（截稿后 48h 内工作日）／月（次月前 3 个工作日）单次 `r2` 自动修订机制，配齐 `weekly.yml`/`monthly.yml`/`vercel.json`/`dispatch.mjs` 补偿调度，全链路共用于 `can-run.mjs`、`restore-issue.mjs`、`pipeline.mjs`、`publish.mjs` 与 `publication.mjs`。线上 `https://news-agent-mu.vercel.app/app.js` 散列与提交一致，Playwright 桌面/移动端 ZH/EN 日/周/月报实测 0 失实提示、0 报错、0 溢出。[上线验收](docs/validation/2026-11-17-coverage-tiering-release.md)。
+
 2026-11-17 16:52，日报速读防丢弃修复已上线（`bedc6de`，CI `419 / 419`、Vercel `success`），并已完成 `2026-11-16` 冻结原料补刊与 `11-17` 快照边界对齐（`59f79bb`，`20` 条、`summary_status: available`）及 `daily.yml -f force=true -f use_backup=true` 刷新 `2026-11-17`（run `44048928283` / `0094946`，`19` 条、含 `18` 条 `11-16` 新闻、与 `16` 号 `0` 重叠、完整双语速读）；`node scripts/check-publication.mjs daily` 返回 `online_verified`，线上 `12` 路 SHA-256 与 Playwright 桌面/移动端双语核验全部通过。真实定时调度主通道阻塞自动切换、月报自动首跑及连续 SLA 仍待观察。[上线验收](docs/validation/2026-11-17-daily-summary-and-backfill-release.md)。
 
 2026-11-17 13:40，主备 LLM 故障自动粘性切换与三类工作流单次手动开关（`use_backup=true`）已以 `bcf5cf4` 同步上线，Vercel 部署 `success`（`4FymeLKPXzMF2gWg5LBaxJV6b8xT`）；2026-11-09 周报已通过 `weekly.yml -f force=true -f use_backup=true` 走 OpenAI 备用端点一次通过（run `44007345875` / `630cbdf`，20 条、3 条主线），CI `408 / 408`、线上 11 路 SHA-256 及 Playwright 桌面/移动端双语渲染全部通过。[备用验收](docs/validation/2026-11-17-backup-failover-release.md)。
@@ -35,6 +37,8 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 ## 进行中
 
+- 2026-11-17 20:21 实施并上线 `opus5.5-high` 方案（`3860ee5`）：收紧 `daily` `degraded` 触发边界并输出 `coverage_reasons`；删除 `public/app.js` 失实的“补齐后可更新”提示并区分新刊原因、周／月 `r2` 与历史兼容归档；新增 `withinRecoveryWindow`／`canAttemptRecoverySchedule`／`recoverableRevision` 与 `loadWindowSnapshots` 并在 `can-run.mjs`、`restore-issue.mjs`、`pipeline.mjs`、`publish.mjs`、`publication.mjs` 与 `dispatch.mjs` 统一执行周 48h／月前 3 工作日、仅 `r1 -> r2` 快照清零后的受限自动补全修订；扩充 `weekly.yml`/`monthly.yml`/`vercel.json` 补偿调度与 `coverage-tiering.test.mjs`。后续真实周／月 `r1 -> r2` 线上定时触发待观察。[上线验收](docs/validation/2026-11-17-coverage-tiering-release.md)。
+
 - 2026-11-17 16:52 日报速读主选约束与预算内局修（`bedc6de`）、主备手动/自动切换（`bcf5cf4`）已上线，`2026-11-16` 经冻结原料手动补刊（`59f79bb`）、`2026-11-17` 经 `use_backup=true` 刷新（`0094946`）、`2026-11-09` 周报经 `use_backup=true` 恢复（`630cbdf`）；真实定时任务遇主通道阻塞自动切换备用的生产触发、月报自动首跑及连续 SLA 仍待后续观察（手动补刊与 `use_backup=true` 恢复均不计为全自动准时成功）。[上线验收](docs/validation/2026-11-17-daily-summary-and-backfill-release.md)。
 
 - 6 号补发与通用地域校验修复已提交、同步开源并上线；后续自动出刊和上游流稳定性待观察。未增加模型额度或通知，人工恢复不计为自动准时成功。[生产记录](docs/validation/2026-11-06-geography-release.md)。
@@ -50,6 +54,8 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 15 个研究入口仍有访问或发现障碍；31／46 可读是此前本机探针结果，不代表生产已全部覆盖。Vercel CLI 现有 token 无效，未独立读取账号套餐和线上 cron 注册表；部署已接受仓库 cron 配置，Actions 补偿配置已上线。
 
 ## 最近完成
+
+- 2026-11-17 20:21 以 `3860ee5` 上线分层覆盖降级（`coverage_reasons`）、前端诚实 `coverageNote` 文案及周／月报单次受限 `r2` 自动快照补全修订机制，更新 `README.md`、`AGENTS.md`、`docs/RECOVERY.md` 与 `weekly.yml`/`monthly.yml`/`vercel.json` 补偿调度，保持 `daily` 不自动回溯改刊、周 48h／月前 3 工作日上限、`r2` 独立预算与 `<= r2` 硬边界。[上线验收](docs/validation/2026-11-17-coverage-tiering-release.md)。
 
 - 2026-11-17 16:52 以 `bedc6de` 上线日报写稿池 `"reserve": true` 标记与速读摘要主选限制、预算内局修及坏卡联合修复；以 `59f79bb` 从冻结原料 `14215872914` 通过备用端点补刊 `2026-11-16`（`20` 条、`176` 字速读）并按 `materialFingerprint` 对齐 `11-17` 快照边界；再以 `daily.yml -f force=true -f use_backup=true`（run `44048928283` / `0094946`）刷新 `2026-11-17`（`19` 条、含 `18` 条 `11-16` 新闻、完整双语速读）。[上线验收](docs/validation/2026-11-17-daily-summary-and-backfill-release.md)。
 
@@ -90,9 +96,9 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 - 2026-11-05 15:57 Astra-max 完成工作流／脚本化复审及 5 号日志深查：确认分类不能仅挪最后而忽略选稿平衡，推荐同一规则脚本两处复用；识别标签语义缺失、两卡＋摘要联合修复及摘要重心漂移，验证保留原摘要和缩小请求的离线可行性。只形成方案，无代码／稿件或生产调用变更。[方案](docs/plans/2026-11-05-script-first-workflow.md)。
 
-- 2026-11-05 00:51 提交 8cf6579 并同步开源 main、Vercel 上线。候选增补、有界补文和 BTR 标签检查生效，CI 255 项通过，既有 10 路数据／资源保持，4 号未重做；5 号正常自动生成待观察。[验收](docs/validation/2026-11-05-candidate-recall-release.md)。
-
 ## 最近验证
+
+- 2026-11-17 20:21 隔离发布区、主工作区及 Node.js v22.23.4 CI（run `44081597651`）`npm test` 均 `423 / 423` 通过（0 失败 / 0 跳过）；Vercel Deployment `7852946311` 为 `success`，线上 `/app.js`（SHA-256 `564d32494c750649dd676908fdfbb20f7f25318e6aeaa70ff40a984e86aeefcf`）与 `3860ee5` 一致，`check-publication.mjs daily` 返回 `online_verified`；Playwright Desktop（`1440x900`）ZH/EN 日／周报与 Mobile（`390x844`）ZH/EN 日／月报共 8 场景渲染均 `0` 报错、`0` 警告、`0` 横向溢出，页面已无“补齐后可更新”失实文案。主工作区 `76` 个受保护文件零改动。[上线验收](docs/validation/2026-11-17-coverage-tiering-release.md)。
 
 - 2026-11-17 16:52 隔离发布区、主工作区及 Node.js v22.23.4 CI（run `44046859898`）`npm test` 均 `419 / 419` 通过（0 失败 / 0 跳过）；`bedc6de`、`59f79bb`（`2026-11-16` 补刊）与 `0094946`（`2026-11-17` 刷新）Vercel 部署均为 `success`；`check-publication.mjs daily` 返回 `online_verified`，线上 `12` 路资源 SHA-256 与 `origin/main` 完全一致，Playwright Desktop（`1440x900` ZH/EN）与 Mobile（`390x844` ZH）切换 `2026-11-16` / `2026-11-17` 渲染速读摘要均 `0` 报错、`0` 横向溢出。主工作区 `76` 个受保护文件零改动。[上线验收](docs/validation/2026-11-17-daily-summary-and-backfill-release.md)。
 
@@ -132,8 +138,6 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 2026-11-05 16:43 发布副本及 Node.js v22.23.4 CI 各 269／269、0 失败；Vercel success。线上首页／JS／CSS 与 7 个数据入口共 10 路逐项散列匹配，远端 228 个保护文件与主工作区 304 个非目标起始文件保持；无新模型、采集或手动 dispatch。[证据](docs/validation/2026-11-05-script-first-release.json)。
 
 - 2026-11-05 16:33 主工作区及从 211cb346 建立的干净副本各 269／269、0 失败（Node.js v25.8.0）；5 号原回答 20 卡复验、2 坏卡／18 好卡保持、278→187 字符摘要及 45421→4892 请求字符重放通过。隔离无界面 Chromium 完成 12 场景／36 次语言检查，无中文概览泄漏、页面异常或横向溢出；无源站／模型请求，未运行远端 CI。[证据](docs/validation/2026-11-05-script-first-implementation.json)。
-
-- 2026-11-05 15:34 核对 5 号首跑及两轮补偿、冻结附件／交付收据；20 条自动出刊、模型 1＋2 次。独立无界面英文渲染复现三类期刊中文泄漏，确认正式页面直接采用模型 section，并找到 UDR 分类／FOA 总部地域标签语义缺口；仅审查，无新生成／修复／发布。[证据](docs/validation/2026-11-05-run-language-classification-review.json)。
 
 ## 已定位问题
 
