@@ -39,7 +39,7 @@ export function isDailyUSStory(item, decision) {
     geographyEvidenceMatches(text, evidence).some(match => !headquartersOverlap(text, match) || index === 0 && officeOpening));
 }
 
-export function assembleDailyEdition(primary, pool, cards, metadata, { allowPartial = false } = {}) {
+export function assembleDailyEdition(primary, pool, cards, metadata, { allowPartial = false, requireSummary = false } = {}) {
   const byId = new Map(cards.map(item => [item.id, item]));
   const primaryIds = new Set(primary.map(item => item.id));
   const slots = primary.map(item => byId.get(item.id));
@@ -74,6 +74,7 @@ export function assembleDailyEdition(primary, pool, cards, metadata, { allowPart
         { requireEnglish: true, fixedEvidence: true }).executive_summary;
     } catch (error) { if (!(error instanceof LlmError)) throw error; }
   }
+  if (requireSummary && !executiveSummary) return null;
   return {
     items,
     executive_summary: executiveSummary,

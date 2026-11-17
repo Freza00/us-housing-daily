@@ -285,7 +285,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
         savedCards = { selected_digest: selectedDigest, items: [...new Map(combined.map(it => [it.id, it])).values()] };
         await store.put('cards', savedCards);
       }
-      if (dailyPool && savedMetadata) return;
+      if (!data?.executive_summary) return;
       let metadata;
       try {
         metadata = prepareWritingMetadata(structuredClone(data), inputs, kind, writingContext);
@@ -304,10 +304,16 @@ export async function runPipeline(kind = 'daily', options = {}) {
         const ids = new Set((context.cacheHit ? selection.items : writerBatch.items).map(item => item.id));
         if (!Array.isArray(data?.items) || data.items.some(card => !ids.has(card?.id)) || new Set(data.items.map(card => card.id)).size !== data.items.length) throw new LlmError('Invalid daily writing references');
         await persistParts(data, context, data.validation_notes?.summary_shortening);
-        if (!assemble()) {
-          // Keep the original per-card diagnostic for the existing repair path.
-          for (const card of data.items) prepareWritingCard(card, (context.cacheHit ? selection.items : writerBatch.items).find(it => it.id === card.id), { ...writingContext, ...context });
-          throw new LlmError('Daily writing pool cannot yet fill the planned issue');
+        const edition = assemble({ requireSummary: true });
+        if (!edition) {
+          const inputs = context.cacheHit ? selection.items : writerBatch.items;
+          if (!assemble()) {
+            // Keep the original per-card diagnostic for the existing repair path.
+            for (const card of data.items) prepareWritingCard(card, inputs.find(it => it.id === card.id), { ...writingContext, ...context });
+            throw new LlmError('Daily writing pool cannot yet fill the planned issue');
+          }
+          prepareWritingMetadata(structuredClone(data), inputs, kind, writingContext);
+          throw new LlmError('Executive summary does not reference any published story in the assembled issue');
         }
         // Cache the verified pool and unprojected metadata for cold resume.
         return { items: savedCards.items, executive_summary: savedMetadata?.executive_summary ?? null, themes: savedMetadata?.themes || [],
@@ -329,7 +335,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
     const shortMetadata = value => value && ({ ...value, sentences: value.sentences?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) });
     const saved = { items: (savedCards?.items || []).map(it => ({ ...it, id: shortIds.get(it.id) })), executive_summary: shortMetadata(savedMetadata?.executive_summary), themes: savedMetadata?.themes?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) };
     const canonicalIds = new Set(saved.items.map(it => it.id));
-    const preassembled = dailyPool && (assemble() || (targetDeadline > Date.now() && remainingBeforeReserve <= 0 && assemble({ allowPartial: true })));
+    const preassembled = dailyPool && (assemble({ requireSummary: true }) || (targetDeadline > Date.now() && remainingBeforeReserve <= 0 && assemble({ allowPartial: true })));
     if (preassembled) written = preassembled;
     else if (!dailyPool && savedCards?.items.length === selection.items.length && savedMetadata) written = await validate(saved, { canonicalIds, summaryShortening: savedMetadata.summary_shortening });
     else {
@@ -337,7 +343,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
       try {
         written = await client.call(resume?.system || (dailyPool ? dailyWritingSystem : writingSystem), resume?.user || writingPrompt(kind, writerBatch.items, writingContext),
           { effort: 'low', label: 'writer', maxTokens: 10000, validate: (data, context) => context?.cacheHit ? validate(data, context) : (resume?.validate || validate)(data, context), repair: (data, error) => /Invalid repair reference|Metadata repair cannot replace cards|Repair coverage mismatch/.test(error?.message || '') ? null : createWritingRepair(completeAnswer || data, writerBatch.items, kind, validate, { ...writingContext, ...completeContext }) });
-        if (dailyPool) written = assemble();
+        if (dailyPool) written = assemble({ requireSummary: true });
       } catch (error) {
         if (!dailyPool || !(error instanceof LlmError || error.llmTransport)) throw error;
         written = assemble({ allowPartial: true });

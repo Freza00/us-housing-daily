@@ -92,13 +92,15 @@ for (const mode of ['card-and-metadata', 'metadata-only', 'all-cards', 'exhauste
   if (mode !== 'metadata-only') for (const card of mode === 'all-cards' ? cards.items : cards.items.slice(0,1)) card.summary_zh = '住宅销售增长 99%。';
   metadata.executive_summary.sentences[0].text = '住宅销售增长 99%。';
   if (mode === 'exhausted') store.manifest.attempts.writer.push({ request_id: 'prior-2' }, { request_id: 'prior-3' });
+  // Summary-free recovery is permitted when the remaining budget is unknown.
+  if (mode === 'metadata-only') store.manifest.budget_unknown = ['writer'];
   await store.put('cards', cards); await store.put('metadata', metadata);
   await fs.rm(path.join(opts.root, 'state/llm-cache'), { recursive: true, force: true });
   const attemptsBefore = structuredClone(store.manifest.attempts), requests = [];
   const options = { ...opts, env, collector: { collect() { throw Error('recollection'); } }, llmOptions: { retryDelays: [0,0], fetchImpl: async (_url, request) => {
     const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content); requests.push(body);
     assert(!Array.isArray(input), 'editor must not run again');
-    assert.notEqual(mode, 'metadata-only', 'an optional invalid summary must not request a model');
+    assert.notEqual(mode, 'metadata-only', 'unknown-budget summary recovery must not request a model');
     assert.equal(input.items.length, mode === 'all-cards' ? 3 : 1);
     const result = answer(input); result.executive_summary.sentences[0].item_ids = input.original_item_ids || input.items.map(it => it.id);
     return response(result);
@@ -158,10 +160,10 @@ test('stage invocations freeze evidence and reuse editor after writer failure ev
   assert.equal(result.items.length, 3);
 });
 
-test('a bad daily summary leaves the validated cards ready, including on cold resume', async t => {
+test('a bad daily summary leaves the validated cards ready after request exhaustion, including on cold resume', async t => {
   const opts = await setup(t), calls = [];
   const env = { ...opts.env, PIPELINE_UNTIL: 'ready', LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid' };
-  const llmOptions = { fetchImpl: async (_url, request) => {
+  const llmOptions = { retryDelays: [], fetchImpl: async (_url, request) => {
     const input = JSON.parse(JSON.parse(request.body).messages[1].content);
     calls.push(input);
     return response(Array.isArray(input) ? { decisions: input.map(it => modelDecision(it.id)) } : answer(input, true));
@@ -177,14 +179,14 @@ test('a bad daily summary leaves the validated cards ready, including on cold re
   assert.equal(manifest.attempts.writer.length, 1);
   delete manifest.phases.ready;
   await fs.writeFile(file, JSON.stringify(manifest));
-  const restored = await runPipeline('daily', { ...opts, env, client: { call() { throw Error('unexpected model'); } }, collector: { collect() { throw Error('recollection'); } } });
+  const restored = await runPipeline('daily', { ...opts, env, llmOptions: { retryDelays: [], fetchImpl() { assert.fail('unexpected model'); } }, collector: { collect() { throw Error('recollection'); } } });
   assert.equal(restored.stage, 'ready');
   const after = JSON.parse(await fs.readFile(path.join(dir, 'ready.json'))).payload;
   assert.deepEqual(after.items, before.items);
   assert.equal(after.executive_summary, null);
 });
 
-test('repairing a missing daily card finishes even if the summary fails', async t => {
+test('repairing a missing daily card finishes if the summary fails on the last allowed request', async t => {
   const opts = await setup(t), seed = fakeClient(), original = seed.call;
   seed.call = async (system, user, options) => {
     if (options.label === 'editor') return original(system, user, options);
@@ -196,11 +198,13 @@ test('repairing a missing daily card finishes even if the summary fails', async 
   assert.equal(JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'cards.json'))).items.length, 2);
   const calls = [];
   const result = await runPipeline('daily', { ...opts, env: { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid' },
-    llmOptions: { retryDelays: [0, 0], sleep: async () => {}, fetchImpl: async (_url, request) => {
+    llmOptions: { retryDelays: [], sleep: async () => {}, fetchImpl: async (_url, request) => {
       const input = JSON.parse(JSON.parse(request.body).messages[1].content);
       calls.push(input);
       assert.equal(calls.length, 1);
       assert.deepEqual(input.items.map(it => it.id), ['3']);
+      assert.match(input.metadata_error, /Missing executive summary/);
+      assert.equal(input.original_evidence.length, 3);
       return response({ items: answer(input).items });
     } } });
   assert.equal(calls.length, 1);

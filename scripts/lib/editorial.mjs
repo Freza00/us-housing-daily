@@ -408,7 +408,8 @@ impact 判断框架：锚定美国住宅／BTR-SFR／多户及 CRE 机构资产�
 同时生成 executive_summary.sentences，通常 2～3 句、合计目标 200 个非空白 Unicode 字符，上限 250；中文 text 内包含的英文字母、数字、符号和标点都计入，不另按汉字数计量。按重要性排序，每句独立完整，必要限定条件跟随对应事实，不只放在末句；只提最重要变化、对相关市场的含义与待观察项，不罗列目录，不硬凑结论。每句附 item_ids，只能引用输入 id。
 返回严格JSON：{"items":[{"id":"输入id","title_zh":"...","summary_zh":"...","impact":"neutral"${evidenceOutput}}],"executive_summary":{"sentences":[{"text":"...","text_en":"...","item_ids":["id"]}]},"themes":[{"title":"主线判断","title_en":"...","item_ids":["id"]}]}。items逐条覆盖输入且无重复。每句同时提供英文 text_en，每项主线提供英文 title_en，与对应中文表达同一事实和限定条件，共用 item_ids，不含中文。英文摘要合计最多 150 个空白分隔词；不得套用中文字符上限。themes仅周/月报输出最多3项，日报为空数组。中文全角标点，中英文/数字间加空格，破折号用--。`;
 export const writingSystem = writingInstructions('、evidence_id（只能选择该条evidence_options中最能支持摘要的一项ID，优先正文；ID中的body-A-B表示evidence_segments第A至B段（两端包含），body-A为单段，title为标题；只能逐字选择列表中的完整ID，最多连续3段，禁止自行构造ID；不抄写evidence_quote，不拼句或改写原文）', ',"evidence_id":"该条选项ID"');
-export const dailyWritingSystem = writingInstructions('，只用本条标题和 evidence 的冻结原文，引用由程序绑定，无需输出引文或段号；如有 novelty_evidence，摘要必须实际呈现这段原文中的新增就业数据', '');
+export const dailyWritingSystem = writingInstructions('，只用本条标题和 evidence 的冻结原文，引用由程序绑定，无需输出引文或段号；如有 novelty_evidence，摘要必须实际呈现这段原文中的新增就业数据', '')
+  + '\n若输入含 "reserve": true 的候补条目，items 仍须逐条覆盖全部输入 ID，但 executive_summary.sentences 只能概括并引用非候补主选条目，严禁引用 "reserve": true 的候补 ID。';
 
 const writingEvidenceWindow = it => String(it.description || '').slice(0, 1800);
 const writingSource = (it, fixedEvidence) => it.title + ' ' + (fixedEvidence ? writingEvidenceWindow(it) : it.description);
@@ -495,11 +496,17 @@ export function validateWriting(data, selected, kind = 'daily', context = {}) {
   }
   return { validation_notes: { discarded_output_ids: discardedIds }, items: cards, ...validateWritingMetadata(data, selected, kind, context) };
 }
+const summaryTargets = (selected, fixedEvidence) => fixedEvidence ? selected.slice(0, 20) : selected;
+
 export function validateWritingMetadata(data, selected, kind, { requireEnglish = false, fixedEvidence = false } = {}) {
-  const source = new Map(selected.map(it => [it.id, it]));
+  const targets = summaryTargets(selected, fixedEvidence);
+  const source = new Map(targets.map(it => [it.id, it]));
+  const reserveIds = fixedEvidence ? new Set(selected.slice(targets.length).map(it => it.id)) : null;
   const sentences = data.executive_summary?.sentences;
   if (!Array.isArray(sentences) || sentences.length < 1 || sentences.length > 4) throw new LlmError('Missing executive summary');
   for (const sentence of sentences) {
+    const usedReserves = Array.isArray(sentence?.item_ids) ? sentence.item_ids.filter(id => reserveIds?.has(id)) : [];
+    if (usedReserves.length) throw new LlmError(`Executive summary cannot reference reserve items (${usedReserves.join(',')}); cite only primary item IDs (${targets.map(it => it.id).join(',')})`);
     if (!sentence?.text || !Array.isArray(sentence.item_ids) || !sentence.item_ids.length || sentence.item_ids.some(id => !source.has(id))) throw new LlmError('Invalid summary evidence reference');
     sentence.text = normalizeChinese(sentence.text);
     const evidence = sentence.item_ids.map(id => writingSource(source.get(id), fixedEvidence)).join(' ');
@@ -566,9 +573,11 @@ export function prepareWriting(data, selected, kind = 'daily', context = {}) {
   return result;
 }
 
-export function writingPrompt(kind, items, { fixedEvidence = false } = {}) {
+export function writingPrompt(kind, items, { fixedEvidence = false, reserveIds = null } = {}) {
+  const reserves = fixedEvidence ? reserveIds ?? new Set(items.slice(20).map(it => it.id)) : null;
   return JSON.stringify({ kind, items: items.map(it => ({ id: it.id, title: it.title, source: it.source_name, section: it.section,
     published_at: it.published_at, late_discovery: !!it.late_discovery,
+    ...(reserves?.has(it.id) ? { reserve: true } : {}),
     ...(it.novelty_evidence ? { novelty_evidence: it.novelty_evidence } : {}),
     ...(fixedEvidence ? { evidence: writingEvidenceWindow(it) } : {
       evidence_segments: writingEvidenceSegments(it).map((row, i) => ({ id: i + 1, text: row.segment })),
@@ -585,8 +594,10 @@ export function createWritingRepair(data, selected, kind, validate, validationCo
   }
   const errors = new Map();
   const fixedEvidence = validationContext.fixedEvidence;
+  const summaryItems = summaryTargets(selected, fixedEvidence);
+  const reserveIds = fixedEvidence ? new Set(selected.slice(summaryItems.length).map(it => it.id)) : null;
   const system = fixedEvidence ? dailyWritingSystem : writingSystem;
-  const prompt = items => JSON.parse(writingPrompt(kind, items, validationContext));
+  const prompt = items => JSON.parse(writingPrompt(kind, items, { ...validationContext, reserveIds }));
   const invalid = selected.filter(it => {
     if (!cards.has(it.id)) { errors.set(it.id, 'Missing writing card'); return true; }
     try { prepareWritingCard(cards.get(it.id), it, validationContext); return false; } catch (error) {
@@ -606,11 +617,16 @@ export function createWritingRepair(data, selected, kind, validate, validationCo
     const prepared = prepareWritingMetadata(structuredClone(data), selected, kind, validationContext);
     ({ summary_shortening: summaryShortening, ...metadata } = prepared);
     summaryShortening ||= validationContext.summaryShortening;
+    // A valid primary-only summary can still disappear when all its cited
+    // cards fail and reserves fill their slots. Repair it with the bad cards.
+    if (fixedEvidence && !metadata.executive_summary.sentences.some(row => row.item_ids.every(id => !errors.has(id)))) {
+      metadataError = 'Executive summary does not reference any published story in the assembled issue';
+    }
   } catch (error) { if (!(error instanceof LlmError)) throw error; metadataError = error.message; }
   if (invalid.length === selected.length) return null;
   if (!invalid.length && metadataError) return {
     system: system + '\n仅纠正 executive_summary 和 themes，不返回或重写任何 items；已通过的全部卡片由程序保留。',
-    user: JSON.stringify({ ...prompt(selected), previous_metadata: { executive_summary: data.executive_summary, themes: data.themes }, error: metadataError }),
+    user: JSON.stringify({ ...prompt(summaryItems), previous_metadata: { executive_summary: data.executive_summary, themes: data.themes }, error: metadataError }),
     validate(correction, context) {
       if (correction?.items !== undefined) throw new LlmError('Metadata repair cannot replace cards');
       return validate({ ...data, executive_summary: correction?.executive_summary, themes: correction?.themes }, { ...context, canonicalIds: validationContext.canonicalIds });
@@ -619,8 +635,8 @@ export function createWritingRepair(data, selected, kind, validate, validationCo
   if (!invalid.length) return null;
   const expected = new Set(invalid.map(it => it.id));
   return {
-    system: system + '\n本次仅修复指定条目的卡片，恰好覆盖本次输入 ID；已通过的卡片由程序保留。' + (metadataError && !fixedEvidence ? '同时纠正 executive_summary 和 themes，引用只能来自 original_item_ids。' : '只返回 {"items":[...]}，不要重写速读摘要和主线。'),
-    user: JSON.stringify({ ...prompt(invalid), original_item_ids: selected.map(it => it.id), ...(metadataError && !fixedEvidence ? { metadata_error: metadataError, original_evidence: prompt(selected).items, previous_metadata: { executive_summary: data.executive_summary, themes: data.themes } } : {}), corrections: invalid.map(it => ({ id: it.id, error: errors.get(it.id), previous_card: cards.get(it.id) || null })) }),
+    system: system + '\n本次仅修复指定条目的卡片，恰好覆盖本次输入 ID；已通过的卡片由程序保留。' + (metadataError ? '同时纠正 executive_summary 和 themes，引用只能来自 original_item_ids。' : '只返回 {"items":[...]}，不要重写速读摘要和主线。'),
+    user: JSON.stringify({ ...prompt(invalid), original_item_ids: summaryItems.map(it => it.id), ...(metadataError ? { metadata_error: metadataError, original_evidence: prompt(summaryItems).items, previous_metadata: { executive_summary: data.executive_summary, themes: data.themes } } : {}), corrections: invalid.map(it => ({ id: it.id, error: errors.get(it.id), previous_card: cards.get(it.id) || null })) }),
     validate(correction, context) {
       if (!Array.isArray(correction?.items) || correction.items.length !== expected.size) throw new LlmError('Repair coverage mismatch');
       const replacements = new Map();
