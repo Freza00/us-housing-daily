@@ -5244,7 +5244,65 @@
     "416d949035856eaf",
     "097c62ec773ba095",
     "af27265a62396dfa",
-    "5c59559eebdf5698"
+    "5c59559eebdf5698",
+    "82ee17efaf7d37fa",
+    "678418ce5d33142e",
+    "171e0ba888840eac",
+    "35732704d64b993a",
+    "26b19bd83ff606f3",
+    "63c0e415b981a68b",
+    "0ddfdc21e42d522e",
+    "a85664a3b11efa2e",
+    "46fb5066d88a4cd3",
+    "5d1b7e5e3e987060",
+    "a8208e177c53c1e3",
+    "31e289ad814ea86e",
+    "f3fb31077b54c370",
+    "8c13d121c26fbfde",
+    "1fe310836d971f71",
+    "3a311dfdde1204a6",
+    "d952c04fb10f9a6e",
+    "24f33200c7ca0139",
+    "e1df4208053dca01",
+    "254d59392f4a4691",
+    "3ef2879b8f0cd47b",
+    "4db408c884c4a4db",
+    "c0262fbc48f2634d",
+    "7724b3522bedf72d",
+    "1d172d242c50886b",
+    "d6aeb1225315cee1",
+    "71e7d6fce433e4d9",
+    "b74171a13641aea3",
+    "a962751d27c908eb",
+    "c267606fa8155e6f",
+    "5c599acf568c6485",
+    "68365215ad335b5f",
+    "896544c5c0f77781",
+    "5248dec79b00fe43",
+    "706cb6a00127b4f3",
+    "d1f908fa2d0077f3",
+    "ccf62b65b6530c4a",
+    "462c926c1800fd90",
+    "208f098f295cfeab",
+    "2d0c586b9d89ff4f",
+    "da203618b2246251",
+    "167341e7ca3bea9d",
+    "7e7e7e1219ddb153",
+    "0248327d3683b5b7",
+    "67686beb9d8efd34",
+    "4ed242a17e2523c1",
+    "a5b6c92152c2ba16",
+    "a25288b90a502ce4",
+    "edb8c6635caaaeb5",
+    "42e278171691e4e8",
+    "361d82fe53534dc7",
+    "619092f480a09544",
+    "c6fddedca6053b22",
+    "8381743af6597598",
+    "4f1947a4973aa7cf",
+    "a4cd9885f36da00f",
+    "f0ff4ae761a1da3b",
+    "f213b29736df1e5d"
   ],
   "initialized_sources": [
     "housingwire",
@@ -7272,8 +7330,8 @@
     "cutoff_upper": 1794862800000,
     "window": {
       "lower": 1530225939000,
-      "upper": 1794864354001,
-      "hours": 73510.6708336111
+      "upper": 1794883740001,
+      "hours": 73516.05583361111
     },
     "items": [
       {
@@ -7438,6 +7496,1552 @@
         "acquisition_window": {
           "lower": 1794776400000,
           "upper": 1794862800000
+        }
+      },
+      {
+        "source_id": "housingwire",
+        "source_name": "HousingWire",
+        "source_tier": "A",
+        "source_weight": 9,
+        "source_tags": [
+          "housing",
+          "rates",
+          "policy"
+        ],
+        "region": "national",
+        "title": "NAMB opposes VA loan fee increases in Senate bill",
+        "link": "https://www.housingwire.com/articles/namb-va-loan-fees-s4744/",
+        "description": "The National Association of Mortgage Brokers ( NAMB ) is urging mortgage professionals to contact their senators and oppose proposed increases to fees for veterans using Department of Veterans Affairs ( VA ) home loans, arguing the changes would shift the cost of new benefits onto other veterans. The advocacy campaign, posted on NAMB's website, comes as the Senate considers S. 4744, its version of the Take Care of America’s Veterans Act (H.R. 9237), which passed the House by voice vote on Veterans Day. The Senate bill is on the calendar and is eligible for debate and a vote. NAMB supports the legislation's goal of providing additional benefits to combat-injured veterans but opposes Section 104, which would increase fees associated with VA loans. \"Our biggest issue is the fact that our veterans serving our country took an oath to serve and defend. They didn't take or raise their hand to receive a bill to pay for benefits for their fallen or disabled brothers and sisters. That is not the obligation of the soldier. That's the obligation of the taxpayer and the disbursement of those tax dollars on the appropriations,\" NAMB President Michael Farrell said in a conversation with HousingWire . Under the Senate proposal, the funding fee for Interest Rate Reduction Refinance Loans (IRRRLs) would increase from 0.5% to 1.42%, while the VA loan assumption fee would double from 0.5% to 1%. The increases would also become permanent, eliminating a 10-year sunset provision. \"For the veteran doing the IRRRL and raising that 1.42% from 0.5% on a $400,000 average loan is taking [the fee] from $2,000 to $5,680. And the the concept of, 'Well, it doesn't affect their recoupment' in regards to justifying doing the loan … it does affect and impact the cost of doing the loan,\" Farrell added. NAMB estimates the changes would add $4 billion in costs for veteran borrowers, or an average of $3,780 per veteran. The association also argues the higher IRRRL fee could conflict with the VA's 36-month recoupment requirement, potentially making some veterans ineligible for the refinancing program. \"It seems like there's other solutions that can be looked into to raise the funding to support the benefit. … But to alienate it just to one aspect of the IRRRL, when home affordability is a huge concern and veterans are looking to step down their rate or step down their payment to better their family living expenses, now we've tripled the cost of getting that done,\" Farrell said. Instead, NAMB is advocating for passage of the Major Richard Star Act (H.R. 2102/S. 1032), a bipartisan, standalone measure that would allow approximately 54,000 combat-injured military retirees to receive both full retirement pay and VA disability compensation. The legislation was introduced by Rep. Gus Bilirakis (R-Fla.) in the House and by Sen. Richard Blumenthal (D-Conn.) in the Senate. On Veterans Day , the House voted 245-175 to discharge a resolution to consider the legislation separately and, on Nov. 12, passed the act. \"We are supportive of every veteran receiving their benefit,\" Farrell said. \"And if this is going to help 54,000 combat injured military retirees receive both their retirement pay and their disability pay, we stand to support the standalone Major Star Act. We do agree with that, but [regarding] Section 104, we have huge concerns on the feasibility of putting this bill on the backs of fellow veterans.\" Related More: NAMB VA Loan Veterans",
+        "published_at": 1794867759000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794867762000,
+        "extraction": "semantic",
+        "canonical": "https://housingwire.com/articles/namb-va-loan-fees-s4744",
+        "content_hash": "223ff3f3ec2ede4938fb15431add853e025cee43b7df4135c11a3a265e372ad2",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "82ee17efaf7d37fa",
+        "source_family": "housingwire",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "housingwire",
+        "source_name": "HousingWire",
+        "source_tier": "A",
+        "source_weight": 9,
+        "source_tags": [
+          "housing",
+          "rates",
+          "policy"
+        ],
+        "region": "national",
+        "title": "Infill outlier Thomas James Homes 'landmaxxes' lots with ADUs",
+        "link": "https://www.housingwire.com/articles/thomas-james-homes-adus-seattle/",
+        "description": "Where new construction is scarce and lots are tight, luxury homebuilder Thomas James Homes (TJH) has pivoted to offering accessory dwelling units (ADUs) to entice its homebuyers by adding more square footage on parcels with little room to spare. For the firm’s Pacific Northwest division, which operates in Seattle and nearby suburbs where lots are small and space is at a premium, the approach is a natural fit. While detached ADUs are the more common use case nationwide, TJH’s PNW division uses attached ADUs because they offer cost efficiencies and add functional living space to small infill lots without sacrificing as much yard. Most TJH floorplans in the region, which typically sell for $2 million to $5 million, include an attached ADU option, according to PNW division president Adam Rohde. More than half of buyers choose to include one. Founded in 2006, TJH is a high-end, scattered-lot homebuilder that operates in California, Washington and Arizona. The company specializes in building replacement homes on individual lots in established neighborhoods where new construction is limited, either on homeowner-owned lots or through spec home sales. The goal is to bring the efficiency and predictability of production building to the infill market. ADUs, which TJH began incorporating into more floor plans around 2022 or 2023, nest within that strategy by helping owners get more out of limited space, a trend the builder calls “landmaxxing.” Luxury buyers increasingly want flex space, and as Washington has passed stronger ADU laws allowing more density, TJH has used the new rules to fit more square footage on its buyers’ lots. For builders operating in dense urban and suburban markets, TJH’s playbook offers a case study in making every square foot of a lot count. “It’s our job to work with buyers to figure out how to best maximize the building value on their land,” Rohde said in an interview. “Our view of ADUs is that it's a great way to expand the amount of home you can build, which, in and of itself, is a good proposition.” Why TJH pursues attached ADUs TJH’s ADU strategy varies by division and market. While other divisions build detached ADUs, the PNW division favors attached units, which function as independent living spaces connected to the main house or built within it. Buyers use the extra space in varying ways, from a home office or gym to bonus square footage, a rental unit or a place for multigenerational living. According to Rohde, attached or integrated ADUs make more sense than detached ADUs for two main reasons. First, the company builds on smaller infill lots with limited outdoor space. A detached ADU cuts into that space more than an attached alternative. \"We're typically acquiring lots that…already have limited yard space. So, to put a detached unit in, you're then eating further into that ability to create a very livable yard,” Rohde explained. Second, attached ADUs share walls with the primary residence, which reduces the amount of additional construction required. Unlike detached units, they don't require a completely separate structure, additional siding or separate utility connections. That creates efficiencies and makes them more cost-effective, with a better return on investment. “With the integrated system, you're already having some shared wall space, so you're already getting some economies of scale and efficiency that make it a lot more cost-effective than the detached-style units,” he explained. Still, that efficiency doesn’t make ADUs a simple project, and Rohde argued against the notion that they are an easy add-on, particularly detached units. “There’s this perception in the market, especially when the new regulations were hitting to allow the expansion of detached ADUs in particular, that, ‘Hey, it’s really easy. You just pick up a module, plop it in your backyard, and presto, you have additional living space,’” he said. “The reality is, it’s just frankly not that simple.” He pointed to several reasons why ADUs can be challenging to build, including fire separation and building codes, utility connections, site access and logistics, zoning and permitting timelines and the burden of ongoing maintenance costs. “What people found is that it’s not that simple. And then it became, ‘How do we integrate ADUs into a more thoughtful development process?' I think we’re really seeing a lot of traction around that [strategy],” Rohde explained. How recent legislation aids this approach Washington House Bill 1337, passed in 2023, helped make TJH’s approach possible. Under the legislation, cities statewide must allow two ADUs per lot. The legislation requires municipalities to allow ADUs with a gross floor area of at least 1,000 square feet. That legislation made it far easier for TJH to offer an attached ADU in most of its Seattle floor plans. The real density gain, according to Rohde, comes from how Seattle treats a home with an ADU as two units, which increases floor area ratio and lets TJH build more total square footage, including the integrated ADU, on the same lot within zoning limits. To comply with the law, Seattle updated its ADU rules in 2025 to treat a home with an ADU as two units, which may allow additional floor area ratio (FAR) on the lot. That allows TJH to build more total square footage when including an integrated ADU. “It allows us to build more home on a given lot,” Rohde said. “But it’s not just building square footage for the sake of building square footage. It's building thoughtful, value-add square footage.” Rohde also pointed to Washington House Bill 1096, passed in 2025, which requires qualifying cities to create an administrative process for splitting a residential lot in two. Cities are phasing it in ahead of the 2027 state deadline. “That will allow existing landowners who want to extract some value from a large parcel that they own to split and sell. It will allow owners of larger lots to put two complete, independent single-family residences that w",
+        "published_at": 1794865815000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794865817000,
+        "extraction": "semantic",
+        "canonical": "https://housingwire.com/articles/thomas-james-homes-adus-seattle",
+        "content_hash": "becd9d8b0518f9d83babc6fb57fdc52e8630ddc97cc6e37a9fbe9e5080c6bdb1",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "678418ce5d33142e",
+        "source_family": "housingwire",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "housingwire",
+        "source_name": "HousingWire",
+        "source_tier": "A",
+        "source_weight": 9,
+        "source_tags": [
+          "housing",
+          "rates",
+          "policy"
+        ],
+        "region": "national",
+        "title": "Ackman says Trump can still end GSE conservatorships, relist this term",
+        "link": "https://www.housingwire.com/articles/ackman-fannie-freddie-conservatorship-relisting-trump/",
+        "description": "Bill Ackman still believes Fannie Mae and Freddie Mac can be relisted on the New York Stock Exchange and exit their conservatorships before the end of President Donald Trump’s second term, even after Democrats won control of both chambers in the midterm elections. In a letter to Pershing Square Holdings shareholders signed in early November, Ackman, the company's founder and CEO, and chief investment officer Ryan Israel wrote that “a relisting and release from conservatorship can be accomplished by the President using his executive authority without any involvement of Congress .\" They argue that the administration has a political incentive to act before 2029 to avoid “handing control” of the government-sponsored enterprises (GSEs) to a future administration, given the influence they have over housing policy. Ackman and Israel said the GSEs can be released “in a manner that maintains and enhances mortgage affordability while maximizing the long-term value of American taxpayers’ 79.9% ownership of the two companies.” The Department of the Treasury holds warrants to acquire 79.9% of each enterprise’s common stock. Pershing first detailed a road map in November 2025. The plan begins with a new agreement between the Treasury and the Federal Housing Finance Agency (FHFA) that addresses repayment or restructuring of Treasury’s senior preferred stock. The next step would be for the Treasury to exercise its warrants to purchase 79.9% of the GSEs' common shares. The final step would be FHFA approval for the GSEs to relist on the NYSE as privately owned operating companies. “The relisting and release of F2 will be one of the few major pieces of economic policy the President can still achieve after the midterms,” Ackman and Israel wrote. “We believe that there is no credible alternative to F2 exiting conservatorship and relisting on the NYSE as private-sector-owned operating companies.” The memo also says Treasury Secretary Scott Bessent has indicated the administration will focus on the GSEs and their future ownership status in 2027 and 2028. 18 years under consevatorship Fannie and Freddie have been in conservatorship for 18 years. According to the Pershing memo, they now have more than $200 billion of shareholder equity. Over the past decade, average annual credit losses have been “only 0.05%,” and current capital levels are described as roughly 50 times that loss rate. Ackman and Israel estimate that combined capital could grow to more than $375 billion over the next five years, or more than 4% of the mortgage-backed securities guaranteed by the enterprises. On valuation, the memo says the GSEs currently trade at about 1.5 times their earnings. From Trump’s election through the end of last year, when talk of a relisting was more active, their share prices rose by about eight times. This year, by contrast, their share prices have fallen more than 60% as the administration has remained “silent” on the issue, the investors said. Pershing Square is heavily exposed to the outcome. The fund holds about 99 million shares of Fannie Mae, with a market value of roughly $422.5 million, along with roughly 95 million shares of Freddie Mac valued at about $386.9 million, according to the memo. Related More: Conservatorship Fannie Mae Freddie Mac Trump Administration",
+        "published_at": 1794865257000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794865259000,
+        "extraction": "semantic",
+        "canonical": "https://housingwire.com/articles/ackman-fannie-freddie-conservatorship-relisting-trump",
+        "content_hash": "0e1e2d606c2f7c177cf7902525ebfc89fd6faf5e23590c60406e5c23f096abf1",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "171e0ba888840eac",
+        "source_family": "housingwire",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "Earnest Money Deposit Explained: What It Is And How It Works - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOS0FKMFNVa2UzakgxSVF2RzVpOWdnX2hocDQxeXhDYnR2cmFLME9ZUjhmWmphbTZhYTIwOFhvWHhDVGwtcFQxQ1lxQUhkNWwwRV9YdkU0T3VmWm5nVGRJYVV5VUpQdTd2bHl5Q3VGSXFFOW9qa3ZEb21pc0VLZzNFX0JpRUdCdVRndExzY3R2OUdrdUZfRkNHdQ?oc=5",
+        "description": "Earnest Money Deposit Explained: What It Is And How It Works &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794841528000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "35732704d64b993a",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "5 ways to help families sell a home after losing a loved one - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9uclY5ejdwYkh0SjVPUW5BVUlrT0huMW1IZjdaTkhETWlOeThSS3ByWHhVNjlCRnRMMGcyTElsVWZqSGZnUmV3WDV0a1BUck9pb3BsOFl0QnVaa2lRQUI5d2RCVDVnYzFCSXow?oc=5",
+        "description": "5 ways to help families sell a home after losing a loved one &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794859326000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "26b19bd83ff606f3",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "Human Verification: What It Means For Real Estate Agents - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9LMHB3NTh0aDd6cjloemJWYy1haDVvNEUtMWphZ3AxUE5NLVBnMXlqVVMxcTZuN0RXVjAzUkw5UGd4X2pQNVEwWWF5TUFhZjk0eGYzbEE2Vk9ueFNpa1h3WS1EMDdIQmpLWGZ4azdtcWVUZi1SUlNGa2ZWTQ?oc=5",
+        "description": "Human Verification: What It Means For Real Estate Agents &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794823512000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "63c0e415b981a68b",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "Real estate keeps debating AI. It’s time to start measuring it - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMXk1b3pwWGMyalYzeGhabTNmY3FDb3A1QUlqeVdaeVNSM1BpYnhiQ2czR3o3cXJrQTFwWUU3TFV6TkJSVFRGV2dPNnVUQkVXSkM2NFBmRnFHYVprLXB1UHg5OFl3Z3pPR0dBaTcyY2J6YTdRNUowTkxFUERrV3BWMXBXV0FZc3VyNkpOS2ZCU21ENHg5c09RU2Rn?oc=5",
+        "description": "Real estate keeps debating AI. It’s time to start measuring it &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794816491000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "0ddfdc21e42d522e",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "Do Recruiting Tools Hurt Compass? No More Than Anyone Else: Survey - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5kUGF2dF9vVXZEMUJzdndKbmRLc2Y3dVA5YS1vN3dDZTR5b0czck11d2RObGtIcUh5Rm1uNVNhN3oxMzVpS3NmSUNqU1N1VmhJVXZPRXNKb3JXWWxVVDRiMmlpYTJmdGVVRWxQZ2ZuUGp1UUU?oc=5",
+        "description": "Do Recruiting Tools Hurt Compass? No More Than Anyone Else: Survey &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794838099000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "a85664a3b11efa2e",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "Compass is right about the fines and wrong about the fix - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1hemZJbk9HMVlBYXF0d2g4bmJwYnF1dnk3Nnl1Ty1qQXRraTNRYm43TF9IeGVtRHBVRmFyRk1nWXMtdmtnVnhN?oc=5",
+        "description": "Compass is right about the fines and wrong about the fix &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794859326000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "46fb5066d88a4cd3",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "Why Real Estate's Biggest AI Fans Keep The Tech On A Short Leash - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1vblk3cDg5MW1uY3hiQ1ZfdEotVWRVQ0x5T2phbmxqNWIxLXNzTThqTm80ZXdtTzZqbkRQYVNnZXJ4elVyWFZQM2I4TVY2Y1dzakQzbTFONGdlRGd0eVFTZjFhY05TZ1RvQThr?oc=5",
+        "description": "Why Real Estate's Biggest AI Fans Keep The Tech On A Short Leash &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794841528000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "5d1b7e5e3e987060",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "Is your MLS on Compass’ lawsuit list? Learn the latest - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObmZHVG15eWI4SE95YlJocWcxZlRzSFRHU0JlYzhCZ19OblR3N0NuN19VcjdkRGdpZnpaQzJaa0VUMzhGMjdtdnZBQU1lOHRScU5hdHdRTWpGUDJwSnVHcUx0ellQcXMxQmlSUGtxbzhBM3VFOGZmamJGYllMLTlzSzViVlRVWFk3OFhHTm1mWQ?oc=5",
+        "description": "Is your MLS on Compass’ lawsuit list? Learn the latest &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794823512000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "a8208e177c53c1e3",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "El Niño is testing California’s coastal homes, and their insurance - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYmlvdENfakdRbFMtZjNWQy1JY0tKdnM3QUVVX1pQekEtNkx6Tk9DTWdPTFNUNkpBVjBseUt4bnhqSkcwem9tbkMwcnRZa0hqVlhqeG9La2dBd09nTGRkM3F0TUpFdjRWVGhjVUV4d1RoV19UWHdpWGk5WVNBXzVqaXhzcUtGOU5NWlNfWXlndWNJOFFlaWlteEgyakhMakE?oc=5",
+        "description": "El Niño is testing California’s coastal homes, and their insurance &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794859806000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "31e289ad814ea86e",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "New launch alert: The Inman Newsroom podcast, a weekly roundup of real estate's top stories - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE91VTVJS1hWX1FvbzJ5RHBIT2NzcEYzWDNRN1BMV3RRMTFWN3otTjZ6UHFEZ2xvTTJIbmpqMFVBSDV5aUxkTTdabGppRWlOdzBETmVXWkRPSURIaDF6WGtwWkVGR2ZGSVU?oc=5",
+        "description": "New launch alert: The Inman Newsroom podcast, a weekly roundup of real estate's top stories &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1794837328000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "f3fb31077b54c370",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "What's Actually Driving AI Search Visibility For Real Estate Agents - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1BbktvOG82ZzNWQ3M1SXFjeHBlR3gwV19MZEJvaGdNWENLUnlhOGFRWk1wOEg1SGhBWkVWc1dXX2pTc3pBdGg5TUd2UjNwa2hjbE1yRmsxNWloRDRJUlI0S1psMEQ1eUE?oc=5",
+        "description": "What's Actually Driving AI Search Visibility For Real Estate Agents &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1789023600000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "8c13d121c26fbfde",
+        "acquisition_window": null,
+        "late_discovery": true
+      },
+      {
+        "source_id": "inman",
+        "source_name": "Inman News",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "housing",
+          "brokerage"
+        ],
+        "region": "national",
+        "title": "AI Is Making Real Estate Scams Harder For Agents To Spot - Inman Real Estate News",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZlhXeG43eHoxM2JfTkt6V1k2eEFTUGdwMlFDQ0xFTWFBMW1CcU40RndpdmpNdUxWTGd1WTN2MnRoVTYzZ05iMVJoYkFGSlBKUEg2M0JRRnY3UjNPX3JVVnRFcVQzV3l0bnBxcFlaTFhlUW5wXzFDVkFNVlItZUpyZmZlNWZjV2JjWVhJcHI0QUZfZEJS?oc=5",
+        "description": "AI Is Making Real Estate Scams Harder For Agents To Spot &nbsp;&nbsp; Inman Real Estate News",
+        "published_at": 1780383600000,
+        "source_family": "inman",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "1fe310836d971f71",
+        "acquisition_window": null,
+        "late_discovery": true
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "KDC Breaks Ground On New AT&T HQ In Plano: The DFW Deal Sheet",
+        "link": "https://www.bisnow.com/news/dallas-ft-worth/deal-sheet/kdc-breaks-ground-on-new-att-hq-in-plano-dfw-deal-sheet",
+        "description": "The relocation of AT&T’s global headquarters is officially underway. Courtesy of AT&T A rendering of AT&T’s planned headquarters campus in Plano The global telecommunications titan and developer KDC broke ground last week on a 54-acre corporate campus at 5400 Legacy Drive in Plano. The campus will feature seven buildings totaling 2.2M SF. AT&T expects to begin moving into the campus in the second half of 2028. “Our new headquarters in Plano is an investment for our current and future employees, and our North Texas community,” AT&T CEO John Stankey said in a statement. “With this new campus, we’re creating the environment that makes life better, drives collaboration and serves our customers for decades to come.” The campus will also include a 250-foot cell tower that will help improve wireless connectivity in the surrounding community. AT&T announced plans to relocate its global headquarters from Downtown Dallas to Plano at the beginning of the year. SALES Courtesy of Cushman & Wakefield Evolv at 370 N. State Highway 360 in Mansfield Greybrook Realty Partners acquired the 334-unit Evolv multifamily property in Mansfield from Advenir Living. The garden-style community was built in 2012 on nearly 19 acres at 370 N. State Highway 360. Greystone provided Greybrook a $39.2M acquisition loan for the property. The fixed-rate Fannie Mae loan carries a five-year term, with three years of interest-only payments followed by a 35-year amortization schedule. Cushman & Wakefield's Grant Raymond and Asher Hall represented the seller. Greystone's financing team included Richard Kourbage, Garvin Lee and Gillian McIlroy. *** Shorenstein Investment Advisers acquired the 356K SF International Plaza 3 office tower in Dallas' Lower Tollway submarket. The building was previously owned by M-M Properties. A sales price wasn’t disclosed, but the Dallas County Appraisal District listed the value of the building as $85M for tax purposes. The 13-story office tower was about 85% leased with a weighted average remaining lease term of approximately six years at the time of the deal. Shorenstein plans to add wellness amenities and expand the lobby with a new coffee bar, a tenant lounge and a sports simulator game room. *** Broe Real Estate Group acquired the 345-unit Maple Terrace Residences in Uptown Dallas from Houston-based developer Hines in an all-cash transaction. The 22-story luxury apartment building at 3003 Maple Ave. opened in August 2024. A sales price wasn’t disclosed, but Hines refinanced the property late last year with a $180.7M loan from MFA Financial. JLL represented the seller. *** Edloe Realty purchased the nearly 64K SF Cottonwood Medical Plaza at 1110 Cottonwood Lane in Irving from Rubicon Representation. The sales price wasn't disclosed, but the Dallas County Appraisal District gave the property a $7M appraised value for tax purposes. Edloe plans to continue its strategy of acquiring and improving multitenant medical outpatient buildings with the Irving property, which is its first DFW acquisition. Transwestern will handle future leasing for the project, while Partners Property Management will manage it. *** Courtesy of Steel Peak Properties The industrial outdoor storage site at 2605 N. Forum Drive in Grand Prairie Steel Peak Properties spent more than $2.1M on its first industrial outdoor storage property in Texas. The company bought the nearly 1.2-acre site at 2605 N. Forum Drive in Grand Prairie from Rockbrook Equity. The property is 100% leased to Elecnor Belco Electric. Steel Peak’s Eli Ray led the acquisition along with Chris Wong of Partners Real Estate. LEASES Planet Fitness franchisee Excel Fitness signed leases in Duncanville and Midlothian for two new locations of the gym chain. The company leased 29K SF in the Cedar Square Shopping Center in Duncanville from Texas Triangle Commercial Realty and 26K SF in the Midlothian Plaza Shopping Center in Midlothian from Agree Realty. The new locations give the franchisee 65 Planet Fitness locations in Dallas-Fort Worth. *** Skyward Construction Group will relocate its headquarters from Roanoke to Flower Mound after signing a nearly 21K SF lease at Silveron Office Center at 601 Silveron Blvd. Transwestern’s Collin Burwinkel and Justin Miller represented the building owner, Wigpir Properties. CONSTRUCTION AND DEVELOPMENT StreetLights Residential, in partnership with Foresta Holdings, began leasing its new multifamily community, The Linden, along Lake Viridian in Arlington. Work began on the 344-residence community at 3925 Viridian Village Drive in June 2025. *** Legacy Partners and its equity partner CrossHarbor Capital Partners broke ground on the 444-unit Legacy Arapaho multifamily community on a newly acquired 10.4-acre site at 250 E. Arapaho Road in Richardson. The vacant two-story office building on the site will be demolished. Grapevine-based Rampart Multifamily Inc. will serve as the general contractor for the project, which was designed by JHP Architecture/Urban Design of Dallas. Development is expected to be completed by the spring of 2029. *** Crescent Communities opened Harmon Melissa, a 146-townhome rental community at 3000 Harmon Drive in Melissa. Kimley-Horn was the civil engineer and landscape architect on the project, while NRP Group served as the general contractor. PEOPLE The Milestone Group promoted Rob Strong to head of acquisitions. Strong will lead the acquisitions team’s day-to-day operations and transaction execution. Before joining Milestone, Strong was a managing director at Ares Management Corp. *** Partners Real Estate added Adam Brown as an equity partner focused on industrial services in Dallas. Brown will represent owners and tenants in industrial transactions across DFW, with particular emphasis in the Great Southwest submarket of Grand Prairie, Arlington and Irving. Brown joins Partners from NAI Robert Lynn’s industrial division, where he was executive vice president. *** Newport Specialty Partners appointed David M.",
+        "published_at": 1794874162000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794874199000,
+        "extraction": "semantic",
+        "canonical": "https://bisnow.com/news/dallas-ft-worth/deal-sheet/kdc-breaks-ground-on-new-att-hq-in-plano-dfw-deal-sheet",
+        "content_hash": "e9e2e463f9e73c08039114b85c00d374d3d73aeb4ae4cd41d32f3686d65cf756",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "3a311dfdde1204a6",
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Austin Office Campus Lands $228M Refinancing Deal",
+        "link": "https://www.bisnow.com/news/austin-san-antonio/office/austin-office-campus-lands-228m-refinancing-deal",
+        "description": "Developer Jay Paul Co. has secured $227.5M in green financing to recapitalize an 881K SF office campus in Austin. The deal marks the largest commercial property assessed clean energy, or C-PACE , transaction in Texas to date, according to Nuveen Green Capital, which closed the financing for the property. Unsplash/micheile henderson The $227.5M refinanced a construction loan on Springdale Green, a Class-A office campus at 1011 Springdale Road, Nuveen announced in a press release . C-PACE allows commercial property owners to secure long-term, low-cost financing for sustainable projects. The fixed-rate loans are often used for properties looking to make upgrades in terms of energy efficiency, water conservation and renewable energy. \"The closing on Springdale Green reinforces the widespread adoption of C-PACE by institutional owners and developers,\" Cory Jubran, senior director of originations at Nuveen, said in an emailed statement. \"C-PACE’s flexibility and lower cost of capital compared to other forms of finance are helping drive large-scale development, including notable projects like this one in Austin, across Texas, and in other MSAs.\" C-PACE momentum has picked up over the past couple of years, with a record $3.7B deployed in 2025, a 53% year-over-year surge, according to nonprofit PACENation. Springdale Green is a LEED Gold and Fitwel-certified property. It comprises two six-story office buildings on a 30-acre site and features a fitness center, a covered parking garage and more than 31K SF of outdoor space. Austin's office market posted strong net absorption in the third quarter, reaching 124K SF in Class-A space and 253K SF total, according to a CBRE report . That total surpassed the 50K SF posted in the second quarter as tenants took substantially more space than they vacated. Average office asking rents trended \"gradually higher\" throughout the quarter, with Class-A office space averaging $58.54 per SF, a 2.5% year-over-year increase, according to the report. Continue reading this story with a free account Log in or register Related Topics: C-PACE , C-Pace Financing",
+        "published_at": 1794872542000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794872577000,
+        "extraction": "semantic",
+        "canonical": "https://bisnow.com/news/austin-san-antonio/office/austin-office-campus-lands-228m-refinancing-deal",
+        "content_hash": "e9d29b2c4eb93bcadbbd16b704012d06ac38f943dac2dc5004188cd283816897",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "d952c04fb10f9a6e",
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "How The Investors Upgrading Boston's Old Office Towers Are Luring New Tenants",
+        "link": "https://www.bisnow.com/news/boston/office/how-the-investors-upgrading-older-boston-office-buildings-are-luring-new-tenants",
+        "description": "Some of the aging office towers that define downtown Boston’s skyline are receiving face-lifts, and leasing activity this year shows they are starting to pay off. As more office buildings trade at low prices, the new owners of many of Boston’s older Class-A skyscrapers are upgrading buildings to attract tenants. These projects range from simple facade and lobby renovations to the addition of high-end amenity lounges, hospitality services and large conference rooms. In at least three cases, such renovation projects have led to a series of lease deals that have meaningfully improved a building’s occupancy. Bisnow spoke with landlords who have invested millions — and in some cases $100M — in these renovation projects about which strategies have proven successful. Courtesy of Synergy The newly renovated lobby at Synergy's 101 Arch St. \"The pricing is at all-time lows, but that doesn't get you all the way there,\" Synergy Head of Asset Management Brian Collins said. \"You do need to go one step beyond these acquisitions, and it's really a curated amenity repositioning.\" Synergy led the way in buying discounted Boston office buildings coming out of the pandemic, and more investors this year have followed suit. In June, Kendall Capital acquired the 11-story office building at 18 Tremont St. for $30M , roughly 29% of the $103M Jamestown paid almost seven years ago. Last month, Rockpoint Group bought back its 1.1M SF 100 Summer St. office building at a foreclosure auction for $260M , a fraction of the $806M it paid for the building in 2019. Rockpoint executives told The Boston Globe they are already looking into property upgrades for the office tower now that they were able to restructure their basis. These discounted prices are increasingly becoming available as office owners’ loans come due and lenders stop extending their maturities. This has led to more distressed deals but has also created opportunities for investors to come in at a lower basis and fund improvements that former landlords locked into pre-pandemic pricing might not have been able to make. Beacon Capital Partners Managing Director Meredith Majoch said at a Bisnow event last month that \"distress is finally trading, which is a good thing.\" And Cambridge Savings Bank Executive Vice President Ian Brandon said a wave of loan maturities next year will create \"a great deal of opportunity\" for these discounted deals. Bisnow/Taylor Driscoll The Library Lounge, a tenant-only lounge space on the first floor of One Lincoln Many of the office renovation projects that have taken place in recent years have involved a mix of amenity build-outs and exterior renovations — upgrades meant to attract a new set of tenants that are sifting through the overwhelming amount of space on the market. One of the most notable buildings Synergy has acquired over the last five years was 101 Arch St., a 21-story office tower in Downtown Crossing , which it purchased in 2024 for $78M . The prior owner, Clarion Partners , had paid $121.7M in 2005. Synergy invested roughly $20M in the property, including building out six spec suites and shifting the tenant-only lobby from Summer Street to Arch Street. The repositioning also included a new gym and a conference facility. Since buying the building, it has signed new leases or renewals totaling more than 220K SF with tenants including Folia Health, Shift Technology, Highland Strategy, Jobber Software and Groundcover. The landlord pursued a similar repositioning of 10 Post Office Square, a nearly 100-year-old office building Synergy acquired before the pandemic but one that had struggled over the last couple of years. The 14-story office building was the longtime home of Boston Private Bank & Trust Co., but the bank moved out several years ago, leaving the office building 57% vacant, Collins said. The renovation project included a new lobby and exterior, updates to Synergy's office in the building, and the attraction of a new Italian restaurant concept from famous restaurant brand Coje, which already operates the Cuban restaurant Mariel in the building. 10 Post Office Square reached 89% occupancy with more than 130K SF in deals since the renovations took place last year, Collins said. Courtesy of Synergy A renovated conference space inside Synergy's 10 Post Office Square This leasing has helped validate the company’s thesis on office that has led it to be one of the city’s most active buyers in recent years. \"When you put all that stuff together — the pricing, the fundamentals, our conviction in in-office attendance, and people wanting to be together — the office still makes sense today as a sector,\" Collins said. One of the most prominent office towers in the city, the 36-story One Lincoln, underwent its own renovations last year after being sold at auction to its lender, DivcoWest , for $400M. The price was less than half what the previous owner, Fortis Property Group , paid in 2006. DivcoWest embarked on a $100M renovation project , which included a new amenity center and a tenant-only lounge on the ground floor. It also updated the lobby with a new coffee bar and seating area. The renovations have paid off for the office tower, which had struggled after anchor tenant State Street vacated for the new One Congress office building. That space was taken by HarbourVest, which signed an 11-floor lease prior to DivcoWest's takeover. The new owner has locked down two additional leases : a 6K SF deal with artificial intelligence company Lovable and a 40K SF lease with biotech firm Collegium Pharmaceuticals DivcoWest Senior Director of Investments Joseph Steffano said tenant interest has also increased since the firm completed the renovations. Bisnow/Taylor Driscoll Dartboards in the tenant amenity center at One Lincoln office tower \"Amenities are usually the first stop on the tour, and sometimes the last stop as well,\" Steffano said. \"I would say the amenities and our ability, both just from people in the market knowing about",
+        "published_at": 1794871848000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794879377000,
+        "extraction": "semantic",
+        "canonical": "https://bisnow.com/news/boston/office/how-the-investors-upgrading-older-boston-office-buildings-are-luring-new-tenants",
+        "content_hash": "0c9cccf0d1c1925ffc509df1636d50c9aea49dd9b25dd5a2bcd08472441b6ca8",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "24f33200c7ca0139",
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Chetrit's 26 Broadway Office Tower Has Value Slashed By 68%",
+        "link": "https://www.bisnow.com/news/new-york/office/chetrit-family-woes-deepen-26-broadway-appraisal-slashed",
+        "description": "In the latest twist of fate for the Chetrit family, a Financial District office tower whose loan transferred to special servicing earlier this year has had its value cut dramatically. Wikimedia Commons/Ken Lund The Standard Oil Building at 26 Broadway The Standard Oil Building at 26 Broadway received a new appraisal of $147M, according to Morningstar Credit . That’s down 68% from the $465M value that was reported when it was last appraised in 2021. The owners took out a new $290M mortgage the following year, provided by Starwood Mortgage Capital and the Bank of Montreal and backed by the 840K SF office tower. But the debt has been troubled since earlier this year, when it moved to special servicing after the borrower said it wouldn’t be able to keep making payments. That came as the building was facing problems. Its cash flow was 30% down from the levels at which the debt was underwritten, according to Morningstar, and occupancy had fallen from 82% at the time its loan was originated to 75% at the end of March 2026. Morningstar lists Meyer and Jacob Chetrit as the loan’s sponsors, while Jacob signed for the mortgage in public records in 2022. Meyer Chetrit didn't respond to a request for comment. After Jacob Chetrit died in January 2025 , the Chetrit Group entered a chapter of turmoil as questions surfaced about how the family firm’s former real estate empire could fend off mounting troubles. The Chetrit Group defaulted on a $481M loan tied to a Chetrit portfolio in 2022. In 2025, Wells Fargo sued JPMorgan Chase , alleging that the portfolio’s net operating income had been overinflated and naming Meyer Chetrit as a defendant. A judge allowed the case to proceed this spring. The Chetrits were struck with tenant harassment claims at a Chelsea apartment building and sued by the city for violations at the Hotel Carter in 2025. Meyer and Joseph Chetrit were also subpoenaed earlier in the year , revealing details about the Chetrit Group’s finances. Meyer Chetrit testified in March that the organization was out of funds and that its portfolio value had dropped from around $964M at the end of 2022 to negative $80M. Additionally, the Chetrit Group had lost multiple properties within its portfolio to foreclosures, he said, including the former Cabrini Medical Center at 227 E. 19th St., 64-11 Queens Blvd. and 540 W. 38th St. Continue reading this story with a free account Log in or register Related Topics: 26 Broadway , Bank of Montreal , Chetrit Group , Jacob Chetrit , Meyer Chetrit , Special servicing , Starwood Mortgage Capital",
+        "published_at": 1794866194000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794866201000,
+        "extraction": "semantic",
+        "canonical": "https://bisnow.com/news/new-york/office/chetrit-family-woes-deepen-26-broadway-appraisal-slashed",
+        "content_hash": "3f7463cc13d20c5317beba5b9c8db93acffd7c1b5b0bd3bf416fc584d27a6c36",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "e1df4208053dca01",
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Macerich Acquires Oakridge Mall In San Jose For $250M",
+        "link": "https://www.bisnow.com/news/san-francisco/retail/macerich-acquires-oakridge-mall-in-san-jose-for-250m",
+        "description": "Macerich acquired the Oakridge mall in San Jose for $250M, expanding its Bay Area retail portfolio and boosting occupancy and income growth.",
+        "published_at": 1794861446000,
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "254d59392f4a4691",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Shopping Center In Metro Phoenix Sells For $116.7M",
+        "link": "https://www.bisnow.com/news/phoenix/retail/shopping-center-in-metro-phoenix-sells-for-117m",
+        "description": "The sale of the center is more than triple its 2017 price as metro Phoenix retail demand surges.",
+        "published_at": 1794860681000,
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "3ef2879b8f0cd47b",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Wall Street's Big CRE Lenders Are Pulling Back While Private Credit Fights For Deals",
+        "link": "https://www.bisnow.com/news/national/capital-markets/wall-street-s-big-cre-lenders-are-pulling-back-while-private-credit-fights-for-deals",
+        "description": "Wall Street’s top CRE lenders are pulling back as they wrangle through vintage loans made when interest rates were near zero.",
+        "published_at": 1794859551000,
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "4db408c884c4a4db",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "national-mortgage-news",
+        "source_name": "National Mortgage News",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "rates",
+          "macro"
+        ],
+        "region": "national",
+        "title": "FHA fund cushion fuels push for MIP cut, life-of-loan relief",
+        "link": "https://www.nationalmortgagenews.com/news/fha-fund-cushion-fuels-push-for-mip-cut-life-of-loan-relief",
+        "description": "The capital ratio is at its lowest level in five years, but still well over Congressional requirements and the industry again calls for a reduction in premiums.",
+        "published_at": 1794866392000,
+        "source_family": "national-mortgage-news",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "c0262fbc48f2634d",
+        "acquisition_window": {
+          "lower": 1793221200000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "national-mortgage-news",
+        "source_name": "National Mortgage News",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "rates",
+          "macro"
+        ],
+        "region": "national",
+        "title": "Builder-lender deals hit by credit crunch, material costs",
+        "link": "https://www.nationalmortgagenews.com/news/builder-lender-deals-hit-by-credit-crunch-material-costs",
+        "description": "Facebook X (Twitter) LinkedIn Email What’s at Stake : Profit margins for construction firms and lenders as costs for borrowing and materials climb. Supporting Data: 19 consecutive quarters of a specific financing trend reported by homebuilders. Overview bullets generated by AI with editorial review. Spencer Lee Technology Reporter Profile Email",
+        "published_at": 1794866223000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794866230000,
+        "extraction": "semantic",
+        "canonical": "https://nationalmortgagenews.com/news/builder-lender-deals-hit-by-credit-crunch-material-costs",
+        "content_hash": "3cc6a870d1d3bc83a7c154046ece69344a0641c9c83ae62f2aea428acb6659f7",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "7724b3522bedf72d",
+        "source_family": "national-mortgage-news",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793221200000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "national-mortgage-news",
+        "source_name": "National Mortgage News",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "rates",
+          "macro"
+        ],
+        "region": "national",
+        "title": "First liens may lag until 4Q27 as cash-outs, seconds compete",
+        "link": "https://www.nationalmortgagenews.com/news/first-liens-may-lag-until-4q27-as-cash-outs-seconds-compete",
+        "description": "Facebook X (Twitter) LinkedIn Email What’s at Stake: Mortgage lenders’ ability to navigate a 2027 in which first-lien volumes could be weak for much of the year but refinancing could inch up later. Forward Look: Expect cash-out refinances to potentially become more competitive with second liens by the end of next year. Overview bullets generated by AI with editorial review Fannie Mae now expects weaker mortgage volume through the third quarter of 2027, even after trimming its rate forecast to 7.2%. That squeeze is pushing originators toward second liens, and Bank of America Securities projects securitizations of those loans will jump nearly 22%. Bonnie Sinnock Bonnie Sinnock is National Mortgage News’ Capital Markets Editor at Arizent and has worked for NMN and affiliated publications since 1995. Her previous roles have included assisting in the &hellip; Read full bio Profile Email",
+        "published_at": 1794866054000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794867743000,
+        "extraction": "semantic",
+        "canonical": "https://nationalmortgagenews.com/news/first-liens-may-lag-until-4q27-as-cash-outs-seconds-compete",
+        "content_hash": "bc7a93cadfd2676561265cff9d0ea5c75bc40858a1beadce7aec43ffb75c69e3",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "1d172d242c50886b",
+        "source_family": "national-mortgage-news",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793221200000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "d-magazine",
+        "source_name": "D Magazine",
+        "source_tier": "D",
+        "source_weight": 5,
+        "source_tags": [
+          "dfw"
+        ],
+        "region": "texas",
+        "title": "Six Flags, Newport Specialty Partners, OncoNano Name New C-Suiters",
+        "link": "https://www.dmagazine.com/business-economy/2026/11/six-flags-newport-specialty-partners-onconano-name-new-c-suiters/",
+        "description": "Partners Real Estate Adam Brown, Equity Partner Adam Brown previously served as NAI Robert Lynn's youngest-ever EVP. Now at Partners, Brown’s efforts will be focused on industrial services, and he’ll represent owners and tenants in industrial transactions. He will primarily work in Grand Prairie, Arlington, and Irving. Brown is the third industrial broker hired at … Continued The post Six Flags, Newport Specialty Partners, OncoNano Name New C-Suiters appeared first on D Magazine .",
+        "published_at": 1794868117000,
+        "source_family": "d-magazine",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "d6aeb1225315cee1",
+        "acquisition_window": {
+          "lower": 1793826000000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "d-magazine",
+        "source_name": "D Magazine",
+        "source_tier": "D",
+        "source_weight": 5,
+        "source_tags": [
+          "dfw"
+        ],
+        "region": "texas",
+        "title": "Hot Property: A Dallas Midcentury Modern With Richardson Zoning",
+        "link": "https://www.dmagazine.com/home-garden/2026/11/hot-property-revisiting-a-midcentury-modern-in-its-natural-element/",
+        "description": "Built in 1966, 13321 Purple Sage Road is a midcentury modern home that makes the most of its relationship with the outdoors. Set beneath a canopy of mature magnolia and maple trees in North Dallas' coveted, the residence pairs natural textures with floor-to-ceiling windows that draw in the surrounding greenery. The design balances the simplicity … Continued The post Hot Property: A Dallas Midcentury Modern With Richardson Zoning appeared first on D Magazine .",
+        "published_at": 1794865225000,
+        "source_family": "d-magazine",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "71e7d6fce433e4d9",
+        "acquisition_window": {
+          "lower": 1793826000000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "phoenix-agent",
+        "source_name": "Phoenix Agent Magazine",
+        "source_tier": "D",
+        "source_weight": 6,
+        "source_tags": [
+          "phoenix",
+          "arizona",
+          "brokerage"
+        ],
+        "region": "arizona",
+        "title": "ARMLS named among defendants in new Compass litigation",
+        "link": "https://phoenixagentmagazine.com/2026/11/16/armls-among-defendants-new-compass-litigation/?utm_source=rss&utm_medium=rss&utm_campaign=armls-among-defendants-new-compass-litigation",
+        "description": "ARMLS previously was one of seven plaintiffs — all named in Compass’ suit — to file a joint complaint against Compass in October. The post ARMLS named among defendants in new Compass litigation appeared first on Phoenix Agent Magazine .",
+        "published_at": 1794867071000,
+        "source_family": "phoenix-agent",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "b74171a13641aea3",
+        "acquisition_window": {
+          "lower": 1794862800000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "lance-lambert",
+        "source_name": "Lance Lambert / ResiClub",
+        "source_tier": "B",
+        "source_weight": 10,
+        "source_tags": [
+          "housing",
+          "data",
+          "trend"
+        ],
+        "region": "national",
+        "title": "A look at the ResiClub Housing Cyclical Index: The signals that pointed to home price corrections in Austin and Cape Coral—and Chicago's resilience - ResiClub",
+        "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPY3YxSkN4SkZFU1RxODQ0T05VSUdYeGxMQXNuSzFoU1gyQjlSZkt4dldGcTRBUjB3Zlg2V1dJWnNORXNHSkpWOXJjRGJycFIySnBoeE1nc2xQUkNFRlVzN3pocHlGb1gwbXNpUk12bUpYNndkWGVqYU9GSVFMNF9GZ1JMSjZuaUt5eXRkN0ZaUzI0bEdORFdwM1ROcS0yNzRuelFBdjdreTZESGxPaHB5bUwtNHhXOFo3YThYdWdnc1hiSDBOeXVlQmI1dGI?oc=5",
+        "description": "A look at the ResiClub Housing Cyclical Index: The signals that pointed to home price corrections in Austin and Cape Coral—and Chicago's resilience &nbsp;&nbsp; ResiClub",
+        "published_at": 1794882196000,
+        "source_family": "lance-lambert",
+        "is_research": true,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "a962751d27c908eb",
+        "acquisition_window": {
+          "lower": 1794862800000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Aging Parents and Empty Nests Force Homeowners To Rethink Layouts Years Before the Move",
+        "link": "https://www.realtor.com/advice/home-improvement/aging-parents-homeowners-remodel-future-proofing/",
+        "description": "Most homeowners know their homes may need updates to accommodate their changing needs as they age. Some, however, are thinking even further ahead. Instead of waiting until those changes are necessary, they’re investing in renovations years in advance to prepare for aging parents who might eventually move in after their children leave the nest. Angi’s 2026 State of Home Spending Pulse study found that 66% of homeowners plan to make a major home investment within the next five years. And the 2027 Home Trends To Watch report predicts that 2027 will be the year they take a proactive approach and focus on creating a home that grows with them. If you own your home, experts agree that you should anticipate how your needs could change in the next five to 10 years and use that information to guide your long-term home improvement goals today. By doing so, you can make the most out of your renovation budget, avoid costly last-minute adjustments, and ensure your home comfortably adapts to the different stages of life. What's driving this trend? Matt Plaskoff, CEO and founder of One Week Bath in Los Angeles , is seeing this proactive, multigenerational \"future-proofing” trend among his clients. “It comes down to people having heard stories of it going the other way. Mom falls or receives a diagnosis, and suddenly the family is trying to put in a walk-in shower and grab bars on short notice while suddenly incurring more costs with doctors and insurance,” says Plaskoff. Multigenerational living is also at an all-time high, and the recent National Association of Realtors® Profile of Home Buyers and Sellers report reflects this shift. It found that 17% of homes purchased last year were intended for multigenerational households. And when adult kids leave, there’s suddenly more space that makes it easier to create a home that works well for both aging in place and aging parents. We can’t forget the housing affordability crisis forcing families to rethink the homes they already own. “The house may no longer fit the household, but buying a better-fitting home can mean a higher price, a higher mortgage rate, and higher monthly expenses,” says Jon Brooks , co-founder of Momentum Realty in Jacksonville, FL . Plus, it's more cost-effective to future-proof your home when you plan properly and actually have the funds to support your projects. “The worst time to remodel is when you don’t have the budget for it. You make decisions that should take time and careful planning under pressure and may just accept whatever contractor can show up ASAP, even if it means you have to pay more,” says Plaskoff. There is also a practical side. If you're already opening up walls for a bath remodel, for example, adding blocking for future grab bars, widening a doorway, or adding a curbless shower will be faster and cheaper than if you were to come back later and redo finished work. Loading... If you're thinking about starting a new remodeling project, think ahead to your needs. Realtor.com/Getty Images Balancing safety, privacy, and resale Experts agree that a strong universal design features a functional yet beautiful bathroom with a wider doorway, good lighting, lever handles for knobs, a walk-in shower, and slip-resistant flooring. “If done right, it feels more like a spa than a hospital, and that’s what matters most to those who are using it every day,” Plaskoff explains. A home that supports privacy and independence is just as important. “An example can be a primary suite on the ground floor with its own bathroom, or a room with a separate entrance. Parents want to keep their routines and privacy, without having to sacrifice accessibility,” says Plaskoff. You might also consider adding a second structure to your backyard like an accessory dwelling unit or tiny home. “For families with the space, an ADU is one of the best solutions we see. It gives an aging parent true independence, with their own kitchen, bath, and front door, while keeping them close enough for daily connection and support,” explains Michelle Squire , designer and principal at Studio SQUARE in San Francisco . If long-term resale is important to you, be sure to consider what buyers value in your neighborhood. This way you can determine where to make permanent changes and where to keep things flexible. “If you’re overimproving for the area, just understand you may have a harder time recouping that money if you choose to sell,” says Christina Rordam , real estate agent at Florida Realty Investments in Orlando, FL . At the end of the day, prioritize flexibility, try not to over improve for the neighborhood you’re in, and most importantly, consider what works best for you and your family.",
+        "published_at": 1794869881000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794869883000,
+        "extraction": "semantic",
+        "canonical": "https://realtor.com/advice/home-improvement/aging-parents-homeowners-remodel-future-proofing",
+        "content_hash": "cc40e77959fb04394b4d611a74a3e09f005c8b2448a860f53f37fc685ae674f3",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "c267606fa8155e6f",
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Inside the Properties James Bond Has Made Famous as Robert Pattinson Gears Up to Play 007",
+        "link": "https://www.realtor.com/news/celebrity-real-estate/james-bond-real-life-properties-filming-locations/",
+        "description": "It’s official: Robert Pattinson is stepping into the role of James Bond . The news comes after years of speculation surrounding who might succeed Daniel Craig —who was the sixth actor to bring 007 to life, and portrayed the British spy in five films, ending with 2021’s “No Time To Die.” The official James Bond X account shared a first look of Pattinson donning the infamous tux for the role, captioned “Identity Confirmed.” “James Bond is one of the most legendary characters in cinema, and to be entrusted with 007 is the honor of a lifetime,” Pattinson said in a statement . “To say this role is a dream come true is an understatement.” Director Denis Villeneuve alluded to the search for the next Bond in the statement. Loading... Robert Pattinson has been announced as the next James Bond. He's the seventh actor to bring Agent 007 to life. Photo by Dia Dipasupil/Getty Images “I want to express my deep gratitude to the remarkable actors who joined us on this journey,” the “Dune” director said. “We were surrounded by extraordinary talent, but there can only be one 007.” Dozens of potential candidates have been floated as possibilities since Craig’s reign came to an end, including Idris Elba , Jacob Elordi , Callum Turner , and John Hardy . Bond first walked onto the silver screen in 1962, when Sean Connery brought the iconic book character to life in the first film, “Dr. No.” There have been a whopping 25 Bond films so far, with Pattinson suiting up for the 26th. After seven films, Connery ended his run in 1983 with “Never Say Never.” In 1969, George Lazenby became the only actor to star in a single film in the franchise, with “On Her Majesty’s Secret Service.” Roger Moore held the role from 1973 to 1985, also impressively holding the gig for seven titles. Next up was Timothy Dalton , who starred in two films between 1987 and 1989. Pierce Brosnan reinvigorated the franchise when he became Bond in 1995, holding the job until 2002. In 2006, Craig ushered in a new era, tackling 007 with a more rough-and-tumble edge. Perhaps even more impressive than the scale of actors who have taken their martinis shaken, not stirred, is the sheer number of filming locations the franchise has made its mark on for over 60 years. Hunting Bond, a fan site that tracks the locations, has identified nearly 600 filming spots across the world. While the James Bond universe is certainly action-packed, it’s also quite aspirational, and has often provided viewers with rich backgrounds and fascinating properties that became characters in their own right. It would be nearly impossible to rank all of the lavish homes Bond has stepped foot in over the years, but there are definitely a handful that stand out in memory. The Elrod House in Palm Springs Loading... The iconic Elrod House in Palm Springs, CA, was in \"Diamonds Are Forever.\" Leland Y. Lee/Conde Nast via Getty Images Loading... The home was built for interior designer Arthur Elrod. Realtor.com Loading... In the film, Sean Connery's Bond pushes an enemy into the home's half-moon pool. Bob Penn/Sygma/Sygma via Getty Images Even without a connection to one of the Bond films with the strongest pop culture staying power—”Diamonds Are Forever,” of course— the Elrod House in Palm Springs, CA , is an incredible dwelling. Perched on a hillside overlooking Coachella Valley, the 8,900-square-foot home was designed by modernist architect John Lautner for interior designer Arthur Elrod . The fascinating structure has a concrete dome-shaped roof, a circular living room, and a half-moon swimming pool that Connery’s Bond threw an enemy into during a heated fight scene. Villa Sylva Loading... A Greek property overlooking the Ionian Sea, called Villa Sylva, served as a backdrop in \"For Your Eyes Only.\" Google Earth Loading... In the Roger Moore-led film, the estate is assumed to be in Madrid. Oscar Abolafia/TPLP/Getty Images Villa Sylva is a picturesque Greek estate that’s appeared in a handful of movies, including Moore’s “For Your Eyes Only”—although in the film, it assumed the role of the Madrid home of hitman Hector Gonzales. The 12-bedroom luxury villa boasts unobstructed views of the Ionian Sea and is perched on an idyllic 10-acre property. Today, it can be rented as a wedding venue or a vacation home sleeping up to 18 people. Luton Hoo Estate Loading... Luton Hoo, a distinguished estate an hour's drive from London, has appeared in dozens of projects, including two Bond films. Tony Evans/Getty Images Loading... The property was a filming location in Pierce Brosnan's 1999 film, \"The World Is Not Enough,\" as well as Sean Connery's 1983 flick, \"Never Say Never Again.\" Keith Hamshere/Getty Images Given Bond’s important role at the UK-based M16, it only makes sense that at least some of the locations had to be local. The sprawling Luton Hoo Estate was a location in Brosnan’s 1999 film, “The World Is Not Enough” and Connery’s 1983 return for “Never Say Never Again.” It’s also been featured in dozens of other projects, including “Downton Abbey.” Built in 1903, the property is about an hour’s drive from London—a journey that would probably be cut in half when Bond is behind the wheel. The historic English country estate spans more than 1,000 acres and has a handful of structures—most notably, a five-star hotel and an exquisite mansion. The Ocean Club Loading... \"Casino Royale\" took viewers to the picturesque Bahamas. Google Earth Loading... Daniel Craig's Bond stays at a villa in the breathtaking Ocean Club and takes a dip in the gorgeous water. PIERRE-PHILIPPE MARCOU/AFP/GettyImages Loading... The Ocean Club is a luxury vacation resort, but also has 67 \"turnkey oceanfront residences\" available for ownership, with pricing starting at $7.5 million. poladamonte/Adobe Stock Craig’s Bond debut in the 2006 film, “Casino Royale,” was set in the breathtaking Ocean Club in the Bahamas. The luxury resort has a number of sea-view villas for rent, including one that served as the perfect backdrop for",
+        "published_at": 1794868816000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794868819000,
+        "extraction": "semantic",
+        "canonical": "https://realtor.com/news/celebrity-real-estate/james-bond-real-life-properties-filming-locations",
+        "content_hash": "1263e9d3a688d8099fb5c2c9f7ed702d49bee11bff76d932d00392943cae6b50",
+        "access": "preview",
+        "evidence_status": "preview",
+        "id": "5c599acf568c6485",
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Jennifer Lopez Celebrates ‘Freedom’ as an Empty Nester Since Her Twins Left California Home for College",
+        "link": "https://www.realtor.com/news/celebrity-real-estate/jennifer-lopez-empty-nest-twins-college-california-home/",
+        "description": "Jennifer Lopez has admitted that she is enjoying the \"freedom\" that comes with living alone after her 18-year-old twins, Max and Emme , left their California home for college. The 57-year-old singer and actress —who is attempting to sell her and ex-husband Ben Affleck 's $50 million marital mansion —once again opened up about the realities of being an empty nester while appearing on \"The Tonight Show Starring Jimmy Fallon.\" The singer , who shares the twins with ex-husband Marc Anthony , admitted that she \"cried for six months straight\" when her twins headed off to college. Although Lopez confessed it has been \"emotional,\" she insisted it has also been an \"amazing\" journey. “It’s all the feelings. It’s like one of those moments in life where you’re just, you’re sad, you’re melancholy, but you’re excited and you’re hopeful—there’s just so many feelings that go with [it]. I cried for, like, six months straight, like, two months before they graduated until I dropped them off and then a few weeks after that,\" she said. Loading... Jennifer Lopez has admitted she is enjoying the \"freedom\" that comes with living alone after her 18-year-old twins, Max and Emme, left their California home for college. Instagram/Jennifer Lopez “It’s crazy ... like, I still have on my phone them on my lap, as babies,\" she added. \"It goes so fast, just like everybody says.” The A-lister admitted that she is now getting comfortable with the \"freedom\" she has living alone. “It’s the first [time] since I was, I don’t know, in my early 20s that I haven’t been with someone, had my kids. I’m alone, I’m free—I can do whatever the f--- I want! And it’s kind of amazing, but also weird,\" she joked. In October, Lopez said she was channeling that “devastation” into her music. Speaking to Variety , the hitmaker revealed that living alone has inspired a burst of songwriting, producing material she believes could become some of her biggest hits. “They take up such a big part of your brain for so long, and when they’re gone, which is devastating and sad and scary, you’re facing a life that’s totally different now, and you’re like, ‘What am I going to do with this space and this time?’\" the hitmaker said. \"For me, I just went back in the studio. I’ve written some of the best songs that I’ve ever written, and I’m really excited. “It’s a very happy-era album. It’s some of the most joyous, beautiful songs that have just a tad of a tear in them,\" she added. Her comments come mere weeks after she got candid about her kids going off to college in an emotional social video. \"My kids are going away to college,\" she said while going through her morning skincare regimen. The \"On the Floor\" singer revealed that she made a point of soaking up as much time as possible with Max and Emme over the summer, including traveling with them before they began their new lives away from home. Loading... The 57-year-old singer and actress—who is attempting to sell her and ex-husband Ben Affleck's $50 million marital mansion—once again opened up about the realities of being an empty nester while appearing on \"The Tonight Show Starring Jimmy Fallon.\" Jimmy Kimmel Live Loading... The singer, who shares the twins with ex-husband Marc Anthony, admitted that she \"cried for six months straight\" when her twins headed off to college. Instagram/Jennifer Lopez Loading... Although Lopez confessed it has been \"emotional,\" she insisted it has also been an \"amazing\" journey. Instagram/Jennifer Lopez \"I was thinking about this summer and what a great summer it was. We got to go away together. I spent as much time with them as I could,\" she recalled. Lopez revealed she was facing the reality of returning to a much quieter home—and admitted that it hasn't been easy. \"When they go away and I'm sitting here being an empty nester, and crying and thinking about them and looking at baby pictures of them and all of that stuff, these routines are the things that are going to keep me kind of sane,\" she shared. For Lopez, those routines include exercising, taking care of her skin, and making an effort to prioritize herself as she navigates the newfound free time that comes with having two college-age children. \"Working out, doing my skincare routine, caring for myself, with the newfound kind of space that's in your life,\" she said. But the superstar also acknowledged that the milestone comes with conflicting emotions. While she is thrilled to watch Max and Emme begin their adult lives, their departure also marks a major change for her. \"You're so excited for them to step into this new era of their life, but it's also, we have to remember, it's a new era of our lives, too,\" Lopez explained. She encouraged other parents experiencing a similar transition to look at the change as an opportunity to reconnect with interests or ambitions that may have taken a back seat while raising children. \"Maybe it's time to revive some old dreams that you had,\" she suggested, adding that parents might return to something they \"put aside during the time that you were raising your kids\" or simply pursue activities they previously didn't have time for. Still, Lopez didn't shy away from admitting that embracing such a significant lifestyle change can be daunting. Loading... “It’s all the feelings. It’s like one of those moments in life where you’re just, you’re sad, you’re melancholy, but you’re excited and you’re hopeful—there’s just so many feelings that go with [it]. I cried for, like, six months straight, like, two months before they graduated until I dropped them off and then a few weeks after that,\" she said. Instagram Loading... The A-lister admitted that she is now getting comfortable with the \"freedom\" she has living alone. Instagram \"It's a scary time. It's a transitional time. It's a new beginning, in a lot of ways, for them, certainly, but also for you,\" she said. She ended her message on an optimistic note, urging others entering the empty-nest phase to continue looking after themselves and fin",
+        "published_at": 1794867077000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794867081000,
+        "extraction": "semantic",
+        "canonical": "https://realtor.com/news/celebrity-real-estate/jennifer-lopez-empty-nest-twins-college-california-home",
+        "content_hash": "f29eae1c442c258c037cf5ed8ff97a4adc3953a043f12ad24d4ab73c10885c86",
+        "access": "preview",
+        "evidence_status": "preview",
+        "id": "68365215ad335b5f",
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Nantucket Brokerage Must Pay $1.3 Million to Buyers Who Couldn’t Expand Their Home as Desired",
+        "link": "https://www.realtor.com/news/trends/nantucket-home-lawsuit-william-raevis-additions-permits/",
+        "description": "A Massachusetts judge and jury have ordered a Nantucket real estate firm to pay nearly $1.3 million to a couple after finding that one of its agents misrepresented whether a home could be expanded to fit their family of eight. The years-long legal battle centered on a 2-bedroom, 1,200 square-foot property purchased by Dr. Mary Murray and Jeff Ment. Murray, an obstetrician, and Ment, a lawyer, live in Westport, CT , but spend summers with their six children in Nantucket, MA. Their kids “all love to be there. Every single one of them loves to be on the island, and we love to be with them,” Murray tells Realtor.com® . Their real estate agent, Melanie Gowen , helped them find rentals in previous years, and in 2020 she represented them in their purchase of 151 P olpis Rd . for $1.41 million. Murray says the home wasn’t ideal, but in the ultra-competitive Nantucket market, where the median listing price is $5.995 million, they felt lucky to buy anything at all. And Murray says the family was reassured after, Gowen, an agent with William Raveis Nantucket, told the couple they’d have no problem building an addition to accommodate their six children. “She said, ‘Listen, I know it’s the smallest house. But it’s a great buy. The best part about this is it’s an undersized house on an oversized piece of property that you can double,’” Murray says. According to the couple, Gowen said she went to the island’s building department and confirmed expansion was possible. She’d even sketched out the addition and sent a video of the planned build, Murray said. In Nantucket, specific rules govern how many bedrooms a home can be zoned for. But Ment said Gowen openly discussed how a homeowner could get around those rules by calling an addition a den or a living room, then adding a bed. “In writing, she had told us, ‘I know you can't call anything a bedroom, but you can do what's always done on Nantucket and call it some other room and use it as a bedroom,” Ment said. In early 2021, Murray and Ment began planning the addition and contacted the town about a septic upgrade and expansion and learned that “absolutely not another inch or square foot can be added to the property,” Murray said. “That's when everything started to crystallize that it wasn't quite as advertised,” Ment added. Loading... The median listing price for homes on exclusive Nantucket Island is $5.995 million. Google Earth Without an addition, the home was too small for their family and essentially useless to the couple. Ment and Murray confronted Gowen. “She tells us we're incorrect, that of course it can be doubled,” Ment says. “We say we don't think we're incorrect, but, you know, go ahead and do what you can do.” She then called back with her colleague, Kenny Hilbig , on the line. Hilbig told the couple, “Turns out it can't be expanded due to a deed restriction. And we're gonna work with you to figure this out,” Ment recalls. Hilbig initially suggested that they might be able to “trade” their property for another home. “He knew of some other properties that were coming on the market,\" Ment says. \"He thought we could basically trade a house somehow.” But that idea didn't come to fruition. Hilbig then suggested that the brokerage William Raveis Nantucket might give the couple a bridge loan to purchase a third home. The company nixed that option as well. Murray and Ment claim Hilbig then told them the only way they could recoup anything from the brokerage directly was to sue. So in June 2021, Murray and Ment filed a lawsuit in Norfolk Superior Court. The couple sued Gowen and William Raveis for misrepresentation; negligence; breach of contract; breach of implied covenant of good faith and fair dealing; breach of fiduciary duty; and violation of the Massachusetts Consumer Protection Act, otherwise known as 93A, for willfully and knowingly making unverified misrepresentations in trade/commerce and failing to make a reasonable settlement offer after receiving a formal demand letter. The lawsuit alleged that “Since Dr. Murray and Mr. Ment had been working with Ms. Gowen for so long, they trusted her, her opinions, recommendations, referrals, and relied on her island knowledge. Ms. Gowen had represented that she possessed experience both building and designing homes on the Island of Nantucket. Ms. Gowen held herself out as not only a real estate agent but as an interior designer and property developer.” In January, a jury awarded Murray and Ment $1.28 million in damages. Loading... Jeffrey Ment and Mary Murray said they purchased the 2-bedroom home on Polpis Rd. because they wanted to have a summer base for their family. HDjeff/Adobe Stock Following the verdict, William Raveis and Gowen asked for a judicial review of the jury verdict. In June, a Superior Court judge upheld the verdict and the award. Then in October, William Raveis and Gowen filed an appeal. “We obviously disagree with the outcome of the case, which is why we have filed an appeal,” wrote William Raveis's lawyer, Ray Cashen , in an email to Realtor.com . “The fact that Mr. Ment testified at trial that even he does not believe that Ms. Gowen ever lied to him severely undermines the jury’s verdict and the Court’s decision on the Chapter 93A claim. In addition, eleven days before the sale was completed, the plaintiffs were provided with the exact document that prevents expansion of the home, and they had two lawyers review that document (including Mr. Ment). They apparently did not understand the restrictions contained in the document, yet somehow expected their real estate agent to recognize its impact.” “Moreover, they always knew that the home could not be expanded to contain more than two bedrooms due to septic restrictions,” the email continues. “In fact, the plaintiffs attempted to have the sellers of the home waive the two-bedroom septic restriction, but the sellers refused and these plaintiffs bought the house anyway, then later sold the house for several hundred thousand dollars in",
+        "published_at": 1794866055000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794866059000,
+        "extraction": "semantic",
+        "canonical": "https://realtor.com/news/trends/nantucket-home-lawsuit-william-raevis-additions-permits",
+        "content_hash": "553e58a2a2a148e331a67750427bf87b28d005204cfcb605d6b0cb7e8504c65d",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "896544c5c0f77781",
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Landlord With Dark Past Is Charged With the Murder of Disabled Tenant Who Was ‘Late on Rent’",
+        "link": "https://www.realtor.com/news/trends/landlord-murder-charge-jonah-jeter-new-mexico/",
+        "description": "A New Mexico landlord is accused of fatally shooting his disabled tenant amid an alleged eviction dispute.",
+        "published_at": 1794865022000,
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "5248dec79b00fe43",
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Retail Media Networks: Different Strategies for Different Shoppers",
+        "link": "https://www.connectcre.com/stories/retail-media-networks-different-strategies-for-different-shoppers/",
+        "description": "Retail media networks continue to develop, Placer.ai reports in a new white paper. In many stores, advertisements on screens, on personal devices, or over audio have become a regular part of the shopping trip. \"For the brands buying that in-store retail media space, getting ROI on their ad spend begins with a few simple questions ... The post Retail Media Networks: Different Strategies for Different Shoppers appeared first on Connect CRE .",
+        "published_at": 1794879755000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "706cb6a00127b4f3",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "High Street Logistics Properties Picks Up 300K-SF Logistics Facility in Tolleson",
+        "link": "https://www.connectcre.com/stories/high-street-logistics-properties-picks-up-300k-sf-logistics-facility-in-tolleson/",
+        "description": "High Street Logistics Properties acquired a 302,640-square-foot cross-dock distribution facility located at 9704 West Roosevelt Street in Tolleson, Arizona. The building, known as the Palo Verde Distribution Center, sits on 13.83 acres and includes roughly 8,000 square feet of office space. Strategically positioned near the interchange of Interstate 10 and Loop 101 in Phoenix's Southwest ... The post High Street Logistics Properties Picks Up 300K-SF Logistics Facility in Tolleson appeared first on Connect CRE .",
+        "published_at": 1794865038000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "d1f908fa2d0077f3",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Fort Collins Affordable Housing Community Refinanced with $17.2M HUD Loan",
+        "link": "https://www.connectcre.com/stories/fort-collins-affordable-housing-community-refinanced-with-17-2m-hud-loan/",
+        "description": "Johnson Capital Multifamily LLC (JCM) and Gershman Investment Corp have arranged a $17.2-million HUD-insured refinancing for Caribou I & II, a 193-unit affordable multifamily community in Fort Collins, Colorado. The loan was completed through HUD’s Section 223(f) program and carries a 35-year term. The mortgage will be funded through the issuance of Ginnie Mae ... The post Fort Collins Affordable Housing Community Refinanced with $17.2M HUD Loan appeared first on Connect CRE .",
+        "published_at": 1794864729000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "ccf62b65b6530c4a",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "AI Startup Aaru Commits to Expansion in NYC",
+        "link": "https://www.connectcre.com/stories/ai-startup-aaru-commits-to-expansion-in-nyc/",
+        "description": "Artificial intelligence startup Aaru has committed to creating 650 jobs in New York City over the next five years, Gov. Kathy Hochul's office announced. The company will lease and build out more than 27,000 square feet of office space near Union Square, growing its workforce from about 60 employees today to more than 700. The ... The post AI Startup Aaru Commits to Expansion in NYC appeared first on Connect CRE .",
+        "published_at": 1794864231000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "462c926c1800fd90",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Ariel Finalizes Sale of East Harlem Development Site",
+        "link": "https://www.connectcre.com/stories/ariel-finalizes-sale-of-east-harlem-development-site/",
+        "description": "Ariel Property Advisors arranged the $7-million sale of 224-228 E. 118th St., a development site in East Harlem. An Ariel team led by director Howard Raber, along with founding partner Michael A. Tortorici and director Alexander Taic, arranged the transaction for the seller, 118 Standard. The buyers were Joe Katz and Mark Miller of Grun ... The post Ariel Finalizes Sale of East Harlem Development Site appeared first on Connect CRE .",
+        "published_at": 1794862951000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "208f098f295cfeab",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "houston-bj-cre",
+        "source_name": "Houston Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "houston",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "TAMLYN: 55 Years of Family, Value, and Service - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE54NzlTVllBVkx0YWNibnJtWU5QRUNKeUx5SnBBY0laUW1DOTVaT3dYbDMwMVdDeXhRbEZST24yeE9uM0ZnLTZwRXRmcFBYRWxTSFBoMkRuSEkza2pnWGI4bFM5ckc4djl0V2JFbW1WZU5SSnl0cWZYMg?oc=5",
+        "description": "TAMLYN: 55 Years of Family, Value, and Service &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794879345000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "2d0c586b9d89ff4f",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "houston-bj-cre",
+        "source_name": "Houston Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "houston",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "HISD preparing for possible return to elected school board as early as January - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMS1sbU9PNjdEa095YUNnblpyV09tZFcydHpscnA4T1ZfMk5KZXdMZUwtMXg3LVk2ZktVNW8xZjlWVHNBRDNIYi1ISDd0R0tHNWZCV1BMYUVXemJwM2pDTWRjVjFramh0RE9XOHljQ21PSkwtNTVReHJBRzRlMTQ1TzVicGFCZG9HVDZNeElDSUJGaGYtU1BxZnBwNU5fdmtlSzJpU3BfeW9KRFU?oc=5",
+        "description": "HISD preparing for possible return to elected school board as early as January &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794856860000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "da203618b2246251",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "houston-bj-cre",
+        "source_name": "Houston Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "houston",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Ben Melson, Career Update at Grey Havens Strategies - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMGxQQXNDQWZWbG9jU0NabWV0dWN4d2RUN210QTQxMC1kRzQxWnRlMXJLWlIxd1BTWmpRX24wNWxHRG9UR1pFUGlvZDN6R1czNEkwOGJWVEU3SXQxYml5UHJmYkdIeGlMcDdJZDFDZV9vZVZNa0k1RXptYzg1Y29vQmhaazRJaWVrN1Vz?oc=5",
+        "description": "Ben Melson, Career Update at Grey Havens Strategies &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794868731000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "167341e7ca3bea9d",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "houston-bj-cre",
+        "source_name": "Houston Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "houston",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Hancock Whitney to acquire Trustmark Bank in $3.2B all-stock deal - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSS10Z21XM1FVY3pMZmRWWXNoaWMzZUtJSDA0MUtnRjkySk1odTBUWGFlQldsT0FNWmZrWVF3dHdFTmdhbVVTQlVMdmpHU3BBZXJLazE5MWJMdEtnbTdxa1dPOTFsMWdxZms0OUoxa0FjY2xuWVFHakZjNEtkRVd5NEVLUE02bzZWR0gwTWtRQWhJQk52OHdHdmhIYw?oc=5",
+        "description": "Hancock Whitney to acquire Trustmark Bank in $3.2B all-stock deal &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794867840000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "7e7e7e1219ddb153",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "houston-bj-cre",
+        "source_name": "Houston Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "houston",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Aly Dossa, Professionally Recognized at Chamberlain Hrdlicka - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOand1U3FEU1FMQzNYOWNtSTQ1WWRTc21RT0RacG0yVUFkZFFoT1pBclBmeTJnamZlVnFKWHMySDJ4SUYtVVlfd0xmd3owcUFpc25vY3pYTXJXWkhEZnBYUjUwX2Jhcl9JOGJCZERNVlMyRlFiMVNONU5kRHB5UWlsVmtEZkNmaVFRb0E?oc=5",
+        "description": "Aly Dossa, Professionally Recognized at Chamberlain Hrdlicka &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794879346000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "0248327d3683b5b7",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "houston-bj-resi",
+        "source_name": "Houston Business Journal — Residential RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "houston",
+          "housing"
+        ],
+        "region": "texas",
+        "title": "Houston home prices fall for first time in October since 2017 amid building boom - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQeHk5dVRteXd0cFY4Y2V5bVpJMldlelkzeHQ1Tzh4WGpyS2dVaS1CV1ZTZ1FBdmtpUkg3RDJ2RjVhVmNuZWZ6ZEo2Y3UxaXFXbVRETjQ0ZGNLek91ZkNlVTgxOEtWMDlEenZvYVFzaVFiNGl2R0Nfb3lPUy1icUZzRE9YWlBITXBkazV3Qnowa180UWt4UUpEYjQ0bkg?oc=5",
+        "description": "Houston home prices fall for first time in October since 2017 amid building boom &nbsp;&nbsp; The Business Journals",
+        "published_at": 1764662400000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "67686beb9d8efd34",
+        "acquisition_window": null,
+        "late_discovery": true
+      },
+      {
+        "source_id": "houston-bj-resi",
+        "source_name": "Houston Business Journal — Residential RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "houston",
+          "housing"
+        ],
+        "region": "texas",
+        "title": "2023 Largest Houston-area residential real estate brokerages by sales volume - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWUl1OW8xY3UzekRFdFBoTFdFNUJjT2h4NFRVWHp0NWR1T1JHZ1lGeVZEYWRnUm5tbGxnZ3Y1VDA2NnpZUU5OeG1QR3ZJdUVkT1dWdURNX0R1RHpuNmhmVFdYS0dyRnp0ZDhFYThOYlhMUG1ucGFKX0NONUVweHhSU2NRWHZId2tEd3RpWHlEbTB2Z3VPamNzZEl2WlRjVFg2TEU2VzlaT1ByRFBFa2h5UG16WGtsLUdm?oc=5",
+        "description": "2023 Largest Houston-area residential real estate brokerages by sales volume &nbsp;&nbsp; The Business Journals",
+        "published_at": 1685084400000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "4ed242a17e2523c1",
+        "acquisition_window": null,
+        "late_discovery": true
+      },
+      {
+        "source_id": "dallas-bj-cre",
+        "source_name": "Dallas Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "dfw",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "San Francisco's Shorenstein buys another chunk of International Plaza - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbjFKOGVOV2F1Nlh4ZU8xS3dSSWNoZVU2RjdzbFhOQU9OUVdWZ2RIbVFHTEpHZTkwN1NWVjFPMUhiT1FsU2F1SXFENkI2MmdMamgyM0dDc05kYmFWOHJSdjVMQXVNWWMxV2kxMjV5UERJVTJyOHQwRzUwNzBXTTdOMGRfVTlHWjBvMFJURExyOE40M2JaRDVHWVZGVQ?oc=5",
+        "description": "San Francisco's Shorenstein buys another chunk of International Plaza &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794850620000,
+        "mutable": false,
+        "evidence_status": "insufficient",
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794884592843,
+        "id": "a5b6c92152c2ba16",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "dallas-bj-cre",
+        "source_name": "Dallas Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "dfw",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Mike Hoque's $3.5 billion Newpark development on indefinite hold amid downtown uncertainty - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWk4xUnJqa1hSTEJZS1hadDg2OENFanlybkVlY3RjWVVGeTZqaDhQM2xzaG5DRzhHdmx5R3BWUmZZT29FSVF1R2xXNlh2UjZ2dWt1TnJZVFdhOVRhVU1Da3NpZUlJUF9oTFRVQWktTHRtM3hmNUZ0c3doUFpjeVAyV2VIYTdlOUhvbUJIVVlEcWQ4bXpTejhNZGhDYnRQMkdMbVpkVGtNcw?oc=5",
+        "description": "Mike Hoque's $3.5 billion Newpark development on indefinite hold amid downtown uncertainty &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794862320000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "a25288b90a502ce4",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "dallas-bj-cre",
+        "source_name": "Dallas Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "dfw",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Developer behind two $7B North Texas projects receives UNT honor - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcWJaVVdMeWFlQnJ3SWtYZkNiWEt2cFZHZkZhVURFbVlTTnhseFBPZXhQd28xNmluWEtqVnY2dWpSYVB0Uk1MT3BlbUdzMHVtTDhZNXo3RE05c0dWaUFvaGdLZHpVMGlFamtmMVdxZVA4NWdVRnRzV1VWM3ZLTWVlbkZqLVRFZDhWZ19XUGo2OFdwWnU5V1BHWVRqWjVOTDJIaExYcnExOA?oc=5",
+        "description": "Developer behind two $7B North Texas projects receives UNT honor &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794862620000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "edb8c6635caaaeb5",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "dallas-bj-cre",
+        "source_name": "Dallas Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "dfw",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Court backs small-business owners for access to billions in tariff refunds - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPeVU0RmRSZjAyRVFCLUo5NjVlMGdtdTFSMEU5RW1GQmV0Y0ZwUUlnT1poSlVuV2gzZTVIcjBpdXpsbzU2M0NickJJX0tRSjRQQXFyaEcwLVRXMGhHZ25KMkg4TlpyYjYxUTdYQzNrUTFqVnlRMmNPdHhiT1dpR2NvbmtsS2x5SWd5YkRxTl93RTVJWGd1U2xRZkEzbks?oc=5",
+        "description": "Court backs small-business owners for access to billions in tariff refunds &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794856620000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "42e278171691e4e8",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "dallas-bj-cre",
+        "source_name": "Dallas Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "dfw",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Therapists are being offered 'life-changing' amounts to surrender their data for AI training - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNOF8xRmVIbUxMMlNjZGJEQnlKZVNURXY2OWRCVU9mT2VtTGRfZTRLTEhTclRoa0RMQnAxTGFSS1FOTWJJYWItcHpDLW1QQmRUS1l6dERTZzV1aTFaT2lJNE9pbG9ORnBLYkNBbm5ORnJ6NXV0Q0lNMjUyRGxYM1dwMVMxck9jYnQzZVhzWTd5bVNMMXMySXAwaGtYREprS3lzdjJXZw?oc=5",
+        "description": "Therapists are being offered 'life-changing' amounts to surrender their data for AI training &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794841260000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "361d82fe53534dc7",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "dallas-bj-cre",
+        "source_name": "Dallas Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "dfw",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Houston energy leaders build alliance to create Texas' first national lab - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQYUZ3dm1Vem9IbHV3UzNWUGRldXlMYllRQ3k3bnc3emd1Y3Z6Y2dYN3BidzZmejRjei1yZkZhTHNhN09BdzVzQ2hrRTJqdUJNb2UycTdSRVlfRTV4R3BJTjBHc2NOQTRYUm93ODhwblRqYjRqUE1BYnRIbjVNYlFLM0ZlYWNGLWJOTzlTWGx2bkZYczBzc2ZuRW9DOWRIOEFlSWxWampmSQ?oc=5",
+        "description": "Houston energy leaders build alliance to create Texas' first national lab &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794602280000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "619092f480a09544",
+        "acquisition_window": null,
+        "late_discovery": true
+      },
+      {
+        "source_id": "dallas-bj-cre",
+        "source_name": "Dallas Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "dfw",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Plano ISD opens $72M Career and Technical Education Center - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQWllOZElKMHJOYmlleGEtLTRNQ3MxckxiV0ZzVzBRVTlTSXBkOHpiQ2ZnaTdXS1VxakZUUGlyT1Zaa295MzFtMXBra1cyRGNRd0lVWmVjZ3JDdWVtN21RSk1yV1J4em1sYWlFOWl0dGx3dm0zZ2ZWdVNRYURfMGlPdXg5NzJocnhCOC1qeGJteml5SndocUE?oc=5",
+        "description": "Plano ISD opens $72M Career and Technical Education Center &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794862500000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "c6fddedca6053b22",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "dallas-bj-cre",
+        "source_name": "Dallas Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "dfw",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "UT Southwestern leads list of top revenue-generating hospitals in DFW - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPU0ZfX2J1U2NmYVNJeG9abmstZGVTUExFdi1MazgxUkhFWE9pSlUyWHVPalEtNGxoTEo3b3pBRXAzbHFpU0ZZaDBvMWw0dzIza0RQYndQSXFhVFpvY0gyRm5YTFVRY0g4S0pXZFFtN29tNTFLUDlQckdoWTFhYlR1bk9aSHdDdkdBTGt3Znd2YUVSZGsydFRxdks3TGE2dw?oc=5",
+        "description": "UT Southwestern leads list of top revenue-generating hospitals in DFW &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794859860000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "8381743af6597598",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "dallas-bj-resi",
+        "source_name": "Dallas Business Journal — Residential RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "dfw",
+          "housing"
+        ],
+        "region": "texas",
+        "title": "Parkland Health leads new ranking of busiest DFW hospitals by discharges - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYndiY1VFT1RHbnhHQjVtQ1BIQTVtZ2VLY0xiUHM5RmZ1REFaNVR3bjhyN3piR0ZRb1QxLTlCT2pvNVp5VmdDUjFYWVFhMXdPZk9KVlE3Y25wY2k1T283VHpuMkN2aTU4Qmk1RWhRVGpTeFpHcENBb0Y1c0NWRF9JaE9xVURDRnBDWXF3?oc=5",
+        "description": "Parkland Health leads new ranking of busiest DFW hospitals by discharges &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794859920000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "4f1947a4973aa7cf",
+        "acquisition_window": {
+          "lower": 1794776400000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "austin-bj-cre",
+        "source_name": "Austin Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "austin",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Elon Musk's Tesla inks big office lease in NE Austin, reports say - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZS1PbmYxbkYxY0N3SzdaRUk5TkN5VW9lWFNTWnZ0eEs2bkE5eENGWUc3R0o5WTBYeWR4WURKVU5uaEtpVXdOdU9QR01mcDRqcHpEc0dNaVlzNVptSzI1R3RvSFJCZGQ4aHI2TTRoakFxTHFwLVNINXFFMzBOTDNBdUY3alFpdElha09sTmM5V0huQm1HU21CdTQ5X2ZJWjVDWkRr?oc=5",
+        "description": "Elon Musk's Tesla inks big office lease in NE Austin, reports say &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794883740000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "a4cd9885f36da00f",
+        "acquisition_window": {
+          "lower": 1794862800000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "austin-bj-cre",
+        "source_name": "Austin Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "austin",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Kendra Scott leases big industrial space in SE Austin - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWnpoZVI1SWgxdEpubzFCd3l3YUdCbXBLTjhkX1p0dnZlc3lRUkJTbFNGY01NOEVSdnFIYnh4ZVhSRVBhMlB6MDQ2YVUzX2VzeUE1VC0yUFhNNXVtRV9oaGx4bFowNnREWkxMclVrRnhjLW5fUlhWcExBMGZyRm9nZjZNRUNuUDNSUkJfODNjWFc1U1ZocEJsM21BOWNqNlYxSmFIVFZHUWM?oc=5",
+        "description": "Kendra Scott leases big industrial space in SE Austin &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794870720000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "f0ff4ae761a1da3b",
+        "acquisition_window": {
+          "lower": 1794862800000,
+          "upper": 1794805200000
+        }
+      },
+      {
+        "source_id": "austin-bj-cre",
+        "source_name": "Austin Business Journal — Commercial RE",
+        "source_tier": "D",
+        "source_weight": 7,
+        "source_tags": [
+          "austin",
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "texas",
+        "title": "Jay Williamson, Promoted to Principal at Grey Havens Strategies - The Business Journals",
+        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNejVIa1VYZkVwaDVSYU1UM3VjNDRuSnJEVXNtZ3lMN2RnM0lMempwWEJvbFVMT05MdHVMQk9jZzRMTzZCTW9uUlNLTWRwdXRwQk9BV1k4bFp4OEIyaEtYTkpBRllnLVU3azBySlRjOWowbzJrbk80dE5NM1kxaFZjbl9ULVYwUEpKRnVXRWJtMA?oc=5",
+        "description": "Jay Williamson, Promoted to Principal at Grey Havens Strategies &nbsp;&nbsp; The Business Journals",
+        "published_at": 1794867913000,
+        "source_family": "bizjournals",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794884592843,
+        "id": "f213b29736df1e5d",
+        "acquisition_window": {
+          "lower": 1794862800000,
+          "upper": 1794805200000
         }
       }
     ],
@@ -21689,6 +23293,2003 @@
           "https://zondahome.com/new-home-lot-supply-index-2": "1e27e1aaa61d30025009eb6adf8b8bf7d6fb75a859a0c453543d7bae47151a15"
         },
         "last_success": 1794865086470
+      },
+      {
+        "id": "housingwire",
+        "name": "HousingWire",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.housingwire.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794848942000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "inman",
+        "name": "Inman News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.inman.com/feed/",
+          "https://news.google.com/rss/search?q=site:inman.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 39,
+        "unreadable_recent": 2,
+        "earliest_dated": 1416088164000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "trd-national",
+        "name": "The Real Deal (National)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://therealdeal.com/national/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "bisnow",
+        "name": "Bisnow",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.bisnow.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794858276000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "multi-housing-news",
+        "name": "Multi-Housing News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.multihousingnews.com/feed/",
+          "https://news.google.com/rss/search?q=site:multihousingnews.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "unreadable",
+        "discovered": 68,
+        "articles": 68,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 1,
+        "earliest_dated": 1398469263000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794865086470
+      },
+      {
+        "id": "national-mortgage-news",
+        "name": "National Mortgage News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.nationalmortgagenews.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 4,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794596704000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "cnbc-realestate",
+        "name": "CNBC Realty Check",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000115"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 4,
+        "undated": 0,
+        "recent": 11,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793103659000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "d-magazine",
+        "name": "D Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.dmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 7,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794520878000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "houston-agent",
+        "name": "Houston Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://houstonagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 9,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794248415000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "phoenix-agent",
+        "name": "Phoenix Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://phoenixagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 9,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794259477000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "atlanta-agent",
+        "name": "Atlanta Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://atlantaagentmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793973947000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "miami-agent",
+        "name": "Miami Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://miamiagentmagazine.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)"
+      },
+      {
+        "id": "google-news-sunbelt",
+        "name": "Google News — Sun Belt Housing Market",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=%22housing+market%22+(Phoenix+OR+Tampa+OR+Atlanta+OR+Charlotte+OR+Nashville+OR+%22Las+Vegas%22+OR+Jacksonville+OR+Orlando+OR+Raleigh+OR+Memphis)&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 50,
+        "articles": 50,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 4,
+        "unreadable_recent": 0,
+        "earliest_dated": 1611475200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "nahb-eyeonhousing",
+        "name": "NAHB Eye on Housing",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://eyeonhousing.org/feed/"
+        ],
+        "status": "ok",
+        "discovered": 18,
+        "articles": 18,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 9,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793641670000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "calculated-risk",
+        "name": "Calculated Risk (Bill McBride)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://feeds.feedburner.com/CalculatedRisk"
+        ],
+        "status": "ok",
+        "discovered": 25,
+        "articles": 25,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1767714840001,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "lance-lambert",
+        "name": "Lance Lambert / ResiClub",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://lancelambert.substack.com/feed",
+          "https://news.google.com/rss/search?q=%22Lance+Lambert%22+OR+%22ResiClub%22&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 54,
+        "articles": 54,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1697007600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "logan-mohtashami",
+        "name": "Logan Mohtashami (HousingWire)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.housingwire.com/author/logan-mohtashami/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792702847000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "yardi-matrix",
+        "name": "Yardi Matrix Blog",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.yardimatrix.com/publications/"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793491200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "realtor-research",
+        "name": "Realtor.com Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.realtor.com/research/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794218456000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "realtor-news",
+        "name": "Realtor.com News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.realtor.com/news/feed/"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794673920000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "redfin-news",
+        "name": "Redfin News",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.redfin.com/news/feed/"
+        ],
+        "status": "ok",
+        "discovered": 6,
+        "articles": 6,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 6,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794268187000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "trerc",
+        "name": "Texas Real Estate Research Center (TRERC)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://trerc.tamu.edu/texas-housing-insight/"
+        ],
+        "status": "ok",
+        "discovered": 69,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1743523903000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "fed-press",
+        "name": "Federal Reserve Press",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.federalreserve.gov/feeds/press_all.xml"
+        ],
+        "status": "ok",
+        "discovered": 20,
+        "articles": 20,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 4,
+        "undated": 0,
+        "recent": 5,
+        "unreadable_recent": 0,
+        "earliest_dated": 1790368200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "brookings-housing",
+        "name": "Brookings Institution",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.brookings.edu/topics/housing/"
+        ],
+        "status": "ok",
+        "discovered": 4,
+        "articles": 4,
+        "discovery_truncated": false,
+        "article_budget": 4,
+        "fetched_articles": 4,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1790610279000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "pere-news",
+        "name": "PERE News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.perenews.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "multifamily-dive",
+        "name": "Multifamily Dive",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.multifamilydive.com/feeds/news/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 5,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794432480000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "connect-cre",
+        "name": "Connect CRE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.connectcre.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794858323000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "rebusiness-online",
+        "name": "REBusiness Online",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://rebusinessonline.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 20,
+        "articles": 20,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794837600000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "nrhc",
+        "name": "National Rental Home Council (NRHC)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.rentalhomecouncil.org/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 7,
+        "unreadable_recent": 4,
+        "earliest_dated": 1793987760000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "pretium-partners",
+        "name": "Pretium Partners",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://pretium.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1781021804000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "sec-invh-8k",
+        "name": "Invitation Homes (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://www.invh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1782856080000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "sec-amh-8k",
+        "name": "AMH (SEC / official IR)",
+        "research": false,
+        "required": false,
+        "required_for_section": "btr",
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
+          "https://investors.amh.com/rss/PressRelease.aspx?LanguageId=1"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1778098140000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "btrlist",
+        "name": "BTR List (via Google News)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site:news.btrlist.com&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 53,
+        "articles": 53,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1722134745000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "google-news-btr",
+        "name": "Google News — BTR / SFR keywords",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=%22build-to-rent%22+OR+%22single-family+rental%22+OR+%22Invitation+Homes%22+OR+%22American+Homes+4+Rent%22+OR+Tricon+OR+Pretium+OR+%22Progress+Residential%22+OR+Roofstock+OR+%22Main+Street+Renewal%22+OR+%22FirstKey+Homes%22+OR+%22Home+Partners%22&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 429"
+      },
+      {
+        "id": "houston-bj-cre",
+        "name": "Houston Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 19,
+        "unreadable_recent": 1,
+        "earliest_dated": 1478462047000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "houston-bj-resi",
+        "name": "Houston Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fhouston+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 17,
+        "unreadable_recent": 1,
+        "earliest_dated": 1478462047000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "dallas-bj-cre",
+        "name": "Dallas Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 19,
+        "unreadable_recent": 0,
+        "earliest_dated": 1499383902000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "dallas-bj-resi",
+        "name": "Dallas Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fdallas+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 17,
+        "unreadable_recent": 0,
+        "earliest_dated": 1499383902000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "austin-bj-cre",
+        "name": "Austin Business Journal — Commercial RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28commercial-real-estate+OR+multifamily+OR+office+OR+industrial%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 17,
+        "unreadable_recent": 0,
+        "earliest_dated": 1462863600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "austin-bj-resi",
+        "name": "Austin Business Journal — Residential RE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Faustin+%28residential-real-estate+OR+housing+OR+single-family%29&hl=en-US&gl=US&ceid=US:en"
+        ],
+        "status": "ok",
+        "discovered": 100,
+        "articles": 100,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 13,
+        "unreadable_recent": 0,
+        "earliest_dated": 1499380339000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "har-research",
+        "name": "HAR Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.har.com/content/department/newsroom?pid=640"
+        ],
+        "status": "ok",
+        "discovered": 133,
+        "articles": 2,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 2,
+        "stop_reason": "date_horizon",
+        "fallback_bodies": 2,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793898000000,
+        "coverage_basis": "ordered_date_horizon",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "zillow-research",
+        "name": "Zillow Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.zillow.com/research/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792670400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "nar-research",
+        "name": "NAR Research",
+        "research": true,
+        "required": true,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.nar.realtor/research-and-statistics/research-reports/research-update"
+        ],
+        "status": "ok",
+        "discovered": 13,
+        "articles": 13,
+        "discovery_truncated": false,
+        "article_budget": 13,
+        "fetched_articles": 13,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1325243280000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "census-construction",
+        "name": "Census New Residential Construction",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.census.gov/construction/nrc/current/index.html"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792512000000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://census.gov/construction/nrc/current/index.html": "32a3768fcced69a73a044289c3d73c3550311fcd8e4990cb51c57ccfb352375d"
+        },
+        "last_success": 1794884592843
+      },
+      {
+        "id": "census-sales",
+        "name": "Census New Residential Sales",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.census.gov/construction/nrs/current/index.html"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793116800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://census.gov/construction/nrs/current/index.html": "c03a0fa38527aa533c777b78bcff1e34902417a91673053b2d16e0b2dee2051a"
+        },
+        "last_success": 1794884592843
+      },
+      {
+        "id": "fhfa-research",
+        "name": "FHFA House Price Index",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.fhfa.gov/data/hpi"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793116800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "fannie-esr",
+        "name": "Fannie Mae ESR",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.fanniemae.com/data-and-insights/forecast"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "freddie-pmms",
+        "name": "Freddie Mac PMMS",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.freddiemac.com/pmms"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794502800000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {
+          "https://freddiemac.com/pmms": "c31943a782537223b1fcb017e44934e5d28dda90fbdc8ffddd8a2a2df63920f4"
+        },
+        "last_success": 1794884592843
+      },
+      {
+        "id": "freddie-research",
+        "name": "Freddie Mac Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.freddiemac.com/research-and-perspectives"
+        ],
+        "status": "ok",
+        "discovered": 6,
+        "articles": 6,
+        "discovery_truncated": false,
+        "article_budget": 6,
+        "fetched_articles": 6,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1687363200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "texas-realtors",
+        "name": "Texas REALTORS Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.texasrealestate.com/research/quarterly-housing-report"
+        ],
+        "status": "ok",
+        "discovered": 36,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "metrotex-research",
+        "name": "MetroTex Market Reports",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.mymetrotex.com/market-reports/"
+        ],
+        "status": "ok",
+        "discovered": 166,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "unlock-research",
+        "name": "Unlock MLS Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.unlockmls.com/news"
+        ],
+        "status": "ok",
+        "discovered": 4,
+        "articles": 4,
+        "discovery_truncated": false,
+        "article_budget": 4,
+        "fetched_articles": 4,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1786406400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "harvard-jchs",
+        "name": "Harvard JCHS",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.jchs.harvard.edu/blog"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "urban-housing",
+        "name": "Urban Institute Housing Finance",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.urban.org/expertise/housing-finance"
+        ],
+        "status": "ok",
+        "discovered": 2,
+        "articles": 2,
+        "discovery_truncated": false,
+        "article_budget": 2,
+        "fetched_articles": 2,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1751284800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "cbre-research",
+        "name": "CBRE Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.cbre.com/services/property-types/multifamily"
+        ],
+        "status": "ok",
+        "discovered": 15,
+        "articles": 15,
+        "discovery_truncated": false,
+        "article_budget": 15,
+        "fetched_articles": 15,
+        "fallback_bodies": 0,
+        "undated": 2,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1744732800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "jll-research",
+        "name": "JLL Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.jll.com/en-us/insights"
+        ],
+        "status": "ok",
+        "discovered": 15,
+        "articles": 15,
+        "discovery_truncated": false,
+        "article_budget": 15,
+        "fetched_articles": 15,
+        "fallback_bodies": 0,
+        "undated": 7,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1719426600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "cushman-research",
+        "name": "Cushman & Wakefield Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
+        ],
+        "status": "ok",
+        "discovered": 86,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 2,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1791979200000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "colliers-research",
+        "name": "Colliers Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.colliers.com/en/research"
+        ],
+        "status": "ok",
+        "discovered": 2,
+        "articles": 2,
+        "discovery_truncated": false,
+        "article_budget": 2,
+        "fetched_articles": 2,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792587720000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "realpage-research",
+        "name": "RealPage Analytics",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.realpage.com/analytics/feed/"
+        ],
+        "status": "ok",
+        "discovered": 1108,
+        "articles": 1108,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 12,
+        "unreadable_recent": 0,
+        "earliest_dated": 1680193015000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "nmhc-research",
+        "name": "NMHC Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.nmhc.org/research-insight/quarterly-survey/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 10,
+        "fetched_articles": 10,
+        "fallback_bodies": 0,
+        "undated": 10,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "naa-research",
+        "name": "NAA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://naahq.org/research"
+        ],
+        "status": "ok",
+        "discovered": 9,
+        "articles": 9,
+        "discovery_truncated": false,
+        "article_budget": 9,
+        "fetched_articles": 9,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1785952132000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "uli-pwc",
+        "name": "ULI/PwC Emerging Trends",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
+          "https://www.pwc.com/us/en/about-us/newsroom.html"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "msci-research",
+        "name": "MSCI Real Assets Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792684800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi": "bca6c6c9dd06a44e08d18d85a6ff5b833a9a5d830d12de16226484a149d5c757"
+        },
+        "last_success": 1794884592843
+      },
+      {
+        "id": "john-burns",
+        "name": "John Burns Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://jbrec.com/resources/insights/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "northmarq-research",
+        "name": "Northmarq Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.northmarq.com/insights"
+        ],
+        "status": "ok",
+        "discovered": 8,
+        "articles": 8,
+        "discovery_truncated": false,
+        "article_budget": 8,
+        "fetched_articles": 8,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 5,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793376000000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "berkadia-research",
+        "name": "Berkadia Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.berkadia.com/multifamily-reports/"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 7,
+        "fetched_articles": 7,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787068800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "arbor-research",
+        "name": "Arbor/Chandan Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://arbor.com/research/reports/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "newmark-research",
+        "name": "Newmark Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.nmrk.com/insights/market-report"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "cotality-research",
+        "name": "Cotality / CoreLogic Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.cotality.com/insights/all-insights"
+        ],
+        "status": "ok",
+        "discovered": 13,
+        "articles": 13,
+        "discovery_truncated": false,
+        "article_budget": 13,
+        "fetched_articles": 13,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787587200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "ice-research",
+        "name": "ICE Mortgage Monitor",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://mortgagetech.ice.com/resources/data-reports"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1780876800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "attom-research",
+        "name": "ATTOM Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.attomdata.com/news/category/market-trends/"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 7,
+        "fetched_articles": 7,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792681236000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "mba-research",
+        "name": "MBA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "apartmentlist-research",
+        "name": "Apartment List Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.apartmentlist.com/research"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1778482800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "costar-research",
+        "name": "CoStar / Apartments.com Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://www.apartments.com/grow/learning-center/market-trends"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 12,
+        "fetched_articles": 12,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1773057600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "sp-case-shiller",
+        "name": "S&P Cotality Case-Shiller",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://press.spglobal.com/index.php?l=50&s=2429"
+        ],
+        "status": "ok",
+        "discovered": 3,
+        "articles": 3,
+        "discovery_truncated": false,
+        "article_budget": 3,
+        "fetched_articles": 3,
+        "fallback_bodies": 3,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787673600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794884592843
+      },
+      {
+        "id": "zonda-research",
+        "name": "Zonda Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://zondahome.com/new-home-market-update/"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1792670400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://zondahome.com/new-home-market-update": "472389cbb3863416bd9389f5284bfbf753323d3dcb748402a562f70f854f24df"
+        },
+        "last_success": 1794884592843
+      },
+      {
+        "id": "zonda-lot-supply",
+        "name": "Zonda Lot Supply Index",
+        "research": true,
+        "required": false,
+        "checked_at": 1794884592843,
+        "attempted_urls": [
+          "https://zondahome.com/new-home-lot-supply-index-2/"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 1,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1786622400000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1794200400000,
+          "upper": 1794805200000
+        },
+        "changed_without_new_date": [],
+        "versions": {
+          "https://zondahome.com/new-home-lot-supply-index-2": "1e27e1aaa61d30025009eb6adf8b8bf7d6fb75a859a0c453543d7bae47151a15"
+        },
+        "last_success": 1794884592843
       }
     ]
   }
