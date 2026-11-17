@@ -64,6 +64,14 @@ node scripts/check-publication.mjs daily
 
 GitHub 工作流先调用 `restore-issue.mjs <kind>`，用 `GH_TOKEN` 读取附件。手动输入 revision 留空选最新，period 为 YYYY-MM-DD（日报／周报）或 YYYY-MM（月报），cutoff 为 epoch 毫秒。后续步骤传递 prepared 输出的身份，防止排队跨日后变成另一刊。恢复需要 contents:write 和 actions:read；Git 推送采用仅在子进程存在的认证头，不把 token 放到命令参数或候选包。
 
+主备 LLM 凭据使用独立 Secrets：主通道为 `LLM_API_KEY`／`LLM_ENDPOINT`，备用为 `LLM_BACKUP_API_KEY`／`LLM_BACKUP_ENDPOINT`；备用地址留空时使用 `https://api.openai.com/v1/chat/completions`。三类工作流的 editor／writer 均传入备用配置，定时、repository_dispatch 和默认手动运行都先走主通道；备用 Key 非空且主备地址／Key 组合不完全相同时启用自动故障切换，不覆盖原主 Secrets。
+
+主通道在获得完整有效模型 JSON 前出现网络、超时、流、截断／无效 JSON 或任意非 2xx HTTP 错误（含 522、5xx、429、408、401／403、insufficient_quota、get_channel_failed），立即在客户端内标记使用备用；在剩余额度允许时，下一次重试及同实例后续调用（含 writer）直接走备用，不再探测主通道。完整 JSON 已返回后的业务／证据 validation 错误仅在当前通道局修，不触发切换。未配置可用且不同的备用，或已走备用时，永久 HTTP 错误仍快速失败。
+
+切换不新增请求额度：网络重试、通道切换及内容纠错共用每阶段最多 3 次、同版 660000 ms 账本；deadline 耗尽或不足以承担既有退避时不再请求。reserved_ms 与 ruleDigest 保护保持，旧冻结版不能改签或清账本恢复。粘性路由只保留在客户端实例内；工作流的分步进程和跨运行恢复各自重新优先主通道，继续沿用同版剩余阶段额度。逐次诊断使用非敏感 `route: primary／backup`，主备密钥均完整脱敏。
+
+本次需要直接使用备用时，可手动触发 workflow_dispatch 并传入 `-f use_backup=true`，让 editor／writer 从第一次请求就使用备用。该开关默认 false，仅在显式手动开启时于 gate 后、冻结输入前强校验备用 Key，缺失立即失败；自动调度不强制要求备用 Key。手动开关与自动故障切换独立，均不修改主 Secrets 或既有预算。
+
 ## 发布失败的处理
 
 | 观察到的状态 | 恢复行为 |

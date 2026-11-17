@@ -1,6 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
+import { spawnSync } from 'node:child_process';
+import { runInNewContext } from 'node:vm';
 import { createWritingRepair, validateWritingCard, validateWriting, writingSystem } from '../lib/editorial.mjs';
 import { validateIssue } from '../lib/issue-contract.mjs';
 
@@ -76,6 +78,73 @@ test('daily fallback schedule includes Beijing 09:17 and keeps the earlier slots
   assert.match(workflow, /cron: '17 21,22,23 \* \* 0-4'/);
   assert.match(workflow, /cron: '17 0,1 \* \* 1-5'/);
 });
+
+for (const [kind, crons] of [
+  ['daily', ['17 21,22,23 * * 0-4', '17 0,1 * * 1-5']],
+  ['weekly', ['7,27,47 6 * * 1']],
+  ['monthly', ['7,27,47 7 1-3 * *']]
+]) {
+  const readWorkflow = () => fs.readFile(new URL(`../../.github/workflows/${kind}.yml`, import.meta.url), 'utf8');
+  const step = (workflow, name) => {
+    const block = workflow.split(/^      - /m).find(block => block.startsWith(`name: ${name}\n`));
+    assert(block, `Missing step: ${name}`);
+    return block;
+  };
+
+  test(`${kind} manual backup override defaults off while both stages receive automatic fallback credentials`, async () => {
+    const workflow = await readWorkflow();
+    assert.match(workflow, /  workflow_dispatch:\n    inputs:\n      use_backup:\n        description: .*manual run only\n        type: boolean\n        default: false\n/);
+    assert.equal(workflow.match(/          LLM_API_KEY:/g)?.length, 2);
+    assert.equal(workflow.match(/          LLM_ENDPOINT:/g)?.length, 2);
+    for (const name of ['Select frozen issue', 'Write and validate frozen issue']) {
+      const block = step(workflow, name);
+      const key = block.match(/LLM_API_KEY: \$\{\{ (.+) \}\}/)?.[1];
+      const endpoint = block.match(/LLM_ENDPOINT: \$\{\{ (.+) \}\}/)?.[1];
+      assert.equal(key, "github.event_name == 'workflow_dispatch' && inputs.use_backup && secrets.LLM_BACKUP_API_KEY || secrets.LLM_API_KEY");
+      assert.equal(endpoint, "github.event_name == 'workflow_dispatch' && inputs.use_backup && (secrets.LLM_BACKUP_ENDPOINT || 'https://api.openai.com/v1/chat/completions') || secrets.LLM_ENDPOINT");
+      assert.match(block, /LLM_BACKUP_API_KEY: \$\{\{ secrets\.LLM_BACKUP_API_KEY \}\}/);
+      assert.match(block, /LLM_BACKUP_ENDPOINT: \$\{\{ secrets\.LLM_BACKUP_ENDPOINT \}\}/);
+      for (const event of ['schedule', 'repository_dispatch', 'workflow_dispatch']) {
+        for (const useBackup of [undefined, false, true]) {
+          for (const backupEndpoint of ['', 'backup-endpoint']) {
+            const context = {
+              github: { event_name: event }, inputs: { use_backup: useBackup },
+              secrets: { LLM_API_KEY: 'primary', LLM_BACKUP_API_KEY: 'backup', LLM_ENDPOINT: 'primary-endpoint', LLM_BACKUP_ENDPOINT: backupEndpoint }
+            };
+            const enabled = event === 'workflow_dispatch' && useBackup === true;
+            assert.equal(runInNewContext(key, context), enabled ? 'backup' : 'primary');
+            assert.equal(runInNewContext(endpoint, context), enabled ? (backupEndpoint || 'https://api.openai.com/v1/chat/completions') : 'primary-endpoint');
+          }
+        }
+      }
+    }
+  });
+
+  test(`${kind} validates backup credentials after gate and before freezing input`, async () => {
+    const workflow = await readWorkflow();
+    const block = step(workflow, 'Validate backup credentials');
+    assert.match(workflow, /run: node scripts\/can-run\.mjs \w+\n      - name: Validate backup credentials\n/);
+    assert(workflow.indexOf('name: Validate backup credentials') < workflow.indexOf('name: Freeze issue input'));
+    assert.match(block, /if: steps\.gate\.outputs\.go == 'true' && github\.event_name == 'workflow_dispatch' && inputs\.use_backup\n/);
+    assert.match(block, /LLM_BACKUP_API_KEY: \$\{\{ secrets\.LLM_BACKUP_API_KEY \}\}/);
+    assert.doesNotMatch(block, /continue-on-error:/);
+    const script = block.split('        run: |\n')[1];
+    assert(script);
+    for (const value of [undefined, '', 'present']) {
+      const result = spawnSync('bash', ['-c', script], { env: value === undefined ? {} : { LLM_BACKUP_API_KEY: value }, encoding: 'utf8' });
+      assert.ifError(result.error);
+      assert.equal(result.status, value ? 0 : 1);
+      if (!value) assert.match(result.stdout, /::error::LLM_BACKUP_API_KEY is required/);
+      else assert.equal(result.stdout, '');
+    }
+  });
+
+  test(`${kind} backup switch preserves the original cron schedule`, async () => {
+    const workflow = await readWorkflow();
+    assert.deepEqual([...workflow.matchAll(/^    - cron: '([^']+)'$/gm)].map(match => match[1]), crons);
+    assert.match(workflow, new RegExp(`  repository_dispatch:\\n    types: \\[${kind}-build\\]`));
+  });
+}
 
 test('writingSystem anchors impact to institutional real estate owners and 2026-11-09 card #6 is neutral', async () => {
   assert.match(writingSystem, /impact 判断框架：锚定美国住宅／BTR-SFR／多户及 CRE 机构资产持有者与投资人/);

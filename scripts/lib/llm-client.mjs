@@ -11,13 +11,16 @@ export function parseJson(text) {
   try { return JSON.parse(clean); } catch { throw new LlmError('Incomplete or invalid JSON response'); }
 }
 
-export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cacheDir, diagnosticsDir, onEvent,
+export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackApiKey, model = 'gpt-6.1-sol', cacheDir, diagnosticsDir, onEvent,
   fetchImpl = fetch, totalMs = 240000, firstByteMs = 150000, idleMs = 90000, budgetMs = 660000,
   retryDelays = [15000, 45000], sleep = pause, ledger } = {}) {
   const usage = [];
   const delays = retryDelays.slice(0, 2);
   const deadline = Date.now() + Math.max(0, budgetMs - (ledger?.spentMs || 0));
-  const redact = value => apiKey ? String(value).replaceAll(apiKey, '[REDACTED]') : String(value);
+  const secrets = [...new Set([apiKey, fallbackApiKey].filter(Boolean))].sort((a, b) => b.length - a.length);
+  const redact = value => secrets.reduce((text, secret) => text.replaceAll(secret, '[REDACTED]'), String(value));
+  const hasFallback = fallbackEndpoint && fallbackApiKey && (fallbackEndpoint !== endpoint || fallbackApiKey !== apiKey);
+  let usingBackup = false;
   const safeEvent = event => JSON.parse(redact(JSON.stringify(event)));
   async function record(event) {
     const safe = safeEvent(event);
@@ -48,9 +51,10 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
       const total = setTimeout(() => ctrl.abort(new Error(remaining <= totalMs ? 'LLM run time budget exhausted' : 'LLM total timeout')), Math.min(totalMs, remaining));
       const first = setTimeout(() => ctrl.abort(new Error('LLM first response timeout')), firstByteMs);
       let tokenUsage, responseModel, responseText = '', finish, done = false, parsed, upstreamRequestId, responseId, firstByteAt, httpStatus;
-      let outcome, transportActive = false;
+      let outcome, transportActive = false, awaitingModelJson = false;
+      const activeIsBackup = usingBackup;
       const requestHash = createHash('sha256').update(JSON.stringify(body)).digest('hex');
-      const request = { label, model, effort, attempt: attempt + 1, request_id: requestId, request_hash: requestHash, started_at: new Date(started).toISOString(), reserved_ms: Math.min(totalMs, remaining) };
+      const request = { label, model, effort, route: activeIsBackup ? 'backup' : 'primary', attempt: attempt + 1, request_id: requestId, request_hash: requestHash, started_at: new Date(started).toISOString(), reserved_ms: Math.min(totalMs, remaining) };
       const heartbeat = () => { clearTimeout(idle); idle = setTimeout(() => ctrl.abort(new Error('LLM stream idle timeout')), idleMs); };
       const received = () => { if (!firstByteAt) { firstByteAt = Date.now(); clearTimeout(first); } heartbeat(); };
       const readText = async response => {
@@ -65,11 +69,12 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
         await ledger?.recordAttempt(label, request);
         await record({ event: 'request_started', ...request });
         transportActive = true;
-        const res = await fetchImpl(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + apiKey }, body: JSON.stringify(body), signal: ctrl.signal });
+        awaitingModelJson = true;
+        const res = await fetchImpl(activeIsBackup ? fallbackEndpoint : endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + (activeIsBackup ? fallbackApiKey : apiKey) }, body: JSON.stringify(body), signal: ctrl.signal });
         httpStatus = res.status;
         upstreamRequestId = res.headers.get('x-request-id') || res.headers.get('request-id') || null;
         if (!res.ok) {
-          const detail = (await readText(res)).slice(0, 600);
+          const detail = redact(await readText(res)).slice(0, 600);
           const permanent = /model_not_found|get_channel_failed|insufficient_quota|invalid_api_key|no available channel|无可用|無可用|可用渠道不存在/i.test(detail);
           throw new LlmError(`LLM HTTP ${res.status}: ${detail}`, !permanent && (res.status === 408 || res.status === 429 || res.status >= 500));
         }
@@ -100,7 +105,9 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
         transportActive = false;
         if (!done || finish !== 'stop' || !responseText.trim()) throw new LlmError(`Incomplete response: done=${done}, finish=${finish}`, true);
         let result;
-        try { parsed = parseJson(responseText); result = await validateResponse(parsed, { cacheHit: false }); } catch (error) { if (error instanceof LlmError) error.validation = true; throw error; }
+        try { parsed = parseJson(responseText); } catch (error) { error.invalidJson = true; throw error; }
+        awaitingModelJson = false;
+        try { result = await validateResponse(parsed, { cacheHit: false }); } catch (error) { if (error instanceof LlmError) error.validation = true; throw error; }
         outcome = { ...request, cache_hit: false, repairs, response_model: responseModel || null };
         if (cacheFile) { await fs.mkdir(cacheDir, { recursive: true }); await fs.writeFile(cacheFile, JSON.stringify({ result, response_model: responseModel || null, usage: tokenUsage || null })); }
         return result;
@@ -109,7 +116,13 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
         if (transportActive && (error instanceof TypeError || ctrl.signal.aborted)) error.llmTransport = true;
         error.message = redact(error.message);
         let retryable = error.retryable ?? !(error instanceof LlmError);
-        if (error.validation && attempt < delays.length) {
+        const switchedToBackup = !activeIsBackup && hasFallback && awaitingModelJson && !error.validation;
+        if (switchedToBackup) {
+          usingBackup = true;
+          retryable = true;
+        }
+        const contentError = error.validation || error.invalidJson;
+        if (!switchedToBackup && contentError && attempt < delays.length) {
           repairs++; retryable = true;
           const correction = parsed && await repair?.(parsed, error);
           if (correction) {
@@ -120,7 +133,7 @@ export function createLlmClient({ endpoint, apiKey, model = 'gpt-6.1-sol', cache
           }
         }
         if (deadline <= Date.now()) retryable = false;
-        if (error.validation && cacheDir) { await fs.mkdir(cacheDir, { recursive: true }); await fs.writeFile(path.join(cacheDir, key + '.failure.json'), redact(JSON.stringify({ error: error.message, response: responseText }))); }
+        if (contentError && cacheDir) { await fs.mkdir(cacheDir, { recursive: true }); await fs.writeFile(path.join(cacheDir, key + '.failure.json'), redact(JSON.stringify({ error: error.message, response: responseText }))); }
         const causes = []; for (let cause = error.cause; cause && causes.length < 4; cause = cause.cause) causes.push({ name: cause.name, code: cause.code || null, message: cause.message });
         outcome = { ...request, failed: true, retryable, error: redact(error.message), error_name: error.name, error_code: error.code || null, causes };
         if (!retryable || attempt === delays.length) throw error;

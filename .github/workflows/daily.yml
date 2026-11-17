@@ -5,6 +5,10 @@ on:
     - cron: '17 0,1 * * 1-5'
   workflow_dispatch:
     inputs:
+      use_backup:
+        description: Use independent backup LLM credentials for this manual run only
+        type: boolean
+        default: false
       force:
         description: Rebuild an existing issue on a working day
         type: boolean
@@ -44,6 +48,15 @@ jobs:
       - name: Calendar and complete-issue guard
         id: gate
         run: node scripts/can-run.mjs daily
+      - name: Validate backup credentials
+        if: steps.gate.outputs.go == 'true' && github.event_name == 'workflow_dispatch' && inputs.use_backup
+        env:
+          LLM_BACKUP_API_KEY: ${{ secrets.LLM_BACKUP_API_KEY }}
+        run: |
+          if [ -z "$LLM_BACKUP_API_KEY" ]; then
+            echo "::error::LLM_BACKUP_API_KEY is required when use_backup is enabled."
+            exit 1
+          fi
       - name: Restore acquisition and model checkpoints
         continue-on-error: true
         timeout-minutes: 1
@@ -94,8 +107,10 @@ jobs:
           ISSUE_REVISION: ${{ steps.prepared.outputs.revision || env.ISSUE_REVISION }}
           EXPECTED_PERIOD: ${{ steps.prepared.outputs.period || env.EXPECTED_PERIOD }}
           EXPECTED_CUTOFF: ${{ steps.prepared.outputs.cutoff || env.EXPECTED_CUTOFF }}
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
+          LLM_API_KEY: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && secrets.LLM_BACKUP_API_KEY || secrets.LLM_API_KEY }}
+          LLM_ENDPOINT: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && (secrets.LLM_BACKUP_ENDPOINT || 'https://api.openai.com/v1/chat/completions') || secrets.LLM_ENDPOINT }}
+          LLM_BACKUP_API_KEY: ${{ secrets.LLM_BACKUP_API_KEY }}
+          LLM_BACKUP_ENDPOINT: ${{ secrets.LLM_BACKUP_ENDPOINT }}
         run: node scripts/build.mjs
       - name: Save editorial progress
         if: always() && steps.editor.outcome == 'success' && steps.prepared.outputs.issue_dir != ''
@@ -114,8 +129,10 @@ jobs:
           ISSUE_REVISION: ${{ steps.prepared.outputs.revision || env.ISSUE_REVISION }}
           EXPECTED_PERIOD: ${{ steps.prepared.outputs.period || env.EXPECTED_PERIOD }}
           EXPECTED_CUTOFF: ${{ steps.prepared.outputs.cutoff || env.EXPECTED_CUTOFF }}
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
+          LLM_API_KEY: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && secrets.LLM_BACKUP_API_KEY || secrets.LLM_API_KEY }}
+          LLM_ENDPOINT: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && (secrets.LLM_BACKUP_ENDPOINT || 'https://api.openai.com/v1/chat/completions') || secrets.LLM_ENDPOINT }}
+          LLM_BACKUP_API_KEY: ${{ secrets.LLM_BACKUP_API_KEY }}
+          LLM_BACKUP_ENDPOINT: ${{ secrets.LLM_BACKUP_ENDPOINT }}
         run: node scripts/build.mjs
       - name: Save validated cards and publication candidate
         if: always() && steps.prepared.outputs.issue_dir != ''

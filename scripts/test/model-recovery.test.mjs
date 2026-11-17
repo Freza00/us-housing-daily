@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { createLlmClient } from '../lib/llm-client.mjs';
+import { createLlmClient, LlmError } from '../lib/llm-client.mjs';
 import { createModelBatch } from '../lib/model-references.mjs';
 import { createWritingRepair, validateDecisions, validateWriting, writingPrompt, writingSystem, selectItems, numericValues, normalizeChinese } from '../lib/editorial.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
@@ -150,6 +150,159 @@ test('permanent routing failure is logged once with null usage and no secret', a
   const client = createLlmClient({ endpoint: 'https://example.com', apiKey: 'private-test-key', diagnosticsDir: path.join(root, 'state/diagnostics'), fetchImpl: async () => { calls++; return new Response('model_not_found private-test-key', { status: 503 }); } });
   await assert.rejects(client.call('s', 'u'), error => !error.message.includes('private-test-key'));
   assert.equal(calls, 1); assert.equal(client.usage[0].usage, null); assert.equal(client.usage[0].retryable, false);
+});
+
+for (const [status, detail, backupEndpoint] of [
+  [522, 'origin timed out', undefined],
+  [403, 'insufficient_quota', 'https://backup.example.com/v1/chat/completions'],
+  [429, 'insufficient_quota', 'https://primary.example.com/v1/chat/completions']
+]) {
+  test(`pipeline HTTP ${status} ${detail} switches within editor budget and writer reuses backup`, async t => {
+    const root = await sandbox(t), requests = [];
+    const env = { ...await replayEnv(root, { items }, '2026-10-29T01:00:00Z'),
+      LLM_ENDPOINT: 'https://primary.example.com/v1/chat/completions', LLM_API_KEY: 'fixture-primary',
+      LLM_BACKUP_API_KEY: 'fixture-backup', ...(backupEndpoint ? { LLM_BACKUP_ENDPOINT: backupEndpoint } : {}) };
+    const result = await runPipeline('daily', { root, env, llmOptions: { sleep: async () => {}, fetchImpl: async (url, options) => {
+      requests.push({ url, authorization: options.headers.Authorization });
+      if (requests.length === 1) return new Response(detail, { status });
+      const input = JSON.parse(JSON.parse(options.body).messages[1].content);
+      return Array.isArray(input) ? response({ decisions: input.map(x => modelDecision(x.id)) }) : response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
+    } } });
+    assert.deepEqual(requests, [
+      { url: env.LLM_ENDPOINT, authorization: 'Bearer fixture-primary' },
+      ...Array.from({ length: 2 }, () => ({ url: backupEndpoint || 'https://api.openai.com/v1/chat/completions', authorization: 'Bearer fixture-backup' }))
+    ]);
+    const manifest = JSON.parse(await fs.readFile(path.join(root, 'state/issues/daily/2026-10-29/r1/manifest.json'), 'utf8'));
+    assert.deepEqual(manifest.attempts.editor.map(x => [x.attempt, x.route]), [[1, 'primary'], [2, 'backup']]);
+    assert.deepEqual(manifest.attempts.writer.map(x => [x.attempt, x.route]), [[1, 'backup']]);
+    assert.ok(Object.values(manifest.attempts).flat().every(x => x.reserved_ms > 0 && x.reserved_ms <= 240000));
+    assert.equal(result.items.length, items.length);
+  });
+}
+
+test('complete JSON validation errors repair on the current primary or backup route', async () => {
+  for (const startOnBackup of [false, true]) {
+    const routes = []; let validations = 0, repairs = 0;
+    const client = createLlmClient({ endpoint: 'https://primary.example.com', apiKey: 'fixture-primary',
+      fallbackEndpoint: 'https://backup.example.com', fallbackApiKey: 'fixture-backup', sleep: async () => {}, fetchImpl: async url => {
+        routes.push(url);
+        if (startOnBackup && routes.length === 1) return new Response('origin timed out', { status: 522 });
+        return response({ ok: true });
+      } });
+    const validate = value => { if (++validations === 1) throw new LlmError('Invalid business evidence'); return value; };
+    assert.deepEqual(await client.call('s', 'u', { validate, repair: () => { repairs++; return { user: 'repair only the failed evidence', validate }; } }), { ok: true });
+    await client.call('s', 'writer', { label: 'writer' });
+    assert.deepEqual(routes, startOnBackup
+      ? ['https://primary.example.com', 'https://backup.example.com', 'https://backup.example.com', 'https://backup.example.com']
+      : ['https://primary.example.com', 'https://primary.example.com', 'https://primary.example.com']);
+    assert.equal(repairs, 1);
+  }
+});
+
+test('all primary HTTP failures can switch, while permanent backup HTTP errors fail immediately', async () => {
+  for (const [status, detail] of [[400, 'bad request'], [401, 'invalid_api_key'], [403, 'forbidden'], [408, 'timeout'], [429, 'rate limit'], [500, 'server error'], [503, 'get_channel_failed'], [404, 'model_not_found']]) {
+    const routes = [];
+    const client = createLlmClient({ endpoint: 'https://primary.example.com', apiKey: 'fixture-primary',
+      fallbackEndpoint: 'https://backup.example.com', fallbackApiKey: 'fixture-backup', sleep: async () => {}, fetchImpl: async url => {
+        routes.push(url); return routes.length === 1 ? new Response(detail, { status }) : response({ ok: true });
+      } });
+    assert.deepEqual(await client.call('s', 'u'), { ok: true });
+    assert.deepEqual(routes, ['https://primary.example.com', 'https://backup.example.com']);
+  }
+  for (const [status, detail] of [[404, 'model_not_found'], [401, 'invalid_api_key'], [429, 'insufficient_quota'], [503, 'get_channel_failed']]) {
+    const routes = [];
+    const client = createLlmClient({ endpoint: 'https://primary.example.com', apiKey: 'fixture-primary',
+      fallbackEndpoint: 'https://backup.example.com', fallbackApiKey: 'fixture-backup', sleep: async () => {}, fetchImpl: async url => {
+        routes.push(url); return routes.length === 1 ? new Response('origin timed out', { status: 522 }) : new Response(detail, { status });
+      } });
+    await assert.rejects(client.call('s', 'u'), new RegExp(detail));
+    assert.deepEqual(routes, ['https://primary.example.com', 'https://backup.example.com']);
+    assert.equal(client.usage.at(-1).retryable, false);
+  }
+});
+
+test('network, timeout, stream and invalid or incomplete JSON failures switch before content validation', async () => {
+  const failures = [
+    async () => { throw new TypeError('network unavailable'); },
+    async (url, { signal }) => new Promise((resolve, reject) => signal.addEventListener('abort', () => reject(signal.reason), { once: true })),
+    async () => new Response('data: {"error":{"message":"channel failed"}}\n\n', { headers: { 'content-type': 'text/event-stream' } }),
+    async () => response({ ok: true }, { done: false }),
+    async () => response('{"ok":'),
+    async () => new Response('{invalid envelope', { headers: { 'content-type': 'application/json' } })
+  ];
+  for (const failure of failures) {
+    const routes = [], payloads = []; let validations = 0;
+    const client = createLlmClient({ endpoint: 'https://primary.example.com', apiKey: 'fixture-primary',
+      fallbackEndpoint: 'https://backup.example.com', fallbackApiKey: 'fixture-backup', totalMs: 20, sleep: async () => {}, fetchImpl: async (url, options) => {
+        routes.push(url); payloads.push(JSON.parse(options.body)); return routes.length === 1 ? failure(url, options) : response({ ok: true });
+      } });
+    assert.deepEqual(await client.call('s', 'u', { validate: value => { validations++; return value; } }), { ok: true });
+    assert.deepEqual(routes, ['https://primary.example.com', 'https://backup.example.com']);
+    assert.equal(payloads.at(-1).messages.length, 2);
+    assert.equal(client.usage.at(-1).repairs, 0);
+    assert.equal(validations, 1);
+  }
+});
+
+test('both keys are fully redacted even when either key is a prefix of the other', async t => {
+  const root = await sandbox(t);
+  for (const [apiKey, fallbackApiKey] of [['fixture-secret', 'fixture-secret-long'], ['fixture-secret-long', 'fixture-secret']]) {
+    const dir = path.join(root, apiKey), diagnosticsDir = path.join(dir, 'diagnostics'), cacheDir = path.join(dir, 'cache'), events = [], ledgerEvents = [];
+    let calls = 0;
+    const client = createLlmClient({ endpoint: 'https://primary.example.com', apiKey, fallbackEndpoint: 'https://backup.example.com', fallbackApiKey,
+      diagnosticsDir, cacheDir, sleep: async () => {}, onEvent: event => events.push(event),
+      ledger: { recordAttempt: async (label, event) => ledgerEvents.push(event), recordOutcome: async (label, event) => ledgerEvents.push(event), recordDelay: async () => {} },
+      fetchImpl: async () => {
+        if (++calls === 1) throw new TypeError(apiKey + ' ' + fallbackApiKey, { cause: new Error(fallbackApiKey + ' ' + apiKey) });
+        const res = response(apiKey + ' ' + fallbackApiKey);
+        res.headers.set('x-request-id', fallbackApiKey); return res;
+      } });
+    await assert.rejects(client.call('s', 'u'), error => !error.message.includes('fixture-secret'));
+    assert.equal(calls, 3);
+    const files = [];
+    for (const folder of [diagnosticsDir, cacheDir]) for (const name of await fs.readdir(folder)) files.push(await fs.readFile(path.join(folder, name), 'utf8'));
+    const all = JSON.stringify([files, client.usage, events, ledgerEvents]);
+    assert.ok(!all.includes(apiKey)); assert.ok(!all.includes(fallbackApiKey));
+    assert.ok(!all.includes('[REDACTED]-long')); assert.match(all, /REDACTED/);
+    assert.deepEqual(client.usage.map(x => x.route), ['primary', 'backup', 'backup']);
+  }
+});
+
+test('absent, incomplete or identical fallback preserves permanent primary fast failure', async () => {
+  for (const fallback of [{}, { fallbackEndpoint: 'https://backup.example.com' }, { fallbackApiKey: 'fixture-backup' },
+    { fallbackEndpoint: 'https://primary.example.com', fallbackApiKey: 'fixture-primary' }]) {
+    let calls = 0;
+    const client = createLlmClient({ endpoint: 'https://primary.example.com', apiKey: 'fixture-primary', ...fallback, sleep: async () => {},
+      fetchImpl: async () => { calls++; return new Response('insufficient_quota', { status: 429 }); } });
+    await assert.rejects(client.call('s', 'u'), /insufficient_quota/);
+    assert.equal(calls, 1);
+  }
+});
+
+test('primary and backup failures share the hard three-request limit and cross-run attempts', async () => {
+  for (const previousAttempts of [0, 2, 3]) {
+    const routes = [], attempts = [];
+    const client = createLlmClient({ endpoint: 'https://primary.example.com', apiKey: 'fixture-primary',
+      fallbackEndpoint: 'https://backup.example.com', fallbackApiKey: 'fixture-backup', retryDelays: [0, 0, 0, 0], sleep: async () => {},
+      ledger: { attempts: { editor: Array.from({ length: previousAttempts }, () => ({})) },
+        recordAttempt: async (label, event) => attempts.push(event.attempt), recordOutcome: async () => {}, recordDelay: async () => {} },
+      fetchImpl: async url => { routes.push(url); return new Response('origin timed out', { status: 522 }); } });
+    await assert.rejects(client.call('s', 'u', { label: 'editor' }), /522|stage request budget exhausted/);
+    assert.equal(routes.length, 3 - previousAttempts);
+    assert.deepEqual(attempts, Array.from({ length: 3 - previousAttempts }, (_, i) => previousAttempts + i + 1));
+    assert.deepEqual(routes, ['https://primary.example.com', 'https://backup.example.com', 'https://backup.example.com'].slice(0, 3 - previousAttempts));
+  }
+});
+
+test('automatic fallback cannot exceed the deadline or retry delay budget', async () => {
+  for (const budgetMs of [0, 30]) {
+    let calls = 0, sleeps = 0;
+    const client = createLlmClient({ endpoint: 'https://primary.example.com', apiKey: 'fixture-primary',
+      fallbackEndpoint: 'https://backup.example.com', fallbackApiKey: 'fixture-backup', budgetMs, retryDelays: [100, 100],
+      sleep: async () => { sleeps++; }, fetchImpl: async () => { calls++; return new Response('insufficient_quota', { status: 429 }); } });
+    await assert.rejects(client.call('s', 'u'), /budget exhausted/);
+    assert.equal(calls, budgetMs ? 1 : 0); assert.equal(sleeps, 0);
+  }
 });
 
 test('recovered pipeline public diagnostics redact nested causes and upstream identifiers', async t => {
