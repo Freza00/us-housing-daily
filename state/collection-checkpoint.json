@@ -133,7 +133,8 @@
     "costar-research": 1793180442798,
     "sp-case-shiller": 1793180442798,
     "zonda-research": 1793180442798,
-    "zonda-lot-supply": 1793180442798
+    "zonda-lot-supply": 1793180442798,
+    "mnd-rates": 1794949200000
   },
   "observed_ids": [
     "dc7d0545934d49f5",
@@ -5472,7 +5473,33 @@
     "5713af6561588aa8",
     "b93422a348469523",
     "96b8d6e08f0c6ae3",
-    "f09a973c93412b14"
+    "f09a973c93412b14",
+    "d4ab03ea133d875b",
+    "3e0736852b407457",
+    "70125d58baf73cd6",
+    "b7a377d84b94161c",
+    "835b0598077125c9",
+    "ade40432fa2866ee",
+    "87e5731447f9acb2",
+    "3bdd792866be65c8",
+    "9c1cacbd784035e0",
+    "3d8f05de3d9c5a11",
+    "2af6a8d214f4cddb",
+    "9e33e7ba8120cca7",
+    "9e726cf0753b8d9b",
+    "954a7f52a4880e91",
+    "45e5dad6c4b67154",
+    "36d873ef3d3178d4",
+    "d45fb9622b1df6ec",
+    "bd3623b05fb9a2a6",
+    "cd2449a0b7b39db3",
+    "42728fcbbe551ee9",
+    "6954c0eda417f5ba",
+    "e3af1b1062ae4846",
+    "c8865b2be6c8c4ad",
+    "b1670bb267718be3",
+    "320f33d2ee6ae062",
+    "16bf4c4c1c13a2fd"
   ],
   "initialized_sources": [
     "housingwire",
@@ -5550,7 +5577,7 @@
       "name": "HousingWire",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.housingwire.com/feed/"
       ],
@@ -5561,14 +5588,14 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 9,
+      "recent": 7,
       "unreadable_recent": 0,
-      "earliest_dated": 1794932683000,
+      "earliest_dated": 1794938007000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "inman",
@@ -5604,50 +5631,39 @@
       "name": "The Real Deal (National)",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://therealdeal.com/national/feed/"
       ],
-      "status": "ok",
-      "discovered": 10,
-      "articles": 10,
-      "discovery_truncated": false,
-      "article_budget": 0,
-      "fallback_bodies": 0,
-      "undated": 0,
-      "recent": 10,
-      "unreadable_recent": 0,
-      "earliest_dated": 1794525913000,
-      "coverage_basis": "full_listing",
-      "coverage": null,
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794951480753
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "Directory contained no matching links"
     },
     {
       "id": "bisnow",
       "name": "Bisnow",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.bisnow.com/rss"
       ],
       "status": "ok",
-      "discovered": 10,
-      "articles": 10,
+      "discovered": 9,
+      "articles": 9,
       "discovery_truncated": false,
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 10,
+      "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1794936981000,
+      "earliest_dated": 1794954050000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "multi-housing-news",
@@ -5683,7 +5699,7 @@
       "name": "National Mortgage News",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.nationalmortgagenews.com/rss"
       ],
@@ -5701,7 +5717,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "cnbc-realestate",
@@ -5736,7 +5752,7 @@
       "name": "D Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.dmagazine.com/feed/"
       ],
@@ -5747,14 +5763,14 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 12,
+      "recent": 11,
       "unreadable_recent": 0,
-      "earliest_dated": 1794602599000,
+      "earliest_dated": 1794610064000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "houston-agent",
@@ -5845,7 +5861,7 @@
       "name": "Miami Agent Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://miamiagentmagazine.com/feed/"
       ],
@@ -6057,7 +6073,7 @@
       "name": "Realtor.com News",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.realtor.com/news/feed/"
       ],
@@ -6068,14 +6084,14 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 29,
+      "recent": 24,
       "unreadable_recent": 0,
-      "earliest_dated": 1794856200000,
+      "earliest_dated": 1794860724000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "redfin-news",
@@ -6110,7 +6126,7 @@
       "name": "Texas Real Estate Research Center (TRERC)",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://trerc.tamu.edu/texas-housing-insight/"
       ],
@@ -6129,7 +6145,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "fed-press",
@@ -6193,7 +6209,7 @@
       "name": "PERE News",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.perenews.com/feed/"
       ],
@@ -6235,7 +6251,7 @@
       "name": "Connect CRE",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.connectcre.com/feed/"
       ],
@@ -6246,21 +6262,21 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 10,
+      "recent": 2,
       "unreadable_recent": 0,
-      "earliest_dated": 1794945760000,
+      "earliest_dated": 1794948270000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "rebusiness-online",
       "name": "REBusiness Online",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://rebusinessonline.com/feed/"
       ],
@@ -6278,7 +6294,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "nrhc",
@@ -6803,7 +6819,7 @@
       "name": "Fannie Mae ESR",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.fanniemae.com/data-and-insights/forecast"
       ],
@@ -6817,7 +6833,7 @@
       "name": "Freddie Mac PMMS",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.freddiemac.com/pmms"
       ],
@@ -6838,14 +6854,14 @@
       "versions": {
         "https://freddiemac.com/pmms": "c31943a782537223b1fcb017e44934e5d28dda90fbdc8ffddd8a2a2df63920f4"
       },
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "freddie-research",
       "name": "Freddie Mac Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.freddiemac.com/research-and-perspectives"
       ],
@@ -6867,14 +6883,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "texas-realtors",
       "name": "Texas REALTORS Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.texasrealestate.com/research/quarterly-housing-report"
       ],
@@ -6893,14 +6909,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "metrotex-research",
       "name": "MetroTex Market Reports",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.mymetrotex.com/market-reports/"
       ],
@@ -6919,7 +6935,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "unlock-research",
@@ -6955,7 +6971,7 @@
       "name": "Harvard JCHS",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.jchs.harvard.edu/blog"
       ],
@@ -6998,23 +7014,36 @@
       "name": "CBRE Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
-        "https://www.cbre.com/services/property-types/multifamily",
-        "https://www.cbre.com/shared-sitemap/figure.xml",
-        "https://www.cbre.com/insights"
+        "https://www.cbre.com/services/property-types/multifamily"
       ],
-      "status": "error",
-      "discovered": 0,
-      "articles": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "discovered": 15,
+      "articles": 15,
+      "discovery_truncated": false,
+      "article_budget": 15,
+      "fetched_articles": 15,
+      "fallback_bodies": 0,
+      "undated": 2,
+      "recent": 3,
+      "unreadable_recent": 0,
+      "earliest_dated": 1744732800000,
+      "coverage_basis": "full_listing",
+      "coverage": {
+        "lower": 1793180442798,
+        "upper": 1794949200000
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1794991002654
     },
     {
       "id": "jll-research",
       "name": "JLL Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.jll.com/en-us/insights"
       ],
@@ -7036,14 +7065,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "cushman-research",
       "name": "Cushman & Wakefield Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
       ],
@@ -7062,21 +7091,33 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "colliers-research",
       "name": "Colliers Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.colliers.com/en/research"
       ],
-      "status": "error",
-      "discovered": 0,
-      "articles": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "discovered": 1,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 1,
+      "fetched_articles": 1,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 1,
+      "unreadable_recent": 0,
+      "earliest_dated": 1794941400000,
+      "coverage_basis": "full_listing",
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1794991002654
     },
     {
       "id": "realpage-research",
@@ -7111,7 +7152,7 @@
       "name": "NMHC Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.nmhc.org/research-insight/quarterly-survey/"
       ],
@@ -7130,14 +7171,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "naa-research",
       "name": "NAA Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://naahq.org/research"
       ],
@@ -7159,14 +7200,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "uli-pwc",
       "name": "ULI/PwC Emerging Trends",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
         "https://www.pwc.com/us/en/about-us/newsroom.html"
@@ -7212,7 +7253,7 @@
       "name": "John Burns Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://jbrec.com/resources/insights/"
       ],
@@ -7226,7 +7267,7 @@
       "name": "Northmarq Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.northmarq.com/insights"
       ],
@@ -7245,14 +7286,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "berkadia-research",
       "name": "Berkadia Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.berkadia.com/multifamily-reports/"
       ],
@@ -7274,14 +7315,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "arbor-research",
       "name": "Arbor/Chandan Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://arbor.com/research/reports/"
       ],
@@ -7295,7 +7336,7 @@
       "name": "Newmark Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.nmrk.com/insights/market-report"
       ],
@@ -7396,7 +7437,7 @@
       "name": "MBA Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
       ],
@@ -7557,7 +7598,7 @@
   ],
   "processed_capture": {
     "upper": 1794949200000,
-    "fingerprint": "f4b30e8da5d2b42f2448f5eefda046521d625fa7b47820ca449643394a4d55a8",
+    "fingerprint": "34a61ea41c69e982998dc8f2236170d036e5f2c18d13f475141c7213a6114e2c",
     "fingerprint_version": 2
   },
   "pending": {
@@ -7567,8 +7608,8 @@
     "cutoff_upper": 1794949200000,
     "window": {
       "lower": 1452758400000,
-      "upper": 1794951000001,
-      "hours": 95053.50000027778
+      "upper": 1794988800001,
+      "hours": 95064.00000027778
     },
     "items": [
       {
@@ -7722,6 +7763,697 @@
         "id": "d05dbd1a39f7764c",
         "acquisition_window": {
           "lower": 1794862800000,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "housingwire",
+        "source_name": "HousingWire",
+        "source_tier": "A",
+        "source_weight": 9,
+        "source_tags": [
+          "housing",
+          "rates",
+          "policy"
+        ],
+        "region": "national",
+        "title": "Done right, verification gives loan officers their time back",
+        "link": "https://www.housingwire.com/articles/verification-automation-lo-time/",
+        "description": "Verification has a way of becoming the loan officer’s problem. A missing pay stub turns into an email. An employer that doesn’t respond turns into a phone call. A borrower who missed a verification request needs another reminder. And bank statements tend to be the biggest headache of all: pages go missing, borrowers send photos instead of PDFs or the statements don’t cover enough months, so the request goes out again. If income, employment and asset verification are handled through separate systems or at different stages of the loan, someone has to keep track of what was completed, what was not and what still needs to happen. Even when the underlying problem sits with an employer, vendor or data source, the loan officer is often the one who has to absorb the delay and explain it to the borrower. As more lenders move verification earlier in the workflow, often into the point of sale, it is easy to see why LOs might worry that more of that work is being pushed onto them. But moving verification earlier does not have to mean moving more work onto the LO. Done right, it can do the opposite: give loan officers reliable information sooner, reduce manual follow-up and preserve more of the time they need for borrowers, referral partners and new business. Protect the green time Loan officers know how quickly administrative work can take over a day. Individual verification tasks may be small, but together they eat into the hours an LO could spend advising borrowers, structuring deals, developing referral relationships and bringing in new business. That is the “green time” loan officers need to protect. For lenders still relying heavily on manual verification, reducing document collection is one of the clearest places to reclaim time. When borrowers can connect directly to their payroll provider, employer or financial institution, the lender can receive income, employment and asset data without asking the LO to collect every piece manually. That means fewer pay stubs to chase, fewer employer responses to track down and fewer borrower reminders to send. A direct connection to the borrower’s financial institution also solves much of the pain with bank statements because far less time is spent on things like combing through to identify and source deposits. But automation is only part of the equation. Timing matters, too. Traditionally, verifications happened after application, once a file reached processing or underwriting. More lenders are now moving those steps to the point of sale, while the borrower is already completing the application. From the LO’s perspective, that can look like more work moving closer to the borrower relationship they manage. A well-designed workflow does the opposite. When verification is built into the application experience, the borrower can complete it while already engaged in the process by connecting directly to their accounts instead of manually entering income, employment and asset information in the form fields. That gives borrowers a faster, simpler application, which makes for happier borrowers, and it gives the LO reliable information sooner without creating another request to initiate or chase later. That earlier visibility also gives the LO more time to address missing information or a financial scenario that needs a closer look before it becomes a downstream surprise. Automation still has to be connected Moving verification earlier does not help much if the workflow surrounding it is fragmented. When income, employment and assets live with different providers, the resulting data can land in disconnected systems. Loan officers and operations teams may have to toggle between platforms to confirm what’s been completed and rekey information into the loan file. This fragmentation also creates friction for borrowers, who may not know verifications are the cause, but who will certainly notice they are waiting or being asked for another document. In the worst case, that frustration costs the lender the loan. Even when borrowers stay, verification delays stretch application-to-close timelines, negatively affecting performance metrics that may factor into LO compensation and creating additional costs for the lender. A connected verification experience brings income, employment and assets into one borrower flow and syncs the resulting data back to the LOS in real time. That means fewer systems for lending teams to manage, less information to rekey and fewer separate requests for borrowers to complete, helping keep the file moving without adding more work for the LO. Direct-source data can also be refreshed when reverification is needed later in the loan cycle, without sending the borrower back through another round of document collection. The payoff for loan officers Done right, verification takes administrative work out of the loan officer’s day instead of simply moving it from one stage of the process to another. It gives LOs better information earlier, keeps borrowers moving and protects more of the green time loan officers need to serve customers and grow their businesses. Loan officers notice which lenders give them verification technology that protects their selling time and which ones expect them to work around operational friction. Daniel Esquibel is the Vice President of Mortgage at Argyle. This column does not necessarily reflect the opinion of HousingWire’s editorial department and its owners. To contact the editor responsible for this piece: [email protected] . Related More: Income verification Loan Officer mortgage technology Technology",
+        "published_at": 1794988800000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794328961000,
+        "extraction": "semantic",
+        "canonical": "https://housingwire.com/articles/verification-automation-lo-time",
+        "content_hash": "1591fe3229e2a23386b0a55cbb75e49dbcb9e37ffd4d4f180a04499cc387d817",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "d4ab03ea133d875b",
+        "source_family": "housingwire",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "housingwire",
+        "source_name": "HousingWire",
+        "source_tier": "A",
+        "source_weight": 9,
+        "source_tags": [
+          "housing",
+          "rates",
+          "policy"
+        ],
+        "region": "national",
+        "title": "Fitch affirms Finance of America’s CCC rating as key risks, leverage persist",
+        "link": "https://www.housingwire.com/articles/fitch-affirms-finance-of-america-ccc-positive-outlook/",
+        "description": "Finance of America Companies’ long-term credit ratings remain deep in speculative-grade territory, even as the company reduces near-term risk and improves underlying profitability, according to a review published Monday by Fitch Ratings . Fitch this week affirmed the long-term issuer default ratings of Finance of America Companies and its subsidiaries, Finance of America Equity Capital LLC and Finance of America Funding LLC, with a CCC rating and a positive outlook. Fitch also affirmed Finance of America Funding’s senior secured debt rating at CCC- with a recovery rating of RR5. Fitch defines CCC ratings as having a very low margin for safety, with default considered a real possibility. But the ratings agency also explained that it maintains a positive outlook for Finance of America (FOA) due to its \"established market position within the reverse mortgage sector,\" along with experience senior management and support from Brian Libman, who chairs its board of directors. The action is part of Fitch's periodic peer review of nine publicly rated nonbank mortgage companies. Like other lenders, FOA has been contending with volatile interest rates , high leverage and constrained liquidity as the broader mortgage market remains cyclical and capital intensive. Earlier this month, FOA reported a net loss of $110 million in the third quarter of 2026 as noncash fair value adjustments offset growth in its home equity lending business. The company reported funded loan volume of $748 million from July through September, up 24% from the same period in 2025, while its year-to-date volume of $2.07 billion was up 17% year over year. The company also said during its Q3 earnings call that it expects to complete a $60 million paydown of senior secured notes in November. In June 2024, FOA announced a restructuring of unsecured debt into secure notes while extending the original 2025 maturity date. That debt was restructured into two tranches, with $200 million in secured first-lien notes due in 2026 (along with an option to extend to 2027) and $150 million in exchangeable senior first-lien notes due in 2029. Why FOA's rating was affirmed In its report , Fitch said the positive outlook reflects FOA’s work over the past year to address material near-term obligations and its improved profitability when excluding fair value marks. The agency indicated it could raise FOA’s issuer default rating to B- if the company builds a “substantial” liquidity cushion beyond remaining repayment obligations and continues to de-lever through retained earnings. The ratings remain constrained by relatively weak liquidity and high leverage, a short-term and largely secured funding profile, and elevated key person risk tied to Libman. Additionally, the review factored in the highly cyclical nature of mortgage originations, as well as the volatility tied to mortgage servicing rights valuations and securitization residuals. The announcement illustrates that while FOA has taken steps to stabilize its balance sheet, its capital structure and earnings volatility still present elevated credit risk for mortgage and capital markets participants — including warehouse lenders and secondary market investors. Why the rating could shift in the future Fitch noted that its positive outlook could be revised to stable, or the CCC rating could be cut, if Finance of America fails to bolster its liquidity before upcoming maturities. Other factors that could drive a downgrade include deteriorating profitability and sustained leverage above 15s. The ratings agency said that FOA's ratio of total debt to tangible equity — excluding obligations tied to HECM Mortgage-Backed Securities (HMBS) and nonrecourse debt — was 33.7x at the end of September, up from 14.0x at the end of 2025. Fitch said it believes leverage will stay sensitive to interest rate movements. In December 2025, FOA issued $50 million of preferred stock to funds managed by Blue Owl Capital . Fitch treats these preferred shares as debt, since change-of-control provisions mandate redemption of the preferred shares in cash. But the agency said it does not believe the preferred shares will be a permanent part of FOA's capital structure as scheduled increases in coupons, starting with a 300-bps increase at the seventh anniversary date, provide an incentive to redeem and create an effective maturity. \"We think it speaks a lot to the interest in the reverse segment, the fact that they’re willing to make an equity commitment to us and acquire the product that we’re generating,\" FOA CEO Graham Fleming told HousingWire 's Reverse Mortgage Daily earlier this year about the transaction. Fitch also noted potential upsides for FOA's ratings. These include sustained improvement in liquidity after near-term obligations are repaid, return on average assets being maintained above 1% with positive cash generation, and gross leverage staying below 10x. The agency also cited better funding flexibility through long-term and more committed facilities, growth that strengthens the FOA franchise brand, and deeper management expertise and clear succession planning as potential reasons to bolster the company's ratings down the road. Related More: Finance of America",
+        "published_at": 1794952905000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794952908000,
+        "extraction": "semantic",
+        "canonical": "https://housingwire.com/articles/fitch-affirms-finance-of-america-ccc-positive-outlook",
+        "content_hash": "16fa629c76d8041ad9b5bb72879f3b9d5dcb08947df224bc7a8ad4627acfcfab",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "3e0736852b407457",
+        "source_family": "housingwire",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Loudoun Supervisors Halt New Data Center Approvals For Up To One Year",
+        "link": "https://www.bisnow.com/news/washington-dc/data-center-development/loudoun-says-no-new-data-center-approvals-for-a-year",
+        "description": "The data center capital of the world is pressing pause on legislative approvals for the digital infrastructure facilities through as late as September of next year. The Loudoun County Board of Supervisors voted 7-1, with one abstaining, Tuesday evening to halt consideration of legislative applications for data centers and substations, with a retroactive effective date of Sept. 15. Thirty-three legislative applications are currently active, according to the resolution . Loudoun County Tuesday night's Loudoun County Board of Supervisors meeting Supervisor Kristen Umstattd, who represents the Leesburg District, voted against the motion, and Supervisor Caleb Kershner, who represents the Catoctin District, abstained. \"Just the fact of the matter is that this development of data centers has moved a lot faster than the board has been able to respond,\" Supervisor Juli Briskman, who proposed the review that culminated in the resolution, said just before the vote. \"And we did have a lot of missed opportunities to respond and get this under control, as our constituents have been begging us to do, and this is a golden opportunity to do that tonight,\" added Briskman, who represents the Algonkian District. Loudoun County is in the second phase of its impact study that would establish new guidance and standards for data centers and substations. The result of that study is expected to be released next spring. The county's pause comes as communities across the U.S. are fighting to slow down the rapidly spreading asset class. Next door to Loudoun, Prince William County in September drastically shrank its map for data centers that are allowed by right. Montgomery County instituted an 18-month data center freeze in July. New York instituted a yearlong moratorium for large-scale data centers, also in July, and at least seven more states are considering similar measures, according to the National Conference of State Legislatures. Loudoun’s halting of legislative applications includes rezonings and special exceptions that need to be approved by the board. Administrative applications for things like site plans and subdivision plans would still be allowed to proceed. Data center moratoriums are not allowed in Virginia. But since the board has one year to review legislative applications under Loudoun's zoning ordinance, it's using that length of time to effect the pause. At Tuesday night's board meeting, Loudoun County Attorney Leo Rogers confirmed the legality of the pause that the county is undertaking, but said he does believe there is a \"real threat of litigation\" from data center applicants. The legislative effort dates back to July, when the supervisors asked county staff to look into whether instituting such a pause would be permissible. In September, after getting the green light from the county's attorney, the board voted to direct staff to draw up a resolution for the final vote. In March 2025, Loudoun took its first step in limiting data center development when it stripped by right zoning , requiring all data centers to go through a special exception process. Under that legislation, data centers in the works that had already been approved — 15 projects in the pipeline totaling 10.5M SF of development — can still proceed without going through that process. In 2025, Loudoun had about 53M SF of data centers, a 100% increase from five years earlier, according to county officials . Continue reading this story with a free account Log in or register Related Topics: Data Centers , Loudoun County",
+        "published_at": 1794970697000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794970786000,
+        "extraction": "semantic",
+        "canonical": "https://bisnow.com/news/washington-dc/data-center-development/loudoun-says-no-new-data-center-approvals-for-a-year",
+        "content_hash": "e42233cfa14b29206356958d1cd4d278d6552be59d087447c1746f407b92c981",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "70125d58baf73cd6",
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Sherwood Equities Sells Hudson Yards Development Site For $100M: The N.Y. Deal Sheet",
+        "link": "https://www.bisnow.com/news/new-york/deal-sheet/sherwood-equities-sells-hudson-yards-dev-site-for-100m-the-n-y-deal-sheet",
+        "description": "Long before Hudson Yards was the buzzy hot spot it is today, Sherwood Equities snapped up a 17K SF parcel of land at 460 10th Ave. And this week, it sold it to Joyland Group for $100M, Commercial Observer first reported . Google Maps The site at 460 10th Ave. is now slated to become housing. Sherwood had owned the residential development site since the 1990s, according to the firm’s website . It is unclear why Sherwood sold the property, but it once had plans to build more than 200 apartments on the site, according to The Real Deal . As recently as February, Sherwood agreed to add affordable housing to the site and invest $11.8M in neighborhood infrastructure upgrades in exchange for tacking on another 70K SF to the development, according to plans filed with the Department of Buildings. Now, a partnership between Joyland and Prospect Development has big plans for the site, Commercial Observer reported. The duo wants to build a 34-story, 456-unit apartment building. JLL’s Jonathan Hageman, Ethan Stanton, Andrew Scandalios, Hall Oster, Michael Mazzara and Brendan Maddigan represented Sherwood in the sale. The property had been on the market for a little over a year, according to an announcement on the brokerage’s website. TOP SALES Tishman Realty sold a 50K SF parking garage at 112 E. 16th St. to Pro-H Development for $44.3M, Crain's New York Business reported . The garage, which sits between Irving Place and Union Square East, will likely be demolished to make way for housing. Tishman representatives had filed permits to build a 22-story, 52-unit mixed-use building before the sale, with the new owner planning to turn the 52 units into for-sale homes. *** Trammell Crow Co. acquired 442 W. 18th St., a lot with a vacant two-story garage and office building, for $67.5M, PincusCo reported . The seller was family-owned Retaco Holding, which had owned the site since 1983. The new owner plans to build a 14-story mixed-use residential and commercial building. JLL’s Jonathan Hageman, Steven Rutman and Tyler Peck worked with Institutional Property Advisors’ Steven Siegel and Eric Anton to arrange the off-market deal for Retaco, Commercial Observer reported . *** Namdar Realty Group and Mason Asset Management snagged a 132K SF office building at 71 Fifth Ave. for $60.6M, PincusCo reported . Namdar and Mason borrowed $42M from Truist Bank to finance the purchase. The sellers were Madison Capital and Lubert-Adler. TOP LEASES Google Maps GFP's 520 Eighth Ave., where the Mason Tenders’ District Council Trust Funds is staying put for another 10 years Mason Tenders’ District Council Trust Funds renewed its 40K SF lease at GFP Real Estate’s 520 Eighth Ave. for another 10 years, according to a release. The organization has been in the 1926-built, 860K SF building since 2001 and plans to continue to use the property as its administrative offices. GFP’s Matthew Mandell handled the transaction in-house without any outside brokerages. *** MD Squared Property Group leased 16K SF at The Feil Organization’s 145 W. 30th St., bringing the property to 100% leased, according to a release. The deal follows Feil’s announcement that Turner School had renewed its 8K SF lease on the sixth floor of the 12-story office. Andrew Wiener represented the landlord in-house, while MD Squared represented itself. *** Nonprofit Child Center of NY inked a 16K SF lease at Stellar Management’s 35-01 36th Ave. in Astoria, Commercial Observer reported . Asking rents for the 10-year deal at the nine-story building were $50 per SF. Sholom & Zuckerbrot’s Gail Roseman represented the tenant, while NY Space Finders’ Luca DiCiero and Faisal Gilani represented the landlord. Coworking firm International Workplace Group, which signed for 8K SF in January 2025, is the building’s anchor. *** Activate Games signed a 16K SF lease at Acadia Realty Trust’s Downtown Brooklyn mall, City Point, Crain’s New York Business reported . The live-action video game experience company will occupy a ground-floor, mezzanine and lower-level space. The store is expected to open in June. Momentum Realty Group’s Chandler Slate represented the tenant. TOP FINANCING Google Maps 21-12 30th Road in Astoria, where Mega Contracting Group scored a $256.3M loan to develop hundreds of homes Mega Contracting Group scored a $256.3M construction loan for a 236-unit mixed-use project at 21-12 30th Road in Astoria, PincusCo reported . The funding came from a group of lenders including TD Bank, Enterprise Community Partners, NYC Department of Housing Preservation and Development and the NYS Housing Finance Agency. The property has an alternative address of 30-37 21st St. *** Wells Fargo provided a $258.2M loan to L+M Development Partners to refinance three apartment buildings in East Harlem, PincusCo reported . The properties span 1M SF across 761 units. They are located at 1962 and 1940 First Ave. and 455 E. 102nd St. The debt retires a $232.1M Fannie Mae loan. *** Artifact and Ashok Khuban netted two refinancing loans totaling $147.5M and covering three rental buildings in Upper Manhattan, PincusCo reported . Bank of Montreal provided the financing. The first loan, valued at $94M, was for 636-646 W. 158th St. and retires a $85.5M sum. The second loan, a $53.5M sum, was for 1871-1873 and 1867 Amsterdam Ave. and replaces a $46.2M sum. The prior lender in both cases was Genesis Capital. Continue reading this story with a free account Log in or register Related Topics: Acadia Realty Trust , Bank of Montreal , Enterprise Community Partners , GFP Real Estate , Joyland Management , L+M Development Partners , Mason Asset Management , Mega Contracting Group , Namdar Realty Group , Sherwood Equities , Stellar Management , TD Bank , The Feil Organization , Tishman Realty , Trammell Crow , Wells Fargo",
+        "published_at": 1794963386000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794963403000,
+        "extraction": "semantic",
+        "canonical": "https://bisnow.com/news/new-york/deal-sheet/sherwood-equities-sells-hudson-yards-dev-site-for-100m-the-n-y-deal-sheet",
+        "content_hash": "e08156a505ee0af60400e998a6037fc4a43cf683811dbe8eb2c35196e2894177",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "b7a377d84b94161c",
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Nvidia Tops Forecasts In First Report Without Jensen Huang, But Gets Choosier About Backing Data Centers",
+        "link": "https://www.bisnow.com/news/national/data-center-capital-markets/nvidia-tops-forecasts-in-first-report-without-jensen-huang-but-gets-choosier-about-backing-data-centers",
+        "description": "On paper, Nvidia’s first earnings report without Jensen Huang looked a lot like the ones with him. Almost nothing else about it did. The world’s most valuable chipmaker has spent recent weeks fighting on nearly every front — its founder’s abrupt exit, a national security probe, midterm backlash against data centers, and a Wall Street sell-off fueled by fears of an AI bubble. Its market value has fallen by roughly $2T since October to about $3.75T. Nvidia Nvidia Voyager headquarters in Santa Clara, California On Tuesday’s earnings call, interim CEO Colette Kress argued that none of it has slowed the business. Asked whether Democrats’ takeover of Congress could cool artificial intelligence spending, she said customers had spent the past week asking how to get more chips and that demand will hold “not only in the ’27 perspective, but moving to the ’28 as well.” As for the turmoil at the top, “from a business perspective, it’s business as usual,” she said. On the numbers, it was. Nvidia brought in $115.8B in revenue in the three months ending on Oct. 25, double a year earlier and nearly $7B more than Wall Street expected. Data center chips accounted for $107.6B of it. Nvidia expects about $130B this quarter, and Kress raised her forecast for next fiscal year to roughly 75% growth from 70%. Shares, which closed down 0.4% at $155.46, were up roughly 4% in after-hours trading as of 7 p.m. ET on Tuesday. In 49 minutes, one of the most anticipated earnings calls in recent memory touched on almost everything that matters to data center owners, developers, lenders and even Washington: whether demand is holding up, which projects Nvidia will help finance, who gets its scarce chips, who will run the company and whether it will keep selling to China. On China, the answer for now is no. Nvidia has stopped shipping licensed Hopper data center chips there, a business worth $2.4B last quarter, and its outlook assumes no China data center sales. For commercial real estate, few earnings reports matter more. Nvidia’s chips are the costliest item inside a data center, and the promise of ever more of them has sent developers racing to buy land and lock up power from the New Mexico desert to southern Ohio, a construction boom backed by an estimated $1.3T of debt . Tuesday’s report was the industry’s first look at whether the engine of the boom keeps running without the man who built it. By Kress’ account, it does. Nvidia compute “remains fully utilized across every hyperscaler and neocloud we serve,” she said. Hopper chips, now two generations old, are being rerented at up to twice their original price, and the cloud industry’s backlog has grown to $2.5T from $2T three months ago. The bigger shift was about money. Nvidia hasn’t just sold chips into the boom — it has helped pay for it , with $118B in guarantees outstanding, including $105B for OpenAI’s planned campus at SB Energy’s Ports-Pike site in Ohio. Kress said it will be “disciplined in how we commit capital” and “disciplined and selective” in backing neoclouds, the younger cloud providers that rent out its chips. “As the market matures and additional sources of capital become available, we are rigorously evaluating future investments, commitments and guarantees,” she said. For developers, the fine print matters. Pressed by Bernstein analyst Stacy Rasgon, Kress said Nvidia’s guarantees take effect only once a project is financed, built and ready for chips. If a developer falls behind, “our guarantee doesn’t exist anymore.” Nvidia, in other words, isn’t taking on construction risk. When it does help, Kress said, a top priority will be the real estate itself — the land, the power hookup and the building shell that must exist before a single chip arrives. She called that “a great asset for anyone to hold.” Before Kress said a word, board Chair Harvey Jones closed the door that Huang had cracked open that morning, when the founder said he would be “honored” to return. The board “does not intend to reinstate Jensen as CEO,” Jones said, and would take no questions “regarding the circumstances of Jensen’s resignation and the ongoing investigation.” No analyst tried. The board has hired Heidrick & Struggles to find a permanent CEO, but, Jones said, “we won’t expedite the CEO before finding exactly the right person.” Huang resigned Thursday amid reports of a relationship with a former executive of Singapore data center firm Megaspeed, whom U.S. intelligence suspects of spying for China, and of alleged affairs with Nvidia employees. The board has since formed a national security and export control oversight committee. Huang is due to give closed-door testimony Dec. 1 to three House committees investigating what they called “a potential breach of our national security.” The Securities and Exchange Commission is also investigating whether Nvidia’s disclosures misled investors, The Wall Street Journal reported Tuesday , citing people familiar with the matter. The scandal has already reached data centers. The U.S. Commerce Department first found Nvidia chips inside a Megaspeed facility in Malaysia, and on Monday, it issued a rule requiring data centers to get a license before renting advanced AI chip capacity to Chinese companies. Kress said Nvidia is still studying the rule, but “with demand far exceeding supply, we expect our performance to remain strong.” Lenders are flinching, too. HSBC sold a $300M slice of Project Jupiter’s construction loan at prices in the mid-80s, Bloomberg reported, after Oracle sent the developer a force majeure notice . By the end, Kress sounded less like a finance chief than a coach rallying her team. “Our customers and our partners are with us,” she told analysts. “We’ve got this.” Continue reading this story with a free account Log in or register Related Topics: Colette Kress , Jensen Huang , Nvidia",
+        "published_at": 1794963204000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794963217000,
+        "extraction": "semantic",
+        "canonical": "https://bisnow.com/news/national/data-center-capital-markets/nvidia-tops-forecasts-in-first-report-without-jensen-huang-but-gets-choosier-about-backing-data-centers",
+        "content_hash": "bc6a317c1bb69b05fc6960d01f1c5d92116c5484a84a9938d44e41f0dcab686f",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "835b0598077125c9",
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "San Francisco Hotels 'Pushed To Their Limit,' Yet Reinvestment Lags",
+        "link": "https://www.bisnow.com/news/san-francisco/hotel/san-francisco-hotels-pushed-to-their-limit-yet-reinvestment-lags",
+        "description": "Bisnow/Max Stein Build Group’s Julie Baccelli, CitizenM Hotels’ Eli Sokol, Marriott International’s Willis Cheng, Pankow Builders’ Mike Jones, LMNL Studios’ Jamie Shaw and Springboard Hospitality by Hotel Equities’ Pamela Janusz San Francisco’s tourism recovery is expected to bring more than 24 million visitors to the city in 2026, but hospitality executives say a shortage of modern luxury accommodations could limit the market’s ability to capitalize on growing demand. San Francisco’s roughly 35,000-room inventory has fallen behind competing gateway markets due to high renovation costs, lengthy entitlement processes and uncertainty around investment returns, according to hotel owners and investors at Bisnow’ s Bay Area Hospitality Summit. While major events, convention activity and rising hotel performance metrics are driving renewed optimism, industry leaders argued that significant capital reinvestment will be needed for the city to compete with other top-tier destinations for high-end travelers. “San Francisco’s inventory of hotels have been pushed to their limit,” said Jan Smidek, partner at San Francisco-based real estate development and investment firm JMA Ventures. “They can’t be pushed any further without triggering major code renovations and stepping up to that next level of capital investment.” The city is home to some luxury and boutique properties, but San Francisco lacks iconic five-star landmark hotels like in other premier tourism destinations, such as the Waldorf Astoria New York and Beverly Wilshire in Beverly Hills, panelists said during the Nov. 5 event at Hyatt Centric Fisherman's Wharf. Much of the city’s more than 35,000 hotel rooms have been left behind when it comes to reinvestment capital, with high construction costs, permitting challenges and uncertainty on returns due to frequent market downturns making it difficult to underwrite major hotel renovation projects in San Francisco. Assembling capital for major hotel renovations can be a challenging financial puzzle to solve in any market, but the cost environment in San Francisco provides little incentive for hotel owners to figure out how to best reinvest in their assets, said Eddie Yu, partner and head of acquisitions at Ohana Real Estate Investors, which controls more than 26,600 rooms throughout the U.S. and Mexico. As a result, the majority of hotels in the Bay Area have fallen behind despite the vast amount of wealth that’s poured into the city in recent years due to the artificial intelligence boom, Yu said. “San Francisco, from an asset quality standpoint, needs to catch up to the rest of the United States,” he said. “There's a lot of money here, and a lot of people willing to pay, but the people that own assets here manage money for public or private investors, and if you can't pinpoint when you’ll get that return on capital, it's quite hard to get those projects through.” Bisnow/Max Stein Rider Levett Bucknall’s Matthew Boone, Axis Architecture & Design’s Rory Carroll, KHP Capital Partners’ Jeff Stulmaker, Hilton’s Patrick Speer, Burton Landscape Architecture Studio’s Patrick Baldwin, Wyndham Hotels & Resorts’ Bob Walsh, Ohana Real Estate Investors’ Eddie Yu and JMA Ventures’ Jan Smidek There’s no doubt the market for additional luxury hotel properties in San Francisco exists, said Jeff Stulmaker, partner and chief investment officer for KHP Capital Partners. KHP owns The Jay at 433 Clay St., purchasing the 25-story property in 2021 for $221.5M. KHP reopened the hotel under the Marriott Autograph flag in 2023. “There is an immense amount of wealth. If you give people a great product in the right building and the right location, they're willing to pay for it,” Stulmaker said. Visitors have flocked to San Francisco throughout 2026 for business and tourism , drawn by the city’s resurgence as well as large events like the Super Bowl and FIFA World Cup. Rooms in San Francisco are expected to end 2026 with an average daily room rate of $266, up 8.5% year-over-year, and revenue per available room of $188, up 14% from the prior year. New guidance from Mayor Daniel Lurie’s office indicates an expected 25 million visitors to the city in 2027, boosting ADR to $271 and RevPAR to $195. Continue reading this story with a free account Log in or register Related Topics: JMA Ventures , KHP Capital Partners , Ohana Real Estate Investors",
+        "published_at": 1794960811000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794960822000,
+        "extraction": "semantic",
+        "canonical": "https://bisnow.com/news/san-francisco/hotel/san-francisco-hotels-pushed-to-their-limit-yet-reinvestment-lags",
+        "content_hash": "19a41da580e3044c1158e2121a60f5fd554cd32dce6230416f897554c4d87991",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "ade40432fa2866ee",
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Philly Construction Firm's Closure Seen As 'Sign Of The Times To Come'",
+        "link": "https://www.bisnow.com/news/philadelphia/construction-development/clemens-construction-closure",
+        "description": "Clemens Construction’s pending shutdown is seen by some real estate players as a sign of more pain to come for the sector as new development activity lags.",
+        "published_at": 1794957411000,
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "87e5731447f9acb2",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Phoenix Developers Turn To Vacant Schools For Affordable Housing",
+        "link": "https://www.bisnow.com/news/phoenix/affordable-housing/phoenix-developers-turn-to-vacant-schools-for-affordable-housing",
+        "description": "Phoenix developers are partnering with school districts to turn vacant property or land into affordable housing.",
+        "published_at": 1794956851000,
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "3bdd792866be65c8",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "GO Residential Charts A New Course After H&R Deal Sinks",
+        "link": "https://www.bisnow.com/news/new-york/multifamily/go-residential-new-plan-deal-q3-2026",
+        "description": "Go Residential REIT shifts its focus to NAV growth, \"delevering\" and its luxury U.S. rental portfolio after the failed H&R breakup deal.",
+        "published_at": 1794955955000,
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "9c1cacbd784035e0",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "BTR Operators Push For Treasury To Loosen Rules As Consolidation Looms",
+        "link": "https://www.bisnow.com/news/national/build-to-rent/btr-operators-push-for-treasury-to-loosen-rules-as-consolidation-looms",
+        "description": "Industry insiders are urging the federal government to ease new regulations governing the build-to-rent sector and the types of properties operators can buy.",
+        "published_at": 1794955454000,
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "3d8f05de3d9c5a11",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "bisnow",
+        "source_name": "Bisnow",
+        "source_tier": "A",
+        "source_weight": 8,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Fenway Center Apartment Complex Trades For $193M: The Boston Deal Sheet",
+        "link": "https://www.bisnow.com/news/boston/deal-sheet/fenway-center-apartment-complex-trades-for-193m-the-boston-deal-sheet",
+        "description": "Denver-based Big 4 Properties acquired the 312-unit Bower apartment complex, which sits steps away from Fenway Park .",
+        "published_at": 1794954050000,
+        "source_family": "bisnow",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "2af6a8d214f4cddb",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "d-magazine",
+        "source_name": "D Magazine",
+        "source_tier": "D",
+        "source_weight": 5,
+        "source_tags": [
+          "dfw"
+        ],
+        "region": "texas",
+        "title": "Scenes from D CEO’s 2027 Dallas 500 Launch Party",
+        "link": "https://www.dmagazine.com/business-economy/2026/11/scenes-from-d-ceos-2027-dallas-500-launch-party/",
+        "description": "Nearly 450 of North Texas' most influential business leaders gathered Nov. 10 at the Morton H. Meyerson Symphony Center for an exclusive party marking the launch of the 2027 edition of D CEO's Dallas 500. The annual event recognizes the region's 500 most powerful executives across more than 50 industries. Guests enjoyed an evening of … Continued The post Scenes from D CEO ’s 2027 Dallas 500 Launch Party appeared first on D Magazine .",
+        "published_at": 1794951845000,
+        "source_family": "d-magazine",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "9e33e7ba8120cca7",
+        "acquisition_window": {
+          "lower": 1793826000000,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Study Finds a Nearly 50% Drop in Renters Becoming Homeowners Since 2009",
+        "link": "https://www.realtor.com/news/trends/share-renters-becoming-homeowners-transunion-study-2026/",
+        "description": "As economic pressures continue to rise, a shocking new study has found that the share of renters who convert to homeownership has fallen 46% since 2009. TransUnion, a leader in global information and insights, released its 2027 Personal and Commercial Lines Annual Insurance Outlook on Tuesday, which focuses on what the insurance industry needs to stay profitable in a changing market. The report states that personal line underwriting has been strong throughout this year, but companies need to assess their strategies going forward as fewer people buy cars and homes , therefore reducing the pool of potential policyholders. According to the report, the share of renters who convert to homeownership was 3.9% in 2025, a sharp decline from 7.2% in 2009. This represents a shocking 46% decrease in the share of renters transitioning to homeownership in just 14 years. Combined with a 2025 report from the National Association of Realtors®, which stated that the median age of first-time buyers climbed from 33 to 40 in just five years, TransUnion concluded that the pool of potential policyholders is shrinking. The decrease in renters buying homes goes back to affordability and economic pressure, according to Ryan Thomson of The Assumable Guy . “Renters didn't stop wanting to own. Rates tripled and prices kept climbing, so the monthly number stopped working,” Thomson tells Realtor.com® . “In Colorado Springs, where I sell, 71% of households could afford a median-priced home in 2019. By 2023, it was 25.3%. So renters stay put. Or they move wherever the payment still works.” TransUnion also found that Florida , Texas , North Carolina , South Carolina , and Tennessee had the greatest influx of new residents between July 2025 and June 2026, with Florida gaining nearly 87,000 net-new residents. The most significant outbound migration was seen in Massachusetts , New Jersey , Illinois , New York , and California , with the Golden State alone with a net loss of 146,000 residents. Loading... The report found that the share of renters who convert to homeownership was 3.9% in 2025, a 46% decline from 7.2% in 2009. Many real estate agents are pointing to affordability as the cause for the drop. (Stock image) Getty Images This migration pattern is likely taking place as people chase affordability, looking for places that offer more space for lower costs. “A household may want a certain lifestyle, but not be able to afford it given the high costs of housing and of living in general in the area. State and local taxes may also play a role,” Cameron Walker , a real estate expert at Clever Real Estate , tells Realtor.com. “Texas, Florida, and the Carolinas may be more affordable and have lower state and local taxes.” The TransUnion report notes that the growing states all have an elevated exposure to hurricanes , severe convective storms, and other catastrophic weather compared to the states people are leaving. While the growing states are all located near the Sun Belt and generally considered more affordable than coastal states such as New York and California, the increased risks elevate costs beyond purchase price. Loading... Florida, shown above, along with Texas, Tennessee, and the Carolinas, had the highest net residence gains last year. However, the increased risk of severe weather in these states means they’re not always as affordable as they seem. (Stock image) Thomas/Adobe Stock “People may be assuming the Sun Belt states are generally affordable, and that isn't always the case,” Walker adds. “Property values are increasing in Sun Belt states because of in-migration, which increases property taxes and insurance costs, and inflates housing costs.” For insurance companies, TransUnion recommends strategies like focusing on retaining and creating more value from current customer, winning policies from competition, and combining risk mitigating and marketing efforts when discussing migration. For the housing market, improving outlooks and rebuilding the renter-to-homeowner path comes down to affordability and opportunity. “We need to increase the supply of entry-level, affordable housing. This includes promoting the construction of new housing in high-demand, high-growth communities. The industry needs to offer new financing options and improve responsibility to help new homebuyers qualify to enter the housing market,” says Walker. “People aren’t giving up their dreams of homeownership. They’re postponing them because the housing market has changed and the financial requirements to homeownership are out of the reach of many. The markets that can provide jobs and affordable housing will thrive, and gain the most, from future homeowners.”",
+        "published_at": 1794959233000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794959238000,
+        "extraction": "semantic",
+        "canonical": "https://realtor.com/news/trends/share-renters-becoming-homeowners-transunion-study-2026",
+        "content_hash": "f74cf71dcf178cdfdc27f01fd80a8bad5f6a10b9f7c943763f6c2fe9756abdc4",
+        "access": "public",
+        "evidence_status": "article",
+        "id": "9e726cf0753b8d9b",
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Daniel Craig Stepped Away From James Bond Role To Spend More Time at Home",
+        "link": "https://www.realtor.com/news/celebrity-real-estate/why-daniel-craig-stepped-away-from-james-bond-homes/",
+        "description": "Daniel Craig first stepped into the role of James Bond 20 years ago, and now, he has officially passed the duties along to someone new: Robert Pattinson . Craig made his 007 debut in the 2006 film “Casino Royale” and held the legendary gig for 15 years. He had originally planned to play the British spy for four films, but ended up having a successful five-movie run with “Quantum Solace” (2008), “Skyfall” (2012), “Spectre” (2015), and “No Time To Die” (2021). In addition to filming one more motion picture than he had planned, Craig, 58, has spoken out about how physically demanding it is to be James Bond. In the time between the last two films, he told The Sunday Times he was “getting old.” “I’m creaky,” he admitted in the 2019 interview. In 2024, he told The New York Times , “I find it really hard, this job, and it gets harder as I get older.” Beyond the grueling stunts and action required for each installment, the role demanded a huge time commitment that pulled Craig away from his family. Loading... Daniel Craig's reign as James Bond ended with the 2021 film \"No Time to Die.\" It was recently announced Robert Pattinson will take on the iconic role. Mike Marsland/Getty Images for Omega Loading... Craig played 007 for 15 years, an experience he said was \"really hard.\" PIERRE-PHILIPPE MARCOU/AFP/GettyImages Loading... Toward the end of his run, Craig joked that he was getting \"creaky\" and was no longer up to the intense stunts and physicality required of the role. Photo by Vittorio Zunino Celotto/Getty Images “The Girl With the Dragon Tattoo” star married actress Rachel Weisz in June 2011 in an intimate New York ceremony . Together, they welcomed a daughter named Grace in September 2018. Craig also has an older daughter, Ella Loudon , 34, whom he shares with his first wife, Fiona Loudon . He’s also a stepfather to Weisz’s son, Henry Aronfsky, 20, from her former relationship with filmmaker Darren Aronofsky . Although Craig has said that he’s “not a method actor,” he described himself as a “nightmare to be with” while he’s working. “I want to go home and forget it all and just be normal and be like, 'Hey, family,' but half my brain’s at work,” he said. But having a young daughter at home has changed his approach to his career. “I don’t want to be away from home as much as I have in the past,” he explained. Craig and Weisz, who both hail from England, have called New York home for quite some time. Loading... Craig and his wife, Rachel Weisz, married in 2011 and have three children between them. Their youngest, Grace, was born in 2018. Corbis via Getty Images Loading... “I don’t want to be away from home as much as I have in the past,” Craig admitted not long after the couple welcomed Grace. The Hollywood Reporter via Getty Images Loading... After selling their Brooklyn brownstone earlier this year, Weisz and Craig still have homes in upstate New York and London. Photo by Simon Bruty/Anychance/Getty Images In April of this year, they sold their Brooklyn brownstone for $11.8 million. They had picked it up for $6.75 million in 2018. Built in 1901, the 6,600-square-foot abode spans five levels, which are accessible by elevator. It included a roof deck, a patio, and a backyard garden. The six-bedroom, 5.5-bathroom residence was damaged by a fire in 2016, before the couple snapped it up. According to Architectural Digest , the previous owner, novelist Martin Amis , had transformed the home into a “clean, blank slate” in light of the damage, and Craig and Weisz put their own spin on it in the nearly eight years they lived there. The off-market transaction came just a year after the couple sold an adjacent townhouse for $4.05 million. They still hold ties to the Empire State, with an upstate retreat in Marbletown, NY , that Weisz purchased for $2.1 million in 2008. Nestled on an idyllic 124-acre parcel, the 2,500-square-foot stone home dates to 1785 and includes four bedrooms and three bathrooms. Overseas, Craig and Weisz have a $4.2 million Victorian mansion in a conservation area in North London. It was a home the “Vladimir” actress had purchased before they were married. According to the Daily Mail , they sought to heavily renovate the 1840 home in 2023, but had to alter their plans when an objection claimed the proposal would clash with the home’s original style. The renovation was ultimately approved in 2024. Get real estate news in your inbox Sign up now Hannah Chambers is a senior celebrity and lifestyle reporter who joined Realtor.com in 2026. She has been writing entertainment and lifestyle content since 2016, with her work appearing in Cosmopolitan, BravoTV, NYLON, Bustle, Elite Daily, and The Zoe Report, among other publications. Hannah received a bachelor’s degree in journalism from The University of Maine. In her spare time, she loves to chat about pop culture and is a major fan of reality TV.",
+        "published_at": 1794957576000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794957580000,
+        "extraction": "semantic",
+        "canonical": "https://realtor.com/news/celebrity-real-estate/why-daniel-craig-stepped-away-from-james-bond-homes",
+        "content_hash": "241c3999f774a9375c166978939b58de1bebf8280a4466b4a5d75c64d2835238",
+        "access": "preview",
+        "evidence_status": "preview",
+        "id": "954a7f52a4880e91",
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Anne Hathaway Welcomes Her Third Child With Husband Adam Shulman",
+        "link": "https://www.realtor.com/news/celebrity-real-estate/anne-hathaway-gives-birth-third-baby-husband-adam-schulman/",
+        "description": "Congratulations are in order for Anne Hathaway and her husband, Adam Shulman . It appears the couple have welcomed their third child , after \"The Devil Wears Prada\" actress was spotted with a newborn in New York City on Nov. 17. The photos, shared first by TMZ , depict Hathaway, 44, strolling around her hometown with a friend, and an infant snuggled up into a baby carrier. The actress first shared news of her pregnancy in June, revealing a growing baby bump in an Instagram video captioned , \"Baby, I'm yours.\" Hathaway and Shulman are also parents to two sons: Jonathan Rosebanks Shulman , 10, and Jack Shulman , 7. Shortly after sharing the news, Hathaway appeared on \"Late Night With Seth Meyers,\" and said that so far, the experience of a third pregnancy had been \"amazing.\" Loading... Anne Hathaway first shared the news of her pregnancy in a sweet Instagram post in June. Instagram Loading... This is baby number three for Hathaway and her husband, Adam Shulman, who already have two sons named Jonathan and Jack. Emma McIntyre/Getty Images She noted that she and her jewelry designer husband were surprised to learn they had another bundle of joy on the way. \"I mean, we knew what we were doing, but we were so shocked it worked,\" she revealed on the talk show. \"We were so shocked it went this way, so we're calling this one our buzzer-beater,\" she joked. According to a People magazine source , up until the announcement, Hathaway had worked diligently to keep the news of her pregnancy a secret during \"The Devil Wears Prada 2\" press tour. \"She wanted to reveal the pregnancy on her own terms. The press tour was about celebrating the movie and getting fans excited to see it,\" shared the source. Press tours for \"Verity\" and \"The Odyssey\" have kept Hathaway busy shortly in the time since, but according to the source, she was able to \"focus on family\" and soak up \"a little downtime\" in the time between the films. \"She's grateful for where she is in her career and for the opportunity to be part of a film that means so much to so many people. Complaining just isn't Anne. She approaches things with gratitude and professionalism, and that's exactly how she handled the press tour,\" the source added. Although Hathaway is a longtime New Yorker who originally hailed from New Jersey , the family primarily resides in an Ojai, CA , home the couple purchased for $3.6 million in 2014. The couple told Architectural Digest that it was love at first sight with the property, and they knew they had to have it from the moment they first viewed it—even if it needed a handful of updates. \"It was the ideal combination of romance and great design,\" Hathaway said. \"Our initial instinct was that this was going to be a very important place in our lives. I could really see raising a family here.\" The 3,400-square foot home has a gorgeous Swiss chalet-inspired aesthetic that's been customized after the couple spent years renovating the home. According to a previous listing, the home had four bedrooms and four bedrooms. However, records indicate that Hathaway and Shulman also purchased a parcel of land next to the property, so there's a good chance they may have expanded the home. Based on the baby's first public outing, it seems that they may be splitting their time between the Sunshine State and the East Coast. The \"Princess Diaries\" actress has previously shared glimpses of her personal life, explaining that she really lives for simple pleasures. \"I still get the paper delivered every day, and I love sitting down with it,\" she told People magazine in an interview for her \"World's Most Beautiful\" cover story. She explained that on a slow day, she loves cuddling with the family's new puppy and finding time to speak to loved ones. \"I'm always zipping from one thing to another,\" she admitted. \"I'd love to have breakfast with a friend. I'd love to go for a walk, maybe do a little window shopping, maybe go to a museum. I'm very meandering on my days off.\" In the interview, she also shared her appreciation for Shulman, noting that he \"supports\" her \"completely,\" especially in a year as busy as the one she's having now. \"I'm so lucky that he's my partner that I spend my life with. If I didn't know that before this past year, I think I really know it now, because with absolutely everything, he's just, he's on it. He holds it down,\" she gushed. \"I hope that doesn't sound like I'm bragging, but he's a dream partner to me.\" Get real estate news in your inbox Sign up now Hannah Chambers is a senior celebrity and lifestyle reporter who joined Realtor.com in 2026. She has been writing entertainment and lifestyle content since 2016, with her work appearing in Cosmopolitan, BravoTV, NYLON, Bustle, Elite Daily, and The Zoe Report, among other publications. Hannah received a bachelor’s degree in journalism from The University of Maine. In her spare time, she loves to chat about pop culture and is a major fan of reality TV.",
+        "published_at": 1794954053000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794965879000,
+        "extraction": "semantic",
+        "canonical": "https://realtor.com/news/celebrity-real-estate/anne-hathaway-gives-birth-third-baby-husband-adam-schulman",
+        "content_hash": "bd664aecf3f832a3bbf55616be6f47b1886f676ca0949e2961a61de0d2f512bc",
+        "access": "preview",
+        "evidence_status": "preview",
+        "id": "45e5dad6c4b67154",
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Billy Joel–Linked Palm Beach Retreat Seeks $17.9 Million—With a Private Pool and Lavish Primary Suite",
+        "link": "https://www.realtor.com/news/celebrity-real-estate/billy-joel-palm-beach-estate-for-sale/",
+        "description": "A recently renovated Palm Beach, FL, townhouse associated with Billy Joel has been listed for $17.9 million. It features a private pool, an elevator, and a primary suite complete with separate bathrooms and walk-in closets. The four-bedroom property is being listed with Christian Angle of Christian Angle Real Estate . Its Mediterranean architecture and courtyard entrance set the scene for a residence that pairs formal entertaining rooms with outdoor spaces for dining and lounging. The asking price puts the home well above its previous purchase price. According to Mansion Global , which cited PropertyShark records, the limited liability company that owns the townhouse paid $9.05 million in 2021. A sale at the current asking price would represent an $8.85 million increase over that purchase, before accounting for renovation expenses, transaction costs, and other ownership expenses. Loading... A recently renovated Palm Beach townhouse associated with Billy Joel has been listed for $17.9 million. It comes with a private pool, an elevator, and a primary suite complete with separate bathrooms and walk-in closets. Realtor.com Loading... The four-bedroom property is being listed with Christian Angle of Christian Angle Real Estate. Its Mediterranean architecture and courtyard entrance set the scene for a residence that pairs formal entertaining rooms with outdoor spaces for dining and lounging. Realtor.com Loading... The asking price puts the home well above its previous purchase price. According to Mansion Global, which cited PropertyShark records, the limited liability company that owns the townhouse paid $9.05 million in 2021. Realtor.com Loading... A sale at the current asking price would represent an $8.85 million increase over that purchase, before accounting for renovation expenses, transaction costs, and other ownership expenses. Realtor.com It would also put the closing price within striking distance of twice the amount paid five years ago. Joel’s association with the property has been reported through the company that holds its title. In 2022, Palm Beach Daily News reported the ownership connection. Upon entering the residence, guests are greeted with a soaring foyer, where a staircase with iron detailing rises beneath a coffered ceiling. The layout provides distinct spaces for hosting, working, and everyday meals, with a formal living room, a dining room, an office, and a breakfast nook adjoining the kitchen. A pecky cypress ceiling adds a wood accent to the cooking space. The primary suite includes a Juliet balcony, along with its two bathrooms and two walk-in closets. Across the home, there are five full bathrooms and one half-bathroom. The property, which was built in 2022, spans 4,956 square feet. A two-car garage and paved driveway round out the practical amenities. Beyond the interiors, the pool is accompanied by an open patio, a built-in barbecue, and a sheltered area for outdoor meals. Worth Avenue, Mid-Town beach, and the Australian Docks are all within blocks, according to the listing. The property adds another chapter to the musician’s extensive history of buying and selling homes in Florida . The townhouse’s arrival on the market comes as Joel prepares for a public appearance in Boca Raton next month. Loading... The home features an office space. Realtor.com Loading... The colorful interiors include a piano. Realtor.com Loading... The townhouse’s arrival on the market comes as Joel prepares for a public appearance in Boca Raton next month. Realtor.com On Dec. 14, the songwriter is scheduled to take part in an event at Florida Atlantic University, where students will have the opportunity to ask him about his career and creative process, according to the Palm Beach Post. Although the event’s title includes a reference to music, Joel’s representative clarified to the newspaper that the evening is intended as a conversation. Any playing would consist of short musical demonstrations to help explain his answers, with no band or prepared setlist. The appearance follows a period in which Joel stepped away from his scheduled concerts after being diagnosed with normal pressure hydrocephalus. Get real estate news in your inbox Sign up now Kelsi Karruli is a senior celebrity reporter who joined Realtor.com in 2025. She writes about trends encompassing real estate and celebrity properties. She previously wrote for Daily Mail, True Urban Culture, and JMedia Corporation, where she specialized in covering celebrities, relationships, psychology, and gender issues. She has a bachelor's degree in journalism from Pace University, where she received the James Rose Award for excellence in journalism. When she isn’t updating readers on A-listers' moves, she is spending time with her cat, Mary, and cheering on the Albanian soccer team.",
+        "published_at": 1794953523000,
+        "mutable": false,
+        "date_precision": "timestamp",
+        "modified_at": 1794953527000,
+        "extraction": "semantic",
+        "canonical": "https://realtor.com/news/celebrity-real-estate/billy-joel-palm-beach-estate-for-sale",
+        "content_hash": "5d1fb0d8bc0de59233944883b3095b177eb8a6c581719e8f220b0fee1040c0d8",
+        "access": "preview",
+        "evidence_status": "preview",
+        "id": "36d873ef3d3178d4",
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "first_seen_at": 1794991002654,
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "realtor-news",
+        "source_name": "Realtor.com News",
+        "source_tier": "A",
+        "source_weight": 6,
+        "source_tags": [
+          "housing"
+        ],
+        "region": "national",
+        "title": "Wisconsin Couple Seek To Enforce $1,350 Judgment Against Each of Their Neighbors in HOA Dispute",
+        "link": "https://www.realtor.com/news/trends/wisconsin-nazcr-trac-hoa-dispute-settlement-fence/",
+        "description": "What began as a dispute over a backyard fence has turned into an ongoing series of lawsuits, with neighbors being forced to pay $1,350 each.",
+        "published_at": 1794951656000,
+        "source_family": "realtor-com",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "d45fb9622b1df6ec",
+        "acquisition_window": {
+          "lower": 1793307600000,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Mobile Home Property in Rialto Goes for $107,000 per Site",
+        "link": "https://www.connectcre.com/stories/mobile-home-property-in-rialto-goes-for-107000-per-site/",
+        "description": "Peppertree Mobile Home Park, a 77-site manufactured housing community in Rialto, traded hands for $8.28 million, or $107,467 per site. Built in 1970, the property is located at 2930 W. Rialto Ave. on an 8.47-acre parcel. The all-age community includes tenant-owned and park-owned manufactured homes, RV sites and single-family residences. Amenities include a swimming pool, ... The post Mobile Home Property in Rialto Goes for $107,000 per Site appeared first on Connect CRE .",
+        "published_at": 1794955277000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "bd3623b05fb9a2a6",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Japanese Pub Chain Will Open First U.S. Location on St. Marks Place",
+        "link": "https://www.connectcre.com/stories/japanese-pub-chain-will-open-first-u-s-location-on-st-marks-place/",
+        "description": "Lee & Associates NYC arranged a 10-year, 1,200-square-foot lease on behalf of Shijidai Izakaya Group at 26 St. Marks Pl. in Manhattan’s East Village. The deal represents the first U.S. location for Shin Jidai, the Japanese value izakaya brand. The restaurant is expected to open between December 2026 and January 2027 in space previously occupied ... The post Japanese Pub Chain Will Open First U.S. Location on St. Marks Place appeared first on Connect CRE .",
+        "published_at": 1794954884000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "cd2449a0b7b39db3",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Compass Arranges $13M Sale of North Brooklyn Development Site",
+        "link": "https://www.connectcre.com/stories/compass-arranges-13m-sale-of-north-brooklyn-development-site/",
+        "description": "Compass vice chairman Adelaide Polsinelli and senior executive director Michael Cardillo closed the $13-million sale of 87-89-91 Havemeyer St. in Williamsburg, Brooklyn. The price of $565 per buildable square foot puts the deal at the top of the market for North Brooklyn development sites, according to Compass, which represented both seller and buyer. The vacant ... The post Compass Arranges $13M Sale of North Brooklyn Development Site appeared first on Connect CRE .",
+        "published_at": 1794953579000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "42728fcbbe551ee9",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Related, Kushner Partner on Redevelopment of Jersey City Medical Center Campus",
+        "link": "https://www.connectcre.com/stories/related-kushner-partner-on-redevelopment-of-jersey-city-medical-center-campus/",
+        "description": "RWJBarnabas Health announced plans for the $1-billion redevelopment of approximately 5.5 acres surrounding JerseyCity Medical Center (JCMC). The multi-phase project will include more than 2,200 residential units, more than 2,000 parkingspaces, new retail and dining options, public green space and a site designated for a future medical outpatient building. The hospital system is developing the ... The post Related, Kushner Partner on Redevelopment of Jersey City Medical Center Campus appeared first on Connect CRE .",
+        "published_at": 1794952869000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "6954c0eda417f5ba",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "MassDevelopment Provides Planning Grant for Future Use of Former College Campus",
+        "link": "https://www.connectcre.com/stories/massdevelopment-provides-planning-grant-for-future-use-of-former-college-campus/",
+        "description": "MassDevelopment has provided a $100,000 grant to the Town of Paxton for planning and predevelopment activities at the former Anna Maria College campus, which ceased operations in spring 2026. The grant will fund technical assistance designed to enable future uses at the approximately 260-acre campus, currently marketed for sale by regional commercial broker Kelleher & ... The post MassDevelopment Provides Planning Grant for Future Use of Former College Campus appeared first on Connect CRE .",
+        "published_at": 1794952159000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "e3af1b1062ae4846",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Haworth Relocates SoCal Showroom and Workplace to DTLA's Fashion District",
+        "link": "https://www.connectcre.com/stories/haworth-relocates-socal-showroom-and-workplace-to-dtlas-fashion-district/",
+        "description": "Colliers and Newmark arranged a relocation for Haworth, a global leader in furniture and architectural solutions, which is moving its Southern California showroom and workplace to California Market Center (CMC) at 110 E. 9th St. in the Fashion District of Downtown Los Angeles. Matthew Heyn and Ian M. Gilbert of Colliers’ Integrated Advisory Services Team ... The post Haworth Relocates SoCal Showroom and Workplace to DTLA's Fashion District appeared first on Connect CRE .",
+        "published_at": 1794950897000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "c8865b2be6c8c4ad",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "Bringing Automated Retail Out of Dark Hallways",
+        "link": "https://www.connectcre.com/stories/bringing-automated-retail-out-of-dark-hallways/",
+        "description": "Shopping center owners and landlords constantly evaluate their tenant mix, but they could be overlooking one tenant that requires little space: automated retail. Linda Johansen-James, founder and CEO of International Retail Group (IRG), told Connect CRE in an email that when done right, automated retail can benefit shopping center owners, landlords and brokers by generating ... The post Bringing Automated Retail Out of Dark Hallways appeared first on Connect CRE .",
+        "published_at": 1794950105000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "b1670bb267718be3",
+        "acquisition_window": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        }
+      },
+      {
+        "source_id": "connect-cre",
+        "source_name": "Connect CRE",
+        "source_tier": "A",
+        "source_weight": 7,
+        "source_tags": [
+          "mixed-asset",
+          "deals"
+        ],
+        "region": "national",
+        "title": "OpenAI Venture Expands in San Francisco's North Financial District",
+        "link": "https://www.connectcre.com/stories/openai-venture-expands-in-san-franciscos-north-financial-district/",
+        "description": "The hardware venture of OpenAI and former Apple design chief Jony Ive has leased 115,000 square feet at 475 Sansome St. in San Francisco's North Financial District, the San Francisco Chronicle reported. The lease represents a major expansion from its Jackson Square base for the venture, formerly known as io. Sources with knowledge of the ... The post OpenAI Venture Expands in San Francisco's North Financial District appeared first on Connect CRE .",
+        "published_at": 1794949668000,
+        "source_family": "connect-cre",
+        "is_research": false,
+        "required_source": false,
+        "mutable": false,
+        "first_seen_at": 1794991002654,
+        "id": "320f33d2ee6ae062",
+        "acquisition_window": {
+          "lower": 1793180442798,
           "upper": 1794949200000
         }
       }
@@ -26795,6 +27527,677 @@
           "https://zondahome.com/new-home-lot-supply-index-2": "1e27e1aaa61d30025009eb6adf8b8bf7d6fb75a859a0c453543d7bae47151a15"
         },
         "last_success": 1794951480753
+      },
+      {
+        "id": "housingwire",
+        "name": "HousingWire",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.housingwire.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 7,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794938007000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "trd-national",
+        "name": "The Real Deal (National)",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://therealdeal.com/national/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "bisnow",
+        "name": "Bisnow",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.bisnow.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 9,
+        "articles": 9,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794954050000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "national-mortgage-news",
+        "name": "National Mortgage News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.nationalmortgagenews.com/rss"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794826800000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "d-magazine",
+        "name": "D Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.dmagazine.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 12,
+        "articles": 12,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 11,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794610064000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "miami-agent",
+        "name": "Miami Agent Magazine",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://miamiagentmagazine.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "fetch failed (UND_ERR_CONNECT_TIMEOUT)"
+      },
+      {
+        "id": "realtor-news",
+        "name": "Realtor.com News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.realtor.com/news/feed/"
+        ],
+        "status": "ok",
+        "discovered": 30,
+        "articles": 30,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 24,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794860724000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "trerc",
+        "name": "Texas Real Estate Research Center (TRERC)",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://trerc.tamu.edu/texas-housing-insight/"
+        ],
+        "status": "ok",
+        "discovered": 69,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1743523903000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "pere-news",
+        "name": "PERE News",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.perenews.com/feed/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "connect-cre",
+        "name": "Connect CRE",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.connectcre.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794948270000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "rebusiness-online",
+        "name": "REBusiness Online",
+        "research": false,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://rebusinessonline.com/feed/"
+        ],
+        "status": "ok",
+        "discovered": 20,
+        "articles": 20,
+        "discovery_truncated": false,
+        "article_budget": 0,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 20,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794926877000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "fannie-esr",
+        "name": "Fannie Mae ESR",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.fanniemae.com/data-and-insights/forecast"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "freddie-pmms",
+        "name": "Freddie Mac PMMS",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.freddiemac.com/pmms"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794502800000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {
+          "https://freddiemac.com/pmms": "c31943a782537223b1fcb017e44934e5d28dda90fbdc8ffddd8a2a2df63920f4"
+        },
+        "last_success": 1794991002654
+      },
+      {
+        "id": "freddie-research",
+        "name": "Freddie Mac Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.freddiemac.com/research-and-perspectives"
+        ],
+        "status": "ok",
+        "discovered": 6,
+        "articles": 6,
+        "discovery_truncated": false,
+        "article_budget": 6,
+        "fetched_articles": 6,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": 1687363200000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "texas-realtors",
+        "name": "Texas REALTORS Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.texasrealestate.com/research/quarterly-housing-report"
+        ],
+        "status": "ok",
+        "discovered": 36,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "metrotex-research",
+        "name": "MetroTex Market Reports",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.mymetrotex.com/market-reports/"
+        ],
+        "status": "ok",
+        "discovered": 166,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 18,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "harvard-jchs",
+        "name": "Harvard JCHS",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.jchs.harvard.edu/blog"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "cbre-research",
+        "name": "CBRE Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.cbre.com/services/property-types/multifamily"
+        ],
+        "status": "ok",
+        "discovered": 15,
+        "articles": 15,
+        "discovery_truncated": false,
+        "article_budget": 15,
+        "fetched_articles": 15,
+        "fallback_bodies": 0,
+        "undated": 2,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1744732800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "jll-research",
+        "name": "JLL Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.jll.com/en-us/insights"
+        ],
+        "status": "ok",
+        "discovered": 15,
+        "articles": 15,
+        "discovery_truncated": false,
+        "article_budget": 15,
+        "fetched_articles": 15,
+        "fallback_bodies": 0,
+        "undated": 7,
+        "recent": 2,
+        "unreadable_recent": 0,
+        "earliest_dated": 1719426600000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "cushman-research",
+        "name": "Cushman & Wakefield Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
+        ],
+        "status": "ok",
+        "discovered": 87,
+        "articles": 18,
+        "discovery_truncated": true,
+        "article_budget": 18,
+        "fetched_articles": 18,
+        "fallback_bodies": 0,
+        "undated": 2,
+        "recent": 10,
+        "unreadable_recent": 0,
+        "earliest_dated": 1791979200000,
+        "coverage_basis": "unverified",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "colliers-research",
+        "name": "Colliers Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.colliers.com/en/research"
+        ],
+        "status": "ok",
+        "discovered": 1,
+        "articles": 1,
+        "discovery_truncated": false,
+        "article_budget": 1,
+        "fetched_articles": 1,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 1,
+        "unreadable_recent": 0,
+        "earliest_dated": 1794941400000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "nmhc-research",
+        "name": "NMHC Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.nmhc.org/research-insight/quarterly-survey/"
+        ],
+        "status": "ok",
+        "discovered": 10,
+        "articles": 10,
+        "discovery_truncated": false,
+        "article_budget": 10,
+        "fetched_articles": 10,
+        "fallback_bodies": 0,
+        "undated": 10,
+        "recent": 0,
+        "unreadable_recent": 0,
+        "earliest_dated": null,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "naa-research",
+        "name": "NAA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://naahq.org/research"
+        ],
+        "status": "ok",
+        "discovered": 9,
+        "articles": 9,
+        "discovery_truncated": false,
+        "article_budget": 9,
+        "fetched_articles": 9,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 4,
+        "unreadable_recent": 0,
+        "earliest_dated": 1785952132000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "uli-pwc",
+        "name": "ULI/PwC Emerging Trends",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
+          "https://www.pwc.com/us/en/about-us/newsroom.html"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "Directory contained no matching links"
+      },
+      {
+        "id": "john-burns",
+        "name": "John Burns Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://jbrec.com/resources/insights/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "northmarq-research",
+        "name": "Northmarq Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.northmarq.com/insights"
+        ],
+        "status": "ok",
+        "discovered": 8,
+        "articles": 8,
+        "discovery_truncated": false,
+        "article_budget": 8,
+        "fetched_articles": 8,
+        "fallback_bodies": 0,
+        "undated": 0,
+        "recent": 8,
+        "unreadable_recent": 0,
+        "earliest_dated": 1793376000000,
+        "coverage_basis": "full_listing",
+        "coverage": null,
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "berkadia-research",
+        "name": "Berkadia Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.berkadia.com/multifamily-reports/"
+        ],
+        "status": "ok",
+        "discovered": 7,
+        "articles": 7,
+        "discovery_truncated": false,
+        "article_budget": 7,
+        "fetched_articles": 7,
+        "fallback_bodies": 0,
+        "undated": 3,
+        "recent": 3,
+        "unreadable_recent": 0,
+        "earliest_dated": 1787068800000,
+        "coverage_basis": "full_listing",
+        "coverage": {
+          "lower": 1793180442798,
+          "upper": 1794949200000
+        },
+        "changed_without_new_date": [],
+        "versions": {},
+        "last_success": 1794991002654
+      },
+      {
+        "id": "arbor-research",
+        "name": "Arbor/Chandan Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://arbor.com/research/reports/"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 404"
+      },
+      {
+        "id": "newmark-research",
+        "name": "Newmark Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.nmrk.com/insights/market-report"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
+      },
+      {
+        "id": "mba-research",
+        "name": "MBA Research",
+        "research": true,
+        "required": false,
+        "checked_at": 1794991002654,
+        "attempted_urls": [
+          "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
+        ],
+        "status": "error",
+        "discovered": 0,
+        "articles": 0,
+        "error": "HTTP 403"
       }
     ]
   }

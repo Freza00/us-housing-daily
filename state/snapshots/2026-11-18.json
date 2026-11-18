@@ -2,7 +2,7 @@
   "schema_version": 3,
   "provenance": "live",
   "coverage_status": "observed",
-  "generated_at": 1794951480753,
+  "generated_at": 1794991002654,
   "window": {
     "lower": 1794862800000,
     "upper": 1794949200000,
@@ -5183,6 +5183,38 @@
         "lower": 1794862800000,
         "upper": 1794949200000
       }
+    },
+    {
+      "source_id": "colliers-research",
+      "source_name": "Colliers Research",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Multifamily Rebalancing Advances",
+      "link": "https://colliers.com/en/research/nrep-uscm-usmf-colliers-capital-markets-multifamily-report-q3-2026",
+      "description": "Multifamily Rebalancing Advances Nov 17, 2026 | 4 min read U.S. Multifamily Capital Markets | Q3 2026 Multifamily fundamentals continued to rebalance as occupancy edged higher, rent recovery broadened, and the construction pipeline contracted, creating a firmer foundation heading into 2027. Download the full report Experts David Amsterdam President, Capital Markets | U.S. David Goodhue Executive Managing Director | Boston & Head of Multifamily Capital Markets | U.S Rachael Rothman Director, National Capital Markets Research View All [5] Experts Share Article Top Highlights Occupancy continued to improve, edging higher to 95.7% despite more subdued leasing activity in the third quarter. Demand moderated from the exceptional second-quarter pace, with absorption trailing new deliveries but remaining well above year-ago levels. The development pipeline continued to contract, improving the longer-term supply outlook while near-term pressure remains concentrated in select markets. Rent recovery broadened across markets, with 40 of the Top 60 markets posting positive annual rent growth. Capital markets remain selective, as underlying transaction activity and pricing continue to reflect price discovery rather than a broad recovery in liquidity. Key Statistics Multifamily fundamentals remain resilient as the market continues to work through recent supply additions and the development pipeline moderates. Occupancy Remains Resilient National occupancy remained healthy in Q3 2026 as markets continued to absorb recently delivered units. While conditions vary across geographies, supply-constrained markets continue to demonstrate particularly strong operating fundamentals, while higher-supply markets remain more competitive. Source: Colliers Research, RealPage, MSCI Real Capital Analytics Rent Recovery Broadens Rent performance improved across a broader share of markets during the third quarter, signaling a more widespread recovery in pricing conditions. Performance remains uneven, however, with supply levels and local demand continuing to drive meaningful differences between markets. Supply Risk Remains Concentrated The national development pipeline continued to contract during the third quarter as financing challenges, elevated construction costs, and capital constraints limited new development. While the pullback should ease supply pressure nationally over time, several markets still face elevated construction pipelines that will continue to influence near-term performance. Capital Markets Navigate a Selective Recovery Investment activity continues to reflect a market in transition. Multifamily transaction volume reached $114.1 billion in Q3 2026, but the increase primarily reflected an entity-level merger rather than a broad recovery in liquidity. Excluding entity-level transactions, volume declined 7% to $44.5 billion, while apartment pricing remained under pressure. Investors continue to prioritize durable cash flow, realistic acquisition pricing, and manageable refinancing exposure as the market works through continued price discovery. Source: Colliers Research, MSCI Real Capital Analytics Sector Spotlight: Seniors Housing Seniors housing is benefiting from a combination of powerful demographic demand, improving operating performance, and constrained new supply. Growth in the older U.S. population is expanding the long-term demand base for independent living, assisted living, and nursing care, while limited development is supporting occupancy and rent fundamentals. Capital markets activity is also strengthening as investors respond to improving fundamentals and the sector's long-term demographic outlook. The report examines operating trends, regional performance, transaction activity, and the investment landscape across seniors housing and care. Looking Ahead Multifamily enters the final months of 2026 with healthy occupancy, a shrinking development pipeline, and a broader rent recovery, creating a more constructive operating backdrop. At the same time, capital markets remain selective, and refinancing pressure continues to create challenges and opportunities across the sector. Heading into 2027, the pace of new supply, local demand trends, and financing conditions will remain critical to determining where operating performance and investment opportunities strengthen most. U.S. Market Overviews The report features key statistics across the Top 60 U.S. multifamily markets, along with detailed spotlights on 15 select markets: Baltimore, Cincinnati, Denver, Greensboro, Indianapolis, Las Vegas, Memphis, Nassau County, Northern/Central New Jersey, Orange County, Pittsburgh, Richmond, San Diego, St. Louis, and Washington, D.C. Explore local trends in occupancy, rent growth, demand, supply, development activity, and investment performance across each market. Download Report Share Experts David Amsterdam President, Capital Markets | U.S. New York David Goodhue Executive Managing Director | Boston & Head of Multifamily Capital Markets | U.S Boston Rachael Rothman Director, National Capital Markets Research Charlottesville Steig Seaward Senior Director, National Research Los Angeles - El Segundo Haley Boatright Research Manager Miami Related insights Oct 21, 2026 Fundamentals Take the Lead as Capital Stays Selective Read More Sep 15, 2026 The Luxury Divide Shapes U.S. Hotel Brand Performance Read More Sep 3, 2026 Global Capital Flows | H1 2026 Read More",
+      "published_at": 1794941400000,
+      "date_precision": "timestamp",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://colliers.com/en/research/nrep-uscm-usmf-colliers-capital-markets-multifamily-report-q3-2026",
+      "content_hash": "2616db00155a6aa8e99cc1366b52f47f18cc16577c739dcf1afef3fbdfe50080",
+      "access": "public",
+      "source_family": "colliers-research",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794991002654,
+      "id": "16bf4c4c1c13a2fd",
+      "acquisition_window": {
+        "lower": 1794862800000,
+        "upper": 1794949200000
+      }
     }
   ],
   "source_health": [
@@ -5191,7 +5223,7 @@
       "name": "HousingWire",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.housingwire.com/feed/"
       ],
@@ -5202,14 +5234,14 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 9,
+      "recent": 7,
       "unreadable_recent": 0,
-      "earliest_dated": 1794932683000,
+      "earliest_dated": 1794938007000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "inman",
@@ -5245,50 +5277,39 @@
       "name": "The Real Deal (National)",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://therealdeal.com/national/feed/"
       ],
-      "status": "ok",
-      "discovered": 10,
-      "articles": 10,
-      "discovery_truncated": false,
-      "article_budget": 0,
-      "fallback_bodies": 0,
-      "undated": 0,
-      "recent": 10,
-      "unreadable_recent": 0,
-      "earliest_dated": 1794525913000,
-      "coverage_basis": "full_listing",
-      "coverage": null,
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794951480753
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "Directory contained no matching links"
     },
     {
       "id": "bisnow",
       "name": "Bisnow",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.bisnow.com/rss"
       ],
       "status": "ok",
-      "discovered": 10,
-      "articles": 10,
+      "discovered": 9,
+      "articles": 9,
       "discovery_truncated": false,
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 10,
+      "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1794936981000,
+      "earliest_dated": 1794954050000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "multi-housing-news",
@@ -5324,7 +5345,7 @@
       "name": "National Mortgage News",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.nationalmortgagenews.com/rss"
       ],
@@ -5342,7 +5363,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "cnbc-realestate",
@@ -5377,7 +5398,7 @@
       "name": "D Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.dmagazine.com/feed/"
       ],
@@ -5388,14 +5409,14 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 12,
+      "recent": 11,
       "unreadable_recent": 0,
-      "earliest_dated": 1794602599000,
+      "earliest_dated": 1794610064000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "houston-agent",
@@ -5486,7 +5507,7 @@
       "name": "Miami Agent Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://miamiagentmagazine.com/feed/"
       ],
@@ -5698,7 +5719,7 @@
       "name": "Realtor.com News",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.realtor.com/news/feed/"
       ],
@@ -5709,14 +5730,14 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 29,
+      "recent": 24,
       "unreadable_recent": 0,
-      "earliest_dated": 1794856200000,
+      "earliest_dated": 1794860724000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "redfin-news",
@@ -5751,7 +5772,7 @@
       "name": "Texas Real Estate Research Center (TRERC)",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://trerc.tamu.edu/texas-housing-insight/"
       ],
@@ -5770,7 +5791,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "fed-press",
@@ -5834,7 +5855,7 @@
       "name": "PERE News",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.perenews.com/feed/"
       ],
@@ -5876,7 +5897,7 @@
       "name": "Connect CRE",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.connectcre.com/feed/"
       ],
@@ -5887,21 +5908,21 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 10,
+      "recent": 2,
       "unreadable_recent": 0,
-      "earliest_dated": 1794945760000,
+      "earliest_dated": 1794948270000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "rebusiness-online",
       "name": "REBusiness Online",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://rebusinessonline.com/feed/"
       ],
@@ -5919,7 +5940,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "nrhc",
@@ -6444,7 +6465,7 @@
       "name": "Fannie Mae ESR",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.fanniemae.com/data-and-insights/forecast"
       ],
@@ -6458,7 +6479,7 @@
       "name": "Freddie Mac PMMS",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.freddiemac.com/pmms"
       ],
@@ -6479,14 +6500,14 @@
       "versions": {
         "https://freddiemac.com/pmms": "c31943a782537223b1fcb017e44934e5d28dda90fbdc8ffddd8a2a2df63920f4"
       },
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "freddie-research",
       "name": "Freddie Mac Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.freddiemac.com/research-and-perspectives"
       ],
@@ -6508,14 +6529,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "texas-realtors",
       "name": "Texas REALTORS Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.texasrealestate.com/research/quarterly-housing-report"
       ],
@@ -6534,14 +6555,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "metrotex-research",
       "name": "MetroTex Market Reports",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.mymetrotex.com/market-reports/"
       ],
@@ -6560,7 +6581,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "unlock-research",
@@ -6596,7 +6617,7 @@
       "name": "Harvard JCHS",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.jchs.harvard.edu/blog"
       ],
@@ -6639,23 +6660,36 @@
       "name": "CBRE Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
-        "https://www.cbre.com/services/property-types/multifamily",
-        "https://www.cbre.com/shared-sitemap/figure.xml",
-        "https://www.cbre.com/insights"
+        "https://www.cbre.com/services/property-types/multifamily"
       ],
-      "status": "error",
-      "discovered": 0,
-      "articles": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "discovered": 15,
+      "articles": 15,
+      "discovery_truncated": false,
+      "article_budget": 15,
+      "fetched_articles": 15,
+      "fallback_bodies": 0,
+      "undated": 2,
+      "recent": 3,
+      "unreadable_recent": 0,
+      "earliest_dated": 1744732800000,
+      "coverage_basis": "full_listing",
+      "coverage": {
+        "lower": 1793180442798,
+        "upper": 1794949200000
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1794991002654
     },
     {
       "id": "jll-research",
       "name": "JLL Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.jll.com/en-us/insights"
       ],
@@ -6677,14 +6711,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "cushman-research",
       "name": "Cushman & Wakefield Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
       ],
@@ -6703,21 +6737,33 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "colliers-research",
       "name": "Colliers Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.colliers.com/en/research"
       ],
-      "status": "error",
-      "discovered": 0,
-      "articles": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "discovered": 1,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 1,
+      "fetched_articles": 1,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 1,
+      "unreadable_recent": 0,
+      "earliest_dated": 1794941400000,
+      "coverage_basis": "full_listing",
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1794991002654
     },
     {
       "id": "realpage-research",
@@ -6752,7 +6798,7 @@
       "name": "NMHC Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.nmhc.org/research-insight/quarterly-survey/"
       ],
@@ -6771,14 +6817,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "naa-research",
       "name": "NAA Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://naahq.org/research"
       ],
@@ -6800,14 +6846,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "uli-pwc",
       "name": "ULI/PwC Emerging Trends",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
         "https://www.pwc.com/us/en/about-us/newsroom.html"
@@ -6853,7 +6899,7 @@
       "name": "John Burns Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://jbrec.com/resources/insights/"
       ],
@@ -6867,7 +6913,7 @@
       "name": "Northmarq Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.northmarq.com/insights"
       ],
@@ -6886,14 +6932,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "berkadia-research",
       "name": "Berkadia Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.berkadia.com/multifamily-reports/"
       ],
@@ -6915,14 +6961,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "arbor-research",
       "name": "Arbor/Chandan Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://arbor.com/research/reports/"
       ],
@@ -6936,7 +6982,7 @@
       "name": "Newmark Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.nmrk.com/insights/market-report"
       ],
@@ -7037,7 +7083,7 @@
       "name": "MBA Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
       ],

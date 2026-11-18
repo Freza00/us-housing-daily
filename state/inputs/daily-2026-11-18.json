@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "provenance": "live",
-  "generated_at": 1794951480753,
+  "generated_at": 1794991002654,
   "kind": "daily",
   "window": {
     "lower": 1794862800000,
@@ -12,6 +12,81 @@
     "lower_basis": "collection_checkpoint"
   },
   "items": [
+    {
+      "source_id": "redfin-news",
+      "source_name": "Redfin News",
+      "source_tier": "A",
+      "source_weight": 8,
+      "source_tags": [
+        "housing",
+        "data"
+      ],
+      "region": "national",
+      "title": "This Week Brings a Chance for Clarity After Mortgage Rates Rise on Hot Inflation and Hawkish Fed Remarks",
+      "link": "https://www.redfin.com/news/rates-inflation-hawkish-fed/",
+      "description": "This Week Brings a Chance for Clarity After Mortgage Rates Rise on Hot Inflation and Hawkish Fed Remarks Published on November 17th, 2026 by Chen Zhao In A Nutshell: Rates climbed last week following surprising commentary from the Fed potentially hinting at more hikes to come, but there are plenty of opportunities for Fed speakers to clarify their views this week. Last Week’s Highlights: No shortage of big news last week, but for mortgage rates, what mattered the most was bad inflation data coupled with a Fed that turned sharply hawkish again. Last week’s inflation data came in higher than expected and the most worrisome part was that the drivers were broad-based. It looks like core PCE, the Fed’s preferred measure of inflation, is set to come in around 0.3% month-over-month this year, or 3.2% year-over-year, which would mean that it’s moving in the wrong direction relative to the Fed’s target. Notably, a few hours before CPI, Fed Governor Christopher Waller came out with some surprising remarks, putting a 50 bps December hike on the table as a possibility if inflation came in high, which it did. Before he spoke, markets would have assumed an inflation report like the one we got would lead to a guaranteed 25 bps hike. Now markets are assuming the 25 bps hike happens and pricing in some possibility for a larger hike. Subsequent remarks from other Fed officials backed off the 50 bps hike but showed possible support for another hike in January. Previously, markets had assumed that the next hike would happen in March. The net effect of all of this is that markets are now pricing in almost two additional rate hikes by mid-2027 than they were previously, which is why mortgage rates increased last week. The Fed also released its meeting calendar for 2027. It will hold the usual 8 meetings, but the October 2027 meeting will be a strategy meeting where they will not change rates. As a result, they’re moving the December 2027 meeting to November. Even though this means 9 weeks instead of the usual 6 between policy meetings at the end of 2027, this should have minimal effect on monetary policy. Finally, NAR reported existing home sales at an annualized rate of 3.75 million in October. That’s the lowest rate since August 2010 and lower than any month these last four years. This is consistent with Redfin data showing a historically low level of housing demand. Upcoming Attractions: The biggest piece of economic data this week is the Tuesday retail sales report, which will give another look at how consumers are faring, but is unlikely to move rates much. Investors will also get a chance to dissect the minutes from the last Fed meeting on Wednesday. And we will hear from other key FOMC members throughout the week. The ones to watch are New York Fed President Williams today, tomorrow, and Wednesday; Fed Chair Warsh today; Cleveland Fed President Hammack today, tomorrow, and Thursday; and Fed Governor Waller tomorrow. Latest Housing Market Reports: Weekly Housing Market Update: Monthly Mortgage Payments Fall to Lowest Level in 6 Weeks as Home Prices Keep Dipping Monthly Housing Market Update (October): October Marks the First Month in 3 Years With a Decline in U.S. Home-Sale Prices The Generational Housing Divide: Millennials Had It Better Than Baby Boomers–Until the Pandemic Changed the Math Just 3 Major U.S. Metros Are Seller’s Markets–the Fewest Since the Pandemic Freeze Chen Zhao Chen Zhao is the head of economics research, where she produces research on the housing market for public and internal audiences. Previously, she was an executive director leading housing finance and financial markets research at the JPMorgan Chase Institute. Prior to joining JPMCI, Chen was an economics consultant at Analysis Group, Inc., where she worked on financial litigation cases and led teams conducting health economics and outcomes research on behalf of pharmaceutical companies. While in graduate school, Chen was with the Center for Economic Studies and the Social Economic and Housing Statistics Division at the US Census Bureau, where she conducted applied microeconomics research using large scale restricted-access linked survey-administrative data. She started her career at the White House Council of Economic Advisers, where she focused on labor and health economics. Email Chen Get a home loan that helps you win Get prequalified Join us on X for more #housingmarket updates Follow Us You Might Also Like Hot Inflation Report and Hawkish Comments From Fed’s Waller Put a 50 Bps December Hike in Play Mortgage Rates Dip Ahead of a Big Week for Inflation Data October Job Growth Beats Expectations, Keeping a December Fed Hike on the Table Mortgage Rates Drop From September Highs as Midterms and Jobs Data Loom Fed Holds Rates Steady, But Sets Up a December Hike Mortgage Rates Dip as AI Jitters Boost Bonds Ahead of Fed Decision, GDP Data Geopolitics and AI to Drive Mortgage Rates This Week as an October Fed Rate Hike Appears Unlikely Be the first to see the latest real estate news: Comments This field is for validation purposes and should be left unchanged. Email * Sign up By submitting your email you agree to Redfin’s Terms of Use and Privacy Policy Add Redfin as a preferred source on Google &times; Scroll to Top",
+      "published_at": 1794932531000,
+      "source_family": "redfin-news",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794951480753,
+      "id": "b223fe6acbd3256f",
+      "acquisition_window": {
+        "lower": 1794862800000,
+        "upper": 1794949200000
+      },
+      "score": 20,
+      "tags": [
+        "housing",
+        "data",
+        "macro",
+        "rates"
+      ],
+      "heat_signals": [
+        "fed",
+        "inflation",
+        "mortgage rate"
+      ],
+      "date_precision": "timestamp",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://redfin.com/news/rates-inflation-hawkish-fed",
+      "content_hash": "1edf557e6927b56408d0c7a93bc8d8d263d5d815582e5da174d7dc45ce609f15",
+      "access": "preview",
+      "evidence_status": "preview",
+      "editorial_protocol": "evidence-refs-v2",
+      "editor_evidence": [
+        {
+          "id": "title",
+          "text": "This Week Brings a Chance for Clarity After Mortgage Rates Rise on Hot Inflation and Hawkish Fed Remarks"
+        },
+        {
+          "id": "body-1",
+          "text": "This Week Brings a Chance for Clarity After Mortgage Rates Rise on Hot Inflation and Hawkish Fed Remarks Published on November 17th, 2026 by Chen Zhao In A Nutshell: Rates climbed last week following surprising commentary from the Fed potentially hinting at more hikes to come, but there are plenty of opportunities for Fed speakers to clarify their views this week."
+        },
+        {
+          "id": "body-2",
+          "text": "Last Week’s Highlights: No shortage of big news last week, but for mortgage rates, what mattered the most was bad inflation data coupled with a Fed that turned sharply hawkish again."
+        },
+        {
+          "id": "body-3",
+          "text": "Last week’s inflation data came in higher than expected and the most worrisome part was that the drivers were broad-based."
+        },
+        {
+          "id": "body-4",
+          "text": "It looks like core PCE, the Fed’s preferred measure of inflation, is set to come in around 0.3% month-over-month this year, or 3.2% year-over-year, which would mean that it’s moving in the wrong direction relative to the Fed’s target."
+        },
+        {
+          "id": "body-5",
+          "text": "Notably, a few hours before CPI, Fed Governor Christopher Waller came out with some surprising remarks, putting a 50 bps December hike on the table as a possibility if inflation came in high, which it did."
+        },
+        {
+          "id": "body-6",
+          "text": "Before he spoke, markets would have assumed an inflation report like the one we got wo"
+        }
+      ]
+    },
     {
       "source_id": "connect-cre",
       "source_name": "Connect CRE",
@@ -24,7 +99,7 @@
       "region": "national",
       "title": "EJF Capital to Build BTR Community in Indianapolis",
       "link": "https://www.connectcre.com/stories/ejf-capital-to-build-btr-community-in-indianapolis/",
-      "description": "EJF Capital to Build BTR Community in Indianapolis EJF Capital LP, a global alternative asset management firm, announced that it has closed a joint venture with Onyx+East, a homebuilder based in Indianapolis, to develop Monon 21, a 57-unit build-to-rent community in Indianapolis, Indiana. The project will consist of 53 townhomes across 12 three-story buildings and four single-family homes. Construction financing was provided by Stock Yards Bank & Trust Company. Located in a Qualified Opportunity Zone, the development will transform a former industrial property into a residential community. With demolition complete and site preparation underway, leasing is expected to begin in early 2028, with construction completion anticipated in early 2029. The joint venture brings together Onyx+East’s experience developing residential communities throughout Indianapolis with EJF’s expertise in opportunity zone investments. Each rental home at Monon 21 will feature three bedrooms, two-and-a-half bathrooms, and a private attached garage. Monon 21 is EJF’s 26th investment in multifamily and commercial developments since 2018. Join us for the Connect Midwest Multifamily conference on the afternoon of Tuesday, June 8, 2027, at Joe’s Live in Rosemont, Illinois. Connect Inside The Story EJF Capital About Jasmine Kilman Jasmine Kilman is Content Director of Connect Commercial Real Estate, covering Chicago and greater Chicagoland, the Midwest, Seattle, and the Pacific Northwest. She covers industry trends, transaction deals, market research, and produces daily news stories. With experience in marketing and communications for academic nonprofits and corporate clients, including Hearst Media, Hilton, and Coldwell Banker, Kilman has written about commercial real estate, environmental, social, and corporate governance (ESG), technology, healthcare, and philanthropy. She was born and raised in California and graduated with a degree in public relations. In her spare time, Kilman enjoys hiking and traveling to new locations with her family. Order Reprints Apartment buildings for sale Check out the latest properties available on apartmentbuildings.com 7801 South Shore Drive Chicago, IL Chicago & Midwest + Apartment Buildings Listing Status: Available Listing Type: Call for offers Price: $2,895,000 No. of Units: 32 Year Built: 1961 Opportunity Zone: No Price per unit: $90,468 Learn More 1900 Euclid Ave Cleveland, OH Chicago & Midwest + Apartment Buildings Listing Status: Available Listing Type: Call for offers Price: $19,000,000 No. of Units: 83 Year Built: 1912 Lot Size: 0.70289256198347 Acres Opportunity Zone: No Price per unit: $228,915 Learn More View all apartments Chicago & Midwest | Indianapolis Apartments EJF Capital to Build BTR Community in Indianapolis Jasmine Kilman November 17, 2026 Load More",
+      "description": "EJF Capital LP, a global alternative asset management firm, announced that it has closed a joint venture with Onyx+East, a homebuilder based in Indianapolis, to develop Monon 21, a 57-unit build-to-rent community in Indianapolis, Indiana. The project will consist of 53 townhomes across 12 three-story buildings and four single-family homes. Construction financing was provided by ... The post EJF Capital to Build BTR Community in Indianapolis appeared first on Connect CRE .",
       "published_at": 1794947502000,
       "source_family": "connect-cre",
       "is_research": false,
@@ -46,13 +121,8 @@
         "build-to-rent",
         "btr"
       ],
-      "date_precision": "timestamp",
-      "modified_at": 1794947553000,
-      "extraction": "semantic",
-      "canonical": "https://connectcre.com/stories/ejf-capital-to-build-btr-community-in-indianapolis",
-      "content_hash": "c1bb48ed4fcf415fd579b28d358b950e4b988a0cdfd0b442b62959076057f558",
-      "access": "public",
-      "evidence_status": "article",
+      "evidence_status": "feed_excerpt",
+      "enrichment_error": "HTTP 403",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -61,7 +131,7 @@
         },
         {
           "id": "body-1",
-          "text": "EJF Capital to Build BTR Community in Indianapolis EJF Capital LP, a global alternative asset management firm, announced that it has closed a joint venture with Onyx+East, a homebuilder based in Indianapolis, to develop Monon 21, a 57-unit build-to-rent community in Indianapolis, Indiana."
+          "text": "EJF Capital LP, a global alternative asset management firm, announced that it has closed a joint venture with Onyx+East, a homebuilder based in Indianapolis, to develop Monon 21, a 57-unit build-to-rent community in Indianapolis, Indiana."
         },
         {
           "id": "body-2",
@@ -69,23 +139,11 @@
         },
         {
           "id": "body-3",
-          "text": "Construction financing was provided by Stock Yards Bank & Trust Company."
+          "text": "Construction financing was provided by ..."
         },
         {
           "id": "body-4",
-          "text": "Located in a Qualified Opportunity Zone, the development will transform a former industrial property into a residential community."
-        },
-        {
-          "id": "body-5",
-          "text": "With demolition complete and site preparation underway, leasing is expected to begin in early 2028, with construction completion anticipated in early 2029."
-        },
-        {
-          "id": "body-6",
-          "text": "The joint venture brings together Onyx+East’s experience developing residential communities throughout Indianapolis with EJF’s expertise in opportunity zone investments."
-        },
-        {
-          "id": "body-7",
-          "text": "Each rental home at Monon 21 will feature three bedrooms, two-and-a-half bath"
+          "text": "The post EJF Capital to Build BTR Community in Indianapolis appeared first on Connect CRE ."
         }
       ]
     },
@@ -273,7 +331,7 @@
       "region": "national",
       "title": "Westcore Entity Pays $51.1M for Seattle-Area Light Industrial Campus",
       "link": "https://www.connectcre.com/stories/westcore-entity-pays-51-1m-for-seattle-area-light-industrial-campus/",
-      "description": "Westcore Entity Pays $51.1M for Seattle-Area Light Industrial Campus A Westcore-affiliated entity acquired Woodinville Corporate Center I, a multi-tenant, light industrial park located in the Woodinville submarket east of Seattle, in a transaction reported to be worth $51.1 million. Located at 17606–17683 128th Place NE, along the SR-522 Corridor, Woodinville Corporate Center I was sold by Blackstone's Link Logistics, one of the largest owners and operators of last-mile warehouse and industrial real estate in North America. Woodinville Corporate Center I contains four buildings totaling roughly 172,000 square feet. Completed in 1988 and 1989, the concrete tilt-up buildings offer clear heights of 16 to 24 feet, 45 dock-high doors, 29 drive-in doors and 227 parking stalls, with suites ranging from approximately 8,300 to 33,300 square feet. The property is 100% leased to nine tenants. The buildings are part of the 890,000 square foot, multi-phase Woodinville Corporate Center industrial complex constructed between 1979 and 1991. Woodinville Corporate Center’s Phases II, III & IV were acquired by Terrano Realty in 2025 for around $232 million. That purchase consisted of nine buildings containing 720,000 square feet across 43 acres. Connect Inside The Story About Allen Wolfsheimer Allen Wolfsheimer is Content Director at Connect CRE. Order Reprints Seattle & Northwest | Washington Industrial Westcore Entity Pays $51.1M for Seattle-Area Light Industrial Campus Allen Wolfsheimer November 17, 2026 Load More",
+      "description": "A Westcore-affiliated entity acquired Woodinville Corporate Center I, a multi-tenant, light industrial park located in the Woodinville submarket east of Seattle, in a transaction reported to be worth $51.1 million. Located at 17606–17683 128th Place NE, along the SR-522 Corridor, Woodinville Corporate Center I was sold by Blackstone's Link Logistics, one of the largest owners ... The post Westcore Entity Pays $51.1M for Seattle-Area Light Industrial Campus appeared first on Connect CRE .",
       "published_at": 1794948319000,
       "source_family": "connect-cre",
       "is_research": false,
@@ -294,13 +352,8 @@
       "heat_signals": [
         "blackstone"
       ],
-      "date_precision": "timestamp",
-      "modified_at": 1794948323000,
-      "extraction": "semantic",
-      "canonical": "https://connectcre.com/stories/westcore-entity-pays-51-1m-for-seattle-area-light-industrial-campus",
-      "content_hash": "be9bcef9206e0b3754f0f6dbda0be5c11a2422fe9e2e126a5f5c7c61e4d8bee9",
-      "access": "public",
-      "evidence_status": "article",
+      "evidence_status": "feed_excerpt",
+      "enrichment_error": "HTTP 403",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -309,27 +362,15 @@
         },
         {
           "id": "body-1",
-          "text": "Westcore Entity Pays $51.1M for Seattle-Area Light Industrial Campus A Westcore-affiliated entity acquired Woodinville Corporate Center I, a multi-tenant, light industrial park located in the Woodinville submarket east of Seattle, in a transaction reported to be worth $51.1 million."
+          "text": "A Westcore-affiliated entity acquired Woodinville Corporate Center I, a multi-tenant, light industrial park located in the Woodinville submarket east of Seattle, in a transaction reported to be worth $51.1 million."
         },
         {
           "id": "body-2",
-          "text": "Located at 17606–17683 128th Place NE, along the SR-522 Corridor, Woodinville Corporate Center I was sold by Blackstone's Link Logistics, one of the largest owners and operators of last-mile warehouse and industrial real estate in North America."
+          "text": "Located at 17606–17683 128th Place NE, along the SR-522 Corridor, Woodinville Corporate Center I was sold by Blackstone's Link Logistics, one of the largest owners ..."
         },
         {
           "id": "body-3",
-          "text": "Woodinville Corporate Center I contains four buildings totaling roughly 172,000 square feet."
-        },
-        {
-          "id": "body-4",
-          "text": "Completed in 1988 and 1989, the concrete tilt-up buildings offer clear heights of 16 to 24 feet, 45 dock-high doors, 29 drive-in doors and 227 parking stalls, with suites ranging from approximately 8,300 to 33,300 square feet."
-        },
-        {
-          "id": "body-5",
-          "text": "The property is 100% leased to nine tenants."
-        },
-        {
-          "id": "body-6",
-          "text": "The buildings are part of the 890,000 square foot, multi-phase Woodinville Corporate Center industrial co"
+          "text": "The post Westcore Entity Pays $51.1M for Seattle-Area Light Industrial Campus appeared first on Connect CRE ."
         }
       ]
     },
@@ -791,6 +832,98 @@
       ]
     },
     {
+      "source_id": "colliers-research",
+      "source_name": "Colliers Research",
+      "source_tier": "B",
+      "source_weight": 9,
+      "source_tags": [
+        "mixed-asset",
+        "data",
+        "trend"
+      ],
+      "region": "national",
+      "title": "Multifamily Rebalancing Advances",
+      "link": "https://colliers.com/en/research/nrep-uscm-usmf-colliers-capital-markets-multifamily-report-q3-2026",
+      "description": "Multifamily Rebalancing Advances Nov 17, 2026 | 4 min read U.S. Multifamily Capital Markets | Q3 2026 Multifamily fundamentals continued to rebalance as occupancy edged higher, rent recovery broadened, and the construction pipeline contracted, creating a firmer foundation heading into 2027. Download the full report Experts David Amsterdam President, Capital Markets | U.S. David Goodhue Executive Managing Director | Boston & Head of Multifamily Capital Markets | U.S Rachael Rothman Director, National Capital Markets Research View All [5] Experts Share Article Top Highlights Occupancy continued to improve, edging higher to 95.7% despite more subdued leasing activity in the third quarter. Demand moderated from the exceptional second-quarter pace, with absorption trailing new deliveries but remaining well above year-ago levels. The development pipeline continued to contract, improving the longer-term supply outlook while near-term pressure remains concentrated in select markets. Rent recovery broadened across markets, with 40 of the Top 60 markets posting positive annual rent growth. Capital markets remain selective, as underlying transaction activity and pricing continue to reflect price discovery rather than a broad recovery in liquidity. Key Statistics Multifamily fundamentals remain resilient as the market continues to work through recent supply additions and the development pipeline moderates. Occupancy Remains Resilient National occupancy remained healthy in Q3 2026 as markets continued to absorb recently delivered units. While conditions vary across geographies, supply-constrained markets continue to demonstrate particularly strong operating fundamentals, while higher-supply markets remain more competitive. Source: Colliers Research, RealPage, MSCI Real Capital Analytics Rent Recovery Broadens Rent performance improved across a broader share of markets during the third quarter, signaling a more widespread recovery in pricing conditions. Performance remains uneven, however, with supply levels and local demand continuing to drive meaningful differences between markets. Supply Risk Remains Concentrated The national development pipeline continued to contract during the third quarter as financing challenges, elevated construction costs, and capital constraints limited new development. While the pullback should ease supply pressure nationally over time, several markets still face elevated construction pipelines that will continue to influence near-term performance. Capital Markets Navigate a Selective Recovery Investment activity continues to reflect a market in transition. Multifamily transaction volume reached $114.1 billion in Q3 2026, but the increase primarily reflected an entity-level merger rather than a broad recovery in liquidity. Excluding entity-level transactions, volume declined 7% to $44.5 billion, while apartment pricing remained under pressure. Investors continue to prioritize durable cash flow, realistic acquisition pricing, and manageable refinancing exposure as the market works through continued price discovery. Source: Colliers Research, MSCI Real Capital Analytics Sector Spotlight: Seniors Housing Seniors housing is benefiting from a combination of powerful demographic demand, improving operating performance, and constrained new supply. Growth in the older U.S. population is expanding the long-term demand base for independent living, assisted living, and nursing care, while limited development is supporting occupancy and rent fundamentals. Capital markets activity is also strengthening as investors respond to improving fundamentals and the sector's long-term demographic outlook. The report examines operating trends, regional performance, transaction activity, and the investment landscape across seniors housing and care. Looking Ahead Multifamily enters the final months of 2026 with healthy occupancy, a shrinking development pipeline, and a broader rent recovery, creating a more constructive operating backdrop. At the same time, capital markets remain selective, and refinancing pressure continues to create challenges and opportunities across the sector. Heading into 2027, the pace of new supply, local demand trends, and financing conditions will remain critical to determining where operating performance and investment opportunities strengthen most. U.S. Market Overviews The report features key statistics across the Top 60 U.S. multifamily markets, along with detailed spotlights on 15 select markets: Baltimore, Cincinnati, Denver, Greensboro, Indianapolis, Las Vegas, Memphis, Nassau County, Northern/Central New Jersey, Orange County, Pittsburgh, Richmond, San Diego, St. Louis, and Washington, D.C. Explore local trends in occupancy, rent growth, demand, supply, development activity, and investment performance across each market. Download Report Share Experts David Amsterdam President, Capital Markets | U.S. New York David Goodhue Executive Managing Director | Boston & Head of Multifamily Capital Markets | U.S Boston Rachael Rothman Director, National Capital Markets Research Charlottesville Steig Seaward Senior Director, National Research Los Angeles - El Segundo Haley Boatright Research Manager Miami Related insights Oct 21, 2026 Fundamentals Take the Lead as Capital Stays Selective Read More Sep 15, 2026 The Luxury Divide Shapes U.S. Hotel Brand Performance Read More Sep 3, 2026 Global Capital Flows | H1 2026 Read More",
+      "published_at": 1794941400000,
+      "date_precision": "timestamp",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://colliers.com/en/research/nrep-uscm-usmf-colliers-capital-markets-multifamily-report-q3-2026",
+      "content_hash": "2616db00155a6aa8e99cc1366b52f47f18cc16577c739dcf1afef3fbdfe50080",
+      "access": "public",
+      "source_family": "colliers-research",
+      "is_research": true,
+      "required_source": false,
+      "mutable": false,
+      "first_seen_at": 1794991002654,
+      "id": "16bf4c4c1c13a2fd",
+      "acquisition_window": {
+        "lower": 1794862800000,
+        "upper": 1794949200000
+      },
+      "score": 33,
+      "tags": [
+        "data",
+        "trend",
+        "multifamily",
+        "hotel",
+        "senior-housing",
+        "california",
+        "rates",
+        "deals",
+        "earnings"
+      ],
+      "heat_signals": [
+        "outlook",
+        "trend",
+        "trends",
+        "annual",
+        "rent growth",
+        "occupancy"
+      ],
+      "evidence_status": "article",
+      "editorial_protocol": "evidence-refs-v2",
+      "editor_evidence": [
+        {
+          "id": "title",
+          "text": "Multifamily Rebalancing Advances"
+        },
+        {
+          "id": "body-1",
+          "text": "Multifamily Rebalancing Advances Nov 17, 2026 | 4 min read U.S."
+        },
+        {
+          "id": "body-2",
+          "text": "Multifamily Capital Markets | Q3 2026 Multifamily fundamentals continued to rebalance as occupancy edged higher, rent recovery broadened, and the construction pipeline contracted, creating a firmer foundation heading into 2027."
+        },
+        {
+          "id": "body-3",
+          "text": "Download the full report Experts David Amsterdam President, Capital Markets | U.S."
+        },
+        {
+          "id": "body-4",
+          "text": "David Goodhue Executive Managing Director | Boston & Head of Multifamily Capital Markets | U.S Rachael Rothman Director, National Capital Markets Research View All [5] Experts Share Article Top Highlights Occupancy continued to improve, edging higher to 95.7% despite more subdued leasing activity in the third quarter."
+        },
+        {
+          "id": "body-5",
+          "text": "Demand moderated from the exceptional second-quarter pace, with absorption trailing new deliveries but remaining well above year-ago levels."
+        },
+        {
+          "id": "body-6",
+          "text": "The development pipeline continued to contract, improving the longer-term supply outlook while near-term pressure remains concentrated in select markets."
+        },
+        {
+          "id": "body-7",
+          "text": "Rent recovery broadened across markets, with 40 of the Top 60 markets posting positive annual rent growth."
+        },
+        {
+          "id": "body-8",
+          "text": "Capital markets remain selective, as underlying transaction activity and pricing continue to reflect pr"
+        }
+      ]
+    },
+    {
       "source_id": "cotality-research",
       "source_name": "Cotality / CoreLogic Research",
       "source_tier": "B",
@@ -896,81 +1029,6 @@
       ]
     },
     {
-      "source_id": "redfin-news",
-      "source_name": "Redfin News",
-      "source_tier": "A",
-      "source_weight": 8,
-      "source_tags": [
-        "housing",
-        "data"
-      ],
-      "region": "national",
-      "title": "This Week Brings a Chance for Clarity After Mortgage Rates Rise on Hot Inflation and Hawkish Fed Remarks",
-      "link": "https://www.redfin.com/news/rates-inflation-hawkish-fed/",
-      "description": "This Week Brings a Chance for Clarity After Mortgage Rates Rise on Hot Inflation and Hawkish Fed Remarks Published on November 17th, 2026 by Chen Zhao In A Nutshell: Rates climbed last week following surprising commentary from the Fed potentially hinting at more hikes to come, but there are plenty of opportunities for Fed speakers to clarify their views this week. Last Week’s Highlights: No shortage of big news last week, but for mortgage rates, what mattered the most was bad inflation data coupled with a Fed that turned sharply hawkish again. Last week’s inflation data came in higher than expected and the most worrisome part was that the drivers were broad-based. It looks like core PCE, the Fed’s preferred measure of inflation, is set to come in around 0.3% month-over-month this year, or 3.2% year-over-year, which would mean that it’s moving in the wrong direction relative to the Fed’s target. Notably, a few hours before CPI, Fed Governor Christopher Waller came out with some surprising remarks, putting a 50 bps December hike on the table as a possibility if inflation came in high, which it did. Before he spoke, markets would have assumed an inflation report like the one we got would lead to a guaranteed 25 bps hike. Now markets are assuming the 25 bps hike happens and pricing in some possibility for a larger hike. Subsequent remarks from other Fed officials backed off the 50 bps hike but showed possible support for another hike in January. Previously, markets had assumed that the next hike would happen in March. The net effect of all of this is that markets are now pricing in almost two additional rate hikes by mid-2027 than they were previously, which is why mortgage rates increased last week. The Fed also released its meeting calendar for 2027. It will hold the usual 8 meetings, but the October 2027 meeting will be a strategy meeting where they will not change rates. As a result, they’re moving the December 2027 meeting to November. Even though this means 9 weeks instead of the usual 6 between policy meetings at the end of 2027, this should have minimal effect on monetary policy. Finally, NAR reported existing home sales at an annualized rate of 3.75 million in October. That’s the lowest rate since August 2010 and lower than any month these last four years. This is consistent with Redfin data showing a historically low level of housing demand. Upcoming Attractions: The biggest piece of economic data this week is the Tuesday retail sales report, which will give another look at how consumers are faring, but is unlikely to move rates much. Investors will also get a chance to dissect the minutes from the last Fed meeting on Wednesday. And we will hear from other key FOMC members throughout the week. The ones to watch are New York Fed President Williams today, tomorrow, and Wednesday; Fed Chair Warsh today; Cleveland Fed President Hammack today, tomorrow, and Thursday; and Fed Governor Waller tomorrow. Latest Housing Market Reports: Weekly Housing Market Update: Monthly Mortgage Payments Fall to Lowest Level in 6 Weeks as Home Prices Keep Dipping Monthly Housing Market Update (October): October Marks the First Month in 3 Years With a Decline in U.S. Home-Sale Prices The Generational Housing Divide: Millennials Had It Better Than Baby Boomers–Until the Pandemic Changed the Math Just 3 Major U.S. Metros Are Seller’s Markets–the Fewest Since the Pandemic Freeze Chen Zhao Chen Zhao is the head of economics research, where she produces research on the housing market for public and internal audiences. Previously, she was an executive director leading housing finance and financial markets research at the JPMorgan Chase Institute. Prior to joining JPMCI, Chen was an economics consultant at Analysis Group, Inc., where she worked on financial litigation cases and led teams conducting health economics and outcomes research on behalf of pharmaceutical companies. While in graduate school, Chen was with the Center for Economic Studies and the Social Economic and Housing Statistics Division at the US Census Bureau, where she conducted applied microeconomics research using large scale restricted-access linked survey-administrative data. She started her career at the White House Council of Economic Advisers, where she focused on labor and health economics. Email Chen Get a home loan that helps you win Get prequalified Join us on X for more #housingmarket updates Follow Us You Might Also Like Hot Inflation Report and Hawkish Comments From Fed’s Waller Put a 50 Bps December Hike in Play Mortgage Rates Dip Ahead of a Big Week for Inflation Data October Job Growth Beats Expectations, Keeping a December Fed Hike on the Table Mortgage Rates Drop From September Highs as Midterms and Jobs Data Loom Fed Holds Rates Steady, But Sets Up a December Hike Mortgage Rates Dip as AI Jitters Boost Bonds Ahead of Fed Decision, GDP Data Geopolitics and AI to Drive Mortgage Rates This Week as an October Fed Rate Hike Appears Unlikely Be the first to see the latest real estate news: Facebook This field is for validation purposes and should be left unchanged. Email * Sign up By submitting your email you agree to Redfin’s Terms of Use and Privacy Policy Add Redfin as a preferred source on Google &times; Scroll to Top",
-      "published_at": 1794932531000,
-      "source_family": "redfin-news",
-      "is_research": true,
-      "required_source": false,
-      "mutable": false,
-      "first_seen_at": 1794951480753,
-      "id": "b223fe6acbd3256f",
-      "acquisition_window": {
-        "lower": 1794862800000,
-        "upper": 1794949200000
-      },
-      "score": 20,
-      "tags": [
-        "housing",
-        "data",
-        "macro",
-        "rates"
-      ],
-      "heat_signals": [
-        "fed",
-        "inflation",
-        "mortgage rate"
-      ],
-      "date_precision": "timestamp",
-      "modified_at": 0,
-      "extraction": "semantic",
-      "canonical": "https://redfin.com/news/rates-inflation-hawkish-fed",
-      "content_hash": "a818e30363066d4101ce288e7cdee046a0536653131952eb08c047cf0ff1ddbf",
-      "access": "preview",
-      "evidence_status": "preview",
-      "editorial_protocol": "evidence-refs-v2",
-      "editor_evidence": [
-        {
-          "id": "title",
-          "text": "This Week Brings a Chance for Clarity After Mortgage Rates Rise on Hot Inflation and Hawkish Fed Remarks"
-        },
-        {
-          "id": "body-1",
-          "text": "This Week Brings a Chance for Clarity After Mortgage Rates Rise on Hot Inflation and Hawkish Fed Remarks Published on November 17th, 2026 by Chen Zhao In A Nutshell: Rates climbed last week following surprising commentary from the Fed potentially hinting at more hikes to come, but there are plenty of opportunities for Fed speakers to clarify their views this week."
-        },
-        {
-          "id": "body-2",
-          "text": "Last Week’s Highlights: No shortage of big news last week, but for mortgage rates, what mattered the most was bad inflation data coupled with a Fed that turned sharply hawkish again."
-        },
-        {
-          "id": "body-3",
-          "text": "Last week’s inflation data came in higher than expected and the most worrisome part was that the drivers were broad-based."
-        },
-        {
-          "id": "body-4",
-          "text": "It looks like core PCE, the Fed’s preferred measure of inflation, is set to come in around 0.3% month-over-month this year, or 3.2% year-over-year, which would mean that it’s moving in the wrong direction relative to the Fed’s target."
-        },
-        {
-          "id": "body-5",
-          "text": "Notably, a few hours before CPI, Fed Governor Christopher Waller came out with some surprising remarks, putting a 50 bps December hike on the table as a possibility if inflation came in high, which it did."
-        },
-        {
-          "id": "body-6",
-          "text": "Before he spoke, markets would have assumed an inflation report like the one we got wo"
-        }
-      ]
-    },
-    {
       "source_id": "nahb-eyeonhousing",
       "source_name": "NAHB Eye on Housing",
       "source_tier": "B",
@@ -1072,7 +1130,7 @@
       "region": "national",
       "title": "Dallas venture capitalist Alex Davis buys Aspen estate for $43M as sales slump in resort town",
       "link": "https://therealdeal.com/national/denver/2026/11/17/dallas-tech-investor-alex-davis-buys-43-million-aspen-home/",
-      "description": "An Aspen estate owned by an Australian billionaire for more than a decade has traded hands as the exclusive Colorado resort town’s housing market cools. Former casino and resorts executive James Packer sold the mansion at 1518 West Buttermilk Road for $42.7 million, the Wall Street Journal reported . The price amounts to $2,847 per square foot. The 2-acre property hit the market five months ago with an asking price of $48.9 million. Packer and his ex-wife Erica Packer bought the home in 2013 for $15.6 million. The former couple is parting with the property largely because Erica and their children now live in the U.K. The buyers are tech entrepreneur Alex Davis and his wife, Lindsay Davis, according to property records. Alex Davis is the grandson of late billionaire Marvin Davis, who was an oil magnate that went on to buy Twentieth Century Fox in the early 1980s. Alex founded Dallas-based venture capital firm Disruptive. Christie’s International Real Estate’s Stephanie Lewis and Wendy Wogan held the listing. Compass’ Steven Shane represented the buyers. The 15,000-square-foot home was built in 2006 and has seven bedrooms and seven bathrooms, per the listing with Christie’s. The estate features panoramic views of the mountains. SIGN UP Aspen saw a handful of big-ticket sales this year, but the market is beginning to cool, as year-to-date sales in Aspen and Snowmass were down in dollar volume by 19 percent in October compared to the same period last year, according to Aspen Snowmass Sotheby’s International Realty’s Tim Estin. The top of the luxury market is still in good shape, Lewis said. “While we’ve seen some softening in lower price ranges, demand for truly exceptional properties remains strong,” Lewis said. Those deals include media mogul Byron Allen’s purchase of a home on Aspen’s Red Mountain in June for $91.3 million, and billionaire industrialist Bill Koch selling his 52-acre Elk Mountain Lodge estate the following month for $33.5 million. — Chris Malone Méndez Read more Residential Denver Media mogul Byron Allen buys $91M Aspen home as prices slump in resort town",
+      "description": "An Aspen estate owned by an Australian billionaire for more than a decade has traded hands as the exclusive Colorado resort town’s housing market cools. Former casino and resorts executive James Packer sold the mansion at 1518 West Buttermilk Road for $42.7 million, the Wall Street Journal reported. The price amounts to $2,847 per square foot. The 2-acre property hit the market five months ago with an asking price of $48.9 million. Packer and his ex-wife Erica Packer bought the home in 2013 for $15.6 million. The former couple is parting with the property largely because Erica and their childr",
       "published_at": 1794942000000,
       "source_family": "trd-national",
       "is_research": false,
@@ -1096,13 +1154,7 @@
         "dallas",
         "housing market"
       ],
-      "date_precision": "timestamp",
-      "modified_at": 0,
-      "extraction": "semantic",
-      "canonical": "https://therealdeal.com/national/denver/2026/11/17/dallas-tech-investor-alex-davis-buys-43-million-aspen-home",
-      "content_hash": "c03bc60b8db10ba84c4bae4f6bc87dfa43b950f6da57c98ce8bebeb14add97b3",
-      "access": "preview",
-      "evidence_status": "preview",
+      "evidence_status": "feed_excerpt",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -1115,7 +1167,7 @@
         },
         {
           "id": "body-2",
-          "text": "Former casino and resorts executive James Packer sold the mansion at 1518 West Buttermilk Road for $42.7 million, the Wall Street Journal reported ."
+          "text": "Former casino and resorts executive James Packer sold the mansion at 1518 West Buttermilk Road for $42.7 million, the Wall Street Journal reported."
         },
         {
           "id": "body-3",
@@ -1131,23 +1183,7 @@
         },
         {
           "id": "body-6",
-          "text": "The former couple is parting with the property largely because Erica and their children now live in the U.K."
-        },
-        {
-          "id": "body-7",
-          "text": "The buyers are tech entrepreneur Alex Davis and his wife, Lindsay Davis, according to property records."
-        },
-        {
-          "id": "body-8",
-          "text": "Alex Davis is the grandson of late billionaire Marvin Davis, who was an oil magnate that went on to buy Twentieth Century Fox in the early 1980s."
-        },
-        {
-          "id": "body-9",
-          "text": "Alex founded Dallas-based venture capital firm Disruptive."
-        },
-        {
-          "id": "body-10",
-          "text": "Christie’s International Real Estate’s Stephanie Lewis and Wendy W"
+          "text": "The former couple is parting with the property largely because Erica and their childr"
         }
       ]
     },
@@ -1541,7 +1577,7 @@
       "region": "texas",
       "title": "Dallas Asks Judge to Dismiss City Hall Lawsuit",
       "link": "https://www.dmagazine.com/frontburner/2026/11/dallas-asks-judge-to-dismiss-city-hall-lawsuit/",
-      "description": "Live Poll A little more than three months after a group aiming to force the city to preserve Dallas City Hall filed suit, the city has filed a motion to dismiss it. The Save Dallas City Hall Coalition sued the city in August, alleging that Dallas City Hall’s state of disrepair was tantamount to “demolition by neglect” and is a way for city officials to finagle the eventual tear down of the not even 50-year-old Brutalist building designed by the late I.M. Pei. The suit named the city, Mayor Eric Johnson, all 14 City Council members, as well as City Manager Kimberly Bizor Tolbert, Historic Preservation Officer Marcus Watson, and Chief of Real Estate John Johnson. In its motion, the city says that the Coalition hasn’t been personally harmed and lacks standing to sue. It also says that the issues with City Hall’s maintenance began long before the controversial plan to potentially demolish City Hall to pave way for development downtown, and claims of demolition by neglect are inappropriate. “Decisions about repairs to City Hall are intrinsically discretionary, are well within the authority of the city officials making them, and pertain to the balancing of priorities associated with the City’s finite budget,” the motion says. “Additionally, Plaintiff’s assertions of demolition by neglect, abusing City Hall equipment, and breaching fiduciary duties lack a basis in law or fact.” Even prior to the debate over whether City Hall operations should move to another building to make way for developing the site at 1500 Marilla, the deferred maintenance issues at the building were becoming more well known. In August 2025 , D Magazine reported that in a City Council briefing, John Johnson told the Council that he didn’t know how much it would take to get all 500 city buildings properly maintained. “Johnson explained that it is industry standard for cities to conduct a detailed assessment of their properties every three to five years. Dallas hasn’t done that since 2017,” we wrote. “And for years, the city hasn’t been spending enough to maintain what it owns. The 2025–2026 budget currently allocates $14 million. Based on the value of the city’s holdings (around $1.5 billion), experts recommend at least twice the amount we’ve been spending on maintenance.” At that time, it was believed it would take at least $81 million. Since then, the city has claimed it would take anywhere from $500 million to $1 billion to restore the building and modernize it. The Coalition and other advocates argue that the city is running up the numbers in a bid to make moving more attractive. The Coaltion is using the provisions of Proposition S , a charter amendment passed in November 2024 that allows residents to sue the city if they believe it is not complying with the charter, ordinances, or state law. It also required the city to waive its governmental immunity to such suits. “This is a clear-cut case of the City trying to evade its mandatory duties through bureaucratic delay,” Chris Bowers, one of the attorneys for the Coalition, said in August. “The City Code states that the HPO ‘shall’ meet, inspect, and report, and that the City ‘must’ preserve its structures against deterioration. City officials’ continued nonperformance is not just neglect—it is a breach of fiduciary duty and a direct violation of Dallas law.” The suit asks the district court to compel the city to make repairs to “properly stabilize” City Hall and properly maintain its emergency generators. The Coalition says it is also seeking a court order to extend a predesignation moratorium that would prevent the city from demolishing the building. Typically, any building that is being considered for an historical landmark status is protected from demolition. The Coalition is asking for that moratorium to be extended for the exact amount of time the city has delayed compiling its historic designation report. The city’s attorneys have likely long been anticipating the opportunity to neuter Proposition S in court. In its motion, the city says that the charter amendment “is unconstitutional,” which renders the Coalition’s claims as “facially invalid.” The Coalition’s approach to saving the building, however, is multi-pronged. Volunteers have been collecting signatures to put a charter amendment before voters in May that would codify 1500 Marilla as the seat of government for the city. Should that pass, any move to place city operations elsewhere would require another referendum. The Coalition needed 20,000 signatures of registered Dallas voters—it says it has obtained at least 26,000 and plans to turn those in on Wednesday, November 18. From there, the Dallas City Secretary’s Office will review the petition to determine whether it has enough valid signatures from registered Dallas voters. If it does, the office will send the petition to the City Council, which is required by state law to put the proposed amendment on the ballot. So far, the last City Council meeting on the calendar is December 9, which means city staff is running out of daylight to present any updates to a relocation plan before the end of the year. It’s expected that a judge will rule on the city’s motion to dismiss before the year is out. You can see the Coalition’s lawsuit here , and the city’s motion here . Follow our ongoing coverage here . Read Next Interiors I.M. Pei's Legacy Will Forever Loom Over Dallas He designed masterpieces in the Meyerson and Fountain Place, but we glimpse Pei's humanity in Dallas City Hall, a misunderstood creation that helped shaped the city. By Peter Simek | May 17, 2019 | 11:27 am Author Bethany Erickson View Profile Bethany Erickson is the senior digital editor for D Magazine . You'll find her writing primarily about city hall, Dallas ISD, and the Texas legislature, and editing the popular DBrief newsletter. Dallas City Hall News & Updates",
+      "description": "A little more than three months after a group aiming to force the city to preserve Dallas City Hall filed suit, the city has filed a motion to dismiss it. The Save Dallas City Hall Coalition sued the city in August, alleging that Dallas City Hall’s state of disrepair was tantamount to “demolition by neglect” … Continued The post Dallas Asks Judge to Dismiss City Hall Lawsuit appeared first on D Magazine .",
       "published_at": 1794946157000,
       "source_family": "d-magazine",
       "is_research": false,
@@ -1562,13 +1598,8 @@
       "heat_signals": [
         "dallas"
       ],
-      "date_precision": "timestamp",
-      "modified_at": 1794951416000,
-      "extraction": "semantic",
-      "canonical": "https://dmagazine.com/frontburner/2026/11/dallas-asks-judge-to-dismiss-city-hall-lawsuit",
-      "content_hash": "2e754d2652f6a3da9517dd77296e4d5493fe9ab01cd1c6a47e9167d2efda5c33",
-      "access": "public",
-      "evidence_status": "article",
+      "evidence_status": "feed_excerpt",
+      "enrichment_error": "HTTP 403",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -1577,27 +1608,11 @@
         },
         {
           "id": "body-1",
-          "text": "Live Poll A little more than three months after a group aiming to force the city to preserve Dallas City Hall filed suit, the city has filed a motion to dismiss it."
+          "text": "A little more than three months after a group aiming to force the city to preserve Dallas City Hall filed suit, the city has filed a motion to dismiss it."
         },
         {
           "id": "body-2",
-          "text": "The Save Dallas City Hall Coalition sued the city in August, alleging that Dallas City Hall’s state of disrepair was tantamount to “demolition by neglect” and is a way for city officials to finagle the eventual tear down of the not even 50-year-old Brutalist building designed by the late I.M."
-        },
-        {
-          "id": "body-3",
-          "text": "Pei."
-        },
-        {
-          "id": "body-4",
-          "text": "The suit named the city, Mayor Eric Johnson, all 14 City Council members, as well as City Manager Kimberly Bizor Tolbert, Historic Preservation Officer Marcus Watson, and Chief of Real Estate John Johnson."
-        },
-        {
-          "id": "body-5",
-          "text": "In its motion, the city says that the Coalition hasn’t been personally harmed and lacks standing to sue."
-        },
-        {
-          "id": "body-6",
-          "text": "It also says that the issues with City Hall’s maintenance began long before the controversial plan to potentially demolish City Hall to pave way for development downtown, and claims of demolition by neglect are inappropriate."
+          "text": "The Save Dallas City Hall Coalition sued the city in August, alleging that Dallas City Hall’s state of disrepair was tantamount to “demolition by neglect” … Continued The post Dallas Asks Judge to Dismiss City Hall Lawsuit appeared first on D Magazine ."
         }
       ]
     },
@@ -2244,7 +2259,7 @@
       "region": "national",
       "title": "Homebuilder Confidence Hits New 14-Year Low as High Mortgage Rates and Inflation Take a Toll",
       "link": "https://www.realtor.com/news/trends/homebuilder-sentiment-index-nahb-november-2026/",
-      "description": "U.S. homebuilders are feeling increasingly pessimistic about the new-construction sector of the housing market amid mounting affordability concerns. Builder confidence in new single-family home sales fell three points month over month, bringing the National Association of Home Builders/Wells Fargo Housing Market Index (HMI) down to 25, a new 14-year low . Any reading below 50 reflects the industry's negative view of the market. This is the lowest HMI reading since April 2012. For context, builder sentiment has now remained below 40 for 19 consecutive months. \"Strange times indeed—home prices are at record highs, the stock market has soared in recent years, employment is holding strong, and yet builders feel pessimistic about building homes,\" Jeff Ostrowski, a housing market analyst at Bankrate, tells Realtor.com® . NAHB Chairman Bill Owens attributes the sharp downturn to high mortgage rates, ongoing inflation pressure, elevated energy and material costs, rising labor shortages, and sidelined buyers. \"Builders are confronting multiple challenges in today’s economy,\" says Owens. \"Stepped-up immigration enforcement is keeping legal workers off job sites, deepening labor shortages and driving up costs. Higher fuel prices are prompting subcontractors to raise their rates sharply, and with fewer buyers in the market, more builders are scaling back construction.\" Last week, Freddie Mac reported that the average rate on 30-year fixed home loans decreased to 7.11%, tracking lower bond yields, yet the latest hotter-than-expected inflation print could make the relief short-lived. NAHB chief economist Robert Dietz says that mortgage rates stuck above 7%, combined with weaker consumer confidence, and broader economic uncertainty are holding buyers back from the market, but that is just part of the problem. \"The housing market faces a range of supply-side challenges, including building material costs pushed higher by tariffs, an ongoing shortage of construction workers and excessive regulations that undermine housing affordability,\" says Dietz. Loading... The November HMI survey of single-family homebuilders revealed that 46% of them slashed prices in November, up from 43% in October—the highest share in the post-Covid period. The average price cut remained at 6% for the eighth consecutive month. Price cuts and buyer incentives Meanwhile, 68% of builders reported resorting to sales incentives, such as rate buydowns, marking the 20th month in a row when at least 60% of builders have used this strategy to boost demand. \"This could be an opportunity for homebuyers,\" says Ostrowski. \"If you’re in the market and can swallow a 7% rate, you might be able to find a deal on a new home.\" The index measuring current sales conditions shed six points to 28, while the index gauging future sales expectations slipped two points to 32. At the same time, the index charting prospective buyer traffic decreased two points to 16—its lowest level in 15 years, excluding the start of the pandemic in 2020. On a regional, three-month rolling average basis, the Northeast dropped four points to 34, the Midwest fell five points to 35, the South fell three points to 27, and the West posted a three-point decline to 23. Get real estate news in your inbox Sign up now Snejana Farberov is a reporter at Realtor.com covering the U.S. housing market and the latest domestic real estate trends. She has worked as a general assignment journalist in New York City and Long Island for 16 years, writing for New York Post, Daily Mail, and News 12. Snejana earned bachelor's degrees in journalism and Italian from St. John's University, followed by a master’s degree from Columbia University School of Journalism.",
+      "description": "U.S. homebuilders are feeling increasingly pessimistic about the new-construction sector of the housing market amid mounting affordability concerns. Builder confidence in new single-family home sales fell three points month over month, bringing the National Association of Home Builders/Wells Fargo Housing Market Index (HMI) down to 25, a new 14-year low . Any reading below 50 reflects the industry's negative view of the market. This is the lowest HMI reading since April 2012. For context, builder sentiment has now remained below 40 for 19 consecutive months. \"Strange times indeed—home prices are at record highs, the stock market has soared in recent years, employment is holding strong, and yet builders feel pessimistic about building homes,\" Jeff Ostrowski, a housing market analyst at Bankrate, tells Realtor.com® . NAHB Chairman Bill Owens attributes the sharp downturn to high mortgage rates, ongoing inflation pressure, elevated energy and material costs, rising labor shortages, and sidelined buyers. \"Builders are confronting multiple challenges in today’s economy,\" says Owens. \"Stepped-up immigration enforcement is keeping legal workers off job sites, deepening labor shortages and driving up costs. Higher fuel prices are prompting subcontractors to raise their rates sharply, and with fewer buyers in the market, more builders are scaling back construction.\" Last week, Freddie Mac reported that the average rate on 30-year fixed home loans decreased to 7.11%, tracking lower bond yields, yet the latest hotter-than-expected inflation print could make the relief short-lived. NAHB chief economist Robert Dietz says that mortgage rates stuck above 7%, combined with weaker consumer confidence, and broader economic uncertainty are holding buyers back from the market, but that is just part of the problem. \"The housing market faces a range of supply-side challenges, including building material costs pushed higher by tariffs, an ongoing shortage of construction workers and excessive regulations that undermine housing affordability,\" says Dietz. Loading... The November HMI survey of single-family homebuilders revealed that 46% of them slashed prices in November, up from 43% in October—the highest share in the post-Covid period. The average price cut remained at 6% for the eighth consecutive month. Price cuts and buyer incentives Meanwhile, 68% of builders reported resorting to sales incentives, such as rate buydowns, marking the 20th month in a row when at least 60% of builders have used this strategy to boost demand. \"This could be an opportunity for homebuyers,\" says Ostrowski. \"If you’re in the market and can swallow a 7% rate, you might be able to find a deal on a new home.\" The index measuring current sales conditions shed six points to 28, while the index gauging future sales expectations slipped two points to 32. At the same time, the index charting prospective buyer traffic decreased two points to 16—its lowest level in 15 years, excluding the start of the pandemic in 2020. On a regional, three-month rolling average basis, the Northeast dropped four points to 34, the Midwest fell five points to 35, the South fell three points to 27, and the West posted a three-point decline to 23. Snejana Farberov is a reporter at Realtor.com covering the U.S. housing market and the latest domestic real estate trends. She has worked as a general assignment journalist in New York City and Long Island for 16 years, writing for New York Post, Daily Mail, and News 12. Snejana earned bachelor's degrees in journalism and Italian from St. John's University, followed by a master’s degree from Columbia University School of Journalism.",
       "published_at": 1794933899000,
       "source_family": "realtor-com",
       "is_research": false,
@@ -2273,9 +2288,9 @@
       "modified_at": 1794941292000,
       "extraction": "semantic",
       "canonical": "https://realtor.com/news/trends/homebuilder-sentiment-index-nahb-november-2026",
-      "content_hash": "3419902e7fad0071d02b0c6954c5b99f23f30346c18019c3f514f5b5cfcebf36",
-      "access": "preview",
-      "evidence_status": "preview",
+      "content_hash": "203e7c206a377fccfa90d5688e757fe804474a931a2e43834fbeca9d6ae650d5",
+      "access": "public",
+      "evidence_status": "article",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -2592,7 +2607,7 @@
       "region": "national",
       "title": "Law Firm Morgan & Morgan Doubles Presence in Downtown Boston",
       "link": "https://www.connectcre.com/stories/law-firm-morgan-morgan-doubles-presence-in-downtown-boston/",
-      "description": "Boston & New England CRE News In Your Inbox. Sign up for Connect emails to stay informed with CRE stories that are 150 words or less. Boston & New England + Boston + Office | November 17, 2026 By: Paul Bubny Law Firm Morgan & Morgan Doubles Presence in Downtown Boston Cushman & Wakefield arranged an expansion lease for Morgan & Morgan at 155 Federal St.in downtown Boston. The long-term agreement doubles the national law firm's footprint in the city to 22,395 square feet, marking a significant expansion a few years after initially establishing its Boston office. The Cushman & Wakefield team of John Boyle, Jeff Sweeney and Kevin Hammond represented Morgan & Morgan. Building ownership is KNH Realty Trust, represented by Kevin Brown of Brown & Wagner. “Morgan & Morgan's decision to double its footprint just a few years after opening its first Boston office speaks volumes about the firm's success here and its confidence in the city's future,” said Boyle. “This transaction is a good story for the Boston office market, especially as many companies are still figuring out their long-term office needs. It’s encouraging to see a firm like Morgan & Morgan investing in its people and expanding its presence downtown for the long term.” Read More News Stories About: Cushman & Wakefield Connect Inside The Story About Paul Bubny Paul Bubny serves as Senior Content Director for Connect Commercial Real Estate, a role to which he brings 19-plus years’ experience covering the commercial real estate industry and 35-plus years in business-to-business journalism. In this capacity, he oversees daily operations while also reporting on both local/regional markets and national trends, covering individual transactions across all property types, as well as delving into broader subject matter. He produces 11-15 daily news stories per day and works with the Connect team and clients to develop longer-form content, ranging from Q&As to thought-leadership pieces. Prior to joining Connect, Paul was Managing Editor for both Real Estate Forum and GlobeSt.com at American Lawyer Media, where he oversaw operations at both publications while also producing daily news and feature-length articles. His tenure in B2B publishing stretches back into the print era, and he has served as Editor in Chief on four national trade publications. Since 1999, Paul has volunteered as the newsletter editor of passenger rail advocacy groups (one national, one local). Order Reprints ◦ Lease |Lease Boston & New England | Boston Office Law Firm Morgan & Morgan Doubles Presence in Downtown Boston Paul Bubny November 17, 2026 Load More",
+      "description": "Cushman & Wakefield arranged an expansion lease for Morgan & Morgan at 155 Federal St.in downtown Boston. The long-term agreement doubles the national law firm's footprint in the city to 22,395 square feet, marking a significant expansion a few years after initially establishing its Boston office. The Cushman & Wakefield team of John Boyle, Jeff ... The post Law Firm Morgan & Morgan Doubles Presence in Downtown Boston appeared first on Connect CRE .",
       "published_at": 1794947047000,
       "source_family": "connect-cre",
       "is_research": false,
@@ -2613,14 +2628,8 @@
       "heat_signals": [
         "fed"
       ],
-      "date_precision": "day",
-      "published_date": "2026-11-17",
-      "modified_at": 1794947051000,
-      "extraction": "semantic",
-      "canonical": "https://connectcre.com/stories/law-firm-morgan-morgan-doubles-presence-in-downtown-boston",
-      "content_hash": "657ecdfdd786e63a1d1b611b310530e961844b07fcb15dd7308608badfd0a7a9",
-      "access": "preview",
-      "evidence_status": "preview",
+      "evidence_status": "feed_excerpt",
+      "enrichment_error": "HTTP 403",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -2629,35 +2638,19 @@
         },
         {
           "id": "body-1",
-          "text": "Boston & New England CRE News In Your Inbox."
+          "text": "Cushman & Wakefield arranged an expansion lease for Morgan & Morgan at 155 Federal St.in downtown Boston."
         },
         {
           "id": "body-2",
-          "text": "Sign up for Connect emails to stay informed with CRE stories that are 150 words or less."
-        },
-        {
-          "id": "body-3",
-          "text": "Boston & New England + Boston + Office | November 17, 2026 By: Paul Bubny Law Firm Morgan & Morgan Doubles Presence in Downtown Boston Cushman & Wakefield arranged an expansion lease for Morgan & Morgan at 155 Federal St.in downtown Boston."
-        },
-        {
-          "id": "body-4",
           "text": "The long-term agreement doubles the national law firm's footprint in the city to 22,395 square feet, marking a significant expansion a few years after initially establishing its Boston office."
         },
         {
-          "id": "body-5",
-          "text": "The Cushman & Wakefield team of John Boyle, Jeff Sweeney and Kevin Hammond represented Morgan & Morgan."
+          "id": "body-3",
+          "text": "The Cushman & Wakefield team of John Boyle, Jeff ..."
         },
         {
-          "id": "body-6",
-          "text": "Building ownership is KNH Realty Trust, represented by Kevin Brown of Brown & Wagner."
-        },
-        {
-          "id": "body-7",
-          "text": "“Morgan & Morgan's decision to double its footprint just a few years after opening its first Boston office speaks volumes about the firm's success here and its confidence in the city's future,” said Boyle."
-        },
-        {
-          "id": "body-8",
-          "text": "“This transaction is a good story fo"
+          "id": "body-4",
+          "text": "The post Law Firm Morgan & Morgan Doubles Presence in Downtown Boston appeared first on Connect CRE ."
         }
       ]
     },
@@ -2672,7 +2665,7 @@
       "region": "national",
       "title": "Perennial Housing launches as affordable owner, operator",
       "link": "https://www.multifamilydive.com/news/perennial-housing-launch-affordable-owner-operator/874932/",
-      "description": "CEO Gregory Jones intends to grow its inaugural 31-property, 4,000-unit portfolio in the Southeast and Midwest with more Section 8 and other affordable housing properties.",
+      "description": "Perennial Housing launches as affordable owner, operator CEO Gregory Jones intends to grow its inaugural 31-property, 4,000-unit portfolio in the Southeast and Midwest with more Section 8 and other affordable housing properties. Published Nov. 17, 2026 Julie Strupp Senior Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Christopher Furlong via Getty Images Listen to the article 2 min This audio is auto-generated. Please let us know if you have feedback . Perennial Housing Group launched Friday as an affordable housing owner and operator with a portfolio of 31 newly purchased properties situated in the Southeast and Midwest, the firm announced in a press release. The units primarily serve households that depend on federal rental assistance. Affordable housing veteran Gregory Jones leads the new firm, bringing his two decades of experience in the sector to the CEO role, per the release. Perennial’s inaugural portfolio encompasses nearly 4,000 apartments across 10 states, 97% of which are supported through project-based Section 8 housing assistance contracts, according to the release. Newmark, on behalf of Infinity, served as financial advisor on the transaction. Backed by institutional capital, the Alpharetta, Georgia-headquartered firm expects to partner with Low-Income Housing Tax Credit developers and public housing agencies, per the release. LIHTC remains the largest source of funds for affordable rental housing construction. Perennial is targeting additional project-based Section 8 and other affordable housing communities as it seeks to “build a durable portfolio through disciplined acquisitions and hands-on asset management,” according to the release. The firm also plans to invest in capital improvements that extend the useful life of its properties and to maintain them “with the goal of meeting or exceeding federal inspection requirements.” Jones said he aims to grow the business to more than $1 billion in asset value over the next few years to build Perennial “into one of the largest and best-in-class owners of affordable housing.” “We hold ourselves to high operational standards and are committed to the residents and communities we serve,” Jones said in the release. “As we look ahead, we are excited to grow the platform through acquisitions that extend that commitment to more communities.” Previously, Jones served as CEO of Infinity Real Estate Management, where he led its affordable multifamily platform and oversaw underwriting, contract negotiation and capital structuring, per the release. Perennial’s leadership team has experience in acquisition, operations, finance, rehabilitation and disposition. Click here to sign up to receive multifamily and apartment news like this article in your inbox every weekday. Recommended Reading HUD launches ‘express lane’ for LIHTC multifamily construction loans By Julie Strupp • Nov. 3, 2026 How this firm turns market-rate housing affordable: Post CEO By Julie Strupp • Sept. 28, 2026 Navigating LIHTC projects ‘takes a village’: Walker & Dunlop expert By Danielle McLean • May 15, 2026 Add us on Google Share Copy link Email LinkedIn X/Twitter Facebook Print License Filed Under: Capital , Operations",
       "published_at": 1794946620000,
       "source_family": "multifamily-dive",
       "is_research": false,
@@ -2689,8 +2682,14 @@
         "multifamily"
       ],
       "heat_signals": [],
-      "evidence_status": "feed_excerpt",
-      "enrichment_error": "HTTP 403",
+      "date_precision": "day",
+      "published_date": "2026-11-17",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://multifamilydive.com/news/perennial-housing-launch-affordable-owner-operator/874932",
+      "content_hash": "5dadd90a3f1d6c8365e5bd282d7d620c9185ee9a33e80e847e8aff8c5a93960b",
+      "access": "preview",
+      "evidence_status": "preview",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -2699,7 +2698,31 @@
         },
         {
           "id": "body-1",
-          "text": "CEO Gregory Jones intends to grow its inaugural 31-property, 4,000-unit portfolio in the Southeast and Midwest with more Section 8 and other affordable housing properties."
+          "text": "Perennial Housing launches as affordable owner, operator CEO Gregory Jones intends to grow its inaugural 31-property, 4,000-unit portfolio in the Southeast and Midwest with more Section 8 and other affordable housing properties."
+        },
+        {
+          "id": "body-2",
+          "text": "Published Nov. 17, 2026 Julie Strupp Senior Editor Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Christopher Furlong via Getty Images Listen to the article 2 min This audio is auto-generated."
+        },
+        {
+          "id": "body-3",
+          "text": "Please let us know if you have feedback ."
+        },
+        {
+          "id": "body-4",
+          "text": "Perennial Housing Group launched Friday as an affordable housing owner and operator with a portfolio of 31 newly purchased properties situated in the Southeast and Midwest, the firm announced in a press release."
+        },
+        {
+          "id": "body-5",
+          "text": "The units primarily serve households that depend on federal rental assistance."
+        },
+        {
+          "id": "body-6",
+          "text": "Affordable housing veteran Gregory Jones leads the new firm, bringing his two decades of experience in the sector to the CEO role, per the release."
+        },
+        {
+          "id": "body-7",
+          "text": "Perennial’s inaugural portfolio encompasses nearly 4,000 apartm"
         }
       ]
     },
@@ -2714,7 +2737,7 @@
       "region": "national",
       "title": "How multifamily operators leverage tech to oust fraudulent applications",
       "link": "https://www.multifamilydive.com/news/multifamily-operators-ai-application-fraud/874921/",
-      "description": "Management firms are utilizing AI tools to weed out high-risk prospects while taking approval decisions away from on-site teams, experts said at OPTECH in Las Vegas.",
+      "description": "How multifamily operators leverage tech to oust fraudulent applications Management firms are utilizing AI tools to weed out high-risk prospects while taking approval decisions away from on-site teams, experts said at OPTECH in Las Vegas. Published Nov. 17, 2026 Leslie Shaver Senior Reporter Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Dom Beveridge speaks at OPTECH 2026 on Nov. 16. Les Shaver/Multifamily Dive Listen to the article 5 min This audio is auto-generated. Please let us know if you have feedback . LAS VEGAS — Each year Dom Beveridge puts together a paper called 20for20, where he talks to apartment executives to figure out what they're working on and what they’ve done over the previous year. A few years ago, something new started popping up in the responses they were giving the principal at Houston-based consulting and research firm also called 20for20. “About three years ago was the first time fraud prevention had just emerged as this big priority that that companies were grappling with,” Beveridge said on Monday at OPTECH 2026 in Las Vegas. During the COVID-19 pandemic, when online leasing really took off and eviction moratoriums were in effect, fraud grew at apartment communities around the country, especially in spots like Southern California and Atlanta. “When you make it easier to lease multifamily units, you also make it easier to commit fraud,” Beveridge said. “So the problem of application fraud has pretty much followed the industry's adoption of online leasing-related technologies.” By some estimates, nearly 25% of apartment applicants this summer were using fraudulent Social Security numbers, according to Austen Mount, managing director of operations at TruAmerica Multifamily. “When you start to hear some of the background stats, it really is mind blowing just how pervasive fraud has become for us as an industry,” he said at OPTECH. The good news for operators is that, as companies reduce on-site decision-making, technology vendors have stepped up to deliver products that can help reduce fraud. Software-led solutions In response to the growing problem, industry players and vendors have developed tools to better vet prospects. Beveridge said those offerings were adopted faster than other technologies. As that happened, more management firms were also moving administrative tasks offsite. “As people have gained experience of doing fraud prevention, particularly doing it systematically, the industry has learned a lot of stuff and is changing the way that people are working,” Beveridge said. Unlike some property management challenges, Beveridge said that vendors initially understood the issue better than operators. “As people adopted the technology, gained experience in using it, they started to understand the problem better.” However, fraud is only one risk. “In fact, it doesn't even account for most of the risk that causes your bad debt,” Beveridge said. Beveridge said the companies handling screening poorly are the ones who “just force everybody to do every single check, as if the best applicant is the same as the highest credit risk applicants. And we just push everyone through the same process.” By doing that, management firms add both time and expense. “It's not a good experience,” Beveridge said. “What you're really, in my view, looking to do is to try and create a fast lane for good guys. You're trying to figure out who the people are that pass all your checks with flying colors. You're trying to get them through the checks as quickly as possible.” Centralizing the screening process Management firms have taken various routes to curtail fraud. Western Wealth Communities was originally going to centralize screening with subject matter experts. “I preferred to have three people who were subject matter experts managing our screening versus the 40 at 40 different locations that we had,” Marlana Murdock, vice president of property performance at Western Wealth Communities, said at OPTECH. As that was happening, vendors started bringing products to market that made screening easier, prompting Western Wealth Communities to fully automate the process. “We moved our mindset and our centralization plan from centralizing screening to then working with the vendor to fully automate screening,” Murdock said. The leasing team educates the prospect about the screening process, which is managed by a third party using artificial intelligence. If the applicant is declined, a human can review and potentially override the AI decision. “That's probably about one in 20 or one in 25 of our applicants that come back … [to] discuss an override of some sort,” Murdock said. “That's when it then goes to a real human like myself to review and make decisions.” Leasing teams’ motivation to fill units can lead to questionable approvals. By centralizing the process, companies move those decisions away from onsite teams. “We almost never override for hardly any reasons,” said Jordan Ross, director of strategic initiatives at Highmark Residential, at OPTECH. “We'll reevaluate, but the override almost never happens.” When overrides do happen, it's often because of an unusual source of income. “It's usually one of those unique situations where someone lives solely off of a trust,” Ross said. Click here to sign up to receive multifamily and apartment news like this article in your inbox every weekday. Recommended Reading Multifamily can buy AI. It can’t buy back the last decade of data. By Scott Moore • Nov. 16, 2026 Add us on Google Share Copy link Email LinkedIn X/Twitter Facebook Print License Filed Under: Operations , Tech",
       "published_at": 1794946560000,
       "source_family": "multifamily-dive",
       "is_research": false,
@@ -2731,8 +2754,14 @@
         "multifamily"
       ],
       "heat_signals": [],
-      "evidence_status": "feed_excerpt",
-      "enrichment_error": "HTTP 403",
+      "date_precision": "day",
+      "published_date": "2026-11-17",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://multifamilydive.com/news/multifamily-operators-ai-application-fraud/874921",
+      "content_hash": "e95e6b716d47d477bd3717106c2ad6e33b885c8632aad411eb4af6ad54c08947",
+      "access": "preview",
+      "evidence_status": "preview",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -2741,7 +2770,31 @@
         },
         {
           "id": "body-1",
-          "text": "Management firms are utilizing AI tools to weed out high-risk prospects while taking approval decisions away from on-site teams, experts said at OPTECH in Las Vegas."
+          "text": "How multifamily operators leverage tech to oust fraudulent applications Management firms are utilizing AI tools to weed out high-risk prospects while taking approval decisions away from on-site teams, experts said at OPTECH in Las Vegas."
+        },
+        {
+          "id": "body-2",
+          "text": "Published Nov. 17, 2026 Leslie Shaver Senior Reporter Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google Dom Beveridge speaks at OPTECH 2026 on Nov. 16."
+        },
+        {
+          "id": "body-3",
+          "text": "Les Shaver/Multifamily Dive Listen to the article 5 min This audio is auto-generated."
+        },
+        {
+          "id": "body-4",
+          "text": "Please let us know if you have feedback ."
+        },
+        {
+          "id": "body-5",
+          "text": "LAS VEGAS — Each year Dom Beveridge puts together a paper called 20for20, where he talks to apartment executives to figure out what they're working on and what they’ve done over the previous year."
+        },
+        {
+          "id": "body-6",
+          "text": "A few years ago, something new started popping up in the responses they were giving the principal at Houston-based consulting and research firm also called 20for20."
+        },
+        {
+          "id": "body-7",
+          "text": "“About three years ago was the first time fraud prevention had just emerged as this big p"
         }
       ]
     },
@@ -2756,7 +2809,7 @@
       "region": "national",
       "title": "Sustainability pays dividends when integrated into asset lifecycle planning: BRE expert",
       "link": "https://www.multifamilydive.com/news/sustainability-pays-dividends-asset-lifecycle-planning/874926/",
-      "description": "With a plan, you&rsquo;re less likely to make decisions based on expediency; the focus instead will be on long-term value creation, says Breana Wheeler of the Building Research Establishment.",
+      "description": "Sustainability pays dividends when integrated into asset lifecycle planning: BRE expert With a plan, you’re less likely to make decisions based on expediency; the focus instead will be on long-term value creation, says Breana Wheeler of the Building Research Establishment. Published Nov. 17, 2026 Joe Burns Reporter Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google A sustainable building. The Building Research Establishment's BREEAM standards are aimed at helping owners, occupiers and project teams improve performance across renovation and retrofit projects to make buildings more efficient. Getty Images First published on Listen to the article 7 min This audio is auto-generated. Please let us know if you have feedback . Tying sustainability into asset management rather than tacking it on as a separate issue can reduce risk and add value, especially given the elevated energy costs facing building operators, according to an expert at a sustainability standards organization. “Energy affordability and sustainability, in my world — there’s no distinction,” Breana Wheeler, director of operations at the Building Research Establishment, or BRE, said in an interview. BRE is the international building science center behind BREEAM, a sustainability assessment methodology for master planning projects, infrastructure and buildings. Energy affordability is both an economic and environmental sustainability issue, Wheeler said. When the two are intertwined at an organization, “it’s not viewed as a nice to have, [it’s] about basic risk management and value creation strategies. Being able to plan in advance, being really thoughtful about when an asset is acquired. There’s a whole investment case.” These conversations are even more important for older buildings, with 80% of buildings today expected to be standing in 2050, according to BRE. It’s also important in the context of adaptive reuse, which is gaining momentum across U.S. markets as owners reposition underperforming assets , respond to changing demand and extend the lifecycle of existing buildings. By operating on the basis of planning, facilities teams are less likely to make decisions based on expediency, Wheeler said. When building systems break, it creates an urgent demand to get them working again. In situations like that, contractors or facilities staff may try to replace the system with a like-for-like replacement to get it remedied as fast as possible. But that kind of action can hamper efforts to implement more efficient systems that save money over the long-term, she said. To help building operators connect sustainability with asset management, BRE in September launched BREEAM Refurbishment and Fit Out Commercial Version 7 , a set of standards aimed at helping owners, occupiers and project teams assess and improve performance across renovation and retrofit projects, from major refurbishments to interior fit-outs. The refurbishment portion of the standard focuses on replacement of building systems and other core system-focused projects. The renovation side focuses on the interior as a starting point, like tenant space, and radiates out from there, according to Wheeler. “Some tenant spaces are very self-contained; others are bigger in nature and actually can touch those other core systems,” she said. “The easiest way to explain is refurbishment is about outside-in, and the fit-out is about inside-out. And depending on where your starting point is, the standard really helps scale that and scope it.” The new standards place a greater emphasis on energy performance, whole-life carbon, responsible material selection and circularity, using a four-part modular structure covering building envelope and structure, core services, local services and interior design, BRE said in a release. This enables assessments to align with project scopes of work while reflecting the different responsibilities facing owners, occupiers and the varying replacement cycles of building systems, according to the organization. Focusing on these pillars can help to align asset management and portfolio managers with the flow of upgrades over a holding period, so that when equipment breakdowns happen, organizations are prepared to make smart decisions, she said. “I think there’s an understanding that a building owner has a hold period, and there’s going to be interventions at certain points. Is the planning as robust as it should be? No,” she said. “And I think more importantly, for those organizations who are looking to specifically decarbonize [their] buildings, this is a real challenge.” Even if an organization has decarbonization plans, when equipment or systems go down it can be hard to make the right decision on whether to replace, repair or upgrade an asset, she explained. “You have to have a plan for that, and you have to think about that, and you have to think about [making changes] in various stages. Because it’s not practical for the most part in these buildings to remove tenants,” Wheeler said. The BREEAM standards can help to make those connections between sustainability planning, asset management and property management, so that when these things happen and systems go down, “they can pull it off the shelf and say ‘We got a plan for that. Here you go. This is what I want you to do,’” she said. “We’re really hoping that through our standards, we’re helping put that cycle together to say, this is actually part of asset management. This flow between how your building is performing, how you’re going to intervene, and planning that out,” she said. “The standards help set that performance, but the certification really helps bring it through that whole longer life cycle for our customers.” Owners can renovate their buildings and attract occupiers at a more manageable cost if they align incremental building system and space upgrades with leasing cycles, but these measures can also help to protect buildings against physical climate risk and ",
       "published_at": 1794942840000,
       "source_family": "multifamily-dive",
       "is_research": false,
@@ -2773,8 +2826,14 @@
         "multifamily"
       ],
       "heat_signals": [],
-      "evidence_status": "feed_excerpt",
-      "enrichment_error": "HTTP 403",
+      "date_precision": "day",
+      "published_date": "2026-11-17",
+      "modified_at": 0,
+      "extraction": "semantic",
+      "canonical": "https://multifamilydive.com/news/sustainability-pays-dividends-asset-lifecycle-planning/874926",
+      "content_hash": "b7cb07f3092865d0c01c28671282acfb7d3c4bdfafd459b569d9d25cde9eadc5",
+      "access": "public",
+      "evidence_status": "article",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -2783,7 +2842,27 @@
         },
         {
           "id": "body-1",
-          "text": "With a plan, you&rsquo;re less likely to make decisions based on expediency; the focus instead will be on long-term value creation, says Breana Wheeler of the Building Research Establishment."
+          "text": "Sustainability pays dividends when integrated into asset lifecycle planning: BRE expert With a plan, you’re less likely to make decisions based on expediency; the focus instead will be on long-term value creation, says Breana Wheeler of the Building Research Establishment."
+        },
+        {
+          "id": "body-2",
+          "text": "Published Nov. 17, 2026 Joe Burns Reporter Share Copy link Email LinkedIn X/Twitter Facebook Print License Add us on Google A sustainable building."
+        },
+        {
+          "id": "body-3",
+          "text": "The Building Research Establishment's BREEAM standards are aimed at helping owners, occupiers and project teams improve performance across renovation and retrofit projects to make buildings more efficient."
+        },
+        {
+          "id": "body-4",
+          "text": "Getty Images First published on Listen to the article 7 min This audio is auto-generated."
+        },
+        {
+          "id": "body-5",
+          "text": "Please let us know if you have feedback ."
+        },
+        {
+          "id": "body-6",
+          "text": "Tying sustainability into asset management rather than tacking it on as a separate issue can reduce risk and add value, especially given the elevated energy costs facing building operators, according to an expert at a sustainability standar"
         }
       ]
     },
@@ -2879,7 +2958,7 @@
       "region": "national",
       "title": "Service Properties Trust passes on $2B all-cash offer",
       "link": "https://therealdeal.com/national/2026/11/17/service-properties-trust-passes-on-2b-all-cash-offer/",
-      "description": "Service Properties Trust’s response to TKO’s unsolicited $2 billion offer for nearly 100 of the real estate investment’s assets? Thanks, but no thanks. The RMR Group-managed REIT rejected last month’s proposal by Jim Koehler’s firm, Bisnow reported . The investment firm was seeking to acquire all 77 hotels left in the real estate investment trust’s hospitality portfolio and 93 properties overall, but the board was unanimous in its rejection. An activist investor, Blackwells Capital, pushed back against the rejection before it was made public, claiming there was a conflict of interest around RMR and hotel operator Sonesta International Hotels around termination and transition fees. But the board was unmoved, writing to Blackwells that it “believes that allowing this growth to take hold before selling offers the opportunity to realize significantly higher proceeds for shareholders than selling the hotels today,” citing a belief the hotels could be worth between $3 billion and $4.1 billion in the aggregate. TKO’s substantial offer immediately raised red flags among analysts. For starters, the offer was more than double the market capitalization of the entire company, which is less than $1 billion; the hotels only make up a sliver of the company asset portfolio. SIGN UP Additionally, there’s little record online of TKO and scant evidence the firm can execute a deal of such significant size. TKO offered to deposit $50 million in an escrow fund a week after its initial proposal The offer came at an inflection point for the REIT, which trades under SVC on the Nasdaq and is pivoting to a net-lease-focused entity. It had sold 66 hotels for $534 million in December, bringing its hotel sales for the year to 112 properties and nearly 15,000 rooms for a collective $859 million. The REIT is working to improve its balance sheet and manage approximately $5.8 billion in debt maturities coming over the next five years. It plans to sell off its hotels itself in the coming years. SVC posted a net loss of $87.9 million in the third quarter, an increase from the $46.9 million lost during the same period last year. Its stock has jumped up in recent days, though it’s down nearly 30 percent in the last year. — Holden Walter-Warner Read more Commercial National Unsolicited $2B cash bid for 93-hotel collection raises red flags",
+      "description": "Service Properties Trust’s response to TKO’s unsolicited $2 billion offer for nearly 100 of the real estate investment’s assets? Thanks, but no thanks. The RMR Group-managed REIT rejected last month’s proposal by Jim Koehler’s firm, Bisnow reported. The investment firm was seeking to acquire all 77 hotels left in the real estate investment trust’s hospitality portfolio and 93 properties overall, but the board was unanimous in its rejection. An activist investor, Blackwells Capital, pushed back against the rejection before it was made public, claiming there was a conflict of interest around RMR",
       "published_at": 1794945560000,
       "source_family": "trd-national",
       "is_research": false,
@@ -2897,13 +2976,7 @@
         "hotel"
       ],
       "heat_signals": [],
-      "date_precision": "timestamp",
-      "modified_at": 1794945566000,
-      "extraction": "semantic",
-      "canonical": "https://therealdeal.com/national/2026/11/17/service-properties-trust-passes-on-2b-all-cash-offer",
-      "content_hash": "c7279f01220651b4dd1c12acde983bce2a43edb8ff5b137ee2dbbce6562135a3",
-      "access": "preview",
-      "evidence_status": "preview",
+      "evidence_status": "feed_excerpt",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -2920,7 +2993,7 @@
         },
         {
           "id": "body-3",
-          "text": "The RMR Group-managed REIT rejected last month’s proposal by Jim Koehler’s firm, Bisnow reported ."
+          "text": "The RMR Group-managed REIT rejected last month’s proposal by Jim Koehler’s firm, Bisnow reported."
         },
         {
           "id": "body-4",
@@ -2928,11 +3001,7 @@
         },
         {
           "id": "body-5",
-          "text": "An activist investor, Blackwells Capital, pushed back against the rejection before it was made public, claiming there was a conflict of interest around RMR and hotel operator Sonesta International Hotels around termination and transition fees."
-        },
-        {
-          "id": "body-6",
-          "text": "But the board was unmoved, writing to Blackwells that it “believes that allowing this growth to take hold before selling offers the opportunity to realize significantly higher proceeds for shareholders than selling the hotels today,” citing a belief the hotels could be worth between $3 billion and $4.1 billio"
+          "text": "An activist investor, Blackwells Capital, pushed back against the rejection before it was made public, claiming there was a conflict of interest around RMR"
         }
       ]
     },
@@ -3157,7 +3226,7 @@
       "region": "national",
       "title": "Debt, Equity Secured for Evanston Luxury High-Rise Development",
       "link": "https://www.connectcre.com/stories/debt-equity-secured-for-evanston-luxury-high-rise-development/",
-      "description": "Chicago & Midwest CRE News In Your Inbox. Sign up for Connect emails to stay informed with CRE stories that are 150 words or less. Chicago & Midwest + Greater Chicagoland + Apartments | November 17, 2026 By: Jasmine Kilman Debt, Equity Secured for Evanston Luxury High-Rise Development JLL has arranged financing and equity placement for 605 Davis, a 419-unit luxury high-rise multifamily development in downtown Evanston, Illinois. JLL secured joint venture equity from Kayne Anderson and a senior construction loan from CIBC and ULLICO on behalf of the newly formed partnership. JLL's Debt Advisory team representing the borrower was led by Managing Director Chris Knight and Senior Analysts Ryan Planek and Christian Johnston. Upon completion in May 2028, 605 Davis will rise 29 stories and deliver 298,541 square feet of residential living space with a mix of studio, one-bedroom, two-bedroom and three-bedroom units. The tower is located in downtown Evanston and will be the tallest multifamily property in the immediate area. 605 Davis will also feature a comprehensive, full-floor amenity package, including a rooftop pool, a state-of-the-art fitness center, and a 13th-floor amenity level spanning over 7,000 square feet with coworking spaces, a lounge, and outdoor terraces. Join us for the Connect Midwest Multifamily conference on the afternoon of Tuesday, June 8, 2027, at Joe’s Live in Rosemont, Illinois. Read More News Stories About: JLL Connect Inside The Story JLL About Jasmine Kilman Jasmine Kilman is Content Director of Connect Commercial Real Estate, covering Chicago and greater Chicagoland, the Midwest, Seattle, and the Pacific Northwest. She covers industry trends, transaction deals, market research, and produces daily news stories. With experience in marketing and communications for academic nonprofits and corporate clients, including Hearst Media, Hilton, and Coldwell Banker, Kilman has written about commercial real estate, environmental, social, and corporate governance (ESG), technology, healthcare, and philanthropy. She was born and raised in California and graduated with a degree in public relations. In her spare time, Kilman enjoys hiking and traveling to new locations with her family. Order Reprints Apartment buildings for sale Check out the latest properties available on apartmentbuildings.com 7801 South Shore Drive Chicago, IL Chicago & Midwest + Apartment Buildings Listing Status: Available Listing Type: Call for offers Price: $2,895,000 No. of Units: 32 Year Built: 1961 Opportunity Zone: No Price per unit: $90,468 Learn More 1900 Euclid Ave Cleveland, OH Chicago & Midwest + Apartment Buildings Listing Status: Available Listing Type: Call for offers Price: $19,000,000 No. of Units: 83 Year Built: 1912 Lot Size: 0.70289256198347 Acres Opportunity Zone: No Price per unit: $228,915 Learn More View all apartments Chicago & Midwest | Greater Chicagoland Apartments Debt, Equity Secured for Evanston Luxury High-Rise Development Jasmine Kilman November 17, 2026 Load More",
+      "description": "JLL has arranged financing and equity placement for 605 Davis, a 419-unit luxury high-rise multifamily development in downtown Evanston, Illinois. JLL secured joint venture equity from Kayne Anderson and a senior construction loan from CIBC and ULLICO on behalf of the newly formed partnership. JLL's Debt Advisory team representing the borrower was led by Managing ... The post Debt, Equity Secured for Evanston Luxury High-Rise Development appeared first on Connect CRE .",
       "published_at": 1794948270000,
       "source_family": "connect-cre",
       "is_research": false,
@@ -3175,14 +3244,8 @@
         "multifamily"
       ],
       "heat_signals": [],
-      "date_precision": "day",
-      "published_date": "2026-11-17",
-      "modified_at": 1794948274000,
-      "extraction": "semantic",
-      "canonical": "https://connectcre.com/stories/debt-equity-secured-for-evanston-luxury-high-rise-development",
-      "content_hash": "0e896714abf3e9aded9a13d257416799ec87f58b22cb695600e37ab2f9ac4200",
-      "access": "preview",
-      "evidence_status": "preview",
+      "evidence_status": "feed_excerpt",
+      "enrichment_error": "HTTP 403",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -3191,31 +3254,19 @@
         },
         {
           "id": "body-1",
-          "text": "Chicago & Midwest CRE News In Your Inbox."
+          "text": "JLL has arranged financing and equity placement for 605 Davis, a 419-unit luxury high-rise multifamily development in downtown Evanston, Illinois."
         },
         {
           "id": "body-2",
-          "text": "Sign up for Connect emails to stay informed with CRE stories that are 150 words or less."
-        },
-        {
-          "id": "body-3",
-          "text": "Chicago & Midwest + Greater Chicagoland + Apartments | November 17, 2026 By: Jasmine Kilman Debt, Equity Secured for Evanston Luxury High-Rise Development JLL has arranged financing and equity placement for 605 Davis, a 419-unit luxury high-rise multifamily development in downtown Evanston, Illinois."
-        },
-        {
-          "id": "body-4",
           "text": "JLL secured joint venture equity from Kayne Anderson and a senior construction loan from CIBC and ULLICO on behalf of the newly formed partnership."
         },
         {
-          "id": "body-5",
-          "text": "JLL's Debt Advisory team representing the borrower was led by Managing Director Chris Knight and Senior Analysts Ryan Planek and Christian Johnston."
+          "id": "body-3",
+          "text": "JLL's Debt Advisory team representing the borrower was led by Managing ..."
         },
         {
-          "id": "body-6",
-          "text": "Upon completion in May 2028, 605 Davis will rise 29 stories and deliver 298,541 square feet of residential living space with a mix of studio, one-bedroom, two-bedroom and three-bedroom units."
-        },
-        {
-          "id": "body-7",
-          "text": "The tower is located in downtown Evanston and will be the tallest multifamily"
+          "id": "body-4",
+          "text": "The post Debt, Equity Secured for Evanston Luxury High-Rise Development appeared first on Connect CRE ."
         }
       ]
     },
@@ -3517,7 +3568,7 @@
       "region": "texas",
       "title": "A Short List of Very Good Thanksgiving Shortcuts in Dallas",
       "link": "https://www.dmagazine.com/food-drink/2026/11/a-short-list-of-very-good-thanksgiving-shortcuts-in-dallas/",
-      "description": "Live Poll How does this post find you? Feeling confident about the holidays? Gift lists already crossed off? New York Times holiday recipes tested and ready for the big show? Or does this post find you stressed? Anxiously wringing a kitchen hand towel as you mull over the contents of your pantry and envision a harrowing journey to Central Market? If it’s the latter, stop that! This year has already been much too long, and the last thing you need right now is to worry about making fancy food. Let somebody else do that. Below, I’m making a handful of Dallas Thanksgiving to-go recommendations from places that would never and could never let you down. Because the second-to-last thing you need right now is a lengthy listicle. Zavala’s BBQ One of two recommendations from our Best BBQ list , Zavala’s is vacuum-sealing whole briskets ($225) and whole turkey breasts ($75) with reheating instructions that will make you look like a pro. Pick it up at Mas Coffee Co., just down the road from Zavala’s charming, high-energy restaurant in Grand Prairie. $75 for a whole turkey breast; $225 for a whole brisket. Order by Nov. 23. Pickup on Nov. 25 at Mas Coffee Co. More details Walkers’ Bar & Market It would be a bit much to hire a sommelier for your Thanksgiving dinner. But picking up a selection of wines picked by Walkers’ Bar & Market co-owner and advanced sommelier-certified Rosemary Walker-Green is totally within play. $125 for a three-wine bundle. Order by Nov. 20. Pickup by Nov. 24–25, noon–2 p.m., at Walkers’ Bar & Market. More details . Bresnan Bread and Pastry If the photos of Bresnan’s black bottom pecan pies, Parker House rolls, cinnamon rolls , or spiced pumpkin tea cakes aren’t enough to inspire your Thanksgiving pre-order, you’re either allergic to gluten or something quite dire is afoot. Pies $32–$44; Parker House rolls $25. Order by Nov. 20 at 3 p.m. Pickup on Nov. 24 – 25, 8 a.m.–2 p.m., at the McKinney bakery, or Nov. 25, 8 – 11 a.m., at Saint Michael and All Angels Episcopal Church in Dallas. More details . Café Momentum For a feel-good meal that feeds your family and provides life-changing mentorship, the young and award-winning chefs at Café Momentum are packing up scratch-made gravy, brioche rolls, collard greens, mashed potatoes, cider-brined turkey, and more—all ready to reheat for a family of four. $195. Order by Nov. 20. Pickup on Nov. 25 at Cafe Momentum. More details . Georgie In addition to a whole 12-pound turkey, the Travis Street restaurant ( newly reinstated on our 50 Best Restaurants guide) is packing up duckfat cornbread pudding, cranberry marmalade, brown butter sweet potato puree, kuri squash soup, and optional caviar add-ons for a refined family feast. From $325. Order by Nov. 21. More details . Hurtado In the spirit of this spot’s massive menu, the second recommendation from our Best BBQ list is offering a wide range of Thanksgiving options. Choose from a whole holiday brisket, rack of beef ribs, glazed holiday ham, or poblano and pepper jack sausage paired with sides like hatch mac and cheese, brisket beans, stuffing, and street corn. À la carte meats from $39.49; whole briskets $175. Order by Nov. 19. Pickup on Nov. 25 by 6 p.m. at your selected Hurtado location. More details . Meridian Our dining critic Brian Reinhart called the Sunday night fried chicken dinner at the recently revamped Meridian some of the best he’s ever tasted . I’m inclined to trust him! And maybe inclined to splurge on a whole bird, along with pimento grits, cornbread, broccolini, and burnt honey tart pie for spicy at-home Thanksgiving. A portion of the proceeds will be donated to Meat Fight . $125 for four or $225 for eight. Order by Nov. 23, while supplies last. Pickup on Nov. 25, 10 a.m. – 3 p.m., at Meridian. More details Kuby's Sausage House A few years ago, we decided to host Thanksgiving right after moving into a new house. I don't recommend doing that. But I do recommend ordering your turkey (or beef tenderloin, or prime rib) from Kuby's , a Snider Plaza institution for a reason. My family may have had to fight over chairs that Thanksgiving, but our bird was perfection. $125 for a smoked turkey platter serving 12–15. Call 214-363-2231 to order and confirm the Thanksgiving deadline and pickup details. More details . Read Next Guides Nobody Does Holiday Tea Like Dallas From exquisite spreads to playful services, our assemblage of the best afternoon teas lets you sip your way in the city. By Caitlin Clark , S. Holland Murphy , Emily Heft | November 4, 2026 | 11:15 am Author Caitlin Clark View Profile Caitlin is the online executive editor for D Magazine . She is, sadly, not a basketball player. Barbecue Thanksgiving",
+      "description": "How does this post find you? Feeling confident about the holidays? Gift lists already crossed off? New York Times holiday recipes tested and ready for the big show? Or does this post find you stressed? Anxiously wringing a kitchen hand towel as you mull over the contents of your pantry and envision a harrowing journey … Continued The post A Short List of Very Good Thanksgiving Shortcuts in Dallas appeared first on D Magazine .",
       "published_at": 1794939543000,
       "source_family": "d-magazine",
       "is_research": false,
@@ -3538,13 +3589,8 @@
       "heat_signals": [
         "dallas"
       ],
-      "date_precision": "timestamp",
-      "modified_at": 1794941721000,
-      "extraction": "semantic",
-      "canonical": "https://dmagazine.com/food-drink/2026/11/a-short-list-of-very-good-thanksgiving-shortcuts-in-dallas",
-      "content_hash": "ddb1fbdc0e4005defc65dbbdd61d7062658126af0fa48f1789be188cf0b4ab6b",
-      "access": "public",
-      "evidence_status": "article",
+      "evidence_status": "feed_excerpt",
+      "enrichment_error": "HTTP 403",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -3553,7 +3599,7 @@
         },
         {
           "id": "body-1",
-          "text": "Live Poll How does this post find you?"
+          "text": "How does this post find you?"
         },
         {
           "id": "body-2",
@@ -3573,35 +3619,7 @@
         },
         {
           "id": "body-6",
-          "text": "Anxiously wringing a kitchen hand towel as you mull over the contents of your pantry and envision a harrowing journey to Central Market?"
-        },
-        {
-          "id": "body-7",
-          "text": "If it’s the latter, stop that!"
-        },
-        {
-          "id": "body-8",
-          "text": "This year has already been much too long, and the last thing you need right now is to worry about making fancy food."
-        },
-        {
-          "id": "body-9",
-          "text": "Let somebody else do that."
-        },
-        {
-          "id": "body-10",
-          "text": "Below, I’m making a handful of Dallas Thanksgiving to-go recommendations from places that would never and could never let you down."
-        },
-        {
-          "id": "body-11",
-          "text": "Because the second-to-last thing you need right now is a lengthy listicle."
-        },
-        {
-          "id": "body-12",
-          "text": "Zavala’s BBQ One of two recommendations from our Best BBQ list , Zavala’s is vacuum-sealing whole briskets ($225) and whole turkey breasts ($75) with reheating instructions that will make you look like a pro."
-        },
-        {
-          "id": "body-13",
-          "text": "Pick it up at Mas Coffee Co., just down the road from Zavala"
+          "text": "Anxiously wringing a kitchen hand towel as you mull over the contents of your pantry and envision a harrowing journey … Continued The post A Short List of Very Good Thanksgiving Shortcuts in Dallas appeared first on D Magazine ."
         }
       ]
     },
@@ -3738,7 +3756,7 @@
       "region": "national",
       "title": "Evercore ISI’s Julian Emanuel on homebuilder sentiment: It tells you the economy has changed",
       "link": "https://www.cnbc.com/video/2026/11/17/evercore-isias-julian-emanuel-on-homebuilder-sentiment-it-tells-you-the-economy-has-changed.html",
-      "description": "Evercore ISI’s Julian Emanuel on homebuilder sentiment: It tells you the economy has changed Julian Emanuel, Evercore ISI chief equity, derivatives and quantitative strategist, joins 'Squawk on the Street' to discuss November homebuilder sentiment, Nvidia's earnings, Anthropic's IPO, data center construction, and more. 04:13 Tue, Nov 17 2026 10:24 AM EST watch now watch now VIDEO 06:25 DNI Jay Clayton: This is not a cyber attack and this is not a coordinated effort by a nation state 35 min ago watch now watch now VIDEO 02:13 Apple: Many of our systems back up and running after an internal update caused some outages 28 min ago watch now watch now VIDEO 03:41 NSA says it experienced temporary degradation during scheduled routine maintenance 2 hours ago watch now watch now VIDEO 02:33 Jensen Huang to appear before House Foreign Affairs panel Dec. 1; Nvidia lawyer slated for Dec. 2 watch now watch now VIDEO 06:36 Anthropic likely to price IPO above the current range of $70 to $78, sources tell CNBC 5 hours ago watch now watch now VIDEO 06:25 DNI Jay Clayton: This is not a cyber attack and this is not a coordinated effort by a nation state 35 min ago watch now watch now VIDEO 02:13 Apple: Many of our systems back up and running after an internal update caused some outages 28 min ago watch now watch now VIDEO 03:41 NSA says it experienced temporary degradation during scheduled routine maintenance 2 hours ago watch now watch now VIDEO 02:33 Jensen Huang to appear before House Foreign Affairs panel Dec. 1; Nvidia lawyer slated for Dec. 2 watch now watch now VIDEO 06:36 Anthropic likely to price IPO above the current range of $70 to $78, sources tell CNBC 5 hours ago Load More",
+      "description": "Evercore ISI’s Julian Emanuel on homebuilder sentiment: It tells you the economy has changed Julian Emanuel, Evercore ISI chief equity, derivatives and quantitative strategist, joins 'Squawk on the Street' to discuss November homebuilder sentiment, Nvidia's earnings, Anthropic's IPO, data center construction, and more. 04:13 Tue, Nov 17 2026 10:24 AM EST watch now watch now VIDEO 14:15 Watch Jim Cramer's full interview with Nvidia Interim CEO Colette Kress watch now watch now VIDEO 04:05 Nvidia Chair Harvey Jones: Board does not intend to reinstate Jensen Huang as CEO watch now watch now VIDEO 00:52 Nvidia beats on Q3 revenue and earnings, stock pops slightly on results watch now watch now VIDEO 00:57 SEC is probing Nvidia amid Jensen Huang departure, according to the Wall Street Journal watch now watch now VIDEO 06:25 DNI Jay Clayton: This is not a cyber attack and this is not a coordinated effort by a nation state watch now watch now VIDEO 14:15 Watch Jim Cramer's full interview with Nvidia Interim CEO Colette Kress watch now watch now VIDEO 04:05 Nvidia Chair Harvey Jones: Board does not intend to reinstate Jensen Huang as CEO watch now watch now VIDEO 00:52 Nvidia beats on Q3 revenue and earnings, stock pops slightly on results watch now watch now VIDEO 00:57 SEC is probing Nvidia amid Jensen Huang departure, according to the Wall Street Journal watch now watch now VIDEO 06:25 DNI Jay Clayton: This is not a cyber attack and this is not a coordinated effort by a nation state Load More",
       "published_at": 1794929092000,
       "source_family": "cnbc-realestate",
       "is_research": false,
@@ -3763,7 +3781,7 @@
       "modified_at": 1794929092000,
       "extraction": "body_fallback",
       "canonical": "https://cnbc.com/video/2026/11/17/evercore-isias-julian-emanuel-on-homebuilder-sentiment-it-tells-you-the-economy-has-changed.html",
-      "content_hash": "b3ec5279152ae152a159159cb9470eb6bfa5cb7fab0672c4fd6b2ae4efabf195",
+      "content_hash": "2da8ecb927c53017de9c8f577e72700e2274502af5f1700388b8f638c47a59f3",
       "access": "public",
       "evidence_status": "article",
       "editorial_protocol": "evidence-refs-v2",
@@ -3778,7 +3796,7 @@
         },
         {
           "id": "body-2",
-          "text": "04:13 Tue, Nov 17 2026 10:24 AM EST watch now watch now VIDEO 06:25 DNI Jay Clayton: This is not a cyber attack and this is not a coordinated effort by a nation state 35 min ago watch now watch now VIDEO 02:13 Apple: Many of our systems back up and running after an internal update caused some outages 28 min ago watch now watch now VIDEO 03:41 NSA says it experienced temporary degradation during scheduled routine maintenance 2 hours ago watch now watch now VIDEO 02:33 Jensen Huang to appear before House Foreign Affairs panel Dec. 1; Nvidia lawyer slated for Dec. 2 watch now watch now VIDEO 06:36 Anthropic likely to price IPO above the current range of $70 to $78, sources"
+          "text": "04:13 Tue, Nov 17 2026 10:24 AM EST watch now watch now VIDEO 14:15 Watch Jim Cramer's full interview with Nvidia Interim CEO Colette Kress watch now watch now VIDEO 04:05 Nvidia Chair Harvey Jones: Board does not intend to reinstate Jensen Huang as CEO watch now watch now VIDEO 00:52 Nvidia beats on Q3 revenue and earnings, stock pops slightly on results watch now watch now VIDEO 00:57 SEC is probing Nvidia amid Jensen Huang departure, according to the Wall Street Journal watch now watch now VIDEO 06:25 DNI Jay Clayton: This is not a cyber attack and this is not a coordinated effort by a nation state watch now watch now VIDEO 14:15 Watch Jim Cramer's full interview with"
         }
       ]
     },
@@ -3794,7 +3812,7 @@
       "region": "national",
       "title": "Congress eyes overhaul that could pile billions in fees on data center developers",
       "link": "https://therealdeal.com/national/2026/11/16/congress-eyes-overhaul-for-data-center-development/",
-      "description": "The data centers pacing the AI boom could get a faster path to power, but at a steep price. A sweeping congressional permitting proposal would make it easier to build data center infrastructure, while potentially saddling developers with billions of dollars in additional electricity costs, the New York Times reported . The bill would streamline federal environmental reviews for projects including transmission lines, gas pipelines and power generation facilities, potentially easing one of the biggest obstacles to data center development: securing enough electricity to operate. But it would also force data centers to pay more to access the electric grid, shifting costs historically spread among utility customers. One provision would direct the Federal Energy Regulatory Commission to establish rules requiring data centers to cover both the cost of grid upgrades needed to serve them and the expense of using existing transmission infrastructure. The proposal would upend longstanding regulatory principles that prevent utilities from charging customers twice for the same grid capacity. Federal grid charges alone could cost data centers an additional $35 billion over the next decade, according to a report from consulting firm Grid Strategies. States could potentially collect another $136 billion under separate provisions. “The day of data center freeloading ends when this bill passes,” said Sen. Sheldon Whitehouse, a co-author of the bill. The Data Center Coalition, a prominent trade group, has not taken a stance yet on the bill. SIGN UP The proposal arrives as data center developers face mounting political resistance over the facilities’ enormous power demands. Many campuses consume as much electricity as small cities, raising concerns about infrastructure costs, utility bills and the strain on local grids. Voters approved at least 40 local ballot initiatives restricting data centers in this month’s midterm elections. For developers, the legislation presents a complicated trade-off. Faster federal approvals could help unlock power infrastructure and make more sites viable. But higher electricity costs could alter project economics, particularly in markets where grid capacity is already constrained. The bill could also encourage data center development on federal land, where the Interior Department is considering at least 17 applications, according to the Center for Western Priorities. Even if Congress moves forward, state and local approvals would remain a hurdle. — Holden Walter-Warner Read more Development Texas Love ‘em or hate ‘em, data centers grab real estate spotlight in Texas elections",
+      "description": "The data centers pacing the AI boom could get a faster path to power, but at a steep price. A sweeping congressional permitting proposal would make it easier to build data center infrastructure, while potentially saddling developers with billions of dollars in additional electricity costs, the New York Times reported. The bill would streamline federal environmental reviews for projects including transmission lines, gas pipelines and power generation facilities, potentially easing one of the biggest obstacles to data center development: securing enough electricity to operate. But it would also ",
       "published_at": 1794862800000,
       "source_family": "trd-national",
       "is_research": false,
@@ -3816,13 +3834,7 @@
       "heat_signals": [
         "fed"
       ],
-      "date_precision": "timestamp",
-      "modified_at": 0,
-      "extraction": "semantic",
-      "canonical": "https://therealdeal.com/national/2026/11/16/congress-eyes-overhaul-for-data-center-development",
-      "content_hash": "6984fe904d5449f6d51fc9b9d38da3a2e2a3709dd3997a0956a3a34274b59f3f",
-      "access": "preview",
-      "evidence_status": "preview",
+      "evidence_status": "feed_excerpt",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -3835,7 +3847,7 @@
         },
         {
           "id": "body-2",
-          "text": "A sweeping congressional permitting proposal would make it easier to build data center infrastructure, while potentially saddling developers with billions of dollars in additional electricity costs, the New York Times reported ."
+          "text": "A sweeping congressional permitting proposal would make it easier to build data center infrastructure, while potentially saddling developers with billions of dollars in additional electricity costs, the New York Times reported."
         },
         {
           "id": "body-3",
@@ -3843,15 +3855,7 @@
         },
         {
           "id": "body-4",
-          "text": "But it would also force data centers to pay more to access the electric grid, shifting costs historically spread among utility customers."
-        },
-        {
-          "id": "body-5",
-          "text": "One provision would direct the Federal Energy Regulatory Commission to establish rules requiring data centers to cover both the cost of grid upgrades needed to serve them and the expense of using existing transmission infrastructure."
-        },
-        {
-          "id": "body-6",
-          "text": "The proposal would upend longstanding regulat"
+          "text": "But it would also"
         }
       ]
     },
@@ -3866,7 +3870,7 @@
       "region": "texas",
       "title": "Why Women’s Financial Wellness Is About More Than Money",
       "link": "https://www.dmagazine.com/sponsored/2026/11/womens-financial-wellness-wealth-and-wellbeing/",
-      "description": "Live Poll What does it mean to be financially well? For some, it might mean having enough saved for retirement. For others, it's knowing their children will be taken care of, having the freedom to pursue a new opportunity, or simply feeling confident about the future. But financial wellness rarely exists on its own. The decisions women make about money are often closely connected to their families, careers, personal well-being, and the lives they want to build. That connection was at the heart of a recent Dallas gathering, \"A Life Well Lived Is Thoughtfully Curated,\" hosted by Bernstein Private Wealth Management , where women came together to explore what it means to live well--and why wealth is only one part of the equation. Women are becoming an increasingly powerful financial force Research has long been at the center of Bernstein, and within that, it's become increasingly clear that more and more women are stepping into wealth--and that women often view and manage wealth in a different way than men. \"There's a huge wealth transfer that's imminent, and women are at the helm of that,\" explained wealth advisor Julie Judson , one of the event's hosts. \"Women are going to inherit wealth from their parents and from their spouses over the next several decades, and we still believe that women are under-resourced.\" \"They're not spoken to the way that men are in the rooms that we are in in our industry,\" Judson added. \"We have the opportunity here in Dallas to influence how female investors are spoken to, how they're educated, and how they're empowered, and that's something we really want to do.\" Event hosts Julie Judson and Cecily Bolding were joined by nine panelists that led three sessions that highlight women's wellness in the home, wellness within, and financial wellness. (Photo provided by Bernstein Private Wealth Management) Why financial wellness and personal wellness go hand in hand As more women step into these positions, Bernstein is finding that the idea of financial success can look very different for those women. \"What we notice from female investors is there's a theme of longevity. 'I want to make sure this provides longevity for me and my stakeholders, whether it's charity or family,'\" explained Cecily Bolding , managing director at Bernstein and event co-host. \"Understanding what women want out of investments and out of wellness, it's inextricably linked.\" That was the inspiration behind the event for Bernstein, which highlighted common areas of stress for women: wellness in the home, wellness within, and wellness with wealth. \"We've realized that when a woman is at the helm of wealth, if wellness isn't taken care of, wealth can become a burden,\" Bolding added. \"We feel like the more we can do to make women aware of some of the elements that are causing friction or frizz in their life, the better we can do to help educate them early on.\" The event was led by Bolding and Judson, along with nine panelists and one guest moderator all to highlight how women can find balance and wellness in the areas of their life. They included: Rachel W. Saltsman, JD, Partner at The Blum Firm, P.C. Susan Sarich, Founder/CEO of SusieCakes Holly Moon, President & CEO of Adhoc Kara C. Farley, MD, Primary Care Physician Annie Schmidt, Owner of Schmidt Organization Systems Anne Jones, Founder/CEO of Artemis Chelsea Smith, Senior National Director at Family Office Services Kat Weaver, Founder of Power To Pitch Lupe Prado, Executive Coach & Founder of LP Coaching LLC Brittany Grignon Hays, Founder/Creator of SESSION Pilates The session on wellness at home centered on identifying systems and ways women can organize, simplify, or delegate work in the home to reduce their mental load. The wellness within portion of the day focused on giving women permission to prioritize their own health and wellness, as well as ways to build sustainable and consistent habits and boundaries so they're able to continue that prioritization. The financial wellness portion of the day brought the conversation back to defining what financial wellness means to women and how thoughtful planning, both in and outside of the checkbook, can provide confidence and peace of mind. The guests were left with many things to ponder, but when trying to decide where to start, they were left with three reflection questions: Wellness at home: What can I simplify, organize, or delegate? Wellness within: What do I need to give myself permission to do? Wellness and wealth: What financial conversation or decision am I ready to begin? Bernstein Private Wealth Management's \"A Life Well Lived Is Thoughtfully Curated\" showcases the firm's dedication to the growing number of women in wealth and supporting their unique needs. (Photo provided by Bernstein Private Wealth Management) Building wealth around what matters most During the event, attendees were asked to complete a values exercise, where each woman identified what was important to them so they could take action. The trend that kept popping up? Helping those around you. \"Studies have shown if you give wealth to a woman, the community benefits,\" Bolding said. \"She invests in those around her--children, businesses, charities, whatever it might be--women have this global view of a collective \"we,\" and even though our day was about thinking about themselves, it still included children and other causes and how they can partner with one another in the future. That ripple effect extends beyond financial investments. When women have the confidence to make decisions about their money, the freedom to prioritize their own well-being, and the resources to pursue what matters most, they are better positioned to support not only themselves, but the people and communities around them. It's a connection Bernstein hopes to continue strengthening through financial education, meaningful conversations, and opportunities for women to learn from one another. The Dallas gathering was one example of how those conversation",
+      "description": "What does it mean to be financially well? For some, it might mean having enough saved for retirement. For others, it’s knowing their children will be taken care of, having the freedom to pursue a new opportunity, or simply feeling confident about the future. But financial wellness rarely exists on its own. The decisions women … Continued The post Why Women’s Financial Wellness Is About More Than Money appeared first on D Magazine .",
       "published_at": 1794945600000,
       "source_family": "d-magazine",
       "is_research": false,
@@ -3884,13 +3888,8 @@
         "housing"
       ],
       "heat_signals": [],
-      "date_precision": "timestamp",
-      "modified_at": 1794945742000,
-      "extraction": "semantic",
-      "canonical": "https://dmagazine.com/sponsored/2026/11/womens-financial-wellness-wealth-and-wellbeing",
-      "content_hash": "1b8454b7acadddcff49014af970e29a96725a5b07e431e58b3bbb9116dc0f77b",
-      "access": "public",
-      "evidence_status": "article",
+      "evidence_status": "feed_excerpt",
+      "enrichment_error": "HTTP 403",
       "editorial_protocol": "evidence-refs-v2",
       "editor_evidence": [
         {
@@ -3899,7 +3898,7 @@
         },
         {
           "id": "body-1",
-          "text": "Live Poll What does it mean to be financially well?"
+          "text": "What does it mean to be financially well?"
         },
         {
           "id": "body-2",
@@ -3907,7 +3906,7 @@
         },
         {
           "id": "body-3",
-          "text": "For others, it's knowing their children will be taken care of, having the freedom to pursue a new opportunity, or simply feeling confident about the future."
+          "text": "For others, it’s knowing their children will be taken care of, having the freedom to pursue a new opportunity, or simply feeling confident about the future."
         },
         {
           "id": "body-4",
@@ -3915,15 +3914,7 @@
         },
         {
           "id": "body-5",
-          "text": "The decisions women make about money are often closely connected to their families, careers, personal well-being, and the lives they want to build."
-        },
-        {
-          "id": "body-6",
-          "text": "That connection was at the heart of a recent Dallas gathering, \"A Life Well Lived Is Thoughtfully Curated,\" hosted by Bernstein Private Wealth Management , where women came together to explore what it means to live well--and why wealth is only one part of the equation."
-        },
-        {
-          "id": "body-7",
-          "text": "Women are becoming an increasingly powerful financial force Research has long been at the center of Bernstein, and within that, it's become increasingly clear that more and more women are stepping into wealth--and that women often view and manage wealth in a diffe"
+          "text": "The decisions women … Continued The post Why Women’s Financial Wellness Is About More Than Money appeared first on D Magazine ."
         }
       ]
     },
@@ -3998,85 +3989,6 @@
           "text": "In its complaint against ARMLS, Compass called the group a “competition-killing real estate industry organization” and asserted that ARMLS and its “co-conspirators” have banded together"
         }
       ]
-    },
-    {
-      "source_id": "d-magazine",
-      "source_name": "D Magazine",
-      "source_tier": "D",
-      "source_weight": 5,
-      "source_tags": [
-        "dfw"
-      ],
-      "region": "texas",
-      "title": "Hot Property: A Dallas Midcentury Modern With Richardson Zoning",
-      "link": "https://www.dmagazine.com/home-garden/2026/11/hot-property-revisiting-a-midcentury-modern-in-its-natural-element/",
-      "description": "Live Poll Built in 1966, 13321 Purple Sage Road is a midcentury modern home that makes the most of its relationship with the outdoors. Set beneath a canopy of mature magnolia and maple trees in North Dallas' coveted, the residence pairs natural textures with floor-to-ceiling windows that draw in the surrounding greenery. The design balances the simplicity of midcentury architecture with a variety of materials, from hardwood floors to natural stone and tile. The result feels connected to its 1960s era without being overly nostalgic, with a serene and understated aesthetic. We first brought you this home nearly two years ago, when it last changed hands. Since then, the current owners have invested heavily in new HVAC, plumbing, and electrical systems; added a whole-home generator (increasingly handy given Texas' unpredictable weather); and made aesthetic updates throughout. The house is better for all of them. Its location in a MCM-laden enclave of Far North Dallas—which feeds into Richardson schools and is within minutes of the planned new Dallas Mavericks arena—is a not-so-small bonus. Walking into the home, the sunken living room makes an immediate impression with a substantial brick fireplace anchoring the space. Expansive windows stretch across the back of the home, framing views of the backyard beyond. Stone and tile flooring introduce a variety of textures and tones, contrasting with the golden hues of the hardwood floors found elsewhere. In the kitchen, wood cabinetry brings a welcome dose of warmth to the home’s restrained palette. Its rich finish stands out against the neutral backsplash, giving the space a classic midcentury feel. Elsewhere, shades of green appear throughout the interiors, from the home office to the primary bedroom. The bathrooms continue the home’s appreciation for natural materials, with one standout featuring a sink carved from natural stone. Its organic shape complements the wooden vanity, the earth-toned tiled shower, and the terrazzo tile floors. Outside, the backyard unfolds as a landscape of winding pathways, mature trees, and carefully considered seating areas. Rather than one broad, flat expanse of lawn, the design takes advantage of the sloped grounds as curved paths lead to different sections of the garden. A heated pool and surrounding pool deck offer elevated views of the landscape beyond, while two separate seating areas provide ample room for hosting outdoors. This midcentury residence understands the appeal of its surroundings and perfectly fits within the landscape, rather than trying to work against it. The home allows nature to inspire its design and its original era to take the lead. See more of this house . View Gallery Author Lydia Brooks View Profile Lydia Brooks is a graduate of SMU and a former associate editor for D Hom e and D Weddings.",
-      "published_at": 1794865225000,
-      "source_family": "d-magazine",
-      "is_research": false,
-      "required_source": false,
-      "mutable": false,
-      "first_seen_at": 1794884592843,
-      "id": "71e7d6fce433e4d9",
-      "acquisition_window": {
-        "lower": 1794862800000,
-        "upper": 1794949200000
-      },
-      "score": 10,
-      "tags": [
-        "dfw",
-        "texas",
-        "housing"
-      ],
-      "heat_signals": [
-        "dallas"
-      ],
-      "date_precision": "timestamp",
-      "modified_at": 1794865736000,
-      "extraction": "semantic",
-      "canonical": "https://dmagazine.com/home-garden/2026/11/hot-property-revisiting-a-midcentury-modern-in-its-natural-element",
-      "content_hash": "a20bbd243bacdf4ddd8e9f1fd6e980d615f2575bbe545fc8760400f1fcb3b042",
-      "access": "public",
-      "evidence_status": "article",
-      "editorial_protocol": "evidence-refs-v2",
-      "editor_evidence": [
-        {
-          "id": "title",
-          "text": "Hot Property: A Dallas Midcentury Modern With Richardson Zoning"
-        },
-        {
-          "id": "body-1",
-          "text": "Live Poll Built in 1966, 13321 Purple Sage Road is a midcentury modern home that makes the most of its relationship with the outdoors."
-        },
-        {
-          "id": "body-2",
-          "text": "Set beneath a canopy of mature magnolia and maple trees in North Dallas' coveted, the residence pairs natural textures with floor-to-ceiling windows that draw in the surrounding greenery."
-        },
-        {
-          "id": "body-3",
-          "text": "The design balances the simplicity of midcentury architecture with a variety of materials, from hardwood floors to natural stone and tile."
-        },
-        {
-          "id": "body-4",
-          "text": "The result feels connected to its 1960s era without being overly nostalgic, with a serene and understated aesthetic."
-        },
-        {
-          "id": "body-5",
-          "text": "We first brought you this home nearly two years ago, when it last changed hands."
-        },
-        {
-          "id": "body-6",
-          "text": "Since then, the current owners have invested heavily in new HVAC, plumbing, and electrical systems; added a whole-home generator (increasingly handy given Texas' unpredictable weather); and made aesthetic updates throughout."
-        },
-        {
-          "id": "body-7",
-          "text": "The house is better for all of them."
-        },
-        {
-          "id": "body-8",
-          "text": "Its location in a MCM-laden enclave of Far North Dallas—which feeds into Richa"
-        }
-      ]
     }
   ],
   "candidate_preparation": {
@@ -4087,7 +3999,7 @@
     "rejected": 19,
     "sectors": {
       "other": {
-        "available": 145,
+        "available": 146,
         "attempted": 59,
         "accepted": 44,
         "readable": 44,
@@ -10504,7 +10416,7 @@
       "name": "HousingWire",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.housingwire.com/feed/"
       ],
@@ -10515,14 +10427,14 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 9,
+      "recent": 7,
       "unreadable_recent": 0,
-      "earliest_dated": 1794932683000,
+      "earliest_dated": 1794938007000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "inman",
@@ -10558,50 +10470,39 @@
       "name": "The Real Deal (National)",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://therealdeal.com/national/feed/"
       ],
-      "status": "ok",
-      "discovered": 10,
-      "articles": 10,
-      "discovery_truncated": false,
-      "article_budget": 0,
-      "fallback_bodies": 0,
-      "undated": 0,
-      "recent": 10,
-      "unreadable_recent": 0,
-      "earliest_dated": 1794525913000,
-      "coverage_basis": "full_listing",
-      "coverage": null,
-      "changed_without_new_date": [],
-      "versions": {},
-      "last_success": 1794951480753
+      "status": "error",
+      "discovered": 0,
+      "articles": 0,
+      "error": "Directory contained no matching links"
     },
     {
       "id": "bisnow",
       "name": "Bisnow",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.bisnow.com/rss"
       ],
       "status": "ok",
-      "discovered": 10,
-      "articles": 10,
+      "discovered": 9,
+      "articles": 9,
       "discovery_truncated": false,
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 10,
+      "recent": 0,
       "unreadable_recent": 0,
-      "earliest_dated": 1794936981000,
+      "earliest_dated": 1794954050000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "multi-housing-news",
@@ -10637,7 +10538,7 @@
       "name": "National Mortgage News",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.nationalmortgagenews.com/rss"
       ],
@@ -10655,7 +10556,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "cnbc-realestate",
@@ -10690,7 +10591,7 @@
       "name": "D Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.dmagazine.com/feed/"
       ],
@@ -10701,14 +10602,14 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 12,
+      "recent": 11,
       "unreadable_recent": 0,
-      "earliest_dated": 1794602599000,
+      "earliest_dated": 1794610064000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "houston-agent",
@@ -10799,7 +10700,7 @@
       "name": "Miami Agent Magazine",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://miamiagentmagazine.com/feed/"
       ],
@@ -11011,7 +10912,7 @@
       "name": "Realtor.com News",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.realtor.com/news/feed/"
       ],
@@ -11022,14 +10923,14 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 29,
+      "recent": 24,
       "unreadable_recent": 0,
-      "earliest_dated": 1794856200000,
+      "earliest_dated": 1794860724000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "redfin-news",
@@ -11064,7 +10965,7 @@
       "name": "Texas Real Estate Research Center (TRERC)",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://trerc.tamu.edu/texas-housing-insight/"
       ],
@@ -11083,7 +10984,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "fed-press",
@@ -11147,7 +11048,7 @@
       "name": "PERE News",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.perenews.com/feed/"
       ],
@@ -11189,7 +11090,7 @@
       "name": "Connect CRE",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.connectcre.com/feed/"
       ],
@@ -11200,21 +11101,21 @@
       "article_budget": 0,
       "fallback_bodies": 0,
       "undated": 0,
-      "recent": 10,
+      "recent": 2,
       "unreadable_recent": 0,
-      "earliest_dated": 1794945760000,
+      "earliest_dated": 1794948270000,
       "coverage_basis": "full_listing",
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "rebusiness-online",
       "name": "REBusiness Online",
       "research": false,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://rebusinessonline.com/feed/"
       ],
@@ -11232,7 +11133,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "nrhc",
@@ -11757,7 +11658,7 @@
       "name": "Fannie Mae ESR",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.fanniemae.com/data-and-insights/forecast"
       ],
@@ -11771,7 +11672,7 @@
       "name": "Freddie Mac PMMS",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.freddiemac.com/pmms"
       ],
@@ -11792,14 +11693,14 @@
       "versions": {
         "https://freddiemac.com/pmms": "c31943a782537223b1fcb017e44934e5d28dda90fbdc8ffddd8a2a2df63920f4"
       },
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "freddie-research",
       "name": "Freddie Mac Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.freddiemac.com/research-and-perspectives"
       ],
@@ -11821,14 +11722,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "texas-realtors",
       "name": "Texas REALTORS Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.texasrealestate.com/research/quarterly-housing-report"
       ],
@@ -11847,14 +11748,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "metrotex-research",
       "name": "MetroTex Market Reports",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.mymetrotex.com/market-reports/"
       ],
@@ -11873,7 +11774,7 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "unlock-research",
@@ -11909,7 +11810,7 @@
       "name": "Harvard JCHS",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.jchs.harvard.edu/blog"
       ],
@@ -11952,23 +11853,36 @@
       "name": "CBRE Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
-        "https://www.cbre.com/services/property-types/multifamily",
-        "https://www.cbre.com/shared-sitemap/figure.xml",
-        "https://www.cbre.com/insights"
+        "https://www.cbre.com/services/property-types/multifamily"
       ],
-      "status": "error",
-      "discovered": 0,
-      "articles": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "discovered": 15,
+      "articles": 15,
+      "discovery_truncated": false,
+      "article_budget": 15,
+      "fetched_articles": 15,
+      "fallback_bodies": 0,
+      "undated": 2,
+      "recent": 3,
+      "unreadable_recent": 0,
+      "earliest_dated": 1744732800000,
+      "coverage_basis": "full_listing",
+      "coverage": {
+        "lower": 1793180442798,
+        "upper": 1794949200000
+      },
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1794991002654
     },
     {
       "id": "jll-research",
       "name": "JLL Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.jll.com/en-us/insights"
       ],
@@ -11990,14 +11904,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "cushman-research",
       "name": "Cushman & Wakefield Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
       ],
@@ -12016,21 +11930,33 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "colliers-research",
       "name": "Colliers Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.colliers.com/en/research"
       ],
-      "status": "error",
-      "discovered": 0,
-      "articles": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "discovered": 1,
+      "articles": 1,
+      "discovery_truncated": false,
+      "article_budget": 1,
+      "fetched_articles": 1,
+      "fallback_bodies": 0,
+      "undated": 0,
+      "recent": 1,
+      "unreadable_recent": 0,
+      "earliest_dated": 1794941400000,
+      "coverage_basis": "full_listing",
+      "coverage": null,
+      "changed_without_new_date": [],
+      "versions": {},
+      "last_success": 1794991002654
     },
     {
       "id": "realpage-research",
@@ -12065,7 +11991,7 @@
       "name": "NMHC Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.nmhc.org/research-insight/quarterly-survey/"
       ],
@@ -12084,14 +12010,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "naa-research",
       "name": "NAA Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://naahq.org/research"
       ],
@@ -12113,14 +12039,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "uli-pwc",
       "name": "ULI/PwC Emerging Trends",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
         "https://www.pwc.com/us/en/about-us/newsroom.html"
@@ -12166,7 +12092,7 @@
       "name": "John Burns Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://jbrec.com/resources/insights/"
       ],
@@ -12180,7 +12106,7 @@
       "name": "Northmarq Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.northmarq.com/insights"
       ],
@@ -12199,14 +12125,14 @@
       "coverage": null,
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "berkadia-research",
       "name": "Berkadia Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.berkadia.com/multifamily-reports/"
       ],
@@ -12228,14 +12154,14 @@
       },
       "changed_without_new_date": [],
       "versions": {},
-      "last_success": 1794951480753
+      "last_success": 1794991002654
     },
     {
       "id": "arbor-research",
       "name": "Arbor/Chandan Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://arbor.com/research/reports/"
       ],
@@ -12249,7 +12175,7 @@
       "name": "Newmark Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.nmrk.com/insights/market-report"
       ],
@@ -12350,7 +12276,7 @@
       "name": "MBA Research",
       "research": true,
       "required": false,
-      "checked_at": 1794951480753,
+      "checked_at": 1794991002654,
       "attempted_urls": [
         "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
       ],
@@ -12673,7 +12599,7 @@
           "name": "HousingWire",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.housingwire.com/feed/"
           ],
@@ -12684,14 +12610,14 @@
           "article_budget": 0,
           "fallback_bodies": 0,
           "undated": 0,
-          "recent": 9,
+          "recent": 7,
           "unreadable_recent": 0,
-          "earliest_dated": 1794932683000,
+          "earliest_dated": 1794938007000,
           "coverage_basis": "full_listing",
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "inman",
@@ -12727,50 +12653,39 @@
           "name": "The Real Deal (National)",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://therealdeal.com/national/feed/"
           ],
-          "status": "ok",
-          "discovered": 10,
-          "articles": 10,
-          "discovery_truncated": false,
-          "article_budget": 0,
-          "fallback_bodies": 0,
-          "undated": 0,
-          "recent": 10,
-          "unreadable_recent": 0,
-          "earliest_dated": 1794525913000,
-          "coverage_basis": "full_listing",
-          "coverage": null,
-          "changed_without_new_date": [],
-          "versions": {},
-          "last_success": 1794951480753
+          "status": "error",
+          "discovered": 0,
+          "articles": 0,
+          "error": "Directory contained no matching links"
         },
         {
           "id": "bisnow",
           "name": "Bisnow",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.bisnow.com/rss"
           ],
           "status": "ok",
-          "discovered": 10,
-          "articles": 10,
+          "discovered": 9,
+          "articles": 9,
           "discovery_truncated": false,
           "article_budget": 0,
           "fallback_bodies": 0,
           "undated": 0,
-          "recent": 10,
+          "recent": 0,
           "unreadable_recent": 0,
-          "earliest_dated": 1794936981000,
+          "earliest_dated": 1794954050000,
           "coverage_basis": "full_listing",
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "multi-housing-news",
@@ -12806,7 +12721,7 @@
           "name": "National Mortgage News",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.nationalmortgagenews.com/rss"
           ],
@@ -12824,7 +12739,7 @@
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "cnbc-realestate",
@@ -12859,7 +12774,7 @@
           "name": "D Magazine",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.dmagazine.com/feed/"
           ],
@@ -12870,14 +12785,14 @@
           "article_budget": 0,
           "fallback_bodies": 0,
           "undated": 0,
-          "recent": 12,
+          "recent": 11,
           "unreadable_recent": 0,
-          "earliest_dated": 1794602599000,
+          "earliest_dated": 1794610064000,
           "coverage_basis": "full_listing",
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "houston-agent",
@@ -12968,7 +12883,7 @@
           "name": "Miami Agent Magazine",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://miamiagentmagazine.com/feed/"
           ],
@@ -13180,7 +13095,7 @@
           "name": "Realtor.com News",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.realtor.com/news/feed/"
           ],
@@ -13191,14 +13106,14 @@
           "article_budget": 0,
           "fallback_bodies": 0,
           "undated": 0,
-          "recent": 29,
+          "recent": 24,
           "unreadable_recent": 0,
-          "earliest_dated": 1794856200000,
+          "earliest_dated": 1794860724000,
           "coverage_basis": "full_listing",
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "redfin-news",
@@ -13233,7 +13148,7 @@
           "name": "Texas Real Estate Research Center (TRERC)",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://trerc.tamu.edu/texas-housing-insight/"
           ],
@@ -13252,7 +13167,7 @@
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "fed-press",
@@ -13316,7 +13231,7 @@
           "name": "PERE News",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.perenews.com/feed/"
           ],
@@ -13358,7 +13273,7 @@
           "name": "Connect CRE",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.connectcre.com/feed/"
           ],
@@ -13369,21 +13284,21 @@
           "article_budget": 0,
           "fallback_bodies": 0,
           "undated": 0,
-          "recent": 10,
+          "recent": 2,
           "unreadable_recent": 0,
-          "earliest_dated": 1794945760000,
+          "earliest_dated": 1794948270000,
           "coverage_basis": "full_listing",
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "rebusiness-online",
           "name": "REBusiness Online",
           "research": false,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://rebusinessonline.com/feed/"
           ],
@@ -13401,7 +13316,7 @@
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "nrhc",
@@ -13926,7 +13841,7 @@
           "name": "Fannie Mae ESR",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.fanniemae.com/data-and-insights/forecast"
           ],
@@ -13940,7 +13855,7 @@
           "name": "Freddie Mac PMMS",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.freddiemac.com/pmms"
           ],
@@ -13961,14 +13876,14 @@
           "versions": {
             "https://freddiemac.com/pmms": "c31943a782537223b1fcb017e44934e5d28dda90fbdc8ffddd8a2a2df63920f4"
           },
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "freddie-research",
           "name": "Freddie Mac Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.freddiemac.com/research-and-perspectives"
           ],
@@ -13990,14 +13905,14 @@
           },
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "texas-realtors",
           "name": "Texas REALTORS Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.texasrealestate.com/research/quarterly-housing-report"
           ],
@@ -14016,14 +13931,14 @@
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "metrotex-research",
           "name": "MetroTex Market Reports",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.mymetrotex.com/market-reports/"
           ],
@@ -14042,7 +13957,7 @@
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "unlock-research",
@@ -14078,7 +13993,7 @@
           "name": "Harvard JCHS",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.jchs.harvard.edu/blog"
           ],
@@ -14121,23 +14036,36 @@
           "name": "CBRE Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
-            "https://www.cbre.com/services/property-types/multifamily",
-            "https://www.cbre.com/shared-sitemap/figure.xml",
-            "https://www.cbre.com/insights"
+            "https://www.cbre.com/services/property-types/multifamily"
           ],
-          "status": "error",
-          "discovered": 0,
-          "articles": 0,
-          "error": "HTTP 403"
+          "status": "ok",
+          "discovered": 15,
+          "articles": 15,
+          "discovery_truncated": false,
+          "article_budget": 15,
+          "fetched_articles": 15,
+          "fallback_bodies": 0,
+          "undated": 2,
+          "recent": 3,
+          "unreadable_recent": 0,
+          "earliest_dated": 1744732800000,
+          "coverage_basis": "full_listing",
+          "coverage": {
+            "lower": 1793180442798,
+            "upper": 1794949200000
+          },
+          "changed_without_new_date": [],
+          "versions": {},
+          "last_success": 1794991002654
         },
         {
           "id": "jll-research",
           "name": "JLL Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.jll.com/en-us/insights"
           ],
@@ -14159,14 +14087,14 @@
           },
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "cushman-research",
           "name": "Cushman & Wakefield Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats"
           ],
@@ -14185,21 +14113,33 @@
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "colliers-research",
           "name": "Colliers Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.colliers.com/en/research"
           ],
-          "status": "error",
-          "discovered": 0,
-          "articles": 0,
-          "error": "HTTP 403"
+          "status": "ok",
+          "discovered": 1,
+          "articles": 1,
+          "discovery_truncated": false,
+          "article_budget": 1,
+          "fetched_articles": 1,
+          "fallback_bodies": 0,
+          "undated": 0,
+          "recent": 1,
+          "unreadable_recent": 0,
+          "earliest_dated": 1794941400000,
+          "coverage_basis": "full_listing",
+          "coverage": null,
+          "changed_without_new_date": [],
+          "versions": {},
+          "last_success": 1794991002654
         },
         {
           "id": "realpage-research",
@@ -14234,7 +14174,7 @@
           "name": "NMHC Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.nmhc.org/research-insight/quarterly-survey/"
           ],
@@ -14253,14 +14193,14 @@
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "naa-research",
           "name": "NAA Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://naahq.org/research"
           ],
@@ -14282,14 +14222,14 @@
           },
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "uli-pwc",
           "name": "ULI/PwC Emerging Trends",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
             "https://www.pwc.com/us/en/about-us/newsroom.html"
@@ -14335,7 +14275,7 @@
           "name": "John Burns Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://jbrec.com/resources/insights/"
           ],
@@ -14349,7 +14289,7 @@
           "name": "Northmarq Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.northmarq.com/insights"
           ],
@@ -14368,14 +14308,14 @@
           "coverage": null,
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "berkadia-research",
           "name": "Berkadia Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.berkadia.com/multifamily-reports/"
           ],
@@ -14397,14 +14337,14 @@
           },
           "changed_without_new_date": [],
           "versions": {},
-          "last_success": 1794951480753
+          "last_success": 1794991002654
         },
         {
           "id": "arbor-research",
           "name": "Arbor/Chandan Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://arbor.com/research/reports/"
           ],
@@ -14418,7 +14358,7 @@
           "name": "Newmark Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.nmrk.com/insights/market-report"
           ],
@@ -14519,7 +14459,7 @@
           "name": "MBA Research",
           "research": true,
           "required": false,
-          "checked_at": 1794951480753,
+          "checked_at": 1794991002654,
           "attempted_urls": [
             "https://www.mba.org/news-and-research/newsroom/weekly-applications-survey"
           ],
