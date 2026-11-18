@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { openIssueStore, revisionSeed } from '../lib/issue-store.mjs';
-import { restoreCheckpoint } from '../lib/artifact-recovery.mjs';
+import { restoreCheckpoint, startedModelStages } from '../lib/artifact-recovery.mjs';
 import { sandbox, sample } from './helpers.mjs';
 
 const upper=Date.parse('2026-10-27T21:00:00Z');
@@ -86,4 +86,9 @@ test('an explicit revision never silently allocates a different version when mis
   assert.equal((await restoreCheckpoint(options)).restored,true);
   f.artifacts[0].expired=true;
   assert.equal((await restoreCheckpoint(options)).revision,1);
+  assert.deepEqual(startedModelStages([{steps:[
+    {name:'Select frozen issue',status:'completed',conclusion:'success',started_at:'2026-10-28T00:01:00Z'},
+    {name:'Write and validate frozen issue',status:'completed',conclusion:'success',started_at:'2026-10-28T00:02:00Z'},
+    {name:'Review frozen issue',status:'in_progress',started_at:'2026-10-28T00:03:00Z'}
+  ]}]),['editor','writer','reviewer']);
 });

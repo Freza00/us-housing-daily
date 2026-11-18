@@ -91,12 +91,12 @@ for (const [kind, crons] of [
     return block;
   };
 
-  test(`${kind} manual backup override defaults off while both stages receive automatic fallback credentials`, async () => {
+  test(`${kind} manual backup override defaults off while all three stages receive automatic fallback credentials`, async () => {
     const workflow = await readWorkflow();
     assert.match(workflow, /  workflow_dispatch:\n    inputs:\n      use_backup:\n        description: .*manual run only\n        type: boolean\n        default: false\n/);
-    assert.equal(workflow.match(/          LLM_API_KEY:/g)?.length, 2);
-    assert.equal(workflow.match(/          LLM_ENDPOINT:/g)?.length, 2);
-    for (const name of ['Select frozen issue', 'Write and validate frozen issue']) {
+    assert.equal(workflow.match(/          LLM_API_KEY:/g)?.length, 3);
+    assert.equal(workflow.match(/          LLM_ENDPOINT:/g)?.length, 3);
+    for (const name of ['Select frozen issue', 'Write and validate frozen issue', 'Review frozen issue']) {
       const block = step(workflow, name);
       const key = block.match(/LLM_API_KEY: \$\{\{ (.+) \}\}/)?.[1];
       const endpoint = block.match(/LLM_ENDPOINT: \$\{\{ (.+) \}\}/)?.[1];

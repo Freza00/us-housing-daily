@@ -11,7 +11,7 @@ export function parseJson(text) {
   try { return JSON.parse(clean); } catch { throw new LlmError('Incomplete or invalid JSON response'); }
 }
 
-export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackApiKey, model = 'gpt-6.1-sol', cacheDir, diagnosticsDir, onEvent,
+export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackApiKey, model = 'gpt-6.2-sol', cacheDir, diagnosticsDir, onEvent,
   fetchImpl = fetch, totalMs = 240000, firstByteMs = 150000, idleMs = 90000, budgetMs = 660000,
   retryDelays = [15000, 45000], sleep = pause, ledger } = {}) {
   const usage = [];
@@ -30,14 +30,14 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
     }
     onEvent?.(safe);
   }
-  async function call(system, user, { effort = 'medium', maxTokens = 8000, label = 'llm', validate = x => x, repair } = {}) {
+  async function call(system, user, { model: activeModel = model, effort = 'high', maxTokens = 8000, label = 'llm', validate = x => x, repair } = {}) {
     if (!endpoint || !apiKey) throw new LlmError('Missing LLM endpoint or API key');
-    const body = { model, messages: [{ role: 'system', content: system }, { role: 'user', content: user }], reasoning_effort: effort,
+    const body = { model: activeModel, messages: [{ role: 'system', content: system }, { role: 'user', content: user }], reasoning_effort: effort,
       max_completion_tokens: maxTokens, response_format: { type: 'json_object' }, stream: true, stream_options: { include_usage: true } };
     const key = createHash('sha256').update(JSON.stringify(body)).digest('hex');
     const cacheFile = cacheDir && path.join(cacheDir, key + '.json');
     if (cacheFile) {
-      try { const saved = JSON.parse(await fs.readFile(cacheFile, 'utf8')); const result = await validate(saved.result, { cacheHit: true }); const event = safeEvent({ label, model, effort, cache_hit: true, response_model: saved.response_model || null, usage: saved.usage || null }); usage.push(event); await record({ event: 'cache_hit', ...event }); return result; }
+      try { const saved = JSON.parse(await fs.readFile(cacheFile, 'utf8')); const result = await validate(saved.result, { cacheHit: true }); const event = safeEvent({ label, model: activeModel, effort, cache_hit: true, response_model: saved.response_model || null, usage: saved.usage || null }); usage.push(event); await record({ event: 'cache_hit', ...event }); return result; }
       catch (e) { if (e.code !== 'ENOENT' && !(e instanceof SyntaxError) && !(e instanceof LlmError)) throw e; }
     }
     let repairs = 0, validateResponse = validate;
@@ -45,7 +45,7 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
     const previousAttempts = ledger?.attempts?.[label]?.length || 0;
     for (let attempt = previousAttempts; attempt <= delays.length; attempt++) {
       const remaining = deadline - Date.now();
-      if (remaining <= 0) { await record({ event: 'budget_exhausted', label, model, effort }); throw new LlmError('LLM run time budget exhausted'); }
+      if (remaining <= 0) { await record({ event: 'budget_exhausted', label, model: activeModel, effort }); throw new LlmError('LLM run time budget exhausted'); }
       const ctrl = new AbortController(); let idle;
       const started = Date.now(), requestId = randomUUID();
       const total = setTimeout(() => ctrl.abort(new Error(remaining <= totalMs ? 'LLM run time budget exhausted' : 'LLM total timeout')), Math.min(totalMs, remaining));
@@ -54,7 +54,7 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
       let outcome, transportActive = false, awaitingModelJson = false;
       const activeIsBackup = usingBackup;
       const requestHash = createHash('sha256').update(JSON.stringify(body)).digest('hex');
-      const request = { label, model, effort, route: activeIsBackup ? 'backup' : 'primary', attempt: attempt + 1, request_id: requestId, request_hash: requestHash, started_at: new Date(started).toISOString(), reserved_ms: Math.min(totalMs, remaining) };
+      const request = { label, model: activeModel, effort, route: activeIsBackup ? 'backup' : 'primary', attempt: attempt + 1, request_id: requestId, request_hash: requestHash, started_at: new Date(started).toISOString(), reserved_ms: Math.min(totalMs, remaining) };
       const heartbeat = () => { clearTimeout(idle); idle = setTimeout(() => ctrl.abort(new Error('LLM stream idle timeout')), idleMs); };
       const received = () => { if (!firstByteAt) { firstByteAt = Date.now(); clearTimeout(first); } heartbeat(); };
       const readText = async response => {
@@ -152,7 +152,7 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
           await record({ event: 'request_finished', ...event });
         }
       }
-      if (deadline - Date.now() <= delays[attempt]) { await record({ event: 'budget_exhausted', label, model, effort }); throw new LlmError('LLM run time budget exhausted before retry'); }
+      if (deadline - Date.now() <= delays[attempt]) { await record({ event: 'budget_exhausted', label, model: activeModel, effort }); throw new LlmError('LLM run time budget exhausted before retry'); }
       await ledger?.recordDelay(label, requestId, delays[attempt]);
       await sleep(delays[attempt]);
     }

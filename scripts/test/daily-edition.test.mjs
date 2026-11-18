@@ -4,8 +4,9 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { runPipeline } from '../lib/pipeline.mjs';
 import { validateIssue } from '../lib/issue-contract.mjs';
-import { dailyWritingSystem, prepareWritingCard, prepareWritingMetadata, writingPrompt } from '../lib/editorial.mjs';
+import { dailyWritingSystem, isMortgageRateStory, prepareReview, prepareWritingCard, prepareWritingMetadata, writingPrompt } from '../lib/editorial.mjs';
 import { assembleDailyEdition, isDailyUSStory } from '../lib/daily-edition.mjs';
+import { buildDefaultOutlook, outlookAllowedDates, outlookDateMentions, upcomingReleases } from '../lib/release-calendar.mjs';
 import { modelDecision, sandbox, sample, replayEnv } from './helpers.mjs';
 
 const now = '2026-11-11T01:00:00Z';
@@ -24,6 +25,7 @@ async function dailyHarness(t, count, write) {
   const fetchImpl = async (_url, request) => {
     const input = JSON.parse(JSON.parse(request.body).messages[1].content);
     if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id, { importance: 3 })) });
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
     return response(await write(input, ++writers, read));
   };
   const run = (options = {}) => runPipeline('daily', { root, env,
@@ -102,7 +104,7 @@ test('three failed summary attempts seal good cards without summary and unknown-
   assert.equal(payload.summary_status, 'unavailable');
   const attempts = structuredClone(manifest.attempts);
   delete manifest.phases.ready;
-  manifest.budget_unknown = ['writer'];
+  manifest.budget_unknown = ['writer', 'reviewer'];
   await fs.writeFile(path.join(result.issue_dir, 'manifest.json'), JSON.stringify(manifest));
   let requests = 0;
   await harness.run({ llmOptions: { fetchImpl() { requests++; throw Error('Unknown budget must not request'); } } });
@@ -162,6 +164,7 @@ test('cold resume with 26 good cards and no metadata requests only primary summa
   const originalCards = await harness.read('cards'), manifest = await harness.read('manifest');
   delete manifest.phases.ready;
   delete manifest.phases.metadata;
+  delete manifest.phases.reviewer;
   await fs.writeFile(path.join(result.issue_dir, 'manifest.json'), JSON.stringify(manifest));
   await harness.run();
   const { payload } = await harness.read('ready');
@@ -249,6 +252,7 @@ test('a missing market scope is corrected before editor decisions are frozen', a
       return response({ decisions: input.items.map(it => ({ id: it.id, asset: 'housing', geo: 'national', topics: [], actor: null,
         geo_evidence: null, market_scope: 'us', market_evidence_id: 'body-1' })) });
     }
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
     return response({ items: input.items.map(it => cardFor(it.id)), executive_summary: { sentences: [summary('1')] }, themes: [] });
   };
   const result = await runPipeline('daily', { root, env, llmOptions: { fetchImpl, retryDelays: [0, 0], sleep: async () => {} } });
@@ -286,6 +290,7 @@ for (const withReserves of [true, false]) test(withReserves
   const fetchImpl = async (_url, request) => {
     const input = JSON.parse(JSON.parse(request.body).messages[1].content);
     if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id, { importance: 3 })) });
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
     assert(input.items.every(it => !it.evidence_options && it.evidence.length > 20));
     writers++;
     if (writers === 1) {
@@ -324,7 +329,7 @@ for (const withReserves of [true, false]) test(withReserves
   if (!withReserves) {
     const frozenAttempts = structuredClone(manifest.attempts);
     delete manifest.phases.ready;
-    manifest.budget_unknown = ['writer'];
+    manifest.budget_unknown = ['writer', 'reviewer'];
     await fs.writeFile(path.join(result.issue_dir, 'manifest.json'), JSON.stringify(manifest));
     await runPipeline('daily', { root, env, llmOptions: { fetchImpl() { throw Error('No model request with unknown or exhausted budget'); } } });
     const restored = await read('ready');
@@ -332,4 +337,309 @@ for (const withReserves of [true, false]) test(withReserves
     assert.equal(restored.payload.content_status, 'partial');
     assert.deepEqual((await read('manifest')).attempts, frozenAttempts);
   }
+});
+
+test('daily pins latest mortgage rate report to items[0] within 20-item quota and admits post-holiday rate fallback', async t => {
+  const root = await sandbox(t);
+  const issueNow = '2026-11-18T01:00:00Z';
+  const rows = Array.from({ length: 22 }, (_, index) => sample('source-' + index, Date.parse('2026-11-17T10:00:00Z')));
+  const rateItem = {
+    ...sample('mnd-rates-1', Date.parse('2026-11-14T15:00:00Z')),
+    source_id: 'mnd-rates',
+    source_name: 'Mortgage News Daily — Rate Watch',
+    rate_benchmark: true,
+    weight: 10,
+    tags: ['housing', 'rates', 'data', 'trend'],
+    title: 'Mortgage Rates Hold at 5%',
+    description: 'The report shows 30-year fixed mortgage rates held at 5% across the United States housing market according to Mortgage News Daily.'
+  };
+  const env = { ...await replayEnv(root, { items: [...rows, rateItem] }, issueNow), LLM_ENDPOINT: 'https://offline.invalid', LLM_API_KEY: 'fixture', PIPELINE_UNTIL: 'ready' };
+  const fetchImpl = async (_url, request) => {
+    const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+    if (Array.isArray(input)) {
+      return response({ decisions: input.map((it, idx) => modelDecision(it.id, {
+        importance: idx === 0 ? 5 : 3,
+        topics: it.source_id === 'mnd-rates' ? ['rates', 'mortgage'] : ['market']
+      })) });
+    }
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
+    return response({
+      items: input.items.map(it => cardFor(it.id)),
+      executive_summary: {
+        sentences: [summary('1')],
+        outlook: {
+          text: '未来 30 天内，关注 11 月 19 日 NAR 成屋销售与 12 月 8 日至 9 日美联储 FOMC 利率决议。',
+          text_en: 'Over the next 30 days, watch NAR Existing-Home Sales on November 19 and the FOMC rate decision on December 8 to 9.'
+        }
+      },
+      themes: []
+    });
+  };
+  const result = await runPipeline('daily', { root, env, llmOptions: { fetchImpl, retryDelays: [0, 0], sleep: async () => {} } });
+  const { payload } = JSON.parse(await fs.readFile(path.join(result.issue_dir, 'ready.json')));
+  validateIssue(payload);
+  assert.equal(payload.items.length, 20);
+  assert.equal(payload.items[0].source_id, 'mnd-rates');
+  assert.equal(payload.items[0].section, 'national');
+  assert(isMortgageRateStory(payload.items[0]));
+  assert.match(payload.executive_summary.outlook.text, /未来 30 天内/);
+  const swapped = structuredClone(payload);
+  [swapped.items[0], swapped.items[1]] = [swapped.items[1], swapped.items[0]];
+  assert.throws(() => validateIssue(swapped), /Daily issue must place the latest mortgage rate story first/);
+});
+
+test('assembleDailyEdition protects primary[0] mortgage rate lead unless replaced by a validated mortgage-rate reserve', () => {
+  const primary = Array.from({ length: 20 }, (_, index) => article(String(index + 1)));
+  primary[0] = { ...article('1', 'national', 'housing', 4), source_id: 'mnd-rates', rate_benchmark: true, title: '30-Year Fixed Mortgage Rates Fall' };
+  const nonRateReserve = article('21', 'national', 'housing', 3);
+  const rateReserve = { ...article('22', 'national', 'housing', 3), source_id: 'freddie-pmms', rate_benchmark: true, title: 'Freddie Mac PMMS Mortgage Rates' };
+  const withoutLead = primary.slice(1);
+  assert.equal(assembleDailyEdition(primary, [...primary, nonRateReserve], [...withoutLead, nonRateReserve], null, { allowPartial: false }), null);
+  const partialWithoutLead = assembleDailyEdition(primary, [...primary, nonRateReserve], [...withoutLead, nonRateReserve], null, { allowPartial: true });
+  assert.equal(partialWithoutLead.items.length, 19);
+  assert.equal(partialWithoutLead.writing.shortfall, 1);
+  const replaced = assembleDailyEdition(primary, [...primary, nonRateReserve, rateReserve], [...withoutLead, rateReserve], null);
+  assert.equal(replaced.items.length, 20);
+  assert.equal(replaced.items[0].id, '22');
+  assert.deepEqual(replaced.writing.replacements, [{ deferred_id: '1', published_id: '22' }]);
+  primary[3] = article('4', 'national', 'housing', 4);
+  const withoutImportantNonLead = primary.filter(it => it.id !== '4');
+  assert.equal(assembleDailyEdition(primary, [...primary, nonRateReserve], withoutImportantNonLead, null, { allowPartial: true }), null);
+});
+
+test('30-day upcoming release outlook validates against official schedule with an independent character budget', () => {
+  const schedule = upcomingReleases('2026-11-18', 30);
+  assert(schedule.length >= 6);
+  assert(schedule.some(it => it.id.startsWith('fomc-')));
+  assert(schedule.some(it => it.id.startsWith('bls-cpi-')));
+  assert(schedule.some(it => it.id.startsWith('nar-ehs-')));
+  assert(schedule.some(it => it.id.startsWith('census-nrc-')));
+  assert.equal(schedule.find(it => it.id === 'nar-phs-2026-11')?.date, '2026-11-25');
+  assert.equal(upcomingReleases('2026-12-15', 30).find(it => it.id === 'bls-jobs-2027-01')?.date, '2027-01-08');
+
+  const items = Array.from({ length: 20 }, (_, index) => sample(String(index + 1), Date.parse('2026-11-18T10:00:00Z')));
+  const longNews = {
+    text: '报告显示住宅销售增长 5%，全国核心市场挂牌库存与新屋开工同步改善，机构买家与建商持续关注按揭利率波动及地方审批改革进展，多户住宅与独栋长租板块的融资及租赁需求保持稳健，商业地产与建筑科技投资继续围绕运营效率与资产组合再平衡展开，整体市场在年底前维持结构性分化态势并等待最新通胀及就业数据指引。',
+    text_en: 'The report shows housing sales rose 5% as core listings, builder activity, multifamily leasing and institutional capital allocation remained steady across major markets.',
+    item_ids: ['1']
+  };
+  const validOutlook = {
+    text: '未来 30 天内，重点关注 11 月 19 日 NAR 成屋销售、11 月 24 日 Case-Shiller 与 FHFA 房价指数、11 月 25 日新屋销售、12 月 4 日非农就业、12 月 8 日至 9 日美联储 FOMC 利率决议及每周四 Freddie Mac PMMS 按揭利率调查。',
+    text_en: 'Over the next 30 days, key scheduled releases include NAR Existing-Home Sales on November 19, Case-Shiller and FHFA HPI on November 24, New Residential Sales on November 25, Nonfarm Payrolls on December 4, the FOMC rate decision on December 8 to 9, and weekly Freddie Mac PMMS surveys.'
+  };
+  const validated = prepareWritingMetadata(
+    { executive_summary: { sentences: [longNews], outlook: validOutlook }, themes: [] },
+    items,
+    'daily',
+    { fixedEvidence: true, requireEnglish: true, issueDate: '2026-11-18' }
+  );
+  assert.equal(validated.executive_summary.outlook.text, validOutlook.text);
+  assert.throws(() => prepareWritingMetadata(
+    { executive_summary: { sentences: [summary('1')], outlook: { text: '未来 30 天内按揭利率预计下降 99%。', text_en: 'Over the next 30 days mortgage rates will drop 99%.' } }, themes: [] },
+    items,
+    'daily',
+    { fixedEvidence: true, requireEnglish: true, issueDate: '2026-11-18' }
+  ), /number absent/);
+  const fallbackMeta = prepareWritingMetadata(
+    { executive_summary: { sentences: [summary('1')] }, themes: [] },
+    items,
+    'daily',
+    { fixedEvidence: true, requireEnglish: true, issueDate: '2026-11-18' }
+  );
+  assert.match(fallbackMeta.executive_summary.outlook.text, /未来 30 天/);
+  const weeklyMeta = prepareWritingMetadata(
+    { executive_summary: { sentences: [summary('1')] }, themes: [{ title: '住宅趋势', title_en: 'Housing trend', item_ids: ['1'] }] },
+    items.slice(0, 5),
+    'weekly',
+    { requireEnglish: true, issueDate: '2026-11-18' }
+  );
+  assert.equal(weeklyMeta.executive_summary.outlook, undefined);
+});
+
+for (const scenario of ['rejected', 'cross_section']) test(`benchmark mortgage rate rescue handles ${scenario} editor output and survives editor-to-ready cold resume`, async t => {
+  const root = await sandbox(t);
+  const issueNow = '2026-11-18T01:00:00Z';
+  const rows = Array.from({ length: 22 }, (_, index) => sample('source-' + index, Date.parse('2026-11-17T10:00:00Z')));
+  const rateItem = {
+    ...sample('mnd-rates-1', Date.parse('2026-11-17T15:00:00Z')),
+    source_id: 'mnd-rates',
+    source_name: 'Mortgage News Daily — Rate Watch',
+    rate_benchmark: true,
+    weight: 10,
+    tags: ['housing', 'rates', 'data', 'trend'],
+    title: 'Mortgage Rates Hold at 5%',
+    description: 'The report shows 30-year fixed mortgage rates held at 5% across the United States housing market according to Mortgage News Daily.'
+  };
+  const env = { ...await replayEnv(root, { items: [...rows, rateItem] }, issueNow), LLM_ENDPOINT: 'https://offline.invalid', LLM_API_KEY: 'fixture' };
+  const fetchImpl = async (_url, request) => {
+    const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+    if (Array.isArray(input)) {
+      return response({ decisions: input.map(it => {
+        if (it.source === 'Mortgage News Daily — Rate Watch') {
+          return scenario === 'rejected'
+            ? { id: it.id, keep: false, duplicate_of: null, reason: 'model rejected' }
+            : modelDecision(it.id, { importance: 3, asset: 'multifamily' });
+        }
+        return modelDecision(it.id, { importance: 3 });
+      }) });
+    }
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
+    return response({ items: input.items.map(it => cardFor(it.id)), executive_summary: { sentences: [summary('1')] }, themes: [] });
+  };
+  const editorStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'editor' }, llmOptions: { fetchImpl, retryDelays: [0, 0], sleep: async () => {} } });
+  const savedDecisions = JSON.parse(await fs.readFile(path.join(editorStep.issue_dir, 'editor.json')));
+  const rawRate = savedDecisions.find(d => d.id === 'mnd-rates-1');
+  if (scenario === 'rejected') assert.equal(rawRate.keep, false);
+  else assert.equal(rawRate.section, 'cre');
+  const readyStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'ready' }, llmOptions: { fetchImpl, retryDelays: [0, 0], sleep: async () => {} } });
+  const { payload } = JSON.parse(await fs.readFile(path.join(readyStep.issue_dir, 'ready.json')));
+  validateIssue(payload);
+  assert.equal(payload.items[0].id, 'mnd-rates-1');
+  assert.equal(payload.items[0].section, 'national');
+  assert.deepEqual(payload.items[0].tags, ['housing', 'national', 'rates']);
+  assert.equal(payload._diagnostics.rate_pin.method, 'evidence_rebound');
+});
+
+test('non-benchmark fallback mortgage rate persists fallback_rate_id across prepared-to-ready cold resume', async t => {
+  const root = await sandbox(t);
+  const issueNow = '2026-11-18T01:00:00Z';
+  const rows = Array.from({ length: 22 }, (_, index) => sample('source-' + index, Date.parse('2026-11-17T10:00:00Z')));
+  const rateItem = {
+    ...sample('weekly-rate-1', Date.parse('2026-11-14T15:00:00Z')),
+    title: 'Mortgage rates hold near 5% this week',
+    description: 'The weekly lender survey shows 30-year fixed mortgage rates held at 5% across the United States housing market, with refinance demand little changed.'
+  };
+  const env = { ...await replayEnv(root, { items: [...rows, rateItem] }, issueNow), LLM_ENDPOINT: 'https://offline.invalid', LLM_API_KEY: 'fixture' };
+  const prepStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'prepared' } });
+  const prepared = JSON.parse(await fs.readFile(path.join(prepStep.issue_dir, 'prepared.json')));
+  assert.equal(prepared.snapshot.fallback_rate_id, 'weekly-rate-1');
+  assert.equal(prepared.snapshot.candidate_preparation.fallback_rate_id, 'weekly-rate-1');
+  const fetchImpl = async (_url, request) => {
+    const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+    if (Array.isArray(input)) {
+      return response({ decisions: input.map(it => it.title.startsWith('Mortgage rates hold near')
+        ? { id: it.id, keep: false, duplicate_of: null, reason: 'model rejected' }
+        : modelDecision(it.id, { importance: 3 })) });
+    }
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
+    return response({ items: input.items.map(it => cardFor(it.id)), executive_summary: { sentences: [summary('1')] }, themes: [] });
+  };
+  await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'ready' }, llmOptions: { fetchImpl, retryDelays: [0, 0], sleep: async () => {} } });
+  const { payload } = JSON.parse(await fs.readFile(path.join(prepStep.issue_dir, 'ready.json')));
+  validateIssue(payload);
+  assert.equal(payload.items[0].id, 'weekly-rate-1');
+  assert.equal(payload.items[0].section, 'national');
+  assert.equal(payload._diagnostics.rate_pin.method, 'evidence_rebound');
+});
+
+test('mortgage rate older than 10 days is excluded from fallback admission', async t => {
+  const root = await sandbox(t);
+  const issueNow = '2026-11-18T01:00:00Z';
+  const rows = Array.from({ length: 22 }, (_, index) => sample('source-' + index, Date.parse('2026-11-17T10:00:00Z')));
+  const staleRate = {
+    ...sample('stale-rate-1', Date.parse('2026-11-05T15:00:00Z')),
+    title: 'Mortgage rates hold near 5% this week',
+    description: 'The weekly lender survey shows 30-year fixed mortgage rates held at 5% across the United States housing market, with refinance demand little changed.'
+  };
+  const env = { ...await replayEnv(root, { items: [...rows, staleRate] }, issueNow), LLM_ENDPOINT: 'https://offline.invalid', LLM_API_KEY: 'fixture', PIPELINE_UNTIL: 'prepared' };
+  const prepStep = await runPipeline('daily', { root, env });
+  const prepared = JSON.parse(await fs.readFile(path.join(prepStep.issue_dir, 'prepared.json')));
+  assert.equal(prepared.snapshot.fallback_rate_id, undefined);
+  assert(!prepared.snapshot.items.some(it => it.id === 'stale-rate-1'));
+});
+
+test('outlook fallback preserves valid sentences without consuming a metadata repair attempt', async t => {
+  const harness = await dailyHarness(t, 20, input => ({
+    items: input.items.map(it => cardFor(it.id)),
+    executive_summary: {
+      sentences: [summary('1')],
+      outlook: { text: '未来 30 天内关注 99 项发布。', text_en: 'Watch 99 releases over the next 30 days.' }
+    },
+    themes: []
+  }));
+  await harness.run();
+  const { payload } = await harness.read('ready');
+  validateIssue(payload);
+  assert.equal(harness.writers, 1);
+  assert.equal(payload.executive_summary.sentences[0].text, '研究显示住宅销售增长 5%。');
+  assert.match(payload.executive_summary.outlook.text, /^未来 30 天重要发布与报告前瞻/);
+  assert.match(payload._diagnostics.writer_validation.outlook_fallback, /number absent/);
+  assert.match((await harness.read('metadata')).outlook_fallback, /number absent/);
+});
+
+test('strictOutlookDates enforces release calendar dates at generation time while keeping archive validation unchanged', () => {
+  const items = Array.from({ length: 20 }, (_, i) => sample(String(i + 1), Date.parse('2026-11-18T10:00:00Z')));
+  const ctx = { fixedEvidence: true, requireEnglish: true, issueDate: '2026-11-18' };
+  const makeOutlook = d => ({
+    text: `未来 30 天内，重点关注 11 月 19 日 NAR 成屋销售与 12 月 ${d} 日非农就业。`,
+    text_en: `Over the next 30 days, watch NAR Existing-Home Sales on November 19 and Nonfarm Payrolls on December ${d}.`
+  });
+  assert.doesNotThrow(() => prepareWritingMetadata({ executive_summary: { sentences: [summary('1')], outlook: makeOutlook(4) }, themes: [] }, items, 'daily', { ...ctx, strictOutlookDates: true }));
+  assert.throws(() => prepareWritingMetadata({ executive_summary: { sentences: [summary('1')], outlook: makeOutlook(5) }, themes: [] }, items, 'daily', { ...ctx, strictOutlookDates: true }), /Outlook date is not on the release calendar/);
+  assert.doesNotThrow(() => prepareWritingMetadata({ executive_summary: { sentences: [summary('1')], outlook: makeOutlook(5) }, themes: [] }, items, 'daily', ctx));
+  for (let ms = Date.UTC(2026, 0, 1); ms <= Date.UTC(2027, 11, 31); ms += 86400000) {
+    const ref = new Date(ms).toISOString().slice(0, 10);
+    const def = buildDefaultOutlook(ref);
+    const allowed = outlookAllowedDates(ref);
+    for (const [m, d] of [...outlookDateMentions(def.text), ...outlookDateMentions(def.text_en)]) {
+      assert(allowed.has(`${m}-${d}`), `Default outlook date ${m}-${d} missing for ref ${ref}`);
+    }
+  }
+  assert.deepEqual(outlookDateMentions('12 月 8 日至 9 日 FOMC；Dec. 9 and May 2026'), [[12, 8], [12, 9]]);
+});
+
+test('prepareReview preserves writer outlook when omitted or when reviewer outlook fails validation', () => {
+  const items = Array.from({ length: 20 }, (_, i) => sample(String(i + 1), Date.parse('2026-11-18T10:00:00Z')));
+  const ctx = { fixedEvidence: true, requireEnglish: true, issueDate: '2026-11-18', strictOutlookDates: true };
+  const cards = items.map(it => prepareWritingCard(cardFor(it.id), it, ctx));
+  const draft = {
+    items: cards,
+    ...prepareWritingMetadata({
+      executive_summary: {
+        sentences: [summary('1')],
+        outlook: {
+          text: '未来 30 天内，重点关注 11 月 19 日 NAR 成屋销售。',
+          text_en: 'Over the next 30 days, watch NAR Existing-Home Sales on November 19.'
+        }
+      },
+      themes: []
+    }, items, 'daily', ctx)
+  };
+  const omitted = prepareReview({ status: 'revise', issues: [], executive_summary: { sentences: [summary('2')] } }, items, draft, 'daily', ctx);
+  assert.equal(omitted.executive_summary.outlook.text, draft.executive_summary.outlook.text);
+  const invalidReviewerOutlook = prepareReview({
+    status: 'revise',
+    issues: [],
+    executive_summary: {
+      sentences: [summary('2')],
+      outlook: { text: '未来 30 天内关注 12 月 5 日非农就业。', text_en: 'Watch Nonfarm Payrolls on December 5.' }
+    }
+  }, items, draft, 'daily', ctx);
+  assert.equal(invalidReviewerOutlook.executive_summary.outlook.text, draft.executive_summary.outlook.text);
+});
+
+test('exhausted writer partial seal skips reviewer on cold resume from writer to ready', async t => {
+  const root = await sandbox(t);
+  const rows = Array.from({ length: 20 }, (_, index) => sample('source-' + index, Date.parse('2026-11-10T10:00:00Z')));
+  const env = { ...await replayEnv(root, { items: rows }, now), LLM_ENDPOINT: 'https://offline.invalid', LLM_API_KEY: 'fixture' };
+  let writers = 0, reviewers = 0;
+  const failed = ['4', '5', '6'];
+  const fetchImpl = async (_url, request) => {
+    const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+    if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id, { importance: 3 })) });
+    if (input.review_target) { reviewers++; return response({ status: 'pass', issues: [], items: [] }); }
+    writers++;
+    if (writers === 1) {
+      return response({ items: input.items.map(it => cardFor(it.id, failed.includes(it.id) ? 99 : 5)), executive_summary: { sentences: [summary('4'), summary('1')] }, themes: [] });
+    }
+    return response({ items: input.items.map(it => cardFor(it.id, 99)) });
+  };
+  await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'writer' }, llmOptions: { fetchImpl, retryDelays: [0, 0], sleep: async () => {} } });
+  const readyStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'ready' }, llmOptions: { fetchImpl, retryDelays: [0, 0], sleep: async () => {} } });
+  const { payload } = JSON.parse(await fs.readFile(path.join(readyStep.issue_dir, 'ready.json')));
+  validateIssue(payload);
+  assert.equal(reviewers, 0);
+  assert.equal(payload.content_status, 'partial');
+  assert.equal(payload._diagnostics.review, undefined);
+  assert.equal(payload.items.length, 17);
 });

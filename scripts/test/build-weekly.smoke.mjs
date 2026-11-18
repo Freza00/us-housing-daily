@@ -12,7 +12,7 @@ test('weekly replay uses full raw candidates, two explicit model stages and expo
  assert.equal(result.period_start,'2026-10-19');assert.equal(result.period_end,'2026-10-25');
  assert.equal(result.publication_status,'degraded');assert.equal(result.items.length,3);
  assert(result.items.some(it=>it.id==='sun-late'));assert(!result.items.some(it=>it.id==='after'));
- assert.deepEqual(client.usage.map(x=>x.effort),['medium','low']);
+ assert.deepEqual(client.usage.map(x=>x.effort),['high','high','xhigh']);
  assert.ok(result.executive_summary.text);assert.ok(result._diagnostics.coverage_gaps.length);
  assert.equal(JSON.parse(await fs.readFile(path.join(root,'data/weekly/latest.json'),'utf8')).publication_status,'degraded');
 });

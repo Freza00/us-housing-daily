@@ -132,7 +132,8 @@ for (const remainingError of [false, true]) test('frozen daily entry repairs the
         if (remainingError && correctedIds.length === 1 && index === 0) decision.market_evidence_id = 'still-invalid';
         return Object.fromEntries(Object.entries(decision).filter(([key]) => repairFields.has(key)));
       }) };
-    } else result = { items: input.items.map(item => ({ id: item.id, title_zh: '地产市场与项目进展', summary_zh: '报道提供地产市场与项目进展信息。', impact: 'neutral' })),
+    } else if (input.review_target) result = { status: 'pass', issues: [], items: [] };
+    else result = { items: input.items.map(item => ({ id: item.id, title_zh: '地产市场与项目进展', summary_zh: '报道提供地产市场与项目进展信息。', impact: 'neutral' })),
       executive_summary: { sentences: [{ text: '地产市场与项目进展仍需关注。', text_en: 'Property market and project developments warrant attention.', item_ids: input.items.map(item => item.id) }] }, themes: [] };
     return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(result) }, finish_reason: 'stop' }] }), { headers: { 'content-type': 'application/json' } });
   };
@@ -147,7 +148,7 @@ for (const remainingError of [false, true]) test('frozen daily entry repairs the
   const editorBytes = await fs.readFile(path.join(prepared.issue_dir, 'editor.json'), 'utf8');
   await runPipeline('daily', { root, env: { ...config, PIPELINE_UNTIL: 'ready' }, llmOptions });
   assert.equal(await fs.readFile(path.join(prepared.issue_dir, 'editor.json'), 'utf8'), editorBytes);
-  assert.equal(requests.length, remainingError ? 4 : 3);
+  assert.equal(requests.length, remainingError ? 5 : 4);
   const bundle = JSON.parse(await fs.readFile(path.join(prepared.issue_dir, 'ready.json'))), issue = bundle.payload;
   validateIssue(issue);
   assert.equal(issue.items.length, 19); assert.equal(issue.selection_count, 19); assert.equal(issue.selection_target, 20); assert.equal(issue.selection_shortfall, 1);

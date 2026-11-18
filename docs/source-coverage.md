@@ -1,11 +1,12 @@
 # 主流研究覆盖与访问限制
 
-核对日期：2026-10-28。共配置 77 个采集入口，其中 46 个为研究类入口；同一机构可以有多个入口。HAR、Zillow、Realtor.com、NAR 为必需监测源。来源集团归属、URL 和限额以 [sources.json](../config/sources.json) 为准。
+核对日期：2026-11-18。共配置 78 个采集入口，其中 47 个为研究类入口；同一机构可以有多个入口。HAR、Zillow、Realtor.com、NAR 为必需监测源。来源集团归属、URL 和限额以 [sources.json](../config/sources.json) 为准。
 
-本机机器采集测试累计取得 31 个研究入口的可读材料，另 15 个遇到 403、超时或目录空结果。逐项记录见 [采集证据](validation/research-source-health.json)。这是一次完整探针加修复后的定向复验所得的各源最近观察，不能理解为同一时刻的全源成功率，也不是 GitHub runner 的访问结果。“可读”只代表取得至少一份材料，不证明材料新鲜、发布日期完整或历史覆盖完整。
+本机机器采集测试累计取得 32 个研究入口的可读材料，另 15 个遇到 403、超时或目录空结果。逐项记录见 [采集证据](validation/research-source-health.json)。这是一次完整探针加修复后的定向复验所得的各源最近观察，不能理解为同一时刻的全源成功率，也不是 GitHub runner 的访问结果。“可读”只代表取得至少一份材料，不证明材料新鲜、发布日期完整或历史覆盖完整。
 
 | 研究入口 | 采集形式 | 本轮机器观察 | 限制与口径 |
 | --- | --- | --- | --- |
+| [Mortgage News Daily — Rate Watch](https://www.mortgagenewsdaily.com/rss/rates) | rss | 可读 15 条 | 每日更新美国 30Y／15Y／FHA／Jumbo 按揭利率追踪，带完整发布时间戳与正文（2026-11-18 实测 HTTP 200，正文 3,476 字符）。 |
 | [NAHB Eye on Housing](https://eyeonhousing.org/feed/) | undefined | 可读 18 条 | 每次运行继续核对日期、正文和窗口。 |
 | [Calculated Risk (Bill McBride)](https://feeds.feedburner.com/CalculatedRisk) | undefined | 可读 25 条 | 本轮未检出最近 7 天新稿；该旧 feed 最近内容停留在 2026 年 1 月；可读不代表仍在更新。 |
 | [Lance Lambert / ResiClub](https://lancelambert.substack.com/feed) | undefined | 可读 59 条 | 订阅内容只使用公开正文或预览。 |

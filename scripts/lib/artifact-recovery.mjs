@@ -6,13 +6,14 @@ import { digest } from './issue-contract.mjs';
 import { readJson, writeJson } from './issue-store.mjs';
 
 const exec = promisify(execFile);
-const phases = new Set(['prepared', 'editor', 'cards', 'metadata', 'ready']);
+const phases = new Set(['prepared', 'editor', 'cards', 'metadata', 'reviewer', 'ready']);
+const completedByPhase = { prepared: new Set(), editor: new Set(['editor']), writer: new Set(['editor', 'writer']), reviewer: new Set(['editor', 'writer', 'reviewer']) };
 export function trustedArtifactRun(run, { repo, kind, branch = 'main' }) {
   return run?.repository?.full_name === repo && run?.head_repository?.full_name === repo && run.head_branch === branch && ['schedule', 'repository_dispatch', 'workflow_dispatch'].includes(run.event) && run.path === `.github/workflows/${kind}.yml`;
 }
 
 export async function installCheckpoint(files, { stateDir, kind, period, upper, rules, model }) {
-  if (Object.keys(files).some(name => !/^(?:manifest|prepared|editor|cards|metadata|ready)\.json$/.test(name))) throw new Error('Unexpected checkpoint path');
+  if (Object.keys(files).some(name => !/^(?:manifest|prepared|editor|cards|metadata|reviewer|ready)\.json$/.test(name))) throw new Error('Unexpected checkpoint path');
   const manifest = files['manifest.json'];
   const id = manifest?.identity;
   if (manifest?.schema_version !== 1 || id?.kind !== kind || id?.period_key !== period || id?.cutoff_upper !== upper || !Number.isSafeInteger(id?.revision) || id.revision < 1 || manifest.rules !== rules || manifest.model !== model) throw new Error('Checkpoint identity or rule version mismatch');
@@ -34,9 +35,9 @@ export async function installCheckpoint(files, { stateDir, kind, period, upper, 
 }
 
 export function startedModelStages(jobs) {
-  const labels = new Set();
+  const labels = new Set(), stageByStep = { 'Select frozen issue': 'editor', 'Write and validate frozen issue': 'writer', 'Review frozen issue': 'reviewer' };
   for (const job of jobs) for (const step of job.steps || []) {
-    if ((step.status === 'in_progress' || (step.status === 'completed' && step.started_at && step.conclusion !== 'skipped')) && ['Select frozen issue','Write and validate frozen issue'].includes(step.name)) labels.add(step.name === 'Select frozen issue' ? 'editor' : 'writer');
+    if ((step.status === 'in_progress' || (step.status === 'completed' && step.started_at && step.conclusion !== 'skipped')) && stageByStep[step.name]) labels.add(stageByStep[step.name]);
   }
   return [...labels];
 }
@@ -64,13 +65,13 @@ export async function restoreCheckpoint({ root, stateDir = path.join(root, 'stat
         const after = (job.steps || []).filter(step => !artifact || !Number.isFinite(boundary) || Date.parse(step.started_at || '') > boundary);
         for (const label of startedModelStages([{steps:after}])) unknown.add(label);
       }
-      if (unknown.size===2) break;
+      if (unknown.size===3) break;
     }
     return [...unknown];
   };
   const trusted = [];
   for (const row of pages.flatMap(page => page.artifacts || []).filter(row => row.name.startsWith(prefix))) {
-    const match = row.name.slice(prefix.length).match(/^([1-9]\d*)-(\d+)-(\d+)-(prepared|editor|writer)$/);
+    const match = row.name.slice(prefix.length).match(/^([1-9]\d*)-(\d+)-(\d+)-(prepared|editor|writer|reviewer)$/);
     if (!match || !Number.isSafeInteger(Number(match[1])) || String(row.workflow_run?.id) !== match[2]) continue;
     const run = await getRun(row.workflow_run.id);
     if (trustedArtifactRun(run, { repo, kind })) trusted.push({ ...row, revision: Number(match[1]), attempt: Number(match[3]), phase: match[4] });
@@ -91,13 +92,13 @@ export async function restoreCheckpoint({ root, stateDir = path.join(root, 'stat
       const zip = path.join(temp, 'checkpoint.zip');
       await fs.writeFile(zip, await gh(['api', `repos/${repo}/actions/artifacts/${artifact.id}/zip`]));
       const names = String(await unzip(['-Z1', zip])).trim().split('\n').filter(Boolean);
-      if (new Set(names).size !== names.length || names.some(name => !/^(?:manifest|prepared|editor|cards|metadata|ready)\.json$/.test(name))) throw new Error('Unsafe checkpoint archive');
+      if (new Set(names).size !== names.length || names.some(name => !/^(?:manifest|prepared|editor|cards|metadata|reviewer|ready)\.json$/.test(name))) throw new Error('Unsafe checkpoint archive');
       const files = {};
       for (const name of names) files[name] = JSON.parse(await unzip(['-p', zip, name]));
       const identity = files['manifest.json']?.identity;
       if (identity?.kind !== kind || identity?.period_key !== period || identity?.cutoff_upper !== upper || identity.revision !== target) throw new Error('Checkpoint identity mismatch');
       const started = await jobs(artifact.workflow_run.id,artifact.attempt);
-      const budgetUnknown = [...new Set([...startedModelStages(started).filter(label => label === 'writer' ? artifact.phase !== 'writer' : artifact.phase === 'prepared'),...await unknownAfter(artifact)])];
+      const budgetUnknown = [...new Set([...startedModelStages(started).filter(label => !completedByPhase[artifact.phase]?.has(label)),...await unknownAfter(artifact)])];
       if (files['manifest.json']?.rules !== rules || files['manifest.json']?.model !== model) {
         if (revision !== undefined) throw new Error('Requested revision has incompatible rules or model');
         return { restored: false, revision: highest + 1, reason: 'Highest revision has incompatible rules; explicit new revision selected', budget_unknown: budgetUnknown };

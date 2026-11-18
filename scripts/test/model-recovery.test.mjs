@@ -4,7 +4,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createLlmClient, LlmError } from '../lib/llm-client.mjs';
 import { createModelBatch } from '../lib/model-references.mjs';
-import { createWritingRepair, validateDecisions, validateWriting, writingPrompt, writingSystem, selectItems, numericValues, normalizeChinese } from '../lib/editorial.mjs';
+import { buildReviewDraft, createReviewRepair, createWritingRepair, validateDecisions, validateWriting, writingEvidenceOptions, writingPrompt, writingSystem, reviewPrompt, selectItems, numericValues, normalizeChinese, prepareReview } from '../lib/editorial.mjs';
+import { validateIssue } from '../lib/issue-contract.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
 import { modelDecision, modelEvidence, sandbox, sample, replayEnv } from './helpers.mjs';
 
@@ -58,18 +59,20 @@ test('short references preserve global duplicate checks and summary/theme identi
   assert.throws(() => batch.writing(data), /Unknown model reference/);
 });
 
-test('normal pipeline uses exactly two calls and never publishes batch references', async t => {
+test('normal pipeline uses three stages (editor high, writer high, reviewer xhigh) and never publishes batch references', async t => {
   const root = await sandbox(t), requests = [];
   const client = createLlmClient({ endpoint: 'https://example.com', apiKey: 'test', retryDelays: [], fetchImpl: async (url, options) => {
     const body = JSON.parse(options.body); requests.push(body);
     const input = JSON.parse(body.messages[1].content);
     if (Array.isArray(input)) return response({ decisions: input.map(x => modelDecision(x.id)) });
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
     return response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
   } });
   const env = await replayEnv(root, { items }, '2026-10-29T01:00:00Z');
   const result = await runPipeline('daily', { root, env, client });
-  assert.equal(requests.length, 2);
-  assert.deepEqual(requests.map(x => x.reasoning_effort), ['medium', 'low']);
+  assert.equal(requests.length, 3);
+  assert.deepEqual(requests.map(x => x.model), ['gpt-6.2-sol', 'gpt-6.2-sol', 'gpt-6.2-sol']);
+  assert.deepEqual(requests.map(x => x.reasoning_effort), ['high', 'high', 'xhigh']);
   assert.deepEqual(new Set(result.items.map(x => x.id)), new Set(items.map(x => x.id)));
   assert.ok(result.executive_summary.sentences[0].item_ids.every(id => items.some(x => x.id === id)));
 });
@@ -166,15 +169,17 @@ for (const [status, detail, backupEndpoint] of [
       requests.push({ url, authorization: options.headers.Authorization });
       if (requests.length === 1) return new Response(detail, { status });
       const input = JSON.parse(JSON.parse(options.body).messages[1].content);
+      if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
       return Array.isArray(input) ? response({ decisions: input.map(x => modelDecision(x.id)) }) : response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
     } } });
     assert.deepEqual(requests, [
       { url: env.LLM_ENDPOINT, authorization: 'Bearer fixture-primary' },
-      ...Array.from({ length: 2 }, () => ({ url: backupEndpoint || 'https://api.openai.com/v1/chat/completions', authorization: 'Bearer fixture-backup' }))
+      ...Array.from({ length: 3 }, () => ({ url: backupEndpoint || 'https://api.openai.com/v1/chat/completions', authorization: 'Bearer fixture-backup' }))
     ]);
     const manifest = JSON.parse(await fs.readFile(path.join(root, 'state/issues/daily/2026-10-29/r1/manifest.json'), 'utf8'));
     assert.deepEqual(manifest.attempts.editor.map(x => [x.attempt, x.route]), [[1, 'primary'], [2, 'backup']]);
     assert.deepEqual(manifest.attempts.writer.map(x => [x.attempt, x.route]), [[1, 'backup']]);
+    assert.deepEqual(manifest.attempts.reviewer.map(x => [x.attempt, x.route]), [[1, 'backup']]);
     assert.ok(Object.values(manifest.attempts).flat().every(x => x.reserved_ms > 0 && x.reserved_ms <= 240000));
     assert.equal(result.items.length, items.length);
   });
@@ -311,11 +316,11 @@ test('recovered pipeline public diagnostics redact nested causes and upstream id
     calls++;
     if (calls === 1) throw new TypeError('terminated', { cause: new Error('server echoed ' + key) });
     const input = JSON.parse(JSON.parse(options.body).messages[1].content);
-    const res = Array.isArray(input) ? response({ decisions: input.map(x => modelDecision(x.id)) }) : response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
+    const res = Array.isArray(input) ? response({ decisions: input.map(x => modelDecision(x.id)) }) : input.review_target ? response({ status: 'pass', issues: [], items: [] }) : response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
     res.headers.set('x-request-id', 'upstream-' + key); return res;
   } });
   const result = await runPipeline('daily', { root, client, env: await replayEnv(root, { items }, '2026-10-29T01:00:00Z') });
-  assert.equal(calls, 3); assert.ok(!JSON.stringify(result).includes(key));
+  assert.equal(calls, 4); assert.ok(!JSON.stringify(result).includes(key));
   const published = await fs.readFile(path.join(root, 'data/latest.json'), 'utf8');
   assert.ok(!published.includes(key)); assert.match(published, /REDACTED/);
 });
@@ -330,6 +335,7 @@ test('full editorial correction reports short references rather than internal st
       if (editorCalls === 1) decisions[0].importance = 2.5;
       return response({ decisions });
     }
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
     return response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
   } });
   await runPipeline('daily', { root, client, env: await replayEnv(root, { items }, '2026-10-29T01:00:00Z') });
@@ -461,9 +467,194 @@ test('writer transport recovery does not call the completed editor again', async
   const client = createLlmClient({ endpoint: 'https://example.com', apiKey: 'test', sleep: async () => {}, fetchImpl: async (url, options) => {
     const input = JSON.parse(JSON.parse(options.body).messages[1].content);
     if (Array.isArray(input)) { editors++; return response({ decisions: input.map(x => modelDecision(x.id)) }); }
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
     writers++; if (writers === 1) throw new TypeError('terminated');
     return response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
   } });
   const result = await runPipeline('daily', { root, client, env: await replayEnv(root, { items }, '2026-10-29T01:00:00Z') });
   assert.equal(editors, 1); assert.equal(writers, 2); assert.equal(result.items.length, 3);
+});
+
+test('reviewer xhigh stage revises cards and summary, enforces deterministic number checks via local repair, and switches primary to backup', async t => {
+  const root = await sandbox(t), requests = [];
+  const env = {
+    ...await replayEnv(root, { items }, '2026-10-29T01:00:00Z'),
+    LLM_ENDPOINT: 'https://primary.example.com/v1/chat/completions',
+    LLM_API_KEY: 'primary-secret-key',
+    LLM_BACKUP_ENDPOINT: 'https://backup.example.com/v1/chat/completions',
+    LLM_BACKUP_API_KEY: 'backup-secret-key'
+  };
+  let reviewCalls = 0;
+  const result = await runPipeline('daily', {
+    root,
+    env,
+    llmOptions: {
+      retryDelays: [0, 0],
+      sleep: async () => {},
+      fetchImpl: async (url, options) => {
+        const body = JSON.parse(options.body);
+        const input = JSON.parse(body.messages[1].content);
+        requests.push({ url, auth: options.headers.Authorization, model: body.model, effort: body.reasoning_effort });
+        if (Array.isArray(input)) {
+          return response({ decisions: input.map(x => modelDecision(x.id)) });
+        }
+        if (!input.review_target) {
+          return response(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
+        }
+        reviewCalls++;
+        if (reviewCalls === 1) {
+          // Primary fails on reviewer -> switches to backup on attempt 2
+          return new Response('model_not_found on primary', { status: 503 });
+        }
+        if (reviewCalls === 2) {
+          // Backup returns a revision with an ungrounded number 99% -> triggers deterministic repair on backup
+          return response({
+            status: 'revise',
+            issues: [{ id: '2', field: 'summary_zh', reason: 'Impact and wording refined' }],
+            items: [{ id: '2', title_zh: '住宅研究修订', summary_zh: '销售增长 99%。', impact: 'short-pos' }]
+          });
+        }
+        // Attempt 3 on backup repairs the ungrounded number to 5%
+        assert.ok(input.previous_review);
+        assert.deepEqual(input.items.map(it => it.id), ['2']);
+        assert.match(input.error, /number absent/);
+        return response({
+          status: 'revise',
+          issues: [{ id: '2', field: 'summary_zh', reason: 'Impact and wording refined' }],
+          items: [{ id: '2', title_zh: '住宅研究修订', summary_zh: '销售增长 5%，短期需求回暖。', impact: 'short-pos' }]
+        });
+      }
+    }
+  });
+  assert.equal(requests.length, 5);
+  assert.deepEqual(requests.map(r => [r.url, r.model, r.effort]), [
+    ['https://primary.example.com/v1/chat/completions', 'gpt-6.2-sol', 'high'],
+    ['https://primary.example.com/v1/chat/completions', 'gpt-6.2-sol', 'high'],
+    ['https://primary.example.com/v1/chat/completions', 'gpt-6.2-sol', 'xhigh'],
+    ['https://backup.example.com/v1/chat/completions', 'gpt-6.2-sol', 'xhigh'],
+    ['https://backup.example.com/v1/chat/completions', 'gpt-6.2-sol', 'xhigh']
+  ]);
+  const revisedItem = result.items[1];
+  assert.equal(revisedItem.title_zh, '住宅研究修订');
+  assert.equal(revisedItem.summary_zh, '销售增长 5%，短期需求回暖。');
+  assert.equal(revisedItem.impact, 'short-pos');
+  assert.equal(result._diagnostics.review.status, 'revise');
+  assert.deepEqual(result._diagnostics.review.revised_ids, [revisedItem.id]);
+  const manifest = JSON.parse(await fs.readFile(path.join(root, 'state/issues/daily/2026-10-29/r1/manifest.json'), 'utf8'));
+  assert.deepEqual(manifest.attempts.reviewer.map(x => [x.attempt, x.route]), [[1, 'primary'], [2, 'backup'], [3, 'backup']]);
+  assert.ok(manifest.phases.reviewer?.sha256);
+});
+
+test('staged PIPELINE_UNTIL=writer freezes before reviewer and resumes only reviewer xhigh on PIPELINE_UNTIL=ready', async t => {
+  const root = await sandbox(t), stages = [];
+  const env = await replayEnv(root, { items }, '2026-10-29T01:00:00Z');
+  const client = {
+    usage: [],
+    async call(_system, user, options) {
+      stages.push({ label: options.label, model: options.model, effort: options.effort });
+      if (options.label === 'editor') return options.validate({ decisions: JSON.parse(user).map(x => modelDecision(x.id)) });
+      if (options.label === 'writer') {
+        const input = JSON.parse(user);
+        return options.validate(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
+      }
+      if (options.label === 'reviewer') return options.validate({ status: 'pass', issues: [], items: [] });
+      throw new Error('Unexpected stage: ' + options.label);
+    }
+  };
+  const writerStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'writer' }, client });
+  assert.equal(writerStep.stage, 'writer');
+  assert.deepEqual(stages, [
+    { label: 'editor', model: 'gpt-6.2-sol', effort: 'high' },
+    { label: 'writer', model: 'gpt-6.2-sol', effort: 'high' }
+  ]);
+  const readyStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'ready' }, client });
+  assert.equal(readyStep.stage, 'ready');
+  assert.deepEqual(stages, [
+    { label: 'editor', model: 'gpt-6.2-sol', effort: 'high' },
+    { label: 'writer', model: 'gpt-6.2-sol', effort: 'high' },
+    { label: 'reviewer', model: 'gpt-6.2-sol', effort: 'xhigh' }
+  ]);
+  const draft = {
+    items: items.map(it => ({ ...it, title_zh: '住宅研究', summary_zh: '销售增长 5%。', impact: 'neutral', evidence_quote: it.description })),
+    executive_summary: { sentences: [{ text: '销售增长 5%。', text_en: 'Sales rose 5%.', item_ids: [items[0].id] }] },
+    themes: []
+  };
+  assert.throws(() => prepareReview({ status: 'unknown' }, items, draft, 'daily', { fixedEvidence: true, requireEnglish: true }), /Invalid review status/);
+  assert.throws(() => prepareReview({ status: 'revise', issues: [], items: [] }, items, draft, 'daily', { fixedEvidence: true, requireEnglish: true }), /requires at least one item or metadata revision/);
+  assert.throws(() => prepareReview({ status: 'revise', items: [{ id: 'unknown', title_zh: 'x', summary_zh: '销售增长 5%。', impact: 'neutral' }] }, items, draft, 'daily', { fixedEvidence: true, requireEnglish: true }), /Invalid review item reference/);
+});
+
+test('createReviewRepair sends only touched items and blocks revising undisplayed items', () => {
+  const pool = Array.from({ length: 20 }, (_, i) => sample(String(i + 1), date));
+  const draft = {
+    items: pool.map(it => ({ ...it, title_zh: '住宅研究', summary_zh: '销售增长 5%。', impact: 'neutral', evidence_quote: it.description })),
+    executive_summary: { sentences: [{ text: '销售增长 5%。', text_en: 'Sales rose 5%.', item_ids: ['1'] }] },
+    themes: []
+  };
+  const failed = {
+    status: 'revise',
+    issues: [],
+    items: [{ id: '3', title_zh: '住宅研究', summary_zh: '销售增长 99%。', impact: 'neutral' }],
+    executive_summary: { sentences: [{ text: '销售增长 99%。', text_en: 'Sales rose 99%.', item_ids: ['2', '1'] }] }
+  };
+  const repair = createReviewRepair(failed, pool, draft, 'daily', x => x, { fixedEvidence: true, requireEnglish: true, issueDate: '2026-11-18' }, new LlmError('Output contains a number absent from its evidence: 99'));
+  const user = JSON.parse(repair.user);
+  assert.deepEqual(user.items.map(it => it.id), ['1', '2', '3']);
+  assert.match(user.error, /number absent/);
+  assert.deepEqual(user.previous_review, failed);
+  assert.equal(user.all_item_ids.length, 20);
+  assert.ok(user.upcoming_release_calendar);
+  assert.throws(() => repair.validate({ status: 'revise', items: [{ id: '9', title_zh: 'x', summary_zh: '销售增长 5%。', impact: 'neutral' }] }), /Invalid review item reference/);
+  const emptyRepair = createReviewRepair({ status: 'pass', items: [] }, pool, draft, 'daily', x => x, { fixedEvidence: true, requireEnglish: true, issueDate: '2026-11-18' });
+  assert.equal(JSON.parse(emptyRepair.user).items.length, 0);
+});
+
+test('weekly buildReviewDraft maps evidence_id to short batch IDs that prepareReview accepts', () => {
+  const long = items.map(it => ({ ...it, description: 'Housing sales rose 5% in September 2026. Inventory improved across major metros. Affordability remains a constraint for buyers.' }));
+  const written = {
+    items: long.map(it => ({ ...it, title_zh: '住宅研究', summary_zh: '销售增长 5%。', impact: 'neutral', evidence_quote: writingEvidenceOptions(it).find(opt => opt.id.endsWith(':body-1')).text })),
+    executive_summary: { sentences: [{ text: '销售增长 5%。', text_en: 'Sales rose 5%.', item_ids: [long[0].id] }] },
+    themes: [{ title: '库存改善', title_en: 'Inventory improves', item_ids: [long[1].id] }]
+  };
+  const batch = createModelBatch(long);
+  const draft = buildReviewDraft(written, long, { fixedEvidence: false });
+  const parsed = JSON.parse(reviewPrompt('weekly', batch.items, draft));
+  parsed.items.forEach((it, i) => {
+    assert.equal(it.draft.evidence_id, `${i + 1}:body-1`);
+    assert(it.evidence_options.includes(it.draft.evidence_id));
+  });
+  assert.deepEqual(draft.executive_summary.sentences[0].item_ids, ['1']);
+  assert.deepEqual(draft.themes[0].item_ids, ['2']);
+  const reviewed = prepareReview({
+    status: 'revise',
+    issues: [],
+    items: [{ id: '2', title_zh: '住宅研究修订', summary_zh: '销售增长 5%。', impact: 'short-pos', evidence_id: draft.items[1].evidence_id }]
+  }, batch.items, draft, 'weekly', { requireEvidenceIds: true, requireEnglish: true });
+  assert.deepEqual(reviewed.revised_ids, ['2']);
+});
+
+test('reviewer fallback checkpoints on PIPELINE_UNTIL=reviewer and cold-resumes PIPELINE_UNTIL=ready with zero requests', async t => {
+  const root = await sandbox(t);
+  const env = await replayEnv(root, { items }, '2026-10-29T01:00:00Z');
+  const client = {
+    usage: [],
+    async call(_system, user, options) {
+      if (options.label === 'editor') return options.validate({ decisions: JSON.parse(user).map(x => modelDecision(x.id)) });
+      if (options.label === 'writer') {
+        const input = JSON.parse(user);
+        return options.validate(writing(input.items.map(x => ({ ...x, description: x.evidence }))));
+      }
+      if (options.label === 'reviewer') throw new LlmError('Review validation failed after repairs');
+      throw new Error('Unexpected stage: ' + options.label);
+    }
+  };
+  const revStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'reviewer' }, client });
+  assert.equal(revStep.stage, 'reviewer');
+  const savedRev = JSON.parse(await fs.readFile(path.join(revStep.issue_dir, 'reviewer.json'), 'utf8'));
+  assert.equal(savedRev.fallback_reason, 'Review validation failed after repairs');
+  const readyStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'ready' }, client: { call() { throw new Error('Must not call LLM on ready resume'); } } });
+  assert.equal(readyStep.stage, 'ready');
+  const { payload } = JSON.parse(await fs.readFile(path.join(revStep.issue_dir, 'ready.json'), 'utf8'));
+  validateIssue(payload);
+  assert.equal(payload._diagnostics.review.fallback_reason, 'Review validation failed after repairs');
 });

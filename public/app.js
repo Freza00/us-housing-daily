@@ -959,6 +959,13 @@ function renderBrief(data) {
   const available = currentLang === 'zh' || sentences.every(row => typeof row.text_en === 'string' && row.text_en.trim() && !/\p{Script=Han}/u.test(row.text_en));
   if (sentences.length && !available) { const p=document.createElement('p'); p.textContent='English summary is unavailable for this archive.'; text.append(p); }
   for(const sentence of available ? sentences : []){const p=document.createElement('p');p.textContent=currentLang==='zh'?formatChinese(sentence.text):sentence.text_en;for(const id of sentence.item_ids||[]){const i=(data.items||[]).findIndex(x=>x.id===id);if(i<0)continue;const a=document.createElement('a');a.href=data.items[i].link;a.target='_blank';a.rel='noopener noreferrer';a.textContent=' ['+(data.items[i].source_name||(currentLang==='zh'?'来源':'Source'))+']';p.append(a);}text.append(p);}
+  const outlook = data.executive_summary?.outlook;
+  if (outlook && available && (currentLang === 'zh' ? outlook.text : outlook.text_en)) {
+    const p = document.createElement('p');
+    p.className = 'brief-outlook';
+    p.textContent = currentLang === 'zh' ? formatChinese(outlook.text) : outlook.text_en;
+    text.append(p);
+  }
   const summaryMissing = data.summary_status === 'unavailable';
   if (summaryMissing) {
     const p = document.createElement('p');

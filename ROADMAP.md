@@ -2,6 +2,16 @@
 
 ## 当前状态
 
+2026-11-18 16:05，已按 `opus5.5-high`（`claude-opus-5-5-high`）制定的 12 步行动方案完成 `R1`--`R9` 全部残留盲点闭环，并经 `sol6.2-medium`（`gpt-6.2-sol`，`reasoning_effort: "medium"`）二次复核强化 `R5` 元数据防回退护栏：
+1. **利率置顶与准备期闭环（`R1`、`R6`、`R7`、`R8`）**：在 `scripts/lib/editorial.mjs` 抽出单一事实源 `isBenchmarkRateStory(item)` 统一 3 处利率识别；`pickFallbackRate` 增加 `10` 天时效封顶（`RATE_FALLBACK_MAX_AGE_MS`）且仅对基准利率稿开放 `collector.enrich` 后的补救通道，使用 `insufficientIds` 集合拦截普通稿因 `insufficient_evidence` 被拒后绕过二次门槛回流，同步清理孤儿 `fallbackRateId` 并修正 `candidatePreparation.rejected` 统计；`pipeline.mjs` 选稿后救回逻辑改为遍历全部候选逐个校验 `validateDecisions` 与 `isDailyUSStory`，并写入 `_diagnostics.rate_pin`（`{ id, method, failures }`）。
+2. **单进程/跨进程一致性与终审容错闭环（`R2`、`R3`、`R4`、`R5`、`R9`）**：统一单进程与冷恢复的 `writerExhausted = !!partialEdition` 判定，避免单进程 `writer` 局部修复耗尽 `3/3` 时跳过 `reviewer` 阶段；冷恢复 `savedReview` 时完整透传 `fallback_reason`；在 `scripts/lib/release-calendar.mjs` 新增 `outlookAllowedDates`（`[-5, +35]` 天容差）与 `outlookDateMentions`，在生成期（`strictOutlookDates: true`）拦截 `outlook` 越界幻觉日期并在 `prepareReview` 局部回退至 `writer` 原 `outlook`（不改动 `validateIssue` 历史归档契约，`41` 份归档 `100%` 兼容）；在 `persistParts` 与 `assembleDailyEdition` 记录 `outlook_fallback` 诊断；抽出 `buildReviewDraft` 使 `createReviewRepair` 仅携带被拒局部条目与 `all_item_ids`，同时在校验层拦截未展示条目及未授权元数据修改。`npm test` `440 / 440` 全部通过（0 失败 / 0 跳过）。
+
+2026-11-18 14:45，已完成日报两项新规范的文档修订、全链路实现、十维红队/第一性原理复盘，并经 `gemini-4-carbon-high`（`carbon-high`）与 `claude-opus-5-5-high`（`opus5.5-high`）双模型独立交叉审计修补全部 7 处 P0/P1 跨模块与冷恢复边界漏洞：
+1. **日报第 1 条固定为最新房贷利率**：新增按揭利率日更专用源 `mnd-rates`（`Mortgage News Daily — Rate Watch`，`https://www.mortgagenewsdaily.com/rss/rates`，权重 `10`，`rate_benchmark: true`）并与 `freddie-pmms` 协同作为基准源；在 `news-core.mjs`、`sources.mjs` 与 `pipeline.mjs` 全链路透传 `rate_benchmark: true`，将 `fallbackRateId` 提升至函数顶层作用域并持久化进 `snapshot.fallback_rate_id`（防止 `ReferenceError` 及跨阶段恢复丢失），在 `collector.enrich` 后补充利率候选兜底（消除 `80` vs `160` 字符门槛断层），并在 `editor` 误判 `keep: false` 或跨栏错分（非 `national`）时以 `bindEditorialEvidence` 零额外请求自愈归一至 `national`；`assembleDailyEdition` 在预算内严格保护 `primary[0]`（同时修复 `deferred` 非首条 `importance >= 4` 下标判定，并在 3 次 `writer` 预算耗尽 `allowPartial: true` 时允许安全降级保留其余 19 张合格卡）。
+2. **日报速读摘要末尾新增未来 30 天重要发布与报告前瞻 + `reviewer` 阶段容错加固**：`scripts/lib/release-calendar.mjs` 提供含美国联邦法定节假日顺延（元旦、六月节、退伍军人节、感恩节、圣诞节）、FOMC 双日议息窗口及常用统计基数（`20-City`、`10-Year`、`2-day`、`1..12` 等）的确定性 30 天官方发布日历；修复 `persistParts` 在 `outlook` 报错时自动以 `buildDefaultOutlook` 落盘保底 `savedMetadata`（避免连坐丢弃合格 `sentences`），修复 `prepareReview` 仅修订 `sentences` 时保留原 `outlook`，修复周/月报 `shortDraft` 传入短编号 `id` 生成 `evidence_id`（消除 16 位哈希 ID 泄漏），修复 `createReviewRepair` 透传 `error.message` 及 `preassembled` 跨进程识别已耗尽 `writer` 账本，并在 `reviewer`（`sol6.2-xh`）耗尽重试或超时/报错时自动回退保留已通过确定性校验的 `writer` 成果。`npm test` `429 / 429` 全部通过（0 失败 / 0 跳过）。
+
+2026-11-18 11:07，已完成本地默认模型切换至 `sol6.2-high`（`gpt-6.2-sol`，`reasoning_effort: "high"`）与写稿后新增独立 `reviewer` 审核阶段（`sol6.2-xh`，`gpt-6.2-sol`，`reasoning_effort: "xhigh"`），并在主用通道（`LLM_ENDPOINT` + `LLM_API_KEY`）与备用通道（`LLM_BACKUP_ENDPOINT` + `LLM_BACKUP_API_KEY`）同步启用：单一 `createLlmClient` 实例支持按阶段传入 `model`／`effort`，使 `editor`（`high`）、`writer`（`high`）与 `reviewer`（`xhigh`）共享主备自动粘性切换与双密钥完整脱敏；`reviewer` 阶段在 `writer` 落盘后对全部出刊卡片、双语速读与主线执行事实、数字、机构资产 `impact` 与排版复核，仅在必要时返回局部修订并再次通过全量确定性校验（`prepareWritingCard`／`prepareWritingMetadata`／`validateWriting`），写入 `reviewer.json` 与 `ready.json`。`npm test` `425 / 425` 全部通过（0 失败 / 0 跳过）；`node --env-file=.env scripts/probe-model.mjs` 实测验证 `gpt-6.2-sol` 在 `high` 与 `xhigh` 下遇主通道 `ne.aineapi.com` 返回 `HTTP 503 model_not_found` 时自动粘性切换至备用官方端点 `api.openai.com` 并 `HTTP 200` 通过。本地未执行 `git commit`／`git push` 或线上部署，生产环境待授权提交与推送后生效。
+
 2026-11-17 20:21，已按 `opus5.5-high` 方案上线覆盖降级分层与周／月报受限 `r2` 自动快照补全修订（`3860ee5`，CI run `44081597651` `423 / 423`、`Node.js v22.23.4`，Vercel `success`）：收紧 `daily` 的 `degraded` 触发边界（仅 `snapshot_gap`、`required_source` 或 0 入选栏目的 `section_lead_gap` 标为 `degraded`，已有入选稿栏目的漏斗缺口与非必需 `403` 来源留在 `_diagnostics` 与“来源与行业覆盖”明细）并记录 `coverage_reasons`；删除前端 `public/app.js` 失实的“补齐后可更新”提示并改为按原因／版本／历史兼容的真实说明；在 `calendar.mjs` 新增受 `withinRecoveryWindow`／`recoverableRevision` 严格封顶的周（截稿后 48h 内工作日）／月（次月前 3 个工作日）单次 `r2` 自动修订机制，配齐 `weekly.yml`/`monthly.yml`/`vercel.json`/`dispatch.mjs` 补偿调度，全链路共用于 `can-run.mjs`、`restore-issue.mjs`、`pipeline.mjs`、`publish.mjs` 与 `publication.mjs`。线上 `https://news-agent-mu.vercel.app/app.js` 散列与提交一致，Playwright 桌面/移动端 ZH/EN 日/周/月报实测 0 失实提示、0 报错、0 溢出。[上线验收](docs/validation/2026-11-17-coverage-tiering-release.md)。
 
 2026-11-17 16:52，日报速读防丢弃修复已上线（`bedc6de`，CI `419 / 419`、Vercel `success`），并已完成 `2026-11-16` 冻结原料补刊与 `11-17` 快照边界对齐（`59f79bb`，`20` 条、`summary_status: available`）及 `daily.yml -f force=true -f use_backup=true` 刷新 `2026-11-17`（run `44048928283` / `0094946`，`19` 条、含 `18` 条 `11-16` 新闻、与 `16` 号 `0` 重叠、完整双语速读）；`node scripts/check-publication.mjs daily` 返回 `online_verified`，线上 `12` 路 SHA-256 与 Playwright 桌面/移动端双语核验全部通过。真实定时调度主通道阻塞自动切换、月报自动首跑及连续 SLA 仍待观察。[上线验收](docs/validation/2026-11-17-daily-summary-and-backfill-release.md)。
@@ -31,11 +41,19 @@
 
 11 月 2 日日报首跑失败后，同版冻结阶段与 18 张合格卡片被自动恢复，08:51:43 完成 20 条线上核验，形成首个强化后的真实恢复样本；来源 66／77 成功，HAR 超时，本期 degraded。周报此前三次摘要超长、writer 额度用尽，现已用完整句候选恢复；月报此前生成成功但输入文件过大导致推送受阻，现已修复并恢复交付。两者属于人工恢复发布，不能记为准时自动出刊。[原日志与双顾问对照](docs/validation/2026-11-02-advisor-comparison.md)。
 
-线上模型为 gpt-6.1-sol。北京时间工作日日报 05:00 首跑、09:00 可读目标；周报周一 14:00 首跑、15:00 目标；月报次月首个周一至周五 15:00 首跑、16:00 目标，不另排除法定节假日。周报与月报采用完整美东自然周期，同日错峰且互不依赖对方成功；调度和外部服务仍可能使发布延后。新配置已部署接受，下一次真实 cron 执行、连续 SLA 及实际 redeploy 尚待后续验证。
+默认模型切换为 `gpt-6.2-sol`（`editor`／`writer` 均为 `high`，`reviewer` 为 `xhigh`），主备双通道均已接入自动粘性切换。北京时间工作日日报 05:00 首跑、09:00 可读目标；周报周一 14:00 首跑、15:00 目标；月报次月首个周一至周五 15:00 首跑、16:00 目标，不另排除法定节假日。周报与月报采用完整美东自然周期，同日错峰且互不依赖对方成功；调度和外部服务仍可能使发布延后。新配置已部署接受，下一次真实 cron 执行、连续 SLA 及实际 redeploy 尚待后续验证。
 
 P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段附件、卡片／摘要局部恢复、跨运行额度账本、独立候选发布及线上确认均已实现；隔离版和主工作区各 205 项测试通过。Astra max 最终只读复审通过，独立 79 项测试通过。已按用户授权提交 69a45a1、同步开源 main 并上线 Vercel，Node.js 22 CI 的 205 项通过，生产内容核验通过。独立外部截止调度与通知继续不启用。[生产证据](docs/validation/2026-10-30-automation-hardening-production.md)。[本地验收](docs/validation/2026-10-30-automation-hardening-implementation.md)；[施工清单](docs/plans/2026-10-30-automation-hardening-implementation.md)。
 
 ## 进行中
+
+- 2026-11-18 16:05 本地已完成日报“第 1 条固定为最新房贷利率”与“速读摘要末尾新增未来 30 天重要发布与报告前瞻”两项规范、默认模型切换（`sol6.2-high` + `sol6.2-xh` `reviewer`）及 `opus5.5-high` 行动方案 `R1`--`R9` 全部加固与 `sol6.2-medium` 校验（`440 / 440` 测试通过）；待授权执行 `git commit`／`git push` 及同步 GitHub Actions `LLM_MODEL` Secret 后上线生产。
+
+## 待确认
+
+- `scripts/lib/digest-core.mjs`（仅被 `scripts/test/themes.test.mjs` 引用，生产已迁移至 `news-core.mjs` + `editorial.mjs`）与 `scripts/lib/dates.mjs` 中未被引用的 `dateRange`、`recentDates`、`shiftDays` 导出是否清理（涉及文件删除或接口精简，待明确授权后处理）。
+- 生产环境 `reviewer`（`gpt-6.2-sol`，`reasoning_effort: "xhigh"`）`maxTokens: 10000` 在真实出刊中的 reasoning token 消耗占比与 `finish_reason: "length"` 触发频率，待上线后通过 `attempts.jsonl` 持续观察。
+- `outlook` 已通过 `outlookAllowedDates`（`[-5, +35]` 天窗口）拦截越界幻觉日期，但单句内将合法报告名与另一合法日程日期错配的残余风险（回退保底为 `buildDefaultOutlook`），待观察生产实况表现后再决定是否引入实体-日期配对级校验。
 
 - 2026-11-17 20:21 实施并上线 `opus5.5-high` 方案（`3860ee5`）：收紧 `daily` `degraded` 触发边界并输出 `coverage_reasons`；删除 `public/app.js` 失实的“补齐后可更新”提示并区分新刊原因、周／月 `r2` 与历史兼容归档；新增 `withinRecoveryWindow`／`canAttemptRecoverySchedule`／`recoverableRevision` 与 `loadWindowSnapshots` 并在 `can-run.mjs`、`restore-issue.mjs`、`pipeline.mjs`、`publish.mjs`、`publication.mjs` 与 `dispatch.mjs` 统一执行周 48h／月前 3 工作日、仅 `r1 -> r2` 快照清零后的受限自动补全修订；扩充 `weekly.yml`/`monthly.yml`/`vercel.json` 补偿调度与 `coverage-tiering.test.mjs`。后续真实周／月 `r1 -> r2` 线上定时触发待观察。[上线验收](docs/validation/2026-11-17-coverage-tiering-release.md)。
 
@@ -54,6 +72,12 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 15 个研究入口仍有访问或发现障碍；31／46 可读是此前本机探针结果，不代表生产已全部覆盖。Vercel CLI 现有 token 无效，未独立读取账号套餐和线上 cron 注册表；部署已接受仓库 cron 配置，Actions 补偿配置已上线。
 
 ## 最近完成
+
+- 2026-11-18 16:05 完成 `opus5.5-high` 12 步行动方案（`R1`--`R9`）与 `sol6.2-medium` 复核修补：在 `editorial.mjs` 抽出 `isBenchmarkRateStory` 与 `buildReviewDraft`、强化 `createReviewRepair` 局部提示与未展示条目/元数据防护、支持生成期 `strictOutlookDates` 日期窗口校验与 `prepareReview` 局部 `outlook` 回退；在 `pipeline.mjs` 实现 `pickFallbackRate` 10 天时效封顶、`insufficientIds` 防回流、多候选迭代利率救回与 `_diagnostics.rate_pin`、单进程与跨进程一致的 `writerExhausted = !!partialEdition`、冷恢复 `savedReview.fallback_reason` 保留及 `outlook_fallback` 诊断；在 `release-calendar.mjs` 新增 `outlookAllowedDates`／`outlookDateMentions`，在 `daily-edition.mjs` 记录 `outlook_fallback`，新增 11 项回归测试并更新 `AGENTS.md`、`README.md` 与 `ROADMAP.md`。
+
+- 2026-11-18 12:15 新增日报两项编排与写作规范：在 `config/sources.json` 新增 `mnd-rates`（`Mortgage News Daily — Rate Watch`）并与 `freddie-pmms` 标记 `rate_benchmark: true`，在 `pipeline.mjs`、`editorial.mjs`、`daily-edition.mjs` 与 `issue-contract.mjs` 全链路固定日报 `items[0]` 为最新美国房贷利率（含假日后最新利率回退准入与首卡保护）；新增 `scripts/lib/release-calendar.mjs` 提供确定性 30 天美国住宅与宏观官方发布日历，在 `editorial.mjs`、`daily-edition.mjs`、`issue-contract.mjs` 与 `public/app.js` 实现日报 `executive_summary.outlook`（`{ text, text_en }`，独立 `<= 240` 中文字 / `<= 150` 英文词预算）双语生成、终审、数字核验与前端末段渲染，并同步更新 `AGENTS.md`、`README.md` 与 `docs/source-coverage.md`。
+
+- 2026-11-18 11:07 将 `editor` 与 `writer` 阶段默认模型切换为 `gpt-6.2-sol`（`reasoning_effort: "high"`），并在 `writer` 后新增 `reviewer` 终审阶段（`gpt-6.2-sol`，`reasoning_effort: "xhigh"`）；更新 `llm-client.mjs`、`pipeline.mjs`、`editorial.mjs`、`model-references.mjs`、`issue-store.mjs`、`artifact-recovery.mjs`、`restore-issue.mjs`、`publish.mjs`、`evaluate-models.mjs`、`probe-model.mjs`、`.env`、`.env.example`、`.github/workflows/{daily,weekly,monthly}.yml` 及项目文档，使主用与备用 key 通道在三阶段均共享自动粘性切换与确定性复验。
 
 - 2026-11-17 20:21 以 `3860ee5` 上线分层覆盖降级（`coverage_reasons`）、前端诚实 `coverageNote` 文案及周／月报单次受限 `r2` 自动快照补全修订机制，更新 `README.md`、`AGENTS.md`、`docs/RECOVERY.md` 与 `weekly.yml`/`monthly.yml`/`vercel.json` 补偿调度，保持 `daily` 不自动回溯改刊、周 48h／月前 3 工作日上限、`r2` 独立预算与 `<= r2` 硬边界。[上线验收](docs/validation/2026-11-17-coverage-tiering-release.md)。
 
@@ -90,13 +114,13 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 - 2026-11-06 10:04 按 Astra-max 复审修复地域大小写／引号／空白误拒、总部跨句上下文及 Fort Worth 幂等问题；兼容旧规则恢复 6 号 20 条 ready，原 editor 账本保持、仅新增 writer 1 次。未提交或发布。[验收](docs/validation/2026-11-06-geography-fix-and-recovery.md)。
 
-- 2026-11-05 16:43 提交 d5cc9da、同步开源 main 并上线脚本归栏、双语概览及局部恢复修复。CI 269 项通过，Vercel success，5 号和周月数据保持；6 号正常自动首跑待观察。[发布验收](docs/validation/2026-11-05-script-first-release.md)。
-
-- 2026-11-05 16:33 完成脚本统一归栏、配置语义提示、双语概览及主线、长度可处理 metadata 独立保留和冷恢复。新刊标记 editorial_schema 2，旧刊保持；269 项测试和真实回答离线回放通过，未提交或上线。[本地验收](docs/validation/2026-11-05-script-first-implementation.md)。
-
-- 2026-11-05 15:57 Astra-max 完成工作流／脚本化复审及 5 号日志深查：确认分类不能仅挪最后而忽略选稿平衡，推荐同一规则脚本两处复用；识别标签语义缺失、两卡＋摘要联合修复及摘要重心漂移，验证保留原摘要和缩小请求的离线可行性。只形成方案，无代码／稿件或生产调用变更。[方案](docs/plans/2026-11-05-script-first-workflow.md)。
-
 ## 最近验证
+
+- 2026-11-18 16:05 执行 `opus5.5-high` 行动方案与 `sol6.2-medium`（`gpt-6.2-sol`，`effort: "medium"`）代码审计验收：`node --check` 语法检查全过；全套单元测试 `npm test` `440 / 440` 全部通过（0 失败 / 0 跳过，新增 `T1`--`T10` 覆盖多候选利率救回、10 天回退时效封顶、`insufficient_evidence` 防回流、`outlook` 越界日期拦截与 `prepareReview` 局部回退、`outlook_fallback` 诊断、单进程 `writerExhausted` 仍执行 `reviewer`、冷恢复 `savedReview.fallback_reason`、`createReviewRepair` 最小化负载与未展示条目/元数据拦截）；全量 41 份历史归档 `validateIssue` 核验保持 `v2=1/1 passed (0 failed), legacy_v1=40` 零破坏。
+
+- 2026-11-18 12:15 单元测试套件 `npm test` `429 / 429` 全部通过（0 失败 / 0 跳过，新增日报 `items[0]` 房贷利率置顶与假日后最新利率回退准入、`assembleDailyEdition` 首卡按揭利率候补保护、30 天官方发布日历 `outlook` 独立预算与数字校验、前端 `.brief-outlook` 中英双语渲染共 4 项测试）；在线探测 `https://www.mortgagenewsdaily.com/rss/rates` 验证 `HTTP 200 text/xml` 返回日更按揭利率流且 `extractArticle` 完整提取正文与时间戳。
+
+- 2026-11-18 11:07 单元测试套件 `npm test` `425 / 425` 全部通过（0 失败 / 0 跳过，新增 `reviewer` `xhigh` 卡片与摘要局部修订、确定性数字复验及主备自动粘性切换回归测试）；运行 `node --env-file=.env scripts/probe-model.mjs` 实测 `gpt-6.2-sol` 在 `high` 与 `xhigh` 两档推理强度下的在线兼容性：主通道 `ne.aineapi.com` 返回 `HTTP 503 model_not_found` 时自动粘性切换至备用通道 `api.openai.com` 并均以 `HTTP 200`、`finish_reason: "stop"` 返回有效 JSON。
 
 - 2026-11-17 20:21 隔离发布区、主工作区及 Node.js v22.23.4 CI（run `44081597651`）`npm test` 均 `423 / 423` 通过（0 失败 / 0 跳过）；Vercel Deployment `7852946311` 为 `success`，线上 `/app.js`（SHA-256 `564d32494c750649dd676908fdfbb20f7f25318e6aeaa70ff40a984e86aeefcf`）与 `3860ee5` 一致，`check-publication.mjs daily` 返回 `online_verified`；Playwright Desktop（`1440x900`）ZH/EN 日／周报与 Mobile（`390x844`）ZH/EN 日／月报共 8 场景渲染均 `0` 报错、`0` 警告、`0` 横向溢出，页面已无“补齐后可更新”失实文案。主工作区 `76` 个受保护文件零改动。[上线验收](docs/validation/2026-11-17-coverage-tiering-release.md)。
 
@@ -132,12 +156,6 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 2026-11-06 10:13 发布副本及 Node.js v22.23.4 CI 各 282／282、0 失败；数据与代码 Vercel 均 success。线上首页／JS／CSS、日报四路及周月四路共 11 个入口散列一致，386 个远端非目标文件和 312 个原工作区非目标文件保持，r1／规则／账本未改签；无新生成请求。[证据](docs/validation/2026-11-06-geography-release.json)。
 
 - 2026-11-06 10:04 根目录／干净副本各 282／282；两份实际 55 决定原答直接严格通过且选 20 条顺序一致。新旧请求散列及 5 阶段通过，旧规则冷恢复零请求、新规则拒旧附件；本地候选 20 卡、双语／来源 cap／预算、桌面手机 12 次语言检查通过，尚未生产发布。[证据](docs/validation/2026-11-06-geography-fix-and-recovery.json)。
-
-- 2026-11-06 09:48 核对 6 号首跑及补偿日志／四个附件，阶段散列、r1 和 prepared 一致；真实 editor 三次／writer 零次。两份 55 条回答分别仅恢复两处／一处地域原文拼写，完整校验及 20 条选择通过；同版额度探针零网络请求即拒绝。只诊断，未改代码或补发。[结构化证据](docs/validation/2026-11-06-daily-geography-diagnosis.json)。
-
-- 2026-11-05 16:43 发布副本及 Node.js v22.23.4 CI 各 269／269、0 失败；Vercel success。线上首页／JS／CSS 与 7 个数据入口共 10 路逐项散列匹配，远端 228 个保护文件与主工作区 304 个非目标起始文件保持；无新模型、采集或手动 dispatch。[证据](docs/validation/2026-11-05-script-first-release.json)。
-
-- 2026-11-05 16:33 主工作区及从 211cb346 建立的干净副本各 269／269、0 失败（Node.js v25.8.0）；5 号原回答 20 卡复验、2 坏卡／18 好卡保持、278→187 字符摘要及 45421→4892 请求字符重放通过。隔离无界面 Chromium 完成 12 场景／36 次语言检查，无中文概览泄漏、页面异常或横向溢出；无源站／模型请求，未运行远端 CI。[证据](docs/validation/2026-11-05-script-first-implementation.json)。
 
 ## 已定位问题
 

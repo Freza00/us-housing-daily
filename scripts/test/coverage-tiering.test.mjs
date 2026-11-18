@@ -59,6 +59,7 @@ function btrAwareClient({ partialWriter = false } = {}) {
             : modelDecision(x.id, { asset: 'multifamily', geo: 'phoenix', geo_evidence: 'Phoenix', primary_event: 'property_transaction_financing', market_role: 'asset_location', importance: partialWriter && /^Sunbelt multifamily report/.test(x.title) ? 3 : 4 }))
         });
       }
+      if (options.label === 'reviewer') return options.validate({ status: 'pass', issues: [], items: [] });
       if (partialWriter && writerCalls++ > 0) throw new LlmError('Budget exhausted');
       const input = JSON.parse(user);
       const keep = partialWriter ? input.items.slice(0, -1) : input.items;

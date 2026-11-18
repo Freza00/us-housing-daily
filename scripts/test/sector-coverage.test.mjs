@@ -60,6 +60,6 @@ test('the pipeline publishes source gaps and sector history without extra model 
   const client = fakeClient();
   const result = await runPipeline('daily', { root, env, client });
   assert.equal(result._diagnostics.editorial_coverage.sections.btr.status, 'source_gap');
-  assert.equal(client.usage.length, 2);
+  assert.equal(client.usage.length, 3);
   assert.equal(result._diagnostics.editorial_coverage.history.missing_dates.length, 4);
 });

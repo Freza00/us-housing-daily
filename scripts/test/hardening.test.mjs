@@ -53,8 +53,9 @@ for (const offsetMs of [180001, 180000, 120000, 1, 0, -60000, null]) {
     const env = { ...opts.env, PIPELINE_UNTIL: 'ready', LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid',
       ...(offsetMs === null ? {} : { PUBLICATION_DEADLINE_MS: String(clock + offsetMs) }) };
     const options = { ...opts, env, collector: { collect() { throw Error('Unexpected recollection'); } }, llmOptions: { fetchImpl: async (_url, request) => {
-      requests++;
       const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content);
+      if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
+      requests++;
       assert.equal(input.items.length, 1);
       assert.match(body.messages[0].content, /仅修复/);
       return response({ items: answer(input).items });
@@ -81,24 +82,28 @@ for (const mode of ['card-and-metadata', 'metadata-only', 'all-cards', 'exhauste
   const opts = await setup(t), env = { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid', PIPELINE_UNTIL: 'ready' };
   const seed = { retryDelays: [0,0], fetchImpl: async (_url, request) => {
     const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
     return response(Array.isArray(input) ? { decisions: input.map(it => modelDecision(it.id)) } : answer(input));
   } };
   await runPipeline('daily', { ...opts, env, llmOptions: seed });
   const manifest = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'manifest.json')));
   const store = await openIssueStore(env.NEWS_STATE_DIR, { kind: 'daily', period: '2026-10-28', upper, rules: manifest.rules, model: manifest.model });
   delete store.manifest.phases.ready;
+  delete store.manifest.phases.reviewer;
   const cards = await store.get('cards'), metadata = await store.get('metadata');
   const originalCards = structuredClone(cards.items);
   if (mode !== 'metadata-only') for (const card of mode === 'all-cards' ? cards.items : cards.items.slice(0,1)) card.summary_zh = '住宅销售增长 99%。';
   metadata.executive_summary.sentences[0].text = '住宅销售增长 99%。';
   if (mode === 'exhausted') store.manifest.attempts.writer.push({ request_id: 'prior-2' }, { request_id: 'prior-3' });
   // Summary-free recovery is permitted when the remaining budget is unknown.
-  if (mode === 'metadata-only') store.manifest.budget_unknown = ['writer'];
+  if (mode === 'metadata-only') store.manifest.budget_unknown = ['writer', 'reviewer'];
   await store.put('cards', cards); await store.put('metadata', metadata);
   await fs.rm(path.join(opts.root, 'state/llm-cache'), { recursive: true, force: true });
   const attemptsBefore = structuredClone(store.manifest.attempts), requests = [];
   const options = { ...opts, env, collector: { collect() { throw Error('recollection'); } }, llmOptions: { retryDelays: [0,0], fetchImpl: async (_url, request) => {
-    const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content); requests.push(body);
+    const body = JSON.parse(request.body), input = JSON.parse(body.messages[1].content);
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
+    requests.push(body);
     assert(!Array.isArray(input), 'editor must not run again');
     assert.notEqual(mode, 'metadata-only', 'unknown-budget summary recovery must not request a model');
     assert.equal(input.items.length, mode === 'all-cards' ? 3 : 1);
@@ -151,7 +156,7 @@ test('stage invocations freeze evidence and reuse editor after writer failure ev
   opts.collector.enrich = async () => { throw Error('evidence drift'); };
   const ready = await runPipeline('daily', { ...opts, client: resumed, env: { ...opts.env, PIPELINE_UNTIL: 'ready' } });
   assert.equal(ready.stage, 'ready'); assert.equal(enrich, 1);
-  assert.deepEqual(resumed.usage.map(it => it.label), ['writer']);
+  assert.deepEqual(resumed.usage.map(it => it.label), ['writer', 'reviewer']);
   assert.ok(frozen.equals(await fs.readFile(path.join(stageDir(opts.root),'prepared.json'))));
   const cards = JSON.parse(await fs.readFile(path.join(stageDir(opts.root),'cards.json')));
   assert.deepEqual(cards.items.map(it => it.id).sort(), rows.map(it => it.id).sort());
@@ -178,6 +183,7 @@ test('a bad daily summary leaves the validated cards ready after request exhaust
   const manifest = JSON.parse(await fs.readFile(file));
   assert.equal(manifest.attempts.writer.length, 1);
   delete manifest.phases.ready;
+  manifest.budget_unknown = ['reviewer'];
   await fs.writeFile(file, JSON.stringify(manifest));
   const restored = await runPipeline('daily', { ...opts, env, llmOptions: { retryDelays: [], fetchImpl() { assert.fail('unexpected model'); } }, collector: { collect() { throw Error('recollection'); } } });
   assert.equal(restored.stage, 'ready');
@@ -200,6 +206,7 @@ test('repairing a missing daily card finishes if the summary fails on the last a
   const result = await runPipeline('daily', { ...opts, env: { ...opts.env, LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid' },
     llmOptions: { retryDelays: [], sleep: async () => {}, fetchImpl: async (_url, request) => {
       const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+      if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
       calls.push(input);
       assert.equal(calls.length, 1);
       assert.deepEqual(input.items.map(it => it.id), ['3']);

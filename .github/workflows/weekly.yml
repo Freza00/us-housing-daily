@@ -38,7 +38,8 @@ jobs:
     timeout-minutes: 20
     env:
       FORCE_RUN: ${{ inputs.force && '1' || '0' }}
-      LLM_MODEL: ${{ secrets.LLM_MODEL }}
+      LLM_MODEL: ${{ secrets.LLM_MODEL || 'gpt-6.2-sol' }}
+      LLM_REVIEW_MODEL: ${{ secrets.LLM_REVIEW_MODEL || secrets.LLM_MODEL || 'gpt-6.2-sol' }}
       ISSUE_REVISION: ${{ inputs.revision || github.event.client_payload.revision || '' }}
       EXPECTED_PERIOD: ${{ inputs.period || github.event.client_payload.period || '' }}
       EXPECTED_CUTOFF: ${{ inputs.cutoff || github.event.client_payload.cutoff || '' }}
@@ -106,6 +107,7 @@ jobs:
         if: steps.gate.outputs.go == 'true' && steps.prepared.outputs.issue_dir != ''
         env:
           PIPELINE_UNTIL: editor
+          LLM_EFFORT: high
           ISSUE_REVISION: ${{ steps.prepared.outputs.revision || env.ISSUE_REVISION }}
           EXPECTED_PERIOD: ${{ steps.prepared.outputs.period || env.EXPECTED_PERIOD }}
           EXPECTED_CUTOFF: ${{ steps.prepared.outputs.cutoff || env.EXPECTED_CUTOFF }}
@@ -127,7 +129,8 @@ jobs:
         id: writer
         if: steps.gate.outputs.go == 'true' && steps.prepared.outputs.issue_dir != ''
         env:
-          PIPELINE_UNTIL: ready
+          PIPELINE_UNTIL: writer
+          LLM_EFFORT: high
           ISSUE_REVISION: ${{ steps.prepared.outputs.revision || env.ISSUE_REVISION }}
           EXPECTED_PERIOD: ${{ steps.prepared.outputs.period || env.EXPECTED_PERIOD }}
           EXPECTED_CUTOFF: ${{ steps.prepared.outputs.cutoff || env.EXPECTED_CUTOFF }}
@@ -143,6 +146,29 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: news-issue-weekly-${{ steps.prepared.outputs.period }}-r${{ steps.prepared.outputs.revision }}-${{ github.run_id }}-${{ github.run_attempt }}-writer
+          path: ${{ steps.prepared.outputs.issue_dir }}/
+          retention-days: 14
+      - name: Review frozen issue
+        id: reviewer
+        if: steps.gate.outputs.go == 'true' && steps.prepared.outputs.issue_dir != ''
+        env:
+          PIPELINE_UNTIL: ready
+          LLM_REVIEW_EFFORT: xhigh
+          ISSUE_REVISION: ${{ steps.prepared.outputs.revision || env.ISSUE_REVISION }}
+          EXPECTED_PERIOD: ${{ steps.prepared.outputs.period || env.EXPECTED_PERIOD }}
+          EXPECTED_CUTOFF: ${{ steps.prepared.outputs.cutoff || env.EXPECTED_CUTOFF }}
+          LLM_API_KEY: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && secrets.LLM_BACKUP_API_KEY || secrets.LLM_API_KEY }}
+          LLM_ENDPOINT: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && (secrets.LLM_BACKUP_ENDPOINT || 'https://api.openai.com/v1/chat/completions') || secrets.LLM_ENDPOINT }}
+          LLM_BACKUP_API_KEY: ${{ secrets.LLM_BACKUP_API_KEY }}
+          LLM_BACKUP_ENDPOINT: ${{ secrets.LLM_BACKUP_ENDPOINT }}
+        run: node scripts/build-weekly.mjs
+      - name: Save reviewed publication candidate
+        if: always() && steps.prepared.outputs.issue_dir != ''
+        continue-on-error: true
+        timeout-minutes: 1
+        uses: actions/upload-artifact@v7
+        with:
+          name: news-issue-weekly-${{ steps.prepared.outputs.period }}-r${{ steps.prepared.outputs.revision }}-${{ github.run_id }}-${{ github.run_attempt }}-reviewer
           path: ${{ steps.prepared.outputs.issue_dir }}/
           retention-days: 14
       - name: Publish candidate and verify production

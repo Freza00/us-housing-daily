@@ -74,3 +74,31 @@ test('all digest modes choose bilingual overviews on first render and both langu
   }
  }
 });
+
+test('daily executive summary renders 30-day upcoming release outlook paragraph at the end in both ZH and EN', async () => {
+ const app = await fs.readFile(new URL('../../public/app.js', import.meta.url), 'utf8');
+ const ids = Object.fromEntries(['briefBlock', 'briefText', 'briefTitle', 'coverageNote', 'researchCoverage', 'researchStatus', 'researchTitle'].map(id => [id, new Element()]));
+ const ctx = { document: { createElement: () => new Element() }, $: id => ids[id], currentLang: 'zh', currentMode: 'daily' };
+ vm.createContext(ctx);
+ vm.runInContext(app.slice(app.indexOf('function renderBrief(data)')), ctx);
+ const data = {
+  kind: 'daily',
+  items: [{ id: '1', link: 'https://example.com/rates', source_name: 'Mortgage News Daily' }],
+  executive_summary: {
+   sentences: [{ text: '按揭利率微降。', text_en: 'Mortgage rates edged lower.', item_ids: ['1'] }],
+   outlook: {
+    text: '未来30天内，11月19日将公布NAR成屋销售，12月10日将公布美联储FOMC利率决议。',
+    text_en: 'Over the next 30 days, NAR Existing-Home Sales on Nov 19 and the FOMC rate decision on Dec 10 will be released.'
+   }
+  }
+ };
+ ctx.renderBrief(data);
+ assert.equal(ids.briefText.children.length, 2);
+ assert.equal(ids.briefText.children[1].className, 'brief-outlook');
+ assert.match(ids.briefText.children[1].textContent, /未来 30 天内，11 月 19 日将公布 NAR 成屋销售/);
+ ctx.currentLang = 'en';
+ ctx.renderBrief(data);
+ assert.equal(ids.briefText.children.length, 2);
+ assert.equal(ids.briefText.children[1].className, 'brief-outlook');
+ assert.match(ids.briefText.children[1].textContent, /Over the next 30 days, NAR Existing-Home Sales/);
+});

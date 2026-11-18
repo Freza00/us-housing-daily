@@ -2,7 +2,19 @@ import { dedupe, scoreItem, classify, SECTIONS, detectCreSubcategory, itemId, he
 import { LlmError } from './llm-client.mjs';
 import { policyEventKeys } from './event-groups.mjs';
 import { EDITORIAL_PROTOCOL, PRIMARY_EVENTS, MARKET_ROLES, geographyEvidenceMatches, editorEvidenceReferences, editorialEvidenceProblems, bindEditorialEvidence, assertEditorialEvidence } from './editor-evidence.mjs';
+import { buildDefaultOutlook, releaseCalendarPrompt, releaseCalendarEvidence, referenceDateForItems, outlookAllowedDates, outlookDateMentions } from './release-calendar.mjs';
 export { geographyEvidenceMatches } from './editor-evidence.mjs';
+
+export function isBenchmarkRateStory(item) {
+  return !!item && (item.rate_benchmark === true || item.source_id === 'mnd-rates' || item.source_id === 'freddie-pmms');
+}
+
+export function isMortgageRateStory(item) {
+  if (!item) return false;
+  if (isBenchmarkRateStory(item)) return true;
+  const title = String(item.title || '');
+  return /\b(?:mortgage\s+rates?|30[-\s]?year\s+(?:fixed\s+)?(?:mortgage|rate)|15[-\s]?year\s+(?:fixed\s+)?(?:mortgage|rate)|primary\s+mortgage\s+market\s+survey|\bpmms\b|refinance\s+rates?)\b/i.test(title);
+}
 
 export function normalizeChinese(value) {
   return String(value || '').replace(/[—–]/g, '--').replace(/([\u3400-\u9fff])([A-Za-z0-9])/g, '$1 $2').replace(/([A-Za-z0-9%])([\u3400-\u9fff])/g, '$1 $2')
@@ -92,6 +104,8 @@ export function prepareCandidates(items, window, seen = [], limit = 72, { sector
   // Required research and each publisher get an initial opportunity before high-volume media.
   const add = (it, cap) => { const n = counts.get(it.source_family) || 0; if (selected.length >= limit || selected.includes(it) || n >= cap) return; selected.push(it); counts.set(it.source_family, n + 1); };
   if (sectorOpportunities) {
+    const rateLead = ranked.find(it => isMortgageRateStory(it));
+    if (rateLead) add(rateLead, 3);
     const sectors = new Set();
     for (let round = 0; round < 3; round++) for (const bucket of ['btr', 'institutional', 'cre:']) {
       const available = ranked.filter(it => !selected.includes(it) && (counts.get(it.source_family) || 0) < 3 && candidateSector(it).startsWith(bucket));
@@ -140,7 +154,7 @@ export function editorInstructions(tagConfig, { usOnly = false, evidenceRefs = f
   const market = usOnly ? '\n日报只收美国主事件。每条 keep=true 还必须输出 market_scope（us/non-us/unclear）及 market_evidence（主资产、市场或政策发生在美国的逐字连续原文；如无明确原句则为 null）。national 表示全美，不可用于海外或不明范围。看标的和主事件所在地，伦敦投资者收购德州资产仍属美国，伦敦资产交易不属美国。明显海外或范围不明用 keep=false。' : '';
   if (evidenceRefs) return decisionSystem.replace('"capital_focus":false,"geo_evidence":null,"asset":"housing","geo":"national","topics":[],"actor":null,"duplicate_of":null,"reason":"简短证据依据"',
     '"primary_event":"market_research_policy","event_evidence_id":"body-1","market_scope":"us","market_evidence_id":"body-1","market_role":"market_policy","asset":"housing","geo":"national","geo_evidence":null,"topics":[],"actor":null,"duplicate_of":null,"reason":"简短证据依据"')
-    + '\n新日报使用 ' + editorialProtocol + '。只输出 primary_event 与示例中的字段，绝不输出 title、evidence_refs、capital_focus 或 tags 字段（"title" 与 "body-N" 仅作编号字符串填入 *_evidence_id）；程序从主事件派生资本属性。primary_event 合法值：' + JSON.stringify(PRIMARY_EVENTS) + '。property_transaction_financing 包含单物业及物业组合买卖、贷款、再融资和 recapitalization；property_development_leasing 包含开发、租赁、总部搬迁；fund_platform_capital 限基金／策略募资、平台公司并购或IPO；institutional_allocation 为机构整体配置或配置调查；capital_governance 为特定资本主体的资本治理风险；company_operations 为经营财报；market_research_policy 为其他研究或行业政策。每条保留稿返回 event_evidence_id，选择支持主事件的原文编号。title 引用原始标题，body-N 引用本条 evidence_refs 中的对应原句。不得编造编号或复写长引文。market_scope=us/non-us/unclear；market_evidence_id 为主题范围证据编号，无法确认时 scope=unclear、编号=null。market_role 合法值：' + JSON.stringify(MARKET_ROLES) + '。asset_location=主资产所在地；market_policy=主市场或政策范围；capital_subject=主资本主体范围；headquarters_event=总部搬迁本身；participant_background=参与者背景；unverified=无法验证。美国标的可有海外投资方；美国总部不能证明海外标的是美国。先选定 market_evidence_id，再确定 geo_evidence：geo="national" 且 market_role="market_policy" 或 "capital_subject" 时优先直接填 geo_evidence:null（若填非 null 短锚也必须逐字落在选中 market_evidence_id 内）；market_role="asset_location" 且 geo="national" 时仍必须给出命中选中 market_evidence_id 原文的短锚，如 "across the U.S." 或 "U.S."。非 national geo 与 headquarters_event 也必须从你刚选中的同一条 market_evidence_id 原句逐字连续复制不超过100字符的短锚，严禁从 title 或 event_evidence_id 复制短锚却在 market_evidence_id 填另一编号，也不要跨句改写、拼接或修正标点。asset／geo／topics／actor 严格从下方词表合法 ID 选择，不得自创（如 manufactured housing／mobile home 归入 housing，不得自创 manufactured-housing）。其余四维标签规则保持。\n' + vocabulary + '\n' + (tagConfig ? JSON.stringify(tagConfig.constraints) : '');
+    + '\n新日报使用 ' + editorialProtocol + '。日报第 1 条固定为最新美国房贷利率基准：对最新按揭利率追踪或调查（如 Mortgage News Daily、Freddie Mac PMMS 或 30 年期固定房贷利率动态）须设 keep=true、importance 至少为 4、primary_event="market_research_policy"、market_scope="us"、market_role="market_policy"、asset="housing"、geo="national"、topics 包含 "rates"。只输出 primary_event 与示例中的字段，绝不输出 title、evidence_refs、capital_focus 或 tags 字段（"title" 与 "body-N" 仅作编号字符串填入 *_evidence_id）；程序从主事件派生资本属性。primary_event 合法值：' + JSON.stringify(PRIMARY_EVENTS) + '。property_transaction_financing 包含单物业及物业组合买卖、贷款、再融资和 recapitalization；property_development_leasing 包含开发、租赁、总部搬迁；fund_platform_capital 限基金／策略募资、平台公司并购或IPO；institutional_allocation 为机构整体配置或配置调查；capital_governance 为特定资本主体的资本治理风险；company_operations 为经营财报；market_research_policy 为其他研究或行业政策。每条保留稿返回 event_evidence_id，选择支持主事件的原文编号。title 引用原始标题，body-N 引用本条 evidence_refs 中的对应原句。不得编造编号或复写长引文。market_scope=us/non-us/unclear；market_evidence_id 为主题范围证据编号，无法确认时 scope=unclear、编号=null。market_role 合法值：' + JSON.stringify(MARKET_ROLES) + '。asset_location=主资产所在地；market_policy=主市场或政策范围；capital_subject=主资本主体范围；headquarters_event=总部搬迁本身；participant_background=参与者背景；unverified=无法验证。美国标的可有海外投资方；美国总部不能证明海外标的是美国。先选定 market_evidence_id，再确定 geo_evidence：geo="national" 且 market_role="market_policy" 或 "capital_subject" 时优先直接填 geo_evidence:null（若填非 null 短锚也必须逐字落在选中 market_evidence_id 内）；market_role="asset_location" 且 geo="national" 时仍必须给出命中选中 market_evidence_id 原文的短锚，如 "across the U.S." 或 "U.S."。非 national geo 与 headquarters_event 也必须从你刚选中的同一条 market_evidence_id 原句逐字连续复制不超过100字符的短锚，严禁从 title 或 event_evidence_id 复制短锚却在 market_evidence_id 填另一编号，也不要跨句改写、拼接或修正标点。asset／geo／topics／actor 严格从下方词表合法 ID 选择，不得自创（如 manufactured housing／mobile home 归入 housing，不得自创 manufactured-housing）。其余四维标签规则保持。\n' + vocabulary + '\n' + (tagConfig ? JSON.stringify(tagConfig.constraints) : '');
   return decisionSystem + '\n保留稿必须输出 capital_focus 布尔值；仅当主事件是基金募资／资本配置／平台或公司级并购／IPO／机构资本治理或监管风险时为 true。普通公司经营财报、物业买卖或再融资为 false，背景交易不改变主事件。监管风险为 true 仅限主事件直接针对可识别基金、资管／投资平台或公司资本主体的资金管理、受托责任、资本运作或治理风险。行业普适规则、监管机构自身预算／裁员／监管范围或行动收缩、按揭及消费者金融行业政策均为 false；regulator 标签或机构名称不能单独推出 true。例：CFPB 缩小全行业监管范围、关闭既有监管行动为 false；Deutsche Finance／BVK 的特定资本治理调查可为 true。\n必须提供实际资产标签；地域按新闻主题选最具体层级，排除总部、人物和 source_region（来源所在地）。非 national 地域必须附 geo_evidence，为给定标题或 evidence 中逐字连续的主题地域证据，不可只摘总部介绍。无主题地域证据用 national。\n' + vocabulary + '\n' + (tagConfig ? JSON.stringify(tagConfig.constraints) : '') + market;
 }
 function validateDecisionIdentities(data, items) {
@@ -299,7 +313,7 @@ export function validateDecisions(data, items, tagConfig = null, { scriptRouting
   }
   return data;
 }
-export function selectItems(items, decisions, { limit = 20, sourceCap = 3 } = {}) {
+export function selectItems(items, decisions, { limit = 20, sourceCap = 3, pinMortgageRate = false } = {}) {
   const byId = new Map(decisions.map(d => [d.id, d]));
   const pool = items.map(it => { const d = byId.get(it.id) || {}; return { ...it, keep: d.keep, importance: d.importance, section: d.section, tags: d.tags, ...(typeof d.capital_focus === 'boolean' ? { capital_focus: d.capital_focus, geo_evidence: d.geo_evidence } : {}),
     ...(d.novelty_evidence !== undefined ? { novelty_evidence: d.novelty_evidence } : {}),
@@ -325,6 +339,20 @@ export function selectItems(items, decisions, { limit = 20, sourceCap = 3 } = {}
     const asset = assetOf(it);
     if (asset) assets.set(asset, (assets.get(asset) || 0) + 1);
   };
+  if (pinMortgageRate) {
+    const rateCandidates = pool
+      .filter(it => isMortgageRateStory(it) && (it.section || 'national') === 'national')
+      .sort((a, b) => (isBenchmarkRateStory(b) ? 1 : 0) - (isBenchmarkRateStory(a) ? 1 : 0)
+        || b.importance - a.importance
+        || (b.published_at || 0) - (a.published_at || 0)
+        || (b.score || 0) - (a.score || 0)
+        || a.id.localeCompare(b.id));
+    if (rateCandidates.length) {
+      const lead = rateCandidates[0];
+      pool.splice(pool.indexOf(lead), 1);
+      add(lead);
+    }
+  }
   // Re-rank after each admission: importance wins, then current section and asset coverage.
   // Consume blocked candidates too, so publisher caps cannot stall the selection loop.
   while (pool.length && picked.length < limit) {
@@ -409,7 +437,8 @@ impact 判断框架：锚定美国住宅／BTR-SFR／多户及 CRE 机构资产�
 返回严格JSON：{"items":[{"id":"输入id","title_zh":"...","summary_zh":"...","impact":"neutral"${evidenceOutput}}],"executive_summary":{"sentences":[{"text":"...","text_en":"...","item_ids":["id"]}]},"themes":[{"title":"主线判断","title_en":"...","item_ids":["id"]}]}。items逐条覆盖输入且无重复。每句同时提供英文 text_en，每项主线提供英文 title_en，与对应中文表达同一事实和限定条件，共用 item_ids，不含中文。英文摘要合计最多 150 个空白分隔词；不得套用中文字符上限。themes仅周/月报输出最多3项，日报为空数组。中文全角标点，中英文/数字间加空格，破折号用--。`;
 export const writingSystem = writingInstructions('、evidence_id（只能选择该条evidence_options中最能支持摘要的一项ID，优先正文；ID中的body-A-B表示evidence_segments第A至B段（两端包含），body-A为单段，title为标题；只能逐字选择列表中的完整ID，最多连续3段，禁止自行构造ID；不抄写evidence_quote，不拼句或改写原文）', ',"evidence_id":"该条选项ID"');
 export const dailyWritingSystem = writingInstructions('，只用本条标题和 evidence 的冻结原文，引用由程序绑定，无需输出引文或段号；如有 novelty_evidence，摘要必须实际呈现这段原文中的新增就业数据', '')
-  + '\n若输入含 "reserve": true 的候补条目，items 仍须逐条覆盖全部输入 ID，但 executive_summary.sentences 只能概括并引用非候补主选条目，严禁引用 "reserve": true 的候补 ID。';
+  + '\n若输入含 "reserve": true 的候补条目，items 仍须逐条覆盖全部输入 ID，但 executive_summary.sentences 只能概括并引用非候补主选条目，严禁引用 "reserve": true 的候补 ID。'
+  + '\n此外，日报必须在 executive_summary 中额外输出 "outlook":{"text":"...","text_en":"..."}，作为速读摘要最后一段，专门概述未来 30 天内将发布的重要信息、政策决议与研究报告（如美联储 FOMC 利率决议、BLS 非农就业与 CPI、NAR 成屋销售与成屋签约销售指数、Census 新屋开工／营建许可与新屋销售、Case-Shiller 与 FHFA 房价指数、NAHB 住房市场指数及每周 Freddie Mac PMMS／MBA 按揭调查等）。outlook 必须严格依据输入提供的 upcoming_release_calendar 及当期文章内明确提及的近期发布安排撰写，严禁凭记忆编造日期或未证实数字；outlook 单独计算字数预算（中文 text 上限 240 个非空白 Unicode 字符，英文 text_en 上限 150 词，不含中文），不挤占 sentences 的 250 字符上限。';
 
 const writingEvidenceWindow = it => String(it.description || '').slice(0, 1800);
 const writingSource = (it, fixedEvidence) => it.title + ' ' + (fixedEvidence ? writingEvidenceWindow(it) : it.description);
@@ -498,7 +527,7 @@ export function validateWriting(data, selected, kind = 'daily', context = {}) {
 }
 const summaryTargets = (selected, fixedEvidence) => fixedEvidence ? selected.slice(0, 20) : selected;
 
-export function validateWritingMetadata(data, selected, kind, { requireEnglish = false, fixedEvidence = false } = {}) {
+export function validateWritingMetadata(data, selected, kind, { requireEnglish = false, fixedEvidence = false, issueDate = null, strictOutlookDates = false } = {}) {
   const targets = summaryTargets(selected, fixedEvidence);
   const source = new Map(targets.map(it => [it.id, it]));
   const reserveIds = fixedEvidence ? new Set(selected.slice(targets.length).map(it => it.id)) : null;
@@ -531,7 +560,43 @@ export function validateWritingMetadata(data, selected, kind, { requireEnglish =
   if (requireEnglish && englishWordCount(text_en) > 150) {
     const error = new LlmError('English executive summary exceeds 150 words'); error.code = 'SUMMARY_TOO_LONG_EN'; throw error;
   }
-  return { executive_summary: { text, ...(text_en !== undefined ? { text_en } : {}), sentences }, themes: themes.map(x => ({ ...x, title: normalizeChinese(x.title) })) };
+  let outlook;
+  if (kind === 'daily' && data.executive_summary?.outlook != null) {
+    const rawOutlook = data.executive_summary.outlook;
+    if (typeof rawOutlook !== 'object' || Array.isArray(rawOutlook) || typeof rawOutlook.text !== 'string' || !rawOutlook.text.trim()) {
+      throw new LlmError('Invalid executive summary outlook');
+    }
+    const refDate = referenceDateForItems(targets, { issueDate });
+    const outlookEvidence = releaseCalendarEvidence(refDate) + ' ' + targets.map(it => writingSource(it, fixedEvidence)).join(' ');
+    const outlookText = normalizeChinese(rawOutlook.text);
+    validateWritingNumbers(outlookText, outlookEvidence, false);
+    if (summaryCharacterCount(outlookText) > 240) {
+      throw new LlmError('Executive summary outlook exceeds 240 characters');
+    }
+    let outlookTextEn;
+    if (requireEnglish || rawOutlook.text_en !== undefined) {
+      outlookTextEn = validateEnglish(rawOutlook.text_en, outlookEvidence, false);
+      if (englishWordCount(outlookTextEn) > 150) {
+        throw new LlmError('English executive summary outlook exceeds 150 words');
+      }
+    }
+    if (strictOutlookDates) {
+      const allowed = outlookAllowedDates(refDate);
+      const articleDates = new Set(outlookDateMentions(targets.map(it => writingSource(it, fixedEvidence)).join(' ')).map(([m, d]) => m + '-' + d));
+      const bad = [...outlookDateMentions(outlookText), ...outlookDateMentions(outlookTextEn)].map(([m, d]) => m + '-' + d).filter(key => !allowed.has(key) && !articleDates.has(key));
+      if (bad.length) throw new LlmError('Outlook date is not on the release calendar or in cited evidence: ' + [...new Set(bad)].join(','));
+    }
+    outlook = { text: outlookText, ...(outlookTextEn !== undefined ? { text_en: outlookTextEn } : {}) };
+  }
+  return {
+    executive_summary: {
+      text,
+      ...(text_en !== undefined ? { text_en } : {}),
+      sentences,
+      ...(outlook ? { outlook } : {})
+    },
+    themes: themes.map(x => ({ ...x, title: normalizeChinese(x.title) }))
+  };
 }
 
 export function summaryCharacterCount(text) { return [...normalizeChinese(text).replace(/\s/g, '')].length; }
@@ -546,17 +611,21 @@ export function englishWordCount(text) { return String(text || '').trim().split(
 
 // Inspect all original metadata before dropping any trailing sentences.
 export function prepareWritingMetadata(data, selected, kind = 'daily', context = {}) {
-  try { return validateWritingMetadata(data, selected, kind, context); }
+  const targets = summaryTargets(selected, context.fixedEvidence);
+  const withOutlook = kind === 'daily' && context.requireEnglish && data?.executive_summary && typeof data.executive_summary === 'object' && data.executive_summary.outlook == null
+    ? { ...data, executive_summary: { ...data.executive_summary, outlook: buildDefaultOutlook(referenceDateForItems(targets, context)) } }
+    : data;
+  try { return validateWritingMetadata(withOutlook, selected, kind, context); }
   catch (error) {
     if (!(error instanceof LlmError) || !['SUMMARY_TOO_LONG', 'SUMMARY_TOO_LONG_EN'].includes(error.code)) throw error;
-    const original = data.executive_summary.sentences, kept = []; let characters = 0, words = 0;
+    const original = withOutlook.executive_summary.sentences, kept = []; let characters = 0, words = 0;
     for (const sentence of original) {
       const next = summaryCharacterCount(sentence.text), nextWords = englishWordCount(sentence.text_en);
       if (characters + next > 250 || (context.requireEnglish && words + nextWords > 150)) break;
       kept.push(sentence); characters += next; words += nextWords;
     }
     if (!kept.length) throw error;
-    const result = validateWritingMetadata({ ...data, executive_summary: { sentences: kept } }, selected, kind, context);
+    const result = validateWritingMetadata({ ...withOutlook, executive_summary: { ...withOutlook.executive_summary, sentences: kept } }, selected, kind, context);
     result.summary_shortening = { method: 'whole_sentence_prefix', original_characters: summaryCharacterCount(original.map(row => row.text).join('')), final_characters: characters, original_sentence_count: original.length, kept_sentence_count: kept.length,
       ...(context.requireEnglish ? { original_english_words: englishWordCount(original.map(row => row.text_en).join(' ')), final_english_words: words } : {}) };
     return result;
@@ -573,16 +642,21 @@ export function prepareWriting(data, selected, kind = 'daily', context = {}) {
   return result;
 }
 
-export function writingPrompt(kind, items, { fixedEvidence = false, reserveIds = null } = {}) {
+export function writingPrompt(kind, items, { fixedEvidence = false, reserveIds = null, issueDate = null } = {}) {
   const reserves = fixedEvidence ? reserveIds ?? new Set(items.slice(20).map(it => it.id)) : null;
-  return JSON.stringify({ kind, items: items.map(it => ({ id: it.id, title: it.title, source: it.source_name, section: it.section,
-    published_at: it.published_at, late_discovery: !!it.late_discovery,
-    ...(reserves?.has(it.id) ? { reserve: true } : {}),
-    ...(it.novelty_evidence ? { novelty_evidence: it.novelty_evidence } : {}),
-    ...(fixedEvidence ? { evidence: writingEvidenceWindow(it) } : {
-      evidence_segments: writingEvidenceSegments(it).map((row, i) => ({ id: i + 1, text: row.segment })),
-      evidence_options: writingEvidenceOptions(it).map(option => option.id)
-    }) })) });
+  const calendarTargets = fixedEvidence ? items.filter(it => !reserves?.has(it.id)) : items;
+  return JSON.stringify({
+    kind,
+    ...(kind === 'daily' && fixedEvidence ? { upcoming_release_calendar: releaseCalendarPrompt(referenceDateForItems(calendarTargets, { issueDate })) } : {}),
+    items: items.map(it => ({ id: it.id, title: it.title, source: it.source_name, section: it.section,
+      published_at: it.published_at, late_discovery: !!it.late_discovery,
+      ...(reserves?.has(it.id) ? { reserve: true } : {}),
+      ...(it.novelty_evidence ? { novelty_evidence: it.novelty_evidence } : {}),
+      ...(fixedEvidence ? { evidence: writingEvidenceWindow(it) } : {
+        evidence_segments: writingEvidenceSegments(it).map((row, i) => ({ id: i + 1, text: row.segment })),
+        evidence_options: writingEvidenceOptions(it).map(option => option.id)
+      }) }))
+  });
 }
 
 export function createWritingRepair(data, selected, kind, validate, validationContext = {}) {
@@ -651,3 +725,126 @@ export function createWritingRepair(data, selected, kind, validate, validationCo
 }
 
 export function dryDecisions(items) { return items.map(it => ({ id: it.id, keep: true, importance: it.is_research ? 4 : 3, section: classify(it), tags: it.tags || [], duplicate_of: null, reason: 'Deterministic dry run; no model judgment' })); }
+
+const reviewInstructions = (evidenceRule, evidenceOutput) => `你是机构级美国住宅、BTR/SFR、多户及 CRE 终审总编（Reviewer）。逐条对照给定原文 title 与 evidence，审核已生成的中文卡片（title_zh、summary_zh、impact）以及 executive_summary 与 themes：
+1. 事实与数值忠实度：标题和摘要必须完全基于给定证据，不得推断原文未提及的因果、补年份、把发布日期当统计期、四舍五入数值或自行计算差额／基点／增长率。
+2. impact 合理性：锚定美国住宅／BTR-SFR／多户及 CRE 机构资产持有者与投资人视角，复核 long-pos／short-pos／neutral／short-neg／long-neg 是否符合证据支持的传导方向与持续性，纠正按单一指标涨跌或协会情绪机械定性。
+3. 双语速读与主线：核对 executive_summary.sentences（中文目标 200、上限 250 非空白 Unicode 字符；英文 text_en 上限 150 词）及周／月报 themes 的中英文一致性、限定条件完整性与引用 item_ids 准确性。
+若全部合格无需修改，返回严格JSON：{"status":"pass","issues":[],"items":[]}。
+若发现需修正的卡片或速读／主线，返回严格JSON：{"status":"revise","issues":[{"id":"条目id或executive_summary/themes","field":"title_zh|summary_zh|impact|executive_summary|themes","reason":"审稿问题说明"}],"items":[{"id":"需修改的输入id","title_zh":"...","summary_zh":"...","impact":"neutral"${evidenceOutput}}]（仅当需修改速读时额外输出 "executive_summary":...，仅当需修改周／月报主线时额外输出 "themes":...）}。items 仅包含需要修改的条目，未修改条目由程序原样保留；不得增删条目数量或编造 ID。中文全角标点，中英文／数字间加空格，破折号用--。`;
+export const reviewSystem = reviewInstructions('、evidence_id（只能逐字选择该条 evidence_options 中的一项完整 ID，最多连续 3 段，禁止输出 evidence_quote）', ',"evidence_id":"该条选项ID"');
+export const dailyReviewSystem = reviewInstructions('（只用本条标题和 evidence 的冻结原文，引用由程序绑定；如有 novelty_evidence，摘要必须实际呈现这段原文中的新增就业数据）', '')
+  + '\n同时核对 executive_summary.outlook（未来 30 天重要发布与报告前瞻，中文 text 上限 240 字符、英文 text_en 上限 150 词），确认其日期与报告名称与 upcoming_release_calendar 或当期原文一致，无虚构日期或未证实数字。';
+
+export function buildReviewDraft(written, reviewItems = written?.items || [], { fixedEvidence = false } = {}) {
+  const shortIds = new Map(reviewItems.map((it, i) => [it.id, String(i + 1)]));
+  const writtenById = new Map((written?.items || []).map(it => [it.id, it]));
+  return {
+    items: reviewItems.map((it, i) => {
+      const id = String(i + 1);
+      const merged = { ...it, ...(writtenById.get(it.id) || {}) };
+      const evidenceId = !fixedEvidence && merged.evidence_quote ? writingEvidenceOptions({ ...merged, id }).find(opt => opt.text === merged.evidence_quote)?.id : undefined;
+      return { ...merged, id, ...(evidenceId ? { evidence_id: evidenceId } : {}) };
+    }),
+    executive_summary: written.executive_summary && { ...written.executive_summary, sentences: written.executive_summary.sentences?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) },
+    themes: (written.themes || []).map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })),
+    ...(written.validation_notes?.summary_shortening ? { summary_shortening: written.validation_notes.summary_shortening } : {})
+  };
+}
+
+export function reviewPrompt(kind, items, draft, { fixedEvidence = false, issueDate = null } = {}) {
+  const byId = new Map((draft?.items || []).map(card => [card.id, card]));
+  return JSON.stringify({
+    review_target: true,
+    kind,
+    ...(kind === 'daily' && fixedEvidence ? { upcoming_release_calendar: releaseCalendarPrompt(referenceDateForItems(items, { issueDate })) } : {}),
+    items: items.map(it => {
+      const card = byId.get(it.id) || {};
+      return {
+        id: it.id,
+        title: it.title,
+        source: it.source_name,
+        section: it.section,
+        published_at: it.published_at,
+        late_discovery: !!it.late_discovery,
+        ...(it.novelty_evidence ? { novelty_evidence: it.novelty_evidence } : {}),
+        ...(fixedEvidence ? { evidence: writingEvidenceWindow(it) } : {
+          evidence_segments: writingEvidenceSegments(it).map((row, i) => ({ id: i + 1, text: row.segment })),
+          evidence_options: writingEvidenceOptions(it).map(option => option.id)
+        }),
+        draft: {
+          title_zh: card.title_zh,
+          summary_zh: card.summary_zh,
+          impact: card.impact,
+          ...(card.evidence_id ? { evidence_id: card.evidence_id } : {})
+        }
+      };
+    }),
+    executive_summary: draft?.executive_summary ?? null,
+    themes: draft?.themes || []
+  });
+}
+
+export function prepareReview(data, selected, draft, kind = 'daily', context = {}) {
+  if (!data || typeof data !== 'object' || Array.isArray(data)) throw new LlmError('Invalid review response object');
+  if (!['pass', 'revise'].includes(data.status)) throw new LlmError('Invalid review status: expected pass or revise');
+  if (data.issues !== undefined && (!Array.isArray(data.issues) || data.issues.some(row => !row || typeof row !== 'object' || typeof row.reason !== 'string' || !row.reason.trim()))) throw new LlmError('Invalid review issues array');
+  if (data.items !== undefined && !Array.isArray(data.items)) throw new LlmError('Invalid review items array');
+  const source = new Map(selected.map(it => [it.id, it])), originalById = new Map(draft.items.map(card => [card.id, card])), replacements = new Map();
+  for (const card of data.items || []) {
+    if (!card || typeof card !== 'object' || !source.has(card.id) || replacements.has(card.id)) throw new LlmError('Invalid review item reference');
+    replacements.set(card.id, prepareWritingCard(card, source.get(card.id), context));
+  }
+  const hasMetadataChange = data.executive_summary !== undefined || data.themes !== undefined;
+  if (!replacements.size && !hasMetadataChange) {
+    if (data.status === 'revise') throw new LlmError('Review status revise requires at least one item or metadata revision');
+    return { status: 'pass', issues: data.issues || [], revised_ids: [], items: draft.items, executive_summary: draft.executive_summary, themes: draft.themes, ...(draft.summary_shortening ? { summary_shortening: draft.summary_shortening } : {}) };
+  }
+  const mergedItems = selected.map(it => replacements.get(it.id) || originalById.get(it.id));
+  const rawSummary = data.executive_summary !== undefined
+    ? (data.executive_summary && typeof data.executive_summary === 'object' && data.executive_summary.outlook === undefined && draft.executive_summary?.outlook
+      ? { ...data.executive_summary, outlook: draft.executive_summary.outlook }
+      : data.executive_summary)
+    : draft.executive_summary;
+  const rawThemes = data.themes !== undefined ? data.themes : draft.themes;
+  const canonicalIds = new Set(selected.map(it => it.id));
+  let executive_summary = null, themes = [], summary_shortening = draft.summary_shortening;
+  if (rawSummary === null && context.allowMissingSummary && (!rawThemes || !rawThemes.length)) {
+    validateWriting({ items: mergedItems, executive_summary: null, themes: [] }, selected, kind, { ...context, canonicalIds, allowMissingSummary: true });
+  } else {
+    let preparedMeta;
+    try { preparedMeta = prepareWritingMetadata({ executive_summary: structuredClone(rawSummary), themes: structuredClone(rawThemes || []) }, selected, kind, context); }
+    catch (error) {
+      const draftOutlook = draft.executive_summary?.outlook;
+      if (!(error instanceof LlmError) || kind !== 'daily' || !rawSummary?.outlook || !draftOutlook || rawSummary.outlook === draftOutlook) throw error;
+      preparedMeta = prepareWritingMetadata({ executive_summary: { ...structuredClone(rawSummary), outlook: structuredClone(draftOutlook) }, themes: structuredClone(rawThemes || []) }, selected, kind, context);
+    }
+    executive_summary = preparedMeta.executive_summary;
+    themes = preparedMeta.themes;
+    if (preparedMeta.summary_shortening) summary_shortening = preparedMeta.summary_shortening;
+    validateWriting({ items: mergedItems, executive_summary: structuredClone(executive_summary), themes: structuredClone(themes) }, selected, kind, { ...context, canonicalIds });
+  }
+  return { status: 'revise', issues: data.issues || [], revised_ids: [...replacements.keys()], items: mergedItems, executive_summary, themes, ...(summary_shortening ? { summary_shortening } : {}) };
+}
+
+export function createReviewRepair(data, selected, draft, kind, validate, validationContext = {}, error = null) {
+  if (!data || typeof data !== 'object' || Array.isArray(data)) return null;
+  const known = new Set(selected.map(it => it.id)), touched = new Set();
+  const cite = rows => { for (const row of Array.isArray(rows) ? rows : []) for (const id of Array.isArray(row?.item_ids) ? row.item_ids : []) if (known.has(id)) touched.add(id); };
+  for (const card of Array.isArray(data.items) ? data.items : []) if (known.has(card?.id)) touched.add(card.id);
+  cite(data.executive_summary?.sentences); cite(data.themes);
+  const focus = selected.filter(it => touched.has(it.id));
+  const system = (validationContext.fixedEvidence ? dailyReviewSystem : reviewSystem) + '\n上一轮终审修订未通过确定性校验。本次只展示 previous_review 涉及条目的原文与草稿，未展示条目保持原稿、不得修改。请仅修正 error 指出的字段或数值，返回完整合法的审核 JSON（{"status":"pass"|"revise","issues":[...],"items":[...]}），items 只能包含本次展示的条目；放弃修订时返回 {"status":"pass","issues":[],"items":[]}。勿编造原文不存在的数值或引文。';
+  return {
+    system,
+    user: JSON.stringify({ ...JSON.parse(reviewPrompt(kind, focus, draft, validationContext)), all_item_ids: selected.map(it => it.id), ...(error?.message ? { error: error.message } : {}), previous_review: data }),
+    validate(correction, context) {
+      if (Array.isArray(correction?.items) && correction.items.some(card => !touched.has(card?.id))) throw new LlmError('Invalid review item reference: repair may only revise displayed items');
+      if (correction?.executive_summary !== undefined && data.executive_summary === undefined) throw new LlmError('Invalid review item reference: repair cannot introduce new executive_summary changes');
+      if (correction?.themes !== undefined && data.themes === undefined) throw new LlmError('Invalid review item reference: repair cannot introduce new themes changes');
+      if (Array.isArray(correction?.executive_summary?.sentences) && correction.executive_summary.sentences.some(row => !Array.isArray(row?.item_ids) || row.item_ids.some(id => !touched.has(id)))) throw new LlmError('Invalid review item reference: repair summary may only cite displayed items');
+      if (Array.isArray(correction?.themes) && correction.themes.some(row => !Array.isArray(row?.item_ids) || row.item_ids.some(id => !touched.has(id)))) throw new LlmError('Invalid review item reference: repair themes may only cite displayed items');
+      return validate(correction, context);
+    }
+  };
+}

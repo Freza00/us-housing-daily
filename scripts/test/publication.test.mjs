@@ -86,7 +86,7 @@ test('publication safely retries unrelated main progress and never stages drafts
   const files=(await gitCommand(fixture.seed,['show','--pretty=format:','--name-only',result.commit])).split('\n');
   assert(files.every(file=>!file.startsWith('state/issues')&&file!=='USER_EDIT.md'));
   assert(publicationFiles(fixture.bundle.payload).every(file=>!file.startsWith('state/issues')));
-  assert.equal(fixture.client.usage.length,2);
+  assert.equal(fixture.client.usage.length,3);
 });
 
 test('publishing a frozen periodic input removes only identical coverage copies without changing the candidate',async t=>{
@@ -118,7 +118,7 @@ test('permanent push failure retains the frozen bundle and does not regenerate',
   const fixture=await setup(t);let pushes=0;
   const git=async(cwd,args)=>{if(args[0]==='push'){pushes++;throw Error('offline transport failure');}return gitCommand(cwd,args);};
   await assert.rejects(pushCandidate(fixture.bundle,{root:fixture.root,now,git}),/bundle retained/);
-  assert.equal(pushes,2);assert.equal(fixture.client.usage.length,2);
+  assert.equal(pushes,2);assert.equal(fixture.client.usage.length,3);
   assert.deepEqual(JSON.parse(await fs.readFile(fixture.bundleFile)),fixture.bundle);
   await gitCommand(fixture.seed,['fetch','origin','main']);
   assert.equal((await remoteJson(fixture,'data/latest.json')).date,'2026-10-27');
@@ -144,5 +144,5 @@ test('an existing archive with a stale latest/index/inline is repaired without r
   assert.deepEqual(await remoteJson(fixture,'data/dates.json'),['2026-10-28']);
   const html=await gitCommand(fixture.seed,['show','origin/main:public/index.html']);assert(html.includes('saved-story'));
   const again=await pushCandidate(fixture.bundle,{root:fixture.root,now});
-  assert.equal(again.already_pushed,true);assert.equal(again.commit,result.commit);assert.equal(fixture.client.usage.length,2);
+  assert.equal(again.already_pushed,true);assert.equal(again.commit,result.commit);assert.equal(fixture.client.usage.length,3);
 });

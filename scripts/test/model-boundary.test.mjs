@@ -145,6 +145,7 @@ test('failed second card repair preserves trimmed metadata and cold resume spend
   const fetchImpl = async (_url, options) => {
     const input = JSON.parse(JSON.parse(options.body).messages[1].content);
     if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id)) });
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
     writerCalls++;
     if (writerCalls === 1) {
       ids.push(...input.items.map(it => it.id)); badId = input.items[2].id;
@@ -174,7 +175,7 @@ test('failed second card repair preserves trimmed metadata and cold resume spend
   // canonical result is cached. No writer slot or time remains for network work.
   const cachedManifest = await read('manifest'); delete cachedManifest.phases.ready;
   cachedManifest.phases.cards.sha256 = digest(cards); cachedManifest.attempts.writer.at(-1).ms = 660000;
-  cachedManifest.budget_unknown = ['writer'];
+  cachedManifest.budget_unknown = ['writer', 'reviewer'];
   await fs.writeFile(path.join(dir, 'cards.json'), JSON.stringify(cards));
   await fs.writeFile(path.join(dir, 'manifest.json'), JSON.stringify(cachedManifest));
   await runPipeline('daily', { root, env, llmOptions: { fetchImpl() { throw new Error('Canonical repair cache must be read before exhausted or unknown budget'); } } });
@@ -188,6 +189,7 @@ test('weekly metadata-only cold repair cache uses full canonical validation even
   const fetchImpl = async (_url, options) => {
     const input = JSON.parse(JSON.parse(options.body).messages[1].content);
     if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id)) });
+    if (input.review_target) return response({ status: 'pass', issues: [], items: [] });
     calls++;
     if (calls === 1) { ids = input.items.map(it => it.id); return response({ items: input.items.map(it => ({ id: it.id, title_zh: '住宅研究', summary_zh: '销售增长 5%。', impact: 'neutral', ...modelEvidence(it) })), executive_summary: { sentences: [{ text: '销售增长 99%。', text_en: 'Sales rose 99%.', item_ids: ids }] }, themes: [] }); }
     return response(metadata(ids));
@@ -198,7 +200,7 @@ test('weekly metadata-only cold repair cache uses full canonical validation even
   await runPipeline('weekly', { root, env, llmOptions: { fetchImpl } });
   const ready = await read('ready'), manifest = await read('manifest');
   delete manifest.phases.ready; delete manifest.phases.metadata;
-  manifest.attempts.writer.at(-1).ms = 660000; manifest.budget_unknown = ['writer'];
+  manifest.attempts.writer.at(-1).ms = 660000; manifest.budget_unknown = ['writer', 'reviewer'];
   await fs.writeFile(path.join(dir, 'metadata.json'), 'null'); await fs.writeFile(path.join(dir, 'manifest.json'), JSON.stringify(manifest));
   await runPipeline('weekly', { root, env, llmOptions: { fetchImpl() { throw new Error('Metadata cache must not request a model'); } } });
   const cached = (await read('ready')).payload; assert.deepEqual(cached.items, ready.payload.items); assert.deepEqual(cached.executive_summary, ready.payload.executive_summary); assert.equal(calls, 2);

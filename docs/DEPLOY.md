@@ -4,7 +4,7 @@ Vercel 托管 `public/`，构建时复制 `data/`。GitHub Actions 生成数据�
 
 ## 配置
 
-GitHub Repository Secrets 使用 `LLM_API_KEY`、`LLM_ENDPOINT`、`LLM_MODEL`。保留已有密钥；推荐的当前模型配置是 `gpt-6.1-sol`。生成时分别显式请求 `medium` 和 `low`，不传 `temperature`。中转兼容性以 `scripts/probe-model.mjs` 的实际结果为准。
+GitHub Repository Secrets 使用 `LLM_API_KEY`、`LLM_ENDPOINT`、`LLM_MODEL` 及备用 `LLM_BACKUP_API_KEY`、`LLM_BACKUP_ENDPOINT`。保留已有密钥；当前默认模型配置是 `gpt-6.2-sol`，主通道与备用通道均同步切换：`editor` 与 `writer` 阶段显式请求 `high`（`sol6.2-high`），成稿后的 `reviewer` 审核阶段显式请求 `xhigh`（`sol6.2-xh`），不传 `temperature`。中转兼容性以 `scripts/probe-model.mjs` 的实际结果为准。
 
 SEC EDGAR 来源需要配置真实 `SEC_CONTACT_EMAIL`；未设置时该来源可能拒绝访问，不能把占位联系方式视为已符合要求。可通过 Actions 的环境配置传入；不要将真实密钥写进代码。
 
@@ -29,7 +29,7 @@ SEC EDGAR 来源需要配置真实 `SEC_CONTACT_EMAIL`；未设置时该来源�
 
 来源条件请求缓存及按完整模型请求计算的结果缓存使用 Actions cache restore/save；缓存组包含来源配置与解析模块散列，规则变动后不恢复旧解析结果；即使后续模型失败也保存检查点。模型缓存只存已通过校验的结果，重跑时再次校验。来源缓存和模型缓存不写入 Git。Actions cache 的逐出意味着缓存命中不保证，不能作为正确性前提。
 
-工作流依次冻结输入、编辑、写稿至 ready，在阶段边界上传 `news-issue-<kind>-<period>-r<revision>-<run>-<attempt>-<phase>`，保留 14 天。附件上传与缓存步骤设 1 分钟上限和 continue-on-error，缓存保存位于发布之后；附件失败仍可用当前 runner 的合格候选继续发布。恢复验证仓库、main 分支、工作流、身份、规则／模型及文件散列，并检查较新但未保存账本的模型阶段。
+工作流依次冻结输入、编辑、写稿、审核至 ready，在阶段边界上传 `news-issue-<kind>-<period>-r<revision>-<run>-<attempt>-<phase>`，保留 14 天。附件上传与缓存步骤设 1 分钟上限和 continue-on-error，缓存保存位于发布之后；附件失败仍可用当前 runner 的合格候选继续发布。恢复验证仓库、main 分支、工作流、身份、规则／模型及文件散列，并检查较新但未保存账本的模型阶段。
 
 失败任务另上传 `state/inputs/` 和 `state/snapshots/` 作为 artifact，保留 14 天。成功任务提交每日采集快照和实际候选，可用于周月报与离线比较。缓存和 artifact 不包含 .env 或密钥。
 
@@ -41,7 +41,7 @@ SEC EDGAR 来源需要配置真实 `SEC_CONTACT_EMAIL`；未设置时该来源�
 
 ## 发布与恢复入口
 
-生成工作流使用 `PIPELINE_UNTIL=prepared／editor／ready`，正式发布由 `node scripts/publish.mjs <kind> --push` 完成。发布器在临时克隆中合并当前 main，只提交刊物、索引／首页和约定的采集状态；Git 认证通过进程环境传递，不覆盖生产工作区，不强推或 rebase。线上核验通过后才写独立收据，已推送但生产仍旧会返回失败，不再调用模型。
+生成工作流使用 `PIPELINE_UNTIL=prepared／editor／writer／ready`，正式发布由 `node scripts/publish.mjs <kind> --push` 完成。发布器在临时克隆中合并当前 main，只提交刊物、索引／首页和约定的采集状态；Git 认证通过进程环境传递，不覆盖生产工作区，不强推或 rebase。线上核验通过后才写独立收据，已推送但生产仍旧会返回失败，不再调用模型。
 
 手动工作流支持 revision、period、cutoff；固定版本恢复不改变期号和截稿。外部截止调度与通知尚未启用；Vercel redeploy 只有显式 `--redeploy` 且提供受保护的 Deploy Hook 时可请求，三类工作流默认不调用。完整命令、失败含义及权限见 [恢复说明](RECOVERY.md)。
 

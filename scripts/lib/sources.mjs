@@ -170,7 +170,7 @@ export function createCollector({ cache = {}, fetchImpl = fetch, nativeFetchImpl
       health.discovery_truncated = health.discovered > (health.fetched_articles || 0);
     }
     items = items.map(it => {
-      const enriched = { ...it, source_family: source.family || source.id, is_research: !!source.is_research, required_source: !!source.required, mutable: !!source.mutable, first_seen_at: docs[it.link]?.first_seen_at || now };
+      const enriched = { ...it, source_family: source.family || source.id, is_research: !!source.is_research, required_source: !!source.required, ...(source.rate_benchmark ? { rate_benchmark: true } : {}), mutable: !!source.mutable, first_seen_at: docs[it.link]?.first_seen_at || now };
       enriched.id = itemId(enriched);
       if (enriched.mutable && it.published_at && it.published_at < sourceLower && prior?.versions?.[it.link] && prior.versions[it.link] !== it.content_hash) enriched.changed_without_new_date = true;
       return enriched;

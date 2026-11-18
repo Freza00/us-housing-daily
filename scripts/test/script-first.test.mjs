@@ -137,6 +137,7 @@ test('cold resume freezes trimmed metadata despite bad cards and requests only t
   assert.equal(frozen.summary_shortening.kept_sentence_count, 2);
   let calls = 0;
   const result = await runPipeline('daily', { root, env, collector: { collect() { throw Error('Unexpected recollection'); } }, client: { async call(system, user, options) {
+    if (options.label === 'reviewer') return options.validate({ status: 'pass', issues: [], items: [] });
     calls++; assert.equal(options.label, 'writer');
     const input = JSON.parse(user); assert.deepEqual(input.items.map(it => it.id), ['3']); assert.equal(input.original_evidence, undefined);
     return options.validate({ items: input.items.map(it => card({ ...it, description: it.evidence })) });

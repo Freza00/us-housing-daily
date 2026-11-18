@@ -746,6 +746,24 @@
       "max_articles": 18
     },
     {
+      "id": "mnd-rates",
+      "name": "Mortgage News Daily — Rate Watch",
+      "url": "https://www.mortgagenewsdaily.com/rss/rates",
+      "type": "rss",
+      "family": "mortgage-news-daily",
+      "region": "national",
+      "tier": "A",
+      "weight": 10,
+      "tags": [
+        "housing",
+        "rates",
+        "data",
+        "trend"
+      ],
+      "is_research": true,
+      "rate_benchmark": true
+    },
+    {
       "id": "freddie-pmms",
       "name": "Freddie Mac PMMS",
       "url": "https://www.freddiemac.com/pmms",
@@ -756,10 +774,12 @@
       "weight": 9,
       "tags": [
         "housing",
+        "rates",
         "data",
         "trend"
       ],
       "is_research": true,
+      "rate_benchmark": true,
       "mutable": true,
       "max_articles": 6
     },

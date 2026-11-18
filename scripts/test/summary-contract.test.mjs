@@ -85,7 +85,9 @@ test('pipeline normalizes once without correction and keeps the audit through co
   const collector={cache:{},enrich:async items=>items,collect:async()=>[{items:rows,health:{id:'a',required:true,status:'ok',articles:3,undated:0,coverage:{lower,upper}}}]};
   const requests=[];
   const llmOptions={fetchImpl:async(_url,request)=>{
-    const input=JSON.parse(JSON.parse(request.body).messages[1].content);requests.push(input);
+    const input=JSON.parse(JSON.parse(request.body).messages[1].content);
+    if(input.review_target)return response({status:'pass',issues:[],items:[]});
+    requests.push(input);
     if(Array.isArray(input))return response({decisions:input.map(it=>modelDecision(it.id))});
     assert.equal(requests.length,2,'No metadata correction should be requested');
     return response({items:input.items.map(it=>({id:it.id,title_zh:'住宅销售研究',summary_zh:'住宅销售增长 5%。',impact:'neutral',...modelEvidence(it)})),...shortMetadata([{text:'甲'.repeat(150),item_ids:['1']},{text:'乙'.repeat(120),item_ids:['2']},{text:'丙'.repeat(30),item_ids:['3']}])});
@@ -97,7 +99,7 @@ test('pipeline normalizes once without correction and keeps the audit through co
   for(const mode of ['metadata','cache']){
     const resumed=await sandbox(t);await fs.copyFile(path.join(root,'config/sources.json'),path.join(resumed,'config/sources.json'));
     const target=path.join(resumed,'state',issuePath);await fs.mkdir(target,{recursive:true});
-    const manifest=JSON.parse(await fs.readFile(path.join(dir,'manifest.json'))),phases=mode==='metadata'?['prepared','editor','cards','metadata']:['prepared','editor'];
+    const manifest=JSON.parse(await fs.readFile(path.join(dir,'manifest.json'))),phases=mode==='metadata'?['prepared','editor','cards','metadata','reviewer']:['prepared','editor'];
     manifest.phases=Object.fromEntries(phases.map(name=>[name,manifest.phases[name]]));
     await fs.writeFile(path.join(target,'manifest.json'),JSON.stringify(manifest));
     for(const name of phases)await fs.copyFile(path.join(dir,name+'.json'),path.join(target,name+'.json'));

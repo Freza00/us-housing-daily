@@ -73,5 +73,5 @@ test('equivalent source spelling survives editor freezing and cold writer resume
   assert(saved.every(row => row.geo_evidence === "California's housing market"));
   const writer = fakeClient();
   const result = await runPipeline('daily', { root, env, collector: { collect() { throw Error('Unexpected recollection'); } }, client: writer });
-  assert.equal(editorCalls, 1); assert.deepEqual(writer.usage.map(row => row.label), ['writer']); assert.equal(result.items.length, 2);
+  assert.equal(editorCalls, 1); assert.deepEqual(writer.usage.map(row => row.label), ['writer', 'reviewer']); assert.equal(result.items.length, 2);
 });

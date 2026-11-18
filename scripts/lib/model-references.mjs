@@ -19,6 +19,18 @@ export function createModelBatch(items) {
       return { ...data, items: data.items.map(value => ({ ...value, id: restore(value?.id) })),
         executive_summary: data.executive_summary && { ...data.executive_summary, sentences: references(data.executive_summary.sentences) },
         themes: references(data.themes) };
+    },
+    review(data) {
+      if (!data || typeof data !== 'object' || Array.isArray(data)) throw new LlmError('Invalid review response object');
+      const references = values => Array.isArray(values) ? values.map(value => ({ ...value, item_ids: Array.isArray(value?.item_ids) ? value.item_ids.map(restore) : value?.item_ids })) : values;
+      return {
+        ...data,
+        ...(Array.isArray(data.items) ? { items: data.items.map(value => ({ ...value, id: restore(value?.id) })) } : {}),
+        ...(Array.isArray(data.revised_ids) ? { revised_ids: data.revised_ids.map(restore) } : {}),
+        ...(Array.isArray(data.issues) ? { issues: data.issues.map(issue => issue && typeof issue === 'object' && ids.has(String(issue.id)) ? { ...issue, id: ids.get(String(issue.id)) } : issue) } : {}),
+        ...(data.executive_summary !== undefined ? { executive_summary: data.executive_summary && { ...data.executive_summary, sentences: references(data.executive_summary.sentences) } } : {}),
+        ...(data.themes !== undefined ? { themes: references(data.themes) } : {})
+      };
     }
   };
 }

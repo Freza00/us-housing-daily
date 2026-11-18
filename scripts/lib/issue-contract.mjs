@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { validateWriting, routeSection } from './editorial.mjs';
+import { validateWriting, routeSection, isMortgageRateStory } from './editorial.mjs';
 import { DAILY_WRITING_POLICY, isDailyUSStory } from './daily-edition.mjs';
 import { SUPPORTED_EDITORIAL_PROTOCOLS, assertEditorialEvidence } from './editor-evidence.mjs';
 
@@ -34,8 +34,15 @@ export function validateIssue(issue, { kind = issue?.kind || 'daily', upper, per
     if (!Number.isInteger(target) || target < issue.items.length || target > 20 || shortfall > 3 || issue.items.length < Math.ceil(target * 0.8) ||
         issue.content_status !== (shortfall ? 'partial' : 'passed') || (shortfall && issue.publication_status !== 'degraded')) throw new Error('Invalid daily content status');
     if (issue.summary_status !== (issue.executive_summary === null ? 'unavailable' : 'available')) throw new Error('Invalid daily summary status');
+    const enforcesRateOutlookContract = issue.date > '2026-11-18' || (issue.date === '2026-11-18' && (Number(issue.edition?.revision) > 1 || Boolean(issue._diagnostics?.review) || Boolean(issue._diagnostics?.rate_pin) || Boolean(issue.executive_summary?.outlook)));
+    if (enforcesRateOutlookContract && issue.items.some(it => isMortgageRateStory(it) && it.section === 'national') && (!isMortgageRateStory(issue.items[0]) || issue.items[0].section !== 'national')) {
+      throw new Error('Daily issue must place the latest mortgage rate story first');
+    }
+    if (enforcesRateOutlookContract && issue.executive_summary !== null && !issue.executive_summary?.outlook?.text) {
+      throw new Error('Missing daily 30-day release outlook in executive summary');
+    }
   }
-  validateWriting(structuredClone(issue), issue.items, kind, { requireEnglish: issue.editorial_schema === 2, fixedEvidence, allowMissingSummary: fixedEvidence });
+  validateWriting(structuredClone(issue), issue.items, kind, { requireEnglish: issue.editorial_schema === 2, fixedEvidence, allowMissingSummary: fixedEvidence, issueDate: issue.date });
   return issue;
 }
 

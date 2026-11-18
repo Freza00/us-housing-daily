@@ -58,7 +58,7 @@ test('failed hydration uses a bounded attempt budget before one complete frozen 
   const frozenBytes = await fs.readFile(path.join(dir, 'prepared.json'));
   const client = fakeClient(), forbidden = { collect() { throw Error('Recollection'); }, enrich() { throw Error('Post-freeze refill'); } };
   const ready = await runPipeline('daily', { root, now, env: { ...env, PIPELINE_UNTIL: 'ready' }, collector: forbidden, client });
-  assert.equal(ready.stage, 'ready'); assert.deepEqual(client.usage.map(row => row.label), ['editor', 'writer']);
+  assert.equal(ready.stage, 'ready'); assert.deepEqual(client.usage.map(row => row.label), ['editor', 'writer', 'reviewer']);
   assert(frozenBytes.equals(await fs.readFile(path.join(dir, 'prepared.json'))));
   const bundle = JSON.parse(await fs.readFile(path.join(dir, 'ready.json')));
   assert.equal(bundle.payload.items.length, 3);

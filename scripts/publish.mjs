@@ -13,7 +13,7 @@ export async function loadCurrentCandidate(root, kind, env = process.env, now = 
   const archive = await readJson(path.join(data, period + '.json'));
   if ((!env.ISSUE_REVISION || Number(env.ISSUE_REVISION) <= (archive?.edition?.revision || 0)) && validArchive(archive, { kind, upper: window.upper, period })) return { schema_version: 1, identity: archive.edition, payload: archive };
   const sources = (await readJson(path.join(root, 'config/sources.json'))).sources, tags = await readJson(path.join(root, 'config/tags.json'));
-  const store = await openIssueStore(env.NEWS_STATE_DIR || path.join(root, 'state'), { kind, period, upper: window.upper, revision: env.ISSUE_REVISION || undefined, rules: digest([await ruleDigest(), sources, tags]), model: env.LLM_MODEL || 'gpt-6.1-sol' });
+  const store = await openIssueStore(env.NEWS_STATE_DIR || path.join(root, 'state'), { kind, period, upper: window.upper, revision: env.ISSUE_REVISION || undefined, rules: digest([await ruleDigest(), sources, tags]), model: env.LLM_MODEL || 'gpt-6.2-sol' });
   const bundle = await store.get('ready');
   if (bundle) return bundle;
   throw new Error('No validated candidate or matching published issue');

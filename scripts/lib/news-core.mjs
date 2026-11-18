@@ -90,6 +90,7 @@ function makeItem(source, title, link, desc, pub) {
     source_weight: source.weight,
     source_tags: source.tags,
     region: source.region,
+    ...(source.rate_benchmark ? { rate_benchmark: true } : {}),
     title,
     link: link.trim(),
     description: desc.slice(0, 600),
@@ -150,7 +151,7 @@ function scoreItem(item, now) {
   if (/manhattan|brooklyn|new\s+york\s+city|\bnyc\b/.test(tlow)) tags.add("nyc");
   if (/\bcalifornia\b|\b(los\s+angeles|san\s+francisco|orange\s+county|bay\s+area)\b/.test(tlow)) tags.add("california");
   if (hm.length) tags.add("macro");
-  if (/mortgage\s+rate|interest\s+rate|\bfed\s+rate|rate\s+(?:cut|hike)|\bbps\b|30[-\s]year|6\.\d%/.test(tlow)) tags.add("rates");
+  if (/mortgage\s+rate|interest\s+rate|\bfed\s+rate|rate\s+(?:cut|hike)|\bbps\b|30[-\s]year|[4-9]\.\d\d?%/.test(tlow)) tags.add("rates");
   if (/legislat|regulat|senate|house\s+(?:bill|members)|congress|hud\b|fhfa|policy/.test(tlow)) tags.add("policy");
   if (/\b(acquisition|acquires?|sells?\b|sale\b|merger|m&a|ipo|fundrais|raised\s+\$|leas(?:e|es|ing)|signs|negotiates|loan|refinanc)/.test(tlow)) tags.add("deals");
   if (ht.length) tags.add("trend");

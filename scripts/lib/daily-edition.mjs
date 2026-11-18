@@ -1,6 +1,7 @@
-import { geographyEvidenceMatches, validateWritingMetadata } from './editorial.mjs';
+import { geographyEvidenceMatches, validateWritingMetadata, isMortgageRateStory } from './editorial.mjs';
 import { LlmError } from './llm-client.mjs';
 import { assertEditorialEvidence } from './editor-evidence.mjs';
+import { buildDefaultOutlook, referenceDateForItems } from './release-calendar.mjs';
 
 export const DAILY_WRITING_POLICY = 'daily-pool-v1';
 export const DAILY_WRITING_LIMIT = 26;
@@ -39,7 +40,7 @@ export function isDailyUSStory(item, decision) {
     geographyEvidenceMatches(text, evidence).some(match => !headquartersOverlap(text, match) || index === 0 && officeOpening));
 }
 
-export function assembleDailyEdition(primary, pool, cards, metadata, { allowPartial = false, requireSummary = false } = {}) {
+export function assembleDailyEdition(primary, pool, cards, metadata, { allowPartial = false, requireSummary = false, issueDate = null } = {}) {
   const byId = new Map(cards.map(item => [item.id, item]));
   const primaryIds = new Set(primary.map(item => item.id));
   const slots = primary.map(item => byId.get(item.id));
@@ -53,26 +54,50 @@ export function assembleDailyEdition(primary, pool, cards, metadata, { allowPart
     replacements.push({ deferred_id: primary[index].id, published_id: reserve.id });
   };
   const deferred = primary.filter(item => !byId.has(item.id));
-  if (deferred.some(item => item.importance >= 4)) return null;
+  const firstIsMortgageRate = primary.length > 0 && isMortgageRateStory(primary[0]);
+  if (firstIsMortgageRate && !slots[0]) {
+    reserveFor(0, reserve => isMortgageRateStory(reserve) && (reserve.section || 'national') === 'national');
+    if (!slots[0] && !allowPartial) return null;
+  }
+  if (deferred.some(item => item.importance >= 4 && !(firstIsMortgageRate && item.id === primary[0]?.id && (slots[0] || allowPartial)))) return null;
   for (const match of [
     (reserve, item) => reserve.section === item.section && reserve.tags[0] === item.tags[0],
     (reserve, item) => reserve.section === item.section,
     () => true
   ]) {
-    primary.forEach((item, index) => { if (!slots[index]) reserveFor(index, reserve => match(reserve, item)); });
+    primary.forEach((item, index) => { if (!(firstIsMortgageRate && index === 0) && !slots[index]) reserveFor(index, reserve => match(reserve, item)); });
   }
   const items = slots.filter(Boolean);
+  if (items.length > 1 && !isMortgageRateStory(items[0])) {
+    const rateIdx = items.findIndex(it => isMortgageRateStory(it) && (it.section || 'national') === 'national');
+    if (rateIdx > 0) {
+      const [rateItem] = items.splice(rateIdx, 1);
+      items.unshift(rateItem);
+    }
+  }
   const shortfall = primary.length - items.length;
   if (!items.length || primary.some(item => !items.some(kept => kept.section === item.section))) return null;
   if (shortfall && (!allowPartial || shortfall > 3 || items.length < Math.ceil(primary.length * 0.8))) return null;
   const ids = new Set(items.map(item => item.id));
   const sentences = metadata?.executive_summary?.sentences?.filter(row => row.item_ids.every(id => ids.has(id))) || [];
   let executiveSummary = null;
+  let outlookFallback = metadata?.outlook_fallback;
   if (sentences.length) {
+    const defaultOutlook = buildDefaultOutlook(referenceDateForItems(items, { issueDate }));
+    const candidateOutlook = metadata?.executive_summary?.outlook ? structuredClone(metadata.executive_summary.outlook) : defaultOutlook;
     try {
-      executiveSummary = validateWritingMetadata({ executive_summary: { sentences: structuredClone(sentences) }, themes: [] }, items, 'daily',
-        { requireEnglish: true, fixedEvidence: true }).executive_summary;
-    } catch (error) { if (!(error instanceof LlmError)) throw error; }
+      executiveSummary = validateWritingMetadata({ executive_summary: { sentences: structuredClone(sentences), outlook: candidateOutlook }, themes: [] }, items, 'daily',
+        { requireEnglish: true, fixedEvidence: true, issueDate }).executive_summary;
+    } catch (error) {
+      if (!(error instanceof LlmError)) throw error;
+      if (metadata?.executive_summary?.outlook) {
+        try {
+          executiveSummary = validateWritingMetadata({ executive_summary: { sentences: structuredClone(sentences), outlook: defaultOutlook }, themes: [] }, items, 'daily',
+            { requireEnglish: true, fixedEvidence: true, issueDate }).executive_summary;
+          outlookFallback = error.message;
+        } catch (fallbackError) { if (!(fallbackError instanceof LlmError)) throw fallbackError; }
+      }
+    }
   }
   if (requireSummary && !executiveSummary) return null;
   return {
@@ -81,6 +106,7 @@ export function assembleDailyEdition(primary, pool, cards, metadata, { allowPart
     themes: [],
     validation_notes: {
       ...(metadata?.summary_shortening ? { summary_shortening: metadata.summary_shortening } : {}),
+      ...(outlookFallback ? { outlook_fallback: outlookFallback } : {}),
       discarded_output_ids: []
     },
     writing: {

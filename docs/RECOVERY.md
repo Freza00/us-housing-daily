@@ -4,7 +4,7 @@
 
 ## 阶段事实源
 
-`state/issues/<kind>/<period>/r<revision>/` 保存 `manifest.json`、`prepared.json`、`editor.json`、`cards.json`、`metadata.json`、`ready.json`。prepared 冻结实际证据、稳定 ID、原始采集增量和前置版本；cards 只保存通过逐稿校验的卡片，metadata 绑定完整入选集合；ready 包含完整合格刊物和发布所需增量。
+`state/issues/<kind>/<period>/r<revision>/` 保存 `manifest.json`、`prepared.json`、`editor.json`、`cards.json`、`metadata.json`、`reviewer.json`、`ready.json`。prepared 冻结实际证据、稳定 ID、原始采集增量和前置版本；cards 只保存通过逐稿校验的卡片，metadata 绑定完整入选集合，reviewer 保存 `gpt-6.2-sol`（`xhigh`）终审结果及校验通过的修订后成稿；ready 包含完整合格刊物和发布所需增量。
 
 manifest 记录身份、规则及模型指纹、阶段散列和逐次调用账本。普通重试固定 revision；FORCE_RUN=1 且未指定 ISSUE_REVISION 时才创建新修订。GitHub 新修订号结合 run ID／attempt 分配，允许非连续增长，防止上次附件全部丢失后误用旧号。指定 revision 始终恢复该版，不重置其额度；该版附件缺失、过期或规则不兼容时明确失败，不自动换号，有效同版本地阶段／已刊归档可继续使用。
 
@@ -16,7 +16,7 @@ manifest 记录身份、规则及模型指纹、阶段散列和逐次调用账�
 
 恢复时先逐卡检查最终规范化形态，并独立检查摘要／主线。失效卡片从可复用集合移除，无效 metadata 记为空；仅修缺口，保留合格卡片、冻结证据及原调用账本。未知／重复卡片编号、集合指纹不符和附件散列损坏仍直接拒绝，不作为普通内容错误忽略。
 
-两阶段各最多 3 次请求，合计模型耗时预算 660 秒。局部纠正与传输重试共用该预算；账本中的未结束请求按预留时长计算。附件缺失或较新的运行已开始模型阶段却没有最终账本时，相关阶段标记 budget_unknown，禁止新请求；已验证缓存和 ready 仍能使用。不要清空 manifest 绕过上限。
+三阶段各最多 3 次请求，合计模型耗时预算 660 秒。局部纠正与传输重试共用该预算；账本中的未结束请求按预留时长计算。附件缺失或较新的运行已开始模型阶段却没有最终账本时，相关阶段标记 budget_unknown，禁止新请求；已验证缓存和 ready 仍能使用。不要清空 manifest 绕过上限。
 
 恢复合并 pending 时仅去除完整对象完全相同的 source_health 观测，保留不同时间、状态与覆盖区间。生成与发布的输入快照使用同一规则，避免重复恢复使覆盖信息倍增；发布旧冻结候选时只物化精简后的输入文件，不改 ready、payload、阶段散列或调用账本。白名单文件超过 GitHub 100 MiB 限制时在 commit／push 前明确拒绝，须先定位数据膨胀，不通过清账本或重新生成绕过。
 
@@ -52,6 +52,7 @@ writing_plan 保存主选数、写稿池数、暂缓稿及替换关系，来源�
 # 用既有密钥环境，顺序执行；同版后续阶段不重新补文或选稿。
 PIPELINE_UNTIL=prepared node --env-file=.env scripts/build.mjs
 PIPELINE_UNTIL=editor node --env-file=.env scripts/build.mjs
+PIPELINE_UNTIL=writer node --env-file=.env scripts/build.mjs
 PIPELINE_UNTIL=ready node --env-file=.env scripts/build.mjs
 
 # ready 包已存在时不需要模型凭据；无 --push 只核验生产。
@@ -66,7 +67,7 @@ node scripts/check-publication.mjs daily
 
 GitHub 工作流先调用 `restore-issue.mjs <kind>`，用 `GH_TOKEN` 读取附件。手动输入 revision 留空选最新，period 为 YYYY-MM-DD（日报／周报）或 YYYY-MM（月报），cutoff 为 epoch 毫秒。后续步骤传递 prepared 输出的身份，防止排队跨日后变成另一刊。恢复需要 contents:write 和 actions:read；Git 推送采用仅在子进程存在的认证头，不把 token 放到命令参数或候选包。
 
-主备 LLM 凭据使用独立 Secrets：主通道为 `LLM_API_KEY`／`LLM_ENDPOINT`，备用为 `LLM_BACKUP_API_KEY`／`LLM_BACKUP_ENDPOINT`；备用地址留空时使用 `https://api.openai.com/v1/chat/completions`。三类工作流的 editor／writer 均传入备用配置，定时、repository_dispatch 和默认手动运行都先走主通道；备用 Key 非空且主备地址／Key 组合不完全相同时启用自动故障切换，不覆盖原主 Secrets。
+主备 LLM 凭据使用独立 Secrets：主通道为 `LLM_API_KEY`／`LLM_ENDPOINT`，备用为 `LLM_BACKUP_API_KEY`／`LLM_BACKUP_ENDPOINT`；备用地址留空时使用 `https://api.openai.com/v1/chat/completions`。三类工作流的 editor／writer（`gpt-6.2-sol` `high`）与 reviewer（`gpt-6.2-sol` `xhigh`）均传入主备配置，定时、repository_dispatch 和默认手动运行都先走主通道；备用 Key 非空且主备地址／Key 组合不完全相同时启用自动故障切换，不覆盖原主 Secrets。
 
 主通道在获得完整有效模型 JSON 前出现网络、超时、流、截断／无效 JSON 或任意非 2xx HTTP 错误（含 522、5xx、429、408、401／403、insufficient_quota、get_channel_failed），立即在客户端内标记使用备用；在剩余额度允许时，下一次重试及同实例后续调用（含 writer）直接走备用，不再探测主通道。完整 JSON 已返回后的业务／证据 validation 错误仅在当前通道局修，不触发切换。未配置可用且不同的备用，或已走备用时，永久 HTTP 错误仍快速失败。
 

@@ -15,8 +15,8 @@ await fs.mkdir(out,{recursive:true});
 const report={started_at:new Date().toISOString(),method:'Paired fixed-input experiment; editor medium vs low, writer low in both. Shared valid-result cache. No source requests and no production writes.',snapshot,cases:[],limitations:['Reconstructed current feeds are not original-time acquisition snapshots.','Proxy usage is reported usage; accepted reasoning_effort does not prove native reasoning internals.','Writer cache hits reduce charged calls and must be separated when comparing input sizes.','Evidence and numeric checks do not assess every causal or editorial judgment.']};
 for(const c of cases)for(const effort of ['medium','low']){
  const dir=path.join(out,c.kind+'-'+c.now.slice(0,10)+'-'+effort);
- const raw=createLlmClient({endpoint:process.env.LLM_ENDPOINT,apiKey:process.env.LLM_API_KEY,model:process.env.LLM_MODEL||'gpt-6.1-sol',cacheDir:path.join(out,'checkpoints')});
- const client={usage:raw.usage,call:(system,user,opts)=>raw.call(system,user,{...opts,effort:opts.label==='editor'?effort:'low'})};
+ const raw=createLlmClient({endpoint:process.env.LLM_ENDPOINT,apiKey:process.env.LLM_API_KEY,model:process.env.LLM_MODEL||'gpt-6.2-sol',cacheDir:path.join(out,'checkpoints')});
+ const client={usage:raw.usage,call:(system,user,opts)=>raw.call(system,user,{...opts,effort:opts.label==='editor'?effort:opts.label==='reviewer'?'xhigh':'high'})};
  const started=Date.now();
  try{
   const result=await runPipeline(c.kind,{root,client,env:{REPLAY_SNAPSHOT:snapshot,PUBLISH_NOW:c.now,NEWS_DATA_DIR:path.join(dir,'data'),NEWS_STATE_DIR:path.join(dir,'state')}});
