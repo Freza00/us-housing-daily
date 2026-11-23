@@ -2,6 +2,10 @@
 
 ## 当前状态
 
+2026-11-23 16:14，方案 C 已在周报补发基点 `fcd633a0944465f8eec2375095ac429c359323ef` 完成本地实施与验收。模型阶段在同一 Actions job 内继承备用路由，同版总预算 900,000 ms，job 第 21 分钟停止模型请求、上限 25 分钟。终审按四态保留结果，使用 24,000 completion tokens 与 210／270 秒首字节／总时限。周报自动 `r2` 通过 gate、恢复 CLI 和流水线的本地闭环，月报通过恢复附件与窗口边界测试。此次变更尚未上线。
+
+协调者提供的 `2026-11-16` 周报补发记录（run `45132667872`）显示，旧终审配置两次在约 148 秒收到首字节，并在 10,000 completion tokens 上限处截断。本轮已提高限额，后续真实刊物的终审耗时与完成率仍待上线验证。
+
 2026-11-18 16:52，已将默认模型切换 `gpt-6.2-sol`（`editor`／`writer` `high` + 写后 `reviewer` `xhigh`）、日报第 1 条固定为最新美国房贷利率、速读摘要末尾 30 天重要发布与报告前瞻（`executive_summary.outlook`）及 `opus5.5-high` 12 步行动方案（`R1`--`R9`）与 `sol6.2-medium` 审计补强正式上线（代码提交 `eb01c8f`，CI `440 / 440` 通过，Vercel Production `7878222128` `success`，GitHub Actions `LLM_MODEL` Secret 已同步为 `gpt-6.2-sol`），并通过生产运行 [`44268419380`](https://github.com/Freza00/us-housing-daily/actions/runs/44268419380) 刷新发布 `2026-11-18` 日报（数据提交 `b7f30e9`，`revision: 44268419380002`，`20` 条，`complete`）：第 1 条（`items[0]`，`national` 首条）固定为最新美国 30 年期按揭利率（`7.58%`），速读摘要末尾完整展示中英双语 30 天官方发布与报告前瞻；生产实况同时验证了 `writer` 主通道超时后自动粘性切换 `backup` 单卡局修成稿、`R2` 满额成稿进入 `reviewer` 及 `reviewer` 触及 `660s` 总预算上限时的非破坏性回退保底，`https://news-agent-mu.vercel.app/` 6 路核心资源与数据 SHA-256 逐字节匹配。[上线验收](docs/validation/2026-11-18-sol62-rate-outlook-release.md)。
 
 2026-11-18 16:05，已按 `opus5.5-high`（`claude-opus-5-5-high`）制定的 12 步行动方案完成 `R1`--`R9` 全部残留盲点闭环，并经 `sol6.2-medium`（`gpt-6.2-sol`，`reasoning_effort: "medium"`）二次复核强化 `R5` 元数据防回退护栏：
@@ -53,8 +57,6 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 ## 待确认
 
-- `scripts/lib/digest-core.mjs`（仅被 `scripts/test/themes.test.mjs` 引用，生产已迁移至 `news-core.mjs` + `editorial.mjs`）与 `scripts/lib/dates.mjs` 中未被引用的 `dateRange`、`recentDates`、`shiftDays` 导出是否清理（涉及文件删除或接口精简，待明确授权后处理）。
-- 生产环境 `reviewer`（`gpt-6.2-sol`，`reasoning_effort: "xhigh"`）`maxTokens: 10000` 在真实出刊中的 reasoning token 消耗占比与 `finish_reason: "length"` 触发频率，待上线后通过 `attempts.jsonl` 持续观察。
 - `outlook` 已通过 `outlookAllowedDates`（`[-5, +35]` 天窗口）拦截越界幻觉日期，但单句内将合法报告名与另一合法日程日期错配的残余风险（回退保底为 `buildDefaultOutlook`），待观察生产实况表现后再决定是否引入实体-日期配对级校验。
 
 - 2026-11-17 20:21 实施并上线 `opus5.5-high` 方案（`3860ee5`）：收紧 `daily` `degraded` 触发边界并输出 `coverage_reasons`；删除 `public/app.js` 失实的“补齐后可更新”提示并区分新刊原因、周／月 `r2` 与历史兼容归档；新增 `withinRecoveryWindow`／`canAttemptRecoverySchedule`／`recoverableRevision` 与 `loadWindowSnapshots` 并在 `can-run.mjs`、`restore-issue.mjs`、`pipeline.mjs`、`publish.mjs`、`publication.mjs` 与 `dispatch.mjs` 统一执行周 48h／月前 3 工作日、仅 `r1 -> r2` 快照清零后的受限自动补全修订；扩充 `weekly.yml`/`monthly.yml`/`vercel.json` 补偿调度与 `coverage-tiering.test.mjs`。后续真实周／月 `r1 -> r2` 线上定时触发待观察。[上线验收](docs/validation/2026-11-17-coverage-tiering-release.md)。
@@ -74,6 +76,8 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 15 个研究入口仍有访问或发现障碍；31／46 可读是此前本机探针结果，不代表生产已全部覆盖。Vercel CLI 现有 token 无效，未独立读取账号套餐和线上 cron 注册表；部署已接受仓库 cron 配置，Actions 补偿配置已上线。
 
 ## 最近完成
+
+- 2026-11-23 16:14 方案 C 修复同 job 跨进程粘性路由、首次跨 origin 免退避、终审四态及冷恢复、编辑阶段时间戳保护、模型容量与停止点、周／月报自动 `r2` 首跑和资本主体证据提示。移除 7 个停用文件及一行过时前端注释，同步运行与恢复文档。
 
 - 2026-11-18 16:52 以 `eb01c8f` 上线默认模型切换 `gpt-6.2-sol`（`high` + `xhigh` `reviewer`）、日报首条房贷利率置顶、速读末尾 30 天官方发布前瞻及 `R1`--`R9` 加固，同步更新 GitHub Actions `LLM_MODEL` Secret 为 `gpt-6.2-sol`，并通过 `daily.yml`（run `44268419380` -> `b7f30e9`）刷新上线 `2026-11-18` 日报（`20` 条、首条 `7.58%` 按揭利率、完整双语速读与 30 天发布前瞻）。[上线验收](docs/validation/2026-11-18-sol62-rate-outlook-release.md)。
 
@@ -114,9 +118,9 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 
 - 2026-11-06 10:57 按 Astra-max 扩查方案统一页面加载身份和失败状态，英文卡片改用已验证原文节选，补齐标签／Sun Belt／北京日历及双语状态；收紧行业监管与机构资本提示，未增加模型步骤。复审通过，未提交、未部署、未改写已刊数据。[验收](docs/validation/2026-11-06-page-fix.md)。
 
-- 2026-11-06 10:13 先以 0716b4c 发布 6 号 20 条，再以 2e91563 同步开源并上线地域校验修复。CI 282 项通过、Vercel success，11 路线上资源／数据匹配，旧刊与原账本保持；发布零新增模型／采集。[验收](docs/validation/2026-11-06-geography-release.md)。
-
 ## 最近验证
+
+- 2026-11-23 16:14 本地 `npm test` 432 项通过，0 失败、0 跳过。对基点 210 份归档逐文件运行 `validateIssue`，前后结果逐字节一致。23 份 v2 全通过，187 份旧格式均沿用 `Invalid published issue status` 结果。受保护路径差异检查、`.env` SHA-256 和 `git diff --check` 均通过。小额模型探针在已配置主通道以 `high` 与 `xhigh` 均收到 HTTP 200 和完整 JSON。
 
 - 2026-11-18 16:52 隔离发布区、主工作区及 GitHub Actions `Validate Pipeline` CI `npm test` 均 `440 / 440` 通过（0 失败 / 0 跳过），209 份归档文件（`v2: 22`、`v1: 187`）`validateIssue` 100% 通过；Vercel Production `7878222128`（`eb01c8f`）与生产构建 `44268419380`（`b7f30e9`）均为 `success`，实测验证 `writer` 主通道超时自动粘性切备用单卡局修及 `reviewer` 耗时触顶非破坏性回退；`https://news-agent-mu.vercel.app/` 6 路核心资源与 `2026-11-18` 数据 SHA-256 与 `b7f30e9` 逐字节一致。[上线验收](docs/validation/2026-11-18-sol62-rate-outlook-release.md)。
 
@@ -156,8 +160,6 @@ P0 自动出刊强化已完成代码与本地验证：冻结版本、分阶段�
 - 2026-11-06 10:57 主工作区与基于生产 040df80 的干净副本各 298／298；两轮离线 Chromium 各 15 场景／39 语言状态和 15 边界通过，0 页面异常／横向溢出。真实 editor medium 单次 6 样本全过，13,071 tokens；49 个 data、13 个 state 文件保持，生产额度及环境／CI 配置未改。[结构化记录](docs/validation/2026-11-06-page-fix.json)。
 
 - 2026-11-06 10:31 实际站点 15 场景／39 语言状态、四种宽度及归档／日历／筛选只读检查，0 页面异常、0 横向溢出，但确认六项交互与内容问题。三刊 60 条契约通过，54 链接为 42 HTTP 成功／11 访问受限／1 未核实，无 404。只审查，无代码／稿件／生成／发布变更。[记录](docs/validation/2026-11-06-whole-page-acceptance.json)。
-
-- 2026-11-06 10:13 发布副本及 Node.js v22.23.4 CI 各 282／282、0 失败；数据与代码 Vercel 均 success。线上首页／JS／CSS、日报四路及周月四路共 11 个入口散列一致，386 个远端非目标文件和 312 个原工作区非目标文件保持，r1／规则／账本未改签；无新生成请求。[证据](docs/validation/2026-11-06-geography-release.json)。
 
 ## 已定位问题
 

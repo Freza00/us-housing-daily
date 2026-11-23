@@ -1,12 +1,16 @@
 # 固定版本恢复与交付核验
 
-恢复先判断本期是否已有合格归档或 ready 候选，再补未完成阶段。全期覆盖遵循分层口径（`snapshot_gap`、`required_source`、`section_lead_gap`），非必需来源失败或已有入选稿件栏目的部分候选漏斗损耗不把整期标记为 `degraded`；已冻结或已发布归档不得向页面承诺无条件“补齐后可更新”。普通补偿不为日报或非快照缺口的 `degraded` 重新选稿。自动执行沿用北京时间日历守卫；周／月报仅开放有严格上界的单次自动 `r2` 快照补全修订：要求已有有效归档 `edition.revision === 1`、`coverage_status === 'degraded'`、归档 `_diagnostics.coverage_gaps` 非空、以当前 `state/snapshots/` 与检查点重算的 `coverageGaps` 降为 0，且在有限窗口内（周报为截稿后 48 小时内工作日，月报为次月前 3 个工作日）；`r2` 使用独立阶段目录与 660,000 ms／3 次请求账本，永不触发 `r3`，日报永不自动反向重改。保留已有显式 FORCE_RUN 工作日手动接口，指定 revision 时不丢失该许可，周末始终退出；不用历史 PUBLISH_NOW 绕过发布日历。
+恢复先判断本期是否已有合格归档或 ready 候选，再补未完成阶段。全期覆盖遵循分层口径（`snapshot_gap`、`required_source`、`section_lead_gap`），非必需来源失败或已有入选稿件栏目的部分候选漏斗损耗不把整期标记为 `degraded`；已冻结或已发布归档不得向页面承诺无条件“补齐后可更新”。普通补偿不为日报或非快照缺口的 `degraded` 重新选稿。自动执行沿用北京时间日历守卫；周／月报仅开放有严格上界的单次自动 `r2` 快照补全修订：要求已有有效归档 `edition.revision === 1`、`coverage_status === 'degraded'`、归档 `_diagnostics.coverage_gaps` 非空、以当前 `state/snapshots/` 与检查点重算的 `coverageGaps` 降为 0，且在有限窗口内（周报为截稿后 48 小时内工作日，月报为次月前 3 个工作日）；`r2` 使用独立阶段目录与 900,000 ms 总预算及每阶段 3 次请求账本，永不触发 `r3`，日报永不自动反向重改。保留已有显式 FORCE_RUN 工作日手动接口，指定 revision 时不丢失该许可，周末始终退出；不用历史 PUBLISH_NOW 绕过发布日历。
+
+自动修订的 gate 只写 `ISSUE_AUTO_REVISION`。恢复 CLI 重新检查归档与覆盖窗口，优先恢复可信的 `r2` 附件或有效本地阶段。首次分配要求有可信的 `r1` 完成时间，且该时间起无未决模型步骤。附件过期、损坏或后续步骤无最终账本时拒绝新额度。恢复或分配通过后才写入 `ISSUE_REVISION=2`。
 
 ## 阶段事实源
 
 `state/issues/<kind>/<period>/r<revision>/` 保存 `manifest.json`、`prepared.json`、`editor.json`、`cards.json`、`metadata.json`、`reviewer.json`、`ready.json`。prepared 冻结实际证据、稳定 ID、原始采集增量和前置版本；cards 只保存通过逐稿校验的卡片，metadata 绑定完整入选集合，reviewer 保存 `gpt-6.2-sol`（`xhigh`）终审结果及校验通过的修订后成稿；ready 包含完整合格刊物和发布所需增量。
 
-manifest 记录身份、规则及模型指纹、阶段散列和逐次调用账本。普通重试固定 revision；FORCE_RUN=1 且未指定 ISSUE_REVISION 时才创建新修订。GitHub 新修订号结合 run ID／attempt 分配，允许非连续增长，防止上次附件全部丢失后误用旧号。指定 revision 始终恢复该版，不重置其额度；该版附件缺失、过期或规则不兼容时明确失败，不自动换号，有效同版本地阶段／已刊归档可继续使用。
+终审阶段落盘状态为 `pass`（通过）、`revise`（修订并复验通过）、`fallback`（已进入终审调用但失败）或 `skipped`（安全封版、预算或截止条件阻止终审启动）。后两态复用已验证 writer 成品，记录固定 `reason`，Actions 只用状态与固定原因告警。旧检查点中的 `pass` 加 `fallback_reason` 在内存解释为 `fallback`。
+
+manifest 记录身份、规则及模型指纹、阶段散列和逐次调用账本。普通重试固定 revision。显式建版使用 `FORCE_RUN=1` 且不指定 `ISSUE_REVISION`，周／月报自动 `r2` 按前述条件单独审批。GitHub 新修订号结合 run ID／attempt 分配，允许非连续增长，防止上次附件全部丢失后误用旧号。指定 revision 始终恢复该版，不重置其额度；该版附件缺失、过期或规则不兼容时明确失败，不自动换号，有效同版本地阶段／已刊归档可继续使用。
 
 新刊标记 `editorial_schema: 2`，要求双语概览／主线、脚本归栏一致性；同一归栏函数用于选稿前与成品验证。语义字段和双语契约改变规则指纹，不给旧冻结附件重签、不自动迁移旧刊或已耗尽账本；旧已刊归档保持原契约，英文缺失仅在界面明确提示。
 
@@ -16,7 +20,7 @@ manifest 记录身份、规则及模型指纹、阶段散列和逐次调用账�
 
 恢复时先逐卡检查最终规范化形态，并独立检查摘要／主线。失效卡片从可复用集合移除，无效 metadata 记为空；仅修缺口，保留合格卡片、冻结证据及原调用账本。未知／重复卡片编号、集合指纹不符和附件散列损坏仍直接拒绝，不作为普通内容错误忽略。
 
-三阶段各最多 3 次请求，合计模型耗时预算 660 秒。局部纠正与传输重试共用该预算；账本中的未结束请求按预留时长计算。附件缺失或较新的运行已开始模型阶段却没有最终账本时，相关阶段标记 budget_unknown，禁止新请求；已验证缓存和 ready 仍能使用。不要清空 manifest 绕过上限。
+三阶段各最多 3 次请求，合计模型耗时预算 900,000 ms。Actions 从 job 首步计时，第 21 分钟停止模型请求，第 25 分钟到达 runner 上限。局部纠正与传输重试共用该预算；账本中的未结束请求按预留时长计算。附件缺失或较新的运行已开始模型阶段却没有最终账本时，相关阶段标记 budget_unknown，禁止新请求；已验证缓存和 ready 仍能使用。不要清空 manifest 绕过上限。
 
 恢复合并 pending 时仅去除完整对象完全相同的 source_health 观测，保留不同时间、状态与覆盖区间。生成与发布的输入快照使用同一规则，避免重复恢复使覆盖信息倍增；发布旧冻结候选时只物化精简后的输入文件，不改 ready、payload、阶段散列或调用账本。白名单文件超过 GitHub 100 MiB 限制时在 commit／push 前明确拒绝，须先定位数据膨胀，不通过清账本或重新生成绕过。
 
@@ -69,11 +73,11 @@ GitHub 工作流先调用 `restore-issue.mjs <kind>`，用 `GH_TOKEN` 读取附�
 
 主备 LLM 凭据使用独立 Secrets：主通道为 `LLM_API_KEY`／`LLM_ENDPOINT`，备用为 `LLM_BACKUP_API_KEY`／`LLM_BACKUP_ENDPOINT`；备用地址留空时使用 `https://api.openai.com/v1/chat/completions`。三类工作流的 editor／writer（`gpt-6.2-sol` `high`）与 reviewer（`gpt-6.2-sol` `xhigh`）均传入主备配置，定时、repository_dispatch 和默认手动运行都先走主通道；备用 Key 非空且主备地址／Key 组合不完全相同时启用自动故障切换，不覆盖原主 Secrets。
 
-主通道在获得完整有效模型 JSON 前出现网络、超时、流、截断／无效 JSON 或任意非 2xx HTTP 错误（含 522、5xx、429、408、401／403、insufficient_quota、get_channel_failed），立即在客户端内标记使用备用；在剩余额度允许时，下一次重试及同实例后续调用（含 writer）直接走备用，不再探测主通道。完整 JSON 已返回后的业务／证据 validation 错误仅在当前通道局修，不触发切换。未配置可用且不同的备用，或已走备用时，永久 HTTP 错误仍快速失败。
+主通道在获得完整有效模型 JSON 前出现网络、超时、流、截断／无效 JSON 或任意非 2xx HTTP 错误（含 522、5xx、429、408、401／403、insufficient_quota、get_channel_failed），立即在客户端内标记使用备用；在剩余额度允许时，下一次重试及同实例后续调用直接走备用。Actions 通过 `GITHUB_ENV` 的 `LLM_ACTIVE_ROUTE=backup` 将选择传给同 job 的后续阶段进程。完整 JSON 已返回后的业务／证据 validation 错误仅在当前通道局修，不触发切换。未配置可用且不同的备用，或已走备用时，永久 HTTP 错误仍快速失败。
 
-切换不新增请求额度：网络重试、通道切换及内容纠错共用每阶段最多 3 次、同版 660000 ms 账本；deadline 耗尽或不足以承担既有退避时不再请求。reserved_ms 与 ruleDigest 保护保持，旧冻结版不能改签或清账本恢复。粘性路由只保留在客户端实例内；工作流的分步进程和跨运行恢复各自重新优先主通道，继续沿用同版剩余阶段额度。逐次诊断使用非敏感 `route: primary／backup`，主备密钥均完整脱敏。
+切换不新增请求额度：网络重试、通道切换及内容纠错共用每阶段最多 3 次、同版 900,000 ms 账本。首次跨 origin 切换免退避，其余重试按 15／45 秒执行，且受剩余预算、交付预留和 job 停止点限制。独立 job 默认从主通道开始；冻结文件、cache 和 artifact 都不提供路由偏好。原版的 `reserved_ms` 与 `ruleDigest` 保护继续生效。逐次诊断使用非敏感 `route: primary／backup`，主备密钥均完整脱敏。
 
-本次需要直接使用备用时，可手动触发 workflow_dispatch 并传入 `-f use_backup=true`，让 editor／writer 从第一次请求就使用备用。该开关默认 false，仅在显式手动开启时于 gate 后、冻结输入前强校验备用 Key，缺失立即失败；自动调度不强制要求备用 Key。手动开关与自动故障切换独立，均不修改主 Secrets 或既有预算。
+本次需要直接使用备用时，可手动触发 workflow_dispatch 并传入 `-f use_backup=true`，让 editor／writer／reviewer 从第一次请求就使用备用并记为 `route: backup`。开关默认 false，显式开启时在 gate 之后校验备用 Key。Key 缺失或纯空白立即失败，校验通过后才写 `LLM_ACTIVE_ROUTE=backup`。主备 Secrets 始终独立接线，三阶段共享本版预算。
 
 ## 发布失败的处理
 

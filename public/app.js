@@ -631,7 +631,6 @@ function renderWindowBanner(data) {
   // Holiday / sparse-window banner — daily only.
   // Triggers on: explicit US federal holiday today/yesterday OR pool auto-expand.
   // Copy is picked by priority: today's holiday > yesterday's > generic weekend/sparse.
-  // recovery date (BJ digest day that will be fully normal) comes from us-holidays.mjs.
   if (currentMode === 'daily') {
     const diag = data._diagnostics || {};
     const usH = diag.us_holiday || {};
