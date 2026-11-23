@@ -120,6 +120,28 @@ test('automatic r2 allocates only after checking the r1 completion boundary and 
   await assert.rejects(restoreCheckpoint(options), /missing or expired/);
 });
 
+test('automatic r2 blocks a late editor step from a run created before r1 finished', async t => {
+  const f = await setup(t);
+  f.run.path = '.github/workflows/weekly.yml';
+  f.artifacts.length = 0;
+  f.recentRuns.push({ id: 1, created_at: '2026-10-28T00:04:00Z' });
+  f.jobsByKey['repos/owner/repo/actions/runs/1/jobs?filter=all&per_page=100'] = [{ steps: [
+    { name: 'Select frozen issue', status: 'completed', conclusion: 'failure', started_at: '2026-10-28T00:06:00Z' }
+  ] }];
+  const gh = async args => {
+    const endpoint = args[1];
+    if (!endpoint.includes('/workflows/')) return f.gh(args);
+    const created = new URL(endpoint, 'https://api.github.test').searchParams.get('created');
+    assert.match(created, /^>=/);
+    const after = Date.parse(created.slice(2));
+    assert.ok(Number.isFinite(after));
+    return JSON.stringify([{ workflow_runs: f.recentRuns.filter(run => Date.parse(run.created_at) >= after) }]);
+  };
+  await assert.rejects(restoreCheckpoint({ ...f.options, kind: 'weekly', root: f.root, repo: 'owner/repo', gh, unzip: f.unzip,
+    revision: 2, publishedRevision: 1, allowNewAutoR2: true, since: Date.parse('2026-10-28T00:05:00Z'), r1FinishedAt: '2026-10-28T00:05:00Z' }),
+  { message: /prior model stage has no final ledger/, budget_unknown: ['editor'] });
+});
+
 test('automatic r2 restores trusted checkpoints and refuses expired, corrupt or incompatible attachments', async t => {
   const f = await setup(t);
   f.run.path = '.github/workflows/monthly.yml';

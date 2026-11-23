@@ -88,7 +88,9 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
         }
         if (!/text\/event-stream/i.test(res.headers.get('content-type') || '')) {
           const text = await readText(res);
-          const json = JSON.parse(text); responseText = json.choices?.[0]?.message?.content || ''; finish = json.choices?.[0]?.finish_reason; tokenUsage = json.usage; responseModel = json.model; responseId = json.id; done = true;
+          let json;
+          try { json = JSON.parse(text); } catch { throw new LlmError('Malformed JSON response envelope', true); }
+          responseText = json.choices?.[0]?.message?.content || ''; finish = json.choices?.[0]?.finish_reason; tokenUsage = json.usage; responseModel = json.model; responseId = json.id; done = true;
         } else {
           const decoder = new TextDecoder(); let buffer = '';
           stream: for await (const chunk of res.body) {

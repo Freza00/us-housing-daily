@@ -117,7 +117,7 @@ export function recoverableRevision({ kind, saved, snapshots = [], window, now }
   const savedPeriod = kind === 'weekly' ? saved.period_start : saved.period_label;
   if (savedPeriod !== period || saved.window?.upper !== window.upper) return null;
   if (saved.edition?.revision !== 1) return null;
-  if ((saved.coverage_status ?? saved.publication_status) !== 'degraded') return null;
+  if (saved.coverage_status !== 'degraded') return null;
   const archivedGaps = saved._diagnostics?.coverage_gaps;
   if (!Array.isArray(archivedGaps) || archivedGaps.length === 0) return null;
   if (coverageGaps(snapshots, window).length > 0) return null;

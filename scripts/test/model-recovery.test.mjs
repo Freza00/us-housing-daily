@@ -9,7 +9,7 @@ import { createModelBatch } from '../lib/model-references.mjs';
 import { buildReviewDraft, createReviewRepair, createWritingRepair, validateDecisions, validateWriting, writingEvidenceOptions, writingPrompt, writingSystem, reviewPrompt, selectItems, numericValues, normalizeChinese, prepareReview } from '../lib/editorial.mjs';
 import { digest, validateIssue } from '../lib/issue-contract.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
-import { modelDecision, modelEvidence, sandbox, sample, replayEnv } from './helpers.mjs';
+import { fakeClient, modelDecision, modelEvidence, sandbox, sample, replayEnv } from './helpers.mjs';
 
 const date = Date.parse('2026-10-28T14:00:00Z');
 const items = ['ee97eb3b7b51bf8f', '8f51e30b0b1f3098', 'third'].map(id => sample(id, date));
@@ -717,6 +717,49 @@ for (const legacy of [false, true]) test(`reviewer fallback warns and cold-recov
   assert.equal(payload._diagnostics.review.status, 'fallback');
   assert.equal(payload._diagnostics.review.reason, 'review_failed');
   assert.equal(payload._diagnostics.review.fallback_reason, 'Review validation failed after repairs');
+});
+
+test('weekly reviewer settles three malformed HTTP 200 envelopes and keeps the frozen writer edition ready', async t => {
+  const root = await sandbox(t), routes = [];
+  const env = { ...await replayEnv(root, { items }, '2026-11-02T06:07:00Z'),
+    LLM_ENDPOINT: 'https://primary.example.com', LLM_API_KEY: 'fixture-primary',
+    LLM_BACKUP_ENDPOINT: 'https://backup.example.com', LLM_BACKUP_API_KEY: 'fixture-backup' };
+  const writer = await runPipeline('weekly', { root, env: { ...env, PIPELINE_UNTIL: 'writer' }, client: fakeClient() });
+  assert.equal(writer.stage, 'writer');
+  const manifestFile = path.join(writer.issue_dir, 'manifest.json');
+  const frozen = JSON.parse(await fs.readFile(manifestFile, 'utf8'));
+  assert.equal(frozen.phases.reviewer, undefined);
+  const ready = await runPipeline('weekly', {
+    root, env: { ...env, PIPELINE_UNTIL: 'ready' },
+    llmOptions: {
+      sleep: async () => {},
+      fetchImpl: async (url, request) => {
+        assert.ok(JSON.parse(JSON.parse(request.body).messages[1].content).review_target);
+        routes.push(url);
+        return new Response('<html>Upstream proxy error</html>', { headers: { 'content-type': 'text/html' } });
+      }
+    }
+  });
+  assert.equal(ready.stage, 'ready');
+  assert.deepEqual(routes, [env.LLM_ENDPOINT, env.LLM_BACKUP_ENDPOINT, env.LLM_BACKUP_ENDPOINT]);
+  const manifest = JSON.parse(await fs.readFile(manifestFile, 'utf8'));
+  const attempts = manifest.attempts.reviewer;
+  assert.deepEqual(attempts.map(({ attempt, route }) => [attempt, route]), [[1, 'primary'], [2, 'backup'], [3, 'backup']]);
+  for (const request of attempts) {
+    assert.equal(request.http_status, 200);
+    assert.equal(request.failed, true);
+    assert.equal(request.error, 'Malformed JSON response envelope');
+    assert.ok(Number.isFinite(request.ms));
+  }
+  assert.equal(manifest.model_ms, (frozen.model_ms || 0) + attempts.reduce((total, request) => total + request.ms, 0));
+  assert.equal(manifest.phases.cards.sha256, frozen.phases.cards.sha256);
+  assert.equal(manifest.phases.metadata.sha256, frozen.phases.metadata.sha256);
+  const review = JSON.parse(await fs.readFile(path.join(writer.issue_dir, 'reviewer.json'), 'utf8'));
+  assert.equal(review.status, 'fallback');
+  assert.equal(review.reason, 'review_failed');
+  const { payload } = JSON.parse(await fs.readFile(path.join(writer.issue_dir, 'ready.json'), 'utf8'));
+  validateIssue(payload);
+  assert.equal(payload._diagnostics.review.status, 'fallback');
 });
 
 test('three pipeline processes inherit backup via GITHUB_ENV and preserve editor timing, a fresh job starts primary', async t => {

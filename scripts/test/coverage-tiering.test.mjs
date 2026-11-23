@@ -213,6 +213,19 @@ test('recoverableRevision strictly bounds weekly 48h, monthly 3 working days, we
   assert.equal(recoverableRevision({ kind: 'monthly', saved: maySaved, snapshots: [fullMaySnap], window: mayWindow, now: new Date('2026-05-06T02:17:00Z') }), null); // #4 working day
 });
 
+test('automatic r2 requires explicit degraded coverage even with degraded publication status', () => {
+  const now = new Date('2026-11-17T02:17:00Z');
+  const window = buildWindow('weekly', now);
+  const saved = {
+    kind: 'weekly', period_start: window.periodStart, window, items: [{ id: 'a' }],
+    edition: { revision: 1 }, publication_status: 'degraded',
+    _diagnostics: { coverage_gaps: [{ lower: window.lower, upper: window.lower + 86400000 }] }
+  };
+  const snapshots = [{ window, coverage_status: 'observed', source_health: [] }];
+  assert.equal(recoverableRevision({ kind: 'weekly', saved: { ...saved, coverage_status: 'degraded' }, snapshots, window, now }), 2);
+  assert.equal(recoverableRevision({ kind: 'weekly', saved, snapshots, window, now }), null);
+});
+
 test('weekly compensatory recovery executes r2 cleanly on Tuesday once missing snapshot lands, pushes cleanly, and never runs r3', async t => {
   const temp = await sandbox(t);
   const seed = path.join(temp, 'seed'), remote = path.join(temp, 'remote.git'), root = path.join(temp, 'runner');

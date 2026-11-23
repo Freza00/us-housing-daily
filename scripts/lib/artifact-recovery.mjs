@@ -55,8 +55,10 @@ export async function restoreCheckpoint({ root, stateDir = path.join(root, 'stat
     return (Array.isArray(result) ? result : [result]).flatMap(page => page.jobs || []);
   };
   const unknownAfter = async (artifact, r1Boundary) => {
-    const querySince = r1Boundary === undefined ? since : Math.min(since ?? r1Boundary, r1Boundary);
-    if (!querySince) return [];
+    // A queued or rerun job may start model steps well after its run was created.
+    const querySince = r1Boundary === undefined ? since
+      : Math.max(0, Math.min(new Date(since ?? r1Boundary).getTime(), r1Boundary) - 48 * 3600000);
+    if (r1Boundary === undefined && !querySince) return [];
     const unknown = new Set(), boundary = artifact ? Date.parse(artifact.created_at || '') : 0;
     const query = new URLSearchParams({ branch: 'main', created: '>=' + new Date(querySince).toISOString(), per_page: '100' });
     const runs = JSON.parse(String(await gh(['api', `repos/${repo}/actions/workflows/${kind}.yml/runs?${query}`, '--paginate','--slurp'])));
@@ -117,7 +119,11 @@ export async function restoreCheckpoint({ root, stateDir = path.join(root, 'stat
   if (allowNewAutoR2 && ['weekly', 'monthly'].includes(kind) && target === 2 && publishedRevision === 1 && !artifact && !local && highest <= 1) {
     const finished = typeof r1FinishedAt === 'string' ? Date.parse(r1FinishedAt) : r1FinishedAt;
     if (!Number.isFinite(finished) || finished <= 0 || finished > Date.now()) throw new Error('Cannot allocate automatic r2 without a credible r1 completion time');
-    if ((await unknownAfter(null, finished)).length) throw new Error('Cannot allocate automatic r2: prior model stage has no final ledger');
+    const budgetUnknown = await unknownAfter(null, finished);
+    if (budgetUnknown.length) throw Object.assign(
+      new Error('Cannot allocate automatic r2: prior model stage has no final ledger (' + budgetUnknown.join(', ') + ')'),
+      { budget_unknown: budgetUnknown }
+    );
     return { restored: false, revision: 2, budget_unknown: [], reason: 'New automatic r2' };
   }
   const unknown = new Set(await unknownAfter(null));
