@@ -33,7 +33,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     env:
       FORCE_RUN: ${{ inputs.force && '1' || '0' }}
       LLM_MODEL: ${{ secrets.LLM_MODEL || 'gpt-6.2-sol' }}
@@ -42,6 +42,8 @@ jobs:
       EXPECTED_PERIOD: ${{ inputs.period || github.event.client_payload.period || '' }}
       EXPECTED_CUTOFF: ${{ inputs.cutoff || github.event.client_payload.cutoff || '' }}
     steps:
+      - name: Set job stop deadline
+        run: printf 'LLM_JOB_STOP_MS=%s\n' "$(( ($(date +%s) + 21 * 60) * 1000 ))" >> "$GITHUB_ENV"
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
@@ -54,10 +56,11 @@ jobs:
         env:
           LLM_BACKUP_API_KEY: ${{ secrets.LLM_BACKUP_API_KEY }}
         run: |
-          if [ -z "$LLM_BACKUP_API_KEY" ]; then
+          if ! [ -n "$(printf '%s' "$LLM_BACKUP_API_KEY" | tr -d '[:space:]')" ]; then
             echo "::error::LLM_BACKUP_API_KEY is required when use_backup is enabled."
             exit 1
           fi
+          printf '%s\n' 'LLM_ACTIVE_ROUTE=backup' >> "$GITHUB_ENV"
       - name: Restore acquisition and model checkpoints
         continue-on-error: true
         timeout-minutes: 1
@@ -109,8 +112,8 @@ jobs:
           ISSUE_REVISION: ${{ steps.prepared.outputs.revision || env.ISSUE_REVISION }}
           EXPECTED_PERIOD: ${{ steps.prepared.outputs.period || env.EXPECTED_PERIOD }}
           EXPECTED_CUTOFF: ${{ steps.prepared.outputs.cutoff || env.EXPECTED_CUTOFF }}
-          LLM_API_KEY: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && secrets.LLM_BACKUP_API_KEY || secrets.LLM_API_KEY }}
-          LLM_ENDPOINT: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && (secrets.LLM_BACKUP_ENDPOINT || 'https://api.openai.com/v1/chat/completions') || secrets.LLM_ENDPOINT }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
           LLM_BACKUP_API_KEY: ${{ secrets.LLM_BACKUP_API_KEY }}
           LLM_BACKUP_ENDPOINT: ${{ secrets.LLM_BACKUP_ENDPOINT }}
         run: node scripts/build.mjs
@@ -132,8 +135,8 @@ jobs:
           ISSUE_REVISION: ${{ steps.prepared.outputs.revision || env.ISSUE_REVISION }}
           EXPECTED_PERIOD: ${{ steps.prepared.outputs.period || env.EXPECTED_PERIOD }}
           EXPECTED_CUTOFF: ${{ steps.prepared.outputs.cutoff || env.EXPECTED_CUTOFF }}
-          LLM_API_KEY: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && secrets.LLM_BACKUP_API_KEY || secrets.LLM_API_KEY }}
-          LLM_ENDPOINT: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && (secrets.LLM_BACKUP_ENDPOINT || 'https://api.openai.com/v1/chat/completions') || secrets.LLM_ENDPOINT }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
           LLM_BACKUP_API_KEY: ${{ secrets.LLM_BACKUP_API_KEY }}
           LLM_BACKUP_ENDPOINT: ${{ secrets.LLM_BACKUP_ENDPOINT }}
         run: node scripts/build.mjs
@@ -155,8 +158,8 @@ jobs:
           ISSUE_REVISION: ${{ steps.prepared.outputs.revision || env.ISSUE_REVISION }}
           EXPECTED_PERIOD: ${{ steps.prepared.outputs.period || env.EXPECTED_PERIOD }}
           EXPECTED_CUTOFF: ${{ steps.prepared.outputs.cutoff || env.EXPECTED_CUTOFF }}
-          LLM_API_KEY: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && secrets.LLM_BACKUP_API_KEY || secrets.LLM_API_KEY }}
-          LLM_ENDPOINT: ${{ github.event_name == 'workflow_dispatch' && inputs.use_backup && (secrets.LLM_BACKUP_ENDPOINT || 'https://api.openai.com/v1/chat/completions') || secrets.LLM_ENDPOINT }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_ENDPOINT: ${{ secrets.LLM_ENDPOINT }}
           LLM_BACKUP_API_KEY: ${{ secrets.LLM_BACKUP_API_KEY }}
           LLM_BACKUP_ENDPOINT: ${{ secrets.LLM_BACKUP_ENDPOINT }}
         run: node scripts/build.mjs

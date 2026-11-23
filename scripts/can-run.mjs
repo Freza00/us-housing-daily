@@ -28,6 +28,6 @@ if (canEvaluate) {
 }
 if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `verify=${verify}\n`);
 if (process.env.GITHUB_ENV && verify) fs.appendFileSync(process.env.GITHUB_ENV, `PUBLICATION_DEADLINE_MS=${publicationDeadline(kind, now)}\n`);
-if (process.env.GITHUB_ENV && recoveryRevision && !process.env.ISSUE_REVISION) fs.appendFileSync(process.env.GITHUB_ENV, `ISSUE_REVISION=${recoveryRevision}\n`);
+if (process.env.GITHUB_ENV && recoveryRevision && !process.env.ISSUE_REVISION) fs.appendFileSync(process.env.GITHUB_ENV, `ISSUE_AUTO_REVISION=${recoveryRevision}\n`);
 if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `go=${go}\n`);
 console.log(JSON.stringify({ kind, go, ...(recoveryRevision ? { revision: recoveryRevision } : {}), timezone: 'Asia/Shanghai' }));

@@ -5,7 +5,7 @@ import path from 'node:path';
 import { runPipeline, materializeIssue } from '../lib/pipeline.mjs';
 import { digest, validateIssue, reusableIssue } from '../lib/issue-contract.mjs';
 import { openIssueStore, ruleDigest } from '../lib/issue-store.mjs';
-import { createLlmClient } from '../lib/llm-client.mjs';
+import { ISSUE_MODEL_BUDGET_MS, createLlmClient } from '../lib/llm-client.mjs';
 import { selectItems, prepareWritingCard } from '../lib/editorial.mjs';
 import { mergeCheckpoints } from '../lib/collection-checkpoint.mjs';
 import { loadCurrentCandidate } from '../publish.mjs';
@@ -31,8 +31,10 @@ function answer(input, bad = false) {
   return { items: input.items.map(it => ({ id: it.id, title_zh: '住宅销售研究', summary_zh: '住宅销售增长 5%。', impact: 'neutral', ...modelEvidence(it) })), executive_summary: { sentences: [{ text: `住宅销售增长 ${bad ? 99 : 5}%。`, text_en: 'Housing sales rose 5%.', item_ids: input.items.map(it => it.id) }] }, themes: [] };
 }
 
+test('the shared issue model budget is 900 seconds', () => assert.equal(ISSUE_MODEL_BUDGET_MS, 900_000));
+
 for (const offsetMs of [180001, 180000, 120000, 1, 0, -60000, null]) {
-  for (const spentMs of [267026, 660000, 660001]) test(`frozen writer recovery shares the total budget: deadline offset=${offsetMs}, spent=${spentMs}`, async t => {
+  for (const spentMs of [267026, ISSUE_MODEL_BUDGET_MS, (ISSUE_MODEL_BUDGET_MS + 1)]) test(`frozen writer recovery shares the total budget: deadline offset=${offsetMs}, spent=${spentMs}`, async t => {
     const opts = await setup(t);
     await runPipeline('daily', { ...opts, env: { ...opts.env, PIPELINE_UNTIL: 'editor' }, client: fakeClient() });
     const manifest = JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'manifest.json')));
@@ -60,7 +62,7 @@ for (const offsetMs of [180001, 180000, 120000, 1, 0, -60000, null]) {
       assert.match(body.messages[0].content, /仅修复/);
       return response({ items: answer(input).items });
     } } };
-    if (spentMs >= 660000) {
+    if (spentMs >= ISSUE_MODEL_BUDGET_MS) {
       await assert.rejects(runPipeline('daily', options), /LLM run time budget exhausted/);
       assert.equal(requests, 0);
       assert.deepEqual(JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'manifest.json'))).attempts, originalAttempts);
@@ -71,7 +73,7 @@ for (const offsetMs of [180001, 180000, 120000, 1, 0, -60000, null]) {
       assert.deepEqual(after.attempts.editor, originalAttempts.editor);
       assert.deepEqual(after.attempts.writer.slice(0, 2), originalAttempts.writer);
       assert.equal(after.attempts.writer.length, 3);
-      const expectedRemaining = offsetMs !== null && offsetMs > 180000 ? offsetMs - 180000 : 660000 - spentMs;
+      const expectedRemaining = offsetMs !== null && offsetMs > 180000 ? offsetMs - 180000 : ISSUE_MODEL_BUDGET_MS - spentMs;
       assert.equal(after.attempts.writer[2].reserved_ms, Math.min(240000, expectedRemaining));
       assert.equal(JSON.parse(await fs.readFile(path.join(stageDir(opts.root), 'ready.json'))).payload.items.length, 3);
     }
@@ -227,7 +229,7 @@ test('unknown or exhausted durable budgets forbid new requests but allow validat
   assert.deepEqual(await blocked.call('system','evidence',{label:'writer'}),{ok:true});
   await assert.rejects(blocked.call('system','changed evidence',{label:'writer'}),/budget is unknown/);
   await assert.rejects(createLlmClient({...options,ledger:{attempts:{writer:[{},{},{}]}}}).call('system','new',{label:'writer'}),/request budget exhausted/);
-  await assert.rejects(createLlmClient({...options,ledger:{spentMs:660000}}).call('system','new',{label:'writer'}),/time budget exhausted/);
+  await assert.rejects(createLlmClient({...options,ledger:{spentMs:ISSUE_MODEL_BUDGET_MS}}).call('system','new',{label:'writer'}),/time budget exhausted/);
   assert.equal(requests,1);
 });
 
@@ -334,4 +336,27 @@ test('observer distinguishes absent/queued/failed/successful-but-stale tasks and
   const result = await checkPublication({kind:'daily',now:new Date('2026-10-31T02:00:00Z'),fetchImpl:()=>{throw Error('weekend fetch');}});
   assert.equal(result.due,false);
   assert.equal((await triggerRedeploy()).available,false);
+});
+
+for (const offsetMs of [1, 0, -1]) test(`job stop clamps a cold writer's physical budget at offset ${offsetMs} ms`, async t => {
+  const opts = await setup(t);
+  const editor = await runPipeline('daily', { ...opts, env: { ...opts.env, PIPELINE_UNTIL: 'editor' }, client: fakeClient() });
+  const clock = Date.now();
+  t.mock.method(Date, 'now', () => clock);
+  const env = { ...opts.env, PIPELINE_UNTIL: 'writer', LLM_API_KEY: 'offline-key', LLM_ENDPOINT: 'https://offline.invalid',
+    LLM_JOB_STOP_MS: String(clock + offsetMs) };
+  let requests = 0;
+  const run = () => runPipeline('daily', { ...opts, env, llmOptions: { fetchImpl: async (_url, request) => {
+    requests++;
+    const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+    return response(answer(input));
+  } } });
+  if (offsetMs > 0) {
+    assert.equal((await run()).stage, 'writer');
+    const manifest = JSON.parse(await fs.readFile(path.join(editor.issue_dir, 'manifest.json')));
+    assert.equal(manifest.attempts.writer[0].reserved_ms, 1);
+  } else {
+    await assert.rejects(run(), /LLM run time budget exhausted/);
+  }
+  assert.equal(requests, offsetMs > 0 ? 1 : 0);
 });

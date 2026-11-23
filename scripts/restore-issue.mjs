@@ -19,9 +19,16 @@ async function main() {
   const validSaved = validArchive(archive, { kind, period, upper: window.upper });
   const recoverable = !forceRun && validSaved ? recoverableRevision({ kind, saved: archive, snapshots: await loadWindowSnapshots(stateDir, window), window, now }) : null;
   if (!scheduled && (!recoverable || (process.env.ISSUE_REVISION && Number(process.env.ISSUE_REVISION) !== recoverable))) { console.log(JSON.stringify({ skipped: true })); return; }
-  const requestedRevision = process.env.ISSUE_REVISION || (!forceRun && recoverable ? String(recoverable) : undefined);
+  const explicitRevision = process.env.ISSUE_REVISION || undefined;
+  if (!explicitRevision && !forceRun && process.env.ISSUE_AUTO_REVISION && Number(process.env.ISSUE_AUTO_REVISION) !== recoverable) {
+    console.log(JSON.stringify({ skipped: true, reason: 'Automatic revision is no longer eligible' }));
+    return;
+  }
+  const autoRevision = !explicitRevision && !forceRun && recoverable ? recoverable : undefined;
+  const requestedRevision = explicitRevision ?? autoRevision;
+  const allowNewAutoR2 = autoRevision === 2 && ['weekly', 'monthly'].includes(kind);
   if (requestedRevision && Number(requestedRevision) === archive?.edition?.revision && validSaved) { console.log(JSON.stringify({ restored: false, revision: archive.edition.revision, reason: 'Requested revision is already published; verify delivery' })); return; }
-  const result = await restoreCheckpoint({ root, stateDir, kind, period, upper: window.upper, rules: digest([await ruleDigest(), sources, tags]), model: process.env.LLM_MODEL || 'gpt-6.2-sol', repo: process.env.GITHUB_REPOSITORY || 'Freza00/us-housing-daily', force: forceRun && !requestedRevision, revision: requestedRevision, publishedRevision: archive?.edition?.revision || 0, allocationSeed: revisionSeed(), since: Date.parse(beijingDateStr(window.upper) + 'T00:00:00+08:00') });
+  const result = await restoreCheckpoint({ root, stateDir, kind, period, upper: window.upper, rules: digest([await ruleDigest(), sources, tags]), model: process.env.LLM_MODEL || 'gpt-6.2-sol', repo: process.env.GITHUB_REPOSITORY || 'Freza00/us-housing-daily', force: forceRun && !requestedRevision, revision: requestedRevision, allowNewAutoR2, r1FinishedAt: archive?._diagnostics?.timings?.generation_finished_at ?? archive?.generated_at, publishedRevision: archive?.edition?.revision || 0, allocationSeed: revisionSeed(), since: Date.parse(beijingDateStr(window.upper) + 'T00:00:00+08:00') });
   if (result.revision && process.env.GITHUB_ENV) await fs.appendFile(process.env.GITHUB_ENV, 'ISSUE_REVISION=' + result.revision + '\n');
   if (result.budget_unknown?.length && process.env.GITHUB_ENV) await fs.appendFile(process.env.GITHUB_ENV, 'ISSUE_BUDGET_UNKNOWN=' + result.budget_unknown.join(',') + '\n');
   console.log(JSON.stringify(result));

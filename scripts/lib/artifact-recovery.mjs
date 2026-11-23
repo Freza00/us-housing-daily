@@ -42,7 +42,7 @@ export function startedModelStages(jobs) {
   return [...labels];
 }
 
-export async function restoreCheckpoint({ root, stateDir = path.join(root, 'state'), kind, period, upper, rules, model, repo, gh, unzip, force = false, revision, publishedRevision = 0, allocationSeed = 0, since } = {}) {
+export async function restoreCheckpoint({ root, stateDir = path.join(root, 'state'), kind, period, upper, rules, model, repo, gh, unzip, force = false, revision, publishedRevision = 0, allocationSeed = 0, since, allowNewAutoR2 = false, r1FinishedAt } = {}) {
   gh ||= async args => (await exec('gh', args, { encoding: 'buffer', maxBuffer: 40e6 })).stdout;
   unzip ||= async args => (await exec('unzip', args, { encoding: 'utf8', maxBuffer: 40e6 })).stdout;
   if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repo || '')) throw new Error('Invalid artifact repository');
@@ -54,15 +54,20 @@ export async function restoreCheckpoint({ root, stateDir = path.join(root, 'stat
     const result = JSON.parse(String(await gh(['api', endpoint, '--paginate', '--slurp'])));
     return (Array.isArray(result) ? result : [result]).flatMap(page => page.jobs || []);
   };
-  const unknownAfter = async artifact => {
-    if (!since) return [];
+  const unknownAfter = async (artifact, r1Boundary) => {
+    const querySince = r1Boundary === undefined ? since : Math.min(since ?? r1Boundary, r1Boundary);
+    if (!querySince) return [];
     const unknown = new Set(), boundary = artifact ? Date.parse(artifact.created_at || '') : 0;
-    const query = new URLSearchParams({ branch: 'main', created: '>=' + new Date(since).toISOString(), per_page: '100' });
+    const query = new URLSearchParams({ branch: 'main', created: '>=' + new Date(querySince).toISOString(), per_page: '100' });
     const runs = JSON.parse(String(await gh(['api', `repos/${repo}/actions/workflows/${kind}.yml/runs?${query}`, '--paginate','--slurp'])));
     for (const run of (Array.isArray(runs)?runs:[runs]).flatMap(page=>page.workflow_runs||[])) {
       if (!trustedArtifactRun(await getRun(run.id),{repo,kind})) continue;
       for (const job of await jobs(run.id)) {
-        const after = (job.steps || []).filter(step => !artifact || !Number.isFinite(boundary) || Date.parse(step.started_at || '') > boundary);
+        const after = (job.steps || []).filter(step => {
+          const startedAt = Date.parse(step.started_at || '');
+          if (r1Boundary !== undefined) return !Number.isFinite(startedAt) || startedAt >= r1Boundary;
+          return !artifact || !Number.isFinite(boundary) || startedAt > boundary;
+        });
         for (const label of startedModelStages([{steps:after}])) unknown.add(label);
       }
       if (unknown.size===3) break;
@@ -108,9 +113,15 @@ export async function restoreCheckpoint({ root, stateDir = path.join(root, 'stat
       return { ...result, budget_unknown: [...new Set([...(result.budget_unknown || []),...files['manifest.json'].budget_unknown])] };
     } finally { await fs.rm(temp, { recursive: true, force: true }); }
   }
+  const localDir = path.join(stateDir,'issues',kind,period,'r'+target), local = await readJson(path.join(localDir,'manifest.json'));
+  if (allowNewAutoR2 && ['weekly', 'monthly'].includes(kind) && target === 2 && publishedRevision === 1 && !artifact && !local && highest <= 1) {
+    const finished = typeof r1FinishedAt === 'string' ? Date.parse(r1FinishedAt) : r1FinishedAt;
+    if (!Number.isFinite(finished) || finished <= 0 || finished > Date.now()) throw new Error('Cannot allocate automatic r2 without a credible r1 completion time');
+    if ((await unknownAfter(null, finished)).length) throw new Error('Cannot allocate automatic r2: prior model stage has no final ledger');
+    return { restored: false, revision: 2, budget_unknown: [], reason: 'New automatic r2' };
+  }
   const unknown = new Set(await unknownAfter(null));
   if (artifact?.expired) for (const label of startedModelStages(await jobs(artifact.workflow_run.id,artifact.attempt))) unknown.add(label);
-  const localDir = path.join(stateDir,'issues',kind,period,'r'+target), local = await readJson(path.join(localDir,'manifest.json'));
   if (local) {
     const files = {'manifest.json':{...local,budget_unknown:[...new Set([...(local.budget_unknown||[]),...unknown])]}};
     for (const phase of Object.keys(local.phases || {})) files[phase+'.json'] = await readJson(path.join(localDir,phase+'.json'));

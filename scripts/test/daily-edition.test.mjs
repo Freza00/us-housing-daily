@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { runPipeline } from '../lib/pipeline.mjs';
+import { ISSUE_MODEL_BUDGET_MS } from '../lib/llm-client.mjs';
 import { validateIssue } from '../lib/issue-contract.mjs';
 import { dailyWritingSystem, isMortgageRateStory, prepareReview, prepareWritingCard, prepareWritingMetadata, writingPrompt } from '../lib/editorial.mjs';
 import { assembleDailyEdition, isDailyUSStory } from '../lib/daily-edition.mjs';
@@ -640,6 +641,42 @@ test('exhausted writer partial seal skips reviewer on cold resume from writer to
   validateIssue(payload);
   assert.equal(reviewers, 0);
   assert.equal(payload.content_status, 'partial');
-  assert.equal(payload._diagnostics.review, undefined);
+  assert.deepEqual(payload._diagnostics.review, { status: 'skipped', reason: 'writer_exhausted', issues: [], revised_ids: [] });
   assert.equal(payload.items.length, 17);
 });
+
+for (const reason of ['budget_unknown', 'model_budget_exhausted', 'delivery_reserve', 'job_deadline']) {
+  test(`reviewer stores and warns its skip reason without a physical request: ${reason}`, async t => {
+    const root = await sandbox(t);
+    const env = { ...await replayEnv(root, { items: [sample('story', Date.parse('2026-11-10T10:00:00Z'))] }, now),
+      LLM_ENDPOINT: 'https://offline.invalid', LLM_API_KEY: 'fixture' };
+    const seed = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'writer' }, llmOptions: { fetchImpl: async (_url, request) => {
+      const input = JSON.parse(JSON.parse(request.body).messages[1].content);
+      if (Array.isArray(input)) return response({ decisions: input.map(it => modelDecision(it.id)) });
+      assert(!input.review_target);
+      return response({ items: input.items.map(it => cardFor(it.id)), executive_summary: { sentences: [summary('1')] }, themes: [] });
+    } } });
+    const manifestFile = path.join(seed.issue_dir, 'manifest.json');
+    const manifest = JSON.parse(await fs.readFile(manifestFile));
+    const clock = Date.now();
+    t.mock.method(Date, 'now', () => clock);
+    const finishEnv = { ...env, GITHUB_ACTIONS: 'true', PIPELINE_UNTIL: 'ready' };
+    if (reason === 'budget_unknown') manifest.budget_unknown = ['reviewer'];
+    if (reason === 'model_budget_exhausted') manifest.attempts.writer[0].ms = ISSUE_MODEL_BUDGET_MS;
+    if (reason === 'delivery_reserve') finishEnv.PUBLICATION_DEADLINE_MS = String(clock + 180000);
+    if (reason === 'job_deadline') finishEnv.LLM_JOB_STOP_MS = String(clock);
+    await fs.writeFile(manifestFile, JSON.stringify(manifest));
+    const warnings = t.mock.method(console, 'warn', () => {});
+    const llmOptions = { fetchImpl: async () => assert.fail('Must not make a model request') };
+    const finish = await runPipeline('daily', { root, env: finishEnv, llmOptions });
+    const { status, reason: savedReason, issues, revised_ids, items, executive_summary, themes } = JSON.parse(await fs.readFile(path.join(finish.issue_dir, 'reviewer.json')));
+    const { payload } = JSON.parse(await fs.readFile(path.join(finish.issue_dir, 'ready.json')));
+    assert.deepEqual(payload._diagnostics.review, { status: 'skipped', reason, issues: [], revised_ids: [] });
+    assert.deepEqual({ status, reason: savedReason, issues, revised_ids }, payload._diagnostics.review);
+    assert.deepEqual({ items, executive_summary, themes }, { items: payload.items, executive_summary: payload.executive_summary, themes: payload.themes });
+    const after = JSON.parse(await fs.readFile(manifestFile));
+    assert.deepEqual(after.attempts, manifest.attempts);
+    await runPipeline('daily', { root, env: { ...finishEnv, PIPELINE_UNTIL: 'writer' }, llmOptions });
+    assert.deepEqual(warnings.mock.calls.map(call => call.arguments), [[`::warning::reviewer status=skipped reason=${reason}`]]);
+  });
+}

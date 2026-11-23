@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { writingEvidenceOptions, prepareWritingCard, validateWritingCard, prepareWriting, writingPrompt, writingSystem, prepareModelDecisions, validateDecisions, createDecisionRepair, createWritingRepair, editorInstructions, candidatePrompt } from '../lib/editorial.mjs';
-import { createLlmClient, LlmError } from '../lib/llm-client.mjs';
+import { ISSUE_MODEL_BUDGET_MS, createLlmClient, LlmError } from '../lib/llm-client.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
 import { digest } from '../lib/issue-contract.mjs';
 import { sandbox, sample, replayEnv, modelDecision, modelEvidence } from './helpers.mjs';
@@ -13,6 +13,8 @@ const response = value => new Response(JSON.stringify({ choices: [{ message: { c
 const metadata = ids => ({ executive_summary: { sentences: [{ text: '住房市场仍存在约束。', text_en: 'Housing markets remain constrained.', item_ids: ids }] }, themes: [] });
 const modelCard = it => ({ id: it.id, title_zh: '住宅市场研究', summary_zh: '住房市场仍存在约束。', impact: 'neutral', ...modelEvidence({ ...it, evidence_options: writingEvidenceOptions(it) }) });
 const context = { requireEvidenceIds: true, requireEnglish: true };
+
+test('the shared issue model budget is 900 seconds', () => assert.equal(ISSUE_MODEL_BUDGET_MS, 900_000));
 
 test('the two actual November 10 outputs still fail the unchanged quote and number gates', () => {
   for (let i = 0; i < fixture.sources.length; i++) assert.throws(() => validateWritingCard(fixture.failed_cards[i], fixture.sources[i]), i ? /number absent/ : /Evidence quote/);
@@ -174,7 +176,7 @@ test('failed second card repair preserves trimmed metadata and cold resume spend
   // Reconstruct the original partial-card resume request while its exact full
   // canonical result is cached. No writer slot or time remains for network work.
   const cachedManifest = await read('manifest'); delete cachedManifest.phases.ready;
-  cachedManifest.phases.cards.sha256 = digest(cards); cachedManifest.attempts.writer.at(-1).ms = 660000;
+  cachedManifest.phases.cards.sha256 = digest(cards); cachedManifest.attempts.writer.at(-1).ms = ISSUE_MODEL_BUDGET_MS;
   cachedManifest.budget_unknown = ['writer', 'reviewer'];
   await fs.writeFile(path.join(dir, 'cards.json'), JSON.stringify(cards));
   await fs.writeFile(path.join(dir, 'manifest.json'), JSON.stringify(cachedManifest));
@@ -200,8 +202,24 @@ test('weekly metadata-only cold repair cache uses full canonical validation even
   await runPipeline('weekly', { root, env, llmOptions: { fetchImpl } });
   const ready = await read('ready'), manifest = await read('manifest');
   delete manifest.phases.ready; delete manifest.phases.metadata;
-  manifest.attempts.writer.at(-1).ms = 660000; manifest.budget_unknown = ['writer', 'reviewer'];
+  manifest.attempts.writer.at(-1).ms = ISSUE_MODEL_BUDGET_MS; manifest.budget_unknown = ['writer', 'reviewer'];
   await fs.writeFile(path.join(dir, 'metadata.json'), 'null'); await fs.writeFile(path.join(dir, 'manifest.json'), JSON.stringify(manifest));
   await runPipeline('weekly', { root, env, llmOptions: { fetchImpl() { throw new Error('Metadata cache must not request a model'); } } });
   const cached = (await read('ready')).payload; assert.deepEqual(cached.items, ready.payload.items); assert.deepEqual(cached.executive_summary, ready.payload.executive_summary); assert.equal(calls, 2);
+});
+
+test('reviewer request override cannot extend the absolute job stop even with model balance left', async t => {
+  let clock = Date.now();
+  t.mock.method(Date, 'now', () => clock);
+  const calls = [], deadlineMs = clock + 1;
+  const client = createLlmClient({ endpoint: 'https://offline.invalid', apiKey: 'fixture', deadlineMs,
+    ledger: { recordAttempt: async (_stage, request) => calls.push(request.reserved_ms), recordOutcome: async () => {} },
+    fetchImpl: async () => response({ status: 'pass' }) });
+  const options = { label: 'reviewer', maxTokens: 24000, totalMs: 270_000, firstByteMs: 210_000 };
+  assert.deepEqual(await client.call('review', 'before', options), { status: 'pass' });
+  clock = deadlineMs;
+  await assert.rejects(client.call('review', 'at', options), /budget exhausted/);
+  clock++;
+  await assert.rejects(client.call('review', 'after', options), /budget exhausted/);
+  assert.deepEqual(calls, [1]);
 });

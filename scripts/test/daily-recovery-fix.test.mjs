@@ -2,7 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
-import { runInNewContext } from 'node:vm';
+import path from 'node:path';
+import { sandbox } from './helpers.mjs';
 import { createWritingRepair, validateWritingCard, validateWriting, writingSystem } from '../lib/editorial.mjs';
 import { validateIssue } from '../lib/issue-contract.mjs';
 
@@ -98,29 +99,14 @@ for (const [kind, crons] of [
     assert.equal(workflow.match(/          LLM_ENDPOINT:/g)?.length, 3);
     for (const name of ['Select frozen issue', 'Write and validate frozen issue', 'Review frozen issue']) {
       const block = step(workflow, name);
-      const key = block.match(/LLM_API_KEY: \$\{\{ (.+) \}\}/)?.[1];
-      const endpoint = block.match(/LLM_ENDPOINT: \$\{\{ (.+) \}\}/)?.[1];
-      assert.equal(key, "github.event_name == 'workflow_dispatch' && inputs.use_backup && secrets.LLM_BACKUP_API_KEY || secrets.LLM_API_KEY");
-      assert.equal(endpoint, "github.event_name == 'workflow_dispatch' && inputs.use_backup && (secrets.LLM_BACKUP_ENDPOINT || 'https://api.openai.com/v1/chat/completions') || secrets.LLM_ENDPOINT");
-      assert.match(block, /LLM_BACKUP_API_KEY: \$\{\{ secrets\.LLM_BACKUP_API_KEY \}\}/);
-      assert.match(block, /LLM_BACKUP_ENDPOINT: \$\{\{ secrets\.LLM_BACKUP_ENDPOINT \}\}/);
-      for (const event of ['schedule', 'repository_dispatch', 'workflow_dispatch']) {
-        for (const useBackup of [undefined, false, true]) {
-          for (const backupEndpoint of ['', 'backup-endpoint']) {
-            const context = {
-              github: { event_name: event }, inputs: { use_backup: useBackup },
-              secrets: { LLM_API_KEY: 'primary', LLM_BACKUP_API_KEY: 'backup', LLM_ENDPOINT: 'primary-endpoint', LLM_BACKUP_ENDPOINT: backupEndpoint }
-            };
-            const enabled = event === 'workflow_dispatch' && useBackup === true;
-            assert.equal(runInNewContext(key, context), enabled ? 'backup' : 'primary');
-            assert.equal(runInNewContext(endpoint, context), enabled ? (backupEndpoint || 'https://api.openai.com/v1/chat/completions') : 'primary-endpoint');
-          }
-        }
+      for (const name of ['LLM_API_KEY', 'LLM_ENDPOINT', 'LLM_BACKUP_API_KEY', 'LLM_BACKUP_ENDPOINT']) {
+        assert(block.includes(`          ${name}: \${{ secrets.${name} }}\n`));
       }
+      assert.doesNotMatch(block, /LLM_ACTIVE_ROUTE:|inputs\.use_backup/);
     }
   });
 
-  test(`${kind} validates backup credentials after gate and before freezing input`, async () => {
+  test(`${kind} validates backup credentials after gate and before freezing input`, async t => {
     const workflow = await readWorkflow();
     const block = step(workflow, 'Validate backup credentials');
     assert.match(workflow, /run: node scripts\/can-run\.mjs \w+\n      - name: Validate backup credentials\n/);
@@ -130,13 +116,32 @@ for (const [kind, crons] of [
     assert.doesNotMatch(block, /continue-on-error:/);
     const script = block.split('        run: |\n')[1];
     assert(script);
-    for (const value of [undefined, '', 'present']) {
-      const result = spawnSync('bash', ['-c', script], { env: value === undefined ? {} : { LLM_BACKUP_API_KEY: value }, encoding: 'utf8' });
+    const root = await sandbox(t), envFile = path.join(root, 'github.env');
+    for (const value of [undefined, '', ' \t\n', 'present']) {
+      await fs.writeFile(envFile, '');
+      const valid = Boolean(value?.trim());
+      const result = spawnSync('bash', ['-c', script], { env: { GITHUB_ENV: envFile, ...(value === undefined ? {} : { LLM_BACKUP_API_KEY: value }) }, encoding: 'utf8' });
       assert.ifError(result.error);
-      assert.equal(result.status, value ? 0 : 1);
-      if (!value) assert.match(result.stdout, /::error::LLM_BACKUP_API_KEY is required/);
-      else assert.equal(result.stdout, '');
+      assert.equal(result.status, valid ? 0 : 1);
+      if (!valid) assert.match(result.stdout, /::error::LLM_BACKUP_API_KEY is required/);
+      assert.equal(await fs.readFile(envFile, 'utf8'), valid ? 'LLM_ACTIVE_ROUTE=backup\n' : '');
     }
+  });
+
+  test(`${kind} sets the 21-minute deadline before checkout and keeps the 25-minute job cap`, async t => {
+    const workflow = await readWorkflow();
+    assert.match(workflow, /^    timeout-minutes: 25$/m);
+    assert.match(workflow, /    steps:\n      - name: Set job stop deadline\n        run: [^\n]+\n      - uses: actions\/checkout@v5/);
+    const root = await sandbox(t), envFile = path.join(root, 'github.env');
+    const script = step(workflow, 'Set job stop deadline').match(/^        run: (.*)$/m)[1];
+    const before = Math.floor(Date.now() / 1000);
+    const result = spawnSync('bash', ['-c', script], { env: { GITHUB_ENV: envFile, PATH: process.env.PATH } });
+    assert.ifError(result.error);
+    assert.equal(result.status, 0);
+    const value = await fs.readFile(envFile, 'utf8');
+    assert.match(value, /^LLM_JOB_STOP_MS=\d+\n$/);
+    const stop = Number(value.split('=')[1]);
+    assert(stop >= (before + 21 * 60) * 1000 && stop <= (Math.floor(Date.now() / 1000) + 21 * 60) * 1000);
   });
 
   test(`${kind} backup switch preserves the original cron schedule`, async () => {

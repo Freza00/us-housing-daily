@@ -6,7 +6,7 @@ import { shouldRun, buildWindow, coverageGaps, canAttemptRecoverySchedule, recov
 import { beijingDateStr } from './dates.mjs';
 import { createCollector } from './sources.mjs';
 import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint, uniqueSourceHealth } from './collection-checkpoint.mjs';
-import { createLlmClient, LlmError } from './llm-client.mjs';
+import { createLlmClient, ISSUE_MODEL_BUDGET_MS, LlmError } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
 import { dailyPublicationEligibility, prepareCandidates, candidateSector, isBenchmarkRateStory, isMortgageRateStory, employmentReportKey, repeatedEmploymentReport, assertFreshDailyReports, editorInstructions, candidatePrompt, validateDecisions, prepareModelDecisions, createDecisionRepair, selectItems, writingSystem, dailyWritingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, prepareWritingCard, validateWritingMetadata, prepareWritingMetadata, buildReviewDraft, reviewSystem, dailyReviewSystem, reviewPrompt, prepareReview, createReviewRepair, dryDecisions } from './editorial.mjs';
 import { assembleDailyEdition, isDailyUSStory, DAILY_WRITING_LIMIT, DAILY_WRITING_POLICY } from './daily-edition.mjs';
@@ -50,6 +50,9 @@ export async function runPipeline(kind = 'daily', options = {}) {
   const existing = await readJson(path.join(outDir, label + '.json'), null);
   const isValidExisting = validArchive(existing, { kind, upper: window.upper, period: label });
   let requestedRevision = env.ISSUE_REVISION || undefined;
+  if (env.ISSUE_AUTO_REVISION && !requestedRevision && !calendarForce && !replay) {
+    return { skipped: true, reason: 'Automatic revision has no restored or approved checkpoint' };
+  }
   let recoveryFromRevision = null;
   if (!calendarForce && !replay && isValidExisting) {
     const currentSnapshots = await loadWindowSnapshots(stateDir, window);
@@ -81,9 +84,15 @@ export async function runPipeline(kind = 'daily', options = {}) {
     if (store) await options.onCheckpoint?.(stage, store);
     return { checkpointed: true, stage, identity: store?.identity, issue_dir: store?.dir };
   };
+  const warnReview = review => {
+    if (env.GITHUB_ACTIONS === 'true' && ['fallback', 'skipped'].includes(review?.status)) {
+      console.warn('::warning::reviewer status=' + review.status + ' reason=' + (review.reason || 'unknown'));
+    }
+  };
   const ready = store && await store.get('ready');
   if (ready) {
     validateIssue(ready.payload, { kind, upper: window.upper, period: label });
+    if (!until || until === 'reviewer' || until === 'ready') warnReview(ready.payload._diagnostics?.review);
     if (until) return boundary('ready');
     return materializeIssue(ready, { root, outDir, dataDir, stateDir, env, now, dry, replay });
   }
@@ -258,15 +267,22 @@ export async function runPipeline(kind = 'daily', options = {}) {
   if (until === 'prepared') return boundary('prepared');
   await options.onCheckpoint?.('prepared', store);
   const targetDeadline = Number(env.PUBLICATION_DEADLINE_MS);
-  const spentMs = store ? Object.values(store.manifest.attempts).flat().reduce((sum, event) => sum + (event.ms ?? event.reserved_ms ?? 240000) + (event.retry_delay_ms || 0), 0) : 0;
-  const remainingBeforeReserve = targetDeadline - Date.now() - 180000;
-  const budgetMs = remainingBeforeReserve > 0 ? Math.min(660000, remainingBeforeReserve + spentMs) : 660000;
+  const spentModelTime = () => Object.values(store?.manifest.attempts || {}).flat()
+    .reduce((sum, event) => sum + (event.ms ?? event.reserved_ms ?? 240000) + (event.retry_delay_ms || 0), 0);
+  const spentMs = spentModelTime(), nowMs = Date.now();
+  const stopMs = Number(env.LLM_JOB_STOP_MS);
+  const jobStopMs = Number.isFinite(stopMs) && stopMs > 0 ? stopMs : 0;
+  const remainingBeforeReserve = targetDeadline - nowMs - 180000;
+  const budgetMs = Math.min(ISSUE_MODEL_BUDGET_MS,
+    remainingBeforeReserve > 0 ? spentMs + remainingBeforeReserve : Infinity,
+    jobStopMs ? spentMs + Math.max(0, jobStopMs - nowMs) : Infinity);
   const fallbackApiKey = env.LLM_BACKUP_API_KEY?.trim();
   const fallbackEndpoint = env.LLM_BACKUP_ENDPOINT || 'https://api.openai.com/v1/chat/completions';
-  const fallback = fallbackApiKey && (fallbackEndpoint !== env.LLM_ENDPOINT || fallbackApiKey !== env.LLM_API_KEY)
-    ? { fallbackEndpoint, fallbackApiKey } : {};
-  const client = options.client || createLlmClient({ ...options.llmOptions, endpoint: env.LLM_ENDPOINT, apiKey: env.LLM_API_KEY, model, budgetMs, cacheDir: path.join(stateDir, 'llm-cache'),
-    ...fallback,
+  const client = options.client || createLlmClient({ ...options.llmOptions, endpoint: env.LLM_ENDPOINT, apiKey: env.LLM_API_KEY, model, budgetMs,
+    deadlineMs: nowMs + Math.max(0, budgetMs - spentMs), cacheDir: path.join(stateDir, 'llm-cache'),
+    ...(fallbackApiKey ? { fallbackEndpoint, fallbackApiKey } : {}),
+    initialRoute: env.LLM_ACTIVE_ROUTE === 'backup' ? 'backup' : 'primary',
+    onSwitchToBackup: env.GITHUB_ENV ? () => fs.appendFile(env.GITHUB_ENV, 'LLM_ACTIVE_ROUTE=backup\n') : undefined,
     diagnosticsDir: path.join(stateDir, 'llm-diagnostics'), onEvent: event => console.log('LLM ' + JSON.stringify(event)), ledger: store && { attempts: store.manifest.attempts, spentMs, blockedStages: store.manifest.budget_unknown || [], recordAttempt: store.recordAttempt, recordOutcome: store.recordOutcome, recordDelay: store.recordDelay } });
   const editorBatch = createModelBatch(candidates);
   let decisions = store && await store.get('editor');
@@ -281,10 +297,10 @@ export async function runPipeline(kind = 'daily', options = {}) {
     };
     const recentCoverage = snapshot.recent_coverage?.length
       ? '\n以下是冻结的近期已刊事件台账，不是新稿。历史已刊条目没有本批编号；与历史台账同一事件且无新增事实时直接设 keep:false、duplicate_of:null。duplicate_of 只能指向本批候选短编号 "1" 至 "' + editorBatch.items.length + '" 或 null，不能引用历史条目。候选与已刊属于同一事件时，只有独立新增事实或实质后续行动才可 keep=true，并在 reason 明确新增；更换来源、重复声明或立场重述均不另占条数。同一统计月的通用 Jobs/Employment Report 已刊时，仅有新的就业数据才保留，并输出 novelty_evidence 为当前输入中包含新增数据的逐字原句（20至500字符），否则 keep=false。新数据必须进入成品摘要，不能仅在内部 reason 提及。\n' + JSON.stringify(snapshot.recent_coverage.map(row => Object.fromEntries(['date', 'title', 'published_at', 'summary_zh', 'report_key', 'report_evidence'].filter(key => Object.hasOwn(row, key)).map(key => [key, row[key]])))) : '';
-    decisions = (await client.call(editorSystem + recentCoverage, candidatePrompt(editorBatch.items, decisionContext), { model, effort: editorEffort, label: 'editor', maxTokens: 12000,
+    decisions = (await client.call(editorSystem + recentCoverage, candidatePrompt(editorBatch.items, decisionContext), { model, effort: editorEffort, label: 'editor', maxTokens: 16000,
       validate, repair: () => completeDecisions && createDecisionRepair(completeDecisions, editorBatch.items, tagConfig, validate, decisionContext) })).decisions;
+    if (store) await store.put('editor', decisions);
   }
-  if (store) await store.put('editor', decisions);
   if (until === 'editor') return boundary('editor');
   await options.onCheckpoint?.('editor', store);
   let ratePin = null;
@@ -460,7 +476,10 @@ export async function runPipeline(kind = 'daily', options = {}) {
     const shortMetadata = value => value && ({ ...value, sentences: value.sentences?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) });
     const saved = { items: (savedCards?.items || []).map(it => ({ ...it, id: shortIds.get(it.id) })), executive_summary: shortMetadata(savedMetadata?.executive_summary), themes: savedMetadata?.themes?.map(row => ({ ...row, item_ids: row.item_ids.map(id => shortIds.get(id)) })) };
     const canonicalIds = new Set(saved.items.map(it => it.id));
-    const writerBudgetDone = (store?.manifest.attempts.writer?.length || 0) >= 3 || store?.manifest.budget_unknown?.includes('writer') || (targetDeadline > Date.now() && remainingBeforeReserve <= 0);
+    const writerNow = Date.now();
+    const writerBudgetDone = (store?.manifest.attempts.writer?.length || 0) >= 3 || store?.manifest.budget_unknown?.includes('writer')
+      || (jobStopMs && writerNow >= jobStopMs) || spentModelTime() >= budgetMs
+      || (targetDeadline > writerNow && targetDeadline - writerNow <= 180000);
     const fullEdition = dailyPool && assemble({ requireSummary: true });
     const partialEdition = dailyPool && !fullEdition && writerBudgetDone && assemble({ allowPartial: true });
     const preassembled = fullEdition || partialEdition;
@@ -471,7 +490,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
       const resume = saved.items.length && createWritingRepair(saved, writerBatch.items, kind, validate, { ...writingContext, canonicalIds, summaryShortening: savedMetadata?.summary_shortening });
       try {
         written = await client.call(resume?.system || (dailyPool ? dailyWritingSystem : writingSystem), resume?.user || writingPrompt(kind, writerBatch.items, writingContext),
-          { model, effort: writerEffort, label: 'writer', maxTokens: 10000, validate: (data, context) => context?.cacheHit ? validate(data, context) : (resume?.validate || validate)(data, context), repair: (data, error) => /Invalid repair reference|Metadata repair cannot replace cards|Repair coverage mismatch/.test(error?.message || '') ? null : createWritingRepair(completeAnswer || data, writerBatch.items, kind, validate, { ...writingContext, ...completeContext }) });
+          { model, effort: writerEffort, label: 'writer', maxTokens: 16000, validate: (data, context) => context?.cacheHit ? validate(data, context) : (resume?.validate || validate)(data, context), repair: (data, error) => /Invalid repair reference|Metadata repair cannot replace cards|Repair coverage mismatch/.test(error?.message || '') ? null : createWritingRepair(completeAnswer || data, writerBatch.items, kind, validate, { ...writingContext, ...completeContext }) });
         if (dailyPool) written = assemble({ requireSummary: true });
       } catch (error) {
         if (!dailyPool || !(error instanceof LlmError || error.llmTransport)) throw error;
@@ -492,16 +511,37 @@ export async function runPipeline(kind = 'daily', options = {}) {
         try {
           const reviewedIds = new Set(reviewItems.map(it => it.id));
           validateWriting({ items: structuredClone(savedReview.items), executive_summary: structuredClone(savedReview.executive_summary), themes: structuredClone(savedReview.themes || []) }, reviewItems, kind, { ...reviewContext, canonicalIds: reviewedIds });
-          written = { ...written, items: savedReview.items, executive_summary: savedReview.executive_summary, themes: savedReview.themes || [], validation_notes: { ...written.validation_notes, ...(savedReview.summary_shortening ? { summary_shortening: savedReview.summary_shortening } : {}) }, review: { status: savedReview.status, issues: savedReview.issues || [], revised_ids: savedReview.revised_ids || [], ...(savedReview.fallback_reason ? { fallback_reason: savedReview.fallback_reason } : {}) } };
+          const { status, issues = [], revised_ids = [], reason, fallback_reason } = savedReview;
+          const legacyFallback = status === 'pass' && fallback_reason;
+          written = { ...written, items: savedReview.items, executive_summary: savedReview.executive_summary, themes: savedReview.themes || [],
+            validation_notes: { ...written.validation_notes, ...(savedReview.summary_shortening ? { summary_shortening: savedReview.summary_shortening } : {}) },
+            review: { status: legacyFallback ? 'fallback' : status, issues, revised_ids,
+              ...(reason || legacyFallback ? { reason: reason || 'review_failed' } : {}), ...(fallback_reason ? { fallback_reason } : {}) } };
         } catch (error) {
           if (!(error instanceof LlmError)) throw error;
           savedReview = null;
         }
       }
     }
-    const spentAfterWriter = store ? Object.values(store.manifest.attempts).flat().reduce((sum, event) => sum + (event.ms ?? event.reserved_ms ?? 240000) + (event.retry_delay_ms || 0), 0) : 0;
-    const reviewBlocked = writerExhausted || store?.manifest.budget_unknown?.includes('reviewer') || spentAfterWriter >= budgetMs || (targetDeadline > Date.now() && targetDeadline - Date.now() - 180000 <= 0);
-    if (!savedReview && !reviewBlocked) {
+    const preserveWriter = async review => {
+      if (store) await store.put('reviewer', {
+        written_digest: writtenDigest, ...review, items: written.items, executive_summary: written.executive_summary,
+        themes: written.themes || [],
+        ...(written.validation_notes?.summary_shortening ? { summary_shortening: written.validation_notes.summary_shortening } : {})
+      });
+      written = { ...written, review };
+    };
+    const reviewNow = Date.now();
+    let skipReason;
+    if (writerExhausted) skipReason = 'writer_exhausted';
+    else if (store?.manifest.budget_unknown?.includes('reviewer')) skipReason = 'budget_unknown';
+    else if (jobStopMs && reviewNow >= jobStopMs) skipReason = 'job_deadline';
+    else if (spentModelTime() >= budgetMs) skipReason = 'model_budget_exhausted';
+    else if (targetDeadline > reviewNow && targetDeadline - reviewNow <= 180000) skipReason = 'delivery_reserve';
+
+    if (!savedReview && skipReason) {
+      await preserveWriter({ status: 'skipped', reason: skipReason, issues: [], revised_ids: [] });
+    } else if (!savedReview) {
       const reviewBatch = createModelBatch(reviewItems);
       const shortDraft = buildReviewDraft(written, reviewItems, { fixedEvidence: dailyPool });
       let completeReview;
@@ -541,7 +581,9 @@ export async function runPipeline(kind = 'daily', options = {}) {
             model: reviewModel,
             effort: reviewEffort,
             label: 'reviewer',
-            maxTokens: 10000,
+            maxTokens: 24000,
+            firstByteMs: 210_000,
+            totalMs: 270_000,
             validate: validateReview,
             repair: (data, error) => /Invalid review item reference|Invalid review response|Invalid review status/.test(error?.message || '') ? null : createReviewRepair(completeReview || data, reviewBatch.items, shortDraft, kind, validateReview, reviewContext, error)
           }
@@ -559,22 +601,10 @@ export async function runPipeline(kind = 'daily', options = {}) {
         };
       } catch (error) {
         if (!(error instanceof LlmError || error.llmTransport || /budget exhausted|timeout/i.test(error?.message || ''))) throw error;
-        if (store) {
-          await store.put('reviewer', {
-            written_digest: writtenDigest,
-            status: 'pass',
-            issues: [],
-            revised_ids: [],
-            fallback_reason: error.message,
-            items: written.items,
-            executive_summary: written.executive_summary,
-            themes: written.themes || [],
-            ...(written.validation_notes?.summary_shortening ? { summary_shortening: written.validation_notes.summary_shortening } : {})
-          });
-        }
-        written = { ...written, review: { status: 'pass', issues: [], revised_ids: [], fallback_reason: error.message } };
+        await preserveWriter({ status: 'fallback', reason: 'review_failed', issues: [], revised_ids: [], fallback_reason: error.message });
       }
     }
+    warnReview(written.review);
     if (until === 'reviewer') return boundary('reviewer');
     await options.onCheckpoint?.('reviewer', store);
   }

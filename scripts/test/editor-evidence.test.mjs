@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { EDITORIAL_PROTOCOL, freezeEditorEvidence, editorEvidenceReferences, bindEditorialEvidence, assertEditorialEvidence } from '../lib/editor-evidence.mjs';
 import { isDailyUSStory } from '../lib/daily-edition.mjs';
-import { prepareModelDecisions, validateDecisions, createDecisionRepair, routeSection } from '../lib/editorial.mjs';
+import { prepareModelDecisions, validateDecisions, createDecisionRepair, routeSection, editorInstructions, prepareReview } from '../lib/editorial.mjs';
 import { editorialCoverage } from '../lib/editorial-coverage.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
 import { createLlmClient } from '../lib/llm-client.mjs';
@@ -182,4 +182,11 @@ test('exhausting editorial evidence repairs never freezes a false approved batch
   } });
   await assert.rejects(client.call('fixture', '{}', { label: 'editor', validate, repair: () => createDecisionRepair(last, [item], null, validate, context) }), /market_evidence_id/);
   assert.equal(requests.length, 3);
+});
+
+test('the first editor prompt requires capital subject market evidence for all capital events', () => {
+  const expected = /primary_event 为 fund_platform_capital、institutional_allocation 或 capital_governance 时，market_role 必须为 capital_subject，market_evidence_id 必须指向能证明主资本主体美国范围的原文/;
+  assert.match(editorInstructions(null, { evidenceRefs: true }), expected);
+  assert.doesNotMatch(editorInstructions(null), expected);
+  for (const status of ['fallback', 'skipped']) assert.throws(() => prepareReview({ status }, [], {}, 'daily'), /Invalid review status/);
 });

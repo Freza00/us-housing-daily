@@ -2,10 +2,12 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import { createLlmClient, LlmError } from '../lib/llm-client.mjs';
 import { createModelBatch } from '../lib/model-references.mjs';
 import { buildReviewDraft, createReviewRepair, createWritingRepair, validateDecisions, validateWriting, writingEvidenceOptions, writingPrompt, writingSystem, reviewPrompt, selectItems, numericValues, normalizeChinese, prepareReview } from '../lib/editorial.mjs';
-import { validateIssue } from '../lib/issue-contract.mjs';
+import { digest, validateIssue } from '../lib/issue-contract.mjs';
 import { runPipeline } from '../lib/pipeline.mjs';
 import { modelDecision, modelEvidence, sandbox, sample, replayEnv } from './helpers.mjs';
 
@@ -73,6 +75,7 @@ test('normal pipeline uses three stages (editor high, writer high, reviewer xhig
   assert.equal(requests.length, 3);
   assert.deepEqual(requests.map(x => x.model), ['gpt-6.2-sol', 'gpt-6.2-sol', 'gpt-6.2-sol']);
   assert.deepEqual(requests.map(x => x.reasoning_effort), ['high', 'high', 'xhigh']);
+  assert.deepEqual(requests.map(x => x.max_completion_tokens), [16000, 16000, 24000]);
   assert.deepEqual(new Set(result.items.map(x => x.id)), new Set(items.map(x => x.id)));
   assert.ok(result.executive_summary.sentences[0].item_ids.every(id => items.some(x => x.id === id)));
 });
@@ -180,7 +183,7 @@ for (const [status, detail, backupEndpoint] of [
     assert.deepEqual(manifest.attempts.editor.map(x => [x.attempt, x.route]), [[1, 'primary'], [2, 'backup']]);
     assert.deepEqual(manifest.attempts.writer.map(x => [x.attempt, x.route]), [[1, 'backup']]);
     assert.deepEqual(manifest.attempts.reviewer.map(x => [x.attempt, x.route]), [[1, 'backup']]);
-    assert.ok(Object.values(manifest.attempts).flat().every(x => x.reserved_ms > 0 && x.reserved_ms <= 240000));
+    assert.ok(Object.values(manifest.attempts).flat().every(x => x.reserved_ms > 0 && x.reserved_ms <= (x.label === 'reviewer' ? 270000 : 240000)));
     assert.equal(result.items.length, items.length);
   });
 }
@@ -299,15 +302,50 @@ test('primary and backup failures share the hard three-request limit and cross-r
   }
 });
 
-test('automatic fallback cannot exceed the deadline or retry delay budget', async () => {
-  for (const budgetMs of [0, 30]) {
-    let calls = 0, sleeps = 0;
-    const client = createLlmClient({ endpoint: 'https://primary.example.com', apiKey: 'fixture-primary',
-      fallbackEndpoint: 'https://backup.example.com', fallbackApiKey: 'fixture-backup', budgetMs, retryDelays: [100, 100],
-      sleep: async () => { sleeps++; }, fetchImpl: async () => { calls++; return new Response('insufficient_quota', { status: 429 }); } });
-    await assert.rejects(client.call('s', 'u'), /budget exhausted/);
-    assert.equal(calls, budgetMs ? 1 : 0); assert.equal(sleeps, 0);
+for (const sameOrigin of [false, true]) test(`automatic switch only skips the first backoff across origins (same origin=${sameOrigin})`, async () => {
+  const delays = [], sleeps = [], outcomes = [];
+  let calls = 0, switches = 0;
+  const client = createLlmClient({ endpoint: 'https://primary.example.com/a', apiKey: 'fixture-primary',
+    fallbackEndpoint: sameOrigin ? 'https://primary.example.com/b' : 'https://backup.example.com/b', fallbackApiKey: 'fixture-backup',
+    onSwitchToBackup: async () => { switches++; throw new Error('environment file unavailable'); },
+    ledger: { recordAttempt: async () => {}, recordOutcome: async (_label, event) => outcomes.push(event), recordDelay: async (_label, _id, ms) => delays.push(ms) },
+    sleep: async ms => sleeps.push(ms), fetchImpl: async () => ++calls < 3 ? new Response('upstream failure', { status: 522 }) : response({ ok: true }) });
+  assert.deepEqual(await client.call('s', 'u'), { ok: true });
+  assert.deepEqual(delays, sameOrigin ? [15000, 45000] : [45000]);
+  assert.deepEqual(sleeps, delays);
+  assert.equal(switches, 1);
+  assert.deepEqual(outcomes.map(event => event.route), ['primary', 'backup', 'backup']);
+});
+
+test('cross-origin switching fits in a short balance but stops at the exact deadline', async t => {
+  let clock = Date.now();
+  t.mock.method(Date, 'now', () => clock);
+  for (const [budgetMs, elapsed, sameOrigin, expectedCalls] of [[0, 0, false, 0], [30, 29, false, 2], [30, 30, false, 1], [30, 29, true, 1]]) {
+    let calls = 0;
+    const client = createLlmClient({ endpoint: 'https://primary.example.com/a', apiKey: 'fixture-primary',
+      fallbackEndpoint: sameOrigin ? 'https://primary.example.com/b' : 'https://backup.example.com', fallbackApiKey: 'fixture-backup', budgetMs,
+      onSwitchToBackup: async () => { clock += elapsed; },
+      sleep: async () => assert.fail('Must not sleep'), fetchImpl: async () => ++calls === 1 ? new Response('insufficient_quota', { status: 429 }) : response({ ok: true }) });
+    if (expectedCalls === 2) assert.deepEqual(await client.call('s', 'u'), { ok: true });
+    else await assert.rejects(client.call('s', 'u'), /budget exhausted/);
+    assert.equal(calls, expectedCalls);
   }
+});
+
+test('explicit initial backup requires only its own credentials, including when identical to primary', async () => {
+  const endpoint = 'https://backup.example.com', apiKey = 'fixture-backup';
+  for (const primary of [{}, { endpoint, apiKey }]) {
+    const client = createLlmClient({ ...primary, initialRoute: 'backup', fallbackEndpoint: endpoint, fallbackApiKey: apiKey,
+      fetchImpl: async (url, request) => {
+        assert.equal(url, endpoint);
+        assert.equal(request.headers.Authorization, 'Bearer ' + apiKey);
+        return response({ ok: true });
+      } });
+    assert.deepEqual(await client.call('s', 'u'), { ok: true });
+    assert.equal(client.usage[0].route, 'backup');
+  }
+  const incomplete = createLlmClient({ endpoint, apiKey, initialRoute: 'backup', fallbackEndpoint: endpoint });
+  await assert.rejects(incomplete.call('s', 'u'), /Missing LLM endpoint or API key/);
 });
 
 test('recovered pipeline public diagnostics redact nested causes and upstream identifiers', async t => {
@@ -552,6 +590,11 @@ test('staged PIPELINE_UNTIL=writer freezes before reviewer and resumes only revi
     usage: [],
     async call(_system, user, options) {
       stages.push({ label: options.label, model: options.model, effort: options.effort });
+      if (options.label === 'reviewer') {
+        assert.equal(options.firstByteMs, 210_000);
+        assert.equal(options.totalMs, 270_000);
+        assert.equal(options.maxTokens, 24000);
+      }
       if (options.label === 'editor') return options.validate({ decisions: JSON.parse(user).map(x => modelDecision(x.id)) });
       if (options.label === 'writer') {
         const input = JSON.parse(user);
@@ -633,7 +676,7 @@ test('weekly buildReviewDraft maps evidence_id to short batch IDs that prepareRe
   assert.deepEqual(reviewed.revised_ids, ['2']);
 });
 
-test('reviewer fallback checkpoints on PIPELINE_UNTIL=reviewer and cold-resumes PIPELINE_UNTIL=ready with zero requests', async t => {
+for (const legacy of [false, true]) test(`reviewer fallback warns and cold-recovers without a request or rewriting the saved review (legacy=${legacy})`, async t => {
   const root = await sandbox(t);
   const env = await replayEnv(root, { items }, '2026-10-29T01:00:00Z');
   const client = {
@@ -648,13 +691,78 @@ test('reviewer fallback checkpoints on PIPELINE_UNTIL=reviewer and cold-resumes 
       throw new Error('Unexpected stage: ' + options.label);
     }
   };
-  const revStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'reviewer' }, client });
+  const warnings = t.mock.method(console, 'warn', () => {});
+  const revStep = await runPipeline('daily', { root, env: { ...env, GITHUB_ACTIONS: 'true', PIPELINE_UNTIL: 'reviewer' }, client });
   assert.equal(revStep.stage, 'reviewer');
-  const savedRev = JSON.parse(await fs.readFile(path.join(revStep.issue_dir, 'reviewer.json'), 'utf8'));
+  const reviewFile = path.join(revStep.issue_dir, 'reviewer.json'), manifestFile = path.join(revStep.issue_dir, 'manifest.json');
+  const savedRev = JSON.parse(await fs.readFile(reviewFile, 'utf8'));
+  assert.equal(savedRev.status, 'fallback');
+  assert.equal(savedRev.reason, 'review_failed');
+  if (legacy) {
+    savedRev.status = 'pass';
+    delete savedRev.reason;
+    const manifest = JSON.parse(await fs.readFile(manifestFile));
+    manifest.phases.reviewer.sha256 = digest(savedRev);
+    await fs.writeFile(reviewFile, JSON.stringify(savedRev));
+    await fs.writeFile(manifestFile, JSON.stringify(manifest));
+  }
+  const savedBytes = await fs.readFile(reviewFile, 'utf8');
   assert.equal(savedRev.fallback_reason, 'Review validation failed after repairs');
-  const readyStep = await runPipeline('daily', { root, env: { ...env, PIPELINE_UNTIL: 'ready' }, client: { call() { throw new Error('Must not call LLM on ready resume'); } } });
+  const readyStep = await runPipeline('daily', { root, env: { ...env, GITHUB_ACTIONS: 'true', PIPELINE_UNTIL: 'ready' }, client: { call() { throw new Error('Must not call LLM on ready resume'); } } });
   assert.equal(readyStep.stage, 'ready');
   const { payload } = JSON.parse(await fs.readFile(path.join(revStep.issue_dir, 'ready.json'), 'utf8'));
   validateIssue(payload);
+  assert.equal(await fs.readFile(reviewFile, 'utf8'), savedBytes);
+  assert.deepEqual(warnings.mock.calls.map(call => call.arguments), Array.from({ length: 2 }, () => ['::warning::reviewer status=fallback reason=review_failed']));
+  assert.equal(payload._diagnostics.review.status, 'fallback');
+  assert.equal(payload._diagnostics.review.reason, 'review_failed');
   assert.equal(payload._diagnostics.review.fallback_reason, 'Review validation failed after repairs');
+});
+
+test('three pipeline processes inherit backup via GITHUB_ENV and preserve editor timing, a fresh job starts primary', async t => {
+  const root = await sandbox(t), githubEnv = path.join(root, 'github.env');
+  const env = { ...await replayEnv(root, { items }, '2026-10-29T01:00:00Z'), GITHUB_ENV: githubEnv,
+    LLM_ENDPOINT: 'https://primary.example.com', LLM_API_KEY: 'fixture-primary',
+    LLM_BACKUP_ENDPOINT: 'https://backup.example.com', LLM_BACKUP_API_KEY: 'fixture-backup' };
+  const program = `
+    import { runPipeline } from ${JSON.stringify(new URL('../lib/pipeline.mjs', import.meta.url).href)};
+    import { fakeClient } from ${JSON.stringify(new URL('./helpers.mjs', import.meta.url).href)};
+    const result = await runPipeline('daily', { root: process.env.FIXTURE_ROOT, llmOptions: {
+      sleep: async () => { throw Error('Unexpected retry delay'); },
+      fetchImpl: async (url, request) => {
+        if (url === process.env.LLM_ENDPOINT && process.env.FAIL_PRIMARY === '1') return new Response('unavailable', { status: 522 });
+        const payload = JSON.parse(request.body), user = payload.messages[1].content, input = JSON.parse(user);
+        const label = Array.isArray(input) ? 'editor' : input.review_target ? 'reviewer' : 'writer';
+        const content = await fakeClient().call(null, user, { label, validate: value => value });
+        return Response.json({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify(content) } }] });
+      }
+    } });
+    console.log(JSON.stringify(result));
+  `;
+  const exec = promisify(execFile);
+  const run = async (stage, extra = {}) => {
+    const { stdout } = await exec(process.execPath, ['--input-type=module', '-e', program], { env: {
+      ...env, LLM_ACTIVE_ROUTE: '', FIXTURE_ROOT: root, PIPELINE_UNTIL: stage, ...extra
+    } });
+    return JSON.parse(stdout.trim().split('\n').at(-1));
+  };
+  const editor = await run('editor', { FAIL_PRIMARY: '1' });
+  const manifest = async issue => JSON.parse(await fs.readFile(path.join(issue.issue_dir, 'manifest.json')));
+  const oldEditor = (await manifest(editor)).phases.editor;
+  const environment = await fs.readFile(githubEnv, 'utf8');
+  assert.equal(environment, 'LLM_ACTIVE_ROUTE=backup\n');
+  const inherited = Object.fromEntries(environment.trim().split('\n').map(line => line.split('=')));
+  const writer = await run('writer', inherited);
+  assert.deepEqual((await manifest(writer)).phases.editor, oldEditor);
+  const ready = await run('ready', inherited);
+  const frozen = await manifest(ready);
+  assert.deepEqual(frozen.phases.editor, oldEditor);
+  assert.deepEqual(Object.fromEntries(Object.entries(frozen.attempts).map(([stage, attempts]) => [stage, attempts.map(x => x.route)])),
+    { editor: ['primary', 'backup'], writer: ['backup'], reviewer: ['backup'] });
+  assert.equal(frozen.attempts.editor[0].retry_delay_ms, undefined);
+  assert.equal(frozen.attempts.reviewer[0].reserved_ms, 270_000);
+  const { payload } = JSON.parse(await fs.readFile(path.join(ready.issue_dir, 'ready.json')));
+  assert(payload._diagnostics.timings.editor_finished_at <= payload._diagnostics.timings.writer_started_at);
+  const fresh = await run('editor', { NEWS_STATE_DIR: path.join(root, 'fresh-state'), GITHUB_ENV: path.join(root, 'fresh-github.env') });
+  assert.deepEqual((await manifest(fresh)).attempts.editor.map(x => x.route), ['primary']);
 });

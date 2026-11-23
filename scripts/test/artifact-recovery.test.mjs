@@ -92,3 +92,47 @@ test('an explicit revision never silently allocates a different version when mis
     {name:'Review frozen issue',status:'in_progress',started_at:'2026-10-28T00:03:00Z'}
   ]}]),['editor','writer','reviewer']);
 });
+
+test('automatic r2 allocates only after checking the r1 completion boundary and never reopens a higher revision', async t => {
+  const f = await setup(t);
+  f.run.path = '.github/workflows/weekly.yml';
+  f.artifacts.length = 0;
+  f.recentRuns.push({ id: 1 });
+  const r1FinishedAt = '2026-10-28T00:05:00Z';
+  const jobsKey = 'repos/owner/repo/actions/runs/1/jobs?filter=all&per_page=100';
+  const step = { name: 'Review frozen issue', status: 'completed', conclusion: 'success', started_at: '2026-10-28T00:04:59Z' };
+  f.jobsByKey[jobsKey] = [{ steps: [step] }];
+  const options = { ...f.options, kind: 'weekly', root: f.root, repo: 'owner/repo', gh: f.gh, unzip: f.unzip,
+    revision: 2, publishedRevision: 1, allowNewAutoR2: true, r1FinishedAt };
+  assert.deepEqual(await restoreCheckpoint(options), { restored: false, revision: 2, budget_unknown: [], reason: 'New automatic r2' });
+  for (const invalid of [undefined, 'invalid timestamp', Date.now() + 60_000]) {
+    await assert.rejects(restoreCheckpoint({ ...options, r1FinishedAt: invalid }), /credible r1 completion time/);
+  }
+  for (const startedAt of [r1FinishedAt, '2026-10-28T00:06:00Z', undefined]) {
+    Object.assign(step, { started_at: startedAt, status: 'in_progress' });
+    await assert.rejects(restoreCheckpoint(options), /prior model stage has no final ledger/);
+  }
+  step.started_at = '2026-10-28T00:04:59Z';
+  for (const disallowed of [{ allowNewAutoR2: false }, { kind: 'daily' }, { revision: 3 }, { publishedRevision: 2 }]) {
+    await assert.rejects(restoreCheckpoint({ ...options, ...disallowed }), /missing or expired/);
+  }
+  await fs.mkdir(path.join(f.root, 'state/issues/weekly', options.period, 'r3'), { recursive: true });
+  await assert.rejects(restoreCheckpoint(options), /missing or expired/);
+});
+
+test('automatic r2 restores trusted checkpoints and refuses expired, corrupt or incompatible attachments', async t => {
+  const f = await setup(t);
+  f.run.path = '.github/workflows/monthly.yml';
+  const opts = { ...f.options, kind: 'monthly', period: '2026-10', root: f.root, repo: 'owner/repo', gh: f.gh, unzip: f.unzip,
+    revision: 2, publishedRevision: 1, allowNewAutoR2: true, r1FinishedAt: '2026-10-28T00:05:00Z' };
+  const artifact = { ...f.artifacts[0], name: 'news-issue-monthly-2026-10-r2-1-1-editor', expired: true };
+  f.artifacts[0] = artifact;
+  await assert.rejects(restoreCheckpoint(opts), /missing or expired/);
+  artifact.expired = false;
+  Object.assign(f.files['manifest.json'].identity, { kind: opts.kind, period_key: opts.period, revision: 2 });
+  await assert.rejects(restoreCheckpoint({ ...opts, rules: 'different' }), /incompatible/);
+  await assert.rejects(restoreCheckpoint({ ...opts, unzip: async args => args[0] === '-Z1' ? 'unsafe.txt' : f.unzip(args) }), /Unsafe/);
+  assert.equal((await restoreCheckpoint(opts)).restored, true);
+  artifact.expired = true;
+  assert.deepEqual(await restoreCheckpoint(opts), { restored: false, reason: 'Local checkpoint retained', revision: 2, budget_unknown: [] });
+});

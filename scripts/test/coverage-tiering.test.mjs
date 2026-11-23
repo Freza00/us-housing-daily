@@ -38,7 +38,7 @@ async function runEntry(scriptRel, root, kind, isoNow, extraEnv = {}) {
   const outputFile = envFile + '.out';
   await fs.writeFile(envFile, '');
   await fs.writeFile(outputFile, '');
-  const env = { ...process.env, GITHUB_ENV: envFile, GITHUB_OUTPUT: outputFile, FORCE_RUN: '0', ISSUE_REVISION: '', EXPECTED_PERIOD: '', EXPECTED_CUTOFF: '', ...extraEnv };
+  const env = { ...process.env, GITHUB_ENV: envFile, GITHUB_OUTPUT: outputFile, FORCE_RUN: '0', ISSUE_REVISION: '', ISSUE_AUTO_REVISION: '', NEWS_DATA_DIR: path.join(root, 'data'), NEWS_STATE_DIR: path.join(root, 'state'), EXPECTED_PERIOD: '', EXPECTED_CUTOFF: '', ...extraEnv };
   const result = await exec(process.execPath, ['--import', 'data:text/javascript,' + encodeURIComponent(clock), fileURLToPath(new URL(scriptRel, import.meta.url)), kind], { cwd: root, env });
   return { json: JSON.parse(result.stdout), env: await fs.readFile(envFile, 'utf8'), output: await fs.readFile(outputFile, 'utf8') };
 }
@@ -243,7 +243,9 @@ test('weekly compensatory recovery executes r2 cleanly on Tuesday once missing s
     enrich: async x => x,
     collect: async () => [{ items: [{ ...sample('wk-story', wWindow.upper - 3600000), source_id: 'a', source_family: 'a' }], health: { id: 'a', required: true, status: 'ok', articles: 1, undated: 0, coverage: { lower: halfSpan, upper: wWindow.upper } } }]
   };
+  const wallClock = t.mock.method(Date, 'now', () => Date.parse(mon));
   const r1 = await runPipeline('weekly', { root, now: new Date(mon), env: { NEWS_DATA_DIR: path.join(root, 'data'), NEWS_STATE_DIR: path.join(root, 'state'), PUBLISH_NOW: mon }, collector, client: fakeClient() });
+  wallClock.mock.restore();
   assert.equal(r1.edition.revision, 1);
   assert.equal(r1.coverage_status, 'degraded');
   assert.deepEqual(r1.coverage_reasons, ['snapshot_gap']);
@@ -285,16 +287,45 @@ test('weekly compensatory recovery executes r2 cleanly on Tuesday once missing s
   await gitCommand(root, ['-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid', 'commit', '-m', 'fill missing snapshot']);
   await gitCommand(root, ['push', 'origin', 'main']);
 
-  // Tuesday 10:17 CST AFTER gap filled -> can-run approves r2 and exports ISSUE_REVISION=2
+  // Gate signals intent, then restore checks model history before allocating r2.
   const afterGate = await runCanRun(root, 'weekly', tue);
   assert.equal(afterGate.json.go, true);
   assert.equal(afterGate.json.revision, 2);
   assert.match(afterGate.output, /go=true/);
   assert.match(afterGate.output, /verify=true/);
-  assert.match(afterGate.env, /ISSUE_REVISION=2/);
+  assert.match(afterGate.env, /^ISSUE_AUTO_REVISION=2$/m);
+  assert.doesNotMatch(afterGate.env, /^ISSUE_REVISION=/m);
+  const bin = path.join(temp, 'bin');
+  await fs.mkdir(bin);
+  const ghLog = path.join(temp, 'gh.log');
+  await fs.writeFile(path.join(bin, 'gh'), String.raw`#!/bin/sh
+printf '%s\n' "$2" >> "$FAKE_GH_LOG"
+case "$2" in
+  */actions/artifacts\?*) echo '[{"artifacts":[]}]' ;;
+  */actions/workflows/weekly.yml/runs\?*) echo '[{"workflow_runs":[{"id":1}]}]' ;;
+  */actions/runs/1) echo '{"repository":{"full_name":"owner/repo"},"head_repository":{"full_name":"owner/repo"},"head_branch":"main","event":"schedule","path":".github/workflows/weekly.yml"}' ;;
+  */actions/runs/1/jobs\?*) echo '[{"jobs":[{"steps":[{"name":"Select frozen issue","status":"completed","conclusion":"success","started_at":"2026-11-16T06:02:00Z"},{"name":"Write and validate frozen issue","status":"completed","conclusion":"success","started_at":"2026-11-16T06:04:00Z"},{"name":"Review frozen issue","status":"completed","conclusion":"success","started_at":"2026-11-16T06:06:00Z"}]}]}]' ;;
+  *) exit 1 ;;
+esac
+`, { mode: 0o755 });
+  const fakeGithub = { PATH: bin + path.delimiter + process.env.PATH, GITHUB_REPOSITORY: 'owner/repo', FAKE_GH_LOG: ghLog };
+  const gateEnv = Object.fromEntries(afterGate.env.trim().split('\n').map(line => line.split('=')));
+  await assert.rejects(runRestore(root, 'weekly', tue, { ...fakeGithub, ISSUE_REVISION: '2' }), /Requested revision checkpoint is missing or expired/);
+  const stale = await runRestore(root, 'weekly', tue, { ...fakeGithub, ISSUE_AUTO_REVISION: '3' });
+  assert.equal(stale.json.skipped, true);
+  assert.doesNotMatch(stale.env, /^ISSUE_REVISION=/m);
+  const noApproval = await runPipeline('weekly', { root, now: new Date(tue), env: {
+    NEWS_DATA_DIR: path.join(root, 'data'), NEWS_STATE_DIR: path.join(root, 'state'), ...gateEnv
+  }, client: { call() { assert.fail('Must wait for restore approval'); } } });
+  assert.equal(noApproval.skipped, true);
+  const recovery = await runRestore(root, 'weekly', tue, { ...fakeGithub, ...gateEnv });
+  assert.deepEqual(recovery.json, { restored: false, revision: 2, budget_unknown: [], reason: 'New automatic r2' });
+  assert.equal(recovery.env, 'ISSUE_REVISION=2\n');
+  assert.match(await fs.readFile(ghLog, 'utf8'), /actions\/runs\/1\/jobs/);
+  const restoreEnv = Object.fromEntries(recovery.env.trim().split('\n').map(line => line.split('=')));
 
   // pipeline runs r2 to ready in isolated r2 manifest without touching r1, then pushCandidate pushes cleanly on Tuesday
-  const ready = await runPipeline('weekly', { root, now: new Date(tue), env: { NEWS_DATA_DIR: path.join(root, 'data'), NEWS_STATE_DIR: path.join(root, 'state'), PUBLISH_NOW: tue, PIPELINE_UNTIL: 'ready', ISSUE_REVISION: '2' }, collector: { cache: {}, enrich: async x => x, collect: async () => [{ items: [], health: { id: 'a', required: true, status: 'ok', articles: 1, undated: 0, coverage: { lower: halfSpan, upper: wWindow.upper } } }] }, client: fakeClient() });
+  const ready = await runPipeline('weekly', { root, now: new Date(tue), env: { NEWS_DATA_DIR: path.join(root, 'data'), NEWS_STATE_DIR: path.join(root, 'state'), PUBLISH_NOW: tue, PIPELINE_UNTIL: 'ready', ...restoreEnv }, collector: { cache: {}, enrich: async x => x, collect: async () => [{ items: [], health: { id: 'a', required: true, status: 'ok', articles: 1, undated: 0, coverage: { lower: halfSpan, upper: wWindow.upper } } }] }, client: fakeClient() });
   assert.equal(ready.stage, 'ready');
   const r2Bundle = JSON.parse(await fs.readFile(path.join(ready.issue_dir, 'ready.json'), 'utf8'));
   assert.equal(r2Bundle.payload.edition.revision, 2);

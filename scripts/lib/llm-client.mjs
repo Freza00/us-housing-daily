@@ -5,22 +5,29 @@ import path from 'node:path';
 export class LlmError extends Error {
   constructor(message, retryable = false) { super(message); this.retryable = retryable; }
 }
+export const ISSUE_MODEL_BUDGET_MS = 900_000;
+
+function isDistinctOrigin(a, b) {
+  try { return new URL(a).origin !== new URL(b).origin; } catch { return false; }
+}
+
 const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
 export function parseJson(text) {
   const clean = String(text).trim().replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
   try { return JSON.parse(clean); } catch { throw new LlmError('Incomplete or invalid JSON response'); }
 }
 
-export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackApiKey, model = 'gpt-6.2-sol', cacheDir, diagnosticsDir, onEvent,
-  fetchImpl = fetch, totalMs = 240000, firstByteMs = 150000, idleMs = 90000, budgetMs = 660000,
+export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackApiKey, initialRoute = 'primary', onSwitchToBackup, model = 'gpt-6.2-sol', cacheDir, diagnosticsDir, onEvent,
+  fetchImpl = fetch, totalMs = 240000, firstByteMs = 150000, idleMs = 90000, budgetMs = ISSUE_MODEL_BUDGET_MS, deadlineMs = Infinity,
   retryDelays = [15000, 45000], sleep = pause, ledger } = {}) {
   const usage = [];
   const delays = retryDelays.slice(0, 2);
-  const deadline = Date.now() + Math.max(0, budgetMs - (ledger?.spentMs || 0));
+  const deadline = Math.min(deadlineMs, Date.now() + Math.max(0, budgetMs - (ledger?.spentMs || 0)));
   const secrets = [...new Set([apiKey, fallbackApiKey].filter(Boolean))].sort((a, b) => b.length - a.length);
   const redact = value => secrets.reduce((text, secret) => text.replaceAll(secret, '[REDACTED]'), String(value));
-  const hasFallback = fallbackEndpoint && fallbackApiKey && (fallbackEndpoint !== endpoint || fallbackApiKey !== apiKey);
-  let usingBackup = false;
+  const hasBackupCreds = Boolean(fallbackEndpoint && fallbackApiKey);
+  const hasDistinctFallback = hasBackupCreds && (fallbackEndpoint !== endpoint || fallbackApiKey !== apiKey);
+  let usingBackup = initialRoute === 'backup';
   const safeEvent = event => JSON.parse(redact(JSON.stringify(event)));
   async function record(event) {
     const safe = safeEvent(event);
@@ -30,8 +37,8 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
     }
     onEvent?.(safe);
   }
-  async function call(system, user, { model: activeModel = model, effort = 'high', maxTokens = 8000, label = 'llm', validate = x => x, repair } = {}) {
-    if (!endpoint || !apiKey) throw new LlmError('Missing LLM endpoint or API key');
+  async function call(system, user, { model: activeModel = model, effort = 'high', maxTokens = 8000, label = 'llm', validate = x => x, repair,
+    totalMs: callTotalMs = totalMs, firstByteMs: callFirstByteMs = firstByteMs, idleMs: callIdleMs = idleMs } = {}) {
     const body = { model: activeModel, messages: [{ role: 'system', content: system }, { role: 'user', content: user }], reasoning_effort: effort,
       max_completion_tokens: maxTokens, response_format: { type: 'json_object' }, stream: true, stream_options: { include_usage: true } };
     const key = createHash('sha256').update(JSON.stringify(body)).digest('hex');
@@ -44,18 +51,19 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
     if (ledger?.blockedStages?.includes(label)) throw new LlmError('Cross-run model budget is unknown; only validated cache or delivery recovery is allowed: ' + label);
     const previousAttempts = ledger?.attempts?.[label]?.length || 0;
     for (let attempt = previousAttempts; attempt <= delays.length; attempt++) {
+      const activeIsBackup = usingBackup;
+      if (!(activeIsBackup ? hasBackupCreds : endpoint && apiKey)) throw new LlmError('Missing LLM endpoint or API key');
       const remaining = deadline - Date.now();
       if (remaining <= 0) { await record({ event: 'budget_exhausted', label, model: activeModel, effort }); throw new LlmError('LLM run time budget exhausted'); }
       const ctrl = new AbortController(); let idle;
       const started = Date.now(), requestId = randomUUID();
-      const total = setTimeout(() => ctrl.abort(new Error(remaining <= totalMs ? 'LLM run time budget exhausted' : 'LLM total timeout')), Math.min(totalMs, remaining));
-      const first = setTimeout(() => ctrl.abort(new Error('LLM first response timeout')), firstByteMs);
+      const total = setTimeout(() => ctrl.abort(new Error(remaining <= callTotalMs ? 'LLM run time budget exhausted' : 'LLM total timeout')), Math.min(callTotalMs, remaining));
+      const first = setTimeout(() => ctrl.abort(new Error('LLM first response timeout')), callFirstByteMs);
       let tokenUsage, responseModel, responseText = '', finish, done = false, parsed, upstreamRequestId, responseId, firstByteAt, httpStatus;
-      let outcome, transportActive = false, awaitingModelJson = false;
-      const activeIsBackup = usingBackup;
+      let outcome, transportActive = false, awaitingModelJson = false, retryDelayMs = delays[attempt];
       const requestHash = createHash('sha256').update(JSON.stringify(body)).digest('hex');
-      const request = { label, model: activeModel, effort, route: activeIsBackup ? 'backup' : 'primary', attempt: attempt + 1, request_id: requestId, request_hash: requestHash, started_at: new Date(started).toISOString(), reserved_ms: Math.min(totalMs, remaining) };
-      const heartbeat = () => { clearTimeout(idle); idle = setTimeout(() => ctrl.abort(new Error('LLM stream idle timeout')), idleMs); };
+      const request = { label, model: activeModel, effort, route: activeIsBackup ? 'backup' : 'primary', attempt: attempt + 1, request_id: requestId, request_hash: requestHash, started_at: new Date(started).toISOString(), reserved_ms: Math.min(callTotalMs, remaining) };
+      const heartbeat = () => { clearTimeout(idle); idle = setTimeout(() => ctrl.abort(new Error('LLM stream idle timeout')), callIdleMs); };
       const received = () => { if (!firstByteAt) { firstByteAt = Date.now(); clearTimeout(first); } heartbeat(); };
       const readText = async response => {
         const decoder = new TextDecoder(); let text = '';
@@ -116,10 +124,14 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
         if (transportActive && (error instanceof TypeError || ctrl.signal.aborted)) error.llmTransport = true;
         error.message = redact(error.message);
         let retryable = error.retryable ?? !(error instanceof LlmError);
-        const switchedToBackup = !activeIsBackup && hasFallback && awaitingModelJson && !error.validation;
+        const switchedToBackup = !activeIsBackup && hasDistinctFallback && awaitingModelJson && !error.validation;
         if (switchedToBackup) {
           usingBackup = true;
           retryable = true;
+          if (isDistinctOrigin(endpoint, fallbackEndpoint)) retryDelayMs = 0;
+          try { await onSwitchToBackup?.(); } catch {
+            // The current client can still use backup and must settle the request ledger.
+          }
         }
         const contentError = error.validation || error.invalidJson;
         if (!switchedToBackup && contentError && attempt < delays.length) {
@@ -132,7 +144,6 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
             body.messages.push({ role: 'assistant', content: responseText }, { role: 'user', content: '上一答未通过契约校验：' + error.message + '。请只返回符合既定结构的完整严格 JSON，纠正该问题，勿增加事实、编号或解释。' });
           }
         }
-        if (deadline <= Date.now()) retryable = false;
         if (contentError && cacheDir) { await fs.mkdir(cacheDir, { recursive: true }); await fs.writeFile(path.join(cacheDir, key + '.failure.json'), redact(JSON.stringify({ error: error.message, response: responseText }))); }
         const causes = []; for (let cause = error.cause; cause && causes.length < 4; cause = cause.cause) causes.push({ name: cause.name, code: cause.code || null, message: cause.message });
         outcome = { ...request, failed: true, retryable, error: redact(error.message), error_name: error.name, error_code: error.code || null, causes };
@@ -152,9 +163,11 @@ export function createLlmClient({ endpoint, apiKey, fallbackEndpoint, fallbackAp
           await record({ event: 'request_finished', ...event });
         }
       }
-      if (deadline - Date.now() <= delays[attempt]) { await record({ event: 'budget_exhausted', label, model: activeModel, effort }); throw new LlmError('LLM run time budget exhausted before retry'); }
-      await ledger?.recordDelay(label, requestId, delays[attempt]);
-      await sleep(delays[attempt]);
+      if (deadline - Date.now() <= retryDelayMs) { await record({ event: 'budget_exhausted', label, model: activeModel, effort }); throw new LlmError('LLM run time budget exhausted before retry'); }
+      if (retryDelayMs > 0) {
+        await ledger?.recordDelay(label, requestId, retryDelayMs);
+        await sleep(retryDelayMs);
+      }
     }
     throw new LlmError('Issue stage request budget exhausted: ' + label);
   }
