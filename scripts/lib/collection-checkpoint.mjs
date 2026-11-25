@@ -48,24 +48,33 @@ export function finishCapture(checkpoint,upper) {
   return {...checkpoint,pending,processed_capture:checkpoint.last_capture?{upper,fingerprint:captureFingerprint(checkpoint.last_capture),fingerprint_version:2}:checkpoint.processed_capture};
 }
 
+export function captureCounts(items) {
+  const dated = items.filter(it => Number.isFinite(it.published_at) && it.published_at > 0);
+  return { dated: dated.length, dropped_undated: items.length - dated.length,
+    dropped_short: dated.filter(it => !(it.description?.length >= 80)).length };
+}
+
 // The caller writes raw capture first, then this checkpoint, before invoking models.
 export function stageCapture(previous,sources,results,window,priorCapture=null,capturedAt=Date.now(),{activatePending=true}={}) {
   const source_upper={...previous.source_upper},source_floor={...previous.source_floor};
   const healthById=new Map((previous.health||[]).map(h=>[h.id,h]));
   const fresh=[],observedIds=new Set(previous.observed_ids||[]),initialized=new Set(previous.initialized_sources||[]);
   for(const source of sources)source_floor[source.id]??=window.lower;
-  for(const {items,health} of results) {
+  for(const {items,health: observation} of results) {
+    const health = { ...observation, capture_counts: captureCounts(items) };
+    if (health.route_kind === 'aggregator' || health.mode === 'discovery_only'
+      || (items.length > 0 && health.capture_counts.dated === 0)) health.coverage = null;
     const lower=sourceLower(previous,health.id,window.lower);healthById.set(health.id,health);
     // Retain observed post-cutoff items even if they disappear from tomorrow's feed.
     for(const it of items) {
-      if(!Number.isFinite(it.published_at)||!it.published_at||!it.title||!(it.description?.length>=80))continue;
+      if(!Number.isFinite(it.published_at)||it.published_at<=0||!it.title||!(it.description?.length>=80))continue;
       const unseen=!observedIds.has(it.id);observedIds.add(it.id);
       if(unseen && (it.published_at>=lower || initialized.has(health.id)))fresh.push({...it,
         acquisition_window:it.published_at>=lower?{lower,upper:window.upper}:null,
         ...(it.published_at<lower?{late_discovery:true}: {})});
     }
     if(health.status==='ok')initialized.add(health.id);
-    if(health.status==='ok'&&!health.undated&&health.coverage?.lower<=lower&&health.coverage?.upper>=window.upper&&!health.article_errors?.length)source_upper[health.id]=Math.max(source_upper[health.id]||0,window.upper);
+    if(health.status==='ok'&&!health.undated&&!health.capture_counts.dropped_undated&&health.coverage?.lower<=lower&&health.coverage?.upper>=window.upper&&!health.article_errors?.length)source_upper[health.id]=Math.max(source_upper[health.id]||0,window.upper);
   }
   const raw=mergeRawItems([...(previous.pending?.items||[]),...(priorCapture?.items||[]),...fresh]).map(it=>
     activatePending&&it.published_at>=window.lower&&it.published_at<window.upper
@@ -73,7 +82,8 @@ export function stageCapture(previous,sources,results,window,priorCapture=null,c
   const items=raw.filter(it=>it.published_at<window.upper);
   const lower=Math.min(window.lower,priorCapture?.window?.lower??window.lower);
   const captureWindow={...window,lower,hours:(window.upper-lower)/3600000};
-  const health=sources.map(s=>healthById.get(s.id)).filter(Boolean);
+  const checked = new Set(results.map(r=>r.health.id));
+  const health=sources.map(s=>healthById.get(s.id)).filter(Boolean).map(row=>checked.has(row.id)?row:{...row,observation:'reused',recent_in_issue:null});
   const observed=health.some(h=>h.required)&&health.filter(h=>h.required).every(h=>h.status==='ok'&&h.coverage?.lower<=lower&&h.coverage?.upper>=window.upper);
   const capture={schema_version:3,provenance:'live',coverage_status:observed?'observed':'unverified',generated_at:capturedAt,window:captureWindow,items,source_health:health};
   const last_capture={...capture,items:raw,cutoff_upper:window.upper};

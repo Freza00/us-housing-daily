@@ -14,7 +14,9 @@ export function nativeFetch(url, { headers = {}, signal } = {}, redirects = 3, r
       }
       const empty = [204, 205, 304].includes(res.statusCode);
       if (empty) res.resume();
-      resolve(new Response(empty ? null : Readable.toWeb(res), { status: res.statusCode, headers: res.headers }));
+      const response = new Response(empty ? null : Readable.toWeb(res), { status: res.statusCode, headers: res.headers });
+      Object.defineProperty(response, 'url', { value: String(url) });
+      resolve(response);
     });
     req.on('error', reject);
   });

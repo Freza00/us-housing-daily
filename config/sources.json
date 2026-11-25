@@ -13,15 +13,13 @@
       ],
       "weight": 9,
       "region": "national",
-      "family": "housingwire"
+      "family": "housingwire",
+      "frequency": "high"
     },
     {
       "id": "inman",
       "name": "Inman News",
       "url": "https://www.inman.com/feed/",
-      "alternates": [
-        "https://news.google.com/rss/search?q=site:inman.com&hl=en-US&gl=US&ceid=US:en"
-      ],
       "tier": "A",
       "tags": [
         "housing",
@@ -29,7 +27,8 @@
       ],
       "weight": 8,
       "region": "national",
-      "family": "inman"
+      "family": "inman",
+      "mode": "restricted"
     },
     {
       "id": "trd-national",
@@ -42,7 +41,8 @@
       ],
       "weight": 8,
       "region": "national",
-      "family": "trd-national"
+      "family": "trd-national",
+      "frequency": "high"
     },
     {
       "id": "bisnow",
@@ -61,16 +61,14 @@
       "id": "multi-housing-news",
       "name": "Multi-Housing News",
       "url": "https://www.multihousingnews.com/feed/",
-      "alternates": [
-        "https://news.google.com/rss/search?q=site:multihousingnews.com&hl=en-US&gl=US&ceid=US:en"
-      ],
       "tier": "A",
       "tags": [
         "multifamily"
       ],
       "weight": 9,
       "region": "national",
-      "family": "multi-housing-news"
+      "family": "multi-housing-news",
+      "mode": "restricted"
     },
     {
       "id": "national-mortgage-news",
@@ -153,8 +151,8 @@
     },
     {
       "id": "miami-agent",
-      "name": "Miami Agent Magazine",
-      "url": "https://miamiagentmagazine.com/feed/",
+      "name": "South Florida Agent Magazine",
+      "url": "https://southfloridaagentmagazine.com/feed/",
       "tier": "D",
       "tags": [
         "miami",
@@ -163,7 +161,8 @@
       ],
       "weight": 6,
       "region": "florida",
-      "family": "miami-agent"
+      "family": "miami-agent",
+      "frequency": "high"
     },
     {
       "id": "google-news-sunbelt",
@@ -176,7 +175,8 @@
       ],
       "weight": 7,
       "region": "sunbelt",
-      "family": "google-news-sunbelt"
+      "family": "google-news-sunbelt",
+      "mode": "discovery_only"
     },
     {
       "id": "nahb-eyeonhousing",
@@ -196,7 +196,7 @@
     {
       "id": "calculated-risk",
       "name": "Calculated Risk (Bill McBride)",
-      "url": "https://feeds.feedburner.com/CalculatedRisk",
+      "url": "https://calculatedrisk.substack.com/feed",
       "tier": "B",
       "tags": [
         "macro",
@@ -206,14 +206,15 @@
       "weight": 10,
       "region": "national",
       "family": "calculated-risk",
-      "is_research": true
+      "is_research": true,
+      "frequency": "high"
     },
     {
       "id": "lance-lambert",
       "name": "Lance Lambert / ResiClub",
-      "url": "https://lancelambert.substack.com/feed",
+      "url": "https://www.resiclubanalytics.com/archive",
       "alternates": [
-        "https://news.google.com/rss/search?q=%22Lance+Lambert%22+OR+%22ResiClub%22&hl=en-US&gl=US&ceid=US:en"
+        "https://www.resiclubanalytics.com/sitemap.xml"
       ],
       "tier": "B",
       "tags": [
@@ -224,7 +225,12 @@
       "weight": 10,
       "region": "national",
       "family": "lance-lambert",
-      "is_research": true
+      "is_research": true,
+      "type": "html",
+      "include": "/p/.+",
+      "exclude": "/p/residay-2026-ticket-information",
+      "max_articles": 12,
+      "frequency": "high"
     },
     {
       "id": "logan-mohtashami",
@@ -360,7 +366,7 @@
     {
       "id": "pere-news",
       "name": "PERE News",
-      "url": "https://www.perenews.com/feed/",
+      "url": "https://www.pei-privaterealestate.com/",
       "tier": "B",
       "tags": [
         "institutional",
@@ -369,7 +375,12 @@
       ],
       "weight": 10,
       "region": "national",
-      "family": "pere-news"
+      "family": "pere-news",
+      "type": "html",
+      "include": "/(?:equity|credit)/[^/?]+/$",
+      "exclude": "/(?:news-analysis|investors|managers|people|data-snapshot)/$",
+      "max_articles": 6,
+      "mode": "restricted"
     },
     {
       "id": "multifamily-dive",
@@ -439,7 +450,9 @@
       "id": "sec-invh-8k",
       "name": "Invitation Homes (SEC / official IR)",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001687229&type=8-K&dateb=&owner=include&count=20&output=atom",
-      "alternates": ["https://www.invh.com/rss/PressRelease.aspx?LanguageId=1"],
+      "alternates": [
+        "https://www.invh.com/rss/PressRelease.aspx?LanguageId=1"
+      ],
       "http_client": "https",
       "required_for_section": "btr",
       "tier": "B",
@@ -457,7 +470,9 @@
       "id": "sec-amh-8k",
       "name": "AMH (SEC / official IR)",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001562401&type=8-K&dateb=&owner=include&count=20&output=atom",
-      "alternates": ["https://investors.amh.com/rss/PressRelease.aspx?LanguageId=1"],
+      "alternates": [
+        "https://investors.amh.com/rss/PressRelease.aspx?LanguageId=1"
+      ],
       "http_client": "https",
       "required_for_section": "btr",
       "tier": "B",
@@ -473,15 +488,22 @@
     },
     {
       "id": "btrlist",
-      "name": "BTR List (via Google News)",
-      "url": "https://news.google.com/rss/search?q=site:news.btrlist.com&hl=en-US&gl=US&ceid=US:en",
+      "name": "BTR List",
+      "url": "https://news.btrlist.com/archive",
       "tier": "B",
       "tags": [
         "btr-sfr"
       ],
       "weight": 8,
       "region": "national",
-      "family": "btrlist"
+      "family": "btrlist",
+      "type": "html",
+      "include": "/p/.+",
+      "alternates": [
+        "https://news.btrlist.com/"
+      ],
+      "max_articles": 12,
+      "frequency": "high"
     },
     {
       "id": "google-news-btr",
@@ -494,7 +516,8 @@
       "weight": 6,
       "region": "national",
       "filter_required": true,
-      "family": "google-news-btr"
+      "family": "google-news-btr",
+      "mode": "discovery_only"
     },
     {
       "id": "houston-bj-cre",
@@ -512,7 +535,8 @@
       "weight": 7,
       "region": "texas",
       "filter_required": true,
-      "family": "bizjournals"
+      "family": "bizjournals",
+      "mode": "discovery_only"
     },
     {
       "id": "houston-bj-resi",
@@ -529,7 +553,8 @@
       "weight": 7,
       "region": "texas",
       "filter_required": true,
-      "family": "bizjournals"
+      "family": "bizjournals",
+      "mode": "discovery_only"
     },
     {
       "id": "dallas-bj-cre",
@@ -547,7 +572,8 @@
       "weight": 7,
       "region": "texas",
       "filter_required": true,
-      "family": "bizjournals"
+      "family": "bizjournals",
+      "mode": "discovery_only"
     },
     {
       "id": "dallas-bj-resi",
@@ -564,7 +590,8 @@
       "weight": 7,
       "region": "texas",
       "filter_required": true,
-      "family": "bizjournals"
+      "family": "bizjournals",
+      "mode": "discovery_only"
     },
     {
       "id": "austin-bj-cre",
@@ -582,7 +609,8 @@
       "weight": 7,
       "region": "texas",
       "filter_required": true,
-      "family": "bizjournals"
+      "family": "bizjournals",
+      "mode": "discovery_only"
     },
     {
       "id": "austin-bj-resi",
@@ -599,7 +627,8 @@
       "weight": 7,
       "region": "texas",
       "filter_required": true,
-      "family": "bizjournals"
+      "family": "bizjournals",
+      "mode": "discovery_only"
     },
     {
       "id": "har-research",
@@ -688,7 +717,8 @@
       "is_research": true,
       "mutable": true,
       "max_articles": 6,
-      "content_start": "FOR IMMEDIATE RELEASE:"
+      "content_start": "FOR IMMEDIATE RELEASE:",
+      "frequency": "low"
     },
     {
       "id": "census-sales",
@@ -707,7 +737,8 @@
       "is_research": true,
       "mutable": true,
       "max_articles": 6,
-      "content_start": "FOR IMMEDIATE RELEASE:"
+      "content_start": "FOR IMMEDIATE RELEASE:",
+      "frequency": "low"
     },
     {
       "id": "fhfa-research",
@@ -743,7 +774,8 @@
         "trend"
       ],
       "is_research": true,
-      "max_articles": 18
+      "max_articles": 18,
+      "mode": "restricted"
     },
     {
       "id": "mnd-rates",
@@ -761,7 +793,8 @@
         "trend"
       ],
       "is_research": true,
-      "rate_benchmark": true
+      "rate_benchmark": true,
+      "frequency": "high"
     },
     {
       "id": "freddie-pmms",
@@ -781,7 +814,8 @@
       "is_research": true,
       "rate_benchmark": true,
       "mutable": true,
-      "max_articles": 6
+      "max_articles": 6,
+      "frequency": "high"
     },
     {
       "id": "freddie-research",
@@ -805,9 +839,9 @@
     {
       "id": "texas-realtors",
       "name": "Texas REALTORS Research",
-      "url": "https://www.texasrealestate.com/research/quarterly-housing-report",
+      "url": "https://www.texasrealestate.com/about-us/newsroom",
       "type": "html",
-      "include": "/api/media/file/.+\\.pdf",
+      "include": "/press-release/[^/?]+-(?:q[1-4]|quarter)[^/?]*",
       "family": "texas-realtors",
       "region": "texas",
       "tier": "B",
@@ -818,14 +852,15 @@
         "trend"
       ],
       "is_research": true,
-      "max_articles": 18
+      "max_articles": 18,
+      "frequency": "low"
     },
     {
       "id": "metrotex-research",
       "name": "MetroTex Market Reports",
-      "url": "https://www.mymetrotex.com/market-reports/",
+      "url": "https://www.mymetrotex.com/post-sitemap2.xml",
       "type": "html",
-      "include": "/(?:[a-z]+-20\\d{2}-north-texas|20\\d{2}|.*housing-market)",
+      "include": "/[^/]*(?:north-texas-housing-market|dfw-housing-market)[^/]*/?$",
       "family": "metrotex-research",
       "region": "texas",
       "tier": "B",
@@ -836,7 +871,8 @@
         "trend"
       ],
       "is_research": true,
-      "max_articles": 18
+      "max_articles": 18,
+      "frequency": "low"
     },
     {
       "id": "unlock-research",
@@ -872,7 +908,8 @@
         "trend"
       ],
       "is_research": true,
-      "max_articles": 18
+      "max_articles": 18,
+      "mode": "restricted"
     },
     {
       "id": "urban-housing",
@@ -1005,7 +1042,8 @@
         "trend"
       ],
       "is_research": true,
-      "max_articles": 18
+      "max_articles": 18,
+      "frequency": "low"
     },
     {
       "id": "naa-research",
@@ -1028,8 +1066,8 @@
     {
       "id": "uli-pwc",
       "name": "ULI/PwC Emerging Trends",
-      "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases.html",
-      "type": "html",
+      "url": "https://www.pwc.com/us/en/about-us/newsroom/press-releases/emerging-trends-in-real-estate-2027.html",
+      "type": "page",
       "include": "/newsroom/press-releases/emerging-trends-in-real-estate-20\\d{2}\\.html",
       "family": "uli-pwc",
       "region": "national",
@@ -1044,7 +1082,9 @@
       "max_articles": 18,
       "alternates": [
         "https://www.pwc.com/us/en/about-us/newsroom.html"
-      ]
+      ],
+      "mutable": true,
+      "frequency": "low"
     },
     {
       "id": "msci-research",
@@ -1080,7 +1120,8 @@
         "trend"
       ],
       "is_research": true,
-      "max_articles": 18
+      "max_articles": 18,
+      "mode": "restricted"
     },
     {
       "id": "northmarq-research",
@@ -1121,9 +1162,9 @@
     {
       "id": "arbor-research",
       "name": "Arbor/Chandan Research",
-      "url": "https://arbor.com/research/reports/",
+      "url": "https://arbor.com/research/latest-reports/",
       "type": "html",
-      "include": "/research/.+",
+      "include": "/research/reports/.+",
       "family": "arbor-research",
       "region": "national",
       "tier": "B",
@@ -1134,7 +1175,12 @@
         "trend"
       ],
       "is_research": true,
-      "max_articles": 18
+      "max_articles": 18,
+      "alternates": [
+        "https://arbor.com/blog/feed/"
+      ],
+      "strip_link_query": true,
+      "frequency": "low"
     },
     {
       "id": "newmark-research",
@@ -1152,7 +1198,8 @@
         "trend"
       ],
       "is_research": true,
-      "max_articles": 18
+      "max_articles": 18,
+      "mode": "restricted"
     },
     {
       "id": "cotality-research",
@@ -1224,7 +1271,8 @@
       ],
       "region": "national",
       "is_research": true,
-      "max_articles": 18
+      "max_articles": 18,
+      "mode": "restricted"
     },
     {
       "id": "apartmentlist-research",

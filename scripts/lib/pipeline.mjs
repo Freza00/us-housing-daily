@@ -4,15 +4,15 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { shouldRun, buildWindow, coverageGaps, canAttemptRecoverySchedule, recoverableRevision } from './calendar.mjs';
 import { beijingDateStr } from './dates.mjs';
-import { createCollector } from './sources.mjs';
-import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint, uniqueSourceHealth } from './collection-checkpoint.mjs';
+import { createCollector, hasPublicationEvidence } from './sources.mjs';
+import { sourceLower, stageCapture, mergeCheckpoints, finishCapture, stageSupplement, mergeRawItems, materialFingerprint, uniqueSourceHealth, captureCounts } from './collection-checkpoint.mjs';
 import { createLlmClient, ISSUE_MODEL_BUDGET_MS, LlmError } from './llm-client.mjs';
 import { SECTIONS, dedupe, itemId } from './news-core.mjs';
-import { dailyPublicationEligibility, prepareCandidates, candidateSector, isBenchmarkRateStory, isMortgageRateStory, employmentReportKey, repeatedEmploymentReport, assertFreshDailyReports, editorInstructions, candidatePrompt, validateDecisions, prepareModelDecisions, createDecisionRepair, selectItems, writingSystem, dailyWritingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, prepareWritingCard, validateWritingMetadata, prepareWritingMetadata, buildReviewDraft, reviewSystem, dailyReviewSystem, reviewPrompt, prepareReview, createReviewRepair, dryDecisions } from './editorial.mjs';
+import { dailyPublicationEligibility, periodicPublicationEligibility, prepareCandidates, candidateSector, isBenchmarkRateStory, isMortgageRateStory, employmentReportKey, repeatedEmploymentReport, assertFreshDailyReports, editorInstructions, candidatePrompt, validateDecisions, prepareModelDecisions, createDecisionRepair, selectItems, writingSystem, dailyWritingSystem, writingPrompt, createWritingRepair, validateWriting, prepareWriting, summaryCharacterCount, validateWritingCard, prepareWritingCard, validateWritingMetadata, prepareWritingMetadata, buildReviewDraft, reviewSystem, dailyReviewSystem, reviewPrompt, prepareReview, createReviewRepair, dryDecisions } from './editorial.mjs';
 import { assembleDailyEdition, isDailyUSStory, DAILY_WRITING_LIMIT, DAILY_WRITING_POLICY } from './daily-edition.mjs';
 import { createModelBatch } from './model-references.mjs';
 import { EDITORIAL_PROTOCOL, freezeEditorEvidence, bindEditorialEvidence, editorEvidenceReferences } from './editor-evidence.mjs';
-import { editorialCoverage, coverageDates } from './editorial-coverage.mjs';
+import { editorialCoverage, coverageDates, requiredSourceProblem, sourceHealth, sourceHealthSummary } from './editorial-coverage.mjs';
 import { validArchive, periodKey, validateIssue, assertExpectedIssue } from './issue-contract.mjs';
 import { openIssueStore, ruleDigest, revisionSeed, readDerivedJson, loadWindowSnapshots } from './issue-store.mjs';
 
@@ -155,7 +155,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
     } else {
       checkpoint = stageSupplement(checkpoint,sources,collected,window,now.getTime());
       if (!dry) await saveCheckpoint(checkpoint);
-      allItems.push(...collected.flatMap(x=>x.items)); health=collected.map(x=>x.health);
+      allItems.push(...collected.flatMap(x=>x.items)); health=collected.map(x=>({ ...x.health, capture_counts: captureCounts(x.items) }));
       const observed = health.some(h=>h.required) && health.filter(h=>h.required).every(h=>h.status==='ok' && h.coverage?.lower<=window.lower && h.coverage?.upper>=window.upper);
       snapshots.push({schema_version:3,provenance:'live',coverage_status:observed?'observed':'unverified',generated_at:now.getTime(),window,items:dedupe(allItems).filter(it=>it.published_at>=window.lower&&it.published_at<window.upper),source_health:health});
     }
@@ -167,6 +167,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
       ...it,
       id: it.id || itemId(it),
       source_family: it.source_family || src?.family || it.source_id,
+      ...(src?.mode ? { mode: src.mode } : {}),
       ...(it.rate_benchmark || src?.rate_benchmark ? { rate_benchmark: true } : {}),
       ...(kind === 'daily' && it.published_at < window.lower ? { late_discovery: true } : {})
     };
@@ -180,9 +181,12 @@ export async function runPipeline(kind = 'daily', options = {}) {
       if (saved?.provenance === 'live' && saved.window?.upper <= window.upper) legacySnapshots.push(saved);
     }
   }
-  eligibility = kind === 'daily' ? dailyPublicationEligibility(normalized, window, legacySnapshots, { deferEvidence: true }) : { eligible: normalized, excluded: [] };
-  const pickFallbackRate = (minDescLen, skip = new Set()) => [...normalized]
-    .filter(it => isMortgageRateStory(it) && Number.isFinite(it.published_at) && it.published_at > 0 && it.published_at < window.upper && it.published_at >= window.upper - RATE_FALLBACK_MAX_AGE_MS && !skip.has(it.id) && it.title && it.description?.length >= minDescLen && !it.changed_without_new_date && it.evidence_status !== 'insufficient')
+  const qualify = (items, deferEvidence = false) => kind === 'daily'
+    ? dailyPublicationEligibility(items, window, deferEvidence ? legacySnapshots : [], { deferEvidence })
+    : periodicPublicationEligibility(items, window, { deferEvidence });
+  eligibility = qualify(normalized, true);
+  const pickFallbackRate = (minDescLen, skip = new Set(), checkEvidence = false) => [...normalized]
+    .filter(it => isMortgageRateStory(it) && it.mode !== 'discovery_only' && it.mode !== 'disabled' && Number.isFinite(it.published_at) && it.published_at > 0 && it.published_at < window.upper && it.published_at >= window.upper - RATE_FALLBACK_MAX_AGE_MS && !skip.has(it.id) && it.title && it.description?.length >= minDescLen && !it.changed_without_new_date && it.evidence_status !== 'insufficient' && (!checkEvidence || hasPublicationEvidence(it)))
     .sort((a, b) => (isBenchmarkRateStory(b) ? 1 : 0) - (isBenchmarkRateStory(a) ? 1 : 0) || b.published_at - a.published_at || a.id.localeCompare(b.id))[0];
   if (kind === 'daily') {
     const seenIds = new Set(seen.map(x => x.id));
@@ -201,7 +205,17 @@ export async function runPipeline(kind = 'daily', options = {}) {
     }
   }
   const candidateWindow = kind === 'daily' ? { ...window, lower: eligibility.eligible.reduce((n,it)=>Math.min(n,it.published_at),window.lower) } : window;
-  prepared = prepareCandidates(eligibility.eligible, candidateWindow, kind === 'daily' ? seen : [], 72, { sectorOpportunities: kind === 'daily' });
+  prepared = prepareCandidates(eligibility.eligible, candidateWindow, kind === 'daily' ? seen : [], 72, { sectorOpportunities: kind === 'daily', sourceCounts: true });
+  const rawBySource = Map.groupBy(kind === 'daily' ? normalized : normalized.filter(item => item.published_at >= window.lower && item.published_at < window.upper),
+    item => item.source_id);
+  const healthBySource = new Map(health.map(row => [row.id, row]));
+  const sourceFunnel = Object.fromEntries([...new Set([...sources.map(row => row.id), ...rawBySource.keys()])].filter(Boolean).map(id => {
+    const row = healthBySource.get(id), raw = [...new Map((rawBySource.get(id) || []).map(item => [item.id, item])).values()];
+    const counts = captureCounts(raw);
+    if (row?.observation !== 'reused') for (const key of Object.keys(counts)) counts[key] = Math.max(counts[key], row?.capture_counts?.[key] || 0);
+    return [id, { discovered: Math.max(row?.observation === 'reused' ? 0 : row?.discovered || 0, raw.length), ...counts, enrich_attempted: 0, evidence_ok: 0, evidence_insufficient: 0,
+      not_attempted: prepared.eligible_by_source[id] || 0, selected: 0, published: 0 }];
+  }));
   candidates = [];
   let attempted = 0;
   const sectorCounts = {};
@@ -215,37 +229,50 @@ export async function runPipeline(kind = 'daily', options = {}) {
     attempted += batch.length;
     if (kind === 'daily') for (const item of batch) sectorCounts[candidateSector(item)].attempted++;
     const enriched = collector ? await collector.enrich(batch) : batch;
+    const checked = qualify(enriched);
+    for (const item of batch) if (Object.hasOwn(sourceFunnel, item.source_id)) {
+      const row = sourceFunnel[item.source_id];
+      row.not_attempted--;
+      if (collector) row.enrich_attempted++;
+    }
+    for (const item of enriched) if (Object.hasOwn(sourceFunnel, item.source_id)) {
+      if (hasPublicationEvidence(item)) sourceFunnel[item.source_id].evidence_ok++;
+      else sourceFunnel[item.source_id].evidence_insufficient++;
+    }
+    for (const item of checked.excluded) if (item.reason === 'insufficient_evidence') insufficientIds.add(item.id);
     if (kind === 'daily') {
-      const checked = dailyPublicationEligibility(enriched, window);
       const originalSectors = new Map(batch.map(item => [item.id, candidateSector(item)]));
-      for (const item of enriched) if (item.evidence_status !== 'insufficient') sectorCounts[originalSectors.get(item.id)].readable++;
+      for (const item of enriched) if (hasPublicationEvidence(item)) sectorCounts[originalSectors.get(item.id)].readable++;
       for (const item of checked.eligible) sectorCounts[originalSectors.get(item.id)].accepted++;
       for (const item of checked.excluded) {
-        if (item.reason === 'insufficient_evidence') insufficientIds.add(item.id);
         const reasons = sectorCounts[originalSectors.get(item.id)].rejected_reasons;
         reasons[item.reason] = (reasons[item.reason] || 0) + 1;
       }
-      candidates.push(...checked.eligible); eligibility.excluded.push(...checked.excluded);
-    } else candidates.push(...enriched);
+    }
+    candidates.push(...checked.eligible); eligibility.excluded.push(...checked.excluded);
   }
   const loopAccepted = candidates.length;
   if (kind === 'daily' && !candidates.some(it => isMortgageRateStory(it))) {
-    const skip = new Set(normalized.filter(it => insufficientIds.has(it.id) && !isBenchmarkRateStory(it)).map(it => it.id));
-    const fallbackRate = pickFallbackRate(160, skip) || pickFallbackRate(80, skip);
+    const fallbackRate = pickFallbackRate(160, insufficientIds, true);
     if (fallbackRate) {
       fallbackRateId = fallbackRate.id;
       const rateWithWindow = { ...fallbackRate, acquisition_window: { lower: Math.min(window.lower, fallbackRate.published_at), upper: window.upper } };
       candidates.unshift(rateWithWindow);
+      if (Object.hasOwn(sourceFunnel, fallbackRate.source_id)) {
+        const row = sourceFunnel[fallbackRate.source_id];
+        row.evidence_ok++;
+        if (prepared.candidates.some(item => item.id === fallbackRate.id) && row.not_attempted > 0) row.not_attempted--;
+      }
       eligibility.excluded = eligibility.excluded.filter(it => it.id !== fallbackRate.id);
       seen = seen.filter(x => x.id !== fallbackRate.id);
     }
   }
   if (fallbackRateId && !candidates.some(it => it.id === fallbackRateId)) fallbackRateId = null;
+  health = health.map(row => sourceHealth(row, sources.find(source => source.id === row.id), sourceFunnel[row.id]));
   const candidatePreparation = { limit: prepared.limit, initial_count: prepared.initial_count, attempted, accepted: candidates.length, rejected: attempted - loopAccepted,
     ...(fallbackRateId ? { fallback_rate_id: fallbackRateId } : {}),
     ...(kind === 'daily' ? { sectors: sectorCounts } : {}) };
   if (collector) await writeJson(path.join(stateDir, 'source-cache.json'), collector.cache);
-  if (!candidates.length) throw new Error('No eligible dated candidates; refusing to replace last successful issue');
   if (dailyPool) candidates = candidates.map(freezeEditorEvidence);
   const recentCoverage = [];
   if (kind === 'daily') for (const date of coverageDates(label).slice(1)) {
@@ -259,8 +286,9 @@ export async function runPipeline(kind = 'daily', options = {}) {
   }
   snapshot = { schema_version: 2, provenance: inputProvenance, generated_at: now.getTime(), kind, window, items: candidates, candidate_preparation: candidatePreparation,
     ...(kind === 'daily' ? { recent_coverage: recentCoverage.slice(0, 80), ...(fallbackRateId ? { fallback_rate_id: fallbackRateId } : {}), ...(dailyPool ? { editorial_protocol: EDITORIAL_PROTOCOL } : {}) } : {}),
-    initial_seen: seen, source_health: health, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: uniqueSourceHealth(s.source_health || []) })), pipeline_version: '3.0' };
+    initial_seen: seen, source_health: health, source_funnel: sourceFunnel, publication_exclusions: eligibility.excluded, coverage_snapshots: snapshots.map(s => ({ window: s.window, coverage_status: s.coverage_status || 'unverified', source_health: uniqueSourceHealth(s.source_health || []) })), pipeline_version: '3.0' };
   await writeJson(path.join(stateDir, 'inputs', kind + '-' + label + '.json'), snapshot);
+  if (!candidates.length) throw new Error('No eligible dated candidates; refusing to replace last successful issue');
   collectionFinishedAt = Date.now();
   if (store) await store.put('prepared', { snapshot, normalized, checkpoint, base, eligible_count: prepared.eligible_count, collection_finished_at: collectionFinishedAt, run_started_at: runStartedAt });
   }
@@ -616,7 +644,7 @@ export async function runPipeline(kind = 'daily', options = {}) {
   }
   const editorialAudit = editorialCoverage({ candidates, decisions, selected: written.items, health, sources, tagConfig, candidatePreparation: snapshot.candidate_preparation, date: beijingDateStr(now.getTime()), history });
   const gaps = coverageGaps(snapshots, window);
-  const requiredProblems = health.filter(s => s.required && (s.status !== 'ok' || s.undated === s.articles));
+  const requiredProblems = health.filter(s => s.required && (snapshot.source_funnel ? requiredSourceProblem(s) : (s.status !== 'ok' || s.undated === s.articles)));
   const coverageReasons = dry ? [] : [
     ...(gaps.length ? ['snapshot_gap'] : []),
     ...((requiredProblems.length || Object.values(editorialAudit.sections).some(section => section.source_failures.length)) ? ['required_source'] : []),
@@ -627,16 +655,22 @@ export async function runPipeline(kind = 'daily', options = {}) {
   for (const item of written.items) sourceCounts[item.source_family] = (sourceCounts[item.source_family] || 0) + 1;
   const publishedIds = new Set(written.items.map(item => item.id));
   const deferredIds = new Set(writingPlan?.deferred.map(item => item.id));
+  const sourceFunnel = snapshot.source_funnel && structuredClone(snapshot.source_funnel);
+  if (sourceFunnel) {
+    for (const item of primary) if (Object.hasOwn(sourceFunnel, item.source_id)) sourceFunnel[item.source_id].selected++;
+    for (const item of written.items) if (Object.hasOwn(sourceFunnel, item.source_id)) sourceFunnel[item.source_id].published++;
+  }
+  const healthDiagnostics = sourceFunnel ? { source_funnel: sourceFunnel, sources_health_summary: sourceHealthSummary({ source_health: health, source_funnel: sourceFunnel }) } : {};
   const payload = { schema_version: 2, ...(!dry ? { editorial_schema: 2 } : {}), kind, date: kind === 'daily' ? label : undefined, publish_date: beijingDateStr(now.getTime()), generated_at: (env.PUBLISH_NOW || options.now) ? now.getTime() : Date.now(),
     period_start: window.periodStart, period_end: window.periodEnd, period_label: window.label, window,
     ...(dailyPool ? { editorial_protocol: snapshot.editorial_protocol, selection_target: 20, selection_count: primary.length, selection_shortfall: 20 - primary.length, writing_policy: DAILY_WRITING_POLICY, content_target: writingPlan.planned, summary_status: publicWritten.executive_summary ? 'available' : 'unavailable' } : {}),
     publication_status: writingPlan?.shortfall ? 'degraded' : status, coverage_status: status, coverage_reasons: coverageReasons,
     ...(recoveryFromRevision ? { recovered_from_revision: recoveryFromRevision } : {}),
     content_status: dry ? 'dry_run' : writingPlan?.shortfall ? 'partial' : 'passed', delivery_state: 'ready', edition: store?.identity,
-    sections: SECTIONS, ...publicWritten, sources_attempted: health.length, sources_ok: health.filter(h => h.status === 'ok').length,
-    errors: health.filter(h => h.status !== 'ok').map(h => ({ source: h.name, error: h.error || h.status })),
+    sections: SECTIONS, ...publicWritten, sources_attempted: health.filter(h => h.status !== 'disabled').length, sources_ok: health.filter(h => h.status === 'ok').length,
+    errors: health.filter(h => h.status !== 'ok' && h.status !== 'disabled').map(h => ({ source: h.name, error: h.error || h.status })),
     _diagnostics: { timings: { cutoff: window.upper, job_started_at: runStartedAt, editor_started_at: store?.manifest.attempts.editor?.[0]?.started_at ? Date.parse(store.manifest.attempts.editor[0].started_at) : undefined, editor_finished_at: store?.manifest.phases.editor?.saved_at, writer_started_at: store?.manifest.attempts.writer?.[0]?.started_at ? Date.parse(store.manifest.attempts.writer[0].started_at) : undefined, reviewer_started_at: store?.manifest.attempts.reviewer?.[0]?.started_at ? Date.parse(store.manifest.attempts.reviewer[0].started_at) : undefined, reviewer_finished_at: store?.manifest.phases.reviewer?.saved_at, collection_finished_at: collectionFinishedAt, generation_finished_at: Date.now() }, collection_watermarks: kind === 'daily' ? checkpoint.source_upper || {} : undefined, writer_validation: validationNotes || null, ...(reviewNotes ? { review: reviewNotes } : {}), pipeline_version: '3.0', provenance: inputProvenance, window_hours: window.hours, candidate_pool_size: candidates.length, eligible_count: prepared.eligible_count, backlog_before_window: candidates.filter(it=>it.published_at<window.lower).map(it=>it.id),
-      publication_exclusions: eligibility.excluded, source_health: health, research_audit: normalized.filter(x => x.is_research && x.published_at >= window.lower && x.published_at < window.upper).map(x => ({ id: x.id, source: x.source_name, title: x.title, link: x.link,
+      publication_exclusions: eligibility.excluded, source_health: health, ...healthDiagnostics, research_audit: normalized.filter(x => x.is_research && x.published_at >= window.lower && x.published_at < window.upper).map(x => ({ id: x.id, source: x.source_name, title: x.title, link: x.link,
         disposition: publishedIds.has(x.id) ? 'selected' : deferredIds.has(x.id) ? 'writing_unvalidated' : marketExclusions.has(x.id) ? 'not_verified_us' : eligibility.excluded.find(it => it.id === x.id)?.reason || (decisions.find(d => d.id === x.id)?.duplicate_of ? 'merged' : candidates.some(it => it.id === x.id) ? 'editorial_not_selected' : 'candidate_budget') })),
       ...(dailyPool ? { writing_plan: writingPlan, rate_pin: ratePin, market_exclusions: [...marketExclusions], report_exclusions: reportExclusions, selection_exclusions: selection.exclusions, editorial_dispositions: candidates.map(item => {
         const row = decisions.find(d => d.id === item.id);

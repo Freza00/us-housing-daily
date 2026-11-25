@@ -24,6 +24,7 @@ function harness(fetch) {
   vm.createContext(ctx);
   vm.runInContext(app.slice(app.indexOf('function digestDataUrl('),app.indexOf('function initialMode(')),ctx);
   vm.runInContext(app.slice(app.indexOf('function isCurrentLoad('),app.indexOf('// Render the period strip')),ctx);
+  vm.runInContext(app.slice(app.indexOf('function sourceAuditSummary('),app.indexOf('function renderBrief(data)')),ctx);
   return {ctx,ids,list};
 }
 function indexes(url) { return response(url.includes('weekly')?['2026-10-26']:url.includes('monthly')?['2026-10']:['2026-11-05','2026-11-06']); }

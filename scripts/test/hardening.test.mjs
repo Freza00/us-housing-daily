@@ -299,6 +299,8 @@ test('online verification requires matching inline/latest/archive/index and neve
   assert.equal(digest(issue),before);
   const check = await checkPublication({kind:'daily',now,host:'https://site.invalid',candidate:issue,fetchImpl:stale,runs:[]});
   assert.equal(check.action,'publish');assert.equal(check.notifications_enabled,false);
+  assert.deepEqual(check.source_health_summary, issue._diagnostics.sources_health_summary);
+  assert.equal(check.source_health_summary.published_sources, new Set(issue.items.map(item => item.source_id)).size);
 });
 
 test('publishing a frozen capture consumes only its fingerprints and retains later supplement versions',async t=>{

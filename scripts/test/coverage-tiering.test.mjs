@@ -27,7 +27,7 @@ function loadRenderBrief(lang = 'zh') {
     const ids = Object.fromEntries(['briefBlock', 'briefText', 'briefTitle', 'coverageNote', 'researchCoverage', 'researchStatus', 'researchTitle'].map(x => [x, new Element()]));
     const ctx = { document: { createElement: () => new Element() }, $: id => ids[id], currentLang: lang, I18N: { zh: { sec: {} }, en: { sec: {} } }, tagLabelEn: x => x };
     vm.createContext(ctx);
-    vm.runInContext(app.slice(app.indexOf('function renderBrief(data)')), ctx);
+    vm.runInContext(app.slice(app.indexOf('function sourceAuditSummary(')), ctx);
     return { ctx, ids, app };
   });
 }

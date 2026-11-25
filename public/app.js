@@ -6,8 +6,6 @@ const newsList = $('newsList');
 const filterbar = $('filterbar');
 const datestrip = $('datestrip');
 const updatedEl = $('updated');
-// 注意：不要缓存 #sourcesCount DOM 引用 — applyLanguage() 会重写 #sourcesInfo 的 innerHTML，
-// 销毁原 span。每次写值时 freshly query 才能命中实时 DOM 节点。
 const refreshBtn = $('refreshBtn');
 const langSeg = $('langSeg');
 const calendarDialog = $('calendarDialog');
@@ -40,8 +38,7 @@ const I18N = {
   zh: {
     tagline: '美国住宅地产工作日精选',
     cron_info: '北京可读目标：日报 09:00；周报周一 15:00；月报月初首个工作日 16:00',
-    sources_label: '信源：',
-    sources_unit: '个 OK',
+    sources_label: '采集检查通过 ',
     updated_prefix: '更新于 ',
     timezone_label: '北京',
     loading: '加载中…',
@@ -102,8 +99,7 @@ const I18N = {
   en: {
     tagline: 'US Housing Daily — Top 20',
     cron_info: 'Beijing reading targets: daily 09:00; weekly Monday 15:00; monthly first weekday 16:00',
-    sources_label: 'Sources: ',
-    sources_unit: ' OK',
+    sources_label: 'Checked ',
     updated_prefix: 'Updated ',
     timezone_label: 'ET',
     loading: 'Loading…',
@@ -608,12 +604,7 @@ function applyLoadedData(data) {
   renderBrief(data);
   selectedDate = currentData.date || null;
   updatedEl.textContent = formatUpdated(currentData.generated_at);
-  const sc = document.getElementById('sourcesCount');
-  if (sc) {
-    sc.textContent = currentData.sources_ok != null
-      ? `${currentData.sources_ok}/${currentData.sources_attempted}`
-      : '—';
-  }
+  renderSourceCheck(data);
 
   // Date strip is mode-aware: daily shows 14 days, weekly shows past weeks, monthly shows past months
   datestrip.hidden = false;
@@ -669,7 +660,7 @@ function clearIssueView() {
   themesBlock.hidden = true; themesBlock.querySelector('.themes-list').replaceChildren();
   windowBanner.hidden = true; windowBanner.textContent = '';
   filterbar.replaceChildren(); filterbar.hidden = true;
-  const count = $('sourcesCount'); if (count) count.textContent = '--';
+  renderSourceCheck(null);
 }
 function renderLoadStatus() {
   if (currentData) return;
@@ -895,8 +886,7 @@ function applyLanguage() {
   }
   $('tagline').textContent = t().tagline;
   $('cronInfo').textContent = t().cron_info;
-  const cnt = currentData ? `${currentData.sources_ok}/${currentData.sources_attempted}` : '—';
-  $('sourcesInfo').innerHTML = `${t().sources_label}<span id="sourcesCount">${cnt}</span>${t().sources_unit}`;
+  renderSourceCheck(currentData);
   $('calClose').textContent = t().cal_close;
   $('calLegendText').textContent = t().cal_legend_has;
   // Update digest tab labels
@@ -947,6 +937,88 @@ function renderThemes(data) {
     ul.appendChild(li);
   }
   themesBlock.querySelector('.themes-title').textContent = currentMode === 'weekly' ? t().themes_weekly_title : t().themes_monthly_title;
+}
+
+function sourceAuditSummary(data) {
+  const diagnostics = data?._diagnostics;
+  if (diagnostics?.sources_health_summary) return diagnostics.sources_health_summary;
+  const sources = diagnostics?.source_health;
+  const exclusions = diagnostics?.publication_exclusions;
+  const items = data?.items;
+  return {
+    entry_failures: sources?.filter(source => source.attempt_errors?.length || source.primary_error || source.status === 'error' || historicalAlternate(source)).length,
+    fallback: sources?.some(source => Object.hasOwn(source, 'used_alternate') || Array.isArray(source.attempted_urls))
+      ? sources.filter(source => source.used_alternate ?? historicalAlternate(source)).length : null,
+    insufficient_evidence_items: Array.isArray(exclusions) ? exclusions.filter(row => row.reason === 'insufficient_evidence').length : null,
+    published_sources: items?.some(item => item.source_id) ? new Set(items.filter(item => item.source_id).map(item => item.source_id)).size : null
+  };
+}
+
+function historicalAlternate(source) {
+  return !Object.hasOwn(source, 'used_alternate') && source.status === 'ok' && source.attempted_urls?.length > 1;
+}
+
+function sourceAuditText(summary, overview = false) {
+  const labels = currentLang === 'zh' ? ['入口失败', '使用备用', '补文不足', '有稿刊出'] : ['Entry failures', 'Fallbacks', 'Insufficient evidence', 'Published sources'];
+  const values = [summary.entry_failures, summary.fallback, summary.insufficient_evidence_items, summary.published_sources];
+  const unknown = currentLang === 'zh' ? '未记录' : 'unrecorded';
+  return labels.flatMap((label, index) => overview || index < 3 && values[index] > 0
+    ? [label + ' ' + (values[index] ?? unknown)] : []).join(' · ');
+}
+
+function renderSourceCheck(data) {
+  const header = $('sourcesInfo');
+  const count = Number.isFinite(data?.sources_ok) && Number.isFinite(data?.sources_attempted) ? `${data.sources_ok}/${data.sources_attempted}` : '—';
+  const field = $('sourcesCount');
+  if (field) field.textContent = count;
+  if (!header || !field) return;
+  const warning = sourceAuditText(sourceAuditSummary(data));
+  header.replaceChildren(t().sources_label, field, warning ? ' · ' + warning : '');
+}
+
+function renderSourceCoverage(data, details, list) {
+  const diagnostics = data._diagnostics;
+  const health = diagnostics?.source_health || [];
+  const funnel = diagnostics?.source_funnel || {};
+  const rows = new Map(health.map(source => [source.id || source.name, source]));
+  for (const id of Object.keys(funnel)) if (!rows.has(id)) rows.set(id, { id });
+  const zh = currentLang === 'zh', unknown = zh ? '未记录' : 'unrecorded';
+  const statusLabels = zh
+    ? { ok: '已检查', warning: '需关注', error: '异常', empty_listing: '未发现有效条目', unreadable: '正文暂不可读', unknown, disabled: '已停用' }
+    : { ok: 'Checked', warning: 'Needs attention', error: 'Failed', empty_listing: 'No matching items', unreadable: 'Body unavailable', unknown, disabled: 'Disabled' };
+  const reasonLabels = zh
+    ? { used_alternate: '已用备用', aggregator: '聚合入口', aggregator_fallback: '聚合备用', stale: '长期无新稿', undated_all: '全无有效日期', recent_insufficient: '正文不足', access_limited: '访问受限', discovery_only: '仅发现线索', tls_hostname: 'TLS 主机名校验失败', timeout: '超时', empty_feed: '订阅源为空', no_matching_links: '无匹配链接', fetch_error: '请求失败' }
+    : { used_alternate: 'Fallback used', aggregator: 'Aggregator entry', aggregator_fallback: 'Aggregator fallback', stale: 'Stale', undated_all: 'All items undated', recent_insufficient: 'Insufficient evidence', access_limited: 'Limited access', discovery_only: 'Discovery only', tls_hostname: 'TLS hostname mismatch', timeout: 'Timeout', empty_feed: 'Empty feed', no_matching_links: 'No matching links', fetch_error: 'Fetch failed' };
+  const attention = source => source.effective_status === 'error' || ['error', 'empty_listing', 'unreadable'].includes(source.status) ? 2
+    : source.effective_status === 'warning' || source.used_alternate || historicalAlternate(source) || source.undated > 0 && source.undated === source.articles
+      || funnel[source.id]?.evidence_insufficient > 0 || funnel[source.id]?.dropped_short > 0 ? 1 : 0;
+  const append = value => { const li = document.createElement('li'); li.textContent = value; list.append(li); };
+  list.replaceChildren();
+  details.hidden = !rows.size;
+  if (!rows.size) return;
+  $('researchTitle').textContent = zh ? '来源与行业覆盖' : 'Source and sector coverage';
+  append(sourceAuditText(sourceAuditSummary(data), true));
+  for (const source of [...rows.values()].sort((a, b) => attention(b) - attention(a))) {
+    const counts = funnel[source.id];
+    const status = statusLabels[source.status] || statusLabels[source.effective_status] || unknown;
+    const elements = [status];
+    if (source.effective_status === 'warning' && source.status === 'ok') elements.push(statusLabels.warning);
+    const reasons = new Set(source.health_reasons || []);
+    if (source.used_alternate || historicalAlternate(source)) reasons.add('used_alternate');
+    if (source.undated > 0 && source.undated === source.articles) reasons.add('undated_all');
+    if (source.primary_error?.code) reasons.add(source.primary_error.code);
+    for (const reason of reasons) elements.push(reasonLabels[reason] || reason.replace(/^http_/, 'HTTP '));
+    if (!Object.hasOwn(source, 'primary_error')) elements.push(zh ? '首错未记录' : 'First error unrecorded');
+    if (source.undated > 0 && !reasons.has('undated_all')) elements.push(zh ? `${source.undated} 条日期待核实` : `${source.undated} dates unverified`);
+    if (counts) {
+      if (source.mode !== 'discovery_only') {
+        const insufficient = (counts.evidence_insufficient || 0) + (counts.dropped_short || 0);
+        elements.push(zh ? `正文不足 ${insufficient}` : `Insufficient evidence ${insufficient}`);
+      }
+      elements.push(zh ? `刊出 ${counts.published}` : `Published ${counts.published}`);
+    } else elements.push(zh ? '正文检查未记录' : 'Evidence checks unrecorded');
+    append((source.name || source.id) + (zh ? '：' : ': ') + elements.join(' · '));
+  }
 }
 
 function renderBrief(data) {
@@ -1024,8 +1096,8 @@ function renderBrief(data) {
     note.textContent = messages.join(currentLang === 'zh' ? '' : ' ');
     note.hidden = !messages.length;
   }
-  const research=(data._diagnostics?.source_health||[]).filter(s=>s.research);const details=$('researchCoverage'), list=$('researchStatus');
-  if(details&&list){list.replaceChildren();details.hidden=!research.length;$('researchTitle').textContent=(currentLang==='zh'?'研究来源覆盖：':'Research coverage: ')+research.filter(s=>s.status==='ok').length+'/'+research.length;for(const source of research){const li=document.createElement('li');const labels={ok:'已检查',empty_listing:'目录未发现有效条目',unreadable:'正文暂不可读',error:'抓取失败'};li.textContent=source.name+(currentLang==='zh'?'：':': ')+(currentLang==='zh'?(labels[source.status]||source.status):source.status)+(source.undated?' · '+source.undated+(currentLang==='zh'?' 条日期待核实':' date(s) unverified'):'');list.append(li);}}
+  const details=$('researchCoverage'), list=$('researchStatus');
+  if (details && list) renderSourceCoverage(data, details, list);
 
   const audit = data._diagnostics?.editorial_coverage;
   if (audit && details && list) {
